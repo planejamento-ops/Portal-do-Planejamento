@@ -662,7 +662,6 @@
 
                 if (tDep === '9020' && pos.includes('PROBL-FATURAMENTO')) return;
                 
-                // NOVA REGRA DE ÁREAS APLICADA AQUI
                 if (pos.includes('GI-ZONE') || pos.includes('AUTOMACAO')) return;
                 
                 if (pos.startsWith('AREA')) {
@@ -671,7 +670,6 @@
                 }
                 
                 if (tDep === '1810') return;
-                // FIM DA NOVA REGRA
 
                 if (tDep === '0603' && pos !== 'DIVCIC' && pos !== 'RECUSA.LOG' && !pos.startsWith('DPC')) return;
                 if (tEst.match(/^[BRS]/) && tDep !== '9017') return;
@@ -691,12 +689,13 @@
                         if (dataApurada) { let dataLimite = new Date(); dataLimite.setMonth(dataLimite.getMonth() - 1); if (dataApurada < dataLimite) return; }
                         retidoMotivo = 'Item em DIVCIC';
                     }
-                    else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Item em recusa.log';
-                    else if (tDep === '0603' && pos.startsWith('DPC')) retidoMotivo = 'Item em DPC'; 
-                    else if (tDep === '9017') retidoMotivo = 'Produto na Posição PISO-QUALIDADE';
                     else if (tEst.startsWith('Q') || tEst.startsWith('C3') || tEst.startsWith('C4') || tEst.startsWith('P4')) retidoMotivo = 'Estoque em Controle de Qualidade';
                     else if (pos.includes('9010')) retidoMotivo = 'Saldo em Equalização'; 
-                    else if (tDep === '9020') retidoMotivo = 'Item em 9020';
+                    // TUDO QUE NÃO É ISSO E NÃO PODE SER F2 LIVRE VAI DIRETO PARA 'Venda Maior que o Saldo'
+                    else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Venda Maior que o Saldo';
+                    else if (tDep === '0603' && pos.startsWith('DPC')) retidoMotivo = 'Venda Maior que o Saldo'; 
+                    else if (tDep === '9017') retidoMotivo = 'Venda Maior que o Saldo';
+                    else if (tDep === '9020') retidoMotivo = 'Venda Maior que o Saldo';
 
                     if (retidoMotivo) produtos[cod].retidos[retidoMotivo] = (produtos[cod].retidos[retidoMotivo] || 0) + qtd;
                 }
@@ -721,31 +720,43 @@
                 if (p.cortes > 0) {
                     let qtdPiclinha = p.retidos['Item em PICLINHA'] || 0;
                     let qtdDivcic = p.retidos['Item em DIVCIC'] || 0;
-                    let qtdDPC = p.retidos['Item em DPC'] || 0; 
-                    let qtdPisoQualidade = p.retidos['Produto na Posição PISO-QUALIDADE'] || 0;
                     let qtdQualidade = p.retidos['Estoque em Controle de Qualidade'] || 0;
                     let qtdEqualizacao = p.retidos['Saldo em Equalização'] || 0;
-                    let qtdRecusa = p.retidos['Item em recusa.log'] || 0;
+                    let qtdVendaMaior = p.retidos['Venda Maior que o Saldo'] || 0;
+                    
                     let totalNoCD = p.estoqueF2 + p.doca + Object.values(p.retidos).reduce((a,b)=>a+b, 0);
                     
                     if (totalNoCD === 0) p.motivoFinal = 'Divergência de Estoque';
                     else if (qtdPiclinha >= p.cortes) p.motivoFinal = 'Item em PICLINHA';
                     else if (qtdDivcic >= p.cortes) p.motivoFinal = 'Item em DIVCIC';
-                    else if (qtdDPC >= p.cortes || qtdRecusa >= p.cortes) p.motivoFinal = 'Venda Maior que o Saldo';
                     else if (qtdEqualizacao >= p.cortes) p.motivoFinal = 'Saldo em Equalização';
-                    else if (qtdPisoQualidade >= p.cortes) p.motivoFinal = 'Venda Maior que o Saldo';
                     else if (qtdQualidade >= p.cortes) p.motivoFinal = 'Estoque em Controle de Qualidade';
+                    else if (qtdVendaMaior >= p.cortes) p.motivoFinal = 'Venda Maior que o Saldo';
                     else {
                         let maiorMotivo = null; let maxQtd = 0;
                         for (let m in p.retidos) { if (p.retidos[m] > maxQtd) { maxQtd = p.retidos[m]; maiorMotivo = m; } }
+                        
                         if (maiorMotivo && maxQtd > 0) {
                             p.motivoFinal = maiorMotivo;
-                            if (p.motivoFinal === 'Item em DPC' || p.motivoFinal === 'Produto na Posição PISO-QUALIDADE' || p.motivoFinal === 'Item em recusa.log') {
-                                p.motivoFinal = 'Venda Maior que o Saldo';
-                            }
-                        } 
-                        else if (totalNoCD < p.demSol) p.motivoFinal = 'Venda Maior que o Saldo';
-                        else p.motivoFinal = 'Divergência de Estoque';
+                        } else if (totalNoCD < p.demSol) {
+                            p.motivoFinal = 'Venda Maior que o Saldo';
+                        } else {
+                            p.motivoFinal = 'Divergência de Estoque';
+                        }
+                    }
+
+                    // TRAVA DE SEGURANÇA: Garante que os motivos fujam estritamente para as 6 categorias definidas
+                    const motivosPermitidos = [
+                        'Item em PICLINHA', 
+                        'Item em DIVCIC', 
+                        'Saldo em Equalização', 
+                        'Venda Maior que o Saldo', 
+                        'Divergência de Estoque', 
+                        'Estoque em Controle de Qualidade'
+                    ];
+                    
+                    if (!motivosPermitidos.includes(p.motivoFinal)) {
+                        p.motivoFinal = (totalNoCD < p.demSol) ? 'Venda Maior que o Saldo' : 'Divergência de Estoque';
                     }
 
                     linhasTabelaAgrupada.push(p);
