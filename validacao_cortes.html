@@ -249,7 +249,7 @@
         <!-- ========================================== -->
         <div class="letreiro-container">
             <div class="letreiro-animado">
-                ⚠️ ATENÇÃO: &nbsp;&nbsp;&nbsp; Lembre-se de clicar no botão "Copiar para SharePoint" e colar na planilha oficial. &nbsp;&nbsp;&nbsp; ⚠️
+                ⚠️ ATENÇÃO OPERADOR: &nbsp;&nbsp;&nbsp; 1️⃣ Lembre-se de clicar no botão "Copiar para SharePoint" e colar na planilha oficial. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2️⃣ Baixe o arquivo de LOG (.json) na Aba 3 e mova-o para a pasta do aplicativo no SharePoint caso haja erros! ⚠️
             </div>
         </div>
         <!-- ========================================== -->
@@ -421,7 +421,6 @@
         if(linhas.length === 0 || linhas[0].innerText.includes("Nenhum corte")) { alert("Não há cortes para copiar."); return; }
         
         // --- INÍCIO DA TRAVA DE CORES ---
-        // Desativa temporariamente os temas para forçar a cópia no modo claro
         const body = document.body;
         const isEscuro = body.classList.contains("tema-escuro");
         const isConforto = body.classList.contains("tema-conforto");
@@ -479,7 +478,6 @@
         document.body.removeChild(divTemp);
 
         // --- FIM DA TRAVA DE CORES ---
-        // Devolve o tema que o usuário estava usando instantaneamente
         if (isEscuro) body.classList.add("tema-escuro");
         if (isConforto) body.classList.add("tema-conforto");
         // -----------------------------
@@ -619,8 +617,6 @@
                     isPendenteValido = true;
                 } else if (tipoProc === '2011' && pdDest.includes('9010')) { 
                     isEqualizacao = true;
-                    // NOVA CONDIÇÃO: Só consome o Saldo Livre F2 se o Estoque de Origem for F2.
-                    // Se for F3, a equalização roda apenas no F3 e NÃO deve cortar o F2!
                     if (tEstOrigem === 'F2' || tEstOrigem === '') {
                         isPendenteValido = true;
                     }
@@ -665,8 +661,18 @@
                 const qtd = parseNumeroInteiro(row[colQtd]);
 
                 if (tDep === '9020' && pos.includes('PROBL-FATURAMENTO')) return;
-                if (pos.includes('GI-ZONE') || pos.includes('AUTOMACAO') || pos.includes('AREA-IRDR') || pos.includes('AREA-EMB')) return;
+                
+                // NOVA REGRA DE ÁREAS APLICADA AQUI
+                if (pos.includes('GI-ZONE') || pos.includes('AUTOMACAO')) return;
+                
+                if (pos.startsWith('AREA')) {
+                    produtos[cod].avisos[`⚠️ Atenção: Peças localizadas na ${pos}`] = (produtos[cod].avisos[`⚠️ Atenção: Peças localizadas na ${pos}`] || 0) + qtd;
+                    return; 
+                }
+                
                 if (tDep === '1810') return;
+                // FIM DA NOVA REGRA
+
                 if (tDep === '0603' && pos !== 'DIVCIC' && pos !== 'RECUSA.LOG' && !pos.startsWith('DPC')) return;
                 if (tEst.match(/^[BRS]/) && tDep !== '9017') return;
 
