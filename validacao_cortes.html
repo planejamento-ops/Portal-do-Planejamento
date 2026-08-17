@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de Cortes</title>
+    <!-- Adicionando a biblioteca para processar as planilhas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    
+    <style>
+        body {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; background-color: #f4f6f9; color: #333; margin: 20px; transition: background-color 0.3s, color 0.3s; }
+        .container { max-width: 1450px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 0 auto; transition: background-color 0.3s; }
+        h1 { color: #102C87; text-align: center; margin-bottom: 30px; font-size: 34px; border-bottom: 3px solid #e81414; padding-bottom: 15px; text-shadow: 2px 2px #0040ff36}
+
+        .upload-section { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .upload-box { border: 2px dashed #b3d7ff; padding: 15px; text-align: center; border-radius: 6px; background: #f8fbff; transition: 0.3s; }
+        .upload-box:hover { background: #e6f2ff; }
+        .upload-box input { display: none; }
+        .upload-box label { display: block; cursor: pointer; color: #0c437d; font-weight: bold; }
+        .status-ok { color: green; font-size: 13px; font-weight: bold; margin-top: 8px; display: block; }
+        .status-carregando { color: #c17e01; font-size: 13px; font-weight: bold; margin-top: 8px; display: block; }
+        .status-erro { color: rgb(203, 1, 1); font-size: 13px; font-weight: bold; margin-top: 8px; display: block; }
+        
+        .alerta-pendente { background-color: #fdeded; border-left: 5px solid #e81414; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
+        .radio-group { margin-top: 10px; }
+        .radio-group label { margin-right: 20px; font-weight: bold; cursor: pointer; }
+        
+        .btn-validar { display: block; width: 100%; padding: 15px; background-color: #283da7; color: white; border: none; font-size: 18px; font-weight: bold; border-radius: 6px; cursor: pointer; text-align: center; transition: background-color 0.3s ease; display: flex; align-items: center; justify-content: center;}
+        .btn-validar:hover { background-color: #141f56; }
+        .btn-erro { background-color: #dc3545 !important; }
+        .header-resultados { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .btn-voltar { padding: 10px 20px; background-color: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px; }
+        .btn-voltar:hover { background-color: #5a6268; }
+
+        .tabs { display: flex; border-bottom: 2px solid #ddd; margin-bottom: 15px; }
+        .tab-btn { padding: 10px 20px; cursor: pointer; border: none; background: #f1f1f1; font-size: 16px; font-weight: bold; color: #555; }
+        .tab-btn.active { background: #102C87; color: white; border-radius: 5px 5px 0 0; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .header-tabela { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .btn-copiar { padding: 8px 15px; background-color: #102C87; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px; transition: 0.3s; }
+        .btn-copiar:hover { background-color: #071A5E; }
+        .msg-copiado { color: green; font-weight: bold; font-size: 14px; display: none; margin-right: 10px; }
+
+        /* TABELA PRINCIPAL E CÓPIA OUTLOOK */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; background-color: #ffffff; color: #000000; }
+        th, td { border: 1px solid #acacac; padding: 8px; text-align: center; color: #000000; }
+        
+        #tabelaResultado td:nth-child(1) { background-color: #ffffff !important; color: #000000 !important; font-weight: bold; }
+        #tabelaResultado td:nth-child(2) { background-color: #ffffff !important; color: #000000 !important; }
+        
+        th { background-color: #102C87; color: #ffffff !important; font-size: 11px; }
+        .col-destaque { background-color: #ffffff; color: #000000; font-weight: bold; }
+        .col-soma { color: #d68b00; background-color: #fffaf0; font-weight: bold; }
+        .col-alerta { color: #d68b00; background-color: #fffdf5; font-weight: bold; } 
+        .col-total { background-color: #f5f7ff; color: #000000; font-weight: bold; }
+        .col-subtracao { color: #dc2a24; background-color: #ffffff; font-weight: bold;}
+        tr:nth-child(even) { background-color: #e8e8e8; color: #000000; }
+        .row-corte { background-color: #fff0f0 !important; color: #000000 !important; }
+        
+        .painel-operacional { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card-op { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 6px; }
+        .card-op h3 { margin-top: 0; color: #d9534f; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+        .grupo-titulo { font-weight: bold; color: #333; margin-top: 15px; margin-bottom: 5px; border-bottom: 1px dashed #ccc; padding-bottom: 3px; }
+        .card-op ul { padding-left: 20px; margin: 0; font-size: 14px; }
+        .card-op li { margin-bottom: 5px; }
+
+        .resumo-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+        .card-resumo { background: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: center; }
+        .card-resumo h4 { margin: 0 0 8px 0; font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card-resumo .valor { font-size: 26px; font-weight: bold; margin: 0; line-height: 1; }
+        .card-resumo .sub-valor { font-size: 12px; color: #888; margin-top: 8px; font-weight: bold; }
+
+        .painel-arquivos { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .badge-arquivo { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; display: flex; align-items: center; gap: 5px; border: 1px solid #ccc; background: #fff; color: #333; }
+        .badge-arquivo.ok { border-color: #28a745; color: #155724; background: #d4edda; }
+        .badge-arquivo.none { border-color: #6c757d; color: #6c757d; background: #f8f9fa; }
+        
+        body.tema-escuro .badge-arquivo.ok { border-color: #81c995; color: #81c995; background: #1e3a29; }
+        body.tema-escuro .badge-arquivo.none { border-color: #555; color: #aaa; background: #2a2a2a; }
+        body.tema-conforto .badge-arquivo.ok { border-color: #a3b899; color: #4e6b41; background: #eef2eb; }
+        body.tema-conforto .badge-arquivo.none { border-color: #d6c6ac; color: #8a6c42; background: #f6ebd4; }
+
+        .btn-theme { position: fixed; top: 20px; right: 20px; background: #0d2572; color: white; border: none; padding: 10px 15px; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: 0.3s; z-index: 1000;}
+        .btn-theme:hover { transform: scale(1.05); }
+
+        body.tema-escuro { background-color: #121212; color: #e0e0e0; }
+        body.tema-escuro .container { background: #1e1e1e; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        body.tema-escuro h1 { color: #90caf9; border-bottom-color: #d32f2f; text-shadow: 2px 2px #000000; }
+        body.tema-escuro h2, body.tema-escuro h3, body.tema-escuro .upload-box label { color: #90caf9 !important; }
+        body.tema-escuro .upload-box { background: #2c2c2c; border-color: #555; }
+        body.tema-escuro .alerta-pendente { background-color: #3a2222; border-left-color: #ef5350; }
+        body.tema-escuro .tab-btn { background: #2c2c2c; color: #aaa; border-bottom: 1px solid #444; }
+        body.tema-escuro .tab-btn.active { background: #102C87; color: white; border-color: transparent; }
+        body.tema-escuro .card-op { background: #2c2c2c; border-color: #444; }
+        body.tema-escuro .grupo-titulo { color: #fff; border-bottom-color: #555; }
+        
+        body.tema-escuro table, body.tema-escuro th, body.tema-escuro td { border-color: #444; color: #e0e0e0; background-color: transparent; }
+        body.tema-escuro th { background-color: #1c2b4a; color: #90caf9 !important; }
+        body.tema-escuro tr:nth-child(even) { background-color: #2a2a2a; color: #e0e0e0; }
+        body.tema-escuro #tabelaResultado td:nth-child(1), body.tema-escuro #tabelaResultado td:nth-child(2) { background-color: #2c2c2c !important; color: #e0e0e0 !important; }
+        body.tema-escuro .col-destaque, body.tema-escuro .col-subtracao { background-color: #2c2c2c; color: #e0e0e0; }
+        body.tema-escuro .col-subtracao { color: #ef5350; }
+        body.tema-escuro .col-soma { background-color: #332910; color: #ffca28; }
+        body.tema-escuro .col-alerta { background-color: #332d18; color: #ffca28; }
+        body.tema-escuro .col-total { background-color: #1c2b4a; color: #90caf9; }
+        body.tema-escuro .row-corte { background-color: #4a2323 !important; color: #e0e0e0 !important; }
+        
+        body.tema-escuro div[style*="background-color: #f8f9fa"] { background-color: #2c2c2c !important; border-color: #444 !important; }
+        body.tema-escuro select { background-color: #383838; color: white; border: 1px solid #555; }
+        body.tema-escuro .card-resumo { background: #2c2c2c; box-shadow: none; border: 1px solid #444; }
+        body.tema-escuro .card-resumo h4 { color: #aaa; }
+        body.tema-escuro .card-resumo .sub-valor { color: #888; }
+
+        body.tema-conforto { background-color: #fcf4e6; color: #43392e; }
+        body.tema-conforto .container { background: #fffcf5; box-shadow: 0 4px 10px rgba(100,80,50,0.1); }
+        body.tema-conforto h1 { color: #785b37; border-bottom-color: #d98a41; text-shadow: 1px 1px #e3d2b6; }
+        body.tema-conforto h2, body.tema-conforto h3, body.tema-conforto .upload-box label { color: #8a6c42 !important; }
+        body.tema-conforto .upload-box { background: #f6ebd4; border-color: #d6c6ac; }
+        body.tema-conforto .upload-box:hover { background: #ecdcc1; }
+        body.tema-conforto .alerta-pendente { background-color: #f7e6d2; border-left-color: #d98a41; }
+        body.tema-conforto .tab-btn { background: #f6ebd4; color: #785b37; border-bottom: 1px solid #d6c6ac; }
+        body.tema-conforto .tab-btn.active { background: #8a6c42; color: white; border-color: transparent; }
+        body.tema-conforto .card-op { background: #fffcf5; border-color: #d6c6ac; }
+        body.tema-conforto .grupo-titulo { color: #43392e; border-bottom-color: #d6c6ac; }
+        
+        body.tema-conforto table, body.tema-conforto th, body.tema-conforto td { border-color: #d6c6ac; color: #43392e; }
+        body.tema-conforto th { background-color: #8a6c42; color: #fffcf5 !important; }
+        body.tema-conforto tr:nth-child(even) { background-color: #f6ebd4; color: #43392e; }
+        body.tema-conforto #tabelaResultado td:nth-child(1), body.tema-conforto #tabelaResultado td:nth-child(2) { background-color: #fffcf5 !important; color: #43392e !important; }
+        body.tema-conforto .col-destaque, body.tema-conforto .col-subtracao { background-color: #fffcf5; color: #43392e; }
+        body.tema-conforto .col-subtracao { color: #c44536; }
+        body.tema-conforto .col-soma { background-color: #fcefdc; color: #b7791f; }
+        body.tema-conforto .col-alerta { background-color: #fcefdc; color: #b7791f; }
+        body.tema-conforto .col-total { background-color: #e5d3b3; color: #43392e; font-weight: bold; }
+        body.tema-conforto .row-corte { background-color: #f7dede !important; color: #43392e !important; }
+        
+        body.tema-conforto div[style*="background-color: #f8f9fa"] { background-color: #f6ebd4 !important; border-color: #d6c6ac !important; }
+        body.tema-conforto select { background-color: #fffcf5; color: #43392e; border: 1px solid #d6c6ac; }
+        body.tema-conforto .card-resumo { background: #fffcf5; box-shadow: none; border: 1px solid #d6c6ac; }
+        body.tema-conforto .card-resumo h4 { color: #8a6c42; }
+        body.tema-conforto .card-resumo .sub-valor { color: #a18a68; }
+
+        .spinner { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; margin-right: 10px; vertical-align: middle; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        body.tema-escuro div[style*="background-color: #f4fbf5"] { background-color: #2c2c2c !important; border-color: #444 !important; }
+        body.tema-conforto div[style*="background-color: #f4fbf5"] { background-color: #fffcf5 !important; border-color: #d6c6ac !important; }
+        body.tema-escuro #resumoCritico { color: #90caf9 !important; }
+
+        /* ========================================== */
+        /* ANIMAÇÃO DO LETREIRO                       */
+        /* ========================================== */
+        .letreiro-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #fff9c4;
+            color: #b71c1c;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border: 2px dashed #981919;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+        .letreiro-animado {
+            display: inline-block;
+            padding-left: 100%; /* Faz o texto nascer fora da tela, na direita */
+            animation: marquee 35s linear infinite; /* Tempo da volta completa */
+        }
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+<body>
+
+<button class="btn-theme" id="btnThemeToggle" onclick="alternarTema()">🌙 Modo Escuro</button>
+
+<div class="container">
+    <div id="telaEntrada">
+        <h1>Validação de Cortes</h1>
+        <div style="margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd; display: inline-block;">
+            <label for="tipoAtendimento" style="font-size: 16px;"><b>1. Selecione o Atendimento:</b></label>
+            <select id="tipoAtendimento" style="padding: 6px; border-radius: 4px; margin-left: 10px; font-size: 14px;" onchange="atualizarTitulo()">
+                <option value="">Selecione...</option>
+                <option value="Carteira MG">Carteira MG</option>
+                <option value="Carteira MGI">Carteira MGI</option>
+                <option value="Carteira MGC">Carteira MGC</option>
+                <option value="Carteira SPI">Carteira SPI</option>
+                <option value="Carteira SPC">Carteira SPC</option>
+                <option value="Varejo">Varejo</option>
+                <option value="Equalização">Equalização</option>
+            </select>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-box">
+                <label for="fileDemanda">1.📩 Atendimento Solicitado (.xlsx)</label>
+                <input type="file" id="fileDemanda" accept=".csv, .xlsx, .xls" multiple onclick="this.value=null;" onchange="processarExcel(this, 'demanda')">
+                <div id="status-demanda"></div>
+            </div>
+            <div class="upload-box">
+                <label for="filePendente">2.📋 Tarefas Pendentes (.xlsx)</label>
+                <input type="file" id="filePendente" accept=".csv, .xlsx, .xls" multiple onclick="this.value=null;" onchange="processarExcel(this, 'pendente')">
+                <div id="status-pendente"></div>
+            </div>
+            <div class="upload-box">
+                <label for="fileEstoque">3.📦​ Estoque Físico (.xlsx)</label>
+                <input type="file" id="fileEstoque" accept=".csv, .xlsx, .xls" multiple onclick="this.value=null;" onchange="processarExcel(this, 'estoque')">
+                <div id="status-estoque"></div>
+            </div>
+            <div class="upload-box">
+                <label for="fileExtras" style="color: #c77d17;">4.🔄 Demandas Extras (.xlsx) <br><span style="font-size: 12px; font-weight: normal;">(Carretas, Equalização, etc.)</span></label>
+                <input type="file" id="fileExtras" accept=".csv, .xlsx, .xls" multiple onclick="this.value=null;" onchange="processarExcel(this, 'extras')">
+                <div id="status-extras"></div>
+            </div>
+        </div>
+
+        <div class="alerta-pendente" style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start;">
+            <div style="flex: 1; min-width: 300px;">
+                <strong>⚠️ PERGUNTA 1: CARRETAS</strong><br>
+                Existem itens de carretas ainda não alocadas no SAP para compor a Demanda Pendente?
+                <div class="radio-group">
+                    <label><input type="radio" name="radioCarretas" value="sim"> SIM (Carregue no Arquivo 4)</label><br>
+                    <label><input type="radio" name="radioCarretas" value="nao"> NÃO</label>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 300px; border-left: 2px dashed #e81414; padding-left: 20px;">
+                <strong>⚠️ PERGUNTA 2: EXTERNAS</strong><br>
+                Existe alguma demanda por fora ainda pendente de criar tarefas (Equalização, Qualidade)?
+                <div class="radio-group">
+                    <label><input type="radio" name="radioExternas" value="sim"> SIM (Carregue no Arquivo 4)</label><br>
+                    <label><input type="radio" name="radioExternas" value="nao"> NÃO</label>
+                </div>
+            </div>
+        </div>
+        <button class="btn-validar" id="btnProcessar" onclick="executarValidacao()">PROCESSAR CORTES DA DEMANDA</button>
+    </div>
+
+    <div id="telaResultados" style="display: none;">
+        
+        <!-- ========================================== -->
+        <!-- LETREIRO CHAMATIVO DE AVISO (CSS ANIMADO)  -->
+        <!-- ========================================== -->
+        <div class="letreiro-container">
+            <div class="letreiro-animado">
+                ⚠️ ATENÇÃO: &nbsp;&nbsp;&nbsp; Lembre-se de clicar no botão "Copiar para SharePoint" e colar na planilha oficial. &nbsp;&nbsp;&nbsp; ⚠️
+            </div>
+        </div>
+        <!-- ========================================== -->
+
+        <div class="header-resultados">
+            <h2 id="tituloTabela" style="color: #0056b3; margin: 0; display: none;">Cortes Validados: <span id="nomeAtendimento" style="color: #e81414;"></span></h2>
+            <h2 id="tituloPadrao" style="color: #0056b3; margin: 0;">Resultados da Validação</h2>
+            <button class="btn-voltar" onclick="voltarTelaEntrada()">⬅ Nova Validação</button>
+        </div>
+
+        <div id="painelArquivos" class="painel-arquivos"></div>
+        
+        <div class="resumo-cards" id="painelResumo" style="display: none;">
+            <div class="card-resumo" style="border: 3px solid #d9534f;">
+                <h4>✂️ Volume Cortado</h4>
+                <p class="valor" id="resumoCortes" style="color: #d9534f;">0</p>
+                <p class="sub-valor" id="resumoSkus">0 SKUs afetados</p>
+            </div>
+            <div class="card-resumo" style="border: 3px solid #c77d17;">
+                <h4>🚨 Maior Ofensor</h4>
+                <p class="valor" id="resumoOfensor" style="font-size: 16px; color: #c77d17;">-</p>
+                <p class="sub-valor" id="resumoOfensorQtd">0 peças</p>
+            </div>
+            <div class="card-resumo" style="border: 3px solid #102C87;">
+                <h4>📦 Produto Crítico</h4>
+                <p class="valor" id="resumoCritico" style="color: #102C87;">-</p>
+                <p class="sub-valor" id="resumoCriticoQtd">0 peças</p>
+            </div>
+            <div class="card-resumo" style="border: 3px solid #28a745;">
+                <h4>💡 Oportun. Resgate</h4>
+                <p class="valor" id="resumoResgate" style="color: #28a745;">0</p>
+                <p class="sub-valor">peças (Equalização)</p>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="abrirAba(event, 'abaEmail')">📑 Aba 1: Resumo dos Cortes</button>
+            <button class="tab-btn" onclick="abrirAba(event, 'abaOperacao')">🔍 Aba 2: Detalhamento Operacional</button>
+            <button class="tab-btn" style="color: #4f51d9;" onclick="abrirAba(event, 'abaFechamento')">📊 Aba 3: Fechamento & Log</button>
+        </div>
+
+        <div id="abaEmail" class="tab-content active">
+            <div class="header-tabela">
+                <p style="margin: 0; font-size: 14px;"><em>A tabela abaixo está classificada pelo <strong>maior volume de cortes</strong>.</em></p>
+                <div>
+                    <span id="msgCopiado" class="msg-copiado">✔ Copiado com sucesso!</span>
+                    <button class="btn-copiar" onclick="copiarTabelaCompleta()">📋 Copiar Tabela Completa</button>
+                    <button id="btnCopiarSP" class="btn-copiar" style="background-color: #0078d4; margin-left: 10px; transition: 0.3s;" onclick="copiarParaSharePoint()">📋 Copiar para SharePoint</button>
+                </div>
+            </div>
+            <table id="tabelaResultado">
+                <thead>
+                    <tr>
+                        <th>PRODUTO</th>
+                        <th style="width: 250px;">DESCRIÇÃO</th>
+                        <th title="Estoque F2 puro">ESTOQUE F2</th>
+                        <th title="Tarefas pendentes">DEM. PENDENTE</th>
+                        <th style="width: 40px;">⚠️ EM EQUALIZAÇÃO</th>
+                        <th title="Saldo disponível F2">LIVRE F2</th>
+                        <th title="Doca identificada">DOCA</th>
+                        <th title="Total para venda">SALDO TOTAL</th>
+                        <th>DEMANDA CLIENTE</th>
+                        <th>CORTES</th>
+                        <th style="width: 250px;">MOTIVO DO CORTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="abaOperacao" class="tab-content">
+            <div class="painel-operacional">
+                <div class="card-op" style="border-color: #d9534f;">
+                    <h3>🚧 Itens Retidos (Mapa de Coleta)</h3>
+                    <div id="listaRetidos"></div>
+                </div>
+                <div class="card-op" style="border-color: #c77d17;">
+                    <h3 style="color: #f0ad4e;">🔔 Avisos (Doca e Oportunidades)</h3>
+                    <div id="listaAvisos"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="abaFechamento" class="tab-content">
+            <div class="painel-operacional">
+                <div class="card-op" style="border-color: #102C87;">
+                    <h3 style="color: #102C87;">📊 Raio-X dos Motivos</h3>
+                    <table id="tabelaRaioX" style="margin-top: 15px;">
+                        <thead>
+                            <tr>
+                                <th>Motivo do Corte</th>
+                                <th>Peças Cortadas</th>
+                                <th>% do Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-op" style="border-color: #28a745; background-color: #f4fbf5;">
+                    <h3 style="color: #28a745;">🚀 Exportação & Fechamento</h3>
+                    <p style="font-size: 14px; margin-top: 15px;"><strong>Resposta via E-mail:</strong></p>
+                    <button class="btn-copiar" style="background-color: #28a745; width: 100%; padding: 12px; margin-bottom: 25px; font-size: 16px;" onclick="copiarTabelaResumida()" id="btnCopiarResumo">📋 Copiar Tabela Resumida</button>
+                    <p style="font-size: 14px;"><strong>Caixa Preta (Dados Brutos):</strong></p>
+                    <button class="btn-copiar" style="background-color: #102C87; width: 100%; padding: 12px; font-size: 16px;" onclick="baixarLogDeErro()" id="btnBaixarLog">📦 Baixar Log de Validação (.json)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let dadosBrutos = { demanda: null, pendente: null, estoque: null, extras: null };
+
+    function parseNumeroInteiro(valor) {
+        if (valor === undefined || valor === null || valor === '') return 0;
+        if (typeof valor === 'number') return Math.round(valor);
+        let str = String(valor).trim();
+        if (str.includes(',') && str.includes('.')) {
+            if (str.lastIndexOf(',') > str.lastIndexOf('.')) str = str.split(',')[0].replace(/\./g, '');
+            else str = str.split('.')[0].replace(/,/g, '');
+        } else if (str.includes(',')) str = str.split(',')[0];
+        else if (str.includes('.')) str = str.replace(/\./g, '');
+        let num = parseInt(str, 10);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function parseDataExcel(valor) {
+        if (!valor) return null;
+        if (typeof valor === 'number') return new Date((valor - 25569) * 86400 * 1000);
+        let str = String(valor).trim();
+        if (str.includes('/')) {
+            let partes = str.split('/');
+            if (partes.length >= 3) return new Date(parseInt(partes[2].substring(0,4), 10), parseInt(partes[1], 10) - 1, parseInt(partes[0], 10));
+        }
+        return null;
+    }
+
+    const fmt = (num) => Math.round(num).toLocaleString('pt-BR');
+
+    function normalizarTexto(valor) {
+        return String(valor).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function copiarTabelaCompleta() {
+        const body = document.body;
+        const isEscuro = body.classList.contains("tema-escuro");
+        const isConforto = body.classList.contains("tema-conforto");
+        body.classList.remove("tema-escuro", "tema-conforto");
+        const tabela = document.getElementById("tabelaResultado");
+        const range = document.createRange();
+        range.selectNode(tabela);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        try {
+            document.execCommand('copy');
+            const msg = document.getElementById("msgCopiado");
+            msg.style.display = "inline-block";
+            setTimeout(() => { msg.style.display = "none"; }, 2500);
+        } catch (err) { alert("Não foi possível copiar a tabela."); }
+        window.getSelection().removeAllRanges();
+        if (isEscuro) body.classList.add("tema-escuro");
+        if (isConforto) body.classList.add("tema-conforto");
+    }
+
+    function copiarTabelaResumida() {
+        const linhas = document.querySelectorAll("#tabelaResultado tbody tr");
+        if(linhas.length === 0 || linhas[0].innerText.includes("Nenhum corte")) { alert("Não há cortes para copiar."); return; }
+        
+        // --- INÍCIO DA TRAVA DE CORES ---
+        // Desativa temporariamente os temas para forçar a cópia no modo claro
+        const body = document.body;
+        const isEscuro = body.classList.contains("tema-escuro");
+        const isConforto = body.classList.contains("tema-conforto");
+        body.classList.remove("tema-escuro", "tema-conforto");
+        // ---------------------------------
+
+        const divTemp = document.createElement("div");
+        divTemp.style.position = "absolute";
+        divTemp.style.left = "-9999px";
+        
+        let htmlTabela = `
+            <table border="1" style="border-collapse: collapse; font-family: 'Trebuchet MS', sans-serif; font-size: 12px; text-align: center;">
+                <thead>
+                    <tr>
+                        <th style="padding: 8px; background-color: #102C87; color: #ffffff;">PRODUTO</th>
+                        <th style="padding: 8px; background-color: #102C87; color: #ffffff;">DESCRIÇÃO</th>
+                        <th style="padding: 8px; background-color: #102C87; color: #ffffff;">QTD. CORTES</th>
+                        <th style="padding: 8px; background-color: #102C87; color: #ffffff;">MOTIVO DO CORTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+        linhas.forEach(row => {
+            if(row.classList.contains("row-corte")) {
+                let cols = row.querySelectorAll("td");
+                htmlTabela += `
+                    <tr>
+                        <td style="padding: 8px; font-weight: bold; background-color: #fdfdfd; color: #010101;">${cols[0].innerText}</td>
+                        <td style="padding: 8px; text-align: left; background-color: #fdfdfd; color: #010101;">${cols[1].innerText}</td>
+                        <td style="padding: 8px; font-weight: bold; font-size: 14px; background-color: #fff0f0; color: #d9534f;">${cols[9].innerText}</td>
+                        <td style="padding: 8px; background-color: #fff0f0; color: #010101;">${cols[10].innerText}</td>
+                    </tr>
+                `;
+            }
+        });
+        htmlTabela += `</tbody></table>`;
+        divTemp.innerHTML = htmlTabela;
+        document.body.appendChild(divTemp);
+        
+        const range = document.createRange();
+        range.selectNode(divTemp);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        
+        try {
+            document.execCommand('copy');
+            const btn = document.getElementById("btnCopiarResumo");
+            const original = btn.innerHTML;
+            btn.innerHTML = "✅ Tabela Copiada com Sucesso!";
+            btn.style.backgroundColor = "#218838";
+            setTimeout(() => { btn.innerHTML = original; btn.style.backgroundColor = "#28a745"; }, 3000);
+        } catch (err) { alert("Erro ao copiar a tabela formatada."); }
+        
+        window.getSelection().removeAllRanges();
+        document.body.removeChild(divTemp);
+
+        // --- FIM DA TRAVA DE CORES ---
+        // Devolve o tema que o usuário estava usando instantaneamente
+        if (isEscuro) body.classList.add("tema-escuro");
+        if (isConforto) body.classList.add("tema-conforto");
+        // -----------------------------
+    }
+
+    function acharColuna(obj, palavrasChave) {
+        const chaves = Object.keys(obj);
+        for (let palavra of palavrasChave) {
+            for (let chave of chaves) {
+                const chaveLimpa = chave.toLowerCase().replace(/[^a-z0-9]/g, '');
+                if (chaveLimpa === palavra || chaveLimpa.includes(palavra)) return chave;
+            }
+        }
+        return null;
+    }
+
+    function lerArquivoExcel(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = new Uint8Array(e.target.result);
+                    const workbook = XLSX.read(data, {type: 'array'});
+                    const primeiraAba = workbook.SheetNames[0];
+                    resolve(XLSX.utils.sheet_to_json(workbook.Sheets[primeiraAba], {defval: ""}));
+                } catch (err) { reject(err); }
+            };
+            reader.onerror = reject;
+            reader.readAsArrayBuffer(file);
+        });
+    }
+
+    async function processarExcel(input, tipo) {
+        const files = input.files;
+        if (!files || files.length === 0) return;
+        const statusDiv = document.getElementById(`status-${tipo}`);
+        statusDiv.innerHTML = `<span class="status-carregando">⏳ Processando arquivo(s)... aguarde.</span>`;
+        await new Promise(resolve => setTimeout(resolve, 50));
+        let todasAsLinhas = [];
+        try {
+            for (let i = 0; i < files.length; i++) todasAsLinhas = todasAsLinhas.concat(await lerArquivoExcel(files[i]));
+            dadosBrutos[tipo] = todasAsLinhas;
+            statusDiv.innerHTML = `<span class="status-ok">✔ ${files.length > 1 ? files.length + ' arquivos combinados' : files[0].name} (${todasAsLinhas.length} linhas)</span>`;
+        } catch (error) { statusDiv.innerHTML = `<span class="status-erro">❌ Erro ao ler arquivo(s).</span>`; }
+    }
+
+    function abrirAba(evt, nomeAba) {
+        let contents = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < contents.length; i++) contents[i].classList.remove("active");
+        let btns = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < btns.length; i++) btns[i].classList.remove("active");
+        document.getElementById(nomeAba).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+
+    function erroNoBotao(mensagem) {
+        const btn = document.getElementById('btnProcessar');
+        btn.innerText = mensagem;
+        btn.classList.add("btn-erro");
+        setTimeout(() => { btn.innerText = "PROCESSAR CORTES DA DEMANDA"; btn.classList.remove("btn-erro"); }, 3000);
+    }
+
+    function voltarTelaEntrada() {
+        document.getElementById("telaResultados").style.display = "none";
+        document.getElementById("telaEntrada").style.display = "block";
+    }
+
+    function executarValidacao() {
+        if (!dadosBrutos.demanda || !dadosBrutos.pendente || !dadosBrutos.estoque) return erroNoBotao("⚠ CARREGUE OS 3 ARQUIVOS OBRIGATÓRIOS");
+        const respCarretas = document.querySelector('input[name="radioCarretas"]:checked');
+        const respExternas = document.querySelector('input[name="radioExternas"]:checked');
+        if (!respCarretas) return erroNoBotao("⚠ RESPONDA A PERGUNTA 1 (CARRETAS)");
+        if (!respExternas) return erroNoBotao("⚠ RESPONDA A PERGUNTA 2 (EXTERNAS)");
+        if ((respCarretas.value === "sim" || respExternas.value === "sim") && !dadosBrutos.extras) return erroNoBotao("⚠ CARREGUE O ARQUIVO 4 (EXTRAS)");
+
+        const btn = document.getElementById('btnProcessar');
+        const textoOriginal = "PROCESSAR CORTES DA DEMANDA";
+        btn.innerHTML = '<span class="spinner"></span> PROCESSANDO... AGUARDE';
+        btn.style.backgroundColor = "#141f56"; btn.style.cursor = "wait"; 
+
+        setTimeout(() => {
+            const fDemanda = document.getElementById("fileDemanda").files.length;
+            const fPendente = document.getElementById("filePendente").files.length;
+            const fEstoque = document.getElementById("fileEstoque").files.length;
+            const fExtras = document.getElementById("fileExtras").files.length;
+
+            document.getElementById("painelArquivos").innerHTML = `
+                <span class="badge-arquivo ok">✔ 1. Demanda (${fDemanda})</span>
+                <span class="badge-arquivo ok">✔ 2. Pendente (${fPendente})</span>
+                <span class="badge-arquivo ok">✔ 3. Estoque (${fEstoque})</span>
+                <span class="badge-arquivo ${fExtras > 0 ? 'ok' : 'none'}">${fExtras > 0 ? `✔ 4. Extras (${fExtras})` : '✖ 4. Extras (Nenhum)'}</span>
+            `;
+
+            const produtos = {}; 
+
+            dadosBrutos.demanda.forEach(row => {
+                const colProd = acharColuna(row, ['produto', 'material']); 
+                const colDesc = acharColuna(row, ['descrio', 'descricao', 'texto']);
+                const colQtd = acharColuna(row, ['quantidade', 'demanda', 'qtd']); 
+                if(!colProd) return;
+                const cod = String(row[colProd]).replace(/^0+/, '').trim(); 
+                if(!cod) return;
+
+                if (!produtos[cod]) produtos[cod] = { desc: row[colDesc] || '', demSol: 0, demPend: 0, equalizacao: 0, estoqueF2: 0, doca: 0, retidos: {}, avisos: {}, cortes: 0, motivoFinal: '-', cod: cod, saldoLivreF2: 0, saldoTotal: 0 };
+                produtos[cod].demSol += parseNumeroInteiro(row[colQtd]);
+            });
+
+            dadosBrutos.pendente.forEach(row => {
+                const colProd = acharColuna(row, ['produto', 'material']);
+                const colQtd = acharColuna(row, ['qtdprevorigemumb', 'quantidade', 'pendente', 'qtd']);
+                const colPdDest = acharColuna(row, ['pddestino']);
+                const colTipoDepDest = acharColuna(row, ['tipodepsitodestino', 'tipodepdestino']);
+                const colTipoProc = acharColuna(row, ['tipoprocdepsito', 'tipoproc']);
+                const colPdOrigem = acharColuna(row, ['pdorigem', 'posicaorigem', 'origem']);
+                const colTipoEstOrigem = acharColuna(row, ['tipoestorigem', 'estoqueorigem', 'tipoest']);
+                
+                if(!colProd || !colQtd) return;
+                
+                const pdDest = colPdDest ? normalizarTexto(String(row[colPdDest]).trim().toUpperCase()) : '';
+                const tipoDepDest = colTipoDepDest ? normalizarTexto(String(row[colTipoDepDest]).trim().toUpperCase()) : '';
+                const tipoProc = colTipoProc ? String(row[colTipoProc]).trim() : '';
+                const pdOrigem = colPdOrigem ? normalizarTexto(String(row[colPdOrigem]).trim().toUpperCase()) : '';
+                const tEstOrigem = colTipoEstOrigem ? String(row[colTipoEstOrigem]).trim().toUpperCase() : '';
+
+                const cod = String(row[colProd]).replace(/^0+/, '').trim();
+                if (!produtos[cod]) return; 
+                if (pdOrigem.includes('PROBL-FATURAMENTO') || pdDest.includes('PROBL-FATURAMENTO')) return;
+                if (tipoDepDest === '9020') return;
+
+                const qtd = parseNumeroInteiro(row[colQtd]);
+                let isPendenteValido = false;
+                let isEqualizacao = false;
+                let isSaidaDireta = (pdOrigem.startsWith('LN') || pdOrigem.startsWith('PC')) && pdDest.includes('GI-ZONE');
+                let isAbastAuto = (pdOrigem.startsWith('PP') || pdOrigem.startsWith('PK') || pdOrigem.startsWith('PR') || pdOrigem.startsWith('PD')) && pdDest.includes('AUTOMACAO');
+
+                if (isSaidaDireta || isAbastAuto) {
+                    isPendenteValido = true;
+                } else if (tipoProc === '2011' && pdDest.includes('9010')) { 
+                    isEqualizacao = true;
+                    // NOVA CONDIÇÃO: Só consome o Saldo Livre F2 se o Estoque de Origem for F2.
+                    // Se for F3, a equalização roda apenas no F3 e NÃO deve cortar o F2!
+                    if (tEstOrigem === 'F2' || tEstOrigem === '') {
+                        isPendenteValido = true;
+                    }
+                } else if (tipoProc === '3030' && pdDest.includes('PISO-QUALIDADE')) {
+                    let isOrigemLimpa = (tEstOrigem === 'F2') && !pdOrigem.includes('PICLINHA') && !pdOrigem.includes('DIVCIC') && !pdOrigem.includes('RECUSA.LOG') && !pdOrigem.startsWith('DPC');
+                    if (isOrigemLimpa) {
+                        isPendenteValido = true;
+                        produtos[cod].avisos['⚠️ Tarefa 3030 consumindo F2 livre (Qualidade/Bloqueio)'] = (produtos[cod].avisos['⚠️ Tarefa 3030 consumindo F2 livre (Qualidade/Bloqueio)'] || 0) + qtd;
+                    }
+                }
+
+                if (isPendenteValido) produtos[cod].demPend += qtd;
+                if (isEqualizacao) produtos[cod].equalizacao += qtd;
+            });
+
+            if ((respCarretas.value === "sim" || respExternas.value === "sim") && dadosBrutos.extras) {
+                dadosBrutos.extras.forEach(row => {
+                    const colProd = acharColuna(row, ['produto', 'material']);
+                    const colQtd = acharColuna(row, ['qtdprevorigemumb', 'quantidade', 'pendente', 'qtd']);
+                    if(!colProd) return;
+                    const cod = String(row[colProd]).replace(/^0+/, '').trim();
+                    if (produtos[cod]) produtos[cod].demPend += parseNumeroInteiro(row[colQtd]);
+                });
+            }
+
+            dadosBrutos.estoque.forEach(row => {
+                const colProd = acharColuna(row, ['produto', 'material']);
+                const colTDep = acharColuna(row, ['tipodedepsito', 'tipodep']);
+                const colTEst = acharColuna(row, ['tipodeestoque', 'tipoest']);
+                const colPos = acharColuna(row, ['posionodepsito', 'posicao']);
+                const colQtd = acharColuna(row, ['saldo', 'quantidade', 'qtd']);
+                const colDataEM = acharColuna(row, ['dataem', 'data', 'entrada']);
+
+                if(!colProd || !colTDep || !colTEst || !colPos) return;
+
+                const cod = String(row[colProd]).replace(/^0+/, '').trim();
+                if (!produtos[cod]) return; 
+
+                const tDep = String(row[colTDep]).trim();
+                const tEst = String(row[colTEst]).trim().toUpperCase();
+                const pos = normalizarTexto(String(row[colPos]).trim().toUpperCase());
+                const qtd = parseNumeroInteiro(row[colQtd]);
+
+                if (tDep === '9020' && pos.includes('PROBL-FATURAMENTO')) return;
+                if (pos.includes('GI-ZONE') || pos.includes('AUTOMACAO') || pos.includes('AREA-IRDR') || pos.includes('AREA-EMB')) return;
+                if (tDep === '1810') return;
+                if (tDep === '0603' && pos !== 'DIVCIC' && pos !== 'RECUSA.LOG' && !pos.startsWith('DPC')) return;
+                if (tEst.match(/^[BRS]/) && tDep !== '9017') return;
+
+                let pecaAdicionadaAoSaldo = false;
+                if (tDep === '9010' && tEst === 'F1') {
+                    produtos[cod].avisos['Produto na doca de recebimento'] = (produtos[cod].avisos['Produto na doca de recebimento'] || 0) + qtd;
+                    produtos[cod].doca += qtd; 
+                    pecaAdicionadaAoSaldo = true;
+                }
+
+                let retidoMotivo = null;
+                if (!pecaAdicionadaAoSaldo) {
+                    if (pos.includes('PICLINHA')) retidoMotivo = 'Item em PICLINHA';
+                    else if (tDep === '0603' && pos === 'DIVCIC') {
+                        let dataApurada = colDataEM ? parseDataExcel(row[colDataEM]) : null;
+                        if (dataApurada) { let dataLimite = new Date(); dataLimite.setMonth(dataLimite.getMonth() - 1); if (dataApurada < dataLimite) return; }
+                        retidoMotivo = 'Item em DIVCIC';
+                    }
+                    else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Item em recusa.log';
+                    else if (tDep === '0603' && pos.startsWith('DPC')) retidoMotivo = 'Item em DPC'; 
+                    else if (tDep === '9017') retidoMotivo = 'Produto na Posição PISO-QUALIDADE';
+                    else if (tEst.startsWith('Q') || tEst.startsWith('C3') || tEst.startsWith('C4') || tEst.startsWith('P4')) retidoMotivo = 'Estoque em Controle de Qualidade';
+                    else if (pos.includes('9010')) retidoMotivo = 'Saldo em Equalização'; 
+                    else if (tDep === '9020') retidoMotivo = 'Item em 9020';
+
+                    if (retidoMotivo) produtos[cod].retidos[retidoMotivo] = (produtos[cod].retidos[retidoMotivo] || 0) + qtd;
+                }
+
+                if (!pecaAdicionadaAoSaldo && !retidoMotivo && tEst === 'F2') produtos[cod].estoqueF2 += qtd; 
+            });
+
+            const tbody = document.querySelector("#tabelaResultado tbody");
+            tbody.innerHTML = "";
+            let linhasTabelaAgrupada = [];
+            let gruposRetidos = {};
+            let gruposAvisos = {};
+
+            for (let cod in produtos) {
+                let p = produtos[cod];
+                p.saldoLivreF2 = p.estoqueF2 - p.demPend;
+                p.saldoTotal = p.saldoLivreF2 + p.doca;
+                
+                let saldoValidoParaCorte = Math.max(0, p.saldoTotal);
+                p.cortes = Math.max(0, p.demSol - saldoValidoParaCorte);
+                
+                if (p.cortes > 0) {
+                    let qtdPiclinha = p.retidos['Item em PICLINHA'] || 0;
+                    let qtdDivcic = p.retidos['Item em DIVCIC'] || 0;
+                    let qtdDPC = p.retidos['Item em DPC'] || 0; 
+                    let qtdPisoQualidade = p.retidos['Produto na Posição PISO-QUALIDADE'] || 0;
+                    let qtdQualidade = p.retidos['Estoque em Controle de Qualidade'] || 0;
+                    let qtdEqualizacao = p.retidos['Saldo em Equalização'] || 0;
+                    let qtdRecusa = p.retidos['Item em recusa.log'] || 0;
+                    let totalNoCD = p.estoqueF2 + p.doca + Object.values(p.retidos).reduce((a,b)=>a+b, 0);
+                    
+                    if (totalNoCD === 0) p.motivoFinal = 'Divergência de Estoque';
+                    else if (qtdPiclinha >= p.cortes) p.motivoFinal = 'Item em PICLINHA';
+                    else if (qtdDivcic >= p.cortes) p.motivoFinal = 'Item em DIVCIC';
+                    else if (qtdDPC >= p.cortes || qtdRecusa >= p.cortes) p.motivoFinal = 'Venda Maior que o Saldo';
+                    else if (qtdEqualizacao >= p.cortes) p.motivoFinal = 'Saldo em Equalização';
+                    else if (qtdPisoQualidade >= p.cortes) p.motivoFinal = 'Venda Maior que o Saldo';
+                    else if (qtdQualidade >= p.cortes) p.motivoFinal = 'Estoque em Controle de Qualidade';
+                    else {
+                        let maiorMotivo = null; let maxQtd = 0;
+                        for (let m in p.retidos) { if (p.retidos[m] > maxQtd) { maxQtd = p.retidos[m]; maiorMotivo = m; } }
+                        if (maiorMotivo && maxQtd > 0) {
+                            p.motivoFinal = maiorMotivo;
+                            if (p.motivoFinal === 'Item em DPC' || p.motivoFinal === 'Produto na Posição PISO-QUALIDADE' || p.motivoFinal === 'Item em recusa.log') {
+                                p.motivoFinal = 'Venda Maior que o Saldo';
+                            }
+                        } 
+                        else if (totalNoCD < p.demSol) p.motivoFinal = 'Venda Maior que o Saldo';
+                        else p.motivoFinal = 'Divergência de Estoque';
+                    }
+
+                    linhasTabelaAgrupada.push(p);
+
+                    if (p.retidos[p.motivoFinal] > 0) {
+                        if (!gruposRetidos[p.motivoFinal]) gruposRetidos[p.motivoFinal] = [];
+                        gruposRetidos[p.motivoFinal].push({ cod: cod, desc: p.desc, qtd: p.retidos[p.motivoFinal] });
+                    }
+
+                    if (p.equalizacao > 0 && (p.saldoTotal + p.equalizacao >= p.demSol)) {
+                        let msgResgate = '💡 POSSÍVEL RESGATE (Cancelar Tarefa de Equalização)';
+                        if (!gruposAvisos[msgResgate]) gruposAvisos[msgResgate] = [];
+                        gruposAvisos[msgResgate].push({ cod: cod, desc: p.desc, qtd: p.equalizacao });
+                    }
+                }
+
+                if (p.saldoLivreF2 < p.demSol) {
+                    for (let msg in p.avisos) {
+                        if (!gruposAvisos[msg]) gruposAvisos[msg] = [];
+                        gruposAvisos[msg].push({ cod: cod, desc: p.desc, qtd: p.avisos[msg] });
+                    }
+                }
+            }
+
+            linhasTabelaAgrupada.sort((a, b) => b.cortes - a.cortes);
+
+            let totalCortes = 0; let skusAfetados = 0; let ofensores = {}; let totalResgate = 0;
+            const tbodyRaioX = document.querySelector("#tabelaRaioX tbody");
+            tbodyRaioX.innerHTML = "";
+
+            if (linhasTabelaAgrupada.length === 0) {
+                document.getElementById("painelResumo").style.display = "none";
+                let tr = document.createElement("tr");
+                tr.innerHTML = `<td colspan="11" style="padding: 20px; text-align: center; font-weight: bold; font-size: 16px; color: #28a745; background-color: #e8f5e9;">🎉 Nenhum corte necessário! Todos os itens foram integralmente atendidos.</td>`;
+                tbody.appendChild(tr);
+                let trX = document.createElement("tr"); trX.innerHTML = `<td colspan="3">Sem cortes no momento.</td>`; tbodyRaioX.appendChild(trX);
+            } else {
+                linhasTabelaAgrupada.forEach(p => {
+                    totalCortes += p.cortes; skusAfetados++;
+                    if (!ofensores[p.motivoFinal]) ofensores[p.motivoFinal] = 0;
+                    ofensores[p.motivoFinal] += p.cortes;
+                    if (p.equalizacao > 0 && (p.saldoTotal + p.equalizacao >= p.demSol)) totalResgate += Math.min(p.equalizacao, p.cortes);
+
+                    let tr = document.createElement("tr");
+                    tr.className = "row-corte";
+                    let colLivreF2 = p.saldoLivreF2 < 0 ? 'color:#d9534f;' : 'color:#0056b3;';
+                    let colTotal = p.saldoTotal < 0 ? 'color:#d9534f;' : 'color:#0056b3;';
+                    
+                    tr.innerHTML = `
+                        <td>${p.cod}</td><td style="text-align: left;">${p.desc}</td><td class="col-destaque">${fmt(p.estoqueF2)}</td>
+                        <td class="col-subtracao">${p.demPend > 0 ? '-' + fmt(p.demPend) : 0}</td><td class="col-alerta">${p.equalizacao > 0 ? fmt(p.equalizacao) : '-'}</td>
+                        <td class="col-destaque" style="${colLivreF2}">${fmt(p.saldoLivreF2)}</td><td class="col-soma">${p.doca > 0 ? '+' + fmt(p.doca) : 0}</td>
+                        <td class="col-total" style="${colTotal}">${fmt(p.saldoTotal)}</td><td>${fmt(p.demSol)}</td>
+                        <td><strong style="color:#d9534f; font-size:15px;">${fmt(p.cortes)}</strong></td><td><strong>${p.motivoFinal}</strong></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                let arrayOfensores = Object.keys(ofensores).map(motivo => ({ motivo, qtd: ofensores[motivo] })).sort((a,b) => b.qtd - a.qtd); 
+                arrayOfensores.forEach(item => {
+                    let tr = document.createElement("tr");
+                    tr.innerHTML = `<td style="text-align: left; font-weight: bold;">${item.motivo}</td><td style="color: #d9534f; font-weight: bold;">${fmt(item.qtd)}</td><td>${((item.qtd / totalCortes) * 100).toFixed(1)}%</td>`;
+                    tbodyRaioX.appendChild(tr);
+                });
+
+                document.getElementById("resumoCortes").innerText = fmt(totalCortes);
+                document.getElementById("resumoSkus").innerText = `${skusAfetados} SKUs afetados`;
+                document.getElementById("resumoOfensor").innerText = arrayOfensores[0].motivo;
+                document.getElementById("resumoOfensorQtd").innerText = `${fmt(arrayOfensores[0].qtd)} peças`;
+                document.getElementById("resumoCritico").innerText = linhasTabelaAgrupada[0].cod;
+                document.getElementById("resumoCriticoQtd").innerText = `${fmt(linhasTabelaAgrupada[0].cortes)} peças cortadas`;
+                document.getElementById("resumoResgate").innerText = fmt(totalResgate);
+                document.getElementById("painelResumo").style.display = "grid";
+            }
+
+            let htmlRetidos = "";
+            for (let motivo in gruposRetidos) {
+                htmlRetidos += `<div class="grupo-titulo">‼️ ${motivo}</div><ul>`;
+                gruposRetidos[motivo].sort((a, b) => b.qtd - a.qtd).forEach(item => htmlRetidos += `<li><strong>${item.cod}</strong> - ${item.desc} <span style="color:#d9534f;">(${fmt(item.qtd)} peças)</span></li>`);
+                htmlRetidos += `</ul>`;
+            }
+            document.getElementById("listaRetidos").innerHTML = htmlRetidos || "<p style='color:green; padding-left:10px;'>✔ Nenhum item com corte localizado nestas áreas.</p>";
+
+            let htmlAvisos = "";
+            for (let msg in gruposAvisos) {
+                htmlAvisos += `<div class="grupo-titulo">‼️ ${msg}</div><ul>`;
+                gruposAvisos[msg].sort((a, b) => b.qtd - a.qtd).forEach(item => htmlAvisos += `<li><strong>${item.cod}</strong> - ${item.desc} <span style="color:#f0ad4e;">(${fmt(item.qtd)} peças)</span></li>`);
+                htmlAvisos += `</ul>`;
+            }
+            document.getElementById("listaAvisos").innerHTML = htmlAvisos || "<p style='color:green; padding-left:10px;'>✔ Nenhum aviso de Docas ou Oportunidade de Resgate.</p>";
+
+            btn.innerHTML = textoOriginal; btn.style.backgroundColor = ""; btn.style.cursor = "pointer";
+            document.getElementById("telaEntrada").style.display = "none";
+            document.getElementById("telaResultados").style.display = "block";
+            window.scrollTo(0, 0); 
+
+        }, 50); 
+    }
+
+    function copiarParaSharePoint() {
+        const tabela = document.getElementById("tabelaResultado"); const botao = document.getElementById("btnCopiarSP"); const selectAtendimento = document.getElementById("tipoAtendimento").value;
+        if (selectAtendimento === "") return mostrarErroBotao(botao, "❌ Selecione o Atendimento!");
+        const linhas = tabela.querySelectorAll("tbody tr");
+        if (linhas.length === 0 || linhas[0].innerText.includes("Nenhum corte")) return mostrarErroBotao(botao, "❌ Sem dados!");
+
+        let usuarioSolicitante = "Analista"; 
+        try { const partes = decodeURIComponent(window.location.pathname).split('/'); if (partes.length > 3 && partes[2].toLowerCase() === 'users') usuarioSolicitante = partes[3].toUpperCase(); } catch(e) {}
+        const agora = new Date();
+        const dataHora = `${String(agora.getMonth() + 1).padStart(2, '0')}/${String(agora.getDate()).padStart(2, '0')}/${agora.getFullYear()} ${String(agora.getHours() % 12 || 12).padStart(2, '0')}:${String(agora.getMinutes()).padStart(2, '0')} ${agora.getHours() >= 12 ? 'PM' : 'AM'}`;
+
+        let textoCopiado = "";
+        linhas.forEach(row => {
+            if (row.classList.contains("row-corte")) {
+                const cols = row.querySelectorAll("td");
+                textoCopiado += `${dataHora}\t${selectAtendimento}\t${usuarioSolicitante}\t${cols[0].innerText}\t${cols[1].innerText}\t${cols[8].innerText.replace(/\./g, "")}\t${cols[2].innerText.replace(/\./g, "")}\t${cols[3].innerText.replace("-", "").replace(/\./g, "")}\t${cols[9].innerText.replace(/\./g, "")}\t${cols[10].innerText}\n`;
+            }
+        });
+
+        if (textoCopiado === "") return mostrarErroBotao(botao, "❌ Sem cortes válidos!");
+        navigator.clipboard.writeText(textoCopiado).then(() => { botao.innerText = `✅ Copiado (${usuarioSolicitante})!`; botao.style.backgroundColor = "#28a745"; setTimeout(() => { botao.innerText = "📋 Copiar para SharePoint"; botao.style.backgroundColor = "#0078d4"; }, 3000); }).catch(() => mostrarErroBotao(botao, "❌ Erro ao copiar"));
+    }
+
+    function mostrarErroBotao(botao, mensagem) {
+        botao.innerText = mensagem; botao.style.backgroundColor = "#dc3545"; 
+        setTimeout(() => { botao.innerText = "📋 Copiar para SharePoint"; botao.style.backgroundColor = "#0078d4"; }, 3000);
+    }
+
+    function atualizarTitulo() {
+        const select = document.getElementById("tipoAtendimento").value;
+        if (select !== "") { document.getElementById("nomeAtendimento").innerText = select; document.getElementById("tituloTabela").style.display = "block"; document.getElementById("tituloPadrao").style.display = "none"; } 
+        else { document.getElementById("tituloTabela").style.display = "none"; document.getElementById("tituloPadrao").style.display = "block"; }
+    }
+
+    function alternarTema() {
+        const body = document.body; const btn = document.getElementById("btnThemeToggle");
+        if (!body.classList.contains("tema-escuro") && !body.classList.contains("tema-conforto")) { body.classList.add("tema-escuro"); btn.innerText = "📖 Modo Conforto"; btn.style.backgroundColor = "#e0e0e0"; btn.style.color = "#121212"; } 
+        else if (body.classList.contains("tema-escuro")) { body.classList.remove("tema-escuro"); body.classList.add("tema-conforto"); btn.innerText = "☀️ Modo Claro"; btn.style.backgroundColor = "#8a6c42"; btn.style.color = "white"; } 
+        else if (body.classList.contains("tema-conforto")) { body.classList.remove("tema-conforto"); btn.innerText = "🌙 Modo Escuro"; btn.style.backgroundColor = "#102C87"; btn.style.color = "white"; }
+    }
+
+    // ==========================================
+    // CAIXA PRETA: GERAR LOG DE ERRO MANUALMENTE
+    // ==========================================
+    function baixarLogDeErro() {
+        if (!dadosBrutos.demanda || !dadosBrutos.estoque || !dadosBrutos.pendente) {
+            alert("Os dados das planilhas não estão carregados corretamente.");
+            return;
+        }
+
+        const btn = document.getElementById("btnBaixarLog");
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '⏳ Preparando Arquivo...';
+
+        setTimeout(() => {
+            let usuarioSolicitante = "Analista"; 
+            try {
+                const caminho = decodeURIComponent(window.location.pathname);
+                const partes = caminho.split('/');
+                if (partes.length > 3 && partes[2].toLowerCase() === 'users') {
+                    usuarioSolicitante = partes[3].toUpperCase(); 
+                }
+            } catch(e) {}
+
+            const pacoteDados = {
+                dataHoraGeracao: new Date().toLocaleString('pt-BR'),
+                usuario: usuarioSolicitante,
+                atendimento: document.getElementById("tipoAtendimento").value,
+                dadosProcessados: dadosBrutos
+            };
+
+            const textoJson = JSON.stringify(pacoteDados, null, 2);
+            const blob = new Blob([textoJson], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement("a");
+            a.href = url;
+            
+            const hoje = new Date();
+            const dataFormatada = `${String(hoje.getDate()).padStart(2, '0')}-${String(hoje.getMonth() + 1).padStart(2, '0')}-${hoje.getFullYear()}`;
+            
+            a.download = `log de validação_${usuarioSolicitante}_${dataFormatada}.json`;
+            
+            document.body.appendChild(a);
+            a.click();
+            
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            btn.innerHTML = '✅ Download Concluído!';
+            btn.style.backgroundColor = '#28a745';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.backgroundColor = '#102C87';
+            }, 3000);
+        }, 300);
+    }
+</script>
+</body>
+</html>

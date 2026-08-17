@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise IRDR</title>
+    <!-- SheetJS para ler e baixar arquivos Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- html2canvas para tirar o print da tela -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Chart.js para os gráficos dinâmicos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #002060;
+            text-align: center;
+            border-bottom: 2px solid #002060;
+            padding-bottom: 10px;
+        }
+        
+        #uploadScreen { display: block; }
+        .upload-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        label { font-weight: bold; }
+        input[type="file"] { padding: 5px; }
+        
+        .btn-principal {
+            background-color: #002060;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-principal:hover { background-color: #003399; }
+        .aviso { color: #555; font-size: 12px; margin-top: 5px; font-style: italic; }
+
+        #resultScreen { display: none; }
+        .tabs {
+            overflow: hidden;
+            border-bottom: 2px solid #002060;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 0 0;
+            margin-top: 20px;
+        }
+        .tab-button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        .tab-button:hover { background-color: #ddd; color: #002060; }
+        .tab-button.active { background-color: #002060; color: white; }
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+            animation: fadeEffect 0.5s;
+        }
+        @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #002060;
+            color: white;
+            border-bottom: 3px solid #cc0000;
+        }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+        
+        .filter-input {
+            width: 90%;
+            padding: 4px;
+            margin-top: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .linha-feita {
+            text-decoration: line-through;
+            color: #888;
+            background-color: #e2e2e2 !important;
+            opacity: 0.6;
+        }
+        .checkbox-feito {
+            transform: scale(1.6);
+            cursor: pointer;
+            accent-color: #002060;
+        }
+
+        .corte-row { color: #d9534f; font-weight: bold; background-color: #ffe6e6 !important; }
+        .col-corte-header { background-color: #d9534f; }
+        .col-corte-cell { background-color: #f5c6c6; color: #a94442; font-weight: bold; }
+        
+        .btn-voltar {
+            background-color: #666;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .btn-voltar:hover { background-color: #444; }
+
+        .btn-acao {
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.2s;
+        }
+        .btn-foto { background-color: #6f42c1; }
+        .btn-foto:hover { background-color: #5a32a3; }
+        .btn-excel { background-color: #28a745; }
+        .btn-excel:hover { background-color: #218838; }
+        .btn-copiar { background-color: #17a2b8; }
+        .btn-copiar:hover { background-color: #138496; }
+
+        /* Container do Gráfico e Card da TU */
+        .grafico-container {
+            width: 100%;
+            max-width: 650px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-tu {
+            background: #002060;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            align-self: flex-start;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Análise Sistêmica IRDR</h1>
+
+    <div id="uploadScreen">
+        <div class="upload-section">
+            <div>
+                <label for="fileOen">1. Selecione o arquivo do item OEN da TU:</label><br>
+                <input type="file" id="fileOen" accept=".csv, .xlsx, .xls">
+                <div class="aviso">* Itens duplicados serão somados e consolidados automaticamente.</div>
+            </div>
+            
+            <div>
+                <label for="fileEstoque">2. Selecione o arquivo de Saldo (Posições IRDR / Estoque):</label><br>
+                <input type="file" id="fileEstoque" accept=".csv, .xlsx, .xls">
+                <div class="aviso">* Você pode subir o relatório bruto! Posições não autorizadas (ex: PP, PK) serão ignoradas automaticamente.</div>
+            </div>
+        </div>
+        <button class="btn-principal" onclick="processarDados()">Processar Dados</button>
+        <div id="loadingText" style="text-align: center; margin-top: 15px; font-weight: bold; color: #002060; display: none;">Processando inteligência de dados, aguarde...</div>
+    </div>
+
+    <div id="resultScreen">
+        <button class="btn-voltar" onclick="voltarInicio()">← Nova Análise</button>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="abrirAba(event, 'abaMovimentacoes')">Movimentações</button>
+            <button class="tab-button" onclick="abrirAba(event, 'abaCortes')">Cortes</button>
+            <button class="tab-button" onclick="abrirAba(event, 'abaRelacao')">Relação Itens (Inventário)</button>
+            <button class="tab-button" onclick="abrirAba(event, 'abaResumo')">Qtd Retirada por Posição</button>
+        </div>
+
+        <div id="abaMovimentacoes" class="tab-content" style="display: block;">
+            <div id="tabelaMovimentacoes"></div>
+        </div>
+
+        <div id="abaCortes" class="tab-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <p style="color: #666; font-style: italic; margin: 0;">* Relação de itens que não possuem saldo suficiente nas posições autorizadas.</p>
+                <button class="btn-acao btn-foto" onclick="capturarTela('tabelaCortes', 'Relatorio_Cortes_IRDR')">
+                    📸 Capturar Tela
+                </button>
+            </div>
+            <div id="tabelaCortes"></div>
+        </div>
+
+        <div id="abaRelacao" class="tab-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <p style="color: #666; font-style: italic; margin: 0;">* Exibindo apenas as movimentações das posições de Inventário/Linha (Prioridades 1, 6 e 7).</p>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-acao btn-foto" onclick="capturarTela('tabelaRelacao', 'Relatorio_Inventario')">
+                        📸 Capturar Tela
+                    </button>
+                    <button class="btn-acao btn-excel" onclick="baixarExcel('tabelaRelacao', 'Relatorio_Inventario')">
+                        ⬇️ Baixar Excel
+                    </button>
+                </div>
+            </div>
+            <div id="tabelaRelacao"></div>
+        </div>
+
+        <div id="abaResumo" class="tab-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <p style="color: #666; font-style: italic; margin: 0;">* Resumo geral de peças concluídas por zona.</p>
+                <button class="btn-acao btn-copiar" onclick="copiarApenasValores()">
+                    📋 Copiar Valores para Colar no Excel
+                </button>
+            </div>
+            
+            <div id="tabelaResumoContainer"></div>
+            
+            <div class="grafico-container">
+                <div class="card-tu">Total Peças TU: <span id="lblTotalTU">0</span></div>
+                <div style="width: 100%;">
+                    <canvas id="graficoResumo"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let meuGrafico = null;
+
+    async function lerArquivoExcel(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const nomePrimeiraAba = workbook.SheetNames[0];
+                const planilha = workbook.Sheets[nomePrimeiraAba];
+                
+                const linhasBrutas = XLSX.utils.sheet_to_json(planilha, { header: 1 });
+                let linhaDoCabecalho = 0;
+                
+                for (let i = 0; i < linhasBrutas.length; i++) {
+                    if (linhasBrutas[i] && Array.isArray(linhasBrutas[i])) {
+                        const achouCabecalho = linhasBrutas[i].some(val => {
+                            let texto = String(val).toUpperCase().trim();
+                            return texto === "SKU" || texto === "PRODUTO";
+                        });
+                        if (achouCabecalho) {
+                            linhaDoCabecalho = i;
+                            break;
+                        }
+                    }
+                }
+                const json = XLSX.utils.sheet_to_json(planilha, { range: linhaDoCabecalho });
+                resolve(json);
+            };
+            reader.onerror = reject;
+            reader.readAsArrayBuffer(file);
+        });
+    }
+
+    // REGRA DE PRIORIDADES ATUALIZADA (CORRESPONDÊNCIA EXATA PARA DPC.SOBRA)
+    function descobrirPrioridade(posicao) {
+        if (!posicao) return 99;
+        let posUpper = posicao.toUpperCase().trim();
+        
+        if (posUpper.includes("DIVCIC")) return 1;
+        if (posUpper.includes("DPC.SOBRA.IRDR")) return 2;
+        if (posUpper.includes("RECUSA.LOG")) return 3;
+        if (posUpper.includes("DPC.SOBRA.AERO")) return 5;
+        
+        // Regra Corrigida: Só aceita se for exatamente "DPC.SOBRA", ignorando DPC.SOBRA.D2D
+        if (posUpper === "DPC.SOBRA") return 4;
+        
+        if (posUpper.includes("PICLINHA")) return 6;
+        if (posUpper.startsWith("LN") || posUpper.startsWith("PC") || posUpper.startsWith("PD")) return 7;
+        
+        return 99; 
+    }
+
+    async function processarDados() {
+        const fileOen = document.getElementById('fileOen').files[0];
+        const fileEstoque = document.getElementById('fileEstoque').files[0];
+
+        if (!fileOen || !fileEstoque) {
+            alert("Por favor, selecione os DOIS arquivos antes de processar.");
+            return;
+        }
+
+        document.getElementById('loadingText').style.display = "block";
+
+        try {
+            const dadosOenBruto = await lerArquivoExcel(fileOen);
+            let dadosEstoque = await lerArquivoExcel(fileEstoque);
+
+            let oenAgrupado = {};
+            dadosOenBruto.forEach(pedido => {
+                let sku = pedido["Produto"] || pedido["SKU"];
+                let qtd = parseFloat(pedido["Quantidade"]) || parseFloat(pedido["Qtde. Pec"]) || 0;
+                
+                if (sku && qtd > 0) {
+                    if (oenAgrupado[sku]) {
+                        oenAgrupado[sku] += qtd; 
+                    } else {
+                        oenAgrupado[sku] = qtd; 
+                    }
+                }
+            });
+
+            let dadosOen = Object.keys(oenAgrupado).map(sku => {
+                return { SKU: sku, Quantidade: oenAgrupado[sku] };
+            });
+
+            dadosEstoque.forEach(item => {
+                item.CodigoProduto = item["Produto"] || item["SKU"];
+                item.PosicaoReal = item["Posição no depósito"] || item["Posição"] || item["Posicao"];
+                item.PrioridadeCalc = item["Prioridade"] || descobrirPrioridade(item.PosicaoReal);
+                item.Saldo = parseFloat(item["Quantidade"]) || parseFloat(item["Qtde"]) || 0;
+            });
+
+            dadosEstoque = dadosEstoque.filter(item => item.PrioridadeCalc <= 7);
+
+            dadosEstoque.sort((a, b) => {
+                if (a.PrioridadeCalc !== b.PrioridadeCalc) { return a.PrioridadeCalc - b.PrioridadeCalc; }
+                return b.Saldo - a.Saldo; 
+            });
+
+            let movimentacoes = [];
+            let resumo = { p1: 0, p2: 0, p3: 0, p4: 0, p5: 0, p6: 0, p7: 0, totalTU: 0, concluido: 0, cortes: 0 };
+
+            dadosOen.forEach(pedido => {
+                let skuPedido = pedido.SKU; 
+                let qtdeNecessariaOriginal = pedido.Quantidade; 
+                let qtdeNecessaria = qtdeNecessariaOriginal;
+                
+                resumo.totalTU += qtdeNecessariaOriginal; 
+                let estoqueDoItem = dadosEstoque.filter(item => item.CodigoProduto == skuPedido);
+
+                for (let pos of estoqueDoItem) {
+                    if (qtdeNecessaria <= 0) break;
+
+                    if (pos.Saldo > 0) {
+                        let qtdeARetirar = Math.min(pos.Saldo, qtdeNecessaria);
+                        
+                        movimentacoes.push({
+                            SKU: skuPedido,
+                            Posicao: pos.PosicaoReal || "-",
+                            Prioridade: pos.PrioridadeCalc,
+                            Qtd_Retirar: qtdeARetirar,
+                            Unidade: pos["Unidade comercial"] || pos["Unidade Comercial"] || "-"
+                        });
+
+                        resumo.concluido += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 1) resumo.p1 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 2) resumo.p2 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 3) resumo.p3 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 4) resumo.p4 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 5) resumo.p5 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 6) resumo.p6 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 7) resumo.p7 += qtdeARetirar;
+
+                        qtdeNecessaria -= qtdeARetirar;
+                        pos.Saldo -= qtdeARetirar; 
+                    }
+                }
+                
+                if (qtdeNecessaria > 0) {
+                    movimentacoes.push({
+                        SKU: skuPedido,
+                        Posicao: "CORTE (SEM SALDO NO ESTOQUE)",
+                        Prioridade: "-",
+                        Qtd_Retirar: qtdeNecessaria,
+                        Unidade: "-"
+                    });
+                    resumo.cortes += qtdeNecessaria; 
+                }
+            });
+
+            movimentacoes.sort((a, b) => {
+                let prioA = (a.Prioridade === "-") ? 99 : parseInt(a.Prioridade);
+                let prioB = (b.Prioridade === "-") ? 99 : parseInt(b.Prioridade);
+                return prioA - prioB;
+            });
+
+            renderizarTelas(movimentacoes, resumo);
+            
+            document.getElementById('lblTotalTU').innerText = resumo.totalTU;
+            gerarGrafico(resumo);
+
+            document.getElementById('loadingText').style.display = "none";
+            document.getElementById('uploadScreen').style.display = "none";
+            document.getElementById('resultScreen').style.display = "block";
+
+        } catch (erro) {
+            console.error(erro);
+            alert("Erro ao processar. Verifique se os arquivos correspondem ao padrão.");
+            document.getElementById('loadingText').style.display = "none";
+        }
+    }
+
+    function filtrarTabela(tabelaId) {
+        let divContenedor = document.getElementById(tabelaId);
+        let tabela = divContenedor.querySelector("table");
+        if (!tabela) return;
+
+        let inputs = tabela.querySelectorAll(".filter-input");
+        let filtros = Array.from(inputs).map(input => input.value.toUpperCase());
+        let tbody = tabela.querySelector("tbody");
+        let linhas = tbody.querySelectorAll("tr");
+
+        for (let i = 0; i < linhas.length; i++) {
+            let mostrarLinha = true;
+            let celulas = linhas[i].querySelectorAll("td");
+            if (celulas.length === 1) continue;
+            for (let j = 0; j < filtros.length; j++) {
+                let textoFiltro = filtros[j];
+                if (textoFiltro) {
+                    let celula = celulas[j];
+                    if (celula) {
+                        let textoCelula = celula.textContent || celula.innerText;
+                        if (textoCelula.toUpperCase().indexOf(textoFiltro) === -1) {
+                            mostrarLinha = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            linhas[i].style.display = mostrarLinha ? "" : "none";
+        }
+    }
+
+    function abrirAba(evt, nomeAba) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+        document.getElementById(nomeAba).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    function voltarInicio() {
+        document.getElementById('resultScreen').style.display = "none";
+        document.getElementById('uploadScreen').style.display = "block";
+        document.getElementById('fileOen').value = "";
+        document.getElementById('fileEstoque').value = "";
+    }
+
+    function capturarTela(idTabela, nomeArquivo) {
+        let elemento = document.getElementById(idTabela);
+        let inputs = elemento.querySelectorAll('.filter-input');
+        inputs.forEach(inp => inp.style.display = 'none');
+        
+        html2canvas(elemento, { backgroundColor: "#ffffff" }).then(canvas => {
+            inputs.forEach(inp => inp.style.display = 'block');
+            let link = document.createElement('a');
+            link.download = nomeArquivo + '.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    }
+
+    function baixarExcel(idTabela, nomeArquivo) {
+        let tabelaOriginal = document.getElementById(idTabela).querySelector('table');
+        if (!tabelaOriginal) { alert("Nenhuma tabela encontrada."); return; }
+        
+        let tabelaClone = tabelaOriginal.cloneNode(true);
+        let inputs = tabelaClone.querySelectorAll('.filter-input');
+        inputs.forEach(inp => inp.parentNode.removeChild(inp));
+        let brs = tabelaClone.querySelectorAll('br');
+        brs.forEach(br => br.parentNode.removeChild(br));
+
+        let wb = XLSX.utils.table_to_book(tabelaClone, { sheet: "Inventário" });
+        XLSX.writeFile(wb, nomeArquivo + '.xlsx');
+    }
+
+    function copiarApenasValores() {
+        let celulasValores = document.querySelectorAll("#tabelaResumoContainer table tbody tr td");
+        if (celulasValores.length === 0) { alert("Nenhum valor encontrado para copiar."); return; }
+
+        let arrayValores = Array.from(celulasValores).map(celula => celula.innerText.trim());
+        let textoCopia = arrayValores.join("\t");
+
+        navigator.clipboard.writeText(textoCopia).then(() => {
+            alert("Somente os valores numéricos foram copiados com sucesso! Vá no seu Excel e dê 'Ctrl + V'.");
+        }).catch(err => {
+            alert("Erro ao copiar os dados: " + err);
+        });
+    }
+
+    function gerarGrafico(resumo) {
+        const ctx = document.getElementById('graficoResumo');
+        
+        if (meuGrafico) { meuGrafico.destroy(); }
+
+        const labels = ['DIVCIC', 'DPC.SOBRA.IRDR', 'RECUSA.LOG', 'DPC.SOBRA', 'DPC.SOBRA.AERO', 'PICLINHA', 'LN / PC / PD', 'CORTES'];
+        const dados = [resumo.p1, resumo.p2, resumo.p3, resumo.p4, resumo.p5, resumo.p6, resumo.p7, resumo.cortes];
+
+        meuGrafico = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Quantidade',
+                    data: dados,
+                    backgroundColor: [
+                        '#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a', '#ff7c43', '#dc3545'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'right', labels: { font: { size: 13 } } },
+                    title: {
+                        display: true,
+                        text: 'Distribuição e Porcentagem de Retirada da TU',
+                        font: { size: 16 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) { label += ': '; }
+                                let valor = context.raw;
+                                let total = context.chart._metasets[context.datasetIndex].total;
+                                let porcentagem = total > 0 ? ((valor / total) * 100).toFixed(1) + '%' : '0%';
+                                return label + valor + ' peças (' + porcentagem + ')';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function renderizarTelas(dados, resumo) {
+        let dadosMovimentacoes = dados.filter(d => d.Prioridade !== "-");
+        let dadosCortes = dados.filter(d => d.Prioridade === "-");
+        let dadosRelacao = dados.filter(d => d.Prioridade === 1 || d.Prioridade === 6 || d.Prioridade === 7);
+
+        const gerarLinhas = (array, comCheckbox = false) => {
+            if (array.length === 0) return `<tr><td colspan="${comCheckbox ? 5 : 4}">Nenhum registro encontrado.</td></tr>`;
+            return array.map(linha => `
+                <tr>
+                    <td>${linha.SKU}</td>
+                    <td>${linha.Posicao}</td>
+                    <td><b>${linha.Qtd_Retirar}</b></td>
+                    <td>${linha.Unidade}</td>
+                    ${comCheckbox ? `
+                    <td><input type="checkbox" class="checkbox-feito" onchange="this.closest('tr').classList.toggle('linha-feita', this.checked)"></td>
+                    ` : ''}
+                </tr>
+            `).join('');
+        };
+
+        const cabecalhoPadrao = (tabelaId, labelQtd = "Quantidade a Retirar", comCheckbox = false) => `
+            <thead>
+                <tr>
+                    <th>Produto / SKU <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar SKU..."></th>
+                    <th>Posição no depósito <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar Posição..."></th>
+                    <th>${labelQtd} <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar Qtd..."></th>
+                    <th>Unidade Comercial <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar UC..."></th>
+                    ${comCheckbox ? `<th>Feito</th>` : ''}
+                </tr>
+            </thead>
+            <tbody>
+        `;
+
+        const cabecalhoCortes = `
+            <thead>
+                <tr>
+                    <th>Produto / SKU <br><input type="text" class="filter-input" onkeyup="filtrarTabela('tabelaCortes')" placeholder="Filtrar SKU..."></th>
+                    <th>Posição no depósito <br><input type="text" class="filter-input" onkeyup="filtrarTabela('tabelaCortes')" placeholder="Filtrar Posição..."></th>
+                    <th>Quantidade Faltante <br><input type="text" class="filter-input" onkeyup="filtrarTabela('tabelaCortes')" placeholder="Filtrar Qtd..."></th>
+                </tr>
+            </thead>
+            <tbody>
+        `;
+
+        document.getElementById('tabelaMovimentacoes').innerHTML = `
+            <table id="tableMovs">${cabecalhoPadrao('abaMovimentacoes', 'Quantidade a Retirar', true)}${gerarLinhas(dadosMovimentacoes, true)}</tbody></table>
+        `;
+
+        document.getElementById('tabelaCortes').innerHTML = `
+            <table id="tableCort">${cabecalhoCortes}
+            ${dadosCortes.length === 0 ? '<tr><td colspan="3">Sem cortes! 100% atendido.</td></tr>' : 
+              dadosCortes.map(linha => `
+                <tr class="corte-row">
+                    <td>${linha.SKU}</td>
+                    <td>${linha.Posicao}</td>
+                    <td><b>${linha.Qtd_Retirar}</b></td>
+                </tr>
+            `).join('')}
+            </tbody></table>
+        `;
+
+        document.getElementById('tabelaRelacao').innerHTML = `
+            <table id="tableRel">${cabecalhoPadrao('abaRelacao')}${gerarLinhas(dadosRelacao)}</tbody></table>
+        `;
+
+        document.getElementById('tabelaResumoContainer').innerHTML = `
+            <table id="tableToCopy">
+                <thead>
+                    <tr><th colspan="10" style="background-color: #001040; font-size: 16px;">Quantidade de peças retiradas por posição</th></tr>
+                    <tr>
+                        <th>DIVCIC</th>
+                        <th>DPC.SOBRA. IRDR</th>
+                        <th>RECUSA. LOG</th>
+                        <th>DPC.SOBRA</th>
+                        <th>DPC.SOBRA. AERO</th>
+                        <th>PICLINHA</th>
+                        <th>LN</th>
+                        <th>Total Peças TU</th>
+                        <th>Concluído</th>
+                        <th class="col-corte-header">Cortes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${resumo.p1}</td>
+                        <td>${resumo.p2}</td>
+                        <td>${resumo.p3}</td>
+                        <td>${resumo.p4}</td>
+                        <td>${resumo.p5}</td>
+                        <td>${resumo.p6}</td>
+                        <td>${resumo.p7}</td>
+                        <td><b>${resumo.totalTU}</b></td>
+                        <td><b>${resumo.concluido}</b></td>
+                        <td class="col-corte-cell">${resumo.cortes}</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+    }
+</script>
+</body>
+</html>

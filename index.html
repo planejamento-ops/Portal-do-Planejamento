@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Planejamento</title>
+    <style>
+        /* Animação de entrada suave */
+        body {
+            animation: surgirDaSombra 0.8s ease-out forwards;
+            opacity: 0; /* Começa invisível */
+        }
+
+        @keyframes surgirDaSombra {
+            0% {
+                opacity: 0;
+                transform: translateY(20px); /* Começa um pouco mais para baixo */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* Sobe para a posição normal */
+            }
+        }
+        /* Apenas o fundo da página e a fonte geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #03132c; /* Cor do fundo da tela inteira */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Estilo do cabeçalho (Título da página) */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            color: #f7f8f9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #efd6d6;
+        }
+
+        /* Grade 2x2 para os botões */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        /* O "Esqueleto" do botão (Sem NENHUMA cor definida aqui) */
+        .card {
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .card .icon img {
+            width: 80px ;    /*largura padrão*/
+            height: 80px;   /*altura padrão*/
+            object-fit: contain;   /*imagem não fica esticada*/
+            transition: all 0.3 ease;  /*imagem com transição igual o card*/
+        }
+            
+
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        /* Animação de flutuar padrão para todos */
+        .card:hover {
+            transform: translateY(-8px);
+        }
+        .card:hover .icon {
+            transform: scale(1.1);
+        }
+
+        /* ======================================================== */
+        /* PERSONALIZAÇÃO TOTAL: CADA BLOCO COM SUAS PRÓPRIAS CORES */
+        /* ======================================================== */
+        
+        /* --- 1. BLOCO AUDITOR --- */
+        .bloco-auditor {
+            background-color: #FFFFFF; /* Fundo normal */
+            border: 2px solid #3498db; /* Borda normal (Azul) */
+            color: #0A1931;            /* Cor do texto normal */
+        }
+        .bloco-auditor .icon {
+            color: #3498db;            /* Cor do ícone normal */
+        }
+        .bloco-auditor:hover {
+            background-color: #3498db; /* Fundo ao passar o mouse */
+            color: #FFFFFF;            /* Texto ao passar o mouse */
+        }
+        .bloco-auditor:hover .icon {
+            color: #FFFFFF;            /* Ícone ao passar o mouse */
+        }
+
+        /* --- 2. BLOCO WALLBOARD --- */
+        .bloco-wallboard {
+            background-color: #FFFFFF; 
+            border: 2px solid #3498db; /* Borda Vermelha */
+            color: #0A1931;            
+        }
+        .bloco-wallboard .icon {
+            color: #3498db;            
+        }
+        .bloco-wallboard:hover {
+            background-color: #3498db; 
+            color: #FFFFFF;            
+        }
+        .bloco-wallboard:hover .icon {
+            color: #FFFFFF;            
+        }
+
+        /* --- 3. BLOCO VALIDAÇÃO --- */
+        .bloco-validacao {
+            background-color: #FFFFFF; /* Fundo já começa Azul Marinho! */
+            border: 2px solid #3498db; 
+            color: #0A1931;            /* Texto já começa Branco */
+        }
+        .bloco-validacao .icon {
+            color: #3498db;            /* Ícone verde */
+        }
+        .bloco-validacao:hover {
+            background-color: #3498db; /* Fundo vira verde ao passar o mouse */
+            border-color: #3498db;
+            color: #FFFFFF;            /* Texto vira escuro */
+        }
+        .bloco-validacao:hover .icon {
+            color: #FFFFFF;            /* Ícone vira escuro */
+        }
+
+        /* --- 4. BLOCO IRDR --- */
+        .bloco-irdr {
+            background-color: #FFFFFF; 
+            border: 2px solid #3498db; /* Borda Roxa */
+            color: #0A1931;            
+        }
+        .bloco-irdr .icon {
+            color: #3498db;            
+        }
+        .bloco-irdr:hover {
+            background-color: #3498db; 
+            color: #FFFFFF;            
+        }
+        .bloco-irdr:hover .icon {
+            color: #FFFFFF;            
+        }
+
+        /* Ajuste para celular */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Portal do Planejamento</h1>
+        <p>Selecione um aplicativo abaixo para iniciar</p>
+    </div>
+
+    <!-- Container dos Aplicativos -->
+    <div class="grid-container">
+        
+        <!-- App 1: Auditor -->
+        <a href="Packspec.html" class="card bloco-auditor">
+            <div class="icon">📊</div>
+            <h2>Análise de Packspec (on hold)</h2>
+        </a>
+
+        <!-- App 2: Wallboard -->
+        <a href="wallboard.operacional.html" class="card bloco-wallboard">
+            <div class="icon"></div>
+                <img src="Wal" alt="Ícone">
+            <h2>Wallboard Operacional</h2>
+        </a>
+
+        <!-- App 3: Validação -->
+        <a href="validacao_cortes.html" class="card bloco-validacao">
+            <div class="icon">✅</div>
+            <h2>Validação de Cortes</h2>
+        </a>
+
+        <!-- App 4: IRDR -->
+        <a href="irdr.html" class="card bloco-irdr">
+            <div class="icon">⚖️</div>
+            <h2>Tratativas de IRDR</h2>
+        </a>
+
+    </div>
+
+</body>
+</html>
