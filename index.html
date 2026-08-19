@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Planejamento</title>
-    <style>
-        /* Animação de entrada suave */
-        body {
-            animation: surgirDaSombra 0.8s ease-out forwards;
-            opacity: 0; /* Começa invisível */
-        }
 
-        @keyframes surgirDaSombra {
-            0% {
-                opacity: 0;
-                transform: translateY(20px); /* Começa um pouco mais para baixo */
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0); /* Sobe para a posição normal */
-            }
-        }
-        /* Apenas o fundo da página e a fonte geral */
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones de Linha do Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    
+    <style>
+        /* ======================================================== */
+        /* RESET E CONFIGURAÇÕES BÁSICAS                            */
+        /* ======================================================== */
         * {
             margin: 0;
             padding: 0;
@@ -30,198 +25,411 @@
         }
 
         body {
-            background-color: #03132c; /* Cor do fundo da tela inteira */
+            background: linear-gradient(#000000a8, #020250ce), url('Background.png');
+            background-size: cover;        
+            background-position: center;   
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            align-items: flex-start; 
+            justify-content: space-between;
+            height: 100vh;
+            position: relative;
+            padding: 2.5vh 6%;
+            overflow: hidden;
         }
 
-        /* Estilo do cabeçalho (Título da página) */
+        /* LOGOTIPO SUPERIOR DIREITO */
+        .logo-topo {
+            position: absolute; 
+            top: 3.5vh; 
+            right: 6%; 
+            max-width: 120px; 
+            z-index: 10; 
+            opacity: 0; 
+            animation: surgirDaSombra 0.8s ease-out forwards; 
+        }
+
+        @keyframes surgirDaSombra {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Container principal */
+        .main-wrapper {
+            width: 100%;
+            max-width: 1600px; 
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            animation: surgirDaSombra 0.8s ease-out forwards;
+            opacity: 0;
+            z-index: 2; 
+        }
+
+        /* ======================================================== */
+        /* CABEÇALHO E TÍTULO                                       */
+        /* ======================================================== */
         .header {
-            text-align: center;
-            margin-bottom: 50px;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .welcome-text {
+            color: #e64343;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 3px;
         }
 
         .header h1 {
-            font-size: 2.8rem;
-            color: #f7f8f9;
-            margin-bottom: 10px;
+            font-family: "Goldman", sans-serif;
+            font-size: 2.5rem; 
+            color: #ffffff;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .header h1 .destaque {
+            color: #e64343;
         }
 
         .header p {
-            font-size: 1.1rem;
-            color: #efd6d6;
+            font-size: 0.95rem;
+            color: #a0aab5; 
+            line-height: 1.3;
         }
 
-        /* Grade 2x2 para os botões */
+        /* ======================================================== */
+        /* CONTAINER E CARDS (ESTILO GHOST - 4 COLUNAS)             */
+        /* ======================================================== */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 800px;
-            width: 90%;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px; 
+            width: 100%;
         }
 
-        /* O "Esqueleto" do botão (Sem NENHUMA cor definida aqui) */
         .card {
-            border-radius: 12px;
-            padding: 40px 20px;
-            text-align: center;
+            height: 48vh; 
+            max-height: 320px;
+            min-height: 250px;
+            border-radius: 16px; 
+            padding: 18px 16px;
+            text-align: left; 
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            position: relative; 
+            background: rgba(255, 255, 255, 0.04); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+            transition: all 0.3s ease-in-out;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start; 
+            justify-content: flex-start;
+            overflow: hidden;
         }
 
         .card .icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+        }
+
+        .card .icon .material-symbols-outlined {
+            font-size: 42px; 
+            transition: all 0.3s ease;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        /* Textos do Card e Linha Separadora */
+        .card h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.2;
+            position: relative; 
+            padding-bottom: 10px; 
+            margin-bottom: 10px; 
+        }
+
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0; 
+            width: 70px; 
+            height: 3px; 
+            border-radius: 5px;
             transition: all 0.3s ease;
         }
 
-        .card .icon img {
-            width: 80px ;    /*largura padrão*/
-            height: 80px;   /*altura padrão*/
-            object-fit: contain;   /*imagem não fica esticada*/
-            transition: all 0.3 ease;  /*imagem com transição igual o card*/
+        .card p {
+            font-size: 0.8rem;
+            color: #a0aab5;
+            line-height: 1.35;
+            padding-bottom: 25px; 
         }
-            
 
+        /* A Setinha no canto inferior direito */
+        .card .arrow {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 4px;
+        }
 
-        .card h2 {
-            font-size: 1.3rem;
+        .card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.07);
+        }
+        
+        .card:active {
+            transform: scale(0.98) translateY(-2px); 
+        }
+
+        /* ======================================================== */
+        /* SISTEMA DE CORES: BORDAS DE 3PX COM GLOW NEON            */
+        /* ======================================================== */
+
+        /* --- 1. BLOCO PACKSPEC (AZUL) --- */
+        .bloco-auditor { border: 3px solid rgba(0, 210, 255, 0.5); }
+        .bloco-auditor .icon .material-symbols-outlined { color: #00d2ff; background: rgba(0, 210, 255, 0.1); }
+        .bloco-auditor h2::after { background: linear-gradient(to right, #00d2ff, transparent); }
+        .bloco-auditor .arrow { color: #00d2ff; border: 1px solid rgba(0, 210, 255, 0.3); }
+
+        .bloco-auditor:hover { border-color: #00d2ff; box-shadow: 0 8px 32px 0 rgba(0, 210, 255, 0.45); }
+        .bloco-auditor:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(0, 210, 255, 0.8); background: rgba(0, 210, 255, 0.2); }
+        .bloco-auditor:hover .arrow { border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.5); }
+
+        /* --- 2. BLOCO WALLBOARD (VERMELHO) --- */
+        .bloco-wallboard { border: 3px solid rgba(255, 75, 43, 0.5); }
+        .bloco-wallboard .icon .material-symbols-outlined { color: #ff4b2b; background: rgba(255, 75, 43, 0.1); }
+        .bloco-wallboard h2::after { background: linear-gradient(to right, #ff4b2b, transparent); }
+        .bloco-wallboard .arrow { color: #ff4b2b; border: 1px solid rgba(255, 75, 43, 0.3); }
+
+        .bloco-wallboard:hover { border-color: #ff4b2b; box-shadow: 0 8px 32px 0 rgba(255, 75, 43, 0.45); }
+        .bloco-wallboard:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(255, 75, 43, 0.8); background: rgba(255, 75, 43, 0.2); }
+        .bloco-wallboard:hover .arrow { border-color: #ff4b2b; box-shadow: 0 0 10px rgba(255, 75, 43, 0.5); }
+
+        /* --- 3. BLOCO VALIDAÇÃO (VERDE) --- */
+        .bloco-validacao { border: 3px solid rgba(0, 176, 155, 0.5); }
+        .bloco-validacao .icon .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.1); }
+        .bloco-validacao h2::after { background: linear-gradient(to right, #00b09b, transparent); }
+        .bloco-validacao .arrow { color: #00b09b; border: 1px solid rgba(0, 176, 155, 0.3); }
+
+        .bloco-validacao:hover { border-color: #00b09b; box-shadow: 0 8px 32px 0 rgba(0, 176, 155, 0.45); }
+        .bloco-validacao:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(0, 176, 155, 0.8); background: rgba(0, 176, 155, 0.2); }
+        .bloco-validacao:hover .arrow { border-color: #00b09b; box-shadow: 0 0 10px rgba(0, 176, 155, 0.5); }
+
+        /* --- 4. BLOCO IRDR (AMARELO) --- */
+        .bloco-irdr { border: 3px solid rgba(246, 185, 59, 0.5); }
+        .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.1); }
+        .bloco-irdr h2::after { background: linear-gradient(to right, #f6b93b, transparent); }
+        .bloco-irdr .arrow { color: #f6b93b; border: 1px solid rgba(246, 185, 59, 0.3); }
+
+        .bloco-irdr:hover { border-color: #f6b93b; box-shadow: 0 8px 32px 0 rgba(246, 185, 59, 0.45); }
+        .bloco-irdr:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(246, 185, 59, 0.8); background: rgba(246, 185, 59, 0.2); }
+        .bloco-irdr:hover .arrow { border-color: #f6b93b; box-shadow: 0 0 10px rgba(246, 185, 59, 0.5); }
+
+        /* ======================================================== */
+        /* BARRA DE PILARES ULTRA-FINA & ELEGANTE (ORIGINAL)         */
+        /* ======================================================== */
+        .bar-pilares {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
+            align-items: center;
+            width: 100%;
+            padding: 5px 15px;
+            background: linear-gradient(135deg, rgba(17, 31, 67, 0.614) 0%, rgba(11, 23, 57, 0.596) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid transparent;
+            border-top: 1px dashed rgba(0, 210, 255, 0.3); 
+            border-left: 1px solid rgba(0, 210, 255, 0.3);
+            border-bottom: 2px solid rgba(214, 40, 40, 0.473); 
+            border-radius: 10px 0 0 10px;
+            clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 100%, 0 100%);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .pilar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #a0aab5;
+            position: relative;
+            padding: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .pilar-item:hover {
+            transform: translateY(-1px);
+            color: #ffffff;
+        }
+
+        .pilar-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 210, 255, 0.3), transparent);
+        }
+
+        .pilar-item .material-symbols-outlined {
+            font-size: 18px;
+            color: #a0aab5;
+            transition: all 0.3s ease;
+        }
+
+        .pilar-item:hover .material-symbols-outlined {
+            color: #00d2ff;
+            text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+        }
+
+        .pilar-text {
+            font-size: 0.72rem;
+            line-height: 1.15;
+            letter-spacing: 0.3px;
+        }
+
+        .pilar-text strong {
+            color: #ffffff;
+            display: block;
             font-weight: 600;
         }
 
-        /* Animação de flutuar padrão para todos */
-        .card:hover {
-            transform: translateY(-8px);
-        }
-        .card:hover .icon {
-            transform: scale(1.1);
-        }
-
-        /* ======================================================== */
-        /* PERSONALIZAÇÃO TOTAL: CADA BLOCO COM SUAS PRÓPRIAS CORES */
-        /* ======================================================== */
-        
-        /* --- 1. BLOCO AUDITOR --- */
-        .bloco-auditor {
-            background-color: #FFFFFF; /* Fundo normal */
-            border: 2px solid #3498db; /* Borda normal (Azul) */
-            color: #0A1931;            /* Cor do texto normal */
-        }
-        .bloco-auditor .icon {
-            color: #3498db;            /* Cor do ícone normal */
-        }
-        .bloco-auditor:hover {
-            background-color: #3498db; /* Fundo ao passar o mouse */
-            color: #FFFFFF;            /* Texto ao passar o mouse */
-        }
-        .bloco-auditor:hover .icon {
-            color: #FFFFFF;            /* Ícone ao passar o mouse */
+        /* RODAPÉ FINAL */
+        .rodape {
+            width: 100%;
+            text-align: left;
+            opacity: 0.6;
         }
 
-        /* --- 2. BLOCO WALLBOARD --- */
-        .bloco-wallboard {
-            background-color: #FFFFFF; 
-            border: 2px solid #3498db; /* Borda Vermelha */
-            color: #0A1931;            
-        }
-        .bloco-wallboard .icon {
-            color: #3498db;            
-        }
-        .bloco-wallboard:hover {
-            background-color: #3498db; 
-            color: #FFFFFF;            
-        }
-        .bloco-wallboard:hover .icon {
-            color: #FFFFFF;            
+        .rodape p {
+            color: #a0aab5;           
+            font-size: 0.68rem;       
+            letter-spacing: 1px;    
+            text-transform: uppercase;
         }
 
-        /* --- 3. BLOCO VALIDAÇÃO --- */
-        .bloco-validacao {
-            background-color: #FFFFFF; /* Fundo já começa Azul Marinho! */
-            border: 2px solid #3498db; 
-            color: #0A1931;            /* Texto já começa Branco */
+        /* Responsividade */
+        @media (max-width: 1100px) {
+            body { overflow-y: auto; height: auto; }
+            .grid-container, .bar-pilares { grid-template-columns: repeat(2, 1fr); }
+            .header h1 { font-size: 2.2rem; }
         }
-        .bloco-validacao .icon {
-            color: #3498db;            /* Ícone verde */
-        }
-        .bloco-validacao:hover {
-            background-color: #3498db; /* Fundo vira verde ao passar o mouse */
-            border-color: #3498db;
-            color: #FFFFFF;            /* Texto vira escuro */
-        }
-        .bloco-validacao:hover .icon {
-            color: #FFFFFF;            /* Ícone vira escuro */
-        }
-
-        /* --- 4. BLOCO IRDR --- */
-        .bloco-irdr {
-            background-color: #FFFFFF; 
-            border: 2px solid #3498db; /* Borda Roxa */
-            color: #0A1931;            
-        }
-        .bloco-irdr .icon {
-            color: #3498db;            
-        }
-        .bloco-irdr:hover {
-            background-color: #3498db; 
-            color: #FFFFFF;            
-        }
-        .bloco-irdr:hover .icon {
-            color: #FFFFFF;            
-        }
-
-        /* Ajuste para celular */
         @media (max-width: 600px) {
-            .grid-container {
-                grid-template-columns: 1fr;
-            }
+            .grid-container, .bar-pilares { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8rem; }
+            .logo-topo { max-width: 80px; top: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Portal do Planejamento</h1>
-        <p>Selecione um aplicativo abaixo para iniciar</p>
-    </div>
+    <!-- Logo Superior -->
+    <img src="white-ceva.png" alt="Logo CEVA" class="logo-topo">
 
-    <!-- Container dos Aplicativos -->
-    <div class="grid-container">
+    <div class="main-wrapper">
         
-        <!-- App 1: Auditor -->
-        <a href="Packspec.html" class="card bloco-auditor">
-            <div class="icon">📊</div>
-            <h2>Análise de Packspec (on hold)</h2>
-        </a>
+        <!-- Cabeçalho Principal -->
+        <div class="header">
+            <span class="welcome-text">- Bem-vindo ao</span>
+            <h1>Portal do <br><span class="destaque">Planejamento</span></h1>
+            <p>Soluções inteligentes para uma logística mais eficiente</p>
+        </div>
 
-        <!-- App 2: Wallboard -->
-        <a href="wallboard.operacional.html" class="card bloco-wallboard">
-            <div class="icon"></div>
-                <img src="Wal" alt="Ícone">
-            <h2>Wallboard Operacional</h2>
-        </a>
+        <!-- Container dos Aplicativos (4 colunas) -->
+        <div class="grid-container">
+            
+            <!-- App 1: Packspec (Azul) -->
+            <a href="Packspec.html" class="card bloco-auditor">
+                <div class="icon">
+                    <span class="material-symbols-outlined">package</span>
+                </div>
+                <h2>Análise de <br>Packspec (on hold)</h2>
+                <p>Garanta que as especificações de embalagem estejam sempre atualizadas.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
 
-        <!-- App 3: Validação -->
-        <a href="validacao_cortes.html" class="card bloco-validacao">
-            <div class="icon">✅</div>
-            <h2>Validação de Cortes</h2>
-        </a>
+            <!-- App 2: Wallboard (Vermelho) -->
+            <a href="wallboard.operacional.html" class="card bloco-wallboard">
+                <div class="icon">
+                    <span class="material-symbols-outlined">monitor_heart</span>
+                </div>
+                <h2>Wallboard <br>Operacional</h2>
+                <p>Planeje a demanda de peças e caixas e distribua os volumes de forma equilibrada.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
 
-        <!-- App 4: IRDR -->
-        <a href="irdr.html" class="card bloco-irdr">
-            <div class="icon">⚖️</div>
-            <h2>Tratativas de IRDR</h2>
-        </a>
+            <!-- App 3: Validação (Verde) -->
+            <a href="validacao_cortes.html" class="card bloco-validacao">
+                <div class="icon">
+                    <span class="material-symbols-outlined">verified</span>
+                </div>
+                <h2>Validação <br>de Cortes</h2>
+                <p>Valide e analise a demanda solicitada com agilidade e segurança.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
+
+            <!-- App 4: IRDR (Amarelo) -->
+            <a href="irdr.html" class="card bloco-irdr">
+                <div class="icon">
+                    <span class="material-symbols-outlined">inventory</span>
+                </div>
+                <h2>Tratativas <br>de IRDR</h2>
+                <p>Identifique divergências de saldo lógico e agilize o processo de resgate e ajuste de saldo.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
+
+        </div>
+
+        <!-- BARRA DE PILARES INSTITUCIONAIS ORIGINAIS -->
+        <div class="bar-pilares">
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">shield</span>
+                <div class="pilar-text">
+                    Visão de
+                    <strong>Ponta a Ponta</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">verified_user</span>
+                <div class="pilar-text">
+                    Segurança e análise
+                    <strong>de dados</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">schedule</span>
+                <div class="pilar-text">
+                    Informações
+                    <strong>em tempo real</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">group</span>
+                <div class="pilar-text">
+                    Equipes em
+                    <strong>sincronia</strong>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026 | Versão 1.0</p>
+        </footer>
 
     </div>
 
