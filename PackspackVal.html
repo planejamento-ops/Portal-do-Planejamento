@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação Packspac</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        :root {
+            --azul-escuro: #001A4D; 
+            --vermelho: #E3000F; 
+            --cinza-borda: #b0c4de;
+            --cinza-claro: #f4f7f6;
+            --verde: #0f9d58;
+            --fundo: #e2e8f0; 
+            --azul-destaque: #bceeff; 
+            --azul-destaque-par: #87CEFA; 
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            margin: 0;
+            background-color: var(--fundo);
+            color: #333;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-size: 50%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.03; 
+            z-index: -1;
+            pointer-events: none; 
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 3px solid var(--vermelho);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .header h1 {
+            color: var(--azul-escuro);
+            font-size: 22px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .main-container {
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.95);
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--azul-escuro);
+        }
+
+        #uploadView { display: block; }
+        #resultView { display: none; }
+        #graficoEstacoesView { display: none; }
+        #graficoPesoView { display: none; }
+
+        .cards-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: stretch;
+        }
+
+        .upload-card {
+            border: 1px solid var(--cinza-borda);
+            border-radius: 6px;
+            padding: 20px 15px;
+            width: 180px;
+            text-align: center;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .upload-card input[type="file"] {
+            display: none; 
+        }
+
+        .custom-file-upload {
+            display: inline-block;
+            padding: 8px 12px;
+            cursor: pointer;
+            background-color: var(--cinza-claro);
+            border: 1px solid var(--cinza-borda);
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--azul-escuro);
+            font-weight: 600;
+            margin: 15px 0;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #e2e8f0;
+            border-color: var(--azul-escuro);
+        }
+
+        .card-title {
+            color: var(--azul-escuro);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .card-status { font-size: 14px; font-weight: bold; }
+        .status-pendente { color: var(--vermelho); }
+        .status-ok { color: var(--verde); }
+
+        .actions-row { display: flex; gap: 15px; margin-top: 10px; padding-bottom: 20px; }
+
+        .btn-processar {
+            background-color: var(--vermelho); color: white; border: none; padding: 15px 30px;
+            font-size: 16px; font-weight: 600; border-radius: 4px; cursor: pointer;
+            text-transform: uppercase; box-shadow: 0 3px 5px rgba(227, 0, 15, 0.2); transition: background 0.3s; font-family: inherit;
+        }
+        .btn-processar:hover { background-color: #a8000b; }
+
+        .btn-secundario {
+            background-color: var(--azul-escuro); color: white; border: none; padding: 12px 24px;
+            font-size: 15px; font-weight: 600; border-radius: 4px; cursor: pointer; text-transform: uppercase;
+            font-family: inherit; transition: background 0.3s;
+        }
+        .btn-secundario:hover { background-color: #001133; }
+
+        .btn-sheets {
+            background-color: var(--verde); color: white; border: none; padding: 12px 24px;
+            font-size: 15px; font-weight: 600; border-radius: 4px; cursor: pointer; text-transform: uppercase;
+            font-family: inherit; transition: background 0.3s;
+        }
+        .btn-sheets:hover { background-color: #0b7943; }
+
+        .exclusions-section { margin-top: 15px; padding-top: 10px; border-top: 1px solid #eee; }
+        .exclusions-summary { color: var(--azul-escuro); font-size: 15px; font-weight: bold; text-transform: uppercase; cursor: pointer; padding: 10px 0; user-select: none; outline: none; display: inline-flex; align-items: center; }
+        .exclusions-summary::-webkit-details-marker { display: none; }
+        .exclusions-summary::after { content: '▼'; font-size: 12px; margin-left: 8px; transition: transform 0.3s ease; }
+        details[open] .exclusions-summary::after { transform: rotate(180deg); }
+
+        .exclusions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px; }
+        .exclusion-box { background: transparent; padding: 15px; border-radius: 6px; border: 1px dashed var(--cinza-borda); display: flex; flex-direction: column; }
+        .exclusion-box label { display: block; font-weight: bold; color: var(--azul-escuro); margin-bottom: 12px; font-size: 14px; text-transform: uppercase; text-align: center; }
+        .exclusion-box textarea { width: 100%; height: 280px; padding: 5px; border: none; background: transparent; resize: none; font-family: inherit; font-size: 14px; line-height: 1.6; color: #555; box-sizing: border-box; margin-bottom: 10px; outline: none; overflow-y: auto; text-align: center; }
+        .exclusion-box textarea:focus { background: rgba(255,255,255,0.8); border-radius: 4px; box-shadow: inset 0 0 0 1px var(--cinza-borda); }
+        .btn-copiar { background-color: transparent; color: var(--azul-escuro); border: 1px solid var(--cinza-borda); padding: 10px; font-size: 13px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; transition: all 0.2s; margin-top: auto; font-family: inherit; }
+        .btn-copiar:hover { background-color: var(--cinza-claro); border-color: var(--azul-escuro); }
+
+        .result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 15px; }
+        .result-header-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .counters-container { display: flex; gap: 8px; margin-left: 10px; }
+        .counter-badge { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 4px; border: 1px solid #ccc; }
+        .counter-total { background-color: white; color: var(--azul-escuro); border-color: var(--azul-escuro); }
+        .counter-ok { background-color: #e6f4ea; color: #1e8e3e; border-color: #1e8e3e; }
+        .counter-erro { background-color: #fce8e6; color: var(--vermelho); border-color: var(--vermelho); }
+        .counter-warn { background-color: #fef0db; color: #e57300; border-color: #e57300; }
+        .btn-voltar { background-color: #555; color: white; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 4px; cursor: pointer; text-transform: uppercase; font-family: inherit; transition: background 0.3s; }
+        .btn-voltar:hover { background-color: #333; }
+
+        .table-container { overflow-x: auto; overflow-y: auto; max-height: 65vh; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px; background: white; }
+        .table-container::-webkit-scrollbar { height: 12px; width: 12px; }
+        .table-container::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .table-container::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 15px; white-space: nowrap; }
+        th { position: sticky; top: 0; z-index: 10; background-color: var(--azul-escuro); color: white; text-transform: uppercase; font-size: 13px; font-weight: 600; padding: 12px 10px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        td { border: 1px solid #ddd; padding: 12px 10px; text-align: center; vertical-align: middle; background-color: white; }
+        .col-destaque { background-color: var(--azul-destaque) !important; color: var(--azul-escuro) !important; font-weight: 500; }
+        .input-filtro-th { display: block; width: 100%; margin: 8px auto 0 auto; padding: 8px; border: none; border-radius: 4px; font-size: 13px; box-sizing: border-box; color: #333; text-align: center; font-family: inherit; }
+        tr:nth-child(even) td { background-color: #f9f9f9; }
+        tr:nth-child(even) td.col-destaque { background-color: var(--azul-destaque-par) !important; }
+
+        .badge { padding: 6px 12px; border-radius: 4px; font-weight: 600; font-size: 13px; display: inline-block; }
+        .badge-ok { background-color: #e6f4ea; color: #1e8e3e; border: 1px solid #1e8e3e; }
+        .badge-erro { background-color: #fce8e6; color: var(--vermelho); border: 1px solid var(--vermelho); }
+        .badge-warn { background-color: #fef0db; color: #e57300; border: 1px solid #e57300; }
+
+        .loading { text-align: left; font-weight: bold; color: #f29900; margin-top: 15px; font-size: 16px; display: none; }
+        
+        .chart-container { width: 100%; max-width: 1200px; margin: 0 auto 30px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .print-area { padding: 15px; background-color: #ffffff; } 
+        
+        .toggle-container { display: flex; justify-content: center; align-items: center; margin: 15px 0; padding: 10px; background: rgba(0,26,77,0.05); border-radius: 6px; gap: 20px; }
+        .toggle-container label { font-weight: 600; color: var(--azul-escuro); cursor: pointer; display: flex; align-items: center; gap: 8px; }
+        .toggle-container input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
+
+        .resumo-container { margin-top: 40px; overflow-x: auto; }
+        .tabela-resumo { width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse; font-size: 14px; }
+        .tabela-resumo th { background-color: var(--azul-escuro); color: white; padding: 10px; border: 1px solid #ddd; text-align: center; }
+        .tabela-resumo td { padding: 10px; border: 1px solid #ddd; text-align: center; background-color: white; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-logo-title">
+        <h1>Validação Packspac</h1>
+    </div>
+</div>
+
+<div class="main-container">
+    
+    <!-- TELA 1: UPLOAD -->
+    <div id="uploadView">
+        <div class="cards-row">
+            <div class="upload-card">
+                <div class="card-title">Estoque Físico</div>
+                <label for="fileEstoque" class="custom-file-upload">Anexar arquivo</label>
+                <input type="file" id="fileEstoque" accept=".xlsx, .xls" onchange="processarEstoqueUnico(this)">
+                <div class="card-status status-pendente" id="statusEstoque">Pendente</div>
+            </div>
+
+            <div class="upload-card">
+                <div class="card-title">Packspac (Bruto)</div>
+                <label for="filePackspac" class="custom-file-upload">Anexar arquivo</label>
+                <input type="file" id="filePackspac" accept=".csv, .xlsx, .xls" onchange="atualizarStatus(this, 'statusPackspac')">
+                <div class="card-status status-pendente" id="statusPackspac">Pendente</div>
+            </div>
+
+            <div class="upload-card">
+                <div class="card-title">Unid. de Medida</div>
+                <label for="fileUM" class="custom-file-upload">Anexar arquivo</label>
+                <input type="file" id="fileUM" accept=".xlsx, .xls" onchange="atualizarStatus(this, 'statusUM')">
+                <div class="card-status status-pendente" id="statusUM">Pendente</div>
+            </div>
+
+            <div class="upload-card">
+                <div class="card-title">Fixos</div>
+                <label for="fileFixos" class="custom-file-upload">Anexar arquivo</label>
+                <input type="file" id="fileFixos" accept=".xlsx, .xls" onchange="atualizarStatus(this, 'statusFixos')">
+                <div class="card-status status-pendente" id="statusFixos">Pendente</div>
+            </div>
+
+            <div class="upload-card" onclick="document.getElementById('textoMara').focus()" style="cursor: text; padding: 20px 15px;">
+                <div class="card-title" style="margin-bottom: 2px;">Tabela Mara</div>
+                <div style="font-size: 10px; color: #888; margin-bottom: 8px;">(Copiar e Colar)</div>
+                <textarea id="textoMara" placeholder="Cole os dados..." oninput="atualizarStatusMara()" style="width: 100%; flex-grow: 1; border: 1px dashed var(--cinza-borda); border-radius: 4px; font-size: 11px; resize: none; padding: 6px; outline: none; box-sizing: border-box; font-family: inherit; background: rgba(0,26,77,0.02);"></textarea>
+                <div class="card-status status-pendente" id="statusMara" style="margin-top: 10px;">Pendente</div>
+            </div>
+        </div>
+        
+        <div class="actions-row">
+            <button class="btn-secundario" onclick="window.location.reload()" style="padding: 15px 30px; font-size: 16px;">📂 Limpar Dados</button>
+            <button class="btn-processar" onclick="processarArquivos()">Processar</button>
+        </div>
+        
+        <details class="exclusions-section" id="exclusionsDetails">
+            <summary class="exclusions-summary">FILTROS UTILIZADOS</summary>
+            <div class="exclusions-grid">
+                <div class="exclusion-box">
+                    <label>Posição</label>
+                    <textarea id="descPosicao" spellcheck="false">AUTOMACAO
+GI-ZONE
+DPC.SOBRA.IRDR
+RECUSA.LOG
+DPC.SOBRA.AERO
+DPC.DEDUTIVEL
+AREA-IRDR
+SOBRECEBIMENTO
+SINISTRO-EXTRAVIO
+DPC.RECALL
+DPC
+EMBALAGEM
+DPC.SOBRA.D2D
+DPC.RD
+IRDR.INDUSTRIA
+IRDR.TRANSPORTES
+DPC.SOBRA
+DPC.DEDUTIVEL
+EMBALAGEM</textarea>
+                    <button class="btn-copiar" onclick="copiarTexto('descPosicao', this)">📋 Copiar Posições</button>
+                </div>
+                <div class="exclusion-box">
+                    <label>TE (Tipo de Estoque)</label>
+                    <textarea id="descTE" spellcheck="false">B6
+B9
+Q3
+Q4
+Q5
+Q6
+B7
+B8
+BA</textarea>
+                    <button class="btn-copiar" onclick="copiarTexto('descTE', this)">📋 Copiar TEs</button>
+                </div>
+                <div class="exclusion-box">
+                    <label>SKU (Ignorados)</label>
+                    <textarea id="descSKU" spellcheck="false">420740.00
+497689.00
+498331.01</textarea>
+                    <button class="btn-copiar" onclick="copiarTexto('descSKU', this)">📋 Copiar SKUs Ignorados</button>
+                </div>
+                <div class="exclusion-box" style="border-style: solid; border-color: var(--azul-escuro); background-color: rgba(0,26,77,0.02);">
+                    <label style="color: var(--azul-escuro);">SKU Estoque Físico</label>
+                    <textarea id="descSKUsUnicos" placeholder="Carregue o Estoque Físico para gerar a lista..." spellcheck="false" readonly></textarea>
+                    <button class="btn-copiar" onclick="copiarTexto('descSKUsUnicos', this)">📋 Copiar SKUs do Estoque</button>
+                </div>
+            </div>
+        </details>
+        <div id="loading" class="loading">Processando arquivos, aguarde...</div>
+    </div>
+
+    <!-- TELA 2: RESULTADOS -->
+    <div id="resultView">
+        <div class="result-header">
+            <div class="result-header-title">
+                <h2 style="color: var(--azul-escuro); margin: 0; font-size: 22px;">Resultado da Validação</h2>
+                <div class="counters-container">
+                    <span id="contadorItens" class="counter-badge counter-total">Total: 0</span>
+                    <span id="contadorOk" class="counter-badge counter-ok">Sem Ajuste: 0</span>
+                    <span id="contadorErro" class="counter-badge counter-erro">Divergente: 0</span>
+                    <span id="contadorWarn" class="counter-badge counter-warn">Desatualizado: 0</span>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn-sheets" id="btnTurno" onclick="copiarParaTurno()">📋 TURNO</button>
+                <button class="btn-secundario" id="btnResumo" onclick="copiarParaResumo()">📋 RESUMO</button>
+                <button class="btn-secundario" onclick="mostrarGraficoEstacoes()">📊 Gráfico Estações</button>
+                <button class="btn-secundario" onclick="mostrarGraficoPeso()">📊 Gráfico Peso</button>
+                <button class="btn-secundario" onclick="exportarParaExcel()">📥 Exportar Excel</button>
+                <button class="btn-voltar" onclick="voltarParaUpload()">⬅ Voltar</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="tabelaResultado">
+                <thead>
+                    <tr>
+                        <th style="min-width: 100px;">SKU <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                        <th style="min-width: 250px;">DESCRIÇÃO <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                        <th style="min-width: 100px;">FIXO <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                        <th style="min-width: 140px;">CADASTRO SAP <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                        <th style="min-width: 120px;">MEDIDA SAP <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                        <th style="min-width: 140px;">TIPO ESP. EMB <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                        <th style="min-width: 120px;">QTD ESP. EMB <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                        <th style="min-width: 140px;">STATUS <input type="text" class="input-filtro-th" placeholder="🔍 Filtrar..." onkeyup="filtrarTabela()"></th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TELA 3: GRÁFICO ESTAÇÕES -->
+    <div id="graficoEstacoesView">
+        <div class="result-header" style="justify-content: flex-end;">
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-secundario" onclick="tirarFoto('printApenasGraficoEstacoes', this)">📷 Print Gráfico</button>
+                <button class="btn-secundario" onclick="tirarFoto('printApenasTabelaEstacoes', this)">📷 Print Tabela</button>
+                <button class="btn-voltar" onclick="voltarParaResultados()">⬅ Voltar</button>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div id="printApenasGraficoEstacoes" class="print-area">
+                <h2 style="color: var(--azul-escuro); margin: 0 0 15px 0; font-size: 24px; text-align: center;">Análise por Estação (Fixos)</h2>
+                <canvas id="graficoEstacoes"></canvas>
+            </div>
+            
+            <div id="printApenasTabelaEstacoes" class="print-area">
+                <h3 style="color: var(--azul-escuro); margin: 20px 0 15px 0; font-size: 20px; text-align: center;">Resumo Numérico</h3>
+                <div class="resumo-container" style="margin-top: 0;">
+                    <table class="tabela-resumo">
+                        <thead><tr><th>Estação</th><th>CX</th><th>M1</th></tr></thead>
+                        <tbody id="corpoResumoGrafico"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TELA 4: GRÁFICO PESO -->
+    <div id="graficoPesoView">
+        <div class="result-header" style="justify-content: flex-end;">
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-secundario" onclick="tirarFoto('areaPrintPeso', this)">📷 Print Gráfico</button>
+                <button class="btn-voltar" onclick="voltarParaResultados()">⬅ Voltar</button>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="toggle-container">
+                <label>
+                    <input type="checkbox" id="ignorar04" onchange="renderizarGraficoPeso()">
+                    Desconsiderar A.G. 04
+                </label>
+                <label>
+                    <input type="checkbox" id="ignorarPC" onchange="renderizarGraficoPeso()">
+                    Desconsiderar PC
+                </label>
+            </div>
+            
+            <div id="areaPrintPeso" class="print-area">
+                <h2 style="color: var(--azul-escuro); margin: 0 0 15px 0; font-size: 24px; text-align: center;">Peso SKU por Estação</h2>
+                <canvas id="graficoPeso"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    Chart.register(ChartDataLabels);
+
+    let myChartEstacoes = null; 
+    let myChartPeso = null;
+    
+    window.dadosGlobaisPeso = [];
+    window.dadosGlobaisFixosBrutos = []; 
+
+    function getIndiceColuna(header, palavrasChave) {
+        if (!header) return -1;
+        for (let i = 0; i < header.length; i++) {
+            if (header[i] === undefined || header[i] === null) continue;
+            let nomeCol = header[i].toString().trim().toUpperCase();
+            if (palavrasChave.some(p => nomeCol === p.toUpperCase())) return i;
+        }
+        for (let i = 0; i < header.length; i++) {
+            if (header[i] === undefined || header[i] === null) continue;
+            let nomeCol = header[i].toString().trim().toUpperCase();
+            if (palavrasChave.some(p => nomeCol.includes(p.toUpperCase()))) return i;
+        }
+        return -1;
+    }
+
+    function atualizarStatus(input, statusId) {
+        const statusElement = document.getElementById(statusId);
+        if (input.files.length > 0) {
+            statusElement.textContent = "Carregado";
+            statusElement.className = "card-status status-ok";
+        } else {
+            statusElement.textContent = "Pendente";
+            statusElement.className = "card-status status-pendente";
+        }
+    }
+
+    function atualizarStatusMara() {
+        const txt = document.getElementById('textoMara').value.trim();
+        const statusElement = document.getElementById('statusMara');
+        if (txt.length > 0) {
+            statusElement.textContent = "Carregado";
+            statusElement.className = "card-status status-ok";
+        } else {
+            statusElement.textContent = "Pendente";
+            statusElement.className = "card-status status-pendente";
+        }
+    }
+
+    function copiarTexto(elementId, btn) {
+        const texto = document.getElementById(elementId).value;
+        if (!texto) return;
+        navigator.clipboard.writeText(texto).then(() => {
+            const textoOriginal = btn.innerText;
+            btn.innerText = "✔ Copiado!";
+            btn.style.backgroundColor = "var(--verde)";
+            btn.style.color = "white";
+            btn.style.borderColor = "var(--verde)";
+            setTimeout(() => {
+                btn.innerText = textoOriginal;
+                btn.style.backgroundColor = "transparent";
+                btn.style.color = "var(--azul-escuro)";
+                btn.style.borderColor = "var(--cinza-borda)";
+            }, 2000);
+        });
+    }
+
+    function tirarFoto(areaId, btnElement) {
+        const textoOriginal = btnElement.innerText;
+        const areaPrint = document.getElementById(areaId);
+
+        html2canvas(areaPrint, {
+            backgroundColor: '#ffffff',
+            scale: 2
+        }).then(canvas => {
+            canvas.toBlob(function(blob) {
+                const baixarImagemFallback = () => {
+                    const link = document.createElement('a');
+                    link.download = 'Grafico_Packspac.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                    alert("O navegador bloqueou a cópia para a área de transferência. A imagem foi baixada automaticamente no seu computador.");
+                    btnElement.innerText = "✔ Baixado!";
+                    btnElement.style.backgroundColor = "var(--verde)";
+                    setTimeout(() => {
+                        btnElement.innerText = textoOriginal;
+                        btnElement.style.backgroundColor = "var(--azul-escuro)";
+                    }, 2500);
+                };
+
+                try {
+                    window.focus(); 
+                    const item = new ClipboardItem({ 'image/png': blob });
+                    navigator.clipboard.write([item]).then(() => {
+                        btnElement.innerText = "✔ Copiado!";
+                        btnElement.style.backgroundColor = "var(--verde)";
+                        setTimeout(() => {
+                            btnElement.innerText = textoOriginal;
+                            btnElement.style.backgroundColor = "var(--azul-escuro)";
+                        }, 2500);
+                    }).catch(err => {
+                        baixarImagemFallback(); 
+                    });
+                } catch(e) {
+                    baixarImagemFallback(); 
+                }
+            });
+        }).catch(err => {
+            alert("Ocorreu um erro ao gerar a imagem: " + err);
+        });
+    }
+
+    function lerExcel(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const primeiraAba = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[primeiraAba];
+                const json = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: "" });
+                resolve(json);
+            };
+            reader.onerror = (error) => reject(error);
+            reader.readAsArrayBuffer(file);
+        });
+    }
+
+    function formatarFixo(valor) {
+        if (!valor || valor === "") return "Sem Fixo";
+        let str = valor.toString().trim().toUpperCase();
+        if (str.startsWith("PK")) return "Sem Fixo";
+        if (str.startsWith("LN")) {
+            let partes = str.split("-");
+            if (partes.length >= 3) return partes[2]; 
+            return str;
+        }
+        if (str.startsWith("PD")) return "PD";
+        if (str.startsWith("PC")) return "PC";
+        return str;
+    }
+
+    async function processarEstoqueUnico(input) {
+        atualizarStatus(input, 'statusEstoque');
+        const file = input.files[0];
+        const txtArea = document.getElementById('descSKUsUnicos');
+        
+        if (!file) {
+            txtArea.value = "";
+            return;
+        }
+
+        try {
+            txtArea.value = "Carregando SKUs...";
+            const dadosEstoque = await lerExcel(file);
+            const setSKUs = new Set();
+            
+            let idxSkuEstoque = getIndiceColuna(dadosEstoque[0], ["Produto", "SKU"]);
+            
+            if (idxSkuEstoque === -1) {
+                txtArea.value = "Erro: Coluna 'Produto' não encontrada.";
+                return;
+            }
+
+            dadosEstoque.forEach((linha, index) => {
+                if (index === 0) return; 
+                const itemRaw = linha[idxSkuEstoque]; 
+                if (itemRaw !== undefined && itemRaw !== null && itemRaw !== "") {
+                    setSKUs.add(itemRaw.toString().trim());
+                }
+            });
+
+            const skusOrdenados = Array.from(setSKUs).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
+            txtArea.value = skusOrdenados.join('\n');
+
+            const details = document.getElementById('exclusionsDetails');
+            if (details) details.open = true;
+
+        } catch (error) {
+            console.error(error);
+            txtArea.value = "Erro ao extrair SKUs.";
+        }
+    }
+
+    async function processarArquivos() {
+        const fileEstoque = document.getElementById('fileEstoque').files[0];
+        const filePackspac = document.getElementById('filePackspac').files[0];
+        const fileUM = document.getElementById('fileUM').files[0];
+        const fileFixos = document.getElementById('fileFixos').files[0];
+        const textoMara = document.getElementById('textoMara').value.trim();
+
+        if (!fileEstoque && !filePackspac && !fileUM && !fileFixos && !textoMara) {
+            alert("Por favor, carregue ao menos um arquivo ou cole a Tabela Mara para processar.");
+            return;
+        }
+
+        document.getElementById('loading').style.display = 'block';
+
+        try {
+            const dadosEstoque = fileEstoque ? await lerExcel(fileEstoque) : null;
+            const dadosPackspac = filePackspac ? await lerExcel(filePackspac) : null;
+            const dadosUM = fileUM ? await lerExcel(fileUM) : null;
+            const dadosFixos = fileFixos ? await lerExcel(fileFixos) : null;
+            const skusIgnorados = new Set(document.getElementById('descSKU').value.split('\n').map(item => item.trim()).filter(item => item !== ""));
+
+            window.dadosGlobaisPeso = []; 
+            window.dadosGlobaisFixosBrutos = [];
+
+            // 1. Processar Estoque Físico
+            const estoqueDict = {};
+            if (dadosEstoque && dadosEstoque.length > 0) {
+                let idxSkuEstoque = getIndiceColuna(dadosEstoque[0], ["Produto", "SKU"]);
+                let idxDescEstoque = getIndiceColuna(dadosEstoque[0], ["Descrição", "Descricao"]);
+                
+                if(idxSkuEstoque > -1) {
+                    dadosEstoque.forEach((linha, index) => {
+                        if (index === 0) return; 
+                        const itemRaw = linha[idxSkuEstoque];
+                        if (itemRaw !== undefined && itemRaw !== null && itemRaw !== "") {
+                            const item = itemRaw.toString().trim();
+                            if (!skusIgnorados.has(item)) {
+                                let txtDesc = "-";
+                                if (idxDescEstoque > -1 && linha[idxDescEstoque] !== undefined && linha[idxDescEstoque] !== null) {
+                                    txtDesc = linha[idxDescEstoque].toString().trim();
+                                    if(txtDesc === "") txtDesc = "-";
+                                }
+                                if (!estoqueDict[item] || estoqueDict[item] === "-") {
+                                    estoqueDict[item] = txtDesc;
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+
+            // 2. Processar Packspac 
+            const dicionarioPackspac = {};
+            if (dadosPackspac && dadosPackspac.length > 0) {
+                let currentSKU = null;
+                dadosPackspac.forEach((linha, index) => {
+                    if (index === 0) return; 
+                    let rowData = linha;
+                    if (linha.length === 1 && typeof linha[0] === 'string' && linha[0].includes(';')) rowData = linha[0].split(';');
+
+                    const valW = rowData[22] ? rowData[22].toString().trim() : "";
+                    const valAD = rowData[29] ? rowData[29].toString().trim() : ""; 
+                    const valAE = rowData[30] ? rowData[30].toString().trim() : ""; 
+                    const valCH = rowData[85] ? rowData[85].toString().trim().toUpperCase() : "";
+
+                    if (valW !== "") {
+                        currentSKU = valW;
+                        if (!dicionarioPackspac[currentSKU]) dicionarioPackspac[currentSKU] = { tipo: "-", qtd: "-" };
+                    }
+                    if (currentSKU) {
+                        if (valCH === "PLT") return; 
+                        if (valCH !== "" && valCH !== "-") dicionarioPackspac[currentSKU].tipo = valCH;
+                        if (valAD === "1" || valAD === "1.0") {
+                            if (valAE !== "" && valAE !== "0" && valAE !== "0.0" && valAE !== "0.000") {
+                                dicionarioPackspac[currentSKU].qtd = valAE;
+                            }
+                        }
+                    }
+                });
+            }
+
+            // 3. Processar Tabela Mara
+            const dicionarioMara = {};
+            if (textoMara) {
+                textoMara.split('\n').forEach(linha => {
+                    const colunas = linha.split('\t');
+                    if (colunas.length >= 2) {
+                        const chave = colunas[0] ? colunas[0].toString().trim() : "";
+                        const valor = colunas[1] ? colunas[1].toString().trim() : "-";
+                        if (chave !== "" && chave.toUpperCase() !== "SKU") dicionarioMara[chave] = valor;
+                    }
+                });
+            }
+
+            // 4. Processar Unid. de Medida
+            const dicionarioUM = {};
+            if (dadosUM && dadosUM.length > 0) {
+                let idxSkuUM = getIndiceColuna(dadosUM[0], ["Produto", "SKU"]);
+                let idxNumUM = getIndiceColuna(dadosUM[0], ["Numerador"]);
+                let idxUmAlt = getIndiceColuna(dadosUM[0], ["UM alt.", "UM alternativa"]);
+                let idxBruto = getIndiceColuna(dadosUM[0], ["Bruto", "Peso bruto"]);
+
+                dadosUM.forEach((linha, index) => {
+                    if (index === 0) return;
+                    let sku = (idxSkuUM > -1 && linha[idxSkuUM] !== undefined) ? linha[idxSkuUM].toString().trim() : "";
+                    if (!sku) return;
+
+                    let tipoRef = (idxUmAlt > -1 && linha[idxUmAlt] !== undefined) ? linha[idxUmAlt].toString().trim().toUpperCase() : "";
+                    let num = (idxNumUM > -1 && linha[idxNumUM] !== undefined) ? linha[idxNumUM].toString().trim() : "-";
+                    
+                    let brutoRaw = 0;
+                    if (idxBruto > -1 && linha[idxBruto] !== undefined) {
+                        let val = linha[idxBruto];
+                        if (typeof val === 'number') {
+                            brutoRaw = val;
+                        } else {
+                            let txtVal = val.toString().trim();
+                            if (txtVal.includes(',')) {
+                                txtVal = txtVal.replace(/\./g, ''); 
+                                txtVal = txtVal.replace(',', '.');  
+                            }
+                            brutoRaw = parseFloat(txtVal);
+                            if (isNaN(brutoRaw)) brutoRaw = 0;
+                        }
+                    }
+
+                    if (!dicionarioUM[sku]) dicionarioUM[sku] = { medidaSap: "-", peso: 0, hasPec: false };
+
+                    if (tipoRef === "CX") {
+                        dicionarioUM[sku].medidaSap = num;
+                    } else if (tipoRef === "PEC") {
+                        if (brutoRaw > 0) {
+                            dicionarioUM[sku].peso = brutoRaw;
+                            dicionarioUM[sku].hasPec = true;
+                        }
+                    } else if (tipoRef === "PAC") {
+                        if (!dicionarioUM[sku].hasPec || dicionarioUM[sku].peso === 0) {
+                            dicionarioUM[sku].peso = brutoRaw;
+                        }
+                    }
+                });
+            }
+
+            // 5. Processar Fixos
+            const dicionarioFixos = {};
+            if (dadosFixos && dadosFixos.length > 0) {
+                let idxSkuFixos = getIndiceColuna(dadosFixos[0], ["Produto", "SKU"]);
+                let idxFixoPos = getIndiceColuna(dadosFixos[0], ["Posição no depósito"]);
+
+                dadosFixos.forEach((linha, index) => {
+                    if (index === 0) return;
+                    let chave = (idxSkuFixos > -1 && linha[idxSkuFixos] !== undefined) ? linha[idxSkuFixos] : "";
+                    if (chave !== "") {
+                        const item = chave.toString().trim();
+                        const fixoRaw = (idxFixoPos > -1 && linha[idxFixoPos] !== undefined) ? linha[idxFixoPos].toString().trim() : "";
+                        
+                        if (fixoRaw.toUpperCase().includes("PK")) return;
+                        const fixoFormatado = formatarFixo(fixoRaw);
+                        
+                        if (fixoFormatado !== "Sem Fixo") {
+                            if (dicionarioFixos[item]) {
+                                if (!dicionarioFixos[item].includes(fixoFormatado)) {
+                                    dicionarioFixos[item] += " - " + fixoFormatado;
+                                }
+                            } else {
+                                dicionarioFixos[item] = fixoFormatado;
+                            }
+                        }
+
+                        // Guarda para uso direto no gráfico de estações
+                        const cadSap = dicionarioMara[item] || "-";
+                        window.dadosGlobaisFixosBrutos.push({
+                            sku: item,
+                            fixo: fixoFormatado,
+                            cadSap: cadSap
+                        });
+
+                        // Guarda para o gráfico de Peso
+                        let pesoItem = (dicionarioUM[item]) ? dicionarioUM[item].peso : 0;
+                        if (fixoFormatado !== "Sem Fixo") {
+                            window.dadosGlobaisPeso.push({ fixoStr: fixoFormatado, peso: pesoItem });
+                        }
+                    }
+                });
+            }
+
+            let itensOrdenados = [];
+            
+            if (dadosEstoque && dadosEstoque.length > 0) {
+                // Se o arquivo de Estoque foi enviado, a tabela baseia-se APENAS nele
+                itensOrdenados = Object.keys(estoqueDict).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
+            } else {
+                // Se o Estoque não foi enviado, usa a união para não quebrar a tela
+                const todosSkus = new Set([
+                    ...Object.keys(dicionarioFixos),
+                    ...Object.keys(dicionarioPackspac),
+                    ...Object.keys(dicionarioMara)
+                ]);
+                itensOrdenados = Array.from(todosSkus).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
+            }
+
+            // 6. Montar Tabela Final
+            const tbody = document.getElementById('corpoTabela');
+            tbody.innerHTML = "";
+
+            itensOrdenados.forEach(item => {
+                const descEstoque = estoqueDict[item] || "-";
+                const valFixo = dicionarioFixos[item] || "Sem Fixo";
+                const objPackspac = dicionarioPackspac[item] || { tipo: "-", qtd: "-" };
+                const valorMara = dicionarioMara[item] || "-";
+                const objUM = dicionarioUM[item] || { medidaSap: "-", peso: 0 };
+
+                const colCadSap = valorMara;         
+                const colMedSap = objUM.medidaSap;           
+                const colTipoEmb = objPackspac.tipo; 
+                const colQtdEmb = objPackspac.qtd;   
+
+                let status = "Sem Ajuste", badgeClass = "badge-ok";
+                let divergenciaTipo = (colTipoEmb !== "-" && colCadSap !== "-" && colTipoEmb !== colCadSap);
+                let divergenciaQtd = (colQtdEmb !== "-" && colMedSap !== "-" && colQtdEmb !== colMedSap);
+
+                if (divergenciaTipo || divergenciaQtd) {
+                    status = "Divergente"; badgeClass = "badge-erro";
+                } else if (colCadSap === "-" || colMedSap === "-" || colTipoEmb === "-" || colQtdEmb === "-") {
+                    status = "Desatualizado"; badgeClass = "badge-warn";
+                }
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${item}</strong></td>
+                    <td style="text-align: left; font-size: 13px;">${descEstoque}</td>
+                    <td><strong>${valFixo}</strong></td>
+                    <td>${colCadSap}</td>
+                    <td>${colMedSap}</td>
+                    <td class="col-destaque">${colTipoEmb}</td>
+                    <td class="col-destaque">${colQtdEmb}</td>
+                    <td><span class="badge ${badgeClass}" data-status="${status}">${status}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            atualizarContadores();
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('uploadView').style.display = 'none';
+            document.getElementById('graficoEstacoesView').style.display = 'none'; 
+            document.getElementById('graficoPesoView').style.display = 'none'; 
+            document.getElementById('resultView').style.display = 'block';
+
+        } catch (error) {
+            console.error(error);
+            alert("Ocorreu um erro ao processar os arquivos. Verifique se a estrutura está correta.");
+            document.getElementById('loading').style.display = 'none';
+        }
+    }
+
+    // --- NAVEGAÇÃO DOS GRÁFICOS ---
+    function mostrarGraficoEstacoes() {
+        document.getElementById('resultView').style.display = 'none';
+        document.getElementById('graficoPesoView').style.display = 'none';
+        document.getElementById('graficoEstacoesView').style.display = 'block';
+        renderizarGraficoEstacoes();
+    }
+
+    function mostrarGraficoPeso() {
+        document.getElementById('resultView').style.display = 'none';
+        document.getElementById('graficoEstacoesView').style.display = 'none';
+        document.getElementById('graficoPesoView').style.display = 'block';
+        renderizarGraficoPeso();
+    }
+
+    function voltarParaResultados() {
+        document.getElementById('graficoEstacoesView').style.display = 'none';
+        document.getElementById('graficoPesoView').style.display = 'none';
+        document.getElementById('resultView').style.display = 'block';
+    }
+    
+    function voltarParaUpload() {
+        document.getElementById('resultView').style.display = 'none';
+        document.getElementById('graficoEstacoesView').style.display = 'none';
+        document.getElementById('graficoPesoView').style.display = 'none';
+        document.getElementById('uploadView').style.display = 'block';
+    }
+
+    // --- RENDERIZAÇÃO DO GRÁFICO ---
+    function renderizarGraficoEstacoes() {
+        const dataMap = {};
+        
+        window.dadosGlobaisFixosBrutos.forEach(item => {
+            let fixoRaw = item.fixo;
+            let cadastroRaw = item.cadSap.toUpperCase();
+            let fixo = fixoRaw.split('-')[0].trim();
+            
+            if (!dataMap[fixo]) dataMap[fixo] = { CX: 0, M1: 0 };
+            if (cadastroRaw === 'CX') dataMap[fixo].CX++;
+            else if (cadastroRaw === 'M1') dataMap[fixo].M1++;
+        });
+
+        const sortedFixos = Object.keys(dataMap).sort((a, b) => {
+            if (a === 'PD' && b !== 'PD') return -1;
+            if (b === 'PD' && a !== 'PD') return 1;
+            if (a === 'PC' && b !== 'PC') return -1;
+            if (b === 'PC' && a !== 'PC') return 1;
+            if (a === 'Sem Fixo') return 1;
+            if (b === 'Sem Fixo') return -1;
+            const numA = parseInt(a), numB = parseInt(b);
+            if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+            return a.localeCompare(b);
+        });
+
+        const dataCX = sortedFixos.map(f => dataMap[f].CX);
+        const dataM1 = sortedFixos.map(f => dataMap[f].M1);
+
+        const corpoResumo = document.getElementById('corpoResumoGrafico');
+        corpoResumo.innerHTML = '';
+        sortedFixos.forEach((fixo, i) => {
+            corpoResumo.innerHTML += `<tr><td style="font-weight:bold; color:var(--azul-escuro);">${fixo}</td><td>${dataCX[i]}</td><td>${dataM1[i]}</td></tr>`;
+        });
+
+        if (myChartEstacoes) myChartEstacoes.destroy();
+        myChartEstacoes = new Chart(document.getElementById('graficoEstacoes').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: sortedFixos,
+                datasets: [
+                    { label: 'CX', data: dataCX, backgroundColor: '#001A4D', borderRadius: 4 },
+                    { label: 'M1', data: dataM1, backgroundColor: '#63b3ed', borderRadius: 4 }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        ticks: {
+                            autoSkip: false,
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                },
+                plugins: { 
+                    datalabels: { display: false }, 
+                    legend: { position: 'top' } 
+                }
+            }
+        });
+    }
+
+    function renderizarGraficoPeso() {
+        const ignorar04 = document.getElementById('ignorar04').checked;
+        const ignorarPC = document.getElementById('ignorarPC').checked; 
+        const mapPeso = {};
+
+        window.dadosGlobaisPeso.forEach(item => {
+            let fixosArray = item.fixoStr.split(" - ");
+            
+            if (ignorar04) {
+                fixosArray = fixosArray.filter(f => f !== "04" && f !== "4");
+            }
+            if (ignorarPC) {
+                fixosArray = fixosArray.filter(f => f !== "PC");
+            }
+            
+            if (fixosArray.length === 0) return; 
+
+            let fixoDefinitivo = fixosArray[0]; 
+            if (!mapPeso[fixoDefinitivo]) mapPeso[fixoDefinitivo] = { leve: 0, mod: 0, pes: 0, total: 0 };
+
+            if (item.peso <= 100) { mapPeso[fixoDefinitivo].leve++; }
+            else if (item.peso <= 300) { mapPeso[fixoDefinitivo].mod++; }
+            else { mapPeso[fixoDefinitivo].pes++; }
+            
+            mapPeso[fixoDefinitivo].total++;
+        });
+
+        const sortedLabels = Object.keys(mapPeso).sort((a, b) => {
+            if (a === 'PC' && b !== 'PC') return -1;
+            if (b === 'PC' && a !== 'PC') return 1;
+            if (a === 'PD' && b !== 'PD') return -1;
+            if (b === 'PD' && a !== 'PD') return 1;
+            const numA = parseInt(a), numB = parseInt(b);
+            if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+            return a.localeCompare(b);
+        });
+
+        const absLeve = sortedLabels.map(l => mapPeso[l].leve);
+        const absMod = sortedLabels.map(l => mapPeso[l].mod);
+        const absPes = sortedLabels.map(l => mapPeso[l].pes);
+
+        if (myChartPeso) myChartPeso.destroy();
+        
+        myChartPeso = new Chart(document.getElementById('graficoPeso').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: sortedLabels,
+                datasets: [
+                    { label: 'Pesado', data: absPes, backgroundColor: '#c0392b' },
+                    { label: 'Moderado', data: absMod, backgroundColor: '#f39c12' },
+                    { label: 'Leve', data: absLeve, backgroundColor: '#27ae60' }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { 
+                        stacked: true,
+                        ticks: {
+                            autoSkip: false,
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    },
+                    y: { 
+                        stacked: true 
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                let absValue = context.raw;
+                                return `${label}: ${absValue} itens`;
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: { weight: 'bold', size: 13 },
+                        formatter: function(value, context) {
+                            return value > 0 ? value : ""; 
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function atualizarContadores() {
+        const trs = document.getElementById("corpoTabela").getElementsByTagName("tr");
+        let total = 0, ok = 0, erro = 0, warn = 0;
+        for (let i = 0; i < trs.length; i++) {
+            if (trs[i].style.display !== "none") {
+                total++;
+                const badge = trs[i].querySelector('.badge');
+                if(badge) {
+                    const statusVal = badge.getAttribute('data-status');
+                    if(statusVal === 'Sem Ajuste') ok++;
+                    else if(statusVal === 'Divergente') erro++;
+                    else if(statusVal === 'Desatualizado') warn++;
+                }
+            }
+        }
+        document.getElementById('contadorItens').innerText = `Total: ${total}`;
+        document.getElementById('contadorOk').innerText = `Sem Ajuste: ${ok}`;
+        document.getElementById('contadorErro').innerText = `Divergente: ${erro}`;
+        document.getElementById('contadorWarn').innerText = `Desatualizado: ${warn}`;
+    }
+
+    function filtrarTabela() {
+        const inputs = document.querySelectorAll(".input-filtro-th");
+        const trs = document.getElementById("corpoTabela").getElementsByTagName("tr");
+        for (let i = 0; i < trs.length; i++) {
+            let mostrarLinha = true;
+            const tds = trs[i].getElementsByTagName("td");
+            for (let j = 0; j < inputs.length; j++) {
+                const termoFiltro = inputs[j].value.toUpperCase();
+                if (termoFiltro) {
+                    const td = tds[j];
+                    if (td && td.textContent.toUpperCase().indexOf(termoFiltro) === -1) {
+                        mostrarLinha = false; break; 
+                    }
+                }
+            }
+            trs[i].style.display = mostrarLinha ? "" : "none";
+        }
+        atualizarContadores();
+    }
+
+    // ==========================================
+    // FUNÇÕES DE CÓPIA (TURNO E RESUMO)
+    // ==========================================
+    
+    function obterTurnoAtual() {
+        const dataAtual = new Date();
+        const hora = dataAtual.getHours();
+        const min = dataAtual.getMinutes();
+        const tempoMinutos = (hora * 60) + min; 
+        const diaSemana = dataAtual.getDay(); 
+        
+        let turnoSigla = "T1"; 
+        if (diaSemana === 6) { 
+            if (tempoMinutos < 360) turnoSigla = "T3";
+            else if (tempoMinutos >= 360 && tempoMinutos < 720) turnoSigla = "T1";
+            else if (tempoMinutos >= 720 && tempoMinutos < 1080) turnoSigla = "T2";
+            else turnoSigla = "T3"; 
+        } else { 
+            if (tempoMinutos >= 360 && tempoMinutos < 860) turnoSigla = "T1";
+            else if (tempoMinutos >= 860 && tempoMinutos < 1360) turnoSigla = "T2";
+            else turnoSigla = "T3";
+        }
+        return turnoSigla;
+    }
+
+    function copiarParaTurno() {
+        const btn = document.getElementById('btnTurno');
+        const originalText = btn.innerText;
+
+        const trs = document.getElementById("corpoTabela").getElementsByTagName("tr");
+        const totalItensAnalisados = document.getElementById('contadorItens').innerText.replace('Total:', '').trim();
+        
+        let itensFiltrados = [];
+        const dataEnvioFormatada = new Date().toLocaleString("pt-BR");
+        const turnoSigla = obterTurnoAtual();
+
+        for (let i = 0; i < trs.length; i++) {
+            if (trs[i].style.display !== "none") {
+                const tds = trs[i].getElementsByTagName("td");
+                const badge = tds[7].querySelector('.badge');
+                let status = badge ? badge.innerText.trim() : tds[7].innerText.trim();
+                
+                if (status === "Divergente" || status === "Desatualizado") {
+                    itensFiltrados.push({
+                        "SKU": tds[0].innerText.trim(),
+                        "DESCRIÇÃO": tds[1].innerText.trim(),
+                        "FIXO": tds[2].innerText.trim(),
+                        "CADASTRO SAP": tds[3].innerText.trim(),
+                        "MEDIDA SAP": tds[4].innerText.trim(),
+                        "TIPO ESP. EMB": tds[5].innerText.trim(),
+                        "QTD ESP. EMB": tds[6].innerText.trim(),
+                        "STATUS": status
+                    });
+                }
+            }
+        }
+
+        let textoCopia = "";
+
+        if (itensFiltrados.length === 0) {
+            const mensagem = `VERIFICAÇÃO CONCLUÍDA - 100% OK (${totalItensAnalisados} itens analisados)`;
+            textoCopia = `${turnoSigla}\t${mensagem}\t\t\t\t\t\t\t\t${dataEnvioFormatada}\t`;
+        } else {
+            const linhasTxt = itensFiltrados.map(item => {
+                return [turnoSigla, item["SKU"], item["DESCRIÇÃO"], item["FIXO"], item["CADASTRO SAP"], item["MEDIDA SAP"], item["TIPO ESP. EMB"], item["QTD ESP. EMB"], item["STATUS"], dataEnvioFormatada, "FALSE"].join("\t");
+            });
+            textoCopia = linhasTxt.join("\n");
+        }
+
+        navigator.clipboard.writeText(textoCopia).then(() => {
+            btn.innerText = "✔ COPIADO!";
+            btn.style.backgroundColor = "var(--verde)";
+            setTimeout(() => { 
+                btn.innerText = originalText; 
+                btn.style.backgroundColor = "var(--verde)"; 
+            }, 2000);
+        }).catch(err => {
+            alert("Erro ao copiar informações: " + err);
+        });
+    }
+
+    function copiarParaResumo() {
+        const total = document.getElementById('contadorItens').innerText.replace('Total:', '').trim();
+        const semAjuste = document.getElementById('contadorOk').innerText.replace('Sem Ajuste:', '').trim();
+        const divergente = document.getElementById('contadorErro').innerText.replace('Divergente:', '').trim();
+        const desatualizado = document.getElementById('contadorWarn').innerText.replace('Desatualizado:', '').trim();
+
+        const turnoSigla = obterTurnoAtual();
+        const dataEnvioFormatada = new Date().toLocaleString("pt-BR");
+
+        const textoCopia = [turnoSigla, total, semAjuste, divergente, desatualizado, dataEnvioFormatada].join("\t");
+
+        const btn = document.getElementById('btnResumo');
+        const originalText = btn.innerText;
+
+        navigator.clipboard.writeText(textoCopia).then(() => {
+            btn.innerText = "✔ COPIADO!";
+            btn.style.backgroundColor = "var(--verde)";
+            setTimeout(() => { 
+                btn.innerText = originalText; 
+                btn.style.backgroundColor = "var(--azul-escuro)"; 
+            }, 2000);
+        }).catch(err => {
+            alert("Erro ao copiar informações: " + err);
+        });
+    }
+
+    function exportarParaExcel() {
+        const tabela = document.getElementById("tabelaResultado");
+        const trs = tabela.getElementsByTagName("tr");
+        const wsData = [];
+        const ths = trs[0].getElementsByTagName("th");
+        const headers = [];
+        for (let i = 0; i < ths.length; i++) { headers.push(ths[i].childNodes[0].nodeValue ? ths[i].childNodes[0].nodeValue.trim() : ""); }
+        wsData.push(headers);
+        for (let i = 1; i < trs.length; i++) {
+            if (trs[i].style.display !== "none") {
+                const tds = trs[i].getElementsByTagName("td");
+                const rowData = [];
+                for (let j = 0; j < tds.length; j++) rowData.push(tds[j].innerText.trim()); 
+                wsData.push(rowData);
+            }
+        }
+        const ws = XLSX.utils.aoa_to_sheet(wsData);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Resultado");
+        XLSX.writeFile(wb, "Validacao_Packspac.xlsx");
+    }
+</script>
+
+</body>
+</html>
