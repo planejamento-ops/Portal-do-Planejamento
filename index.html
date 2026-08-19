@@ -110,7 +110,7 @@
         /* ======================================================== */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 15px; 
             width: 100%;
         }
@@ -237,6 +237,16 @@
         .bloco-irdr:hover { border-color: #f6b93b; box-shadow: 0 8px 32px 0 rgba(246, 185, 59, 0.45); }
         .bloco-irdr:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(246, 185, 59, 0.8); background: rgba(246, 185, 59, 0.2); }
         .bloco-irdr:hover .arrow { border-color: #f6b93b; box-shadow: 0 0 10px rgba(246, 185, 59, 0.5); }
+
+        /* --- 5. BLOCO VALIDAÇÃO DE POSIÇÃO (ROXO NEON) --- */
+        .bloco-posicao { border: 3px solid rgba(155, 89, 182, 0.5); }
+        .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.1); }
+        .bloco-posicao h2::after { background: linear-gradient(to right, #9b59b6, transparent); }
+        .bloco-posicao .arrow { color: #9b59b6; border: 1px solid rgba(155, 89, 182, 0.3); }
+
+        .bloco-posicao:hover { border-color: #9b59b6; box-shadow: 0 8px 32px 0 rgba(155, 89, 182, 0.45); }
+        .bloco-posicao:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(155, 89, 182, 0.8); background: rgba(155, 89, 182, 0.2); }
+        .bloco-posicao:hover .arrow { border-color: #9b59b6; box-shadow: 0 0 10px rgba(155, 89, 182, 0.5); }
 
         /* ======================================================== */
         /* BARRA DE PILARES ULTRA-FINA & ELEGANTE (ORIGINAL)         */
@@ -389,6 +399,16 @@
                 </div>
                 <h2>Tratativas <br>de IRDR</h2>
                 <p>Identifique divergências de saldo lógico e agilize o processo de resgate e ajuste de saldo.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
+
+            <!-- App 5: Posição Duplicada (Roxo) -->
+            <a href="validacao_fixos.html" class="card bloco-posicao">
+                <div class="icon">
+                    <span class="material-symbols-outlined">filter_1</span>
+                </div>
+                <h2>Validação de <br>Posição Duplicada</h2>
+                <p>Identifique e corrija inconsistências de posições duplicadas na operação.</p>
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 

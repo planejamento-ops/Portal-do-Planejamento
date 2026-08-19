@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor de Higienização WMS - V8 Excel Export</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; font-size: 24px; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .step { margin-bottom: 25px; padding: 15px; border: 1px solid #e1e8ed; border-radius: 6px; background: #fdfdfd; }
+        label { font-weight: bold; display: block; margin-bottom: 8px; }
+        input[type="file"] { display: block; margin-bottom: 15px; }
+        .radio-group { margin-bottom: 15px; }
+        .radio-group label { font-weight: normal; display: inline-block; margin-right: 20px; cursor: pointer; }
+        button.primary-btn { background-color: #3498db; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+        button.primary-btn:hover { background-color: #2980b9; }
+        button.primary-btn:disabled { background-color: #bdc3c7; cursor: not-allowed; }
+        
+        /* Dashboard Area */
+        #report-area { display: none; margin-top: 30px; }
+        
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 20px; }
+        
+        /* CARDS DINÂMICOS */
+        .card { background: #ecf0f1; padding: 12px; border-radius: 6px; text-align: center; transition: all 0.2s ease-in-out; border-bottom: 4px solid transparent; cursor: pointer; position: relative; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+        .card::after { content: "🔍 Ver Detalhes"; position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); font-size: 10px; background: #34495e; color: white; padding: 2px 6px; border-radius: 4px; opacity: 0; transition: 0.2s; white-space: nowrap; pointer-events: none;}
+        .card:hover::after { bottom: 5px; opacity: 1; }
+
+        .card span { display: block; font-size: 22px; font-weight: bold; margin-top: 5px; }
+        .card-title { font-size: 11px; font-weight: bold; text-transform: uppercase; color: #555; }
+        
+        /* BOTÃO EXCEL DENTRO DO CARD */
+        .btn-excel { position: absolute; top: 6px; right: 6px; background: rgba(255, 255, 255, 0.7); border: 1px solid #bdc3c7; border-radius: 4px; cursor: pointer; padding: 3px 5px; font-size: 12px; transition: 0.2s; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn-excel:hover { background: #10ac84; border-color: #10ac84; color: white; transform: scale(1.1); }
+        .btn-excel:active { transform: scale(0.95); }
+        .bg-danger .btn-excel, .bg-success .btn-excel, .bg-warning .btn-excel { background: rgba(255, 255, 255, 0.9); border: none; }
+
+        /* Cores Dinâmicas Saúde */
+        .bg-danger { background-color: #ff7675 !important; color: white !important; border-bottom-color: #d63031 !important; }
+        .bg-danger span, .bg-danger .card-title { color: white !important; }
+        .bg-success { background-color: #55efc4 !important; color: #2d3436 !important; border-bottom-color: #00b894 !important; }
+        .bg-success span, .bg-success .card-title { color: #2d3436 !important; }
+        .bg-warning { background-color: #ffeaa7 !important; color: #2d3436 !important; border-bottom-color: #fdcb6e !important; }
+        .bg-warning span, .bg-warning .card-title { color: #2d3436 !important; }
+
+        /* Cores Auditorias Específicas */
+        .c-m04m07 { background: #d1c4e9; border-bottom-color: #673ab7; }
+        .c-agag { background: #e8eaf6; border-bottom-color: #3f51b5; }
+        .c-agbg { background: #e0f7fa; border-bottom-color: #00bcd4; }
+        .c-pcpc { background: #fce4ec; border-bottom-color: #e91e63; }
+        .c-pcbg { background: #fff3e0; border-bottom-color: #ff9800; }
+        .c-bgbg { background: #ffebee; border-bottom-color: #f44336; }
+        .c-bgpd { background: #e8f5e9; border-bottom-color: #4caf50; }
+        .c-pcpd { background: #ede7f6; border-bottom-color: #9c27b0; }
+        .c-pdpd { background: #e3f2fd; border-bottom-color: #2196f3; }
+
+        .downloads { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .downloads button { display: inline-block; background: #10ac84; color: white; border: none; padding: 8px 15px; border-radius: 4px; font-size: 13px; font-weight: bold; cursor: pointer; transition: 0.2s;}
+        .downloads button:hover { background: #1dd1a1; }
+        .downloads button.btn-master { background: #2c3e50; border: 2px solid #34495e; }
+        .downloads button.btn-master:hover { background: #34495e; }
+        ul { line-height: 1.6; }
+
+        /* MODAL */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); justify-content: center; align-items: center; }
+        .modal-content { background-color: #fff; padding: 25px; border-radius: 8px; width: 80%; max-width: 900px; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; font-weight: bold; color: #7f8c8d; cursor: pointer; }
+        .close-btn:hover { color: #e74c3c; }
+        .modal h2 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; font-size: 18px;}
+        
+        table.detail-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; }
+        table.detail-table th, table.detail-table td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+        table.detail-table th { background-color: #34495e; color: white; position: sticky; top: 0; }
+        table.detail-table tr:nth-child(even){background-color: #f9f9f9;}
+        table.detail-table tr:hover {background-color: #f1f2f6;}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>⚙️ Higienização e Sanitização WMS (Motor Granular Dinâmico)</h1>
+
+    <div class="step">
+        <label>1. Carregar Base de Posições (.xlsx ou .csv)</label>
+        <input type="file" id="fileInput" accept=".xlsx, .xls, .csv">
+
+        <label>2. Escolher Diretriz de Corte</label>
+        <div class="radio-group">
+            <label><input type="radio" name="diretriz" value="1" checked> <b>[1] CARTEIRA</b> (Prioriza AG / Mod 04 e 07)</label><br>
+            <label><input type="radio" name="diretriz" value="2"> <b>[2] VAREJO</b> (Prioriza BG / Corredores)</label>
+        </div>
+
+        <button id="btnProcess" class="primary-btn" onclick="processData()">Executar Limpeza Granular</button>
+    </div>
+
+    <div id="report-area">
+        <h2>📊 Relatório de Diagnóstico Operacional (Clique para detalhes)</h2>
+
+        <h3 style="margin-bottom: 10px; font-size: 16px;">🩺 Saúde do Inventário (Pós-Sanitização)</h3>
+        <div class="summary-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="card" id="card-mistas" onclick="showModal('MISTAS', 'Alerta: Posições com Múltiplos Materiais (Mistas)')">
+                <button class="btn-excel" onclick="exportExcel('MISTAS', event)" title="Baixar Excel">📊</button>
+                <div class="card-title" id="titulo-mistas">Posições Mistas (Erro)</div>
+                <span id="val-pos-mistas">0</span>
+            </div>
+            <div class="card" id="card-duplicados" onclick="showModal('DUPLICADOS', 'Alerta: Itens em Múltiplas Posições')">
+                <button class="btn-excel" onclick="exportExcel('DUPLICADOS', event)" title="Baixar Excel">📊</button>
+                <div class="card-title" id="titulo-duplicados">Itens Duplicados</div>
+                <span id="val-skus-multiplos">0</span>
+            </div>
+            <div class="card" style="background:#f1f2f6; border-bottom-color:#a4b0be; cursor: default;" title="Apenas informativo">
+                <div class="card-title">Retenção Master</div>
+                <span id="val-master">0</span>
+            </div>
+        </div>
+        
+        <h3 style="margin-bottom: 10px; font-size: 16px; margin-top: 30px;">📉 Detalhamento de Auditorias (Remoções)</h3>
+        <div class="summary-grid">
+            <div class="card c-m04m07" onclick="showModal('M04xM07', 'Remoções: M04 x M07 (Conflito Alto Giro)')">
+                <button class="btn-excel" onclick="exportExcel('M04xM07', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">M04 x M07<br><small>(Produto em ambos)</small></div><span id="val-m04m07">0</span>
+            </div>
+            <div class="card c-agag" onclick="showModal('AGxAG', 'Remoções: AG x AG (Duplicidade Mesmo Módulo)')">
+                <button class="btn-excel" onclick="exportExcel('AGxAG', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">AG x AG<br><small>(04x04 ou 07x07)</small></div><span id="val-agag">0</span>
+            </div>
+            <div class="card c-agbg" onclick="showModal('AGxBG', 'Remoções: AG x BG (Alto Giro vs Corredor)')">
+                <button class="btn-excel" onclick="exportExcel('AGxBG', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">AG x BG<br><small>(Alto Giro vs Corredor)</small></div><span id="val-agbg">0</span>
+            </div>
+            <div class="card c-pcpc" onclick="showModal('PCxPC', 'Remoções: PC x PC (Duplicidade Caixa)')">
+                <button class="btn-excel" onclick="exportExcel('PCxPC', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">PC x PC<br><small>(Duplicidade Caixa)</small></div><span id="val-pcpc">0</span>
+            </div>
+            <div class="card c-pcbg" onclick="showModal('PCxBG', 'Remoções: PC x BG (Caixa vs Unidade)')">
+                <button class="btn-excel" onclick="exportExcel('PCxBG', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">PC x BG<br><small>(Caixa vs Unidade)</small></div><span id="val-pcbg">0</span>
+            </div>
+            
+            <div class="card c-bgbg" onclick="showModal('BGxBG', 'Remoções: BG x BG (Duplicidade Baixo Giro)')">
+                <button class="btn-excel" onclick="exportExcel('BGxBG', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">BG x BG<br><small>(Duplicidade Baixo Giro)</small></div><span id="val-bgbg">0</span>
+            </div>
+            <div class="card c-bgpd" onclick="showModal('BGxPD', 'Remoções: BG x PD (Baixo Giro vs Pulmão)')">
+                <button class="btn-excel" onclick="exportExcel('BGxPD', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">BG x PD<br><small>(Baixo Giro vs Pulmão)</small></div><span id="val-bgpd">0</span>
+            </div>
+            <div class="card c-pcpd" onclick="showModal('PCxPD', 'Remoções: PC x PD (Caixa vs Pulmão)')">
+                <button class="btn-excel" onclick="exportExcel('PCxPD', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">PC x PD<br><small>(Caixa vs Pulmão)</small></div><span id="val-pcpd">0</span>
+            </div>
+            <div class="card c-pdpd" onclick="showModal('PDxPD', 'Remoções: PD x PD (Limpeza de Pulmões Duplicados)')">
+                <button class="btn-excel" onclick="exportExcel('PDxPD', event)" title="Baixar Excel">📊</button>
+                <div class="card-title">PD x PD<br><small>(Limpeza de Pulmão)</small></div><span id="val-pdpd">0</span>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 30px;">📥 Arquivos de Auditoria Gerados (.xlsx)</h3>
+        <div class="downloads" id="download-links"></div>
+    </div>
+</div>
+
+<!-- ESTRUTURA DO MODAL -->
+<div id="detailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Detalhes</h2>
+        <div id="modalTableContainer"></div>
+    </div>
+</div>
+
+<script>
+    window.appData = { master: [], auditorias: {}, mistas: [], duplicados: [] };
+
+    function parseExcelDate(dateVal) {
+        if (!dateVal) return new Date(0);
+        if (typeof dateVal === 'number') return new Date(Math.round((dateVal - 25569) * 86400 * 1000));
+        let str = String(dateVal);
+        if (str.includes('/')) {
+            let parts = str.split(' ')[0].split('/');
+            if (parts[0].length === 2 && parts[2].length === 4) return new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+        }
+        return new Date(str);
+    }
+
+    // ==========================================
+    // FUNÇÃO NATIVA DE EXPORTAÇÃO EXCEL (XLSX)
+    // ==========================================
+    function exportExcel(tipo, event) {
+        // Bloqueia a abertura do Modal caso o clique tenha sido no botão do Excel
+        if(event) event.stopPropagation();
+
+        let dataToExport = [];
+        const dateSuffix = new Date().toLocaleDateString('pt-BR').replace(/\//g, '_');
+        let filename = `Auditoria_${tipo}_${dateSuffix}.xlsx`;
+
+        if (tipo === 'MISTAS') {
+            dataToExport = window.appData.mistas.map(d => ({
+                "Posição (Erro)": d.pos,
+                "Produtos Encontrados Juntos": Array.from(d.prods).join(', ')
+            }));
+            filename = `Saude_Posicoes_Mistas_${dateSuffix}.xlsx`;
+        } 
+        else if (tipo === 'DUPLICADOS') {
+            dataToExport = window.appData.duplicados.map(d => ({
+                "Produto": d.prod,
+                "Posições Encontradas (Duplicadas)": Array.from(d.poses).join(', ')
+            }));
+            filename = `Saude_SKUs_Duplicados_${dateSuffix}.xlsx`;
+        } 
+        else if (tipo === 'MASTER') {
+            dataToExport = window.appData.master.map(d => {
+                let row = { ...d };
+                delete row['_tipoPosicao']; delete row['_parsedDate'];
+                return row;
+            });
+            filename = `wms_master_sanitizado_${dateSuffix}.xlsx`;
+        } 
+        else {
+            let dados = window.appData.auditorias[tipo];
+            if(dados && dados.length > 0) {
+                dataToExport = dados.map(d => {
+                    let row = { ...d };
+                    delete row['_tipoPosicao']; delete row['_parsedDate'];
+                    return row;
+                });
+            }
+        }
+
+        if (dataToExport.length === 0) {
+            alert(`✅ Tudo limpo! Nenhum dado para exportar na categoria ${tipo}.`);
+            return;
+        }
+
+        // Gera a planilha Excel nativa (.xlsx)
+        const ws = XLSX.utils.json_to_sheet(dataToExport);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Dados_WMS");
+        XLSX.writeFile(wb, filename);
+    }
+
+    function getTipoPosicao(posName, qtyMax) {
+        posName = posName.toUpperCase();
+        if (posName.startsWith('PD-')) return 'PD';
+        let isPicking = posName.startsWith('LN-') || posName.startsWith('PC-');
+        if (isPicking && posName.includes('-04-') && qtyMax > 10) return 'AG04';
+        if (isPicking && posName.includes('-07-') && qtyMax > 10) return 'AG07';
+        if (posName.startsWith('PC-')) return 'PC'; 
+        if (posName.startsWith('LN-')) return 'BG'; 
+        return 'OUTRO';
+    }
+
+    function showModal(tipo, titulo) {
+        let container = document.getElementById('modalTableContainer');
+        let html = '';
+        document.getElementById('modalTitle').innerText = titulo;
+
+        if (tipo === 'MISTAS') {
+            let dados = window.appData.mistas;
+            if (dados.length === 0) {
+                html = '<p style="text-align:center; padding: 20px; color: #27ae60;"><b>Tudo limpo!</b> Nenhuma posição mista (SKUs diferentes na mesma posição).</p>';
+            } else {
+                html = '<table class="detail-table"><thead><tr><th>Posição (Problema)</th><th>Produtos Vinculados (Conflito)</th></tr></thead><tbody>';
+                dados.forEach(d => { html += `<tr><td><b>${d.pos}</b></td><td style="color:#e74c3c;">${Array.from(d.prods).join('<br>')}</td></tr>`; });
+                html += '</tbody></table>';
+            }
+        } else if (tipo === 'DUPLICADOS') {
+            let dados = window.appData.duplicados;
+            if (dados.length === 0) {
+                html = '<p style="text-align:center; padding: 20px; color: #27ae60;"><b>1:1 Perfeito!</b> Nenhum produto em mais de uma posição.</p>';
+            } else {
+                html = '<table class="detail-table"><thead><tr><th>Produto</th><th>Posições Atuais (Duplicadas na Master)</th></tr></thead><tbody>';
+                dados.forEach(d => { html += `<tr><td><b>${d.prod}</b></td><td style="color:#e67e22;">${Array.from(d.poses).join(', ')}</td></tr>`; });
+                html += '</tbody></table>';
+            }
+        } else {
+            let dados = window.appData.auditorias[tipo] || [];
+            if (dados.length === 0) {
+                html = `<p style="text-align:center; padding: 20px; color: #7f8c8d;">Nenhum material removido na categoria <b>${tipo}</b>.</p>`;
+            } else {
+                html = '<table class="detail-table"><thead><tr><th>Produto</th><th>Posição Removida (Lixo)</th><th>Autor</th><th>Qtd Máx</th><th>Data Modificação</th></tr></thead><tbody>';
+                dados.forEach(d => {
+                    let dStr = d._parsedDate ? d._parsedDate.toLocaleDateString('pt-BR') : '';
+                    let qty = d['Quantidade máxima'] !== undefined ? d['Quantidade máxima'] : '';
+                    html += `<tr><td><b>${d['Produto']||''}</b></td><td style="color:#c0392b;">${d['Posição no depósito']||''}</td><td>${d['Autor']||'-'}</td><td>${qty}</td><td>${dStr}</td></tr>`;
+                });
+                html += '</tbody></table>';
+            }
+        }
+        container.innerHTML = html;
+        document.getElementById('detailsModal').style.display = 'flex';
+    }
+
+    function closeModal() { document.getElementById('detailsModal').style.display = 'none'; }
+    window.onclick = function(event) { if (event.target === document.getElementById('detailsModal')) closeModal(); }
+
+    async function processData() {
+        const fileInput = document.getElementById('fileInput');
+        const diretriz = document.querySelector('input[name="diretriz"]:checked').value;
+        const btn = document.getElementById('btnProcess');
+
+        if (!fileInput.files.length) { alert("Selecione um arquivo de posições!"); return; }
+
+        btn.disabled = true;
+        btn.innerText = "Processando Excel...";
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            try {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                let jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { defval: "" });
+
+                if (jsonData.length === 0) throw new Error("Arquivo vazio.");
+
+                jsonData.forEach(row => {
+                    const pos = String(row['Posição no depósito'] || '').trim();
+                    const qty = parseFloat(row['Quantidade máxima']) || 0;
+                    row._tipoPosicao = getTipoPosicao(pos, qty);
+                    row._parsedDate = parseExcelDate(row['Data de modificação']);
+                });
+
+                jsonData.sort((a, b) => b._parsedDate - a._parsedDate);
+
+                const gruposProdutos = {};
+                jsonData.forEach(row => {
+                    const prod = row['Produto'] || 'SEM_PRODUTO';
+                    if (!gruposProdutos[prod]) gruposProdutos[prod] = [];
+                    gruposProdutos[prod].push(row);
+                });
+
+                let masterData = [];
+                let auditorias = { 'M04xM07': [], 'AGxAG': [], 'AGxBG': [], 'PCxPC': [], 'BGxBG': [], 'PCxBG': [], 'BGxPD': [], 'PCxPD': [], 'PDxPD': [], 'OUTROS': [] };
+
+                Object.values(gruposProdutos).forEach(grupo => {
+                    let mantida;
+                    if (diretriz === "1") {
+                        mantida = grupo.find(r => r._tipoPosicao === 'AG04' || r._tipoPosicao === 'AG07') || 
+                                  grupo.find(r => r._tipoPosicao === 'PC' || r._tipoPosicao === 'BG') || 
+                                  grupo.find(r => r._tipoPosicao === 'PD') || grupo[0];
+                    } else {
+                        mantida = grupo.find(r => r._tipoPosicao === 'PC' || r._tipoPosicao === 'BG') || 
+                                  grupo.find(r => r._tipoPosicao === 'AG04' || r._tipoPosicao === 'AG07') || 
+                                  grupo.find(r => r._tipoPosicao === 'PD') || grupo[0];
+                    }
+
+                    masterData.push(mantida);
+
+                    const removidas = grupo.filter(r => r !== mantida);
+                    removidas.forEach(removida => {
+                        let pair = [mantida._tipoPosicao, removida._tipoPosicao].sort(); 
+                        if (pair.includes('AG04') && pair.includes('AG07')) auditorias['M04xM07'].push(removida);
+                        else if ((pair[0] === 'AG04' && pair[1] === 'AG04') || (pair[0] === 'AG07' && pair[1] === 'AG07')) auditorias['AGxAG'].push(removida);
+                        else if ((pair.includes('AG04') || pair.includes('AG07')) && pair.includes('BG')) auditorias['AGxBG'].push(removida);
+                        else if (pair[0] === 'PC' && pair[1] === 'PC') auditorias['PCxPC'].push(removida);
+                        else if (pair[0] === 'BG' && pair[1] === 'BG') auditorias['BGxBG'].push(removida);
+                        else if (pair.includes('PC') && pair.includes('BG')) auditorias['PCxBG'].push(removida);
+                        else if (pair.includes('BG') && pair.includes('PD')) auditorias['BGxPD'].push(removida);
+                        else if (pair.includes('PC') && pair.includes('PD')) auditorias['PCxPD'].push(removida);
+                        else if (pair[0] === 'PD' && pair[1] === 'PD') auditorias['PDxPD'].push(removida);
+                        else auditorias['OUTROS'].push(removida);
+                    });
+                });
+
+                masterData.sort((a, b) => String(a['Posição no depósito']).localeCompare(String(b['Posição no depósito'])));
+
+                window.appData.master = masterData;
+                window.appData.auditorias = auditorias;
+
+                const produtosPorPosicao = {}; const posicoesPorProduto = {};
+                masterData.forEach(row => {
+                    const pos = String(row['Posição no depósito'] || '').trim().toUpperCase();
+                    const prod = String(row['Produto'] || '').trim();
+                    if (pos && prod) {
+                        if (!produtosPorPosicao[pos]) produtosPorPosicao[pos] = new Set();
+                        produtosPorPosicao[pos].add(prod);
+                        if (!posicoesPorProduto[prod]) posicoesPorProduto[prod] = new Set();
+                        posicoesPorProduto[prod].add(pos);
+                    }
+                });
+
+                window.appData.mistas = Object.entries(produtosPorPosicao).filter(([p, prods]) => prods.size > 1).map(([pos, prods]) => ({ pos, prods }));
+                window.appData.duplicados = Object.entries(posicoesPorProduto).filter(([p, poses]) => poses.size > 1).map(([prod, poses]) => ({ prod, poses }));
+
+                const posMistas = window.appData.mistas.length;
+                document.getElementById('card-mistas').className = 'card ' + (posMistas > 0 ? 'bg-danger' : 'bg-success');
+                document.getElementById('titulo-mistas').innerText = posMistas > 0 ? "⚠️ Posições Mistas" : "✅ Posições Mistas";
+                document.getElementById('val-pos-mistas').innerText = posMistas;
+
+                const skusMultiplos = window.appData.duplicados.length;
+                document.getElementById('card-duplicados').className = 'card ' + (skusMultiplos > 0 ? 'bg-warning' : 'bg-success');
+                document.getElementById('titulo-duplicados').innerText = skusMultiplos > 0 ? "⚠️ SKUs Duplicados" : "✅ Skus Duplicados";
+                document.getElementById('val-skus-multiplos').innerText = skusMultiplos;
+
+                document.getElementById('val-master').innerText = `${masterData.length} (${((masterData.length/jsonData.length)*100).toFixed(1)}%)`;
+                document.getElementById('val-m04m07').innerText = auditorias['M04xM07'].length;
+                document.getElementById('val-agag').innerText = auditorias['AGxAG'].length;
+                document.getElementById('val-agbg').innerText = auditorias['AGxBG'].length;
+                document.getElementById('val-pcpc').innerText = auditorias['PCxPC'].length;
+                document.getElementById('val-bgbg').innerText = auditorias['BGxBG'].length;
+                document.getElementById('val-pcbg').innerText = auditorias['PCxBG'].length;
+                document.getElementById('val-bgpd').innerText = auditorias['BGxPD'].length;
+                document.getElementById('val-pcpd').innerText = auditorias['PCxPD'].length;
+                document.getElementById('val-pdpd').innerText = auditorias['PDxPD'].length;
+
+                // Montar botões do rodapé
+                const downloadContainer = document.getElementById('download-links');
+                downloadContainer.innerHTML = `<button class="btn-master" onclick="exportExcel('MASTER', null)">📥 Baixar Base Sanitizada (Master)</button>`;
+                
+                Object.keys(auditorias).forEach(key => {
+                    if (auditorias[key].length > 0) {
+                        downloadContainer.innerHTML += `<button onclick="exportExcel('${key}', null)">📥 Auditoria ${key} (${auditorias[key].length})</button>`;
+                    }
+                });
+
+                document.getElementById('report-area').style.display = 'block';
+
+            } catch (err) {
+                alert("Erro: " + err.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "Executar Limpeza Granular";
+            }
+        };
+        reader.readAsArrayBuffer(file);
+    }
+</script>
+</body>
+</html>
