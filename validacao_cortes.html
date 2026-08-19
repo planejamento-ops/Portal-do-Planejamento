@@ -686,16 +686,24 @@
                     if (pos.includes('PICLINHA')) retidoMotivo = 'Item em PICLINHA';
                     else if (tDep === '0603' && pos === 'DIVCIC') {
                         let dataApurada = colDataEM ? parseDataExcel(row[colDataEM]) : null;
-                        if (dataApurada) { let dataLimite = new Date(); dataLimite.setMonth(dataLimite.getMonth() - 1); if (dataApurada < dataLimite) return; }
-                        retidoMotivo = 'Item em DIVCIC';
+                        if (dataApurada) { 
+                            let dataLimite = new Date(); 
+                            dataLimite.setDate(dataLimite.getDate() - 21); // Trava de 3 semanas (21 dias)
+                            if (dataApurada < dataLimite) {
+                                retidoMotivo = 'Divergência de Estoque'; 
+                            } else {
+                                retidoMotivo = 'Item em DIVCIC';
+                            }
+                        } else {
+                            retidoMotivo = 'Item em DIVCIC';
+                        }
                     }
                     else if (tEst.startsWith('Q') || tEst.startsWith('C3') || tEst.startsWith('C4') || tEst.startsWith('P4')) retidoMotivo = 'Estoque em Controle de Qualidade';
                     else if (pos.includes('9010')) retidoMotivo = 'Saldo em Equalização'; 
-                    // TUDO QUE NÃO É ISSO E NÃO PODE SER F2 LIVRE VAI DIRETO PARA 'Venda Maior que o Saldo'
-                    else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Venda Maior que o Saldo';
-                    else if (tDep === '0603' && pos.startsWith('DPC')) retidoMotivo = 'Venda Maior que o Saldo'; 
-                    else if (tDep === '9017') retidoMotivo = 'Venda Maior que o Saldo';
-                    else if (tDep === '9020') retidoMotivo = 'Venda Maior que o Saldo';
+                    else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Sem Saldo F2';
+                    else if (tDep === '0603' && pos.startsWith('DPC')) retidoMotivo = 'Sem Saldo F2'; 
+                    else if (tDep === '9017') retidoMotivo = 'Sem Saldo F2'; 
+                    else if (tDep === '9020') retidoMotivo = 'Sem Saldo F2';
 
                     if (retidoMotivo) produtos[cod].retidos[retidoMotivo] = (produtos[cod].retidos[retidoMotivo] || 0) + qtd;
                 }
@@ -722,41 +730,45 @@
                     let qtdDivcic = p.retidos['Item em DIVCIC'] || 0;
                     let qtdQualidade = p.retidos['Estoque em Controle de Qualidade'] || 0;
                     let qtdEqualizacao = p.retidos['Saldo em Equalização'] || 0;
-                    let qtdVendaMaior = p.retidos['Venda Maior que o Saldo'] || 0;
+                    let qtdSemSaldoF2 = p.retidos['Sem Saldo F2'] || 0;
+                    let qtdDivergencia = p.retidos['Divergência de Estoque'] || 0; // Puxa itens em DIVCIC > 3 semanas
                     
                     let totalNoCD = p.estoqueF2 + p.doca + Object.values(p.retidos).reduce((a,b)=>a+b, 0);
                     
-                    if (totalNoCD === 0) p.motivoFinal = 'Divergência de Estoque';
+                    if (totalNoCD === 0) p.motivoFinal = 'Divergência de Estoque'; // Totalmente zerado
                     else if (qtdPiclinha >= p.cortes) p.motivoFinal = 'Item em PICLINHA';
                     else if (qtdDivcic >= p.cortes) p.motivoFinal = 'Item em DIVCIC';
+                    else if (qtdDivergencia >= p.cortes) p.motivoFinal = 'Divergência de Estoque'; // Preso no DIVCIC > 21 dias
                     else if (qtdEqualizacao >= p.cortes) p.motivoFinal = 'Saldo em Equalização';
                     else if (qtdQualidade >= p.cortes) p.motivoFinal = 'Estoque em Controle de Qualidade';
-                    else if (qtdVendaMaior >= p.cortes) p.motivoFinal = 'Venda Maior que o Saldo';
+                    else if (qtdSemSaldoF2 >= p.cortes) p.motivoFinal = 'Sem Saldo F2'; // Prioriza o Sem Saldo F2 para DPC/Recusa
                     else {
+                        // Desempate do maior ofensor
                         let maiorMotivo = null; let maxQtd = 0;
                         for (let m in p.retidos) { if (p.retidos[m] > maxQtd) { maxQtd = p.retidos[m]; maiorMotivo = m; } }
                         
                         if (maiorMotivo && maxQtd > 0) {
                             p.motivoFinal = maiorMotivo;
                         } else if (totalNoCD < p.demSol) {
-                            p.motivoFinal = 'Venda Maior que o Saldo';
+                            p.motivoFinal = 'Venda Maior que o Saldo'; // Venda Maior que o Saldo oficializado APENAS para volume CD < Demanda
                         } else {
-                            p.motivoFinal = 'Divergência de Estoque';
+                            p.motivoFinal = 'Sem Saldo F2'; // Sobra não identificada vira Sem Saldo F2
                         }
                     }
 
-                    // TRAVA DE SEGURANÇA: Garante que os motivos fujam estritamente para as 6 categorias definidas
+                    // TRAVA DE SEGURANÇA FINAL
                     const motivosPermitidos = [
                         'Item em PICLINHA', 
                         'Item em DIVCIC', 
                         'Saldo em Equalização', 
                         'Venda Maior que o Saldo', 
                         'Divergência de Estoque', 
-                        'Estoque em Controle de Qualidade'
+                        'Estoque em Controle de Qualidade',
+                        'Sem Saldo F2'
                     ];
                     
                     if (!motivosPermitidos.includes(p.motivoFinal)) {
-                        p.motivoFinal = (totalNoCD < p.demSol) ? 'Venda Maior que o Saldo' : 'Divergência de Estoque';
+                        p.motivoFinal = (totalNoCD < p.demSol) ? 'Venda Maior que o Saldo' : 'Sem Saldo F2';
                     }
 
                     linhasTabelaAgrupada.push(p);

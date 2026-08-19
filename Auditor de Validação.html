@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Auditor de Logs - Validação de Cortes</title>
+    <style>
+        body { font-family: 'Trebuchet MS', sans-serif; background-color: #1e1e2f; color: #e0e0e0; margin: 20px; }
+        .container { max-width: 95%; background: #27293d; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); margin: 0 auto; }
+        h1 { color: #e14eca; text-align: center; margin-bottom: 20px; font-size: 28px; border-bottom: 2px solid #e14eca; padding-bottom: 15px; }
+        
+        /* Upload Area */
+        .upload-box { border: 2px dashed #e14eca; padding: 20px; text-align: center; border-radius: 6px; background: #1e1e2f; transition: 0.3s; margin-bottom: 20px; }
+        .upload-box:hover { background: #2b2b40; }
+        .upload-box input { display: none; }
+        .upload-box label { display: block; cursor: pointer; color: #e14eca; font-weight: bold; font-size: 18px; }
+
+        /* Painel de Informações */
+        .info-panel { display: flex; justify-content: space-between; background-color: #1e1e2f; padding: 15px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #00f2c3; }
+        .info-item { font-size: 14px; }
+        .info-item span { font-weight: bold; color: #00f2c3; font-size: 16px; }
+
+        /* Busca Global (Sniper Mode) */
+        .busca-global { display: flex; gap: 15px; background-color: #1e1e2f; padding: 20px; border-radius: 6px; margin-bottom: 20px; border: 2px solid #e14eca; align-items: center;}
+        .busca-global input { flex: 1; padding: 12px; font-size: 16px; border-radius: 4px; border: 1px solid #444; background: #27293d; color: white; font-weight: bold; }
+        .busca-global input:focus { outline: none; border-color: #00f2c3; }
+        .busca-global button.btn-buscar { padding: 12px 25px; background: #e14eca; color: white; border: none; border-radius: 4px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .busca-global button.btn-buscar:hover { background: #c03baf; }
+        .busca-global button.btn-limpar { padding: 12px 25px; background: #6c757d; color: white; border: none; border-radius: 4px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .busca-global button.btn-limpar:hover { background: #5a6268; }
+
+        /* Tabs */
+        .tabs { display: flex; border-bottom: 2px solid #444; margin-bottom: 15px; }
+        .tab-btn { padding: 10px 20px; cursor: pointer; border: none; background: #27293d; font-size: 14px; font-weight: bold; color: #aaa; transition: 0.3s; }
+        .tab-btn.active { background: #e14eca; color: white; border-radius: 5px 5px 0 0; }
+        .tab-btn:hover:not(.active) { color: #fff; background: #344675; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Paginação */
+        .paginacao { display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 15px; padding: 10px; background: #1e1e2f; border-radius: 4px; border: 1px solid #444;}
+        .paginacao button { padding: 8px 15px; background: #344675; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .paginacao button:hover { background: #4a5c91; }
+        .paginacao button:disabled { background: #444; cursor: not-allowed; color: #777;}
+        .paginacao span { font-weight: bold; color: #00f2c3; font-size: 14px; }
+
+        /* Tabela */
+        .table-container { max-height: 60vh; overflow-y: auto; overflow-x: auto; border: 1px solid #444; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; font-size: 11px; color: #e0e0e0; }
+        th, td { border: 1px solid #444; padding: 6px; text-align: left; white-space: nowrap; }
+        th { background-color: #344675; color: #fff; position: sticky; top: 0; z-index: 2; box-shadow: 0 2px 2px -1px rgba(0,0,0,0.4); padding: 8px; vertical-align: top; }
+        tr:nth-child(even) { background-color: #1e1e2f; }
+        tr:hover { background-color: #4a5c91; }
+        
+        .badge { background: #00f2c3; color: #1e1e2f; padding: 2px 6px; border-radius: 10px; font-weight: bold; font-size: 10px; margin-left: 5px; }
+
+        /* Inputs de Filtro Interno */
+        th input { width: 100%; box-sizing: border-box; margin-top: 5px; padding: 4px; font-size: 11px; border: 1px solid #aaa; border-radius: 3px; background-color: #1e1e2f; color: #fff; font-family: inherit; }
+        th input::placeholder { color: #888; }
+        th input:focus { outline: none; border-color: #00f2c3; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🕵️‍♀️ Auditoria de Validação (Raw Data)</h1>
+
+    <div class="upload-box" id="caixaUpload">
+        <label for="fileJson">📁 Subir Arquivo .JSON de Log da Caixa Preta</label>
+        <input type="file" id="fileJson" accept=".json" onchange="lerArquivoJson(event)">
+    </div>
+
+    <div id="painelResultados" style="display: none;">
+        
+        <div class="info-panel">
+            <div class="info-item">Usuário: <br><span id="infoUser">-</span></div>
+            <div class="info-item">Data/Hora da Geração: <br><span id="infoData">-</span></div>
+            <div class="info-item">Atendimento: <br><span id="infoAtendimento">-</span></div>
+        </div>
+
+        <!-- NOVO PAINEL SNIPER -->
+        <div class="busca-global">
+            <label style="color: #00f2c3; font-weight: bold; font-size: 18px;">🎯 Modo Sniper:</label>
+            <input type="text" id="inputSniper" placeholder="Digite o código do produto (Ex: 12345) e aperte Enter..." onkeypress="verificarEnter(event)">
+            <button class="btn-buscar" onclick="aplicarFiltroSniper()">Buscar Produto</button>
+            <button class="btn-limpar" onclick="limparFiltroSniper()">Remover Filtro</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="abrirAba(event, 'demanda')">1. Demanda <span id="qtd-demanda" class="badge">0</span></button>
+            <button class="tab-btn" onclick="abrirAba(event, 'pendente')">2. Pendentes <span id="qtd-pendente" class="badge">0</span></button>
+            <button class="tab-btn" onclick="abrirAba(event, 'estoque')">3. Estoque <span id="qtd-estoque" class="badge">0</span></button>
+            <button class="tab-btn" onclick="abrirAba(event, 'extras')">4. Extras <span id="qtd-extras" class="badge">0</span></button>
+        </div>
+
+        <div id="aba-demanda" class="tab-content active"><div id="container-demanda"></div></div>
+        <div id="aba-pendente" class="tab-content"><div id="container-pendente"></div></div>
+        <div id="aba-estoque" class="tab-content"><div id="container-estoque"></div></div>
+        <div id="aba-extras" class="tab-content"><div id="container-extras"></div></div>
+
+    </div>
+</div>
+
+<script>
+    // ==========================================
+    // ESTADO GLOBAL DO APLICATIVO
+    // ==========================================
+    const estadoApp = {
+        dadosOriginais: { demanda: [], pendente: [], estoque: [], extras: [] },
+        dadosFiltrados: { demanda: [], pendente: [], estoque: [], extras: [] },
+        colunas: { demanda: [], pendente: [], estoque: [], extras: [] },
+        paginaAtual: { demanda: 1, pendente: 1, estoque: 1, extras: 1 },
+        linhasPorPagina: 1000 
+    };
+
+    function lerArquivoJson(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const dadosJson = JSON.parse(e.target.result);
+                carregarInterface(dadosJson);
+            } catch (err) {
+                alert("❌ Erro ao ler o arquivo. Certifique-se de que é um JSON válido gerado pelo aplicativo.");
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    function carregarInterface(json) {
+        document.getElementById("infoUser").innerText = json.usuario || "Não identificado";
+        document.getElementById("infoData").innerText = json.dataHoraGeracao || "Data não registrada";
+        document.getElementById("infoAtendimento").innerText = json.atendimento || "Sem Atendimento";
+
+        const d = json.dadosProcessados;
+        if (!d) {
+            alert("O arquivo JSON não contém a chave 'dadosProcessados'.");
+            return;
+        }
+
+        // Minimiza a caixa de upload para ganhar espaço na tela
+        document.getElementById("caixaUpload").style.padding = "10px";
+        document.getElementById("caixaUpload").style.marginBottom = "10px";
+
+        estadoApp.dadosOriginais = { demanda: d.demanda || [], pendente: d.pendente || [], estoque: d.estoque || [], extras: d.extras || [] };
+        estadoApp.dadosFiltrados = { demanda: [...estadoApp.dadosOriginais.demanda], pendente: [...estadoApp.dadosOriginais.pendente], estoque: [...estadoApp.dadosOriginais.estoque], extras: [...estadoApp.dadosOriginais.extras] };
+
+        iniciarEstruturaDaAba('demanda');
+        iniciarEstruturaDaAba('pendente');
+        iniciarEstruturaDaAba('estoque');
+        iniciarEstruturaDaAba('extras');
+
+        document.getElementById("painelResultados").style.display = "block";
+    }
+
+    // ==========================================
+    // MODO SNIPER (FILTRO GLOBAL)
+    // ==========================================
+    function verificarEnter(event) {
+        if (event.key === "Enter") aplicarFiltroSniper();
+    }
+
+   function aplicarFiltroSniper() {
+        const termo = document.getElementById("inputSniper").value.trim().toLowerCase();
+        
+        ['demanda', 'pendente', 'estoque', 'extras'].forEach(chave => {
+            const originais = estadoApp.dadosOriginais[chave];
+            
+            if (termo === "") {
+                estadoApp.dadosFiltrados[chave] = [...originais];
+            } else {
+                estadoApp.dadosFiltrados[chave] = originais.filter(linha => {
+                    // Tenta achar qual é o nome exato da coluna de Produto nesta aba
+                    const chaves = Object.keys(linha);
+                    const colunaProduto = chaves.find(k => {
+                        const kLimpo = k.toLowerCase().replace(/[^a-z0-9]/g, '');
+                        return kLimpo.includes('produto') || kLimpo.includes('material');
+                    });
+
+                    // Se achou a coluna de produto, procura só nela. 
+                    if (colunaProduto && linha[colunaProduto] !== null && linha[colunaProduto] !== undefined) {
+                        // Compara tirando os zeros à esquerda para evitar falsos negativos
+                        const valorProduto = String(linha[colunaProduto]).replace(/^0+/, '').toLowerCase();
+                        // Tira os zeros à esquerda do que o usuário digitou também
+                        const termoLimpo = termo.replace(/^0+/, '');
+                        
+                        return valorProduto.includes(termoLimpo);
+                    }
+                    return false; // Se não tem coluna de produto, ignora a linha no modo sniper
+                });
+            }
+            
+            estadoApp.paginaAtual[chave] = 1; // Volta pra página 1
+            renderizarPagina(chave); // Desenha a tabela atualizada
+            
+            // Atualiza o contador vermelho da aba
+            document.getElementById(`qtd-${chave}`).innerText = estadoApp.dadosFiltrados[chave].length.toLocaleString('pt-BR');
+            
+            // Limpa os filtros internos das colunas se houver algum
+            const tbody = document.getElementById(`tbody-${chave}`);
+            if (tbody) {
+                const inputs = tbody.parentElement.querySelectorAll("thead input");
+                inputs.forEach(inp => inp.value = "");
+            }
+        });
+    }
+
+    function limparFiltroSniper() {
+        document.getElementById("inputSniper").value = "";
+        aplicarFiltroSniper(); // Refaz a busca vazia (traz tudo de volta)
+    }
+
+    // ==========================================
+    // RENDERIZAÇÃO E PAGINAÇÃO
+    // ==========================================
+    function extrairColunas(array) {
+        let cols = new Set();
+        array.forEach(linha => Object.keys(linha).forEach(k => cols.add(k)));
+        return Array.from(cols);
+    }
+
+    function iniciarEstruturaDaAba(chave) {
+        const container = document.getElementById(`container-${chave}`);
+        const badge = document.getElementById(`qtd-${chave}`);
+        container.innerHTML = "";
+
+        const dados = estadoApp.dadosOriginais[chave];
+        badge.innerText = dados.length.toLocaleString('pt-BR');
+
+        if (dados.length === 0) {
+            container.innerHTML = "<p style='padding: 15px; color: #aaa;'>Nenhum dado registrado nesta aba.</p>";
+            return;
+        }
+
+        estadoApp.colunas[chave] = extrairColunas(dados);
+        estadoApp.paginaAtual[chave] = 1;
+
+        const divPaginacao = document.createElement("div");
+        divPaginacao.className = "paginacao";
+        divPaginacao.innerHTML = `
+            <button id="btn-ant-${chave}" onclick="mudarPagina('${chave}', -1)">⬅ Anterior</button>
+            <span id="infoPagina-${chave}">Página 1</span>
+            <button id="btn-prox-${chave}" onclick="mudarPagina('${chave}', 1)">Próxima ➡</button>
+        `;
+        container.appendChild(divPaginacao);
+
+        const divTabela = document.createElement("div");
+        divTabela.className = "table-container";
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const tbody = document.createElement("tbody");
+        tbody.id = `tbody-${chave}`;
+
+        const trHead = document.createElement("tr");
+        estadoApp.colunas[chave].forEach(col => {
+            const th = document.createElement("th");
+            th.innerHTML = `<div>${col.toUpperCase()}</div>`;
+            
+            const input = document.createElement("input");
+            input.type = "text";
+            input.placeholder = "Filtrar...";
+            input.dataset.coluna = col;
+            input.addEventListener("input", () => aoDigitarFiltro(chave, trHead));
+            
+            th.appendChild(input);
+            trHead.appendChild(th);
+        });
+        thead.appendChild(trHead);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        divTabela.appendChild(table);
+        container.appendChild(divTabela);
+
+        renderizarPagina(chave);
+    }
+
+    function renderizarPagina(chave) {
+        const tbody = document.getElementById(`tbody-${chave}`);
+        const info = document.getElementById(`infoPagina-${chave}`);
+        const btnAnt = document.getElementById(`btn-ant-${chave}`);
+        const btnProx = document.getElementById(`btn-prox-${chave}`);
+        
+        if (!tbody) return;
+
+        tbody.innerHTML = ""; 
+
+        const filtrados = estadoApp.dadosFiltrados[chave];
+        const limite = estadoApp.linhasPorPagina;
+        const totalPaginas = Math.ceil(filtrados.length / limite) || 1;
+        
+        let pagAtual = estadoApp.paginaAtual[chave];
+        if (pagAtual > totalPaginas) pagAtual = totalPaginas;
+        if (pagAtual < 1) pagAtual = 1;
+        estadoApp.paginaAtual[chave] = pagAtual;
+
+        info.innerText = `Página ${pagAtual} de ${totalPaginas} (${filtrados.length.toLocaleString('pt-BR')} resultados)`;
+        
+        btnAnt.disabled = (pagAtual === 1);
+        btnProx.disabled = (pagAtual === totalPaginas);
+
+        const inicio = (pagAtual - 1) * limite;
+        const fim = Math.min(inicio + limite, filtrados.length);
+        const cols = estadoApp.colunas[chave];
+
+        const fragmento = document.createDocumentFragment();
+
+        for (let i = inicio; i < fim; i++) {
+            const linha = filtrados[i];
+            const tr = document.createElement("tr");
+            cols.forEach(col => {
+                const td = document.createElement("td");
+                td.textContent = linha[col] !== undefined && linha[col] !== null ? linha[col] : "";
+                tr.appendChild(td);
+            });
+            fragmento.appendChild(tr);
+        }
+        tbody.appendChild(fragmento);
+    }
+
+    function mudarPagina(chave, direcao) {
+        estadoApp.paginaAtual[chave] += direcao;
+        renderizarPagina(chave);
+    }
+
+    // ==========================================
+    // FILTROS INTERNOS DAS COLUNAS
+    // ==========================================
+    let delayTimer;
+    function aoDigitarFiltro(chave, trHead) {
+        clearTimeout(delayTimer); 
+        
+        delayTimer = setTimeout(() => {
+            const inputs = trHead.querySelectorAll("input");
+            const filtrosAtivos = [];
+            
+            inputs.forEach(inp => {
+                const val = inp.value.trim().toLowerCase();
+                if (val) filtrosAtivos.push({ col: inp.dataset.coluna, val: val });
+            });
+
+            // Considera sempre se o Sniper está ativo para não perder o filtro principal
+            const termoSniper = document.getElementById("inputSniper").value.trim().toLowerCase();
+            const originais = estadoApp.dadosOriginais[chave];
+
+            estadoApp.dadosFiltrados[chave] = originais.filter(linha => {
+                
+                // 1. Passa na regra do Sniper?
+                let passaSniper = true;
+                if (termoSniper !== "") {
+                    passaSniper = Object.values(linha).some(val => 
+                        val !== null && val !== undefined && String(val).toLowerCase().includes(termoSniper)
+                    );
+                }
+                if (!passaSniper) return false;
+
+                // 2. Passa nas regras das colunas individuais?
+                return filtrosAtivos.every(f => {
+                    const valorCelula = (linha[f.col] !== undefined && linha[f.col] !== null) ? String(linha[f.col]).toLowerCase() : "";
+                    return valorCelula.includes(f.val);
+                });
+            });
+
+            estadoApp.paginaAtual[chave] = 1;
+            renderizarPagina(chave); 
+            document.getElementById(`qtd-${chave}`).innerText = estadoApp.dadosFiltrados[chave].length.toLocaleString('pt-BR');
+            
+        }, 400);
+    }
+
+    function abrirAba(evt, nomeAba) {
+        let contents = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < contents.length; i++) contents[i].style.display = "none";
+        
+        let btns = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < btns.length; i++) btns[i].classList.remove("active");
+        
+        document.getElementById(`aba-${nomeAba}`).style.display = "block";
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+</body>
+</html>
