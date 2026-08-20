@@ -198,6 +198,20 @@
             </select>
         </div>
 
+        <div style="margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd; display: inline-block; margin-left: 10px;">
+            <label for="nomeUsuario" style="font-size: 16px;"><b>👤 Operador:</b></label>
+            <select id="nomeUsuario" style="padding: 6px; border-radius: 4px; margin-left: 10px; font-size: 14px;">
+                <option value="">Selecione quem está validando...</option>
+                <option value="RENANPD">RENANPD</option>
+                <option value="RAILANECB">RAILANECB</option>
+                <option value="FERNANDESJA">FERNANDESJA</option>
+                <option value="FRIGO">FRIGO</option>
+                <option value="ALANFR">ALANFR</option>
+                <option value="DEALMEIDAANT">DEALMEIDAANT</option>
+                <!-- Pode adicionar os nomes reais da sua equipe aqui -->
+            </select>
+        </div>
+
         <div class="upload-section">
             <div class="upload-box">
                 <label for="fileDemanda">1.📩 Atendimento Solicitado (.xlsx)</label>
@@ -869,13 +883,21 @@
     }
 
     function copiarParaSharePoint() {
-        const tabela = document.getElementById("tabelaResultado"); const botao = document.getElementById("btnCopiarSP"); const selectAtendimento = document.getElementById("tipoAtendimento").value;
+        const tabela = document.getElementById("tabelaResultado"); 
+        const botao = document.getElementById("btnCopiarSP"); 
+        const selectAtendimento = document.getElementById("tipoAtendimento").value;
+        const selectUsuario = document.getElementById("nomeUsuario").value; // <- Puxa a nova lista
+
+        // Novas travas de segurança
         if (selectAtendimento === "") return mostrarErroBotao(botao, "❌ Selecione o Atendimento!");
+        if (selectUsuario === "") return mostrarErroBotao(botao, "❌ Selecione o Operador!");
+
         const linhas = tabela.querySelectorAll("tbody tr");
         if (linhas.length === 0 || linhas[0].innerText.includes("Nenhum corte")) return mostrarErroBotao(botao, "❌ Sem dados!");
 
-        let usuarioSolicitante = "Analista"; 
-        try { const partes = decodeURIComponent(window.location.pathname).split('/'); if (partes.length > 3 && partes[2].toLowerCase() === 'users') usuarioSolicitante = partes[3].toUpperCase(); } catch(e) {}
+        // Removemos a lógica antiga que lia a URL (window.location.pathname)
+        let usuarioSolicitante = selectUsuario; 
+
         const agora = new Date();
         const dataHora = `${String(agora.getMonth() + 1).padStart(2, '0')}/${String(agora.getDate()).padStart(2, '0')}/${agora.getFullYear()} ${String(agora.getHours() % 12 || 12).padStart(2, '0')}:${String(agora.getMinutes()).padStart(2, '0')} ${agora.getHours() >= 12 ? 'PM' : 'AM'}`;
 
