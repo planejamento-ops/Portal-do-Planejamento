@@ -208,9 +208,10 @@
         .chart-container { width: 100%; max-width: 1200px; margin: 0 auto 30px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .print-area { padding: 15px; background-color: #ffffff; } 
         
-        .toggle-container { display: flex; justify-content: center; align-items: center; margin: 15px 0; padding: 10px; background: rgba(0,26,77,0.05); border-radius: 6px; gap: 20px; }
+        .toggle-container { display: flex; justify-content: center; align-items: center; margin: 15px 0; padding: 10px; background: rgba(0,26,77,0.05); border-radius: 6px; gap: 20px; flex-wrap: wrap; }
         .toggle-container label { font-weight: 600; color: var(--azul-escuro); cursor: pointer; display: flex; align-items: center; gap: 8px; }
         .toggle-container input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
+        .toggle-container select { padding: 6px 12px; border-radius: 4px; border: 1px solid var(--cinza-borda); font-family: inherit; font-size: 14px; background: white; color: var(--azul-escuro); font-weight: bold; outline: none; }
 
         .resumo-container { margin-top: 40px; overflow-x: auto; }
         .tabela-resumo { width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse; font-size: 14px; }
@@ -406,7 +407,7 @@ BA</textarea>
         </div>
 
         <div class="chart-container">
-            <div class="toggle-container">
+            <div class="toggle-container" style="justify-content: center;">
                 <label>
                     <input type="checkbox" id="ignorar04" onchange="renderizarGraficoPeso()">
                     Desconsiderar A.G. 04
@@ -422,6 +423,49 @@ BA</textarea>
                 <canvas id="graficoPeso"></canvas>
             </div>
         </div>
+
+        <!-- SEÇÃO NOVA: PRODUTOS POR ESTAÇÃO COM FILTROS -->
+        <div class="chart-container" style="margin-top: 20px;">
+            <h2 style="color: var(--azul-escuro); margin: 0 0 15px 0; font-size: 20px; text-align: center;">Produtos da Estação</h2>
+            
+            <div class="toggle-container" style="background: transparent; justify-content: flex-start; padding: 0; margin-bottom: 15px; gap: 15px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label for="selectEstacaoFiltro" style="font-weight: bold; color: var(--azul-escuro); margin: 0;">Estação:</label>
+                    <select id="selectEstacaoFiltro" onchange="filtrarProdutosPorEstacao()" style="padding: 8px 15px; border-radius: 4px; border: 1px solid var(--cinza-borda); font-family: inherit; font-size: 14px; background: white; color: var(--azul-escuro); font-weight: bold; cursor: pointer; outline: none;">
+                        <option value="">Todas as Estações</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label for="selectPesoFiltro" style="font-weight: bold; color: var(--azul-escuro); margin: 0;">Peso:</label>
+                    <select id="selectPesoFiltro" onchange="filtrarProdutosPorEstacao()" style="padding: 8px 15px; border-radius: 4px; border: 1px solid var(--cinza-borda); font-family: inherit; font-size: 14px; background: white; color: var(--azul-escuro); font-weight: bold; cursor: pointer; outline: none;">
+                        <option value="">Todos</option>
+                        <option value="Leve">Leve</option>
+                        <option value="Moderado">Moderado</option>
+                        <option value="Pesado">Pesado</option>
+                    </select>
+                </div>
+
+                <button class="btn-secundario" onclick="exportarProdutosEstacaoExcel()" style="padding: 8px 15px; font-size: 13px; margin-left: auto;">📥 Exportar Tabela</button>
+                <span id="contadorProdutosEstacao" style="font-weight: 600; color: #555; font-size: 14px; display: flex; align-items: center;">Total de itens: 0</span>
+            </div>
+
+            <div class="table-container" style="max-height: 40vh;">
+                <table id="tabelaProdutosEstacao">
+                    <thead>
+                        <tr>
+                            <th>SKU</th>
+                            <th style="min-width: 300px; text-align: left;">Descrição</th>
+                            <th>Fixo Completo</th>
+                            <th>Categoria de Peso</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoProdutosEstacao">
+                        <!-- Será preenchido pelo script inicial -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -432,8 +476,8 @@ BA</textarea>
     let myChartEstacoes = null; 
     let myChartPeso = null;
     
-    window.dadosGlobaisPeso = [];
-    window.dadosGlobaisFixosBrutos = []; 
+    // Lista Global Unificada que alimenta tabelas e gráficos
+    window.dadosGlobaisProdutosCompletos = []; 
 
     function getIndiceColuna(header, palavrasChave) {
         if (!header) return -1;
@@ -629,8 +673,7 @@ BA</textarea>
             const dadosFixos = fileFixos ? await lerExcel(fileFixos) : null;
             const skusIgnorados = new Set(document.getElementById('descSKU').value.split('\n').map(item => item.trim()).filter(item => item !== ""));
 
-            window.dadosGlobaisPeso = []; 
-            window.dadosGlobaisFixosBrutos = [];
+            window.dadosGlobaisProdutosCompletos = [];
 
             // 1. Processar Estoque Físico
             const estoqueDict = {};
@@ -776,20 +819,6 @@ BA</textarea>
                                 dicionarioFixos[item] = fixoFormatado;
                             }
                         }
-
-                        // Guarda para uso direto no gráfico de estações
-                        const cadSap = dicionarioMara[item] || "-";
-                        window.dadosGlobaisFixosBrutos.push({
-                            sku: item,
-                            fixo: fixoFormatado,
-                            cadSap: cadSap
-                        });
-
-                        // Guarda para o gráfico de Peso
-                        let pesoItem = (dicionarioUM[item]) ? dicionarioUM[item].peso : 0;
-                        if (fixoFormatado !== "Sem Fixo") {
-                            window.dadosGlobaisPeso.push({ fixoStr: fixoFormatado, peso: pesoItem });
-                        }
                     }
                 });
             }
@@ -800,7 +829,7 @@ BA</textarea>
                 // Se o arquivo de Estoque foi enviado, a tabela baseia-se APENAS nele
                 itensOrdenados = Object.keys(estoqueDict).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
             } else {
-                // Se o Estoque não foi enviado, usa a união para não quebrar a tela
+                // Se o Estoque não foi enviado, usa a união
                 const todosSkus = new Set([
                     ...Object.keys(dicionarioFixos),
                     ...Object.keys(dicionarioPackspac),
@@ -809,7 +838,7 @@ BA</textarea>
                 itensOrdenados = Array.from(todosSkus).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
             }
 
-            // 6. Montar Tabela Final
+            // 6. Montar Tabela Final e Popular Lista Global Unificada
             const tbody = document.getElementById('corpoTabela');
             tbody.innerHTML = "";
 
@@ -835,6 +864,24 @@ BA</textarea>
                     status = "Desatualizado"; badgeClass = "badge-warn";
                 }
 
+                // Categoria de Peso real
+                let pesoItem = objUM.peso;
+                let categoriaPeso = "Sem Peso Cadastrado";
+                if (pesoItem > 0) {
+                    if (pesoItem <= 100) categoriaPeso = "Leve";
+                    else if (pesoItem <= 300) categoriaPeso = "Moderado";
+                    else categoriaPeso = "Pesado";
+                }
+
+                // Armazena todos os dados de forma unificada (Isso vai alimentar os gráficos e a tabela de baixo)
+                window.dadosGlobaisProdutosCompletos.push({
+                    sku: item,
+                    descricao: descEstoque,
+                    fixoCompleto: valFixo,
+                    categoriaPeso: categoriaPeso,
+                    cadastroSap: colCadSap
+                });
+
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td><strong>${item}</strong></td>
@@ -849,6 +896,7 @@ BA</textarea>
                 tbody.appendChild(tr);
             });
 
+            preencherSelectEstacoes();
             atualizarContadores();
             document.getElementById('loading').style.display = 'none';
             document.getElementById('uploadView').style.display = 'none';
@@ -861,6 +909,124 @@ BA</textarea>
             alert("Ocorreu um erro ao processar os arquivos. Verifique se a estrutura está correta.");
             document.getElementById('loading').style.display = 'none';
         }
+    }
+
+    // --- PREENCHER O SELECT DE ESTAÇÕES ---
+    function preencherSelectEstacoes() {
+        const select = document.getElementById('selectEstacaoFiltro');
+        select.innerHTML = '<option value="">Todas as Estações</option>';
+        const estacoesSet = new Set();
+
+        window.dadosGlobaisProdutosCompletos.forEach(item => {
+            if (item.fixoCompleto && item.fixoCompleto !== "Sem Fixo") {
+                let partes = item.fixoCompleto.split(" - ");
+                partes.forEach(p => {
+                    let est = p.split('-')[0].trim();
+                    if (est) estacoesSet.add(est);
+                });
+            }
+        });
+
+        const estacoesOrdenadas = Array.from(estacoesSet).sort((a, b) => {
+            if (a === 'PD' && b !== 'PD') return -1;
+            if (b === 'PD' && a !== 'PD') return 1;
+            if (a === 'PC' && b !== 'PC') return -1;
+            if (b === 'PC' && a !== 'PC') return 1;
+            const numA = parseInt(a), numB = parseInt(b);
+            if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+            return a.localeCompare(b);
+        });
+
+        estacoesOrdenadas.forEach(est => {
+            const opt = document.createElement('option');
+            opt.value = est;
+            opt.textContent = `Estação ${est}`;
+            select.appendChild(opt);
+        });
+    }
+
+    // --- FILTRAR PRODUTOS POR ESTAÇÃO / PESO ---
+    function filtrarProdutosPorEstacao() {
+        const estacaoSelecionada = document.getElementById('selectEstacaoFiltro').value;
+        const pesoSelecionado = document.getElementById('selectPesoFiltro').value;
+        const tbody = document.getElementById('corpoProdutosEstacao');
+        const contador = document.getElementById('contadorProdutosEstacao');
+        tbody.innerHTML = "";
+
+        let filtrados = window.dadosGlobaisProdutosCompletos;
+
+        if (estacaoSelecionada) {
+            filtrados = filtrados.filter(item => {
+                if (!item.fixoCompleto) return false;
+                let partes = item.fixoCompleto.split(" - ");
+                return partes.some(p => p.split('-')[0].trim() === estacaoSelecionada);
+            });
+        }
+
+        if (pesoSelecionado) {
+            filtrados = filtrados.filter(item => item.categoriaPeso === pesoSelecionado);
+        }
+
+        contador.innerText = `Total de itens: ${filtrados.length}`;
+
+        if (filtrados.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="4" style="color: #888; padding: 20px;">Nenhum produto encontrado com os filtros atuais.</td></tr>`;
+            return;
+        }
+
+        filtrados.forEach(prod => {
+            let corPeso = "#555";
+            if (prod.categoriaPeso === "Leve") corPeso = "#27ae60"; 
+            else if (prod.categoriaPeso === "Moderado") corPeso = "#f39c12"; 
+            else if (prod.categoriaPeso === "Pesado") corPeso = "#c0392b"; 
+            else if (prod.categoriaPeso === "Sem Peso Cadastrado") corPeso = "#95a5a6"; 
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><strong>${prod.sku}</strong></td>
+                <td style="text-align: left; font-size: 13px;">${prod.descricao}</td>
+                <td><strong>${prod.fixoCompleto}</strong></td>
+                <td style="color: ${corPeso}; font-weight: bold;">${prod.categoriaPeso}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // --- EXPORTAR APENAS A TABELA DE ESTAÇÕES ---
+    function exportarProdutosEstacaoExcel() {
+        const tabela = document.getElementById("tabelaProdutosEstacao");
+        const tbodyTrs = document.getElementById('corpoProdutosEstacao').getElementsByTagName("tr");
+        
+        if (tbodyTrs.length === 1 && tbodyTrs[0].innerText.includes("Nenhum produto")) {
+            alert("Não há dados encontrados para exportar.");
+            return;
+        }
+
+        const wsData = [];
+        const trs = tabela.getElementsByTagName("tr");
+        const ths = trs[0].getElementsByTagName("th");
+        const headers = [];
+        for (let i = 0; i < ths.length; i++) { headers.push(ths[i].childNodes[0].nodeValue ? ths[i].childNodes[0].nodeValue.trim() : ""); }
+        wsData.push(headers);
+        
+        for (let i = 0; i < tbodyTrs.length; i++) {
+            const tds = tbodyTrs[i].getElementsByTagName("td");
+            if (tds.length === 4) {
+                const rowData = [];
+                for (let j = 0; j < tds.length; j++) rowData.push(tds[j].innerText.trim()); 
+                wsData.push(rowData);
+            }
+        }
+
+        if (wsData.length <= 1) {
+            alert("Não há dados para exportar.");
+            return;
+        }
+
+        const ws = XLSX.utils.aoa_to_sheet(wsData);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Produtos_Estacao");
+        XLSX.writeFile(wb, "Produtos_Por_Estacao_Packspac.xlsx");
     }
 
     // --- NAVEGAÇÃO DOS GRÁFICOS ---
@@ -876,6 +1042,7 @@ BA</textarea>
         document.getElementById('graficoEstacoesView').style.display = 'none';
         document.getElementById('graficoPesoView').style.display = 'block';
         renderizarGraficoPeso();
+        filtrarProdutosPorEstacao(); 
     }
 
     function voltarParaResultados() {
@@ -891,18 +1058,22 @@ BA</textarea>
         document.getElementById('uploadView').style.display = 'block';
     }
 
-    // --- RENDERIZAÇÃO DO GRÁFICO ---
+    // --- RENDERIZAÇÃO DO GRÁFICO ESTAÇÕES ---
     function renderizarGraficoEstacoes() {
         const dataMap = {};
         
-        window.dadosGlobaisFixosBrutos.forEach(item => {
-            let fixoRaw = item.fixo;
-            let cadastroRaw = item.cadSap.toUpperCase();
-            let fixo = fixoRaw.split('-')[0].trim();
+        window.dadosGlobaisProdutosCompletos.forEach(item => {
+            if (!item.fixoCompleto || item.fixoCompleto === "Sem Fixo") return;
             
-            if (!dataMap[fixo]) dataMap[fixo] = { CX: 0, M1: 0 };
-            if (cadastroRaw === 'CX') dataMap[fixo].CX++;
-            else if (cadastroRaw === 'M1') dataMap[fixo].M1++;
+            let partes = item.fixoCompleto.split(" - ");
+            let cadastroRaw = (item.cadastroSap || "-").toUpperCase();
+            
+            partes.forEach(p => {
+                let fixo = p.split('-')[0].trim();
+                if (!dataMap[fixo]) dataMap[fixo] = { CX: 0, M1: 0 };
+                if (cadastroRaw === 'CX') dataMap[fixo].CX++;
+                else if (cadastroRaw === 'M1') dataMap[fixo].M1++;
+            });
         });
 
         const sortedFixos = Object.keys(dataMap).sort((a, b) => {
@@ -910,8 +1081,6 @@ BA</textarea>
             if (b === 'PD' && a !== 'PD') return 1;
             if (a === 'PC' && b !== 'PC') return -1;
             if (b === 'PC' && a !== 'PC') return 1;
-            if (a === 'Sem Fixo') return 1;
-            if (b === 'Sem Fixo') return -1;
             const numA = parseInt(a), numB = parseInt(b);
             if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
             return a.localeCompare(b);
@@ -955,31 +1124,32 @@ BA</textarea>
         });
     }
 
+    // --- RENDERIZAÇÃO DO GRÁFICO PESO ---
     function renderizarGraficoPeso() {
         const ignorar04 = document.getElementById('ignorar04').checked;
         const ignorarPC = document.getElementById('ignorarPC').checked; 
         const mapPeso = {};
 
-        window.dadosGlobaisPeso.forEach(item => {
-            let fixosArray = item.fixoStr.split(" - ");
+        window.dadosGlobaisProdutosCompletos.forEach(item => {
+            if (!item.fixoCompleto || item.fixoCompleto === "Sem Fixo") return;
             
-            if (ignorar04) {
-                fixosArray = fixosArray.filter(f => f !== "04" && f !== "4");
-            }
-            if (ignorarPC) {
-                fixosArray = fixosArray.filter(f => f !== "PC");
-            }
+            let partes = item.fixoCompleto.split(" - ");
             
-            if (fixosArray.length === 0) return; 
+            partes.forEach(p => {
+                let f = p.split('-')[0].trim();
+                
+                if (ignorar04 && (f === "04" || f === "4")) return;
+                if (ignorarPC && f === "PC") return;
+                
+                if (!mapPeso[f]) mapPeso[f] = { leve: 0, mod: 0, pes: 0, total: 0 };
 
-            let fixoDefinitivo = fixosArray[0]; 
-            if (!mapPeso[fixoDefinitivo]) mapPeso[fixoDefinitivo] = { leve: 0, mod: 0, pes: 0, total: 0 };
-
-            if (item.peso <= 100) { mapPeso[fixoDefinitivo].leve++; }
-            else if (item.peso <= 300) { mapPeso[fixoDefinitivo].mod++; }
-            else { mapPeso[fixoDefinitivo].pes++; }
-            
-            mapPeso[fixoDefinitivo].total++;
+                if (item.categoriaPeso === "Leve") mapPeso[f].leve++;
+                else if (item.categoriaPeso === "Moderado") mapPeso[f].mod++;
+                else if (item.categoriaPeso === "Pesado") mapPeso[f].pes++;
+                // Os itens "Sem Peso Cadastrado" são ignorados no gráfico para não poluir
+                
+                mapPeso[f].total++;
+            });
         });
 
         const sortedLabels = Object.keys(mapPeso).sort((a, b) => {
