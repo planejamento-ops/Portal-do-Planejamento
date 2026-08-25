@@ -65,7 +65,7 @@
         .card-op ul { padding-left: 20px; margin: 0; font-size: 14px; }
         .card-op li { margin-bottom: 5px; }
 
-        .resumo-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+        .resumo-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 20px; }
         .card-resumo { background: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: center; }
         .card-resumo h4 { margin: 0 0 8px 0; font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
         .card-resumo .valor { font-size: 26px; font-weight: bold; margin: 0; line-height: 1; }
@@ -208,7 +208,6 @@
                 <option value="FRIGO">FRIGO</option>
                 <option value="ALANFR">ALANFR</option>
                 <option value="DEALMEIDAANT">DEALMEIDAANT</option>
-                <!-- Pode adicionar os nomes reais da sua equipe aqui -->
             </select>
         </div>
 
@@ -263,7 +262,7 @@
         <!-- ========================================== -->
         <div class="letreiro-container">
             <div class="letreiro-animado">
-                ⚠️ ATENÇÃO OPERADOR: &nbsp;&nbsp;&nbsp; 1️⃣ Lembre-se de clicar no botão "Copiar para SharePoint" e colar na planilha oficial. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2️⃣ Baixe o arquivo de LOG (.json) na Aba 3 e mova-o para a pasta do aplicativo no SharePoint caso haja erros! ⚠️
+                ⚠️ ATENÇÃO OPERADOR: &nbsp;&nbsp;&nbsp; Lembre-se de clicar no botão "Copiar para SharePoint" e colar na planilha oficial. &nbsp;&nbsp;⚠️
             </div>
         </div>
         <!-- ========================================== -->
@@ -277,6 +276,11 @@
         <div id="painelArquivos" class="painel-arquivos"></div>
         
         <div class="resumo-cards" id="painelResumo" style="display: none;">
+            <div class="card-resumo" style="border: 3px solid #0d2572;">
+                <h4>📦 Total Demanda</h4>
+                <p class="valor" id="resumoDemandaTotal" style="color: #0d2572;">0</p>
+                <p class="sub-valor" id="resumoSkusSolicitados">0 SKUs solicitados</p>
+            </div>
             <div class="card-resumo" style="border: 3px solid #d9534f;">
                 <h4>✂️ Volume Cortado</h4>
                 <p class="valor" id="resumoCortes" style="color: #d9534f;">0</p>
@@ -378,6 +382,7 @@
 
 <script>
     let dadosBrutos = { demanda: null, pendente: null, estoque: null, extras: null };
+    let totalDemandaSolicitada = 0;
 
     function parseNumeroInteiro(valor) {
         if (valor === undefined || valor === null || valor === '') return 0;
@@ -406,7 +411,7 @@
     const fmt = (num) => Math.round(num).toLocaleString('pt-BR');
 
     function normalizarTexto(valor) {
-        return String(valor).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        return String(valor).normalize('NFD').replace(/[̀-ͯ]/g, '');
     }
 
     function copiarTabelaCompleta() {
@@ -586,6 +591,7 @@
             `;
 
             const produtos = {}; 
+            totalDemandaSolicitada = 0; // Reseta o total da demanda a cada processamento
 
             dadosBrutos.demanda.forEach(row => {
                 const colProd = acharColuna(row, ['produto', 'material']); 
@@ -595,8 +601,11 @@
                 const cod = String(row[colProd]).replace(/^0+/, '').trim(); 
                 if(!cod) return;
 
+                const qtdDemanda = parseNumeroInteiro(row[colQtd]);
+                totalDemandaSolicitada += qtdDemanda; // Soma do total de peças solicitadas
+
                 if (!produtos[cod]) produtos[cod] = { desc: row[colDesc] || '', demSol: 0, demPend: 0, equalizacao: 0, estoqueF2: 0, doca: 0, retidos: {}, avisos: {}, cortes: 0, motivoFinal: '-', cod: cod, saldoLivreF2: 0, saldoTotal: 0 };
-                produtos[cod].demSol += parseNumeroInteiro(row[colQtd]);
+                produtos[cod].demSol += qtdDemanda;
             });
 
             dadosBrutos.pendente.forEach(row => {
@@ -813,8 +822,21 @@
             const tbodyRaioX = document.querySelector("#tabelaRaioX tbody");
             tbodyRaioX.innerHTML = "";
 
+            // Atualiza os dados do novo card e dos cards de resumo
+            const totalSkusSolicitados = Object.keys(produtos).length;
+            document.getElementById("resumoDemandaTotal").innerText = fmt(totalDemandaSolicitada);
+            document.getElementById("resumoSkusSolicitados").innerText = `${totalSkusSolicitados} SKUs solicitados`;
+
             if (linhasTabelaAgrupada.length === 0) {
-                document.getElementById("painelResumo").style.display = "none";
+                // Mesmo sem cortes, mantemos o painel visível para mostrar a Demanda Total
+                document.getElementById("resumoCortes").innerText = "0";
+                document.getElementById("resumoSkus").innerText = "0 SKUs afetados";
+                document.getElementById("resumoOfensor").innerText = "-";
+                document.getElementById("resumoOfensorQtd").innerText = "0 peças";
+                document.getElementById("resumoCritico").innerText = "-";
+                document.getElementById("resumoCriticoQtd").innerText = "0 peças";
+                document.getElementById("resumoResgate").innerText = "0";
+
                 let tr = document.createElement("tr");
                 tr.innerHTML = `<td colspan="11" style="padding: 20px; text-align: center; font-weight: bold; font-size: 16px; color: #28a745; background-color: #e8f5e9;">🎉 Nenhum corte necessário! Todos os itens foram integralmente atendidos.</td>`;
                 tbody.appendChild(tr);
@@ -855,8 +877,10 @@
                 document.getElementById("resumoCritico").innerText = linhasTabelaAgrupada[0].cod;
                 document.getElementById("resumoCriticoQtd").innerText = `${fmt(linhasTabelaAgrupada[0].cortes)} peças cortadas`;
                 document.getElementById("resumoResgate").innerText = fmt(totalResgate);
-                document.getElementById("painelResumo").style.display = "grid";
             }
+            
+            // Exibe o painel de 5 cards
+            document.getElementById("painelResumo").style.display = "grid";
 
             let htmlRetidos = "";
             for (let motivo in gruposRetidos) {
@@ -886,7 +910,7 @@
         const tabela = document.getElementById("tabelaResultado"); 
         const botao = document.getElementById("btnCopiarSP"); 
         const selectAtendimento = document.getElementById("tipoAtendimento").value;
-        const selectUsuario = document.getElementById("nomeUsuario").value; // <- Puxa a nova lista
+        const selectUsuario = document.getElementById("nomeUsuario").value;
 
         // Novas travas de segurança
         if (selectAtendimento === "") return mostrarErroBotao(botao, "❌ Selecione o Atendimento!");
@@ -895,7 +919,6 @@
         const linhas = tabela.querySelectorAll("tbody tr");
         if (linhas.length === 0 || linhas[0].innerText.includes("Nenhum corte")) return mostrarErroBotao(botao, "❌ Sem dados!");
 
-        // Removemos a lógica antiga que lia a URL (window.location.pathname)
         let usuarioSolicitante = selectUsuario; 
 
         const agora = new Date();
@@ -905,7 +928,8 @@
         linhas.forEach(row => {
             if (row.classList.contains("row-corte")) {
                 const cols = row.querySelectorAll("td");
-                textoCopiado += `${dataHora}\t${selectAtendimento}\t${usuarioSolicitante}\t${cols[0].innerText}\t${cols[1].innerText}\t${cols[8].innerText.replace(/\./g, "")}\t${cols[2].innerText.replace(/\./g, "")}\t${cols[3].innerText.replace("-", "").replace(/\./g, "")}\t${cols[9].innerText.replace(/\./g, "")}\t${cols[10].innerText}\n`;
+                textoCopiado += `${dataHora}	${selectAtendimento}	${usuarioSolicitante}	${cols[0].innerText}	${cols[1].innerText}	${cols[8].innerText.replace(/\./g, "")}	${cols[2].innerText.replace(/\./g, "")}	${cols[3].innerText.replace("-", "").replace(/\./g, "")}	${cols[9].innerText.replace(/\./g, "")}	${cols[10].innerText}
+`;
             }
         });
 
