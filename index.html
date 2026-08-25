@@ -428,7 +428,7 @@
         .detail-row span.val.alert-yellow { color: #f6b93b; font-weight: 700; }
         .detail-row span.val.status-ok { color: #00b09b; font-weight: 700; }
 
-        /* TAGS DE IDENTIFICAÇÃO DE TUS (12 DIGITOS ABREVIADOS) */
+        /* TAGS DE IDENTIFICAÇÃO DE TUS */
         .alert-group {
             display: flex;
             align-items: center;
@@ -462,9 +462,7 @@
             border-color: rgba(255, 255, 255, 0.15);
         }
 
-        /* ======================================================== */
-        /* PILARES INSTITUCIONAIS (ESTICADO DE PONTA A PONTA)       */
-        /* ======================================================== */
+        /* PILARES INSTITUCIONAIS */
         .bar-pilares {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -502,7 +500,6 @@
             text-transform: uppercase; 
         }
 
-        /* Responsividade */
         @media (max-width: 1100px) {
             .main-layout { flex-direction: column; }
             .sidebar-apps { width: 100%; }
@@ -518,9 +515,7 @@
 </head>
 <body>
 
-    <!-- ======================================================== -->
-    <!-- BARRA SUPERIOR: TÍTULO À ESQUERDA E LOGO À DIREITA        -->
-    <!-- ======================================================== -->
+    <!-- BARRA SUPERIOR -->
     <header class="top-bar">
         <div class="header">
             <span class="welcome-text">- Bem-vindo ao</span>
@@ -530,14 +525,11 @@
         <img src="white-ceva.png" alt="Logo CEVA" class="logo-topo">
     </header>
 
-    <!-- ======================================================== -->
-    <!-- ESTRUTURA PRINCIPAL                                      -->
-    <!-- ======================================================== -->
+    <!-- ESTRUTURA PRINCIPAL -->
     <div class="main-layout">
 
-        <!-- COLUNA ESQUERDA: APLICATIVOS (SISTEMAS) -->
+        <!-- COLUNA ESQUERDA: APLICATIVOS -->
         <aside class="sidebar-apps">
-            <!-- App 1: Packspec -->
             <a href="packspackval.html" class="card-app bloco-auditor">
                 <div class="icon"><span class="material-symbols-outlined">package</span></div>
                 <div class="card-app-info">
@@ -547,7 +539,6 @@
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <!-- App 2: Wallboard -->
             <a href="wallboard.operacional.html" class="card-app bloco-wallboard">
                 <div class="icon"><span class="material-symbols-outlined">monitor_heart</span></div>
                 <div class="card-app-info">
@@ -557,7 +548,6 @@
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <!-- App 3: Validação -->
             <a href="validacao_cortes.html" class="card-app bloco-validacao">
                 <div class="icon"><span class="material-symbols-outlined">verified</span></div>
                 <div class="card-app-info">
@@ -567,7 +557,6 @@
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <!-- App 4: IRDR -->
             <a href="irdr.html" class="card-app bloco-irdr">
                 <div class="icon"><span class="material-symbols-outlined">inventory</span></div>
                 <div class="card-app-info">
@@ -577,7 +566,6 @@
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <!-- App 5: Posição Duplicada -->
             <a href="validacao_fixos.html" class="card-app bloco-posicao">
                 <div class="icon"><span class="material-symbols-outlined">filter_1</span></div>
                 <div class="card-app-info">
@@ -588,14 +576,12 @@
             </a>
         </aside>
 
-        <!-- ÁREA CENTRAL/DIREITA: BLOCOS DE INFORMAÇÕES (CONTROLE DE TU) -->
+        <!-- ÁREA CENTRAL: DASHBOARD -->
         <main class="dashboard-content">
             <div class="tu-dashboard-container">
                 <div class="tu-header">
                     <div class="tu-title-group">
                         <h2><span class="material-symbols-outlined">analytics</span> Resumo Semanal do Controle de TUs</h2>
-                        
-                        <!-- CAMPO COM A DATA DE HOJE NA FRENTE DO TÍTULO -->
                         <div class="today-date-badge">
                             <span class="material-symbols-outlined">calendar_today</span>
                             <span id="data-hoje">Carregando data...</span>
@@ -611,13 +597,13 @@
                         <span class="material-symbols-outlined">output</span>
                         <div class="fifo-text">
                             <span class="tag">Prioridade FIFO • Próxima Alocação</span>
-                            <h3>Carreta 03 (TU: ...2401)</h3>
+                            <h3 id="fifo-title">Aguardando dados...</h3>
                         </div>
                     </div>
                     <div class="fifo-details">
-                        <span>Atendimento: <strong>Varejo-Pró</strong></span>
-                        <span>UF: <strong>SP</strong></span>
-                        <span>Fila: <strong>2 Carretas Pendentes</strong></span>
+                        <span>Atendimento: <strong id="fifo-atendimento">--</strong></span>
+                        <span>UF: <strong id="fifo-uf">--</strong></span>
+                        <span>Status: <strong id="fifo-status">Sincronizando</strong></span>
                     </div>
                 </div>
 
@@ -627,7 +613,7 @@
                         <span class="material-symbols-outlined icon">inventory_2</span>
                         <div class="tu-info">
                             <span class="label">Total de TUs</span>
-                            <h3>48 TUs</h3>
+                            <h3 id="total-tus">--</h3>
                             <small>Semana Atual</small>
                         </div>
                     </div>
@@ -636,8 +622,8 @@
                         <span class="material-symbols-outlined icon">package_2</span>
                         <div class="tu-info">
                             <span class="label">Volume Caixas</span>
-                            <h3>128.507</h3>
-                            <small>LN: 47.825 | GV: 80.682</small>
+                            <h3 id="caixas-totais">--</h3>
+                            <small id="sub-caixas">LN: -- | GV: --</small>
                         </div>
                     </div>
 
@@ -645,7 +631,7 @@
                         <span class="material-symbols-outlined icon">local_shipping</span>
                         <div class="tu-info">
                             <span class="label">Falta Alocar</span>
-                            <h3>3 Carretas</h3>
+                            <h3 id="carretas-pendentes">--</h3>
                             <small>Pendentes de Rampa</small>
                         </div>
                     </div>
@@ -654,48 +640,45 @@
                         <span class="material-symbols-outlined icon">check_circle</span>
                         <div class="tu-info">
                             <span class="label">Progresso</span>
-                            <h3>85%</h3>
-                            <small>41 de 48 Concluídas</small>
+                            <h3 id="progresso-pct">--%</h3>
+                            <small id="sub-progresso">Sincronizando...</small>
                         </div>
                     </div>
                 </div>
 
-                <!-- DETALHAMENTO DE AUDITORIA E CONSISTÊNCIA -->
+                <!-- QUADROS DE DETALHES -->
                 <div class="tu-details-grid">
                     
-                    <!-- QUADRO 1: AUDITORIA DE CONSISTÊNCIA E ALERTAS PCP -->
+                    <!-- QUADRO 1: AUDITORIA PCP -->
                     <div class="tu-detail-box alert-box">
                         <h4><span class="material-symbols-outlined">warning</span> Checklist & Inconsistências de PCP</h4>
                         
                         <div class="detail-row">
                             <span>Conflito de Rampas:</span>
-                            <span class="val status-ok">0 Detectado</span>
+                            <span id="alert-rampas" class="val status-ok">--</span>
                         </div>
                         
                         <div class="detail-row">
                             <span>Perfil Fora da Média (Pcs/Cx):</span>
-                            <div class="alert-group">
-                                <span class="val alert-yellow">2 TUs</span>
-                                <small class="carreta-tag" title="TU Completa: 610000012404">...2404</small>
-                                <small class="carreta-tag" title="TU Completa: 610000012405">...2405</small>
+                            <div class="alert-group" id="tags-perfil">
+                                <span class="val alert-yellow">--</span>
                             </div>
                         </div>
 
                         <div class="detail-row">
                             <span>TUs Encalhadas (3+ dias):</span>
-                            <div class="alert-group">
-                                <span class="val alert-red">1 Parada</span>
-                                <small class="carreta-tag" title="TU Completa: 610000011892">...1892</small>
+                            <div class="alert-group" id="tags-encalhadas">
+                                <span class="val alert-red">--</span>
                             </div>
                         </div>
 
                         <div class="detail-row">
                             <span>Saúde Geral da Base:</span>
-                            <span class="val status-ok">94% Auditada</span>
+                            <span id="alert-saude" class="val status-ok">--%</span>
                         </div>
                     </div>
 
-                    <!-- QUADRO 2: DISTRIBUIÇÃO E PERFIL DAS TUS (PENDENTE vs TOTAL) -->
+                    <!-- QUADRO 2: PERFIL MÉDIO -->
                     <div class="tu-detail-box">
                         <h4><span class="material-symbols-outlined">pie_chart</span> Perfil Média (Pcs/Cx) • Pendente vs Total</h4>
                         
@@ -738,7 +721,7 @@
 
     </div>
 
-    <!-- BARRA DE PILARES INSTITUCIONAIS (ESTICADA DE PONTA A PONTA) -->
+    <!-- PILARES INSTITUCIONAIS -->
     <div class="bar-pilares">
         <div class="pilar-item">
             <span class="material-symbols-outlined">shield</span>
@@ -758,17 +741,69 @@
         </div>
     </div>
     
-    <!-- RODAPÉ ALINHADO À ESQUERDA -->
+    <!-- RODAPÉ -->
     <footer class="rodape">
-        <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026 | Versão 2.1</p>
+        <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026 | Versão 2.2</p>
     </footer>
 
-    <!-- SCRIPT DE DATA AUTOMÁTICA -->
+    <!-- SCRIPT DE CONEXÃO E ATUALIZAÇÃO DOS DADOS DO GITHUB -->
     <script>
+        // Data Atual no Topo
         const opcoesData = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         const dataAtual = new Date().toLocaleDateString('pt-BR', opcoesData);
-        const dataFormatada = dataAtual.charAt(0).toUpperCase() + dataAtual.slice(1);
-        document.getElementById('data-hoje').textContent = dataFormatada;
+        document.getElementById('data-hoje').textContent = dataAtual.charAt(0).toUpperCase() + dataAtual.slice(1);
+
+        // Busca e atualiza o Dashboard lendo o dados_tu.json do GitHub
+        async function carregarDadosDashboard() {
+            try {
+                const resposta = await fetch('dados_tu.json?t=' + new Date().getTime());
+                if (!resposta.ok) return;
+
+                const dados = await resposta.json();
+
+                // Atualiza Cards de Topo
+                document.getElementById('total-tus').textContent = `${dados.total_tus} TUs`;
+                document.getElementById('caixas-totais').textContent = dados.caixas_totais.toLocaleString('pt-BR');
+                document.getElementById('sub-caixas').textContent = `LN: ${dados.caixas_ln.toLocaleString('pt-BR')} | GV: ${dados.caixas_gv.toLocaleString('pt-BR')}`;
+                document.getElementById('carretas-pendentes').textContent = `${dados.carretas_pendentes} Carretas`;
+                document.getElementById('progresso-pct').textContent = `${dados.progresso_pct}%`;
+
+                // Atualiza Card FIFO
+                if (dados.proxima_carreta) {
+                    document.getElementById('fifo-title').textContent = `${dados.proxima_carreta.carreta} (TU: ${dados.proxima_carreta.tu_resumida})`;
+                    document.getElementById('fifo-atendimento').textContent = dados.proxima_carreta.atendimento;
+                    document.getElementById('fifo-uf').textContent = dados.proxima_carreta.uf;
+                    document.getElementById('fifo-status').textContent = "Pendente na Fila";
+                }
+
+                // Atualiza Checklist de PCP
+                if (dados.inconsistencias) {
+                    document.getElementById('alert-rampas').textContent = `${dados.inconsistencias.conflito_rampas} Detectado`;
+                    document.getElementById('alert-saude').textContent = `${dados.inconsistencias.saude_base}% Auditada`;
+
+                    // Renderiza TUs com perfil fora da média
+                    const tagPerfil = document.getElementById('tags-perfil');
+                    tagPerfil.innerHTML = `<span class="val alert-yellow">${dados.inconsistencias.perfil_fora_media.length} TUs</span>`;
+                    dados.inconsistencias.perfil_fora_media.forEach(tu => {
+                        tagPerfil.innerHTML += `<small class="carreta-tag" title="TU Completa: ${tu}">${tu}</small>`;
+                    });
+
+                    // Renderiza TUs encalhadas
+                    const tagEncalho = document.getElementById('tags-encalhadas');
+                    tagEncalho.innerHTML = `<span class="val alert-red">${dados.inconsistencias.tus_encalhadas.length} Parada</span>`;
+                    dados.inconsistencias.tus_encalhadas.forEach(tu => {
+                        tagEncalho.innerHTML += `<small class="carreta-tag" title="TU Completa: ${tu}">${tu}</small>`;
+                    });
+                }
+
+            } catch (erro) {
+                console.warn("Aguardando publicação do arquivo de dados...", erro);
+            }
+        }
+
+        // Executa na abertura e repete a cada 2 minutos
+        carregarDadosDashboard();
+        setInterval(carregarDadosDashboard, 120000);
     </script>
 
 </body>
