@@ -33,12 +33,23 @@
             background-position: center;   
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            align-items: flex-start; 
+            justify-content: space-between;
+            height: 100vh;
             position: relative;
-            padding: 2.5vh 4%;
-            overflow-x: hidden;
-            overflow-y: auto;
-            gap: 20px;
+            padding: 2.5vh 6%;
+            overflow: hidden;
+        }
+
+        /* LOGOTIPO SUPERIOR DIREITO */
+        .logo-topo {
+            position: absolute; 
+            top: 3.5vh; 
+            right: 6%; 
+            max-width: 120px; 
+            z-index: 10; 
+            opacity: 0; 
+            animation: surgirDaSombra 0.8s ease-out forwards; 
         }
 
         @keyframes surgirDaSombra {
@@ -46,20 +57,24 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ======================================================== */
-        /* TOPO: TÍTULO À ESQUERDA E LOGO À DIREITA                 */
-        /* ======================================================== */
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+        /* Container principal */
+        .main-wrapper {
             width: 100%;
-            z-index: 2;
+            max-width: 1600px; 
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
             animation: surgirDaSombra 0.8s ease-out forwards;
+            opacity: 0;
+            z-index: 2; 
         }
 
+        /* ======================================================== */
+        /* CABEÇALHO E TÍTULO                                       */
+        /* ======================================================== */
         .header {
             text-align: left;
+            max-width: 600px;
         }
 
         .welcome-text {
@@ -69,18 +84,18 @@
             text-transform: uppercase;
             font-weight: 600;
             display: block;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .header h1 {
             font-family: "Goldman", sans-serif;
-            font-size: 2.2rem; 
+            font-size: 2.5rem; 
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .header h1 .destaque {
@@ -88,723 +103,358 @@
         }
 
         .header p {
-            font-size: 0.88rem;
+            font-size: 0.95rem;
             color: #a0aab5; 
-        }
-
-        .logo-topo {
-            max-width: 120px;
-            height: auto;
+            line-height: 1.3;
         }
 
         /* ======================================================== */
-        /* CORPO PRINCIPAL: ESQUERDA (APPS) / DIREITA (BLOCOS)       */
+        /* CONTAINER E CARDS (ESTILO GHOST - 4 COLUNAS)             */
         /* ======================================================== */
-        .main-layout {
-            display: flex;
-            gap: 25px;
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px; 
             width: 100%;
-            align-items: flex-start;
-            z-index: 2;
-            animation: surgirDaSombra 0.8s ease-out forwards;
         }
 
-        /* COLUNA DA ESQUERDA: APLICATIVOS */
-        .sidebar-apps {
-            width: 310px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            flex-shrink: 0;
-        }
-
-        .card-app {
-            border-radius: 12px; 
-            padding: 12px 14px;
+        .card {
+            height: 48vh; 
+            max-height: 320px;
+            min-height: 250px;
+            border-radius: 16px; 
+            padding: 18px 16px;
+            text-align: left; 
             text-decoration: none;
+            position: relative; 
             background: rgba(255, 255, 255, 0.04); 
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             color: #FFFFFF;
             transition: all 0.3s ease-in-out;
             display: flex;
-            align-items: center;
-            gap: 12px;
+            flex-direction: column;
+            align-items: flex-start; 
+            justify-content: flex-start;
             overflow: hidden;
         }
 
-        .card-app .icon .material-symbols-outlined {
-            font-size: 28px; 
+        .card .icon {
+            margin-bottom: 12px;
+        }
+
+        .card .icon .material-symbols-outlined {
+            font-size: 42px; 
+            transition: all 0.3s ease;
             padding: 8px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .card-app-info {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .card-app h2 {
-            font-size: 0.9rem;
-            font-weight: 600;
-            line-height: 1.1;
-            margin-bottom: 2px;
-        }
-
-        .card-app p {
-            font-size: 0.72rem;
-            color: #a0aab5;
-            line-height: 1.2;
-        }
-
-        .card-app .arrow {
-            font-size: 16px;
-            opacity: 0.5;
-            transition: all 0.3s ease;
-        }
-
-        .card-app:hover {
-            transform: translateX(5px);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .card-app:hover .arrow {
-            opacity: 1;
-            transform: translateX(3px);
-        }
-
-        /* BORDAS E CORES DOS APPS */
-        .bloco-auditor { border-left: 4px solid #00d2ff; }
-        .bloco-auditor .icon .material-symbols-outlined { color: #00d2ff; background: rgba(0, 210, 255, 0.1); }
-        .bloco-auditor:hover { box-shadow: 0 4px 20px rgba(0, 210, 255, 0.3); }
-
-        .bloco-wallboard { border-left: 4px solid #ff4b2b; }
-        .bloco-wallboard .icon .material-symbols-outlined { color: #ff4b2b; background: rgba(255, 75, 43, 0.1); }
-        .bloco-wallboard:hover { box-shadow: 0 4px 20px rgba(255, 75, 43, 0.3); }
-
-        .bloco-validacao { border-left: 4px solid #00b09b; }
-        .bloco-validacao .icon .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.1); }
-        .bloco-validacao:hover { box-shadow: 0 4px 20px rgba(0, 176, 155, 0.3); }
-
-        .bloco-irdr { border-left: 4px solid #f6b93b; }
-        .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.1); }
-        .bloco-irdr:hover { box-shadow: 0 4px 20px rgba(246, 185, 59, 0.3); }
-
-        .bloco-posicao { border-left: 4px solid #9b59b6; }
-        .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.1); }
-        .bloco-posicao:hover { box-shadow: 0 4px 20px rgba(155, 89, 182, 0.3); }
-
-        /* PAINEL CENTRAL DE BLOCOS/DASHBOARD */
-        .dashboard-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .tu-dashboard-container {
-            width: 100%;
-            background: rgba(17, 31, 67, 0.45);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(0, 210, 255, 0.25);
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .tu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tu-title-group {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .tu-header h2 {
-            font-size: 1rem;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        .tu-header h2 .material-symbols-outlined { color: #00d2ff; }
-
-        /* BADGE DA DATA EM FRENTE AO TÍTULO */
-        .today-date-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            padding: 4px 12px;
-            border-radius: 20px;
-            color: #ffffff;
-            font-size: 0.78rem;
-            font-weight: 500;
-        }
-
-        .today-date-badge .material-symbols-outlined {
-            font-size: 15px;
-            color: #00d2ff;
-        }
-
-        .tu-status-badge {
-            font-size: 0.7rem;
-            background: rgba(0, 210, 255, 0.12);
-            color: #00d2ff;
-            padding: 4px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .tu-status-badge::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background-color: #00d2ff;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #00d2ff;
-        }
-
-        /* CARD DESTAQUE FIFO (PRÓXIMA CARRETA A ALOCAR) */
-        .fifo-alert-card {
-            background: linear-gradient(135deg, rgba(0, 210, 255, 0.12) 0%, rgba(17, 31, 67, 0.6) 100%);
-            border: 1px solid rgba(0, 210, 255, 0.4);
-            border-left: 5px solid #00d2ff;
-            border-radius: 12px;
-            padding: 12px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-        }
-
-        .fifo-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .fifo-info .material-symbols-outlined {
-            font-size: 28px;
-            color: #00d2ff;
-            background: rgba(0, 210, 255, 0.15);
-            padding: 8px;
-            border-radius: 8px;
-        }
-
-        .fifo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .fifo-text .tag {
-            font-size: 0.68rem;
-            color: #a0aab5;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            font-weight: 600;
-        }
-
-        .fifo-text h3 {
-            font-size: 1.1rem;
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .fifo-details {
-            display: flex;
-            gap: 20px;
-            font-size: 0.78rem;
-            color: #a0aab5;
-        }
-
-        .fifo-details span strong {
-            color: #00d2ff;
-        }
-
-        /* GRID DOS CARDS DE INDICADORES */
-        .tu-grid-main {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .tu-card {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            border: 1px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .tu-card:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.06);
-        }
-
-        .tu-card .icon { font-size: 32px; padding: 10px; border-radius: 10px; }
-        .tu-info { display: flex; flex-direction: column; }
-        .tu-info .label { font-size: 0.72rem; color: #a0aab5; text-transform: uppercase; }
-        .tu-info h3 { font-size: 1.4rem; color: #ffffff; font-weight: 700; margin: 2px 0; }
-        .tu-info small { font-size: 0.72rem; color: #a0aab5; }
-
-        .card-cyan { border-color: rgba(0, 210, 255, 0.3); }
-        .card-cyan .icon { color: #00d2ff; background: rgba(0, 210, 255, 0.1); }
-
-        .card-red { border-color: rgba(255, 75, 43, 0.3); }
-        .card-red .icon { color: #ff4b2b; background: rgba(255, 75, 43, 0.1); }
-
-        .card-yellow { border-color: rgba(246, 185, 59, 0.3); }
-        .card-yellow .icon { color: #f6b93b; background: rgba(246, 185, 59, 0.1); }
-
-        .card-green { border-color: rgba(0, 176, 155, 0.3); }
-        .card-green .icon { color: #00b09b; background: rgba(0, 176, 155, 0.1); }
-
-        /* QUADROS DE DETALHES E ALERTAS */
-        .tu-details-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .tu-detail-box {
-            background: rgba(0, 0, 0, 0.2);
             border-radius: 10px;
-            padding: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .tu-detail-box h4 {
-            color: #ffffff;
-            font-size: 0.82rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .tu-detail-box h4 .material-symbols-outlined { font-size: 18px; color: #00d2ff; }
-
-        /* BOX DE CHECKLIST DE CONSISTÊNCIA */
-        .alert-box h4 .material-symbols-outlined { color: #ff4b2b; }
-
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.78rem;
-            color: #a0aab5;
-            padding: 6px 0;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
-        }
-
-        .detail-row span.val { color: #ffffff; font-weight: 600; }
-        .detail-row span.val.alert-red { color: #ff4b2b; font-weight: 700; }
-        .detail-row span.val.alert-yellow { color: #f6b93b; font-weight: 700; }
-        .detail-row span.val.status-ok { color: #00b09b; font-weight: 700; }
-
-        /* TAGS DE IDENTIFICAÇÃO DE TUS */
-        .alert-group {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        .carreta-tag {
-            font-size: 0.72rem;
-            color: #00d2ff;
-            background: rgba(0, 210, 255, 0.1);
-            border: 1px solid rgba(0, 210, 255, 0.25);
-            padding: 2px 6px;
-            border-radius: 4px;
+        /* Textos do Card e Linha Separadora */
+        .card h2 {
+            font-size: 1.1rem;
             font-weight: 600;
-            font-family: monospace;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            line-height: 1.2;
+            position: relative; 
+            padding-bottom: 10px; 
+            margin-bottom: 10px; 
         }
 
-        .carreta-tag:hover {
-            background: rgba(0, 210, 255, 0.25);
-            border-color: #00d2ff;
-            transform: scale(1.05);
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0; 
+            width: 70px; 
+            height: 3px; 
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
-        .carreta-tag.tag-sub {
+        .card p {
+            font-size: 0.8rem;
             color: #a0aab5;
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.15);
+            line-height: 1.35;
+            padding-bottom: 25px; 
         }
 
-        /* PILARES INSTITUCIONAIS */
+        /* A Setinha no canto inferior direito */
+        .card .arrow {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.07);
+        }
+        
+        .card:active {
+            transform: scale(0.98) translateY(-2px); 
+        }
+
+        /* ======================================================== */
+        /* SISTEMA DE CORES: BORDAS DE 3PX COM GLOW NEON            */
+        /* ======================================================== */
+
+        /* --- 1. BLOCO PACKSPEC (AZUL) --- */
+        .bloco-auditor { border: 3px solid rgba(0, 210, 255, 0.5); }
+        .bloco-auditor .icon .material-symbols-outlined { color: #00d2ff; background: rgba(0, 210, 255, 0.1); }
+        .bloco-auditor h2::after { background: linear-gradient(to right, #00d2ff, transparent); }
+        .bloco-auditor .arrow { color: #00d2ff; border: 1px solid rgba(0, 210, 255, 0.3); }
+
+        .bloco-auditor:hover { border-color: #00d2ff; box-shadow: 0 8px 32px 0 rgba(0, 210, 255, 0.45); }
+        .bloco-auditor:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(0, 210, 255, 0.8); background: rgba(0, 210, 255, 0.2); }
+        .bloco-auditor:hover .arrow { border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.5); }
+
+        /* --- 2. BLOCO WALLBOARD (VERMELHO) --- */
+        .bloco-wallboard { border: 3px solid rgba(255, 75, 43, 0.5); }
+        .bloco-wallboard .icon .material-symbols-outlined { color: #ff4b2b; background: rgba(255, 75, 43, 0.1); }
+        .bloco-wallboard h2::after { background: linear-gradient(to right, #ff4b2b, transparent); }
+        .bloco-wallboard .arrow { color: #ff4b2b; border: 1px solid rgba(255, 75, 43, 0.3); }
+
+        .bloco-wallboard:hover { border-color: #ff4b2b; box-shadow: 0 8px 32px 0 rgba(255, 75, 43, 0.45); }
+        .bloco-wallboard:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(255, 75, 43, 0.8); background: rgba(255, 75, 43, 0.2); }
+        .bloco-wallboard:hover .arrow { border-color: #ff4b2b; box-shadow: 0 0 10px rgba(255, 75, 43, 0.5); }
+
+        /* --- 3. BLOCO VALIDAÇÃO (VERDE) --- */
+        .bloco-validacao { border: 3px solid rgba(0, 176, 155, 0.5); }
+        .bloco-validacao .icon .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.1); }
+        .bloco-validacao h2::after { background: linear-gradient(to right, #00b09b, transparent); }
+        .bloco-validacao .arrow { color: #00b09b; border: 1px solid rgba(0, 176, 155, 0.3); }
+
+        .bloco-validacao:hover { border-color: #00b09b; box-shadow: 0 8px 32px 0 rgba(0, 176, 155, 0.45); }
+        .bloco-validacao:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(0, 176, 155, 0.8); background: rgba(0, 176, 155, 0.2); }
+        .bloco-validacao:hover .arrow { border-color: #00b09b; box-shadow: 0 0 10px rgba(0, 176, 155, 0.5); }
+
+        /* --- 4. BLOCO IRDR (AMARELO) --- */
+        .bloco-irdr { border: 3px solid rgba(246, 185, 59, 0.5); }
+        .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.1); }
+        .bloco-irdr h2::after { background: linear-gradient(to right, #f6b93b, transparent); }
+        .bloco-irdr .arrow { color: #f6b93b; border: 1px solid rgba(246, 185, 59, 0.3); }
+
+        .bloco-irdr:hover { border-color: #f6b93b; box-shadow: 0 8px 32px 0 rgba(246, 185, 59, 0.45); }
+        .bloco-irdr:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(246, 185, 59, 0.8); background: rgba(246, 185, 59, 0.2); }
+        .bloco-irdr:hover .arrow { border-color: #f6b93b; box-shadow: 0 0 10px rgba(246, 185, 59, 0.5); }
+
+        /* --- 5. BLOCO VALIDAÇÃO DE POSIÇÃO (ROXO NEON) --- */
+        .bloco-posicao { border: 3px solid rgba(155, 89, 182, 0.5); }
+        .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.1); }
+        .bloco-posicao h2::after { background: linear-gradient(to right, #9b59b6, transparent); }
+        .bloco-posicao .arrow { color: #9b59b6; border: 1px solid rgba(155, 89, 182, 0.3); }
+
+        .bloco-posicao:hover { border-color: #9b59b6; box-shadow: 0 8px 32px 0 rgba(155, 89, 182, 0.45); }
+        .bloco-posicao:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(155, 89, 182, 0.8); background: rgba(155, 89, 182, 0.2); }
+        .bloco-posicao:hover .arrow { border-color: #9b59b6; box-shadow: 0 0 10px rgba(155, 89, 182, 0.5); }
+
+        /* ======================================================== */
+        /* BARRA DE PILARES ULTRA-FINA & ELEGANTE (ORIGINAL)         */
+        /* ======================================================== */
         .bar-pilares {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
             align-items: center;
             width: 100%;
-            padding: 12px 20px;
+            padding: 5px 15px;
             background: linear-gradient(135deg, rgba(17, 31, 67, 0.614) 0%, rgba(11, 23, 57, 0.596) 100%);
             backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid transparent;
             border-top: 1px dashed rgba(0, 210, 255, 0.3); 
             border-left: 1px solid rgba(0, 210, 255, 0.3);
             border-bottom: 2px solid rgba(214, 40, 40, 0.473); 
-            border-radius: 10px;
-            z-index: 2;
-            animation: surgirDaSombra 0.8s ease-out forwards;
+            border-radius: 10px 0 0 10px;
+            clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 100%, 0 100%);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
         }
 
-        .pilar-item { display: flex; align-items: center; gap: 10px; color: #a0aab5; }
-        .pilar-item .material-symbols-outlined { font-size: 20px; color: #00d2ff; }
-        .pilar-text { font-size: 0.75rem; line-height: 1.15; }
-        .pilar-text strong { color: #ffffff; display: block; font-weight: 600; }
+        .pilar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #a0aab5;
+            position: relative;
+            padding: 0 10px;
+            transition: all 0.3s ease;
+        }
 
-        /* RODAPÉ ALINHADO À ESQUERDA */
-        .rodape { 
-            opacity: 0.6; 
-            width: 100%; 
+        .pilar-item:hover {
+            transform: translateY(-1px);
+            color: #ffffff;
+        }
+
+        .pilar-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 210, 255, 0.3), transparent);
+        }
+
+        .pilar-item .material-symbols-outlined {
+            font-size: 18px;
+            color: #a0aab5;
+            transition: all 0.3s ease;
+        }
+
+        .pilar-item:hover .material-symbols-outlined {
+            color: #00d2ff;
+            text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+        }
+
+        .pilar-text {
+            font-size: 0.72rem;
+            line-height: 1.15;
+            letter-spacing: 0.3px;
+        }
+
+        .pilar-text strong {
+            color: #ffffff;
+            display: block;
+            font-weight: 600;
+        }
+
+        /* RODAPÉ FINAL */
+        .rodape {
+            width: 100%;
             text-align: left;
-            z-index: 2;
-            animation: surgirDaSombra 0.8s ease-out forwards;
-        }
-        
-        .rodape p { 
-            color: #a0aab5; 
-            font-size: 0.68rem; 
-            letter-spacing: 1px; 
-            text-transform: uppercase; 
+            opacity: 0.6;
         }
 
-        @media (max-width: 1100px) {
-            .main-layout { flex-direction: column; }
-            .sidebar-apps { width: 100%; }
-            .tu-grid-main { grid-template-columns: repeat(2, 1fr); }
-            .bar-pilares { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .fifo-alert-card { flex-direction: column; align-items: flex-start; }
+        .rodape p {
+            color: #a0aab5;           
+            font-size: 0.68rem;       
+            letter-spacing: 1px;    
+            text-transform: uppercase;
         }
-        @media (max-width: 768px) {
-            .tu-grid-main, .tu-details-grid, .bar-pilares { grid-template-columns: 1fr; }
-            .logo-topo { max-width: 80px; }
+
+        /* Responsividade */
+        @media (max-width: 1100px) {
+            body { overflow-y: auto; height: auto; }
+            .grid-container, .bar-pilares { grid-template-columns: repeat(2, 1fr); }
+            .header h1 { font-size: 2.2rem; }
+        }
+        @media (max-width: 600px) {
+            .grid-container, .bar-pilares { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8rem; }
+            .logo-topo { max-width: 80px; top: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR -->
-    <header class="top-bar">
+    <!-- Logo Superior -->
+    <img src="white-ceva.png" alt="Logo CEVA" class="logo-topo">
+
+    <div class="main-wrapper">
+        
+        <!-- Cabeçalho Principal -->
         <div class="header">
             <span class="welcome-text">- Bem-vindo ao</span>
-            <h1>Portal do <span class="destaque">Planejamento</span></h1>
+            <h1>Portal do <br><span class="destaque">Planejamento</span></h1>
             <p>Soluções inteligentes para uma logística mais eficiente</p>
         </div>
-        <img src="white-ceva.png" alt="Logo CEVA" class="logo-topo">
-    </header>
 
-    <!-- ESTRUTURA PRINCIPAL -->
-    <div class="main-layout">
-
-        <!-- COLUNA ESQUERDA: APLICATIVOS -->
-        <aside class="sidebar-apps">
-            <a href="packspackval.html" class="card-app bloco-auditor">
-                <div class="icon"><span class="material-symbols-outlined">package</span></div>
-                <div class="card-app-info">
-                    <h2>Análise de Packspec</h2>
-                    <p>Especificações de embalagem</p>
+        <!-- Container dos Aplicativos (4 colunas) -->
+        <div class="grid-container">
+            
+            <!-- App 1: Packspec (Azul) -->
+            <a href="packspackval.html" class="card bloco-auditor">
+                <div class="icon">
+                    <span class="material-symbols-outlined">package</span>
                 </div>
+                <h2>Análise de <br>Packspec</h2>
+                <p>Garanta que as especificações de embalagem estejam sempre atualizadas.</p>
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <a href="wallboard.operacional.html" class="card-app bloco-wallboard">
-                <div class="icon"><span class="material-symbols-outlined">monitor_heart</span></div>
-                <div class="card-app-info">
-                    <h2>Wallboard Operacional</h2>
-                    <p>Planejamento de demanda</p>
+            <!-- App 2: Wallboard (Vermelho) -->
+            <a href="wallboard.operacional.html" class="card bloco-wallboard">
+                <div class="icon">
+                    <span class="material-symbols-outlined">monitor_heart</span>
                 </div>
+                <h2>Wallboard <br>Operacional</h2>
+                <p>Planeje a demanda de peças e caixas e distribua os volumes de forma equilibrada.</p>
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <a href="validacao_cortes.html" class="card-app bloco-validacao">
-                <div class="icon"><span class="material-symbols-outlined">verified</span></div>
-                <div class="card-app-info">
-                    <h2>Validação de Cortes</h2>
-                    <p>Análise de demandas</p>
+            <!-- App 3: Validação (Verde) -->
+            <a href="validacao_cortes.html" class="card bloco-validacao">
+                <div class="icon">
+                    <span class="material-symbols-outlined">verified</span>
                 </div>
+                <h2>Validação <br>de Cortes</h2>
+                <p>Valide e analise a demanda solicitada com agilidade e segurança.</p>
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <a href="irdr.html" class="card-app bloco-irdr">
-                <div class="icon"><span class="material-symbols-outlined">inventory</span></div>
-                <div class="card-app-info">
-                    <h2>Tratativas de IRDR</h2>
-                    <p>Divergências de saldo lógico</p>
+            <!-- App 4: IRDR (Amarelo) -->
+            <a href="irdr.html" class="card bloco-irdr">
+                <div class="icon">
+                    <span class="material-symbols-outlined">inventory</span>
                 </div>
+                <h2>Tratativas <br>de IRDR</h2>
+                <p>Identifique divergências de saldo lógico e agilize o processo de resgate e ajuste de saldo.</p>
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
 
-            <a href="validacao_fixos.html" class="card-app bloco-posicao">
-                <div class="icon"><span class="material-symbols-outlined">filter_1</span></div>
-                <div class="card-app-info">
-                    <h2>Posição Duplicada</h2>
-                    <p>Ajuste de inconsistências</p>
+            <!-- App 5: Posição Duplicada (Roxo) -->
+            <a href="validacao_fixos.html" class="card bloco-posicao">
+                <div class="icon">
+                    <span class="material-symbols-outlined">filter_1</span>
                 </div>
+                <h2>Validação de <br>Posição Duplicada</h2>
+                <p>Identifique e corrija inconsistências de posições duplicadas na operação.</p>
                 <span class="material-symbols-outlined arrow">arrow_forward</span>
             </a>
-        </aside>
 
-        <!-- ÁREA CENTRAL: DASHBOARD -->
-        <main class="dashboard-content">
-            <div class="tu-dashboard-container">
-                <div class="tu-header">
-                    <div class="tu-title-group">
-                        <h2><span class="material-symbols-outlined">analytics</span> Resumo Semanal do Controle de TUs</h2>
-                        <div class="today-date-badge">
-                            <span class="material-symbols-outlined">calendar_today</span>
-                            <span id="data-hoje">Carregando data...</span>
-                        </div>
-                    </div>
+        </div>
 
-                    <span class="tu-status-badge">Sincronização Ativa</span>
-                </div>
-
-                <!-- CARD DESTAQUE FIFO (PRÓXIMA CARRETA A ALOCAR) -->
-                <div class="fifo-alert-card">
-                    <div class="fifo-info">
-                        <span class="material-symbols-outlined">output</span>
-                        <div class="fifo-text">
-                            <span class="tag">Prioridade FIFO • Próxima Alocação</span>
-                            <h3 id="fifo-title">Aguardando dados...</h3>
-                        </div>
-                    </div>
-                    <div class="fifo-details">
-                        <span>Atendimento: <strong id="fifo-atendimento">--</strong></span>
-                        <span>UF: <strong id="fifo-uf">--</strong></span>
-                        <span>Status: <strong id="fifo-status">Sincronizando</strong></span>
-                    </div>
-                </div>
-
-                <!-- CARDS DE INDICADORES MACRO -->
-                <div class="tu-grid-main">
-                    <div class="tu-card card-cyan">
-                        <span class="material-symbols-outlined icon">inventory_2</span>
-                        <div class="tu-info">
-                            <span class="label">Total de TUs</span>
-                            <h3 id="total-tus">--</h3>
-                            <small>Semana Atual</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-yellow">
-                        <span class="material-symbols-outlined icon">package_2</span>
-                        <div class="tu-info">
-                            <span class="label">Volume Caixas</span>
-                            <h3 id="caixas-totais">--</h3>
-                            <small id="sub-caixas">LN: -- | GV: --</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-red">
-                        <span class="material-symbols-outlined icon">local_shipping</span>
-                        <div class="tu-info">
-                            <span class="label">Falta Alocar</span>
-                            <h3 id="carretas-pendentes">--</h3>
-                            <small>Pendentes de Rampa</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-green">
-                        <span class="material-symbols-outlined icon">check_circle</span>
-                        <div class="tu-info">
-                            <span class="label">Progresso</span>
-                            <h3 id="progresso-pct">--%</h3>
-                            <small id="sub-progresso">Sincronizando...</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- QUADROS DE DETALHES -->
-                <div class="tu-details-grid">
-                    
-                    <!-- QUADRO 1: AUDITORIA PCP -->
-                    <div class="tu-detail-box alert-box">
-                        <h4><span class="material-symbols-outlined">warning</span> Checklist & Inconsistências de PCP</h4>
-                        
-                        <div class="detail-row">
-                            <span>Conflito de Rampas:</span>
-                            <span id="alert-rampas" class="val status-ok">--</span>
-                        </div>
-                        
-                        <div class="detail-row">
-                            <span>Perfil Fora da Média (Pcs/Cx):</span>
-                            <div class="alert-group" id="tags-perfil">
-                                <span class="val alert-yellow">--</span>
-                            </div>
-                        </div>
-
-                        <div class="detail-row">
-                            <span>TUs Encalhadas (3+ dias):</span>
-                            <div class="alert-group" id="tags-encalhadas">
-                                <span class="val alert-red">--</span>
-                            </div>
-                        </div>
-
-                        <div class="detail-row">
-                            <span>Saúde Geral da Base:</span>
-                            <span id="alert-saude" class="val status-ok">--%</span>
-                        </div>
-                    </div>
-
-                    <!-- QUADRO 2: PERFIL MÉDIO -->
-                    <div class="tu-detail-box">
-                        <h4><span class="material-symbols-outlined">pie_chart</span> Perfil Média (Pcs/Cx) • Pendente vs Total</h4>
-                        
-                        <div class="detail-row">
-                            <span>Perfil Varejo (LN):</span>
-                            <div class="alert-group">
-                                <span class="val" title="Perfil das TUs Pendentes">18.2 Pend.</span>
-                                <small class="carreta-tag tag-sub" title="Perfil do Total Semanal">(17.5 Total)</small>
-                            </div>
-                        </div>
-
-                        <div class="detail-row">
-                            <span>Perfil Varejo (GV):</span>
-                            <div class="alert-group">
-                                <span class="val" title="Perfil das TUs Pendentes">28.0 Pend.</span>
-                                <small class="carreta-tag tag-sub" title="Perfil do Total Semanal">(24.2 Total)</small>
-                            </div>
-                        </div>
-
-                        <div class="detail-row">
-                            <span>Perfil Carteira (LN/GV):</span>
-                            <div class="alert-group">
-                                <span class="val" title="Perfil das TUs Pendentes">42.0 Pend.</span>
-                                <small class="carreta-tag tag-sub" title="Perfil do Total Semanal">(44.0 Total)</small>
-                            </div>
-                        </div>
-
-                        <div class="detail-row">
-                            <span>Perfil Estojo (LN/GV):</span>
-                            <div class="alert-group">
-                                <span class="val" title="Perfil das TUs Pendentes">9.5 Pend.</span>
-                                <small class="carreta-tag tag-sub" title="Perfil do Total Semanal">(10.1 Total)</small>
-                            </div>
-                        </div>
-                    </div>
-
+        <!-- BARRA DE PILARES INSTITUCIONAIS ORIGINAIS -->
+        <div class="bar-pilares">
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">shield</span>
+                <div class="pilar-text">
+                    Visão de
+                    <strong>Ponta a Ponta</strong>
                 </div>
             </div>
-        </main>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">verified_user</span>
+                <div class="pilar-text">
+                    Segurança e análise
+                    <strong>de dados</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">schedule</span>
+                <div class="pilar-text">
+                    Informações
+                    <strong>em tempo real</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">group</span>
+                <div class="pilar-text">
+                    Equipes em
+                    <strong>sincronia</strong>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026 | Versão 1.0</p>
+        </footer>
 
     </div>
-
-    <!-- PILARES INSTITUCIONAIS -->
-    <div class="bar-pilares">
-        <div class="pilar-item">
-            <span class="material-symbols-outlined">shield</span>
-            <div class="pilar-text">Visão de <strong>Ponta a Ponta</strong></div>
-        </div>
-        <div class="pilar-item">
-            <span class="material-symbols-outlined">verified_user</span>
-            <div class="pilar-text">Segurança <strong>de dados</strong></div>
-        </div>
-        <div class="pilar-item">
-            <span class="material-symbols-outlined">schedule</span>
-            <div class="pilar-text">Informações <strong>em tempo real</strong></div>
-        </div>
-        <div class="pilar-item">
-            <span class="material-symbols-outlined">group</span>
-            <div class="pilar-text">Equipes <strong>em sincronia</strong></div>
-        </div>
-    </div>
-    
-    <!-- RODAPÉ -->
-    <footer class="rodape">
-        <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026 | Versão 2.2</p>
-    </footer>
-
-    <!-- SCRIPT DE CONEXÃO E ATUALIZAÇÃO DOS DADOS DO GITHUB -->
-    <script>
-        // Data Atual no Topo
-        const opcoesData = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        const dataAtual = new Date().toLocaleDateString('pt-BR', opcoesData);
-        document.getElementById('data-hoje').textContent = dataAtual.charAt(0).toUpperCase() + dataAtual.slice(1);
-
-        // Busca e atualiza o Dashboard lendo o dados_tu.json do GitHub
-        async function carregarDadosDashboard() {
-            try {
-                const resposta = await fetch('dados_tu.json?t=' + new Date().getTime());
-                if (!resposta.ok) return;
-
-                const dados = await resposta.json();
-
-                // Atualiza Cards de Topo
-                document.getElementById('total-tus').textContent = `${dados.total_tus} TUs`;
-                document.getElementById('caixas-totais').textContent = dados.caixas_totais.toLocaleString('pt-BR');
-                document.getElementById('sub-caixas').textContent = `LN: ${dados.caixas_ln.toLocaleString('pt-BR')} | GV: ${dados.caixas_gv.toLocaleString('pt-BR')}`;
-                document.getElementById('carretas-pendentes').textContent = `${dados.carretas_pendentes} Carretas`;
-                document.getElementById('progresso-pct').textContent = `${dados.progresso_pct}%`;
-
-                // Atualiza Card FIFO
-                if (dados.proxima_carreta) {
-                    document.getElementById('fifo-title').textContent = `${dados.proxima_carreta.carreta} (TU: ${dados.proxima_carreta.tu_resumida})`;
-                    document.getElementById('fifo-atendimento').textContent = dados.proxima_carreta.atendimento;
-                    document.getElementById('fifo-uf').textContent = dados.proxima_carreta.uf;
-                    document.getElementById('fifo-status').textContent = "Pendente na Fila";
-                }
-
-                // Atualiza Checklist de PCP
-                if (dados.inconsistencias) {
-                    document.getElementById('alert-rampas').textContent = `${dados.inconsistencias.conflito_rampas} Detectado`;
-                    document.getElementById('alert-saude').textContent = `${dados.inconsistencias.saude_base}% Auditada`;
-
-                    // Renderiza TUs com perfil fora da média
-                    const tagPerfil = document.getElementById('tags-perfil');
-                    tagPerfil.innerHTML = `<span class="val alert-yellow">${dados.inconsistencias.perfil_fora_media.length} TUs</span>`;
-                    dados.inconsistencias.perfil_fora_media.forEach(tu => {
-                        tagPerfil.innerHTML += `<small class="carreta-tag" title="TU Completa: ${tu}">${tu}</small>`;
-                    });
-
-                    // Renderiza TUs encalhadas
-                    const tagEncalho = document.getElementById('tags-encalhadas');
-                    tagEncalho.innerHTML = `<span class="val alert-red">${dados.inconsistencias.tus_encalhadas.length} Parada</span>`;
-                    dados.inconsistencias.tus_encalhadas.forEach(tu => {
-                        tagEncalho.innerHTML += `<small class="carreta-tag" title="TU Completa: ${tu}">${tu}</small>`;
-                    });
-                }
-
-            } catch (erro) {
-                console.warn("Aguardando publicação do arquivo de dados...", erro);
-            }
-        }
-
-        // Executa na abertura e repete a cada 2 minutos
-        carregarDadosDashboard();
-        setInterval(carregarDadosDashboard, 120000);
-    </script>
 
 </body>
 </html>
