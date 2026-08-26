@@ -1,0 +1,31 @@
+const dadosDashboard = {
+    "atualizado_em": "26/08/2026 20:18",
+    "total_tus": 0,
+    "caixas_totais": 0,
+    "caixas_ln": 0,
+    "caixas_gv": 0,
+    "caixas_pendentes": 0,
+    "caixas_ln_pend": 0,
+    "caixas_gv_pend": 0,
+    "pecas_totais": 0,
+    "pecas_ln": 0,
+    "pecas_gv": 0,
+    "pecas_pendentes": 0,
+    "pecas_ln_pend": 0,
+    "pecas_gv_pend": 0,
+    "carretas_pendentes": 0,
+    "progresso_pct": 100,
+    "proxima_carteira": null,
+    "proxima_varejo": null,
+    "proxima_estojo": null,
+    "perfis": {
+        "varejo_ln_pend": 0.0,
+        "varejo_ln_tot": 0.0,
+        "varejo_gv_pend": 0.0,
+        "varejo_gv_tot": 0.0,
+        "carteira_pend": 0.0,
+        "carteira_tot": 0.0,
+        "estojo_pend": 0.0,
+        "estojo_tot": 0.0
+    }
+};
