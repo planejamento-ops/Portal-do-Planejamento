@@ -7,15 +7,13 @@ from datetime import datetime, timedelta
 link_download = "https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8/export?format=csv&gid=0"
 pasta_do_portal = os.path.dirname(os.path.abspath(__file__))
 
-# 1. JANELA DA SEMANA
+# 1. JANELA DA SEMANA ATUAL
 hoje = datetime.now()
 dias_para_domingo = (hoje.weekday() + 1) % 7
 data_inicio_semana = (hoje - timedelta(days=dias_para_domingo)).replace(hour=0, minute=0, second=0, microsecond=0)
 data_fim_semana = data_inicio_semana + timedelta(days=6, hours=23, minutes=59, seconds=59)
 
-print(f"🗓️ Filtrando semana de {data_inicio_semana.strftime('%d/%m/%Y')} a {data_fim_semana.strftime('%d/%m/%Y')}")
-
-# 2. DOWNLOAD E LEITURA
+print(f"1. Baixando planilha do Google Sheets ({hoje.strftime('%d/%m/%Y %H:%M')})...")
 res = requests.get(link_download)
 caminho_csv = os.path.join(pasta_do_portal, "Controle_TU_Exportado.csv")
 with open(caminho_csv, "wb") as f:
@@ -23,12 +21,16 @@ with open(caminho_csv, "wb") as f:
 
 dados_raw = pd.read_csv(caminho_csv, header=None, dtype=str).fillna("")
 
-linha_cabecalho = 0
+# 2. LOCALIZA CABEÇALHO DENTRO DA PLANILHA (VARREDURA FLEXÍVEL)
+linha_cabecalho = None
 for idx, row in dados_raw.iterrows():
     vals = [str(v).strip().upper() for v in row.values]
     if "TU" in vals or "DATA" in vals:
         linha_cabecalho = idx
         break
+
+if linha_cabecalho is None:
+    linha_cabecalho = 0
 
 cols_map = {}
 for c_i, c_v in enumerate(dados_raw.iloc[linha_cabecalho].values):
@@ -37,47 +39,52 @@ for c_i, c_v in enumerate(dados_raw.iloc[linha_cabecalho].values):
 
 df = dados_raw.iloc[linha_cabecalho + 1:].copy().reset_index(drop=True)
 
-def pega_col_idx(termo):
-    for k, v in cols_map.items():
-        if termo.upper() in k: return v
+# BUSCA FLEXÍVEL DE COLUNAS POR MÚLTIPLOS TERMOS DE BUSCA
+def pega_col_idx(lista_termos):
+    for t in lista_termos:
+        for k, v in cols_map.items():
+            if t.upper() in k:
+                return v
     return None
 
-col_data_idx = pega_col_idx("DATA")
-col_tu_idx = pega_col_idx("TU")
-col_carreta_idx = pega_col_idx("CARRETA")
-col_atend_idx = pega_col_idx("ATENDIMENTO")
-col_uf_idx = pega_col_idx("UF")
-col_status_idx = pega_col_idx("STATUS")
+col_data_idx = pega_col_idx(["DATA", "DATE", "DT"])
+col_tu_idx = pega_col_idx(["TU", "CODIGO", "CÓDIGO"])
+col_carreta_idx = pega_col_idx(["CARRETA", "VEICULO", "PLACA"])
+col_atend_idx = pega_col_idx(["ATENDIMENTO", "CANAL", "TIPO"])
+col_uf_idx = pega_col_idx(["UF", "ESTADO", "DESTINO"])
+col_status_idx = pega_col_idx(["STATUS", "SITUAÇÃO", "SITUACAO"])
 
-col_cx_ln_idx = pega_col_idx("LN CAIXAS")
-col_cx_gv_idx = pega_col_idx("GV CAIXAS")
-col_pcs_ln_idx = pega_col_idx("LN PEÇAS")
-col_pcs_gv_idx = pega_col_idx("GV PEÇAS")
+col_cx_ln_idx = pega_col_idx(["LN CX", "LN CAIXA", "CX LN", "CAIXA LN", "LN"])
+col_cx_gv_idx = pega_col_idx(["GV CX", "GV CAIXA", "CX GV", "CAIXA GV", "GV"])
+col_pcs_ln_idx = pega_col_idx(["LN PEÇA", "LN PECA", "LN PCS", "PEÇA LN", "PECA LN", "PCS LN"])
+col_pcs_gv_idx = pega_col_idx(["GV PEÇA", "GV PECA", "GV PCS", "PEÇA GV", "PECA GV", "PCS GV"])
 
-# REMOVE LINHAS SEM TU
+# REMOVE LINHAS VAZIAS
 if col_tu_idx is not None:
     df = df[df[col_tu_idx].astype(str).str.strip() != ""]
 
-# 3. TRATAMENTO DE DATA BRASILEIRA
+# TRATAMENTO DE DATA
 if col_data_idx is not None:
     df['DATA_DT'] = pd.to_datetime(df[col_data_idx], dayfirst=True, errors='coerce')
-    # Se todas ficarem nulas pelo dayfirst, tenta a conversão automática genérica
     if df['DATA_DT'].isna().all():
         df['DATA_DT'] = pd.to_datetime(df[col_data_idx], format='mixed', errors='coerce')
 else:
     df['DATA_DT'] = pd.NaT
 
-# FILTRA A SEMANA OU PEGA O REPOSITÓRIO COMPLETO SE A DATA VIER NULA
+# FILTRO DA SEMANA COM TRAVA DE SEGURANÇA
 df_semana = df[(df['DATA_DT'] >= data_inicio_semana) & (df['DATA_DT'] <= data_fim_semana)].copy()
 
 if df_semana.empty:
-    print("⚠️ Nenhuma TU encontrada estritamente na data da semana. Carregando base geral disponível...")
+    print("⚠️ Filtro estrito da semana não retornou dados. Carregando base geral de TUs ativas...")
     df_semana = df.copy()
 
+# FUNÇÃO DE CONVERSÃO DE NÚMEROS COM TRATAMENTO DE STRING
 def conv_num(col_idx):
-    if col_idx is None or df_semana.empty or col_idx not in df_semana.columns:
+    if col_idx is None or df_semana.empty:
         return pd.Series([0] * len(df_semana), index=df_semana.index, dtype=int)
-    s = df_semana[col_idx].astype(str).str.replace('.', '', regex=False).str.replace(',', '', regex=False)
+    
+    col_str = df_semana.iloc[:, col_idx].astype(str) if isinstance(col_idx, int) else df_semana[col_idx].astype(str)
+    s = col_str.str.replace('.', '', regex=False).str.replace(',', '', regex=False).str.extract('(\d+)')[0]
     return pd.to_numeric(s, errors='coerce').fillna(0).astype(int)
 
 df_semana['LN_CX_NUM'] = conv_num(col_cx_ln_idx)
@@ -87,7 +94,7 @@ df_semana['GV_PCS_NUM'] = conv_num(col_pcs_gv_idx)
 
 pendentes = pd.DataFrame()
 if col_status_idx is not None and not df_semana.empty:
-    pendentes = df_semana[df_semana[col_status_idx].astype(str).str.strip().str.upper().str.contains('NÃO INICIADO|NAO INICIADO|PENDENTE', regex=True, na=False)].copy()
+    pendentes = df_semana[df_semana.iloc[:, col_status_idx].astype(str).str.strip().str.upper().str.contains('NÃO INICIADO|NAO INICIADO|PENDENTE', regex=True, na=False)].copy()
 
 total_tus = len(df_semana)
 
@@ -95,7 +102,7 @@ def calcular_perfil_direto(df_alvo, filtro_atend, canal):
     if df_alvo.empty: return 0.0
     sub = df_alvo.copy()
     if filtro_atend and col_atend_idx is not None:
-        sub = sub[sub[col_atend_idx].astype(str).str.upper().str.contains(filtro_atend.upper(), na=False)]
+        sub = sub[sub.iloc[:, col_atend_idx].astype(str).str.upper().str.contains(filtro_atend.upper(), na=False)]
     if sub.empty: return 0.0
     
     if canal == 'VAREJO_LN':
@@ -125,16 +132,16 @@ def montar_info_fifo(df_pend, tipo_canal):
     if df_pend.empty or col_carreta_idx is None or col_tu_idx is None: return None
     sub = df_pend.copy()
     if col_atend_idx is not None:
-        atend_str = sub[col_atend_idx].astype(str).str.upper()
+        atend_str = sub.iloc[:, col_atend_idx].astype(str).str.upper()
         if tipo_canal == 'ESTOJO': sub = sub[atend_str.str.contains('ESTOJO', na=False)]
         elif tipo_canal == 'CARTEIRA': sub = sub[atend_str.str.contains('CARTEIRA', na=False)]
         elif tipo_canal == 'VAREJO': sub = sub[atend_str.str.contains('VAREJO', na=False)]
     
     if sub.empty: return None
     p = sub.iloc[0]
-    c_nome = str(p[col_carreta_idx]).replace('nan', '').strip()
-    tu_cod = str(p[col_tu_idx]).replace('nan', '').replace('.0', '').strip()
-    uf_val = str(p[col_uf_idx]).replace('nan', '---') if col_uf_idx is not None else '---'
+    c_nome = str(p.iloc[col_carreta_idx]).replace('nan', '').strip()
+    tu_cod = str(p.iloc[col_tu_idx]).replace('nan', '').replace('.0', '').strip()
+    uf_val = str(p.iloc[col_uf_idx]).replace('nan', '---') if col_uf_idx is not None else '---'
     
     tu_resumida = f"...{tu_cod[-5:]}" if len(tu_cod) >= 5 else tu_cod
     return {
@@ -180,4 +187,4 @@ caminho_js = os.path.join(pasta_do_portal, "dados_tu.js")
 with open(caminho_js, "w", encoding="utf-8") as f:
     f.write(f"const dadosDashboard = {json.dumps(dados_reais, ensure_ascii=False, indent=4)};")
 
-print(f"✨ Sucesso! {total_tus} TUs processadas para o Portal.")
+print(f"✨ Sucesso! {total_tus} TUs processadas no dados_tu.js")
