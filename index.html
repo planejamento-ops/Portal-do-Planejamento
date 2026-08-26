@@ -3,686 +3,458 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal do Planejamento | Control Tower</title>
+    <title>Portal do Planejamento</title>
 
+    <!--Ícone da página inicial-->
     <link rel="icon" type="image/jpeg" href="planning.png">
+
+    <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones de Linha do Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
     
-    <script src="dados_tu.js"></script>
-
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* ======================================================== */
+        /* RESET E CONFIGURAÇÕES BÁSICAS                            */
+        /* ======================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
         body {
-            background: linear-gradient(#000000bd, #020250d4), url('Background.png');
-            background-size: cover; 
+            background: linear-gradient(#000000a8, #020250ce), url('Background.png');
+            background-size: cover;        
             background-position: center;   
-            background-attachment: fixed;
-            display: flex; flex-direction: column; min-height: 100vh;
-            padding: 2vh 3%; overflow-x: hidden; overflow-y: auto; gap: 16px;
-            align-items: center; position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            justify-content: space-between;
+            height: 100vh;
+            position: relative;
+            padding: 2.5vh 6%;
+            overflow: hidden;
         }
 
-        .glow-sphere-cyan {
-            position: fixed; top: -100px; left: -100px; width: 550px; height: 500px;
-            background: radial-gradient(circle, rgba(0, 210, 255, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
-            z-index: 0; pointer-events: none;
+        /* LOGOTIPO SUPERIOR DIREITO */
+        .logo-topo {
+            position: absolute; 
+            top: 3.5vh; 
+            right: 6%; 
+            max-width: 120px; 
+            z-index: 10; 
+            opacity: 0; 
+            animation: surgirDaSombra 0.8s ease-out forwards; 
         }
 
-        .glow-sphere-red {
-            position: fixed; bottom: -150px; right: -100px; width: 650px; height: 600px;
-            background: radial-gradient(circle, rgba(230, 67, 67, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-            z-index: 0; pointer-events: none;
+        @keyframes surgirDaSombra {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
-        .top-bar, .main-layout, .bar-pilares, .rodape {
-            width: 100%; max-width: 1600px; margin: 0 auto; position: relative; z-index: 2;
+        /* Container principal */
+        .main-wrapper {
+            width: 100%;
+            max-width: 1600px; 
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            animation: surgirDaSombra 0.8s ease-out forwards;
+            opacity: 0;
+            z-index: 2; 
         }
 
-        .top-bar { display: flex; justify-content: space-between; align-items: flex-start; }
-        .welcome-text { color: #e64343; font-size: 0.75rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 2px; }
-        .header h1 { font-family: "Goldman", sans-serif; font-size: 2.1rem; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; line-height: 1.1; margin-bottom: 4px; }
-        .header h1 .destaque { color: #e64343; text-shadow: 0 0 15px rgba(230, 67, 67, 0.5); }
-        .header p { font-size: 0.85rem; color: #a0aab5; }
-        .logo-topo { max-width: 120px; height: auto; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15)); }
-
-        .main-layout { display: flex; gap: 16px; align-items: stretch; }
-        
-        .sidebar-apps { width: 240px; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
-
-        .card-app {
-            border-radius: 12px; padding: 10px 12px; text-decoration: none;
-            background: rgba(15, 23, 42, 0.55); 
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(16px);
-            color: #FFFFFF; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            display: flex; align-items: center; gap: 10px; position: relative; overflow: hidden;
+        /* ======================================================== */
+        /* CABEÇALHO E TÍTULO                                       */
+        /* ======================================================== */
+        .header {
+            text-align: left;
+            max-width: 600px;
         }
 
-        .card-app .icon .material-symbols-outlined { font-size: 22px; padding: 6px; border-radius: 8px; }
-        .card-app-info { display: flex; flex-direction: column; flex: 1; }
-        .card-app h2 { font-size: 0.78rem; font-weight: 600; margin-bottom: 2px; }
-        .card-app p { font-size: 0.68rem; color: #a0aab5; }
-
-        .card-app:hover { 
-            transform: translateX(4px); 
-            background: rgba(30, 41, 59, 0.75); 
-            border-color: rgba(0, 210, 255, 0.4); 
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.15); 
+        .welcome-text {
+            color: #e64343;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 3px;
         }
 
-        .bloco-auditor { border-left: 3px solid #00d2ff; }
-        .bloco-auditor .icon .material-symbols-outlined { color: #00d2ff; background: rgba(0, 210, 255, 0.12); }
-        .bloco-wallboard { border-left: 3px solid #ff4b2b; }
-        .bloco-wallboard .icon .material-symbols-outlined { color: #ff4b2b; background: rgba(255, 75, 43, 0.12); }
-        .bloco-validacao { border-left: 3px solid #00b09b; }
-        .bloco-validacao .icon .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.12); }
-        .bloco-irdr { border-left: 3px solid #f6b93b; }
-        .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.12); }
-        .bloco-posicao { border-left: 3px solid #9b59b6; }
-        .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.12); }
-
-        .dashboard-content { flex: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-
-        .tu-dashboard-container {
-            width: 100%; background: rgba(11, 19, 38, 0.6); backdrop-filter: blur(24px);
-            border: 1px solid rgba(0, 210, 255, 0.25); border-radius: 16px; padding: 18px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 210, 255, 0.04); 
-            display: flex; flex-direction: column; gap: 16px; position: relative;
-        }
-
-        .tu-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; }
-        .tu-title-group { display: flex; align-items: center; gap: 10px; }
-        .tu-header h2 { font-size: 1.05rem; color: #ffffff; display: flex; align-items: center; gap: 8px; font-weight: 700; letter-spacing: 0.3px; }
-        .tu-header h2 .material-symbols-outlined { color: #00d2ff; font-size: 22px; filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5)); }
-
-        .header-badges { display: flex; align-items: center; gap: 10px; }
-
-        .btn-atalho {
-            display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600;
-            padding: 5px 12px; border-radius: 20px; text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(8px); cursor: pointer;
-        }
-        .btn-atalho .material-symbols-outlined { font-size: 16px; }
-
-        .btn-gsheets { background: rgba(15, 157, 88, 0.12); border: 1px solid rgba(15, 157, 88, 0.35); color: #34a853; }
-        .btn-gsheets:hover { background: rgba(15, 157, 88, 0.25); border-color: rgba(52, 168, 83, 0.6); box-shadow: 0 0 15px rgba(52, 168, 83, 0.25); transform: translateY(-2px); }
-
-        .btn-m365 { background: rgba(16, 124, 65, 0.12); border: 1px solid rgba(16, 124, 65, 0.35); color: #107c41; }
-        .btn-m365:hover { background: rgba(16, 124, 65, 0.25); border-color: rgba(16, 124, 65, 0.6); box-shadow: 0 0 15px rgba(16, 124, 65, 0.25); transform: translateY(-2px); }
-
-        .tu-status-badge {
-            font-size: 0.72rem; background: rgba(0, 210, 255, 0.1); color: #00d2ff;
-            padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 210, 255, 0.35); 
-            display: flex; align-items: center; gap: 6px; font-weight: 600;
-        }
-        .status-dot {
-            width: 7px; height: 7px; background-color: #00d2ff; border-radius: 50%;
-            box-shadow: 0 0 10px #00d2ff; animation: pulsar 1.6s infinite ease-in-out;
-        }
-        @keyframes pulsar {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(1.3); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        .fifo-triple-container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-
-        .fifo-alert-card {
-            background: linear-gradient(135deg, rgba(0, 210, 255, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid rgba(0, 210, 255, 0.35); border-left: 4px solid #00d2ff;
-            border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between;
-            box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.05);
-        }
-
-        .fifo-card-varejo {
-            background: linear-gradient(135deg, rgba(0, 176, 155, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid rgba(0, 176, 155, 0.35); border-left: 4px solid #00b09b;
-        }
-
-        .fifo-card-estojo {
-            background: linear-gradient(135deg, rgba(246, 185, 59, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid rgba(246, 185, 59, 0.35); border-left: 4px solid #f6b93b;
-        }
-
-        .fifo-info { display: flex; align-items: center; gap: 8px; min-width: 0; }
-        .fifo-info .material-symbols-outlined { font-size: 20px; color: #00d2ff; background: rgba(0, 210, 255, 0.15); padding: 5px; border-radius: 8px; flex-shrink: 0; }
-        .fifo-card-varejo .fifo-info .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.15); }
-        .fifo-card-estojo .fifo-info .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.15); }
-        
-        .fifo-text { min-width: 0; overflow: hidden; }
-        .fifo-text .tag { font-size: 0.60rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; display: block; }
-        .fifo-text h3 { font-size: 0.82rem; color: #ffffff; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .fifo-details { display: flex; flex-direction: column; align-items: flex-end; font-size: 0.68rem; color: #a0aab5; gap: 1px; flex-shrink: 0; }
-        .fifo-details span strong { color: #00d2ff; }
-        .fifo-card-varejo .fifo-details span strong { color: #00b09b; }
-        .fifo-card-estojo .fifo-details span strong { color: #f6b93b; }
-
-        .tu-grid-main { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-
-        .tu-card { 
-            background: rgba(15, 23, 42, 0.55);
-            border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; 
-            padding: 10px 10px; display: flex; align-items: center; gap: 8px; 
-            min-width: 0; backdrop-filter: blur(12px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden;
-        }
-
-        .tu-card:hover { transform: translateY(-3px); background: rgba(30, 41, 59, 0.75); }
-        .tu-card .icon { font-size: 22px; padding: 6px; border-radius: 8px; flex-shrink: 0; }
-        .tu-info { min-width: 0; overflow: hidden; flex: 1; }
-        .tu-info .label { font-size: 0.65rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; display: block; }
-        
-        .tu-info h3 { 
-            font-size: 1.0rem; color: #ffffff; font-weight: 800; margin: 1px 0; 
-            font-feature-settings: 'tnum' on, 'lnum' on; letter-spacing: -0.5px;
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-        }
-        .tu-info small { font-size: 0.65rem; color: #a0aab5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
-
-        .card-cyan { border-color: rgba(0, 210, 255, 0.3); }
-        .card-cyan .icon { color: #00d2ff; background: rgba(0, 210, 255, 0.12); }
-        .card-cyan:hover { border-color: rgba(0, 210, 255, 0.6); box-shadow: 0 0 20px rgba(0, 210, 255, 0.2); }
-        
-        .card-yellow { border-color: rgba(246, 185, 59, 0.3); }
-        .card-yellow .icon { color: #f6b93b; background: rgba(246, 185, 59, 0.12); }
-        .card-yellow:hover { border-color: rgba(246, 185, 59, 0.6); box-shadow: 0 0 20px rgba(246, 185, 59, 0.2); }
-
-        .card-purple { border-color: rgba(155, 89, 182, 0.3); }
-        .card-purple .icon { color: #9b59b6; background: rgba(155, 89, 182, 0.12); }
-        .card-purple:hover { border-color: rgba(155, 89, 182, 0.6); box-shadow: 0 0 20px rgba(155, 89, 182, 0.2); }
-
-        .card-red { border-color: rgba(255, 75, 43, 0.3); }
-        .card-red .icon { color: #ff4b2b; background: rgba(255, 75, 43, 0.12); }
-        .card-red:hover { border-color: rgba(255, 75, 43, 0.6); box-shadow: 0 0 20px rgba(255, 75, 43, 0.2); }
-
-        .card-green { border-color: rgba(0, 176, 155, 0.3); display: flex; flex-direction: column; align-items: stretch; justify-content: center; }
-        .card-green:hover { border-color: rgba(0, 176, 155, 0.6); box-shadow: 0 0 20px rgba(0, 176, 155, 0.2); }
-        .card-green-content { display: flex; align-items: center; gap: 8px; width: 100%; }
-        .card-green .icon { color: #00b09b; background: rgba(0, 176, 155, 0.12); }
-
-        .progress-bar-container {
-            width: 100%; height: 4px; background: rgba(255, 255, 255, 0.08);
-            border-radius: 4px; margin-top: 6px; overflow: hidden; position: relative;
-        }
-        .progress-bar-fill {
-            height: 100%; width: 0%;
-            background: linear-gradient(90deg, #00b09b 0%, #00d2ff 100%);
-            border-radius: 4px; transition: width 1s ease-in-out;
-            box-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
-        }
-
-        .tu-details-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12px; }
-        .tu-detail-box { 
-            background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 12px 14px; 
-            border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px);
-        }
-        .tu-detail-box h4 { color: #ffffff; font-size: 0.8rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; font-weight: 700; }
-        .tu-detail-box h4 .material-symbols-outlined { font-size: 18px; color: #00d2ff; }
-        .alert-box h4 .material-symbols-outlined { color: #ff4b2b; }
-
-        .detail-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: #a0aab5; padding: 5px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.05); }
-        .detail-row span.val { color: #ffffff; font-weight: 700; font-feature-settings: 'tnum' on; }
-        .detail-row span.val.status-ok { color: #00b09b; }
-
-        .alert-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
-        .carreta-tag { font-size: 0.68rem; color: #00d2ff; background: rgba(0, 210, 255, 0.1); border: 1px solid rgba(0, 210, 255, 0.25); padding: 1px 6px; border-radius: 4px; font-weight: 600; }
-
-        .bar-pilares {
-            display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 18px; margin-top: 6px; border-radius: 10px;
-            background: linear-gradient(135deg, rgba(0, 210, 255, 0.08) 0%, rgba(11, 19, 38, 0.75) 50%, rgba(230, 67, 67, 0.1) 100%);
-            backdrop-filter: blur(16px); border: 1px solid transparent;
-            border-top: 1px solid rgba(0, 210, 255, 0.4); border-bottom: 1px solid rgba(230, 67, 67, 0.4);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
-        .pilar-item { display: flex; align-items: center; gap: 8px; color: #a0aab5; position: relative; padding: 0 8px; }
-        .pilar-item:not(:last-child)::after {
-            content: ''; position: absolute; right: 0; top: 20%; height: 60%; width: 1px;
-            background: linear-gradient(to bottom, rgba(0, 210, 255, 0.35), rgba(230, 67, 67, 0.35));
-        }
-        .pilar-item .material-symbols-outlined {
-            font-size: 18px; color: #00d2ff; background: rgba(0, 210, 255, 0.12); padding: 5px; border-radius: 6px; border: 1px solid rgba(0, 210, 255, 0.25); transition: all 0.3s ease;
-        }
-        .pilar-item:hover .material-symbols-outlined { color: #e64343; background: rgba(230, 67, 67, 0.15); border-color: rgba(230, 67, 67, 0.4); box-shadow: 0 0 10px rgba(230, 67, 67, 0.4); }
-        .pilar-text { font-size: 0.7rem; line-height: 1.1; }
-        .pilar-text strong { color: #ffffff; display: block; font-size: 0.76rem; letter-spacing: 0.3px; }
-
-        #toast-notification {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(0, 210, 255, 0.4);
-            border-left: 4px solid #00d2ff;
+        .header h1 {
+            font-family: "Goldman", sans-serif;
+            font-size: 2.5rem; 
             color: #ffffff;
-            padding: 12px 18px;
-            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .header h1 .destaque {
+            color: #e64343;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            color: #a0aab5; 
+            line-height: 1.3;
+        }
+
+        /* ======================================================== */
+        /* CONTAINER E CARDS (ESTILO GHOST - 4 COLUNAS)             */
+        /* ======================================================== */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px; 
+            width: 100%;
+        }
+
+        .card {
+            height: 48vh; 
+            max-height: 320px;
+            min-height: 250px;
+            border-radius: 16px; 
+            padding: 18px 16px;
+            text-align: left; 
+            text-decoration: none;
+            position: relative; 
+            background: rgba(255, 255, 255, 0.04); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .card .icon {
+            margin-bottom: 12px;
+        }
+
+        .card .icon .material-symbols-outlined {
+            font-size: 42px; 
+            transition: all 0.3s ease;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        /* Textos do Card e Linha Separadora */
+        .card h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.2;
+            position: relative; 
+            padding-bottom: 10px; 
+            margin-bottom: 10px; 
+        }
+
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0; 
+            width: 70px; 
+            height: 3px; 
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .card p {
+            font-size: 0.8rem;
+            color: #a0aab5;
+            line-height: 1.35;
+            padding-bottom: 25px; 
+        }
+
+        /* A Setinha no canto inferior direito */
+        .card .arrow {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.07);
+        }
+        
+        .card:active {
+            transform: scale(0.98) translateY(-2px); 
+        }
+
+        /* ======================================================== */
+        /* SISTEMA DE CORES: BORDAS DE 3PX COM GLOW NEON            */
+        /* ======================================================== */
+
+        /* --- 1. BLOCO PACKSPEC (AZUL) --- */
+        .bloco-auditor { border: 3px solid rgba(0, 210, 255, 0.5); }
+        .bloco-auditor .icon .material-symbols-outlined { color: #00d2ff; background: rgba(0, 210, 255, 0.1); }
+        .bloco-auditor h2::after { background: linear-gradient(to right, #00d2ff, transparent); }
+        .bloco-auditor .arrow { color: #00d2ff; border: 1px solid rgba(0, 210, 255, 0.3); }
+
+        .bloco-auditor:hover { border-color: #00d2ff; box-shadow: 0 8px 32px 0 rgba(0, 210, 255, 0.45); }
+        .bloco-auditor:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(0, 210, 255, 0.8); background: rgba(0, 210, 255, 0.2); }
+        .bloco-auditor:hover .arrow { border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.5); }
+
+        /* --- 2. BLOCO WALLBOARD (VERMELHO) --- */
+        .bloco-wallboard { border: 3px solid rgba(255, 75, 43, 0.5); }
+        .bloco-wallboard .icon .material-symbols-outlined { color: #ff4b2b; background: rgba(255, 75, 43, 0.1); }
+        .bloco-wallboard h2::after { background: linear-gradient(to right, #ff4b2b, transparent); }
+        .bloco-wallboard .arrow { color: #ff4b2b; border: 1px solid rgba(255, 75, 43, 0.3); }
+
+        .bloco-wallboard:hover { border-color: #ff4b2b; box-shadow: 0 8px 32px 0 rgba(255, 75, 43, 0.45); }
+        .bloco-wallboard:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(255, 75, 43, 0.8); background: rgba(255, 75, 43, 0.2); }
+        .bloco-wallboard:hover .arrow { border-color: #ff4b2b; box-shadow: 0 0 10px rgba(255, 75, 43, 0.5); }
+
+        /* --- 3. BLOCO VALIDAÇÃO (VERDE) --- */
+        .bloco-validacao { border: 3px solid rgba(0, 176, 155, 0.5); }
+        .bloco-validacao .icon .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.1); }
+        .bloco-validacao h2::after { background: linear-gradient(to right, #00b09b, transparent); }
+        .bloco-validacao .arrow { color: #00b09b; border: 1px solid rgba(0, 176, 155, 0.3); }
+
+        .bloco-validacao:hover { border-color: #00b09b; box-shadow: 0 8px 32px 0 rgba(0, 176, 155, 0.45); }
+        .bloco-validacao:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(0, 176, 155, 0.8); background: rgba(0, 176, 155, 0.2); }
+        .bloco-validacao:hover .arrow { border-color: #00b09b; box-shadow: 0 0 10px rgba(0, 176, 155, 0.5); }
+
+        /* --- 4. BLOCO IRDR (AMARELO) --- */
+        .bloco-irdr { border: 3px solid rgba(246, 185, 59, 0.5); }
+        .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.1); }
+        .bloco-irdr h2::after { background: linear-gradient(to right, #f6b93b, transparent); }
+        .bloco-irdr .arrow { color: #f6b93b; border: 1px solid rgba(246, 185, 59, 0.3); }
+
+        .bloco-irdr:hover { border-color: #f6b93b; box-shadow: 0 8px 32px 0 rgba(246, 185, 59, 0.45); }
+        .bloco-irdr:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(246, 185, 59, 0.8); background: rgba(246, 185, 59, 0.2); }
+        .bloco-irdr:hover .arrow { border-color: #f6b93b; box-shadow: 0 0 10px rgba(246, 185, 59, 0.5); }
+
+        /* --- 5. BLOCO VALIDAÇÃO DE POSIÇÃO (ROXO NEON) --- */
+        .bloco-posicao { border: 3px solid rgba(155, 89, 182, 0.5); }
+        .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.1); }
+        .bloco-posicao h2::after { background: linear-gradient(to right, #9b59b6, transparent); }
+        .bloco-posicao .arrow { color: #9b59b6; border: 1px solid rgba(155, 89, 182, 0.3); }
+
+        .bloco-posicao:hover { border-color: #9b59b6; box-shadow: 0 8px 32px 0 rgba(155, 89, 182, 0.45); }
+        .bloco-posicao:hover .icon .material-symbols-outlined { text-shadow: 0 0 15px rgba(155, 89, 182, 0.8); background: rgba(155, 89, 182, 0.2); }
+        .bloco-posicao:hover .arrow { border-color: #9b59b6; box-shadow: 0 0 10px rgba(155, 89, 182, 0.5); }
+
+        /* ======================================================== */
+        /* BARRA DE PILARES ULTRA-FINA & ELEGANTE (ORIGINAL)         */
+        /* ======================================================== */
+        .bar-pilares {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
+            align-items: center;
+            width: 100%;
+            padding: 5px 15px;
+            background: linear-gradient(135deg, rgba(17, 31, 67, 0.614) 0%, rgba(11, 23, 57, 0.596) 100%);
             backdrop-filter: blur(16px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 210, 255, 0.2);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid transparent;
+            border-top: 1px dashed rgba(0, 210, 255, 0.3); 
+            border-left: 1px solid rgba(0, 210, 255, 0.3);
+            border-bottom: 2px solid rgba(214, 40, 40, 0.473); 
+            border-radius: 10px 0 0 10px;
+            clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 100%, 0 100%);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .pilar-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 0.78rem;
-            z-index: 9999;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            pointer-events: none;
-            max-width: 380px;
+            gap: 10px;
+            color: #a0aab5;
+            position: relative;
+            padding: 0 10px;
+            transition: all 0.3s ease;
         }
 
-        #toast-notification.active {
-            opacity: 1;
-            transform: translateY(0);
+        .pilar-item:hover {
+            transform: translateY(-1px);
+            color: #ffffff;
         }
 
-        #toast-notification .toast-icon {
+        .pilar-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 210, 255, 0.3), transparent);
+        }
+
+        .pilar-item .material-symbols-outlined {
+            font-size: 18px;
+            color: #a0aab5;
+            transition: all 0.3s ease;
+        }
+
+        .pilar-item:hover .material-symbols-outlined {
             color: #00d2ff;
-            font-size: 22px;
-            background: rgba(0, 210, 255, 0.15);
-            padding: 6px;
-            border-radius: 8px;
-            flex-shrink: 0;
+            text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
         }
 
-        #toast-notification .toast-body strong {
-            color: #00d2ff;
+        .pilar-text {
+            font-size: 0.72rem;
+            line-height: 1.15;
+            letter-spacing: 0.3px;
+        }
+
+        .pilar-text strong {
+            color: #ffffff;
             display: block;
-            margin-bottom: 2px;
+            font-weight: 600;
         }
 
-        /* RODAPÉ COM ALTA VISIBILIDADE */
-        .rodape { 
-            opacity: 1; 
-            text-align: left; 
-            margin-top: 2px; 
+        /* RODAPÉ FINAL */
+        .rodape {
+            width: 100%;
+            text-align: left;
+            opacity: 0.6;
         }
 
-        .rodape p { 
-            color: #5f5f5f;             /* <--- MUDADO PARA BRANCO PURO */
-            font-size: 0.5rem; 
-            text-transform: uppercase; 
-            font-weight: 600; 
-            letter-spacing: 0.5px;
+        .rodape p {
+            color: #a0aab5;           
+            font-size: 0.68rem;       
+            letter-spacing: 1px;    
+            text-transform: uppercase;
         }
 
+        /* Responsividade */
+        @media (max-width: 1100px) {
+            body { overflow-y: auto; height: auto; }
+            .grid-container, .bar-pilares { grid-template-columns: repeat(2, 1fr); }
+            .header h1 { font-size: 2.2rem; }
+        }
+        @media (max-width: 600px) {
+            .grid-container, .bar-pilares { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8rem; }
+            .logo-topo { max-width: 80px; top: 15px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="glow-sphere-cyan"></div>
-    <div class="glow-sphere-red"></div>
+    <!-- Logo Superior -->
+    <img src="white-ceva.png" alt="Logo CEVA" class="logo-topo">
 
-    <header class="top-bar">
+    <div class="main-wrapper">
+        
+        <!-- Cabeçalho Principal -->
         <div class="header">
             <span class="welcome-text">- Bem-vindo ao</span>
-            <h1>Portal do <span class="destaque">Planejamento</span></h1>
+            <h1>Portal do <br><span class="destaque">Planejamento</span></h1>
             <p>Soluções inteligentes para uma logística mais eficiente</p>
         </div>
-        <img src="white-ceva.png" alt="Logo CEVA" class="logo-topo">
-    </header>
 
-    <div class="main-layout">
-        <aside class="sidebar-apps">
-            <a href="packspackval.html" class="card-app bloco-auditor">
-                <div class="icon"><span class="material-symbols-outlined">package</span></div>
-                <div class="card-app-info"><h2>Análise de Packspec</h2><p>Especificações de embalagem</p></div>
-            </a>
-            <a href="wallboard.operacional.html" class="card-app bloco-wallboard">
-                <div class="icon"><span class="material-symbols-outlined">monitor_heart</span></div>
-                <div class="card-app-info"><h2>Wallboard Operacional</h2><p>Planejamento de demanda</p></div>
-            </a>
-            <a href="validacao_cortes.html" class="card-app bloco-validacao">
-                <div class="icon"><span class="material-symbols-outlined">verified</span></div>
-                <div class="card-app-info"><h2>Validação de Cortes</h2><p>Análise de demandas</p></div>
-            </a>
-            <a href="irdr.html" class="card-app bloco-irdr">
-                <div class="icon"><span class="material-symbols-outlined">inventory</span></div>
-                <div class="card-app-info"><h2>Tratativas de IRDR</h2><p>Divergências de saldo lógico</p></div>
-            </a>
-            <a href="validacao_fixos.html" class="card-app bloco-posicao">
-                <div class="icon"><span class="material-symbols-outlined">filter_1</span></div>
-                <div class="card-app-info"><h2>Posição Duplicada</h2><p>Ajuste de inconsistências</p></div>
-            </a>
-        </aside>
-
-        <main class="dashboard-content">
-            <div class="tu-dashboard-container">
-                <div class="tu-header">
-                    <div class="tu-title-group">
-                        <h2><span class="material-symbols-outlined">analytics</span> Resumo Semanal do Controle de TUs</h2>
-                    </div>
-                    
-                    <div class="header-badges">
-                        <!-- BOTÃO GOOGLE SHEETS ABRINDO EM NOVA ABA (TARGET_BLANK) -->
-                        <a href="https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8" 
-                           target="_blank"
-                           onclick="abrirGoogleSheets(event, this.href)" 
-                           class="btn-atalho btn-gsheets" 
-                           title="Abrir no Google Sheets">
-                            <span class="material-symbols-outlined">table_chart</span> Google Sheets
-                        </a>
-
-                        <!-- BOTÃO M365 EXCEL -->
-                        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/LATAM-BR-VAG-01-CLBoticario/_layouts/15/Doc.aspx?sourcedoc=%7B612780AF-BF9B-4DB0-B234-F255A0AFD1D3%7D&file=Controle%20de%20TUs%202026.xlsx&action=default&mobileredirect=true" target="_blank" class="btn-atalho btn-m365" title="Abrir no Microsoft 365">
-                            <span class="material-symbols-outlined">description</span> M365 Excel
-                        </a>
-
-                        <!-- BADGE LIVE PULSANTE -->
-                        <span class="tu-status-badge">
-                            <span class="status-dot"></span>
-                            <span id="txt-status-sync">Sincronizando...</span>
-                        </span>
-                    </div>
+        <!-- Container dos Aplicativos (4 colunas) -->
+        <div class="grid-container">
+            
+            <!-- App 1: Packspec (Azul) -->
+            <a href="packspackval.html" class="card bloco-auditor">
+                <div class="icon">
+                    <span class="material-symbols-outlined">package</span>
                 </div>
+                <h2>Análise de <br>Packspec</h2>
+                <p>Garanta que as especificações de embalagem estejam sempre atualizadas.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
 
-                <!-- 3 CARDS FIFO (CARTEIRA, VAREJO E ESTOJO) -->
-                <div class="fifo-triple-container">
-                    <div class="fifo-alert-card">
-                        <div class="fifo-info">
-                            <span class="material-symbols-outlined">local_shipping</span>
-                            <div class="fifo-text">
-                                <span class="tag">Carteira</span>
-                                <h3 id="fifo-cart-title">Sem pendências</h3>
-                            </div>
-                        </div>
-                        <div class="fifo-details">
-                            <span>UF: <strong id="fifo-cart-uf">--</strong></span>
-                            <span>Status: <strong id="fifo-cart-status">OK</strong></span>
-                        </div>
-                    </div>
-
-                    <div class="fifo-alert-card fifo-card-varejo">
-                        <div class="fifo-info">
-                            <span class="material-symbols-outlined">storefront</span>
-                            <div class="fifo-text">
-                                <span class="tag">Varejo</span>
-                                <h3 id="fifo-var-title">Sem pendências</h3>
-                            </div>
-                        </div>
-                        <div class="fifo-details">
-                            <span>UF: <strong id="fifo-var-uf">--</strong></span>
-                            <span>Status: <strong id="fifo-var-status">OK</strong></span>
-                        </div>
-                    </div>
-
-                    <div class="fifo-alert-card fifo-card-estojo">
-                        <div class="fifo-info">
-                            <span class="material-symbols-outlined">inventory_2</span>
-                            <div class="fifo-text">
-                                <span class="tag">Estojo</span>
-                                <h3 id="fifo-est-title">Sem pendências</h3>
-                            </div>
-                        </div>
-                        <div class="fifo-details">
-                            <span>UF: <strong id="fifo-est-uf">--</strong></span>
-                            <span>Status: <strong id="fifo-est-status">OK</strong></span>
-                        </div>
-                    </div>
+            <!-- App 2: Wallboard (Vermelho) -->
+            <a href="wallboard.operacional.html" class="card bloco-wallboard">
+                <div class="icon">
+                    <span class="material-symbols-outlined">monitor_heart</span>
                 </div>
+                <h2>Wallboard <br>Operacional</h2>
+                <p>Planeje a demanda de peças e caixas e distribua os volumes de forma equilibrada.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
 
-                <!-- METRICAS SUPERIORES -->
-                <div class="tu-grid-main">
-                    <div class="tu-card card-cyan">
-                        <span class="material-symbols-outlined icon">inventory_2</span>
-                        <div class="tu-info">
-                            <span class="label">TUs Pendentes</span>
-                            <h3 id="tus-pendentes">--</h3>
-                            <small id="sub-tus">De -- TUs Totais</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-yellow">
-                        <span class="material-symbols-outlined icon">package_2</span>
-                        <div class="tu-info">
-                            <span class="label">Caixas Pendentes</span>
-                            <h3 id="caixas-pendentes">--</h3>
-                            <small id="sub-caixas">LN: -- | GV: --</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-purple">
-                        <span class="material-symbols-outlined icon">category</span>
-                        <div class="tu-info">
-                            <span class="label">Peças Pendentes</span>
-                            <h3 id="pecas-pendentes">--</h3>
-                            <small id="sub-pecas">LN: -- | GV: --</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-red">
-                        <span class="material-symbols-outlined icon">local_shipping</span>
-                        <div class="tu-info">
-                            <span class="label">Falta Alocar</span>
-                            <h3 id="carretas-pendentes">--</h3>
-                            <small>Pendentes de Rampa</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-green">
-                        <div class="card-green-content">
-                            <span class="material-symbols-outlined icon">check_circle</span>
-                            <div class="tu-info">
-                                <span class="label">Progresso</span>
-                                <h3 id="progresso-pct">--%</h3>
-                                <small id="sub-progresso">Sincronizado</small>
-                            </div>
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar-fill" id="bar-progresso-fill"></div>
-                        </div>
-                    </div>
+            <!-- App 3: Validação (Verde) -->
+            <a href="validacao_cortes.html" class="card bloco-validacao">
+                <div class="icon">
+                    <span class="material-symbols-outlined">verified</span>
                 </div>
+                <h2>Validação <br>de Cortes</h2>
+                <p>Valide e analise a demanda solicitada com agilidade e segurança.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
 
-                <!-- QUADROS INFERIORES -->
-                <div class="tu-details-grid">
-                    <div class="tu-detail-box alert-box">
-                        <h4><span class="material-symbols-outlined">warning</span> Checklist & Inconsistências de PCP</h4>
-                        
-                        <div class="detail-row">
-                            <span>Conflito de Rampas:</span>
-                            <span id="alert-rampas" class="val status-ok">0 Detectado</span>
-                        </div>
-                        <div class="detail-row">
-                            <span>Perfil Fora da Média (Pcs/Cx):</span>
-                            <div class="alert-group"><span class="val">--</span></div>
-                        </div>
-                        <div class="detail-row">
-                            <span>TUs Encalhadas (3+ dias):</span>
-                            <div class="alert-group"><span class="val">--</span></div>
-                        </div>
-                        <div class="detail-row">
-                            <span>Saúde Geral da Base:</span>
-                            <span id="alert-saude" class="val status-ok">100% Auditada</span>
-                        </div>
-                    </div>
-
-                    <div class="tu-detail-box">
-                        <h4><span class="material-symbols-outlined">pie_chart</span> Volume Planejado da Semana & Perfil</h4>
-                        
-                        <div class="detail-row">
-                            <span>Perfil Varejo (LN):</span>
-                            <div class="alert-group">
-                                <span class="val" id="perf-ln-val">--</span>
-                                <small class="carreta-tag" id="tot-ln-vol">(-- Cx | -- Pcs)</small>
-                            </div>
-                        </div>
-                        <div class="detail-row">
-                            <span>Perfil Varejo (GV):</span>
-                            <div class="alert-group">
-                                <span class="val" id="perf-gv-val">--</span>
-                                <small class="carreta-tag" id="tot-gv-vol">(-- Cx | -- Pcs)</small>
-                            </div>
-                        </div>
-                        <div class="detail-row">
-                            <span>Perfil Carteira (LN/GV):</span>
-                            <div class="alert-group">
-                                <span class="val" id="perf-cart-val">--</span>
-                                <small class="carreta-tag">Geral</small>
-                            </div>
-                        </div>
-                        <div class="detail-row">
-                            <span>Perfil Estojo (LN/GV):</span>
-                            <div class="alert-group">
-                                <span class="val" id="perf-est-val">--</span>
-                                <small class="carreta-tag">Geral</small>
-                            </div>
-                        </div>
-                    </div>
+            <!-- App 4: IRDR (Amarelo) -->
+            <a href="irdr.html" class="card bloco-irdr">
+                <div class="icon">
+                    <span class="material-symbols-outlined">inventory</span>
                 </div>
+                <h2>Tratativas <br>de IRDR</h2>
+                <p>Identifique divergências de saldo lógico e agilize o processo de resgate e ajuste de saldo.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
 
-            </div>
-        </main>
-    </div>
+            <!-- App 5: Posição Duplicada (Roxo) -->
+            <a href="validacao_fixos.html" class="card bloco-posicao">
+                <div class="icon">
+                    <span class="material-symbols-outlined">filter_1</span>
+                </div>
+                <h2>Validação de <br>Posição Duplicada</h2>
+                <p>Identifique e corrija inconsistências de posições duplicadas na operação.</p>
+                <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </a>
 
-    <div class="bar-pilares">
-        <div class="pilar-item"><span class="material-symbols-outlined">shield</span><div class="pilar-text">Visão de <strong>Ponta a Ponta</strong></div></div>
-        <div class="pilar-item"><span class="material-symbols-outlined">verified_user</span><div class="pilar-text">Segurança <strong>de dados</strong></div></div>
-        <div class="pilar-item"><span class="material-symbols-outlined">schedule</span><div class="pilar-text">Informações <strong>em tempo real</strong></div></div>
-        <div class="pilar-item"><span class="material-symbols-outlined">group</span><div class="pilar-text">Equipes <strong>em sincronia</strong></div></div>
-    </div>
-    
-    <footer class="rodape">
-        <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026</p>
-    </footer>
-
-    <!-- TOAST NOTIFICATION FLUTUANTE -->
-    <div id="toast-notification">
-        <span class="material-symbols-outlined toast-icon">content_copy</span>
-        <div class="toast-body">
-            <strong>Link Copiado!</strong>
-            <span>Abra o Google Chrome e cole (Ctrl+V) para acessar o Sheets.</span>
         </div>
+
+        <!-- BARRA DE PILARES INSTITUCIONAIS ORIGINAIS -->
+        <div class="bar-pilares">
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">shield</span>
+                <div class="pilar-text">
+                    Visão de
+                    <strong>Ponta a Ponta</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">verified_user</span>
+                <div class="pilar-text">
+                    Segurança e análise
+                    <strong>de dados</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">schedule</span>
+                <div class="pilar-text">
+                    Informações
+                    <strong>em tempo real</strong>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <span class="material-symbols-outlined">group</span>
+                <div class="pilar-text">
+                    Equipes em
+                    <strong>sincronia</strong>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026 | Versão 1.0</p>
+        </footer>
+
     </div>
 
-    <script>
-        let toastTimeout;
-
-        function mostrarToast() {
-            const toast = document.getElementById("toast-notification");
-            toast.classList.add("active");
-            
-            clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                toast.classList.remove("active");
-            }, 4000);
-        }
-
-        function abrirGoogleSheets(event, url) {
-            const isEdge = navigator.userAgent.includes("Edg");
-
-            if (isEdge) {
-                event.preventDefault();
-                navigator.clipboard.writeText(url).then(() => {
-                    mostrarToast();
-                }).catch(() => {
-                    window.open(url, '_blank');
-                });
-            }
-            // No Chrome, ele abre normalmente em nova aba através do target="_blank"
-        }
-
-        function formatarNumeroInteiro(num) {
-            if (!num || num === 0) return '0';
-            return num.toLocaleString('pt-BR');
-        }
-
-        function formatarAbreviado(num) {
-            if (!num || num === 0) return '0';
-            if (num >= 1000000) {
-                return (num / 1000000).toFixed(1).replace('.0', '') + 'M';
-            }
-            if (num >= 1000) {
-                return (num / 1000).toFixed(1).replace('.0', '') + 'K';
-            }
-            return num.toLocaleString('pt-BR');
-        }
-
-        function carregarDados() {
-            if (typeof dadosDashboard === 'undefined') {
-                document.getElementById('txt-status-sync').textContent = "Conectando...";
-                return;
-            }
-
-            const dados = dadosDashboard;
-
-            if (dados.atualizado_em) {
-                document.getElementById('txt-status-sync').textContent = `LIVE  • ${dados.atualizado_em}`;
-            } else {
-                document.getElementById('txt-status-sync').textContent = "LIVE";
-            }
-
-            // 1. CARDS COLORIDOS SUPERIORES
-            const tuPendentes = dados.carretas_pendentes || 0; 
-            document.getElementById('tus-pendentes').textContent = `${tuPendentes}`;
-            document.getElementById('sub-tus').textContent = `De ${dados.total_tus} TUs Totais`;
-
-            const cxPendVal = formatarNumeroInteiro(dados.caixas_pendentes);
-            const cxPendLn = formatarAbreviado(dados.caixas_ln_pend);
-            const cxPendGv = formatarAbreviado(dados.caixas_gv_pend);
-            document.getElementById('caixas-pendentes').textContent = `${cxPendVal}`;
-            document.getElementById('sub-caixas').textContent = `LN: ${cxPendLn} | GV: ${cxPendGv}`;
-
-            const pcsPendVal = formatarNumeroInteiro(dados.pecas_pendentes);
-            const pcsPendLn = formatarAbreviado(dados.pecas_ln_pend);
-            const pcsPendGv = formatarAbreviado(dados.pecas_gv_pend);
-            document.getElementById('pecas-pendentes').textContent = `${pcsPendVal}`;
-            document.getElementById('sub-pecas').textContent = `LN: ${pcsPendLn} | GV: ${pcsPendGv}`;
-            
-            document.getElementById('carretas-pendentes').textContent = `${dados.carretas_pendentes}`;
-            
-            const pct = dados.progresso_pct || 0;
-            document.getElementById('progresso-pct').textContent = `${pct}%`;
-            document.getElementById('bar-progresso-fill').style.width = `${pct}%`;
-
-            // 2. FIFO ALERTS (CARTEIRA, VAREJO E ESTOJO)
-            if (dados.proxima_carteira) {
-                document.getElementById('fifo-cart-title').textContent = `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`;
-                document.getElementById('fifo-cart-uf').textContent = dados.proxima_carteira.uf;
-                document.getElementById('fifo-cart-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-cart-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-cart-uf').textContent = "--";
-                document.getElementById('fifo-cart-status').textContent = "Livre";
-            }
-
-            if (dados.proxima_varejo) {
-                document.getElementById('fifo-var-title').textContent = `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`;
-                document.getElementById('fifo-var-uf').textContent = dados.proxima_varejo.uf;
-                document.getElementById('fifo-var-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-var-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-var-uf').textContent = "--";
-                document.getElementById('fifo-var-status').textContent = "Livre";
-            }
-
-            if (dados.proxima_estojo) {
-                document.getElementById('fifo-est-title').textContent = `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`;
-                document.getElementById('fifo-est-uf').textContent = dados.proxima_estojo.uf;
-                document.getElementById('fifo-est-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-est-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-est-uf').textContent = "--";
-                document.getElementById('fifo-est-status').textContent = "Livre";
-            }
-
-            // 3. QUADRO INFERIOR - TOTAIS E PERFIL
-            if (dados.perfis) {
-                document.getElementById('perf-ln-val').textContent = `${dados.perfis.varejo_ln_tot} Pcs/Cx`;
-                document.getElementById('tot-ln-vol').textContent = `(${formatarAbreviado(dados.caixas_ln)} Cx | ${formatarAbreviado(dados.pecas_ln)} Pcs)`;
-
-                document.getElementById('perf-gv-val').textContent = `${dados.perfis.varejo_gv_tot} Pcs/Cx`;
-                document.getElementById('tot-gv-vol').textContent = `(${formatarAbreviado(dados.caixas_gv)} Cx | ${formatarAbreviado(dados.pecas_gv)} Pcs)`;
-
-                document.getElementById('perf-cart-val').textContent = `${dados.perfis.carteira_tot} Pcs/Cx`;
-                document.getElementById('perf-est-val').textContent = `${dados.perfis.estojo_tot} Pcs/Cx`;
-            }
-        }
-
-        carregarDados();
-    </script>
 </body>
 </html>
