@@ -4,99 +4,92 @@ import requests
 import pandas as pd
 from datetime import datetime, timedelta
 
-# ==========================================
-# 1. LINK DIRETO DO GOOGLE SHEETS
-# ==========================================
 link_download = "https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8/export?format=csv&gid=0"
-
 pasta_do_portal = os.path.dirname(os.path.abspath(__file__))
 
-# ==========================================
-# 2. JANELA DA SEMANA ATUAL (DOMINGO A SÁBADO)
-# ==========================================
+# 1. JANELA DA SEMANA
 hoje = datetime.now()
 dias_para_domingo = (hoje.weekday() + 1) % 7
 data_inicio_semana = (hoje - timedelta(days=dias_para_domingo)).replace(hour=0, minute=0, second=0, microsecond=0)
 data_fim_semana = data_inicio_semana + timedelta(days=6, hours=23, minutes=59, seconds=59)
 
-print(f"🗓️ Data da Execução: {hoje.strftime('%d/%m/%Y %H:%M')}")
+print(f"🗓️ Filtrando semana de {data_inicio_semana.strftime('%d/%m/%Y')} a {data_fim_semana.strftime('%d/%m/%Y')}")
 
-# ==========================================
-# 3. DOWNLOAD DA PLANILHA
-# ==========================================
-print("1. Baixando dados diretamente do Google Sheets...")
+# 2. DOWNLOAD E LEITURA
 res = requests.get(link_download)
 caminho_csv = os.path.join(pasta_do_portal, "Controle_TU_Exportado.csv")
 with open(caminho_csv, "wb") as f:
     f.write(res.content)
 
-dados_google = pd.read_csv(caminho_csv, header=None, dtype=str).fillna("")
+dados_raw = pd.read_csv(caminho_csv, header=None, dtype=str).fillna("")
 
-# LOCALIZA A LINHA EXATA DO CABEÇALHO
 linha_cabecalho = 0
-for indice, linha in dados_google.iterrows():
-    valores_limpos = [str(v).strip().upper() for v in linha.values]
-    if "TU" in valores_limpos or "DATA" in valores_limpos:
-        linha_cabecalho = indice
+for idx, row in dados_raw.iterrows():
+    vals = [str(v).strip().upper() for v in row.values]
+    if "TU" in vals or "DATA" in vals:
+        linha_cabecalho = idx
         break
 
 cols_map = {}
-for c_i, c_v in enumerate(dados_google.iloc[linha_cabecalho].values):
+for c_i, c_v in enumerate(dados_raw.iloc[linha_cabecalho].values):
     v_c = str(c_v).strip().upper()
-    if v_c:
-        cols_map[v_c] = c_i
+    if v_c: cols_map[v_c] = c_i
 
-df = dados_google.iloc[linha_cabecalho + 1:].copy().reset_index(drop=True)
+df = dados_raw.iloc[linha_cabecalho + 1:].copy().reset_index(drop=True)
 
-# BUSCA MÚLTIPLAS VARIAÇÕES DE NOME PARA EVITAR KEYERROR
-def busca_col_flexivel(termos):
-    for t in termos:
-        for k, v in cols_map.items():
-            if t.upper() in k:
-                return v
+def pega_col_idx(termo):
+    for k, v in cols_map.items():
+        if termo.upper() in k: return v
     return None
 
-col_data_idx = busca_col_flexivel(["DATA", "DATE", "DT"])
-col_tu_idx = busca_col_flexivel(["TU", "CODIGO TU", "CÓDIGO TU"])
-col_carreta_idx = busca_col_flexivel(["CARRETA", "VEICULO", "PLACA"])
-col_atend_idx = busca_col_flexivel(["ATENDIMENTO", "CANAL", "TIPO"])
-col_uf_idx = busca_col_flexivel(["UF", "ESTADO", "DESTINO"])
-col_status_idx = busca_col_flexivel(["STATUS", "SITUAÇÃO", "SITUACAO"])
+col_data_idx = pega_col_idx("DATA")
+col_tu_idx = pega_col_idx("TU")
+col_carreta_idx = pega_col_idx("CARRETA")
+col_atend_idx = pega_col_idx("ATENDIMENTO")
+col_uf_idx = pega_col_idx("UF")
+col_status_idx = pega_col_idx("STATUS")
 
-col_cx_ln_idx = busca_col_flexivel(["LN CAIXAS", "LN CX", "CAIXAS LN"])
-col_cx_gv_idx = busca_col_flexivel(["GV CAIXAS", "GV CX", "CAIXAS GV"])
-col_pcs_ln_idx = busca_col_flexivel(["LN PEÇAS", "LN PCS", "PEÇAS LN", "PECAS LN"])
-col_pcs_gv_idx = busca_col_flexivel(["GV PEÇAS", "GV PCS", "PEÇAS GV", "PECAS GV"])
+col_cx_ln_idx = pega_col_idx("LN CAIXAS")
+col_cx_gv_idx = pega_col_idx("GV CAIXAS")
+col_pcs_ln_idx = pega_col_idx("LN PEÇAS")
+col_pcs_gv_idx = pega_col_idx("GV PEÇAS")
 
-# SE AINDA ASSIM NÃO ACHAR A DATA, DEFINE A COLUNA ZERO COMO PADRÃO SEGURA
-if col_data_idx is None:
-    col_data_idx = 0
-
+# REMOVE LINHAS SEM TU
 if col_tu_idx is not None:
-    df = df.dropna(subset=[col_tu_idx]).copy()
     df = df[df[col_tu_idx].astype(str).str.strip() != ""]
 
-df['DATA_DT'] = pd.to_datetime(df[col_data_idx], format='mixed', errors='coerce')
+# 3. TRATAMENTO DE DATA BRASILEIRA
+if col_data_idx is not None:
+    df['DATA_DT'] = pd.to_datetime(df[col_data_idx], dayfirst=True, errors='coerce')
+    # Se todas ficarem nulas pelo dayfirst, tenta a conversão automática genérica
+    if df['DATA_DT'].isna().all():
+        df['DATA_DT'] = pd.to_datetime(df[col_data_idx], format='mixed', errors='coerce')
+else:
+    df['DATA_DT'] = pd.NaT
+
+# FILTRA A SEMANA OU PEGA O REPOSITÓRIO COMPLETO SE A DATA VIER NULA
 df_semana = df[(df['DATA_DT'] >= data_inicio_semana) & (df['DATA_DT'] <= data_fim_semana)].copy()
 
-def converter_inteiro_absoluto(col_idx):
-    if col_idx is None or col_idx not in df_semana.columns:
-        return pd.Series([0] * len(df_semana), index=df_semana.index, dtype=int)
-    clean = df_semana[col_idx].astype(str).str.replace('\n', '', regex=False).str.replace('\r', '', regex=False)
-    clean = clean.str.replace('.', '', regex=False).str.replace(',', '', regex=False)
-    return pd.to_numeric(clean, errors='coerce').fillna(0).astype(int)
+if df_semana.empty:
+    print("⚠️ Nenhuma TU encontrada estritamente na data da semana. Carregando base geral disponível...")
+    df_semana = df.copy()
 
-df_semana['LN_CX_NUM'] = converter_inteiro_absoluto(col_cx_ln_idx)
-df_semana['GV_CX_NUM'] = converter_inteiro_absoluto(col_cx_gv_idx)
-df_semana['LN_PCS_NUM'] = converter_inteiro_absoluto(col_pcs_ln_idx)
-df_semana['GV_PCS_NUM'] = converter_inteiro_absoluto(col_pcs_gv_idx)
+def conv_num(col_idx):
+    if col_idx is None or df_semana.empty or col_idx not in df_semana.columns:
+        return pd.Series([0] * len(df_semana), index=df_semana.index, dtype=int)
+    s = df_semana[col_idx].astype(str).str.replace('.', '', regex=False).str.replace(',', '', regex=False)
+    return pd.to_numeric(s, errors='coerce').fillna(0).astype(int)
+
+df_semana['LN_CX_NUM'] = conv_num(col_cx_ln_idx)
+df_semana['GV_CX_NUM'] = conv_num(col_cx_gv_idx)
+df_semana['LN_PCS_NUM'] = conv_num(col_pcs_ln_idx)
+df_semana['GV_PCS_NUM'] = conv_num(col_pcs_gv_idx)
 
 pendentes = pd.DataFrame()
 if col_status_idx is not None and not df_semana.empty:
-    pendentes = df_semana[df_semana[col_status_idx].astype(str).str.strip().str.upper() == 'NÃO INICIADO'].copy()
+    pendentes = df_semana[df_semana[col_status_idx].astype(str).str.strip().str.upper().str.contains('NÃO INICIADO|NAO INICIADO|PENDENTE', regex=True, na=False)].copy()
 
 total_tus = len(df_semana)
-qtd_carretas_pendentes = len(pendentes) if not pendentes.empty else 0
 
 def calcular_perfil_direto(df_alvo, filtro_atend, canal):
     if df_alvo.empty: return 0.0
@@ -175,7 +168,7 @@ dados_reais = {
     "pecas_pendentes": val_pcs_ln_pend + val_pcs_gv_pend,
     "pecas_ln_pend": val_pcs_ln_pend,
     "pecas_gv_pend": val_pcs_gv_pend,
-    "carretas_pendentes": qtd_carretas_pendentes,
+    "carretas_pendentes": len(pendentes),
     "progresso_pct": int(((total_tus - len(pendentes)) / total_tus * 100)) if total_tus > 0 else 100,
     "proxima_carteira": montar_info_fifo(pendentes, tipo_canal='CARTEIRA'),
     "proxima_varejo": montar_info_fifo(pendentes, tipo_canal='VAREJO'),
@@ -183,9 +176,8 @@ dados_reais = {
     "perfis": perfis_calculados
 }
 
-# 4. SALVA DADOS_TU.JS NA PASTA DO PROJETO
 caminho_js = os.path.join(pasta_do_portal, "dados_tu.js")
 with open(caminho_js, "w", encoding="utf-8") as f:
     f.write(f"const dadosDashboard = {json.dumps(dados_reais, ensure_ascii=False, indent=4)};")
 
-print("✨ dados_tu.js gerado com sucesso!")
+print(f"✨ Sucesso! {total_tus} TUs processadas para o Portal.")
