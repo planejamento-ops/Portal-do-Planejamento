@@ -1,6 +1,6 @@
 const dadosDashboard = {
-    "atualizado_em": "26/08/2026 20:18",
-    "total_tus": 0,
+    "atualizado_em": "26/08/2026 20:22",
+    "total_tus": 15,
     "caixas_totais": 0,
     "caixas_ln": 0,
     "caixas_gv": 0,
