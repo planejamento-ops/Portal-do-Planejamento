@@ -1,30 +1,34 @@
 const dadosDashboard = {
-    "atualizado_em": "27/08/2026 14:25",
-    "total_tus": 70,
-    "caixas_totais": 76485,
+    "atualizado_em": "27/08/2026 14:40",
+    "total_tus": 67,
+    "caixas_totais": 70448,
     "caixas_ln": 17602,
-    "caixas_gv": 58883,
-    "caixas_pendentes": 12148,
-    "caixas_ln_pend": 0,
-    "caixas_gv_pend": 12148,
-    "pecas_totais": 1605630,
+    "caixas_gv": 52846,
+    "caixas_pendentes": 9867,
+    "caixas_ln_pend": 664,
+    "caixas_gv_pend": 9203,
+    "pecas_totais": 1543037,
     "pecas_ln": 596517,
-    "pecas_gv": 1009113,
-    "pecas_pendentes": 127575,
-    "pecas_ln_pend": 0,
-    "pecas_gv_pend": 127575,
-    "carretas_pendentes": 6,
-    "progresso_pct": 91,
-    "proxima_carteira": null,
+    "pecas_gv": 946520,
+    "pecas_pendentes": 156294,
+    "pecas_ln_pend": 26859,
+    "pecas_gv_pend": 129435,
+    "carretas_pendentes": 5,
+    "progresso_pct": 92,
+    "proxima_carteira": {
+        "carreta": "Carreta 20",
+        "tu_resumida": "...2386",
+        "uf": "SPI"
+    },
     "proxima_estojo": {
-        "carreta": "Carreta 22",
-        "tu_resumida": "...2427",
+        "carreta": "Carreta 21",
+        "tu_resumida": "...2387",
         "uf": "SPI"
     },
     "pendencias_por_canal": {
         "varejo": 0,
-        "carteira": 0,
-        "estojo": 6
+        "carteira": 1,
+        "estojo": 4
     },
     "perfis_geral": {
         "varejo_ln": {
@@ -54,8 +58,8 @@ const dadosDashboard = {
         },
         "estojo_gv": {
             "perfil": 10,
-            "cx": 46583,
-            "pcs": 479254
+            "cx": 40546,
+            "pcs": 416661
         }
     },
     "perfis_pendentes": {
@@ -70,14 +74,14 @@ const dadosDashboard = {
             "pcs": 0
         },
         "carteira_ln": {
-            "perfil": 0,
-            "cx": 0,
-            "pcs": 0
+            "perfil": 40,
+            "cx": 664,
+            "pcs": 26859
         },
         "carteira_gv": {
-            "perfil": 0,
-            "cx": 0,
-            "pcs": 0
+            "perfil": 44,
+            "cx": 973,
+            "pcs": 42617
         },
         "estojo_ln": {
             "perfil": 0,
@@ -86,8 +90,8 @@ const dadosDashboard = {
         },
         "estojo_gv": {
             "perfil": 11,
-            "cx": 12148,
-            "pcs": 127575
+            "cx": 8230,
+            "pcs": 86818
         }
     }
 };
