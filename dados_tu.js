@@ -1,5 +1,5 @@
 const dadosDashboard = {
-    "atualizado_em": "27/08/2026 10:45",
+    "atualizado_em": "27/08/2026 11:02",
     "total_tus": 67,
     "caixas_totais": 70448,
     "caixas_ln": 17602,
