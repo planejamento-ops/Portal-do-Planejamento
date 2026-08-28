@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "28/08/2026 09:14",
+  "atualizado_em": "28/08/2026 09:21",
   "total_tus": 15,
   "caixas_totais": 0,
   "caixas_ln": 0,
@@ -16,6 +16,7 @@ window.dadosDashboard = {
   "carretas_pendentes": 0,
   "progresso_pct": 100,
   "proxima_carteira": null,
+  "proxima_varejo": null,
   "proxima_estojo": null,
   "pendencias_por_canal": {
     "varejo": 0,
