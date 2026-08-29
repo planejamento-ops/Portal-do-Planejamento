@@ -1,46 +1,50 @@
 window.dadosDashboard = {
-  "atualizado_em": "29/08/2026 00:57",
-  "total_tus": 106,
-  "caixas_totais": 106038,
-  "caixas_ln": 25709,
-  "caixas_gv": 80329,
-  "caixas_pendentes": 8620,
-  "caixas_ln_pend": 1635,
-  "caixas_gv_pend": 6985,
-  "pecas_totais": 2716248,
-  "pecas_ln": 1062517,
-  "pecas_gv": 1653731,
-  "pecas_pendentes": 303828,
-  "pecas_ln_pend": 113341,
-  "pecas_gv_pend": 190487,
-  "carretas_pendentes": 14,
+  "atualizado_em": "29/08/2026 12:59",
+  "total_tus": 109,
+  "caixas_totais": 106401,
+  "caixas_ln": 26066,
+  "caixas_gv": 80335,
+  "caixas_pendentes": 8798,
+  "caixas_ln_pend": 1809,
+  "caixas_gv_pend": 6989,
+  "pecas_totais": 2722683,
+  "pecas_ln": 1068819,
+  "pecas_gv": 1653864,
+  "pecas_pendentes": 306927,
+  "pecas_ln_pend": 116319,
+  "pecas_gv_pend": 190608,
+  "carretas_pendentes": 15,
   "progresso_pct": 86,
   "proxima_carteira": {
     "carreta": "Carreta 13",
     "tu_resumida": "...2460",
     "uf": "SPC"
   },
-  "proxima_varejo": null,
+  "proxima_varejo": {
+    "carreta": "Carreta 02",
+    "tu_resumida": "...2505",
+    "uf": "SP"
+  },
   "proxima_estojo": {
     "carreta": "Carreta 09",
     "tu_resumida": "...2457",
     "uf": "SPC"
   },
   "pendencias_por_canal": {
-    "varejo": 0,
+    "varejo": 1,
     "carteira": 6,
     "estojo": 8
   },
   "perfis_geral": {
     "varejo_ln": {
       "perfil": 15,
-      "cx": 7694,
-      "pcs": 111843
+      "cx": 8051,
+      "pcs": 118145
     },
     "varejo_gv": {
-      "perfil": 38,
-      "cx": 164,
-      "pcs": 6223
+      "perfil": 37,
+      "cx": 170,
+      "pcs": 6356
     },
     "carteira_ln": {
       "perfil": 53,
@@ -65,14 +69,14 @@ window.dadosDashboard = {
   },
   "perfis_pendentes": {
     "varejo_ln": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 17,
+      "cx": 174,
+      "pcs": 2978
     },
     "varejo_gv": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 30,
+      "cx": 4,
+      "pcs": 121
     },
     "carteira_ln": {
       "perfil": 69,
