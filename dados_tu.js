@@ -1,24 +1,24 @@
 window.dadosDashboard = {
-  "atualizado_em": "31/08/2026 10:04",
-  "total_tus": 100,
-  "caixas_totais": 109779,
-  "caixas_ln": 31794,
-  "caixas_gv": 77985,
-  "caixas_pendentes": 9406,
-  "caixas_ln_pend": 2358,
-  "caixas_gv_pend": 7048,
-  "pecas_totais": 3387772,
-  "pecas_ln": 1540455,
-  "pecas_gv": 1847317,
-  "pecas_pendentes": 270826,
-  "pecas_ln_pend": 128327,
-  "pecas_gv_pend": 142499,
-  "carretas_pendentes": 9,
-  "progresso_pct": 91,
-  "caixas_total_mes": 401927,
-  "pecas_total_mes": 14315543,
+  "atualizado_em": "31/08/2026 10:10",
+  "total_tus": 2601,
+  "caixas_totais": 2952153,
+  "caixas_ln": 1347429,
+  "caixas_gv": 1604724,
+  "caixas_pendentes": 0,
+  "caixas_ln_pend": 0,
+  "caixas_gv_pend": 0,
+  "pecas_totais": 113637662,
+  "pecas_ln": 57298517,
+  "pecas_gv": 56339145,
+  "pecas_pendentes": 0,
+  "pecas_ln_pend": 0,
+  "pecas_gv_pend": 0,
+  "carretas_pendentes": 0,
+  "progresso_pct": 100,
+  "caixas_total_mes": 2952153,
+  "pecas_total_mes": 113637662,
   "atendimentos_em_andamento": [
-    "SPC, MGI, Varejo-Pró (SP)"
+    "Nenhum"
   ],
   "alertas_atraso": [
     "Nenhum atraso detectado"
@@ -27,40 +27,40 @@ window.dadosDashboard = {
   "proxima_varejo": null,
   "proxima_estojo": null,
   "pendencias_por_canal": {
-    "varejo": 3,
-    "carteira": 9,
+    "varejo": 0,
+    "carteira": 0,
     "estojo": 0
   },
   "perfis_geral": {
     "varejo_ln": {
       "perfil": 41,
-      "cx": 119689,
-      "pcs": 4910295
+      "cx": 1034246,
+      "pcs": 42185163
     },
     "varejo_gv": {
-      "perfil": 30,
-      "cx": 174878,
-      "pcs": 5198286
+      "perfil": 35,
+      "cx": 1148493,
+      "pcs": 40477386
     },
     "carteira_ln": {
-      "perfil": 51,
-      "cx": 123131,
-      "pcs": 6327347
+      "perfil": 50,
+      "cx": 1068316,
+      "pcs": 53388523
     },
     "carteira_gv": {
-      "perfil": 31,
-      "cx": 237491,
-      "pcs": 7291083
+      "perfil": 36,
+      "cx": 1553933,
+      "pcs": 55489527
     },
     "estojo_ln": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 9,
+      "cx": 37549,
+      "pcs": 336320
     },
     "estojo_gv": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 9,
+      "cx": 379259,
+      "pcs": 3584661
     }
   },
   "perfis_pendentes": {
@@ -70,19 +70,19 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "varejo_gv": {
-      "perfil": 10,
-      "cx": 4666,
-      "pcs": 44699
+      "perfil": 0,
+      "cx": 0,
+      "pcs": 0
     },
     "carteira_ln": {
-      "perfil": 54,
-      "cx": 2358,
-      "pcs": 128327
+      "perfil": 0,
+      "cx": 0,
+      "pcs": 0
     },
     "carteira_gv": {
-      "perfil": 20,
-      "cx": 7048,
-      "pcs": 142499
+      "perfil": 0,
+      "cx": 0,
+      "pcs": 0
     },
     "estojo_ln": {
       "perfil": 0,
