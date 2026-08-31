@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Planejamento | Control Tower</title>
 
-    <link rel="icon" type="image/png" href="./planning.png?v=3">
+    <link rel="icon" type="image/png" href="planning.png?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -129,6 +129,8 @@
             100% { opacity: 1; transform: scale(1); }
         }
 
+        .grid-mes-acumulado { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
         .fifo-triple-container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
 
         .fifo-alert-card {
@@ -227,52 +229,21 @@
         .box-red h4 .material-symbols-outlined { color: #ff4b2b; }
         .box-purple h4 .material-symbols-outlined { color: #9b59b6; }
 
-        /* ESTILOS DAS TABELAS DE PERFIL */
         .tu-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.73rem;
-            margin-top: 4px;
+            width: 100%; border-collapse: collapse; font-size: 0.73rem; margin-top: 4px;
         }
 
         .tu-table th {
-            color: #a0aab5;
-            text-transform: uppercase;
-            font-size: 0.63rem;
-            font-weight: 700;
-            padding: 6px 4px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center; /* Centraliza os cabeçalhos */
+            color: #a0aab5; text-transform: uppercase; font-size: 0.63rem; font-weight: 700;
+            padding: 6px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); text-align: center;
         }
 
         .tu-table td {
-            padding: 5px 4px;
-            color: #a0aab5;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
-            text-align: center; /* Centraliza os dados das células */
+            padding: 5px 4px; color: #a0aab5; border-bottom: 1px dashed rgba(255, 255, 255, 0.05); text-align: center;
         }
 
-        /* Remove a regra que forçava a primeira coluna (Atendimento) a ficar alinhada à esquerda */
-        .tu-table td:first-child {
-            text-align: center;
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .tu-table td:first-child {
-            text-align: left;
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .tu-table td span.val {
-            color: #00d2ff;
-            font-weight: 700;
-        }
-
-        .box-warning .tu-table td span.val {
-            color: #f6b93b;
-        }
+        .tu-table td:first-child { text-align: left; color: #ffffff; font-weight: 600; }
+        .tu-table td span.val { color: #00d2ff; font-weight: 700; }
 
         .detail-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: #a0aab5; padding: 5px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.05); }
         .detail-row span.val { color: #ffffff; font-weight: 700; font-feature-settings: 'tnum' on; }
@@ -298,25 +269,11 @@
         .pilar-item .material-symbols-outlined {
             font-size: 18px; color: #00d2ff; background: rgba(0, 210, 255, 0.12); padding: 5px; border-radius: 6px; border: 1px solid rgba(0, 210, 255, 0.25); transition: all 0.3s ease;
         }
-        .pilar-item:hover .material-symbols-outlined { color: #e64343; background: rgba(230, 67, 67, 0.15); border-color: rgba(230, 67, 67, 0.4); box-shadow: 0 0 10px rgba(230, 67, 67, 0.4); }
         .pilar-text { font-size: 0.7rem; line-height: 1.1; }
         .pilar-text strong { color: #ffffff; display: block; font-size: 0.76rem; letter-spacing: 0.3px; }
 
         .rodape { opacity: 1; text-align: left; margin-top: 2px; }
-        .rodape p { color: #ffffff; font-size: 0.72rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
-
-        #toast-notification {
-            position: fixed; bottom: 24px; right: 24px; background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(0, 210, 255, 0.4); border-left: 4px solid #00d2ff;
-            color: #ffffff; padding: 12px 18px; border-radius: 12px; backdrop-filter: blur(16px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 210, 255, 0.2);
-            display: flex; align-items: center; gap: 12px; font-size: 0.78rem; z-index: 9999;
-            opacity: 0; transform: translateY(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            pointer-events: none; max-width: 380px;
-        }
-        #toast-notification.active { opacity: 1; transform: translateY(0); }
-        #toast-notification .toast-icon { color: #00d2ff; font-size: 22px; background: rgba(0, 210, 255, 0.15); padding: 6px; border-radius: 8px; flex-shrink: 0; }
-        #toast-notification .toast-body strong { color: #00d2ff; display: block; margin-bottom: 2px; }
+        .rodape p { color: #ffffff; font-size: 0.72rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
     </style>
 </head>
 <body>
@@ -361,12 +318,12 @@
             <div class="tu-dashboard-container">
                 <div class="tu-header">
                     <div class="tu-title-group">
-                        <h2><span class="material-symbols-outlined">analytics</span> Resumo Semanal do Controle de TUs</h2>
+                        <h2><span class="material-symbols-outlined">analytics</span> Controle de TUs • Mês & Operação Ativa</h2>
                     </div>
                     
                     <div class="header-badges">
                         <a href="https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8" 
-                           target="_blank" onclick="abrirGoogleSheets(event, this.href)" class="btn-atalho btn-gsheets" title="Abrir no Google Sheets">
+                           target="_blank" class="btn-atalho btn-gsheets" title="Abrir no Google Sheets">
                             <span class="material-symbols-outlined">table_chart</span> Google Sheets
                         </a>
 
@@ -381,6 +338,27 @@
                     </div>
                 </div>
 
+                <!-- CARDS NOVO: GERLAZÃO ACUMULADO DO MÊS -->
+                <div class="grid-mes-acumulado">
+                    <div class="tu-card card-cyan">
+                        <span class="material-symbols-outlined icon">calendar_month</span>
+                        <div class="tu-info">
+                            <span class="label">Total Processado no Mês (Caixas)</span>
+                            <h3 id="caixas-mes">--</h3>
+                            <small>Soma Geralzão do Mês Vigente</small>
+                        </div>
+                    </div>
+                    <div class="tu-card card-purple">
+                        <span class="material-symbols-outlined icon">category</span>
+                        <div class="tu-info">
+                            <span class="label">Total Processado no Mês (Peças)</span>
+                            <h3 id="pecas-mes">--</h3>
+                            <small>Soma Geralzão do Mês Vigente</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIFO TRIPLE CONTAINERS -->
                 <div class="fifo-triple-container">
                     <div class="fifo-alert-card">
                         <div class="fifo-info">
@@ -425,13 +403,14 @@
                     </div>
                 </div>
 
+                <!-- TOP 5 CARDS PRINCIPAIS -->
                 <div class="tu-grid-main">
                     <div class="tu-card card-cyan">
                         <span class="material-symbols-outlined icon">inventory_2</span>
                         <div class="tu-info">
                             <span class="label">TUs Pendentes</span>
                             <h3 id="tus-pendentes">--</h3>
-                            <small id="sub-tus">De -- TUs Totais</small>
+                            <small id="sub-tus">De -- TUs na Janela</small>
                         </div>
                     </div>
 
@@ -477,12 +456,11 @@
                     </div>
                 </div>
 
-                <!-- QUADROS INFERIORES EM TABELAS -->
+                <!-- QUADROS INFERIORES -->
                 <div class="tu-details-grid">
-                    <!-- CARD 1: TABELA TOTAL DA SEMANA -->
+                    <!-- CARD 1: TABELA TOTAL DO MÊS VIGENTE -->
                     <div class="tu-detail-box">
-                        <h4><span class="material-symbols-outlined">pie_chart</span> Perfil & Volume Total da Semana</h4>
-                        
+                        <h4><span class="material-symbols-outlined">pie_chart</span> Perfil & Volume Total do Mês</h4>
                         <table class="tu-table">
                             <thead>
                                 <tr>
@@ -493,50 +471,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Carteira (LN)</td>
-                                    <td id="pcs-cart_ln-tot">--</td>
-                                    <td id="cx-cart_ln-tot">--</td>
-                                    <td><span class="val" id="perf-cart_ln-tot">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Carteira (GV)</td>
-                                    <td id="pcs-cart_gv-tot">--</td>
-                                    <td id="cx-cart_gv-tot">--</td>
-                                    <td><span class="val" id="perf-cart_gv-tot">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Varejo (LN)</td>
-                                    <td id="pcs-var_ln-tot">--</td>
-                                    <td id="cx-var_ln-tot">--</td>
-                                    <td><span class="val" id="perf-var_ln-tot">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Varejo (GV)</td>
-                                    <td id="pcs-var_gv-tot">--</td>
-                                    <td id="cx-var_gv-tot">--</td>
-                                    <td><span class="val" id="perf-var_gv-tot">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Estojo (LN)</td>
-                                    <td id="pcs-est_ln-tot">--</td>
-                                    <td id="cx-est_ln-tot">--</td>
-                                    <td><span class="val" id="perf-est_ln-tot">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Estojo (GV)</td>
-                                    <td id="pcs-est_gv-tot">--</td>
-                                    <td id="cx-est_gv-tot">--</td>
-                                    <td><span class="val" id="perf-est_gv-tot">--</span></td>
-                                </tr>
+                                <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-tot">--</td><td id="cx-cart_ln-tot">--</td><td><span class="val" id="perf-cart_ln-tot">--</span></td></tr>
+                                <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-tot">--</td><td id="cx-cart_gv-tot">--</td><td><span class="val" id="perf-cart_gv-tot">--</span></td></tr>
+                                <tr><td>Varejo (LN)</td><td id="pcs-var_ln-tot">--</td><td id="cx-var_ln-tot">--</td><td><span class="val" id="perf-var_ln-tot">--</span></td></tr>
+                                <tr><td>Varejo (GV)</td><td id="pcs-var_gv-tot">--</td><td id="cx-var_gv-tot">--</td><td><span class="val" id="perf-var_gv-tot">--</span></td></tr>
+                                <tr><td>Estojo (LN)</td><td id="pcs-est_ln-tot">--</td><td id="cx-est_ln-tot">--</td><td><span class="val" id="perf-est_ln-tot">--</span></td></tr>
+                                <tr><td>Estojo (GV)</td><td id="pcs-est_gv-tot">--</td><td id="cx-est_gv-tot">--</td><td><span class="val" id="perf-est_gv-tot">--</span></td></tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <!-- CARD 2: TABELA PENDENTE DA SEMANA -->
+                    <!-- CARD 2: TABELA PENDENTE -->
                     <div class="tu-detail-box box-warning">
                         <h4><span class="material-symbols-outlined">pending_actions</span> Perfil & Volume PENDENTE</h4>
-                        
                         <table class="tu-table">
                             <thead>
                                 <tr>
@@ -547,61 +494,30 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Carteira (LN)</td>
-                                    <td id="pcs-cart_ln-pend">--</td>
-                                    <td id="cx-cart_ln-pend">--</td>
-                                    <td><span class="val" id="perf-cart_ln-pend">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Carteira (GV)</td>
-                                    <td id="pcs-cart_gv-pend">--</td>
-                                    <td id="cx-cart_gv-pend">--</td>
-                                    <td><span class="val" id="perf-cart_gv-pend">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Varejo (LN)</td>
-                                    <td id="pcs-var_ln-pend">--</td>
-                                    <td id="cx-var_ln-pend">--</td>
-                                    <td><span class="val" id="perf-var_ln-pend">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Varejo (GV)</td>
-                                    <td id="pcs-var_gv-pend">--</td>
-                                    <td id="cx-var_gv-pend">--</td>
-                                    <td><span class="val" id="perf-var_gv-pend">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Estojo (LN)</td>
-                                    <td id="pcs-est_ln-pend">--</td>
-                                    <td id="cx-est_ln-pend">--</td>
-                                    <td><span class="val" id="perf-est_ln-pend">--</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Estojo (GV)</td>
-                                    <td id="pcs-est_gv-pend">--</td>
-                                    <td id="cx-est_gv-pend">--</td>
-                                    <td><span class="val" id="perf-est_gv-pend">--</span></td>
-                                </tr>
+                                <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-pend">--</td><td id="cx-cart_ln-pend">--</td><td><span class="val" id="perf-cart_ln-pend">--</span></td></tr>
+                                <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-pend">--</td><td id="cx-cart_gv-pend">--</td><td><span class="val" id="perf-cart_gv-pend">--</span></td></tr>
+                                <tr><td>Varejo (LN)</td><td id="pcs-var_ln-pend">--</td><td id="cx-var_ln-pend">--</td><td><span class="val" id="perf-var_ln-pend">--</span></td></tr>
+                                <tr><td>Varejo (GV)</td><td id="pcs-var_gv-pend">--</td><td id="cx-var_gv-pend">--</td><td><span class="val" id="perf-var_gv-pend">--</span></td></tr>
+                                <tr><td>Estojo (LN)</td><td id="pcs-est_ln-pend">--</td><td id="cx-est_ln-pend">--</td><td><span class="val" id="perf-est_ln-pend">--</span></td></tr>
+                                <tr><td>Estojo (GV)</td><td id="pcs-est_gv-pend">--</td><td id="cx-est_gv-pend">--</td><td><span class="val" id="perf-est_gv-pend">--</span></td></tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <!-- CARD 3: AUDITORIA & CHECKLIST DE PCP -->
+                    <!-- CARD 3: CHECKLIST DE PCP & ATENDIMENTOS -->
                     <div class="tu-detail-box box-red">
-                        <h4><span class="material-symbols-outlined">verified</span> Checklist & Inconsistências de PCP</h4>
-                        
+                        <h4><span class="material-symbols-outlined">verified</span> Checklist de PCP & Atendimentos</h4>
+                        <div class="detail-row">
+                            <span>Atendimento(s) em Andamento:</span>
+                            <span id="txt-atendimentos-andamento" class="val" style="color: #00d2ff;">--</span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Alertas de Atraso de Chegada:</span>
+                            <span id="txt-alertas-atraso" class="val" style="color: #f6b93b;">--</span>
+                        </div>
                         <div class="detail-row">
                             <span>Conflito de Rampas:</span>
                             <span id="alert-rampas" class="val status-ok">0 Detectado</span>
-                        </div>
-                        <div class="detail-row">
-                            <span>Perfil Fora da Média (Pcs/Cx):</span>
-                            <div class="alert-group"><span class="val status-ok">Nenhum</span></div>
-                        </div>
-                        <div class="detail-row">
-                            <span>TUs Encalhadas (3+ dias):</span>
-                            <div class="alert-group"><span class="val status-ok">0 Encontrada</span></div>
                         </div>
                         <div class="detail-row">
                             <span>Saúde Geral da Base:</span>
@@ -612,7 +528,6 @@
                     <!-- CARD 4: DETALHAMENTO DE PENDÊNCIAS POR CANAL -->
                     <div class="tu-detail-box box-purple">
                         <h4><span class="material-symbols-outlined">assignment_late</span> Detalhamento de Pendências</h4>
-                        
                         <div class="detail-row">
                             <span>Pendências em Estojo:</span>
                             <div class="alert-group"><span class="val" id="pend-canal-estojo">--</span></div>
@@ -638,37 +553,12 @@
         <div class="pilar-item"><span class="material-symbols-outlined">schedule</span><div class="pilar-text">Informações <strong>em tempo real</strong></div></div>
         <div class="pilar-item"><span class="material-symbols-outlined">group</span><div class="pilar-text">Equipes <strong>em sincronia</strong></div></div>
     </div>
-    
+
     <footer class="rodape">
         <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026</p>
     </footer>
 
-    <div id="toast-notification">
-        <span class="material-symbols-outlined toast-icon">content_copy</span>
-        <div class="toast-body">
-            <strong>Link Copiado!</strong>
-            <span>Abra o Google Chrome e cole (Ctrl+V) para acessar o Sheets.</span>
-        </div>
-    </div>
-
     <script>
-        let toastTimeout;
-
-        function mostrarToast() {
-            const toast = document.getElementById("toast-notification");
-            toast.classList.add("active");
-            clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => { toast.classList.remove("active"); }, 4000);
-        }
-
-        function abrirGoogleSheets(event, url) {
-            const isEdge = navigator.userAgent.includes("Edg");
-            if (isEdge) {
-                event.preventDefault();
-                navigator.clipboard.writeText(url).then(() => { mostrarToast(); }).catch(() => { window.open(url, '_blank'); });
-            }
-        }
-
         function formatarNumeroInteiro(num) {
             if (!num || num === 0) return '0';
             return num.toLocaleString('pt-BR');
@@ -683,8 +573,6 @@
 
         function preencherCardPerfil(prefixo, objetoDados) {
             if (!objetoDados) return;
-            
-            // ORDEM: CARTEIRA LN/GV, VAREJO LN/GV, ESTOJO LN/GV
             const canais = ['cart_ln', 'cart_gv', 'var_ln', 'var_gv', 'est_ln', 'est_gv'];
             const chaves = ['carteira_ln', 'carteira_gv', 'varejo_ln', 'varejo_gv', 'estojo_ln', 'estojo_gv'];
 
@@ -702,42 +590,43 @@
             });
         }
 
-        function formatarTextoPendencia(qtd, canalNome) {
+        function formatarTextoPendencia(qtd) {
             if (qtd === 0) return `<small class="carreta-tag ok-tag">SEM PENDÊNCIAS</small>`;
             const palavra = qtd === 1 ? 'TU PENDENTE' : 'TUs PENDENTES';
             return `<small class="carreta-tag pend-tag">${qtd} ${palavra}</small>`;
         }
 
         function carregarDados() {
-            if (typeof dadosDashboard === 'undefined') {
-                document.getElementById('txt-status-sync').textContent = "Conectando...";
-                return;
-            }
+            if (typeof dadosDashboard === 'undefined') return;
 
             const dados = dadosDashboard;
 
             if (dados.atualizado_em) {
                 document.getElementById('txt-status-sync').textContent = `LIVE • ${dados.atualizado_em}`;
-            } else {
-                document.getElementById('txt-status-sync').textContent = "LIVE";
             }
 
-            // CARDS COLORIDOS SUPERIORES
+            // ACUMULADOS MÊS
+            document.getElementById('caixas-mes').textContent = formatarNumeroInteiro(dados.caixas_total_mes);
+            document.getElementById('pecas-mes').textContent = formatarNumeroInteiro(dados.pecas_total_mes);
+
+            // ATENDIMENTOS E ALERTAS
+            if (dados.atendimentos_em_andamento) {
+                document.getElementById('txt-atendimentos-andamento').textContent = dados.atendimentos_em_andamento.join(', ');
+            }
+            if (dados.alertas_atraso) {
+                document.getElementById('txt-alertas-atraso').textContent = dados.alertas_atraso.join(' | ');
+            }
+
+            // TOP CARDS
             const tuPendentes = dados.carretas_pendentes || 0; 
             document.getElementById('tus-pendentes').textContent = `${tuPendentes}`;
-            document.getElementById('sub-tus').textContent = `De ${dados.total_tus} TUs Totais`;
+            document.getElementById('sub-tus').textContent = `De ${dados.total_tus} TUs na Janela`;
 
-            const cxPendVal = formatarNumeroInteiro(dados.caixas_pendentes);
-            const cxPendLn = formatarAbreviado(dados.caixas_ln_pend);
-            const cxPendGv = formatarAbreviado(dados.caixas_gv_pend);
-            document.getElementById('caixas-pendentes').textContent = `${cxPendVal}`;
-            document.getElementById('sub-caixas').textContent = `LN: ${cxPendLn} | GV: ${cxPendGv}`;
+            document.getElementById('caixas-pendentes').textContent = formatarNumeroInteiro(dados.caixas_pendentes);
+            document.getElementById('sub-caixas').textContent = `LN: ${formatarAbreviado(dados.caixas_ln_pend)} | GV: ${formatarAbreviado(dados.caixas_gv_pend)}`;
 
-            const pcsPendVal = formatarNumeroInteiro(dados.pecas_pendentes);
-            const pcsPendLn = formatarAbreviado(dados.pecas_ln_pend);
-            const pcsPendGv = formatarAbreviado(dados.pecas_gv_pend);
-            document.getElementById('pecas-pendentes').textContent = `${pcsPendVal}`;
-            document.getElementById('sub-pecas').textContent = `LN: ${pcsPendLn} | GV: ${pcsPendGv}`;
+            document.getElementById('pecas-pendentes').textContent = formatarNumeroInteiro(dados.pecas_pendentes);
+            document.getElementById('sub-pecas').textContent = `LN: ${formatarAbreviado(dados.pecas_ln_pend)} | GV: ${formatarAbreviado(dados.pecas_gv_pend)}`;
             
             document.getElementById('carretas-pendentes').textContent = `${dados.carretas_pendentes}`;
             
@@ -750,41 +639,27 @@
                 document.getElementById('fifo-cart-title').textContent = `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`;
                 document.getElementById('fifo-cart-uf').textContent = dados.proxima_carteira.uf;
                 document.getElementById('fifo-cart-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-cart-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-cart-uf').textContent = "--";
-                document.getElementById('fifo-cart-status').textContent = "Livre";
             }
-
             if (dados.proxima_varejo) {
                 document.getElementById('fifo-var-title').textContent = `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`;
                 document.getElementById('fifo-var-uf').textContent = dados.proxima_varejo.uf;
                 document.getElementById('fifo-var-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-var-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-var-uf').textContent = "--";
-                document.getElementById('fifo-var-status').textContent = "Livre";
             }
-
             if (dados.proxima_estojo) {
                 document.getElementById('fifo-est-title').textContent = `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`;
                 document.getElementById('fifo-est-uf').textContent = dados.proxima_estojo.uf;
                 document.getElementById('fifo-est-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-est-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-est-uf').textContent = "--";
-                document.getElementById('fifo-est-status').textContent = "Livre";
             }
 
-            // POPULA TABELAS DE PERFIL
+            // PERFIS
             if (dados.perfis_geral) preencherCardPerfil('tot', dados.perfis_geral);
             if (dados.perfis_pendentes) preencherCardPerfil('pend', dados.perfis_pendentes);
 
-            // POPULA DETALHAMENTO DE PENDÊNCIAS
+            // DETALHAMENTO DE PENDÊNCIAS
             if (dados.pendencias_por_canal) {
-                document.getElementById('pend-canal-estojo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.estojo, 'Estojo');
-                document.getElementById('pend-canal-carteira').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.carteira, 'Carteira');
-                document.getElementById('pend-canal-varejo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.varejo, 'Varejo');
+                document.getElementById('pend-canal-estojo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.estojo);
+                document.getElementById('pend-canal-carteira').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.carteira);
+                document.getElementById('pend-canal-varejo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.varejo);
             }
         }
 
