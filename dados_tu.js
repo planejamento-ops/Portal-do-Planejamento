@@ -1,22 +1,22 @@
 window.dadosDashboard = {
-  "atualizado_em": "31/08/2026 17:27",
+  "atualizado_em": "31/08/2026 17:42",
   "total_tus": 111,
-  "caixas_totais": 119740,
-  "caixas_ln": 34124,
-  "caixas_gv": 85616,
-  "caixas_pendentes": 12940,
-  "caixas_ln_pend": 2039,
-  "caixas_gv_pend": 10901,
-  "pecas_totais": 3679826,
-  "pecas_ln": 1700244,
-  "pecas_gv": 1979582,
-  "pecas_pendentes": 294561,
-  "pecas_ln_pend": 131838,
-  "pecas_gv_pend": 162723,
+  "caixas_totais": 121687,
+  "caixas_ln": 35188,
+  "caixas_gv": 86499,
+  "caixas_pendentes": 14887,
+  "caixas_ln_pend": 3103,
+  "caixas_gv_pend": 11784,
+  "pecas_totais": 3795758,
+  "pecas_ln": 1762154,
+  "pecas_gv": 2033604,
+  "pecas_pendentes": 410493,
+  "pecas_ln_pend": 193748,
+  "pecas_gv_pend": 216745,
   "carretas_pendentes": 12,
   "progresso_pct": 89,
-  "caixas_total_mes": 411888,
-  "pecas_total_mes": 14607597,
+  "caixas_total_mes": 413835,
+  "pecas_total_mes": 14723529,
   "atendimentos_em_andamento": [
     "SPC, MGI"
   ],
@@ -53,13 +53,13 @@ window.dadosDashboard = {
     },
     "carteira_ln": {
       "perfil": 52,
-      "cx": 125107,
-      "pcs": 6462761
+      "cx": 126171,
+      "pcs": 6524671
     },
     "carteira_gv": {
       "perfil": 44,
-      "cx": 147004,
-      "pcs": 6405452
+      "cx": 147887,
+      "pcs": 6459474
     },
     "estojo_ln": {
       "perfil": 0,
@@ -84,14 +84,14 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "carteira_ln": {
-      "perfil": 64,
-      "cx": 1998,
-      "pcs": 128063
+      "perfil": 62,
+      "cx": 3062,
+      "pcs": 189973
     },
     "carteira_gv": {
-      "perfil": 40,
-      "cx": 1930,
-      "pcs": 77984
+      "perfil": 47,
+      "cx": 2813,
+      "pcs": 132006
     },
     "estojo_ln": {
       "perfil": 0,
