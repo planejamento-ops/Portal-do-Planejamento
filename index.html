@@ -338,7 +338,7 @@
                     </div>
                 </div>
 
-                <!-- CARDS NOVO: GERLAZÃO ACUMULADO DO MÊS -->
+                <!-- CARDS ACUMULADOS MÊS -->
                 <div class="grid-mes-acumulado">
                     <div class="tu-card card-cyan">
                         <span class="material-symbols-outlined icon">calendar_month</span>
@@ -525,7 +525,7 @@
                         </div>
                     </div>
 
-                    <!-- CARD 4: DETALHAMENTO DE PENDÊNCIAS POR CANAL -->
+                    <!-- CARD 4: DETALHAMENTO DE PENDÊNCIAS POR CANAL + OUTRAS -->
                     <div class="tu-detail-box box-purple">
                         <h4><span class="material-symbols-outlined">assignment_late</span> Detalhamento de Pendências</h4>
                         <div class="detail-row">
@@ -539,6 +539,10 @@
                         <div class="detail-row">
                             <span>Pendências em Varejo:</span>
                             <div class="alert-group"><span class="val" id="pend-canal-varejo">--</span></div>
+                        </div>
+                        <div class="detail-row">
+                            <span>Outras Pendências (Doação, etc):</span>
+                            <div class="alert-group"><span class="val" id="pend-canal-outras">--</span></div>
                         </div>
                     </div>
                 </div>
@@ -639,16 +643,30 @@
                 document.getElementById('fifo-cart-title').textContent = `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`;
                 document.getElementById('fifo-cart-uf').textContent = dados.proxima_carteira.uf;
                 document.getElementById('fifo-cart-status').textContent = "Pendente";
+            } else {
+                document.getElementById('fifo-cart-title').textContent = "Sem Pendências";
+                document.getElementById('fifo-cart-uf').textContent = "--";
+                document.getElementById('fifo-cart-status').textContent = "Livre";
             }
+
             if (dados.proxima_varejo) {
                 document.getElementById('fifo-var-title').textContent = `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`;
                 document.getElementById('fifo-var-uf').textContent = dados.proxima_varejo.uf;
                 document.getElementById('fifo-var-status').textContent = "Pendente";
+            } else {
+                document.getElementById('fifo-var-title').textContent = "Sem Pendências";
+                document.getElementById('fifo-var-uf').textContent = "--";
+                document.getElementById('fifo-var-status').textContent = "Livre";
             }
+
             if (dados.proxima_estojo) {
                 document.getElementById('fifo-est-title').textContent = `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`;
                 document.getElementById('fifo-est-uf').textContent = dados.proxima_estojo.uf;
                 document.getElementById('fifo-est-status').textContent = "Pendente";
+            } else {
+                document.getElementById('fifo-est-title').textContent = "Sem Pendências";
+                document.getElementById('fifo-est-uf').textContent = "--";
+                document.getElementById('fifo-est-status').textContent = "Livre";
             }
 
             // PERFIS
@@ -660,6 +678,11 @@
                 document.getElementById('pend-canal-estojo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.estojo);
                 document.getElementById('pend-canal-carteira').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.carteira);
                 document.getElementById('pend-canal-varejo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.varejo);
+                
+                const elOutras = document.getElementById('pend-canal-outras');
+                if (elOutras) {
+                    elOutras.innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.outras || 0);
+                }
             }
         }
 
