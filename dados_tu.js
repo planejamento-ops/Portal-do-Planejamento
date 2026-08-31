@@ -1,20 +1,20 @@
 window.dadosDashboard = {
-  "atualizado_em": "31/08/2026 15:57",
+  "atualizado_em": "31/08/2026 16:12",
   "total_tus": 103,
   "caixas_totais": 111929,
   "caixas_ln": 33148,
   "caixas_gv": 78781,
-  "caixas_pendentes": 8729,
+  "caixas_pendentes": 7193,
   "caixas_ln_pend": 2062,
-  "caixas_gv_pend": 6667,
+  "caixas_gv_pend": 5131,
   "pecas_totais": 3516026,
   "pecas_ln": 1633642,
   "pecas_gv": 1882384,
-  "pecas_pendentes": 268307,
+  "pecas_pendentes": 253049,
   "pecas_ln_pend": 137098,
-  "pecas_gv_pend": 131209,
-  "carretas_pendentes": 7,
-  "progresso_pct": 93,
+  "pecas_gv_pend": 115951,
+  "carretas_pendentes": 6,
+  "progresso_pct": 94,
   "caixas_total_mes": 404077,
   "pecas_total_mes": 14443797,
   "atendimentos_em_andamento": [
@@ -37,7 +37,7 @@ window.dadosDashboard = {
   "pendencias_por_canal": {
     "varejo": 0,
     "carteira": 2,
-    "estojo": 3,
+    "estojo": 2,
     "outras": 2
   },
   "perfis_geral": {
@@ -99,9 +99,9 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "estojo_gv": {
-      "perfil": 10,
-      "cx": 4666,
-      "pcs": 44699
+      "perfil": 9,
+      "cx": 3130,
+      "pcs": 29441
     }
   }
 };
