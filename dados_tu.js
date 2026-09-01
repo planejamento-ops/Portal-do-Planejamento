@@ -1,27 +1,27 @@
 window.dadosDashboard = {
-  "atualizado_em": "31/08/2026 23:56",
-  "total_tus": 111,
-  "caixas_totais": 121687,
-  "caixas_ln": 35188,
-  "caixas_gv": 86499,
+  "atualizado_em": "01/09/2026 00:11",
+  "total_tus": 82,
+  "caixas_totais": 87300,
+  "caixas_ln": 23928,
+  "caixas_gv": 63372,
   "caixas_pendentes": 14887,
   "caixas_ln_pend": 3103,
   "caixas_gv_pend": 11784,
-  "pecas_totais": 3795758,
-  "pecas_ln": 1762154,
-  "pecas_gv": 2033604,
+  "pecas_totais": 2779113,
+  "pecas_ln": 1304975,
+  "pecas_gv": 1474138,
   "pecas_pendentes": 410493,
   "pecas_ln_pend": 193748,
   "pecas_gv_pend": 216745,
   "carretas_pendentes": 12,
-  "progresso_pct": 89,
+  "progresso_pct": 85,
   "caixas_total_mes": 413835,
   "pecas_total_mes": 14723529,
   "atendimentos_em_andamento": [
     "SPC, MGI"
   ],
   "alertas_atraso": [
-    "Nenhum atraso detectado"
+    "Atraso em MGC"
   ],
   "proxima_carteira": {
     "carreta": "Carreta 08",
