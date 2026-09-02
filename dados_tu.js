@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "02/09/2026 08:42",
+  "atualizado_em": "02/09/2026 08:57",
   "total_tus": 79,
   "caixas_totais": 89883,
   "caixas_ln": 28302,
@@ -15,8 +15,8 @@ window.dadosDashboard = {
   "pecas_gv_pend": 174231,
   "carretas_pendentes": 7,
   "progresso_pct": 91,
-  "caixas_total_mes": 14527,
-  "pecas_total_mes": 666116,
+  "caixas_total_mes": 12416,
+  "pecas_total_mes": 620716,
   "atendimentos_em_andamento": [
     "SPI, MGI, MGC"
   ],
@@ -42,14 +42,14 @@ window.dadosDashboard = {
   },
   "perfis_geral": {
     "varejo_ln": {
-      "perfil": 20,
-      "cx": 2835,
-      "pcs": 56584
+      "perfil": 19,
+      "cx": 1300,
+      "pcs": 24382
     },
     "varejo_gv": {
-      "perfil": 20,
-      "cx": 715,
-      "pcs": 14530
+      "perfil": 10,
+      "cx": 139,
+      "pcs": 1332
     },
     "carteira_ln": {
       "perfil": 65,
