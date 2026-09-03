@@ -1,20 +1,20 @@
 window.dadosDashboard = {
-  "atualizado_em": "03/09/2026 07:53",
+  "atualizado_em": "03/09/2026 08:03",
   "total_tus": 85,
   "caixas_totais": 98447,
   "caixas_ln": 31291,
   "caixas_gv": 67156,
-  "caixas_pendentes": 39049,
-  "caixas_ln_pend": 7375,
-  "caixas_gv_pend": 31674,
+  "caixas_pendentes": 34932,
+  "caixas_ln_pend": 5134,
+  "caixas_gv_pend": 29798,
   "pecas_totais": 3220499,
   "pecas_ln": 1716413,
   "pecas_gv": 1504086,
-  "pecas_pendentes": 1029860,
-  "pecas_ln_pend": 465110,
-  "pecas_gv_pend": 564750,
-  "carretas_pendentes": 24,
-  "progresso_pct": 71,
+  "pecas_pendentes": 794271,
+  "pecas_ln_pend": 313253,
+  "pecas_gv_pend": 481018,
+  "carretas_pendentes": 22,
+  "progresso_pct": 74,
   "caixas_total_mes": 55077,
   "pecas_total_mes": 1801427,
   "atendimentos_em_andamento": [
@@ -24,8 +24,8 @@ window.dadosDashboard = {
     "Nenhum atraso detectado"
   ],
   "proxima_carteira": {
-    "carreta": "Carreta 08",
-    "tu_resumida": "...2537",
+    "carreta": "Carreta 10",
+    "tu_resumida": "...2538",
     "uf": "SPI"
   },
   "proxima_varejo": null,
@@ -36,7 +36,7 @@ window.dadosDashboard = {
   },
   "pendencias_por_canal": {
     "varejo": 0,
-    "carteira": 10,
+    "carteira": 8,
     "estojo": 14,
     "outras": 0
   },
@@ -84,14 +84,14 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "carteira_ln": {
-      "perfil": 63,
-      "cx": 7375,
-      "pcs": 465110
+      "perfil": 61,
+      "cx": 5134,
+      "pcs": 313253
     },
     "carteira_gv": {
-      "perfil": 43,
-      "cx": 8047,
-      "pcs": 345143
+      "perfil": 42,
+      "cx": 6171,
+      "pcs": 261411
     },
     "estojo_ln": {
       "perfil": 0,
