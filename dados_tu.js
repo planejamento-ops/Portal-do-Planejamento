@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "03/09/2026 12:14",
-  "total_tus": 85,
+  "atualizado_em": "03/09/2026 12:24",
+  "total_tus": 88,
   "caixas_totais": 98447,
   "caixas_ln": 31291,
   "caixas_gv": 67156,
@@ -13,12 +13,12 @@ window.dadosDashboard = {
   "pecas_pendentes": 683885,
   "pecas_ln_pend": 274814,
   "pecas_gv_pend": 409071,
-  "carretas_pendentes": 20,
+  "carretas_pendentes": 21,
   "progresso_pct": 76,
   "caixas_total_mes": 55077,
   "pecas_total_mes": 1801427,
   "atendimentos_em_andamento": [
-    "SPI"
+    "SPI, Varejo-Pró (SP)"
   ],
   "alertas_atraso": [
     "Nenhum atraso detectado"
@@ -28,14 +28,18 @@ window.dadosDashboard = {
     "tu_resumida": "...2539",
     "uf": "SPI"
   },
-  "proxima_varejo": null,
+  "proxima_varejo": {
+    "carreta": "Carreta 01",
+    "tu_resumida": "...2578",
+    "uf": "SP"
+  },
   "proxima_estojo": {
     "carreta": "Carreta 13",
     "tu_resumida": "...2562",
     "uf": "SPI"
   },
   "pendencias_por_canal": {
-    "varejo": 0,
+    "varejo": 1,
     "carteira": 7,
     "estojo": 13,
     "outras": 0
