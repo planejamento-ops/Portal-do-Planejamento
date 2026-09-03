@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "03/09/2026 09:23",
+  "atualizado_em": "03/09/2026 09:33",
   "total_tus": 85,
   "caixas_totais": 98447,
   "caixas_ln": 31291,
@@ -24,14 +24,14 @@ window.dadosDashboard = {
     "Nenhum atraso detectado"
   ],
   "proxima_carteira": {
-    "carreta": "Carreta 11",
-    "tu_resumida": "...2567",
+    "carreta": "Carreta 12",
+    "tu_resumida": "...2539",
     "uf": "SPI"
   },
   "proxima_varejo": null,
   "proxima_estojo": {
-    "carreta": "Carreta 13",
-    "tu_resumida": "...2562",
+    "carreta": "Carreta 11",
+    "tu_resumida": "...2542",
     "uf": "SPI"
   },
   "pendencias_por_canal": {
