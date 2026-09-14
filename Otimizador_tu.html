@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Controle de TU</title>
+    <!-- Biblioteca SheetJS para processar Excel no navegador -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        /* Paleta CEVA integrada */
+        :root {
+            --ceva-blue: #002855;
+            --ceva-blue-hover: #001a38;
+            --ceva-red: #e3000f;
+            --ceva-red-hover: #b3000c;
+            --bg-color: #f4f6f9;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: var(--ceva-blue); font-size: 24px; border-bottom: 3px solid var(--ceva-red); padding-bottom: 10px; text-transform: uppercase; letter-spacing: -0.5px; margin-top: 0;}
+        
+        /* SISTEMA DE ABAS (TABS) */
+        .tabs { display: flex; gap: 5px; margin-bottom: 25px; border-bottom: 2px solid #e2e8f0; flex-wrap: wrap;}
+        .tab-btn { background: #f1f5f9; border: 1px solid #e2e8f0; border-bottom: none; font-size: 15px; font-weight: bold; color: #64748b; cursor: pointer; padding: 12px 20px; border-radius: 8px 8px 0 0; transition: 0.3s; text-transform: uppercase;}
+        .tab-btn.active { background: #fff; color: var(--ceva-blue); border-top: 4px solid var(--ceva-red); border-left: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; margin-bottom: -2px; padding-bottom: 14px;}
+        .tab-btn:hover:not(.active) { background: #e2e8f0; color: var(--ceva-blue); }
+        .tab-content { display: none; animation: fadeIn 0.3s ease; }
+        .tab-content.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        .step { margin-bottom: 25px; padding: 20px; border: 1px solid #e1e8ed; border-radius: 6px; background: #fdfdfd; border-left: 4px solid var(--ceva-blue); }
+        label { font-weight: bold; display: block; margin-bottom: 8px; color: var(--ceva-blue); }
+        input[type="file"] { display: block; margin-bottom: 5px; font-size: 14px; }
+        
+        .radio-group { margin-bottom: 0px; background: #f4f6f9; padding: 10px 15px; border-radius: 6px; display: inline-flex; flex-wrap: wrap; gap: 20px; align-items: center;}
+        .radio-group label { font-weight: normal; display: inline-flex; align-items: center; cursor: pointer; color: #333; margin-bottom: 0;}
+        
+        .custom-input { width: 60px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; text-align: center; font-size: 14px; margin: 0 5px; }
+        .custom-input:focus { border-color: var(--ceva-blue); outline: none; }
+
+        button.primary-btn { background-color: var(--ceva-red); color: white; border: none; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; transition: background 0.3s; width: 100%; text-transform: uppercase;}
+        button.primary-btn:hover { background-color: var(--ceva-red-hover); }
+        button.primary-btn:disabled { background-color: #bdc3c7; cursor: not-allowed; }
+        
+        /* Ocultar áreas de relatório inicialmente */
+        #report-area-tu, #report-area-oen, #report-area-demanda { display: none; margin-top: 30px; }
+
+        /* Tabelas Gerais */
+        .table-container { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #cbd5e1; }
+        .summary-table, .detail-table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; }
+        .summary-table th, .summary-table td, .detail-table th, .detail-table td { padding: 12px 16px; border: 1px solid #e2e8f0; text-align: center; }
+        .summary-table th, .detail-table th { background-color: var(--ceva-blue); color: #ffffff; font-weight: 600; text-transform: uppercase; font-size: 13px; position: sticky; top: 0;}
+        .summary-table th:first-child, .summary-table td:first-child, .detail-table td:first-child { text-align: left; }
+        .summary-table tbody tr:nth-child(even), .detail-table tbody tr:nth-child(even) { background-color: #f8fafc; }
+        .summary-table tbody tr:hover, .detail-table tbody tr:hover { background-color: #f1f5f9; }
+        
+        .row-excedido { background-color: #fef2f2 !important; }
+        .row-excedido:hover { background-color: #fee2e2 !important; }
+        .row-excedido td { color: #991b1b; }
+
+        /* Estilo Linhas TU/OEN */
+        .tu-row { display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: space-between; background: #fff; padding: 15px 20px; border: 1px solid #d1d5db; border-left: 6px solid #16a34a; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: all 0.2s ease; }
+        .tu-row:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .tu-row.has-alert { border-left-color: var(--ceva-red); background: #fffcfc; }
+        .tu-stats { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; font-size: 14px; color: #4b5563; }
+        .tu-stats span { display: inline-flex; align-items: center; }
+        .tu-stats span strong { color: var(--ceva-blue); margin-right: 6px; text-transform: uppercase; font-size: 12px;}
+        .tu-stats .tu-name { font-size: 16px; color: var(--ceva-blue); font-weight: bold; min-width: 140px; }
+        .tu-actions { display: flex; gap: 10px; align-items: center; }
+        
+        .btn-tu { background: var(--ceva-red); color: white; border: none; padding: 8px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; display: flex; align-items: center; text-transform: uppercase;}
+        .btn-tu:hover { background: var(--ceva-red-hover); transform: translateY(-2px); }
+        .btn-tu .badge { background: #fff; color: var(--ceva-red); border-radius: 12px; padding: 2px 6px; margin-left: 6px; font-size: 11px; }
+        .btn-group { background: var(--ceva-blue); color: white; border: none; padding: 8px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; text-transform: uppercase;}
+        .btn-group:hover { background: var(--ceva-blue-hover); transform: translateY(-2px); }
+        .btn-download-tu { background: #107c41; color: white; border: none; padding: 8px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+        .btn-download-tu:hover { background: #0c5e31; transform: translateY(-2px); }
+        .status-ok { color: #16a34a; font-weight: bold; font-size: 13px; padding-right: 10px; display: flex; align-items: center; gap: 5px; }
+
+        /* Grupos de Texto */
+        .group-box { margin-bottom: 20px; background: #ffffff; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .group-header { display: flex; justify-content: space-between; margin-bottom: 15px; align-items: center; }
+        .group-header h4 { margin: 0; color: var(--ceva-blue); font-size: 16px; font-weight: bold; }
+        textarea.group-text { width: 100%; height: 140px; font-family: monospace; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; resize: vertical; box-sizing: border-box; font-size: 14px; color: #334155; }
+        .btn-copy { background: var(--ceva-blue); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; text-transform: uppercase; display: flex; align-items: center; gap: 8px; transition: 0.2s;}
+        .btn-copy:hover { background: var(--ceva-blue-hover); transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
+
+        /* MODAL */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(3px); justify-content: center; align-items: center; }
+        .modal-content { background-color: #f1f5f9; padding: 30px; border-radius: 12px; width: 85%; max-width: 1000px; max-height: 85vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; font-weight: bold; color: #7f8c8d; cursor: pointer; }
+        .close-btn:hover { color: var(--ceva-red); }
+        .modal h2 { margin-top: 0; color: var(--ceva-blue); border-bottom: 2px solid #cbd5e1; padding-bottom: 12px; font-size: 20px; margin-bottom: 10px;}
+
+        /* Estilos Específicos para Demanda */
+        textarea.custom-tu-order { width: 100%; height: 120px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-family: monospace; font-size: 13px; resize: vertical; box-sizing: border-box; margin-top: 10px;}
+        .totais-row { font-weight: bold; background-color: #e2e8f0 !important; color: var(--ceva-blue); }
+        
+        /* Animação para a mensagem de sucesso do Upload */
+        .upload-success { color: #16a34a; font-size: 12px; font-weight: bold; display: none; margin-top: 5px; animation: fadeInOut 4s forwards; }
+        @keyframes fadeInOut { 0% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>⚙️ ATUALIZAR CONTROLE DE TU</h1>
+
+    <!-- SISTEMA DE ABAS -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('tab-tu', this)">🚚 1. DIVISÃO DE PACOTES EM MASSA</button>
+        <button class="tab-btn" onclick="openTab('tab-oen', this)">📦 2. DIVISÃO INDIVIDUAL</button>
+        <button class="tab-btn" onclick="openTab('tab-demanda', this)">📊 3. ATUALIZAR PEÇAS E CAIXAS</button>
+    </div>
+
+    <!-- ABA 1: DIVISÃO DE PACOTES EM MASSA -->
+    <div id="tab-tu" class="tab-content active">
+        <div class="step">
+            <p style="font-size: 13px; color: #666; margin-top: 0; margin-bottom: 15px;">
+                Carregue os arquivos abaixo. O motor usará a <b>UCEP</b> como base principal. O <b>ITEM OEN</b> será usado para o empacotamento aqui nesta aba, e o <b>ITEM UCEP</b> servirá para gerar o quadro na Aba 3 (Atualizar Peças e Caixas).
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div style="background: #eef2f6; padding: 15px; border-radius: 6px; border: 1px dashed #94a3b8;">
+                    <label>1. Carregar UCEP</label>
+                    <input type="file" id="tuInput" accept=".xlsx, .xls, .csv">
+                    <span style="font-size:11px; color:#64748b; display: block;">*Obrigatório (Base Principal)</span>
+                    <span id="tuInputMsg" class="upload-success">✅ Arquivo carregado e atualizado!</span>
+                </div>
+                <div style="background: #fdfdfd; padding: 15px; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    <label>2. Carregar ITEM OEN</label>
+                    <input type="file" id="pacotesInput" accept=".xlsx, .xls, .csv">
+                    <span style="font-size:11px; color:#64748b; display: block;">(Gera Divisão de Pacotes em Massa)</span>
+                    <span id="pacotesInputMsg" class="upload-success">✅ Arquivo carregado e atualizado!</span>
+                </div>
+                <div style="background: #fdfdfd; padding: 15px; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    <label>3. Carregar ITEM UCEP</label>
+                    <input type="file" id="demandaItemInput" accept=".xlsx, .xls, .csv">
+                    <span style="font-size:11px; color:#64748b; display: block;">(Alimenta a Aba 3 - Peças e Caixas)</span>
+                    <span id="demandaItemInputMsg" class="upload-success">✅ Arquivo carregado e atualizado!</span>
+                </div>
+            </div>
+
+            <label style="color: var(--ceva-blue); margin-top: 15px;">Diretriz de Corte Operacional (Para Divisão de Pacotes em Massa)</label>
+            <div class="radio-group" style="margin-bottom: 20px;">
+                <label style="margin-right: 30px;">
+                    <input type="radio" name="perfilOperacao" id="radioCarteira" value="carteira" checked> 
+                    <b style="margin-left: 5px;">[1] CARTEIRA</b> (<input type="number" id="customLimitCarteira" class="custom-input" value="50" min="1"> lin)
+                </label>
+                <label>
+                    <input type="radio" name="perfilOperacao" id="radioVarejo" value="varejo"> 
+                    <b style="margin-left: 5px;">[2] VAREJO</b> (<input type="number" id="customLimitVarejo" class="custom-input" value="69" min="1"> lin)
+                </label>
+            </div>
+
+            <button id="btnProcessTu" class="primary-btn" onclick="processarArquivosTU()">EXECUTAR DIVISÃO DE PACOTES EM MASSA</button>
+        </div>
+
+        <div id="report-area-tu">
+            <!-- ÁREA DIVISÃO OEN EM MASSA -->
+            <div id="divisao-container" style="display:none;">
+                <h2 style="color: var(--ceva-blue); font-size: 20px; margin-bottom: 15px;">📋 Tabela de Resumo Rápido (Divisão de Pacotes em Massa)</h2>
+                <div id="tu-summary-container"></div>
+
+                <h2 style="color: var(--ceva-blue); font-size: 20px; margin-bottom: 20px; border-top: 1px solid #ddd; padding-top: 30px;">📦 Análise Detalhada por Unidade de Transporte (TU)</h2>
+                <div id="tu-list-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABA 2: DIVISÃO INDIVIDUAL -->
+    <div id="tab-oen" class="tab-content">
+        <div class="step">
+            <p style="font-size: 13px; color: #666; margin-top: 0; margin-bottom: 15px;">O motor fará a contagem exaustiva de linhas por material e usará <b>Inteligência de Empacotamento Balanceado</b> para garantir que a soma das linhas não estoure o limite e os grupos fiquem com tamanhos equilibrados.</p>
+            
+            <div style="background: #fdfdfd; padding: 15px; border-radius: 6px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+                <label>1. Carregar Arquivo ITEM OEN (.xlsx / .csv)</label>
+                <input type="file" id="oenInput" accept=".xlsx, .xls, .csv">
+                <span id="oenInputMsg" class="upload-success">✅ Arquivo carregado e atualizado na memória!</span>
+            </div>
+            
+            <label style="margin-top: 20px;">2. Diretriz de Corte Operacional (Limites)</label>
+            <div class="radio-group">
+                <label style="margin-right: 30px;">
+                    <input type="radio" name="perfilOperacaoOEN" id="radioCarteiraOEN" value="carteira" checked> 
+                    <b style="margin-left: 5px;">[1] CARTEIRA</b> (Personalizado: <input type="number" id="customLimitCarteiraOEN" class="custom-input" value="50" min="1"> linhas)
+                </label>
+                <label>
+                    <input type="radio" name="perfilOperacaoOEN" id="radioVarejoOEN" value="varejo"> 
+                    <b style="margin-left: 5px;">[2] VAREJO</b> (Personalizado: <input type="number" id="customLimitVarejoOEN" class="custom-input" value="69" min="1"> linhas)
+                </label>
+            </div>
+
+            <button id="btnProcessOen" class="primary-btn" onclick="processarOEN()">EXECUTAR DIVISÃO INDIVIDUAL</button>
+        </div>
+
+        <div id="report-area-oen">
+            <h2 style="color: var(--ceva-blue); font-size: 20px; margin-bottom: 15px;">📋 Tabela de Resumo Rápido</h2>
+            <div id="oen-summary-container"></div>
+            <h2 style="color: var(--ceva-blue); font-size: 20px; margin-bottom: 20px; border-top: 1px solid #ddd; padding-top: 30px;">📦 Análise Detalhada (Divisão Individual)</h2>
+            <div id="oen-list-container"></div>
+        </div>
+    </div>
+
+    <!-- ABA 3: ATUALIZAR PEÇAS E CAIXAS -->
+    <div id="tab-demanda" class="tab-content">
+        <div class="step">
+            <p style="font-size: 13px; color: #666; margin-top: 0; margin-bottom: 15px;">
+                Esta ferramenta cruza as bases <b>UCEP</b> e <b>ITEM UCEP</b> (carregadas na Aba 1) para gerar um quadro consolidado de caixas e peças agrupadas por TU, separando por GV (Caixa Fechada) e LN (Linha/Fracionada). Considera apenas UCs com prefixo <b>$_</b>.
+            </p>
+            
+            <label style="color: var(--ceva-blue); font-size: 16px;">Ordem Customizada das TUs (Opcional)</label>
+            <p style="font-size: 13px; color: #666; margin-top: 5px;">Cole as TUs <b>uma abaixo da outra (em coluna)</b> na ordem que deseja que apareçam no relatório.</p>
+            <textarea id="customTuOrder" class="custom-tu-order" placeholder="Ex:&#10;610000012598&#10;610000012606&#10;610000012607"></textarea>
+
+            <button id="btnProcessDemanda" class="primary-btn" style="margin-top: 15px;" onclick="processarDemanda()">ATUALIZAR PEÇAS E CAIXAS</button>
+        </div>
+
+        <div id="report-area-demanda">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h2 style="color: var(--ceva-blue); font-size: 20px; margin: 0;">📊 Quadro Consolidado</h2>
+                <button class="btn-download-tu" onclick="baixarExcelDemanda()">📥 Baixar Relatório (Excel)</button>
+            </div>
+            
+            <div class="table-container" style="overflow-x: auto;">
+                <table class="detail-table" id="tabela-demanda">
+                    <thead>
+                        <tr>
+                            <th>TU</th>
+                            <th>LN CAIXAS</th>
+                            <th>GV CAIXAS</th>
+                            <th>TOTAL CAIXAS</th>
+                            <th>LN PEÇAS</th>
+                            <th>GV PEÇAS</th>
+                            <th>TOTAL PEÇAS</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL COMPARTILHADO -->
+<div id="detailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Detalhes</h2>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+    // ==========================================
+    // SISTEMA DE ABAS E MODAL
+    // ==========================================
+    function openTab(tabId, btnElement) {
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        btnElement.classList.add('active');
+    }
+
+    function closeModal() { document.getElementById('detailsModal').style.display = 'none'; }
+    window.onclick = function(event) { if (event.target === document.getElementById('detailsModal')) closeModal(); }
+
+    function copiarTexto(elementId) {
+        const textarea = document.getElementById(elementId);
+        textarea.select();
+        navigator.clipboard.writeText(textarea.value);
+        alert('Copiado para a área de transferência!');
+    }
+
+    // ==========================================
+    // FUNÇÕES COMPARTILHADAS E FEEDBACK VISUAL
+    // ==========================================
+    function showUploadSuccess(elementId) {
+        const el = document.getElementById(elementId);
+        if (el) {
+            el.style.display = 'none';
+            void el.offsetWidth; 
+            el.style.display = 'block';
+            setTimeout(() => { el.style.display = 'none'; }, 4000);
+        }
+    }
+
+    function lerArquivo(file, callback) {
+        if(!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, { type: 'array' });
+            const json = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { defval: "" });
+            callback(json);
+        };
+        reader.readAsArrayBuffer(file);
+    }
+
+    function limparTexto(val) {
+        if (val === null || val === undefined) return '';
+        let str = String(val).trim();
+        if (str.endsWith('.0')) str = str.slice(0, -2);
+        return str;
+    }
+
+    function encontrarColuna(row, possiveisNomes) {
+        for (let key in row) {
+            let keyClean = key.trim().toLowerCase();
+            for (let p of possiveisNomes) {
+                if (keyClean.includes(p.toLowerCase())) return row[key];
+            }
+        }
+        return '';
+    }
+
+    function agruparRemessasInteligente(remessas, baseDados, limite, isMergedData = false, filtroTu = null, maxGroupsPrecalculado = 1) {
+        if (remessas.length === 0) return [];
+        const contagemPorRemessa = {};
+        remessas.forEach(doc => contagemPorRemessa[doc] = { totalVolume: 0 });
+        
+        baseDados.forEach(row => {
+            let doc, prod, tu;
+            if (isMergedData) {
+                doc = row['Documento']; prod = row['Produto']; tu = row['Unidade de transporte'];
+            } else {
+                doc = limparTexto(encontrarColuna(row, ['documento', 'ordem', 'remessa']));
+                prod = limparTexto(encontrarColuna(row, ['produto', 'material', 'código']));
+                tu = null; 
+            }
+            if (filtroTu !== null && tu !== filtroTu) return;
+            if (contagemPorRemessa[doc] && prod) {
+                contagemPorRemessa[doc][prod] = (contagemPorRemessa[doc][prod] || 0) + 1;
+                contagemPorRemessa[doc].totalVolume += 1;
+            }
+        });
+        
+        remessas.sort((a, b) => contagemPorRemessa[b].totalVolume - contagemPorRemessa[a].totalVolume);
+        let grupos = Array.from({ length: maxGroupsPrecalculado }, () => ({ docs: [], produtos: {} }));
+
+        for (let doc of remessas) {
+            let itensDaRemessa = contagemPorRemessa[doc];
+            let alocadoEmGrupo = false;
+            let indicesOrdenados = grupos.map((g, index) => ({ index, size: g.docs.length })).sort((a, b) => a.size - b.size);
+            
+            for (let item of indicesOrdenados) {
+                let i = item.index; let cabeNesteGrupo = true;
+                for (let prod in itensDaRemessa) {
+                    if (prod === 'totalVolume') continue;
+                    let quantidadeAtualNoGrupo = grupos[i].produtos[prod] || 0;
+                    if (quantidadeAtualNoGrupo + itensDaRemessa[prod] > limite) { cabeNesteGrupo = false; break; }
+                }
+                if (cabeNesteGrupo) {
+                    grupos[i].docs.push(doc);
+                    for (let prod in itensDaRemessa) {
+                        if (prod === 'totalVolume') continue;
+                        grupos[i].produtos[prod] = (grupos[i].produtos[prod] || 0) + itensDaRemessa[prod];
+                    }
+                    alocadoEmGrupo = true; break;
+                }
+            }
+            if (!alocadoEmGrupo) {
+                let novoGrupo = { docs: [doc], produtos: {} };
+                for (let prod in itensDaRemessa) {
+                    if (prod === 'totalVolume') continue;
+                    novoGrupo.produtos[prod] = itensDaRemessa[prod];
+                }
+                grupos.push(novoGrupo);
+            }
+        }
+        return grupos.filter(g => g.docs.length > 0).map(g => g.docs);
+    }
+
+    // ==========================================
+    // VARIÁVEIS GLOBAIS DE ARQUIVOS (ABA 1)
+    // ==========================================
+    window.appDataTU = { 
+        tuData: [], 
+        pacotesData: [], 
+        itemDemandaData: [], 
+        mergedData: [], 
+        limiteSelecionado: 50, 
+        alertasPorTu: {}, 
+        gruposPorTu: {}, 
+        docsPorTu: {},
+        relatorioFinalDemanda: []
+    };
+
+    document.getElementById('customLimitCarteira').addEventListener('focus', function() { document.getElementById('radioCarteira').checked = true; });
+    document.getElementById('customLimitVarejo').addEventListener('focus', function() { document.getElementById('radioVarejo').checked = true; });
+
+    // Leitores de Arquivos da Aba 1 (Com aviso de Sucesso)
+    document.getElementById('tuInput').addEventListener('change', (e) => {
+        if(e.target.files[0]) lerArquivo(e.target.files[0], data => { window.appDataTU.tuData = data; showUploadSuccess('tuInputMsg'); });
+    });
+    document.getElementById('pacotesInput').addEventListener('change', (e) => {
+        if(e.target.files[0]) lerArquivo(e.target.files[0], data => { window.appDataTU.pacotesData = data; showUploadSuccess('pacotesInputMsg'); });
+    });
+    document.getElementById('demandaItemInput').addEventListener('change', (e) => {
+        if(e.target.files[0]) lerArquivo(e.target.files[0], data => { window.appDataTU.itemDemandaData = data; showUploadSuccess('demandaItemInputMsg'); });
+    });
+
+    // ==========================================
+    // LÓGICA DA ABA 1: DIVISÃO DE PACOTES EM MASSA
+    // ==========================================
+    function processarArquivosTU() {
+        if (window.appDataTU.tuData.length === 0 || window.appDataTU.pacotesData.length === 0) {
+            alert('⚠️ Por favor, carregue a Base UCEP e o ITEM OEN para realizar a Divisão de Pacotes em Massa.'); return;
+        }
+
+        const btn = document.getElementById('btnProcessTu'); btn.disabled = true; btn.innerText = "Processando...";
+
+        setTimeout(() => {
+            try {
+                const radioSelecionado = document.querySelector('input[name="perfilOperacao"]:checked').value;
+                if (radioSelecionado === 'carteira') {
+                    const customVal = parseInt(document.getElementById('customLimitCarteira').value);
+                    window.appDataTU.limiteSelecionado = isNaN(customVal) || customVal < 1 ? 50 : customVal;
+                } else if (radioSelecionado === 'varejo') {
+                    const customVal = parseInt(document.getElementById('customLimitVarejo').value);
+                    window.appDataTU.limiteSelecionado = isNaN(customVal) || customVal < 1 ? 69 : customVal;
+                }
+                const limite = window.appDataTU.limiteSelecionado;
+
+                const tuMap = {};
+                window.appDataTU.tuData.forEach(row => {
+                    let ordem = limparTexto(encontrarColuna(row, ['ordem', 'documento', 'remessa']));
+                    let tu = limparTexto(encontrarColuna(row, ['unidade', 'tu', 'transporte']));
+                    if (ordem) tuMap[ordem] = tu;
+                });
+
+                window.appDataTU.mergedData = []; window.appDataTU.docsPorTu = {}; 
+                const linhasPorTu = {}; const prodCountsPorTu = {}; 
+
+                window.appDataTU.pacotesData.forEach(row => {
+                    let doc = limparTexto(encontrarColuna(row, ['documento', 'ordem', 'remessa']));
+                    let item = limparTexto(encontrarColuna(row, ['item', 'n° do item', 'no do item']));
+                    let prod = limparTexto(encontrarColuna(row, ['produto', 'material', 'código']));
+                    let desc = encontrarColuna(row, ['descrição', 'descricao']);
+                    let qtd = encontrarColuna(row, ['quantidade', 'qtd']);
+
+                    if (!doc) return; 
+
+                    let tu = tuMap[doc] || 'SEM_TU_VINCULADA';
+                    window.appDataTU.mergedData.push({ 'Documento': doc, 'Nº do item': item, 'Produto': prod, 'Descrição produto': desc, 'Quantidade': qtd, 'Unidade de transporte': tu !== 'SEM_TU_VINCULADA' ? tu : '' });
+
+                    linhasPorTu[tu] = (linhasPorTu[tu] || 0) + 1;
+
+                    if (prod) {
+                        if (!prodCountsPorTu[tu]) prodCountsPorTu[tu] = {};
+                        prodCountsPorTu[tu][prod] = (prodCountsPorTu[tu][prod] || 0) + 1;
+                    }
+                    if (doc.length === 9 && !isNaN(doc)) {
+                        if (!window.appDataTU.docsPorTu[tu]) window.appDataTU.docsPorTu[tu] = new Set();
+                        window.appDataTU.docsPorTu[tu].add(doc);
+                    }
+                });
+
+                window.appDataTU.alertasPorTu = {}; window.appDataTU.gruposPorTu = {};
+
+                for (let tu in prodCountsPorTu) {
+                    let temAlertaNaTU = false; let maxGroupsForThisTu = 1;
+                    for (let prod in prodCountsPorTu[tu]) {
+                        let count = prodCountsPorTu[tu][prod];
+                        if (count > limite) {
+                            if (!window.appDataTU.alertasPorTu[tu]) window.appDataTU.alertasPorTu[tu] = [];
+                            window.appDataTU.alertasPorTu[tu].push({ produto: prod, linhas: count });
+                            temAlertaNaTU = true;
+                            let needed = Math.ceil(count / limite);
+                            if (needed > maxGroupsForThisTu) maxGroupsForThisTu = needed;
+                        }
+                    }
+                    let remessasDaTu = Array.from(window.appDataTU.docsPorTu[tu] || []);
+                    if (temAlertaNaTU) {
+                        window.appDataTU.gruposPorTu[tu] = agruparRemessasInteligente(remessasDaTu, window.appDataTU.mergedData, limite, true, tu, maxGroupsForThisTu);
+                    } else {
+                        window.appDataTU.gruposPorTu[tu] = [remessasDaTu];
+                    }
+                }
+
+                const tuContainer = document.getElementById('tu-list-container'); tuContainer.innerHTML = ''; 
+                const summaryContainer = document.getElementById('tu-summary-container');
+                let summaryHtml = `<div class="table-container"><table class="summary-table">
+                    <thead><tr><th>Unidade de Transporte (TU)</th><th>Maior Ocorrência<br><span style="font-size: 11px; font-weight: normal; color: #cbd5e1; text-transform: none;">(Qualquer Material)</span></th><th>Ação Recomendada (Grupos)</th><th>Status</th></tr></thead><tbody>`;
+
+                Object.keys(linhasPorTu).forEach(tu => {
+                    const totalLinhas = linhasPorTu[tu];
+                    const totalRemessas = window.appDataTU.docsPorTu[tu] ? window.appDataTU.docsPorTu[tu].size : 0;
+                    const sortedProdsTu = Object.entries(prodCountsPorTu[tu] || {}).sort((a, b) => b[1] - a[1]);
+                    const topProdText = sortedProdsTu.length > 0 ? `${sortedProdsTu[0][0]} <span style="color:#666; font-size:12px;">(${sortedProdsTu[0][1]}x)</span>` : '-';
+                    const maxOcorrenciaValor = sortedProdsTu.length > 0 ? sortedProdsTu[0][1] : 0;
+                    const alertasDaTu = window.appDataTU.alertasPorTu[tu] || [];
+                    const qtdProblemas = alertasDaTu.length;
+                    const numGrupos = window.appDataTU.gruposPorTu[tu] ? window.appDataTU.gruposPorTu[tu].length : 1;
+                    
+                    let textoAcao = '', statusVisual = '', rowClass = '';
+                    if (numGrupos === 1) {
+                        textoAcao = '<span style="color:#16a34a; font-weight:bold;">Nenhuma</span>'; statusVisual = '<span style="color:#16a34a; font-weight:bold;">✅ OK</span>';
+                    } else {
+                        rowClass = 'row-excedido'; statusVisual = '<span style="color:#e3000f; font-weight:bold;">⚠️ EXCEDIDO</span>';
+                        if (numGrupos === 2) textoAcao = 'Duplicar (2)'; else if (numGrupos === 3) textoAcao = 'Triplicar (3)'; else if (numGrupos === 4) textoAcao = 'Quadruplicar (4)'; else if (numGrupos === 5) textoAcao = 'Quintuplicar (5)'; else textoAcao = `Dividir em ${numGrupos}`;
+                        textoAcao = `<strong>${textoAcao}</strong>`;
+                    }
+
+                    summaryHtml += `<tr class="${rowClass}">
+                        <td style="font-weight: bold; color: var(--ceva-blue);">${tu === 'SEM_TU_VINCULADA' ? 'Sem TU' : tu}</td>
+                        <td><strong>${maxOcorrenciaValor}</strong> linhas</td> <td>${textoAcao}</td> <td>${statusVisual}</td>
+                    </tr>`;
+
+                    const row = document.createElement('div');
+                    row.className = `tu-row ${qtdProblemas > 0 ? 'has-alert' : ''}`;
+                    row.innerHTML = `<div class="tu-stats"><span class="tu-name">📦 ${tu === 'SEM_TU_VINCULADA' ? 'Sem TU Informada' : tu}</span><span><strong>Total de Linhas:</strong> ${totalLinhas}</span><span><strong>Remessas Únicas:</strong> ${totalRemessas}</span><span><strong>Maior Frequência:</strong> ${topProdText}</span></div><div class="tu-actions"></div>`;
+                    
+                    const actionsDiv = row.querySelector('.tu-actions');
+                    if (qtdProblemas > 0) {
+                        const btnTu = document.createElement('button'); btnTu.className = 'btn-tu'; btnTu.innerHTML = `🚨 Alertas <span class="badge">${qtdProblemas}</span>`;
+                        btnTu.onclick = () => showModalTU('ALERTA', `🚨 Materiais Excedidos - TU: ${tu}`, tu); actionsDiv.appendChild(btnTu);
+                        const btnGroup = document.createElement('button'); btnGroup.className = 'btn-group'; btnGroup.innerHTML = `📑 Grupos: ${numGrupos}`;
+                        btnGroup.onclick = () => showModalTU('GRUPOS', `📦 Divisão Balanceada - TU: ${tu}`, tu); actionsDiv.appendChild(btnGroup);
+                    } else {
+                         actionsDiv.innerHTML = `<span class="status-ok">✅ Limpa</span>`;
+                    }
+                    const btnDownload = document.createElement('button'); btnDownload.className = 'btn-download-tu'; btnDownload.innerHTML = `📥 Baixar Excel`;
+                    btnDownload.onclick = () => baixarExcelTU(tu); actionsDiv.appendChild(btnDownload);
+                    tuContainer.appendChild(row);
+                });
+
+                summaryHtml += '</tbody></table></div>'; summaryContainer.innerHTML = summaryHtml;
+                document.getElementById('divisao-container').style.display = 'block';
+                document.getElementById('report-area-tu').style.display = 'block';
+
+            } catch (error) { alert("Erro ao processar Análises em Massa: " + error); } 
+            finally { btn.disabled = false; btn.innerText = "EXECUTAR DIVISÃO DE PACOTES EM MASSA"; }
+        }, 300);
+    }
+
+    function showModalTU(tipo, titulo, tuId) {
+        document.getElementById('modalTitle').innerText = titulo; const body = document.getElementById('modalBody'); let html = '';
+        if (tipo === 'ALERTA') {
+            const materiais = [...(window.appDataTU.alertasPorTu[tuId] || [])].sort((a, b) => b.linhas - a.linhas).slice(0, 5);
+            html = `<p style="margin-top:0; margin-bottom: 20px; color:#666; font-size: 15px;">Limite Operacional Configurado: <b>${window.appDataTU.limiteSelecionado} linhas</b><br><span style="color:var(--ceva-red); font-size:13px;">⚠️ Exibindo o TOP 5 de materiais que mais excederam.</span></p><table class="detail-table" style="background:#fff;"><thead><tr><th>Código do Material</th><th>Qtd Linhas na TU</th><th>Ação do Motor</th></tr></thead><tbody>`;
+            materiais.forEach(m => { html += `<tr><td><b>${m.produto}</b></td><td style="color:#e3000f; font-weight:bold;">${m.linhas}</td><td>Exige balanceamento logístico</td></tr>`; });
+            html += '</tbody></table>';
+        } else if (tipo === 'GRUPOS') {
+            const grupos = window.appDataTU.gruposPorTu[tuId];
+            html = `<p style="margin-top:0; margin-bottom: 20px; color:#666; font-size: 15px;">O sistema distribuiu as remessas garantindo o limite de <b>${window.appDataTU.limiteSelecionado} linhas</b> e mantendo os grupos balanceados.</p>`;
+            grupos.forEach((gDocs, index) => {
+                const txtId = `txtGroup_${tuId}_${index}`;
+                html += `<div class="group-box"><div class="group-header"><h4>Grupo ${index + 1} (${gDocs.length} remessas)</h4><button class="btn-copy" onclick="copiarTexto('${txtId}')">📄 COPIAR REMESSAS</button></div><textarea id="${txtId}" class="group-text" readonly>${gDocs.join('\n')}</textarea></div>`;
+            });
+        }
+        body.innerHTML = html; document.getElementById('detailsModal').style.display = 'flex';
+    }
+
+    function baixarExcelTU(tu) {
+        const tuDataOriginal = window.appDataTU.mergedData.filter(row => {
+            if (tu === 'SEM_TU_VINCULADA') return row['Unidade de transporte'] === '';
+            return row['Unidade de transporte'] === tu;
+        });
+
+        const uniqueDocs = [...new Set(tuDataOriginal.map(row => row['Documento']))].filter(d => d !== '' && d.length === 9 && !isNaN(d));
+        const grupos = window.appDataTU.gruposPorTu[tu] || [];
+        const docToGroup = {};
+        
+        grupos.forEach((gDocs, index) => { gDocs.forEach(doc => { docToGroup[doc] = grupos.length > 1 ? `Grupo ${index + 1}` : 'Grupo 1'; }); });
+
+        const exportData = uniqueDocs.map(doc => ({ 'Remessa': doc, 'Grupo de Separação': docToGroup[doc] || 'Não Agrupado' }));
+        exportData.sort((a, b) => {
+            if (a['Grupo de Separação'] === b['Grupo de Separação']) return a['Remessa'].localeCompare(b['Remessa']);
+            return a['Grupo de Separação'].localeCompare(b['Grupo de Separação']);
+        });
+
+        const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(exportData), "Remessas e Grupos");
+        const safeTuName = tu === 'SEM_TU_VINCULADA' ? 'Sem_TU' : tu;
+        XLSX.writeFile(wb, `Base_TU_${safeTuName}_Remessas.xlsx`);
+    }
+
+    // ==========================================
+    // LÓGICA DA ABA 3: ATUALIZAR PEÇAS E CAIXAS
+    // ==========================================
+    function processarDemanda() {
+        if (window.appDataTU.tuData.length === 0 || window.appDataTU.itemDemandaData.length === 0) {
+            alert('⚠️ Por favor, carregue os arquivos UCEP e ITEM UCEP na Aba 1 antes de gerar a atualização.');
+            return;
+        }
+
+        const btn = document.getElementById('btnProcessDemanda');
+        btn.disabled = true;
+        btn.innerText = "Processando...";
+
+        setTimeout(() => {
+            try {
+                const tuOrderText = document.getElementById('customTuOrder').value;
+                const customOrderList = tuOrderText.split(/[\r\n,]+/).map(s => s.trim()).filter(s => s);
+                const orderMap = new Map();
+                customOrderList.forEach((tu, idx) => orderMap.set(tu, idx));
+
+                const ucepMap = {};
+                window.appDataTU.tuData.forEach(row => {
+                    let uc = limparTexto(encontrarColuna(row, ['uc expedição', 'uc expedicao', 'uc', 'expedição']));
+                    let tipo = limparTexto(encontrarColuna(row, ['tipo de uc', 'tipo']));
+                    let tu = limparTexto(encontrarColuna(row, ['tu', 'unidade de transporte', 'unidade']));
+                    
+                    if (uc.startsWith('$_')) {
+                        ucepMap[uc] = { tipo: tipo, tu: tu };
+                    }
+                });
+
+                const stats = {};
+                window.appDataTU.itemDemandaData.forEach(row => {
+                    let uc = limparTexto(encontrarColuna(row, ['uc expedição', 'uc expedicao', 'uc', 'expedição']));
+                    let qtdStr = limparTexto(encontrarColuna(row, ['quantidade', 'volume', 'qtd']));
+                    let qtd = parseFloat(String(qtdStr).replace(/\./g, '').replace(',', '.')) || 0;
+
+                    if (uc.startsWith('$_') && ucepMap[uc]) {
+                        let info = ucepMap[uc];
+                        let tu = info.tu || 'SEM_TU';
+                        let cat = (info.tipo.toUpperCase() === 'CX') ? 'GV' : 'LN';
+
+                        if (!stats[tu]) {
+                            stats[tu] = { lnCaixas: new Set(), gvCaixas: new Set(), lnPecas: 0, gvPecas: 0 };
+                        }
+
+                        if (cat === 'GV') {
+                            stats[tu].gvCaixas.add(uc);
+                            stats[tu].gvPecas += qtd;
+                        } else {
+                            stats[tu].lnCaixas.add(uc);
+                            stats[tu].lnPecas += qtd;
+                        }
+                    }
+                });
+
+                let result = [];
+                let totLnCaixas = 0, totGvCaixas = 0, totLnPecas = 0, totGvPecas = 0;
+
+                for (let tu in stats) {
+                    let lnC = stats[tu].lnCaixas.size; let gvC = stats[tu].gvCaixas.size;
+                    let lnP = stats[tu].lnPecas; let gvP = stats[tu].gvPecas;
+                    
+                    totLnCaixas += lnC; totGvCaixas += gvC;
+                    totLnPecas += lnP; totGvPecas += gvP;
+
+                    result.push({
+                        tu: tu, lnCaixas: lnC, gvCaixas: gvC, totCaixas: lnC + gvC,
+                        lnPecas: lnP, gvPecas: gvP, totPecas: lnP + gvP
+                    });
+                }
+
+                result.sort((a, b) => {
+                    let idxA = orderMap.has(a.tu) ? orderMap.get(a.tu) : 999999;
+                    let idxB = orderMap.has(b.tu) ? orderMap.get(b.tu) : 999999;
+                    if (idxA !== idxB) return idxA - idxB;
+                    return a.tu.localeCompare(b.tu);
+                });
+
+                const tbody = document.querySelector('#tabela-demanda tbody');
+                tbody.innerHTML = '';
+                window.appDataTU.relatorioFinalDemanda = result; 
+
+                result.forEach(row => {
+                    tbody.innerHTML += `
+                        <tr>
+                            <td style="font-weight:bold; color:var(--ceva-blue);">${row.tu}</td>
+                            <td>${row.lnCaixas.toLocaleString('pt-BR')}</td>
+                            <td>${row.gvCaixas.toLocaleString('pt-BR')}</td>
+                            <td style="font-weight:bold;">${row.totCaixas.toLocaleString('pt-BR')}</td>
+                            <td>${row.lnPecas.toLocaleString('pt-BR')}</td>
+                            <td>${row.gvPecas.toLocaleString('pt-BR')}</td>
+                            <td style="font-weight:bold;">${row.totPecas.toLocaleString('pt-BR')}</td>
+                        </tr>`;
+                });
+
+                tbody.innerHTML += `
+                    <tr class="totais-row">
+                        <td>TOTAL GERAL</td>
+                        <td>${totLnCaixas.toLocaleString('pt-BR')}</td>
+                        <td>${totGvCaixas.toLocaleString('pt-BR')}</td>
+                        <td>${(totLnCaixas + totGvCaixas).toLocaleString('pt-BR')}</td>
+                        <td>${totLnPecas.toLocaleString('pt-BR')}</td>
+                        <td>${totGvPecas.toLocaleString('pt-BR')}</td>
+                        <td>${(totLnPecas + totGvPecas).toLocaleString('pt-BR')}</td>
+                    </tr>`;
+                
+                document.getElementById('report-area-demanda').style.display = 'block';
+
+            } catch (error) { alert("Erro ao gerar: " + error); } 
+            finally { btn.disabled = false; btn.innerText = "ATUALIZAR PEÇAS E CAIXAS"; }
+        }, 300);
+    }
+
+    function baixarExcelDemanda() {
+        if (!window.appDataTU.relatorioFinalDemanda || window.appDataTU.relatorioFinalDemanda.length === 0) return;
+
+        const dataExport = window.appDataTU.relatorioFinalDemanda.map(row => ({
+            'TU': row.tu, 'LN CAIXAS': row.lnCaixas, 'GV CAIXAS': row.gvCaixas, 'TOTAL CAIXAS': row.totCaixas,
+            'LN PEÇAS': row.lnPecas, 'GV PEÇAS': row.gvPecas, 'TOTAL PEÇAS': row.totPecas
+        }));
+
+        let totLnC = 0, totGvC = 0, totLnP = 0, totGvP = 0;
+        dataExport.forEach(r => {
+            totLnC += r['LN CAIXAS']; totGvC += r['GV CAIXAS'];
+            totLnP += r['LN PEÇAS']; totGvP += r['GV PEÇAS'];
+        });
+
+        dataExport.push({
+            'TU': 'TOTAL GERAL', 'LN CAIXAS': totLnC, 'GV CAIXAS': totGvC, 'TOTAL CAIXAS': totLnC + totGvC,
+            'LN PEÇAS': totLnP, 'GV PEÇAS': totGvP, 'TOTAL PEÇAS': totLnP + totGvP
+        });
+
+        const wb = XLSX.utils.book_new(); const ws = XLSX.utils.json_to_sheet(dataExport);
+        XLSX.utils.book_append_sheet(wb, ws, "Resumo Consolidado");
+        XLSX.writeFile(wb, `Demanda_UCEP.xlsx`);
+    }
+
+    // ==========================================
+    // LÓGICA DA ABA 2: DIVISÃO INDIVIDUAL 
+    // ==========================================
+    window.appDataOEN = { data: [], limiteSelecionado: 50, alertas: [], grupos: [], currentFileName: null, lastProcessedFile: null };
+
+    document.getElementById('customLimitCarteiraOEN').addEventListener('focus', function() { document.getElementById('radioCarteiraOEN').checked = true; });
+    document.getElementById('customLimitVarejoOEN').addEventListener('focus', function() { document.getElementById('radioVarejoOEN').checked = true; });
+    
+    // Leitor de Arquivo da Aba 2 (Com aviso de Sucesso)
+    document.getElementById('oenInput').addEventListener('change', (e) => {
+        if(e.target.files[0]) {
+            window.appDataOEN.currentFileName = e.target.files[0].name;
+            lerArquivo(e.target.files[0], data => { window.appDataOEN.data = data; showUploadSuccess('oenInputMsg'); });
+        }
+    });
+
+    function processarOEN() {
+        if (window.appDataOEN.data.length === 0) { alert('⚠️ Por favor, carregue o arquivo ITEM OEN primeiro.'); return; }
+        
+        // Alerta de Arquivo Repetido
+        if (window.appDataOEN.lastProcessedFile === window.appDataOEN.currentFileName) {
+            alert('⚠️ AVISO: Você está processando exatamente o mesmo arquivo ("' + window.appDataOEN.currentFileName + '") novamente.');
+        }
+        window.appDataOEN.lastProcessedFile = window.appDataOEN.currentFileName;
+
+        const btn = document.getElementById('btnProcessOen'); btn.disabled = true; btn.innerText = "Processando...";
+
+        setTimeout(() => {
+            try {
+                const radioSelecionado = document.querySelector('input[name="perfilOperacaoOEN"]:checked').value;
+                if (radioSelecionado === 'carteira') {
+                    const customVal = parseInt(document.getElementById('customLimitCarteiraOEN').value);
+                    window.appDataOEN.limiteSelecionado = isNaN(customVal) || customVal < 1 ? 50 : customVal;
+                } else if (radioSelecionado === 'varejo') {
+                    const customVal = parseInt(document.getElementById('customLimitVarejoOEN').value);
+                    window.appDataOEN.limiteSelecionado = isNaN(customVal) || customVal < 1 ? 69 : customVal;
+                }
+                const limiteOEN = window.appDataOEN.limiteSelecionado;
+
+                let fileName = window.appDataOEN.currentFileName ? window.appDataOEN.currentFileName.replace(/\.[^/.]+$/, "") : "Base Individual";
+                let nomeTU = fileName;
+
+                let linhasValidas = 0; const prodCounts = {}; const uniqueDocsSet = new Set();
+                window.appDataOEN.data.forEach(row => {
+                    let doc = limparTexto(encontrarColuna(row, ['documento', 'ordem', 'remessa']));
+                    let prod = limparTexto(encontrarColuna(row, ['produto', 'material', 'código']));
+                    if (!doc) return; 
+                    linhasValidas++;
+                    if (prod) { prodCounts[prod] = (prodCounts[prod] || 0) + 1; }
+                    if (doc.length === 9 && !isNaN(doc)) { uniqueDocsSet.add(doc); }
+                });
+
+                const sortedProds = Object.entries(prodCounts).sort((a, b) => b[1] - a[1]);
+                const topProdText = sortedProds.length > 0 ? `${sortedProds[0][0]} <span style="color:#666; font-size:12px;">(${sortedProds[0][1]}x)</span>` : '-';
+                const maxOcorrenciaValor = sortedProds.length > 0 ? sortedProds[0][1] : 0;
+
+                window.appDataOEN.alertas = []; let temAlerta = false; let maxGroupsPrecalculado = 1;
+                sortedProds.forEach(([prod, count]) => {
+                    if (count > limiteOEN) {
+                        window.appDataOEN.alertas.push({ produto: prod, linhas: count });
+                        temAlerta = true;
+                        let needed = Math.ceil(count / limiteOEN);
+                        if (needed > maxGroupsPrecalculado) maxGroupsPrecalculado = needed;
+                    }
+                });
+
+                const validDocsArray = Array.from(uniqueDocsSet);
+                if (temAlerta) {
+                    window.appDataOEN.grupos = agruparRemessasInteligente(validDocsArray, window.appDataOEN.data, limiteOEN, false, null, maxGroupsPrecalculado);
+                } else {
+                    window.appDataOEN.grupos = [validDocsArray];
+                }
+
+                const numGrupos = window.appDataOEN.grupos.length; const qtdProblemas = window.appDataOEN.alertas.length;
+                const summaryContainer = document.getElementById('oen-summary-container');
+                let textoAcao = '', statusVisual = '', rowClass = '';
+                
+                if (numGrupos <= 1) {
+                    textoAcao = '<span style="color:#16a34a; font-weight:bold;">Nenhuma</span>'; statusVisual = '<span style="color:#16a34a; font-weight:bold;">✅ OK</span>';
+                } else {
+                    rowClass = 'row-excedido'; statusVisual = '<span style="color:#e3000f; font-weight:bold;">⚠️ EXCEDIDO</span>';
+                    if (numGrupos === 2) textoAcao = 'Duplicar (2)'; else if (numGrupos === 3) textoAcao = 'Triplicar (3)'; else if (numGrupos === 4) textoAcao = 'Quadruplicar (4)'; else if (numGrupos === 5) textoAcao = 'Quintuplicar (5)'; else textoAcao = `Dividir em ${numGrupos}`;
+                    textoAcao = `<strong>${textoAcao}</strong>`;
+                }
+
+                summaryContainer.innerHTML = `<div class="table-container"><table class="summary-table">
+                    <thead><tr><th>UNIDADE DE TRANSPORTE (TU)</th><th>Maior Ocorrência<br><span style="font-size: 11px; font-weight: normal; color: #cbd5e1; text-transform: none;">(Qualquer Material)</span></th><th>Ação Recomendada (Grupos)</th><th>Status</th></tr></thead>
+                    <tbody><tr class="${rowClass}"><td style="font-weight: bold; color: var(--ceva-blue);">${nomeTU}</td><td><strong>${maxOcorrenciaValor}</strong> linhas</td><td>${textoAcao}</td><td>${statusVisual}</td></tr></tbody></table></div>`;
+
+                const listContainer = document.getElementById('oen-list-container');
+                let rowHtml = `<div class="tu-row ${qtdProblemas > 0 ? 'has-alert' : ''}">
+                    <div class="tu-stats"><span class="tu-name">📦 ${nomeTU}</span><span><strong>Total de Linhas:</strong> ${linhasValidas}</span><span><strong>Remessas Únicas:</strong> ${validDocsArray.length}</span><span><strong>Maior Frequência:</strong> ${topProdText}</span></div>
+                    <div class="tu-actions" id="oen-actions-div">`;
+                
+                if (qtdProblemas > 0) {
+                    rowHtml += `<button class="btn-tu" onclick="showModalOEN('ALERTA', '🚨 Materiais Excedidos - Análise Individual')">🚨 Alertas <span class="badge">${qtdProblemas}</span></button>
+                                <button class="btn-group" onclick="showModalOEN('GRUPOS', '📦 Divisão Balanceada - Análise Individual')">📑 Grupos: ${numGrupos}</button>`;
+                } else {
+                    rowHtml += `<span class="status-ok">✅ Limpa</span>`;
+                }
+                rowHtml += `<button class="btn-download-tu" onclick="baixarExcelOEN('${nomeTU}')">📥 Baixar Excel</button></div></div>`;
+                listContainer.innerHTML = rowHtml;
+
+                document.getElementById('report-area-oen').style.display = 'block';
+
+            } catch (error) { alert("Erro ao processar Divisão Individual: " + error); } 
+            finally { btn.disabled = false; btn.innerText = "EXECUTAR DIVISÃO INDIVIDUAL"; }
+        }, 300);
+    }
+
+    function showModalOEN(tipo, titulo) {
+        document.getElementById('modalTitle').innerText = titulo; const body = document.getElementById('modalBody'); let html = '';
+        if (tipo === 'ALERTA') {
+            const materiais = [...(window.appDataOEN.alertas || [])].sort((a, b) => b.linhas - a.linhas).slice(0, 5);
+            html = `<p style="margin-top:0; margin-bottom: 20px; color:#555; font-size: 15px;">Limite Operacional Configurado: <b>${window.appDataOEN.limiteSelecionado} linhas</b><br><span style="color:var(--ceva-red); font-size:13px;">⚠️ Exibindo o TOP 5 de materiais que mais excederam.</span></p><table class="detail-table" style="background:#fff;"><thead><tr><th>Código do Material</th><th>Qtd Linhas</th><th>Ação do Motor</th></tr></thead><tbody>`;
+            window.appDataOEN.alertas.forEach(m => { html += `<tr><td><b>${m.produto}</b></td><td style="color:#e3000f; font-weight:bold;">${m.linhas}</td><td>Exige balanceamento logístico</td></tr>`; });
+            html += '</tbody></table>';
+        } else if (tipo === 'GRUPOS') {
+            const grupos = window.appDataOEN.grupos;
+            html = `<p style="margin-top:0; margin-bottom: 20px; color:#666; font-size: 15px;">O sistema distribuiu as remessas garantindo o limite de <b>${window.appDataOEN.limiteSelecionado} linhas</b> e mantendo os grupos balanceados.</p>`;
+            grupos.forEach((gDocs, index) => {
+                const txtId = `txtGroup_oen_${index}`;
+                html += `<div class="group-box"><div class="group-header"><h4>Grupo ${index + 1} (${gDocs.length} remessas)</h4><button class="btn-copy" onclick="copiarTexto('${txtId}')">📄 COPIAR REMESSAS</button></div><textarea id="${txtId}" class="group-text" readonly>${gDocs.join('\n')}</textarea></div>`;
+            });
+        }
+        body.innerHTML = html; document.getElementById('detailsModal').style.display = 'flex';
+    }
+
+    function baixarExcelOEN(nomeTU) {
+        const allDocs = window.appDataOEN.data.map(row => limparTexto(encontrarColuna(row, ['documento', 'ordem', 'remessa'])));
+        const uniqueDocs = [...new Set(allDocs)].filter(d => d !== '' && d.length === 9 && !isNaN(d));
+
+        const grupos = window.appDataOEN.grupos || [];
+        const docToGroup = {};
+        grupos.forEach((gDocs, index) => { gDocs.forEach(doc => { docToGroup[doc] = grupos.length > 1 ? `Grupo ${index + 1}` : 'Grupo 1'; }); });
+
+        const exportData = uniqueDocs.map(doc => ({ 'Remessa': doc, 'Grupo de Separação': docToGroup[doc] || 'Não Agrupado' }));
+        exportData.sort((a, b) => {
+            if (a['Grupo de Separação'] === b['Grupo de Separação']) return a['Remessa'].localeCompare(b['Remessa']);
+            return a['Grupo de Separação'].localeCompare(b['Grupo de Separação']);
+        });
+
+        const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(exportData), "Remessas e Grupos");
+        
+        const safeName = nomeTU ? nomeTU.replace(/[^a-zA-Z0-9_-]/g, "_") : "Individual";
+        XLSX.writeFile(wb, `Base_${safeName}_Remessas.xlsx`);
+    }
+</script>
+</body>
+</html>
