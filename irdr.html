@@ -3,284 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análise IRDR</title>
-    <!-- SheetJS para ler e baixar arquivos Excel -->
+    <title>Dashboard IRDR | Controle de TUs</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <!-- html2canvas para tirar o print da tela -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <!-- Chart.js para os gráficos dinâmicos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
+        /* === TEMA DARK MODE (PRETO) === */
+        :root {
+            --bg-main: #000000;
+            --bg-panel: #0A0A0A;
+            --bg-sidebar: #111111;
+            --bg-hover: #1A1A1A;
+            --border-color: #333333;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            
+            --neon-blue: #0EA5E9;
+            --neon-yellow: #F59E0B;
+            --neon-purple: #A855F7;
+            --neon-red: #EF4444;
+            --neon-green: #10B981;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #002060;
-            text-align: center;
-            border-bottom: 2px solid #002060;
-            padding-bottom: 10px;
-        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-main); color: var(--text-main); margin: 0; padding: 0; overflow-x: hidden; }
         
-        #uploadScreen { display: block; }
-        .upload-section {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #e9ecef;
-            border-radius: 5px;
-        }
-        label { font-weight: bold; }
-        input[type="file"] { padding: 5px; }
+        /* === TELA DE UPLOAD === */
+        #uploadScreen { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .upload-container { background: var(--bg-panel); padding: 30px 40px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 650px; }
+        .upload-container h1 { text-align: center; color: var(--text-main); margin-bottom: 25px; font-size: 24px; border-bottom: 2px solid var(--border-color); padding-bottom: 15px; }
         
-        .btn-principal {
-            background-color: #002060;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn-principal:hover { background-color: #003399; }
-        .aviso { color: #555; font-size: 12px; margin-top: 5px; font-style: italic; }
-
-        #resultScreen { display: none; }
-        .tabs {
-            overflow: hidden;
-            border-bottom: 2px solid #002060;
-            background-color: #f1f1f1;
-            border-radius: 5px 5px 0 0;
-            margin-top: 20px;
-        }
-        .tab-button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 15px;
-            font-weight: bold;
-            color: #555;
-        }
-        .tab-button:hover { background-color: #ddd; color: #002060; }
-        .tab-button.active { background-color: #002060; color: white; }
-        .tab-content {
-            display: none;
-            padding: 20px 0;
-            animation: fadeEffect 0.5s;
-        }
-        @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #002060;
-            color: white;
-            border-bottom: 3px solid #cc0000;
-        }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        tr:hover { background-color: #f1f1f1; }
+        .upload-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .section-title { grid-column: span 2; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 5px; margin-top: 10px; font-size: 16px; font-weight: bold; }
         
-        .filter-input {
-            width: 90%;
-            padding: 4px;
-            margin-top: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-size: 12px;
-            color: #333;
-        }
+        .upload-group { background: var(--bg-sidebar); padding: 15px; border-radius: 8px; border: 1px solid var(--border-color); }
+        .upload-group label { font-weight: bold; color: var(--neon-blue); display: block; margin-bottom: 8px; font-size: 13px; }
+        .upload-group.full-width { grid-column: span 2; }
+        .upload-group.highlight { border-color: var(--neon-yellow); background: rgba(245, 158, 11, 0.05); }
+        .upload-group.highlight label { color: var(--neon-yellow); }
 
-        .linha-feita {
-            text-decoration: line-through;
-            color: #888;
-            background-color: #e2e2e2 !important;
-            opacity: 0.6;
-        }
-        .checkbox-feito {
-            transform: scale(1.6);
-            cursor: pointer;
-            accent-color: #002060;
-        }
+        input[type="file"] { width: 100%; color: var(--text-muted); font-size: 12px; }
+        input[type="file"]::file-selector-button { background: var(--bg-hover); color: var(--text-main); border: 1px solid var(--border-color); padding: 8px 10px; border-radius: 4px; cursor: pointer; transition: 0.3s; margin-right: 10px; font-size: 11px; }
+        input[type="file"]::file-selector-button:hover { background: var(--neon-blue); color: #fff; }
+        .upload-group.highlight input[type="file"]::file-selector-button:hover { background: var(--neon-yellow); color: #000; border-color: var(--neon-yellow); }
 
-        .corte-row { color: #d9534f; font-weight: bold; background-color: #ffe6e6 !important; }
-        .col-corte-header { background-color: #d9534f; }
-        .col-corte-cell { background-color: #f5c6c6; color: #a94442; font-weight: bold; }
+        .aviso { font-size: 11px; color: var(--text-muted); margin-top: 5px; font-style: italic; line-height: 1.4; }
+        .btn-processar { background: linear-gradient(90deg, #0EA5E9, #3B82F6); color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); }
+        .btn-processar:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5); }
+
+        /* === LAYOUT DO DASHBOARD === */
+        #resultScreen { display: none; height: 100vh; } /* Corrigido: removido display: flex daqui */
+        .sidebar { width: 280px; background: var(--bg-sidebar); border-right: 1px solid var(--border-color); display: flex; flex-direction: column; padding: 20px 15px; }
+        .main-content { flex: 1; padding: 20px 30px; overflow-y: auto; background: var(--bg-main); }
         
-        .btn-voltar {
-            background-color: #666;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .btn-voltar:hover { background-color: #444; }
-
-        .btn-acao {
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: 0.2s;
-        }
-        .btn-foto { background-color: #6f42c1; }
-        .btn-foto:hover { background-color: #5a32a3; }
-        .btn-excel { background-color: #28a745; }
-        .btn-excel:hover { background-color: #218838; }
-        .btn-copiar { background-color: #17a2b8; }
-        .btn-copiar:hover { background-color: #138496; }
-
-        /* Container do Gráfico e Card da TU */
-        .grafico-container {
-            width: 100%;
-            max-width: 650px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
+        .brand { font-size: 20px; font-weight: bold; color: white; display: flex; align-items: center; gap: 10px; margin-bottom: 40px; padding: 0 10px; }
+        .brand span { background: var(--neon-blue); border-radius: 6px; padding: 5px 8px; font-size: 16px; }
         
-        .card-tu {
-            background: #002060;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 14px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-            align-self: flex-start;
-            margin-bottom: 10px;
-        }
+        .nav-btn { background: transparent; border: 1px solid transparent; width: 100%; text-align: left; padding: 12px 15px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 15px; margin-bottom: 10px; transition: 0.3s; }
+        .nav-btn .icon-box { background: var(--bg-hover); width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-size: 16px; border: 1px solid var(--border-color); transition: 0.3s; }
+        .nav-btn .nav-text { display: flex; flex-direction: column; }
+        .nav-text strong { color: var(--text-main); font-size: 14px; }
+        .nav-text span { color: var(--text-muted); font-size: 11px; }
+        
+        .nav-btn:hover { background: var(--bg-panel); border-color: var(--border-color); }
+        .nav-btn.active { background: var(--bg-panel); border-color: var(--border-color); }
+        .nav-btn.active.nav-resumo { border-left: 3px solid var(--neon-blue); }
+        .nav-btn.active.nav-resumo .icon-box { border-color: var(--neon-blue); color: var(--neon-blue); }
+        .nav-btn.active.nav-movs { border-left: 3px solid var(--neon-yellow); }
+        .nav-btn.active.nav-movs .icon-box { border-color: var(--neon-yellow); color: var(--neon-yellow); }
+        .nav-btn.active.nav-cortes { border-left: 3px solid var(--neon-red); }
+        .nav-btn.active.nav-cortes .icon-box { border-color: var(--neon-red); color: var(--neon-red); }
+        .nav-btn.active.nav-relacao { border-left: 3px solid var(--neon-green); }
+        .nav-btn.active.nav-relacao .icon-box { border-color: var(--neon-green); color: var(--neon-green); }
+
+        .tab-content { display: none; animation: fadeIn 0.4s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* === HEADER DA PÁGINA === */
+        .top-header { display: flex; justify-content: space-between; align-items: center; background: var(--bg-panel); padding: 15px 25px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 25px; }
+        .top-header h2 { margin: 0; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+        .top-actions { display: flex; align-items: center; gap: 15px; }
+        
+        .btn-export { background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 5px; }
+        .btn-export:hover { background: rgba(16, 185, 129, 0.1); }
+        .btn-foto { background: transparent; color: var(--neon-purple); border: 1px solid var(--neon-purple); padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 5px; }
+        .btn-foto:hover { background: rgba(168, 85, 247, 0.1); }
+        .btn-nova { background: var(--bg-hover); color: var(--text-main); border: 1px solid var(--border-color); padding: 6px 15px; border-radius: 6px; font-size: 12px; cursor: pointer; transition: 0.3s; }
+        .btn-nova:hover { background: var(--border-color); }
+
+        /* === DASHBOARD CARDS === */
+        .dashboard-cards { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
+        .kpi-card { flex: 1; min-width: 180px; max-width: 230px; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 10px; padding: 15px 15px; display: flex; flex-direction: column; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+        .kpi-card.blue { border-top: 4px solid var(--neon-blue); box-shadow: 0 4px 20px rgba(14, 165, 233, 0.05); }
+        .kpi-card.green { border-top: 4px solid var(--neon-green); box-shadow: 0 4px 20px rgba(16, 185, 129, 0.05); }
+        .kpi-card.purple { border-top: 4px solid var(--neon-purple); box-shadow: 0 4px 20px rgba(168, 85, 247, 0.05); }
+        .kpi-card.red { border-top: 4px solid var(--neon-red); box-shadow: 0 4px 20px rgba(239, 68, 68, 0.05); }
+        .kpi-card.orange { border-top: 4px solid var(--neon-yellow); box-shadow: 0 4px 20px rgba(245, 158, 11, 0.05); }
+
+        .kpi-header { font-size: 11px; font-weight: bold; color: var(--text-muted); text-transform: uppercase; margin-bottom: 12px; display: flex; justify-content: center; align-items: center; gap: 6px; letter-spacing: 0.5px; }
+        .kpi-value { font-size: 26px; font-weight: bold; color: var(--text-main); margin-bottom: 5px; }
+        .kpi-sub { font-size: 11px; color: var(--text-muted); }
+
+        .kpi-card.blue .kpi-value { color: var(--neon-blue); }
+        .kpi-card.green .kpi-value { color: var(--neon-green); }
+        .kpi-card.purple .kpi-value { color: var(--neon-purple); }
+        .kpi-card.red .kpi-value { color: var(--neon-red); }
+        .kpi-card.orange .kpi-value { color: var(--neon-yellow); }
+
+        /* === TABELAS E FILTROS === */
+        .table-wrapper { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 10px; padding: 1px; margin-bottom: 25px; padding-bottom: 30px; overflow: visible;}
+        table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: center; }
+        th { background: #111111; color: var(--text-muted); font-size: 11px; text-transform: uppercase; padding: 15px 10px; border-bottom: 1px solid var(--border-color); font-weight: bold; letter-spacing: 0.5px; position: relative; }
+        td { padding: 12px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-main); }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: rgba(255,255,255,0.05); }
+        
+        .filter-input { width: 90%; background: var(--bg-main); border: 1px solid var(--border-color); color: white; padding: 6px; margin-top: 8px; border-radius: 4px; font-size: 11px; outline: none; text-align: center; }
+        .filter-input:focus { border-color: var(--neon-blue); }
+
+        .filter-icon { font-size: 10px; margin-left: 8px; cursor: pointer; color: var(--text-muted); transition: 0.2s; padding: 4px; border-radius: 4px; }
+        .filter-icon:hover { background: rgba(255,255,255,0.1); color: var(--neon-blue); }
+        .filter-icon.active-filter { color: var(--neon-blue); }
+
+        .filter-dropdown { position: absolute; top: 100%; left: 10px; background: #151515; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; z-index: 1000; min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.8); display: none; text-align: left; }
+        .filter-search input { width: 100%; background: var(--bg-main); border: 1px solid var(--border-color); color: white; padding: 6px; border-radius: 4px; font-size: 11px; outline: none; margin-bottom: 8px; box-sizing: border-box; }
+        .filter-search input:focus { border-color: var(--neon-blue); }
+        .filter-actions { display: flex; gap: 5px; margin-bottom: 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
+        .filter-actions button { flex: 1; background: var(--bg-hover); color: var(--text-main); border: 1px solid var(--border-color); font-size: 10px; padding: 4px; border-radius: 4px; cursor: pointer; transition: 0.2s; }
+        .filter-actions button:hover { background: var(--neon-blue); border-color: var(--neon-blue); }
+        .filter-list { max-height: 180px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; padding-right: 5px; }
+        .filter-list label { display: flex; align-items: center; gap: 8px; color: var(--text-main); font-size: 12px; font-weight: normal; cursor: pointer; white-space: nowrap; text-transform: none; }
+        .filter-list input[type="checkbox"] { accent-color: var(--neon-blue); cursor: pointer; }
+        .filter-list::-webkit-scrollbar { width: 4px; }
+        .filter-list::-webkit-scrollbar-track { background: var(--bg-main); }
+        .filter-list::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+
+        .corte-row td { background: rgba(239, 68, 68, 0.1); color: #FCA5A5; font-weight: bold; }
+        .checkbox-feito { transform: scale(1.4); accent-color: var(--neon-blue); cursor: pointer; }
+        .linha-feita td { text-decoration: line-through; opacity: 0.4; }
+
+        /* === GRÁFICO E CONTAINERS === */
+        .chart-box { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; width: 100%; display: flex; align-items: center; justify-content: center;}
+        .total-geral-row { background-color: var(--bg-hover) !important; border-top: 2px solid var(--border-color) !important;}
+
+        #tabelaResumoContainer { overflow-x: auto; width: 100%; padding-bottom: 10px; }
+        #tabelaResumoContainer table { min-width: 800px; }
+        .resumo-flex-layout { display: flex; gap: 20px; flex-wrap: wrap; }
+        .resumo-table-box { flex: 2; min-width: 0; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 10px; padding: 1px; display: flex; flex-direction: column; }
+        .resumo-chart-box { flex: 1; min-width: 300px; }
 
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Análise Sistêmica IRDR</h1>
-
-    <div id="uploadScreen">
-        <div class="upload-section">
-            <div>
-                <label for="fileOen">1. Selecione o arquivo do item OEN da TU:</label><br>
-                <input type="file" id="fileOen" accept=".csv, .xlsx, .xls">
-                <div class="aviso">* Itens duplicados serão somados e consolidados automaticamente.</div>
-            </div>
-            
-            <div>
-                <label for="fileEstoque">2. Selecione o arquivo de Saldo (Posições IRDR / Estoque):</label><br>
-                <input type="file" id="fileEstoque" accept=".csv, .xlsx, .xls">
-                <div class="aviso">* Você pode subir o relatório bruto! Posições não autorizadas (ex: PP, PK) serão ignoradas automaticamente.</div>
-            </div>
-        </div>
-        <button class="btn-principal" onclick="processarDados()">Processar Dados</button>
-        <div id="loadingText" style="text-align: center; margin-top: 15px; font-weight: bold; color: #002060; display: none;">Processando inteligência de dados, aguarde...</div>
-    </div>
-
-    <div id="resultScreen">
-        <button class="btn-voltar" onclick="voltarInicio()">← Nova Análise</button>
+<!-- TELA DE UPLOAD -->
+<div id="uploadScreen">
+    <div class="upload-container">
+        <h1>Análise Sistêmica IRDR</h1>
         
-        <div class="tabs">
-            <button class="tab-button active" onclick="abrirAba(event, 'abaMovimentacoes')">Movimentações</button>
-            <button class="tab-button" onclick="abrirAba(event, 'abaCortes')">Cortes</button>
-            <button class="tab-button" onclick="abrirAba(event, 'abaRelacao')">Relação Itens (Inventário)</button>
-            <button class="tab-button" onclick="abrirAba(event, 'abaResumo')">Qtd Retirada por Posição</button>
-        </div>
-
-        <div id="abaMovimentacoes" class="tab-content" style="display: block;">
-            <div id="tabelaMovimentacoes"></div>
-        </div>
-
-        <div id="abaCortes" class="tab-content">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <p style="color: #666; font-style: italic; margin: 0;">* Relação de itens que não possuem saldo suficiente nas posições autorizadas.</p>
-                <button class="btn-acao btn-foto" onclick="capturarTela('tabelaCortes', 'Relatorio_Cortes_IRDR')">
-                    📸 Capturar Tela
-                </button>
+        <div class="upload-grid">
+            <!-- BLOCO 1: NOVA ANÁLISE -->
+            <div class="section-title" style="color: var(--neon-blue);">🟢 Iniciar Nova Análise</div>
+            
+            <div class="upload-group">
+                <label for="fileTu">1. Ordem de entrega (Opcional):</label>
+                <input type="file" id="fileTu" accept=".csv, .xlsx, .xls">
+                <div class="aviso">Permite agrupar peças por TU.</div>
             </div>
-            <div id="tabelaCortes"></div>
+            
+            <div class="upload-group">
+                <label for="fileOen">2. Item OEN (Necessidades):</label>
+                <input type="file" id="fileOen" accept=".csv, .xlsx, .xls">
+                <div class="aviso">Consolida SKUs repetidos.</div>
+            </div>
+            
+            <div class="upload-group full-width">
+                <label for="fileEstoque">3. Saldo nas Posições (Estoque):</label>
+                <input type="file" id="fileEstoque" accept=".csv, .xlsx, .xls">
+                <div class="aviso">Posições erradas (PP, PK) serão ignoradas.</div>
+            </div>
+
+            <!-- BLOCO 2: RESTAURAR TURNO -->
+            <div class="section-title" style="color: var(--neon-yellow); margin-top: 15px;">🟡 Ou Continuar Turno Anterior</div>
+            
+            <div class="upload-group full-width highlight">
+                <label for="fileProgresso">4. Restaurar Sessão Salva (.json):</label>
+                <input type="file" id="fileProgresso" accept=".json">
+                <div class="aviso">Suba apenas o arquivo salvo do turno anterior. Ignora as planilhas acima.</div>
+            </div>
         </div>
 
-        <div id="abaRelacao" class="tab-content">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <p style="color: #666; font-style: italic; margin: 0;">* Exibindo apenas as movimentações das posições de Inventário/Linha (Prioridades 1, 6 e 7).</p>
-                <div style="display: flex; gap: 10px;">
-                    <button class="btn-acao btn-foto" onclick="capturarTela('tabelaRelacao', 'Relatorio_Inventario')">
-                        📸 Capturar Tela
-                    </button>
-                    <button class="btn-acao btn-excel" onclick="baixarExcel('tabelaRelacao', 'Relatorio_Inventario')">
-                        ⬇️ Baixar Excel
-                    </button>
+        <button class="btn-processar" onclick="processarDados()">PROCESSAR ANÁLISE</button>
+        <div id="loadingText" style="text-align: center; margin-top: 15px; font-weight: bold; color: var(--neon-blue); display: none;">Sincronizando dados e restaurando turnos...</div>
+    </div>
+</div>
+
+<!-- TELA DE RESULTADOS (DASHBOARD) -->
+<div id="resultScreen">
+    
+    <!-- SIDEBAR DE NAVEGAÇÃO -->
+    <aside class="sidebar">
+        <div class="brand">
+            <span>📦</span> Logística
+        </div>
+        
+        <button class="nav-btn nav-resumo active" onclick="abrirAba(event, 'abaResumo', 'nav-resumo')">
+            <div class="icon-box">📊</div>
+            <div class="nav-text">
+                <strong>Análise Geral</strong>
+                <span>Dashboard Executivo</span>
+            </div>
+        </button>
+        
+        <button class="nav-btn nav-movs" onclick="abrirAba(event, 'abaMovimentacoes', 'nav-movs')">
+            <div class="icon-box">📋</div>
+            <div class="nav-text">
+                <strong>Movimentações</strong>
+                <span>Tarefas de Separação</span>
+            </div>
+        </button>
+        
+        <button class="nav-btn nav-cortes" onclick="abrirAba(event, 'abaCortes', 'nav-cortes')">
+            <div class="icon-box">✂️</div>
+            <div class="nav-text">
+                <strong>Validação de Cortes</strong>
+                <span>Análise de Demandas</span>
+            </div>
+        </button>
+        
+        <button class="nav-btn nav-relacao" onclick="abrirAba(event, 'abaRelacao', 'nav-relacao')">
+            <div class="icon-box">🔍</div>
+            <div class="nav-text">
+                <strong>Relação Inventário</strong>
+                <span>Itens de Linha</span>
+            </div>
+        </button>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+        
+        <!-- HEADER TOP -->
+        <header class="top-header">
+            <h2><span id="tituloPagina">Análise de Tratativas de IRDR</span></h2>
+            <div class="top-actions">
+                <button class="btn-nova" onclick="voltarInicio()">Nova Análise</button>
+            </div>
+        </header>
+
+        <!-- ABA 1: RESUMO (DASHBOARD) -->
+        <div id="abaResumo" class="tab-content" style="display: block;">
+            <div id="dashboardCards"></div>
+            <div class="resumo-flex-layout">
+                <div class="resumo-table-box">
+                    <div style="padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color);">
+                        <h3 style="margin: 0; font-size: 14px; color: var(--text-main);">Perfil & Volume por TU</h3>
+                        <button class="btn-export" onclick="copiarApenasValores()">📋 Copiar para Excel</button>
+                    </div>
+                    <div id="tabelaResumoContainer"></div>
                 </div>
-            </div>
-            <div id="tabelaRelacao"></div>
-        </div>
-
-        <div id="abaResumo" class="tab-content">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <p style="color: #666; font-style: italic; margin: 0;">* Resumo geral de peças concluídas por zona.</p>
-                <button class="btn-acao btn-copiar" onclick="copiarApenasValores()">
-                    📋 Copiar Valores para Colar no Excel
-                </button>
-            </div>
-            
-            <div id="tabelaResumoContainer"></div>
-            
-            <div class="grafico-container">
-                <div class="card-tu">Total Peças TU: <span id="lblTotalTU">0</span></div>
-                <div style="width: 100%;">
+                <div class="chart-box resumo-chart-box">
                     <canvas id="graficoResumo"></canvas>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- ABA 2: MOVIMENTAÇÕES -->
+        <div id="abaMovimentacoes" class="tab-content">
+            <div class="table-wrapper">
+                <div style="padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="margin: 0; font-size: 14px; color: var(--neon-yellow);">Tarefas de Separação</h3>
+                    <button class="btn-acao" style="background: var(--neon-yellow); color: #000; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);" onclick="salvarProgresso()">
+                        💾 Salvar Progresso do Turno
+                    </button>
+                </div>
+                <div id="tabelaMovimentacoes"></div>
+            </div>
+        </div>
+
+        <!-- ABA 3: CORTES -->
+        <div id="abaCortes" class="tab-content">
+            <div class="table-wrapper">
+                <div style="padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="margin: 0; font-size: 14px; color: var(--neon-red);">Relação de Ruptura (Sem Saldo)</h3>
+                    <button class="btn-foto" onclick="capturarTela('tabelaCortes', 'Relatorio_Cortes')">📸 Print da Tela</button>
+                </div>
+                <div id="tabelaCortes"></div>
+            </div>
+        </div>
+
+        <!-- ABA 4: RELAÇÃO INVENTÁRIO -->
+        <div id="abaRelacao" class="tab-content">
+            <div class="table-wrapper">
+                <div style="padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="margin: 0; font-size: 14px; color: var(--neon-green);">Movimentações Exclusivas de Inventário/Linha</h3>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn-foto" onclick="capturarTela('tabelaRelacao', 'Relatorio_Inventario')">📸 Print</button>
+                        <button class="btn-export" onclick="baixarExcel('tabelaRelacao', 'Relatorio_Inventario')">⬇️ Excel</button>
+                    </div>
+                </div>
+                <div id="tabelaRelacao"></div>
+            </div>
+        </div>
+
+    </main>
 </div>
 
 <script>
     let meuGrafico = null;
+    
+    window.movimentacoesGlobais = [];
+    window.resumoGlobal = {};
+
+    document.addEventListener("click", () => {
+        document.querySelectorAll('.filter-dropdown').forEach(d => d.style.display = 'none');
+    });
 
     async function lerArquivoExcel(file) {
         return new Promise((resolve, reject) => {
@@ -298,7 +335,7 @@
                     if (linhasBrutas[i] && Array.isArray(linhasBrutas[i])) {
                         const achouCabecalho = linhasBrutas[i].some(val => {
                             let texto = String(val).toUpperCase().trim();
-                            return texto === "SKU" || texto === "PRODUTO";
+                            return texto === "SKU" || texto === "PRODUTO" || texto.includes("DOCUMENTO") || texto.includes("TRANSPORTE") || texto.includes("POSIÇÃO");
                         });
                         if (achouCabecalho) {
                             linhaDoCabecalho = i;
@@ -314,81 +351,165 @@
         });
     }
 
-    // REGRA DE PRIORIDADES ATUALIZADA (CORRESPONDÊNCIA EXATA PARA DPC.SOBRA)
     function descobrirPrioridade(posicao) {
         if (!posicao) return 99;
         let posUpper = posicao.toUpperCase().trim();
-        
         if (posUpper.includes("DIVCIC")) return 1;
         if (posUpper.includes("DPC.SOBRA.IRDR")) return 2;
         if (posUpper.includes("RECUSA.LOG")) return 3;
         if (posUpper.includes("DPC.SOBRA.AERO")) return 5;
-        
-        // Regra Corrigida: Só aceita se for exatamente "DPC.SOBRA", ignorando DPC.SOBRA.D2D
         if (posUpper === "DPC.SOBRA") return 4;
-        
         if (posUpper.includes("PICLINHA")) return 6;
         if (posUpper.startsWith("LN") || posUpper.startsWith("PC") || posUpper.startsWith("PD")) return 7;
-        
         return 99; 
     }
 
+    function buscarValorLimpo(obj, palavrasChave) {
+        for (let key in obj) {
+            let keyUpper = key.toUpperCase().trim();
+            for (let palavra of palavrasChave) {
+                if (keyUpper === palavra || keyUpper.includes(palavra)) {
+                    return obj[key];
+                }
+            }
+        }
+        return null;
+    }
+
+    function salvarProgresso() {
+        if (!window.movimentacoesGlobais || window.movimentacoesGlobais.length === 0) {
+            alert("Nenhum dado para salvar.");
+            return;
+        }
+
+        let saveData = {
+            movimentacoes: window.movimentacoesGlobais,
+            resumo: window.resumoGlobal
+        };
+
+        let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(saveData));
+        let dlAnchorElem = document.createElement('a');
+        dlAnchorElem.setAttribute("href", dataStr);
+        let dataHora = new Date().toLocaleString('pt-BR').replace(/[/:]/g, '-').replace(', ', '_');
+        dlAnchorElem.setAttribute("download", `sessao_irdr_${dataHora}.json`);
+        document.body.appendChild(dlAnchorElem);
+        dlAnchorElem.click();
+        dlAnchorElem.remove();
+    }
+
+    window.atualizarStatusFeito = function(id, checked) {
+        let mov = window.movimentacoesGlobais.find(m => m.id === id);
+        if (mov) {
+            mov.feito = checked;
+        }
+    };
+
     async function processarDados() {
+        const fileTu = document.getElementById('fileTu').files[0];
         const fileOen = document.getElementById('fileOen').files[0];
         const fileEstoque = document.getElementById('fileEstoque').files[0];
+        const fileProgresso = document.getElementById('fileProgresso').files[0]; 
 
-        if (!fileOen || !fileEstoque) {
-            alert("Por favor, selecione os DOIS arquivos antes de processar.");
+        if (!fileProgresso && (!fileOen || !fileEstoque)) {
+            alert("Você precisa enviar o arquivo de Sessão Salva (.json) OU os arquivos de OEN e Estoque.");
             return;
         }
 
         document.getElementById('loadingText').style.display = "block";
 
         try {
-            const dadosOenBruto = await lerArquivoExcel(fileOen);
-            let dadosEstoque = await lerArquivoExcel(fileEstoque);
+            if (fileProgresso) {
+                const text = await fileProgresso.text();
+                const saveData = JSON.parse(text);
+                
+                if (saveData.movimentacoes && saveData.resumo) {
+                    window.movimentacoesGlobais = saveData.movimentacoes;
+                    window.resumoGlobal = saveData.resumo;
+                    
+                    renderizarTelas();
+                    document.querySelector('.nav-resumo').click();
+                    
+                    document.getElementById('loadingText').style.display = "none";
+                    document.getElementById('uploadScreen').style.display = "none";
+                    document.getElementById('resultScreen').style.display = "flex";
+                    return;
+                } else {
+                    alert("Arquivo de progresso inválido ou corrompido.");
+                    document.getElementById('loadingText').style.display = "none";
+                    return;
+                }
+            }
 
+            let mapTuDoc = {};
+            if (fileTu) {
+                let dadosTu = await lerArquivoExcel(fileTu);
+                dadosTu.forEach(linha => {
+                    let doc = buscarValorLimpo(linha, ["DOCUMENTO", "DOC"]);
+                    let tu = buscarValorLimpo(linha, ["UNIDADE DE TRANSPORTE", "UNID. DE TRANSPORTE", "TU"]);
+                    if (doc && tu) {
+                        let docClean = String(doc).replace(/^0+/, '').trim();
+                        mapTuDoc[docClean] = String(tu).trim();
+                    }
+                });
+            }
+
+            const dadosOenBruto = await lerArquivoExcel(fileOen);
             let oenAgrupado = {};
+            
             dadosOenBruto.forEach(pedido => {
-                let sku = pedido["Produto"] || pedido["SKU"];
-                let qtd = parseFloat(pedido["Quantidade"]) || parseFloat(pedido["Qtde. Pec"]) || 0;
+                let sku = buscarValorLimpo(pedido, ["PRODUTO", "SKU"]);
+                let qtd = parseFloat(buscarValorLimpo(pedido, ["QUANTIDADE", "QTDE"])) || 0;
+                let doc = buscarValorLimpo(pedido, ["DOCUMENTO", "DOC"]);
+                
+                let tu = "-";
+                if (doc) {
+                    let docClean = String(doc).replace(/^0+/, '').trim();
+                    tu = mapTuDoc[docClean] || "-";
+                }
                 
                 if (sku && qtd > 0) {
-                    if (oenAgrupado[sku]) {
-                        oenAgrupado[sku] += qtd; 
-                    } else {
-                        oenAgrupado[sku] = qtd; 
-                    }
+                    let chave = tu + "|" + sku; 
+                    if (oenAgrupado[chave]) { oenAgrupado[chave].qtd += qtd; } 
+                    else { oenAgrupado[chave] = { sku: sku, tu: tu, qtd: qtd }; }
                 }
             });
 
-            let dadosOen = Object.keys(oenAgrupado).map(sku => {
-                return { SKU: sku, Quantidade: oenAgrupado[sku] };
-            });
+            let dadosOen = Object.keys(oenAgrupado).map(chave => oenAgrupado[chave]);
 
+            let dadosEstoque = await lerArquivoExcel(fileEstoque);
             dadosEstoque.forEach(item => {
-                item.CodigoProduto = item["Produto"] || item["SKU"];
-                item.PosicaoReal = item["Posição no depósito"] || item["Posição"] || item["Posicao"];
-                item.PrioridadeCalc = item["Prioridade"] || descobrirPrioridade(item.PosicaoReal);
-                item.Saldo = parseFloat(item["Quantidade"]) || parseFloat(item["Qtde"]) || 0;
+                item.CodigoProduto = buscarValorLimpo(item, ["PRODUTO", "SKU"]);
+                item.PosicaoReal = buscarValorLimpo(item, ["POSIÇÃO", "POSICAO"]);
+                let prioridadeFornecida = buscarValorLimpo(item, ["PRIORIDADE"]);
+                item.PrioridadeCalc = prioridadeFornecida || descobrirPrioridade(item.PosicaoReal);
+                item.Saldo = parseFloat(buscarValorLimpo(item, ["QUANTIDADE", "QTDE"])) || 0;
+                item.UnidadeComercial = buscarValorLimpo(item, ["UNIDADE COMERCIAL", "UC"]) || "-";
             });
 
             dadosEstoque = dadosEstoque.filter(item => item.PrioridadeCalc <= 7);
-
             dadosEstoque.sort((a, b) => {
                 if (a.PrioridadeCalc !== b.PrioridadeCalc) { return a.PrioridadeCalc - b.PrioridadeCalc; }
                 return b.Saldo - a.Saldo; 
             });
 
             let movimentacoes = [];
-            let resumo = { p1: 0, p2: 0, p3: 0, p4: 0, p5: 0, p6: 0, p7: 0, totalTU: 0, concluido: 0, cortes: 0 };
+            let resumo = { 
+                p1: 0, p2: 0, p3: 0, p4: 0, p5: 0, p6: 0, p7: 0, totalTU: 0, concluido: 0, cortes: 0,
+                porTU: {} 
+            };
 
             dadosOen.forEach(pedido => {
-                let skuPedido = pedido.SKU; 
-                let qtdeNecessariaOriginal = pedido.Quantidade; 
-                let qtdeNecessaria = qtdeNecessariaOriginal;
+                let skuPedido = pedido.sku; 
+                let qtdeNecessaria = pedido.qtd; 
+                let tuPedido = pedido.tu;
                 
-                resumo.totalTU += qtdeNecessariaOriginal; 
+                if (!resumo.porTU[tuPedido]) {
+                    resumo.porTU[tuPedido] = { p1: 0, p2: 0, p3: 0, p4: 0, p5: 0, p6: 0, p7: 0, totalTU: 0, concluido: 0, cortes: 0 };
+                }
+
+                resumo.totalTU += qtdeNecessaria; 
+                resumo.porTU[tuPedido].totalTU += qtdeNecessaria;
+
                 let estoqueDoItem = dadosEstoque.filter(item => item.CodigoProduto == skuPedido);
 
                 for (let pos of estoqueDoItem) {
@@ -398,11 +519,10 @@
                         let qtdeARetirar = Math.min(pos.Saldo, qtdeNecessaria);
                         
                         movimentacoes.push({
-                            SKU: skuPedido,
-                            Posicao: pos.PosicaoReal || "-",
-                            Prioridade: pos.PrioridadeCalc,
-                            Qtd_Retirar: qtdeARetirar,
-                            Unidade: pos["Unidade comercial"] || pos["Unidade Comercial"] || "-"
+                            id: 'mov_' + Math.random().toString(36).substr(2, 9),
+                            feito: false,
+                            TU: tuPedido, SKU: skuPedido, Posicao: pos.PosicaoReal || "-",
+                            Prioridade: pos.PrioridadeCalc, Qtd_Retirar: qtdeARetirar, Unidade: pos.UnidadeComercial
                         });
 
                         resumo.concluido += qtdeARetirar;
@@ -414,100 +534,203 @@
                         if (pos.PrioridadeCalc === 6) resumo.p6 += qtdeARetirar;
                         if (pos.PrioridadeCalc === 7) resumo.p7 += qtdeARetirar;
 
-                        qtdeNecessaria -= qtdeARetirar;
-                        pos.Saldo -= qtdeARetirar; 
+                        resumo.porTU[tuPedido].concluido += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 1) resumo.porTU[tuPedido].p1 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 2) resumo.porTU[tuPedido].p2 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 3) resumo.porTU[tuPedido].p3 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 4) resumo.porTU[tuPedido].p4 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 5) resumo.porTU[tuPedido].p5 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 6) resumo.porTU[tuPedido].p6 += qtdeARetirar;
+                        if (pos.PrioridadeCalc === 7) resumo.porTU[tuPedido].p7 += qtdeARetirar;
+
+                        qtdeNecessaria -= qtdeARetirar; pos.Saldo -= qtdeARetirar; 
                     }
                 }
                 
                 if (qtdeNecessaria > 0) {
                     movimentacoes.push({
-                        SKU: skuPedido,
-                        Posicao: "CORTE (SEM SALDO NO ESTOQUE)",
-                        Prioridade: "-",
-                        Qtd_Retirar: qtdeNecessaria,
-                        Unidade: "-"
+                        id: 'mov_' + Math.random().toString(36).substr(2, 9),
+                        feito: false,
+                        TU: tuPedido, SKU: skuPedido, Posicao: "Sem saldo nas posições autorizadas",
+                        Prioridade: "-", Qtd_Retirar: qtdeNecessaria, Unidade: "-"
                     });
                     resumo.cortes += qtdeNecessaria; 
+                    resumo.porTU[tuPedido].cortes += qtdeNecessaria;
                 }
             });
 
             movimentacoes.sort((a, b) => {
+                if (a.TU !== b.TU) return a.TU.localeCompare(b.TU);
                 let prioA = (a.Prioridade === "-") ? 99 : parseInt(a.Prioridade);
                 let prioB = (b.Prioridade === "-") ? 99 : parseInt(b.Prioridade);
                 return prioA - prioB;
             });
 
-            renderizarTelas(movimentacoes, resumo);
-            
-            document.getElementById('lblTotalTU').innerText = resumo.totalTU;
-            gerarGrafico(resumo);
+            window.movimentacoesGlobais = movimentacoes;
+            window.resumoGlobal = resumo;
 
-            document.getElementById('loadingText').style.display = "none";
+            renderizarTelas();
+            
+            document.getElementById('resultScreen').style.display = "flex";
+            document.querySelector('.nav-resumo').click();
             document.getElementById('uploadScreen').style.display = "none";
-            document.getElementById('resultScreen').style.display = "block";
+            document.getElementById('loadingText').style.display = "none";
 
         } catch (erro) {
             console.error(erro);
-            alert("Erro ao processar. Verifique se os arquivos correspondem ao padrão.");
+            alert("Erro ao processar. Verifique se os arquivos estão corretos.");
             document.getElementById('loadingText').style.display = "none";
         }
     }
 
-    function filtrarTabela(tabelaId) {
-        let divContenedor = document.getElementById(tabelaId);
-        let tabela = divContenedor.querySelector("table");
-        if (!tabela) return;
+    function setupTableFilters(tableId) {
+        const table = document.querySelector(`#${tableId} table`);
+        if (!table) return;
 
-        let inputs = tabela.querySelectorAll(".filter-input");
-        let filtros = Array.from(inputs).map(input => input.value.toUpperCase());
-        let tbody = tabela.querySelector("tbody");
-        let linhas = tbody.querySelectorAll("tr");
+        const ths = table.querySelectorAll("thead th");
+        const rows = Array.from(table.querySelectorAll("tbody tr")).filter(tr => !tr.classList.contains('total-geral-row') && tr.cells.length > 1);
 
-        for (let i = 0; i < linhas.length; i++) {
-            let mostrarLinha = true;
-            let celulas = linhas[i].querySelectorAll("td");
-            if (celulas.length === 1) continue;
-            for (let j = 0; j < filtros.length; j++) {
-                let textoFiltro = filtros[j];
-                if (textoFiltro) {
-                    let celula = celulas[j];
-                    if (celula) {
-                        let textoCelula = celula.textContent || celula.innerText;
-                        if (textoCelula.toUpperCase().indexOf(textoFiltro) === -1) {
-                            mostrarLinha = false;
-                            break;
-                        }
-                    }
-                }
-            }
-            linhas[i].style.display = mostrarLinha ? "" : "none";
-        }
+        ths.forEach((th, colIndex) => {
+            if (th.innerText.includes("Feito")) return;
+
+            let uniqueValues = new Set();
+            rows.forEach(row => {
+                const cell = row.querySelectorAll("td")[colIndex];
+                if (cell) uniqueValues.add(cell.innerText.trim());
+            });
+            uniqueValues = Array.from(uniqueValues).sort();
+
+            const filterIcon = document.createElement("span");
+            filterIcon.innerHTML = "▼";
+            filterIcon.className = "filter-icon ignore-export";
+            
+            const dropdown = document.createElement("div");
+            dropdown.className = "filter-dropdown ignore-export";
+            
+            let html = `
+                <div class="filter-search">
+                    <input type="text" placeholder="Buscar..." onkeyup="searchInsideFilter(this)" onclick="event.stopPropagation()">
+                </div>
+                <div class="filter-actions">
+                    <button type="button" onclick="selectAllFilter('${tableId}', ${colIndex}, true, event)">Todos</button>
+                    <button type="button" onclick="selectAllFilter('${tableId}', ${colIndex}, false, event)">Nenhum</button>
+                </div>
+                <div class="filter-list">
+            `;
+            
+            uniqueValues.forEach(val => {
+                html += `<label onclick="event.stopPropagation()"><input type="checkbox" value="${val}" checked onchange="applyTableFilters('${tableId}')"> ${val}</label>`;
+            });
+            html += `</div>`;
+            
+            dropdown.innerHTML = html;
+
+            filterIcon.onclick = (e) => {
+                e.stopPropagation();
+                let isVisible = dropdown.style.display === 'block';
+                document.querySelectorAll('.filter-dropdown').forEach(d => d.style.display = 'none');
+                dropdown.style.display = isVisible ? 'none' : 'block';
+            };
+
+            dropdown.onclick = (e) => e.stopPropagation();
+
+            th.appendChild(filterIcon);
+            th.appendChild(dropdown);
+        });
     }
 
-    function abrirAba(evt, nomeAba) {
+    function searchInsideFilter(input) {
+        const term = input.value.toLowerCase();
+        const labels = input.closest('.filter-dropdown').querySelectorAll('.filter-list label');
+        labels.forEach(lbl => {
+            const text = lbl.innerText.toLowerCase();
+            lbl.style.display = text.includes(term) ? "flex" : "none";
+        });
+    }
+
+    function selectAllFilter(tableId, colIndex, check, event) {
+        event.stopPropagation();
+        const table = document.querySelector(`#${tableId} table`);
+        const th = table.querySelectorAll("thead th")[colIndex];
+        const checkboxes = th.querySelectorAll('.filter-list label');
+        
+        checkboxes.forEach(lbl => {
+            if(lbl.style.display !== 'none') {
+                lbl.querySelector('input').checked = check;
+            }
+        });
+        applyTableFilters(tableId);
+    }
+
+    function applyTableFilters(tableId) {
+        const table = document.querySelector(`#${tableId} table`);
+        const rows = Array.from(table.querySelectorAll("tbody tr")).filter(tr => !tr.classList.contains('total-geral-row') && tr.cells.length > 1);
+        const ths = table.querySelectorAll("thead th");
+
+        let filters = {};
+        ths.forEach((th, colIndex) => {
+            const dropdown = th.querySelector('.filter-dropdown');
+            if(dropdown) {
+                const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+                const checkedValues = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
+                filters[colIndex] = new Set(checkedValues);
+                
+                const icon = th.querySelector('.filter-icon');
+                if(checkedValues.length < checkboxes.length) {
+                    icon.classList.add('active-filter');
+                } else {
+                    icon.classList.remove('active-filter');
+                }
+            }
+        });
+
+        rows.forEach(row => {
+            let show = true;
+            Object.keys(filters).forEach(colIndex => {
+                const cell = row.querySelectorAll("td")[colIndex];
+                if (cell) {
+                    const cellValue = cell.innerText.trim();
+                    if (!filters[colIndex].has(cellValue)) {
+                        show = false;
+                    }
+                }
+            });
+            row.style.display = show ? "" : "none";
+        });
+    }
+
+    function abrirAba(evt, nomeAba, btnClass) {
         let i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-        tablinks = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+        
+        tablinks = document.getElementsByClassName("nav-btn");
+        for (i = 0; i < tablinks.length; i++) { tablinks[i].classList.remove("active"); }
+        
         document.getElementById(nomeAba).style.display = "block";
-        evt.currentTarget.className += " active";
+        document.querySelector('.' + btnClass).classList.add("active");
+
+        if (nomeAba === 'abaResumo' && window.resumoGlobal) {
+            gerarGrafico(window.resumoGlobal);
+        }
     }
 
     function voltarInicio() {
         document.getElementById('resultScreen').style.display = "none";
-        document.getElementById('uploadScreen').style.display = "block";
+        document.getElementById('uploadScreen').style.display = "flex";
+        document.getElementById('fileTu').value = "";
         document.getElementById('fileOen').value = "";
         document.getElementById('fileEstoque').value = "";
+        document.getElementById('fileProgresso').value = "";
     }
 
     function capturarTela(idTabela, nomeArquivo) {
         let elemento = document.getElementById(idTabela);
-        let inputs = elemento.querySelectorAll('.filter-input');
-        inputs.forEach(inp => inp.style.display = 'none');
+        let ignorar = elemento.querySelectorAll('.ignore-export');
+        ignorar.forEach(el => el.style.display = 'none');
         
-        html2canvas(elemento, { backgroundColor: "#ffffff" }).then(canvas => {
-            inputs.forEach(inp => inp.style.display = 'block');
+        html2canvas(elemento, { backgroundColor: "#000000" }).then(canvas => {
+            ignorar.forEach(el => el.style.display = '');
             let link = document.createElement('a');
             link.download = nomeArquivo + '.png';
             link.href = canvas.toDataURL('image/png');
@@ -520,60 +743,68 @@
         if (!tabelaOriginal) { alert("Nenhuma tabela encontrada."); return; }
         
         let tabelaClone = tabelaOriginal.cloneNode(true);
-        let inputs = tabelaClone.querySelectorAll('.filter-input');
-        inputs.forEach(inp => inp.parentNode.removeChild(inp));
-        let brs = tabelaClone.querySelectorAll('br');
-        brs.forEach(br => br.parentNode.removeChild(br));
+        let ignorar = tabelaClone.querySelectorAll('.ignore-export');
+        ignorar.forEach(el => el.parentNode.removeChild(el));
 
-        let wb = XLSX.utils.table_to_book(tabelaClone, { sheet: "Inventário" });
+        let wb = XLSX.utils.table_to_book(tabelaClone, { sheet: "Inventário", raw: true });
         XLSX.writeFile(wb, nomeArquivo + '.xlsx');
     }
 
     function copiarApenasValores() {
-        let celulasValores = document.querySelectorAll("#tabelaResumoContainer table tbody tr td");
-        if (celulasValores.length === 0) { alert("Nenhum valor encontrado para copiar."); return; }
+        let linhasTu = document.querySelectorAll("#tableTuSummary tbody tr");
+        if (linhasTu.length === 0) { alert("Nenhum valor encontrado."); return; }
 
-        let arrayValores = Array.from(celulasValores).map(celula => celula.innerText.trim());
-        let textoCopia = arrayValores.join("\t");
-
-        navigator.clipboard.writeText(textoCopia).then(() => {
-            alert("Somente os valores numéricos foram copiados com sucesso! Vá no seu Excel e dê 'Ctrl + V'.");
-        }).catch(err => {
-            alert("Erro ao copiar os dados: " + err);
+        let textoCopia = "";
+        linhasTu.forEach(linha => {
+            if (!linha.classList.contains('total-geral-row')) {
+                let celulas = linha.querySelectorAll("td");
+                let valoresLinha = Array.from(celulas).slice(1).map(c => c.innerText.trim());
+                textoCopia += valoresLinha.join("\t") + "\n";
+            }
         });
+
+        if(textoCopia.trim() !== "") {
+            navigator.clipboard.writeText(textoCopia).then(() => {
+                alert("Valores copiados! Vá no Excel e dê 'Ctrl + V'.");
+            });
+        }
     }
 
     function gerarGrafico(resumo) {
         const ctx = document.getElementById('graficoResumo');
-        
         if (meuGrafico) { meuGrafico.destroy(); }
 
         const labels = ['DIVCIC', 'DPC.SOBRA.IRDR', 'RECUSA.LOG', 'DPC.SOBRA', 'DPC.SOBRA.AERO', 'PICLINHA', 'LN / PC / PD', 'CORTES'];
         const dados = [resumo.p1, resumo.p2, resumo.p3, resumo.p4, resumo.p5, resumo.p6, resumo.p7, resumo.cortes];
+
+        const cores = [
+            '#0F766E', // DIVCIC (Teal escuro)
+            '#1D4ED8', // DPC.SOBRA.IRDR (Azul escuro)
+            '#4338CA', // RECUSA.LOG (Indigo escuro)
+            '#6D28D9', // DPC.SOBRA (Roxo escuro)
+            '#BE185D', // DPC.SOBRA.AERO (Rosa escuro)
+            '#9A3412', // PICLINHA (Laranja escuro)
+            '#B45309', // LN / PC / PD (Âmbar escuro)
+            '#DC2626'  // CORTES (Vermelho vivo - mantido para destaque da ruptura)
+        ];
 
         meuGrafico = new Chart(ctx, {
             type: 'doughnut',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Quantidade',
                     data: dados,
-                    backgroundColor: [
-                        '#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a', '#ff7c43', '#dc3545'
-                    ],
+                    backgroundColor: cores,
                     borderWidth: 2,
-                    borderColor: '#ffffff'
+                    borderColor: '#0A0A0A'
                 }]
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'right', labels: { font: { size: 13 } } },
-                    title: {
-                        display: true,
-                        text: 'Distribuição e Porcentagem de Retirada da TU',
-                        font: { size: 16 }
-                    },
+                    legend: { position: 'bottom', labels: { color: '#94A3B8', font: { size: 11 }, padding: 15 } },
+                    title: { display: true, text: 'Distribuição Percentual', color: '#F8FAFC', font: { size: 16 }, padding: {bottom: 20} },
                     tooltip: {
                         callbacks: {
                             label: function(context) {
@@ -591,33 +822,67 @@
         });
     }
 
-    function renderizarTelas(dados, resumo) {
-        let dadosMovimentacoes = dados.filter(d => d.Prioridade !== "-");
-        let dadosCortes = dados.filter(d => d.Prioridade === "-");
-        let dadosRelacao = dados.filter(d => d.Prioridade === 1 || d.Prioridade === 6 || d.Prioridade === 7);
+    function renderizarTelas() {
+        let movimentacoes = window.movimentacoesGlobais;
+        let resumo = window.resumoGlobal;
+
+        let dadosMovimentacoes = movimentacoes.filter(d => d.Prioridade !== "-");
+        let dadosCortes = movimentacoes.filter(d => d.Prioridade === "-");
+        let dadosRelacao = movimentacoes.filter(d => d.Prioridade === 1 || d.Prioridade === 6 || d.Prioridade === 7);
+
+        let numTUsAnalisadas = Object.keys(resumo.porTU).filter(t => t !== "-").length || 1; 
+        let qtdMovimentacoesNecessarias = dadosMovimentacoes.length;
+        
+        let zonas = [
+            { nome: 'DIVCIC', val: resumo.p1 }, { nome: 'DPC.SOBRA.IRDR', val: resumo.p2 },
+            { nome: 'RECUSA.LOG', val: resumo.p3 }, { nome: 'DPC.SOBRA', val: resumo.p4 },
+            { nome: 'DPC.SOBRA.AERO', val: resumo.p5 }, { nome: 'PICLINHA', val: resumo.p6 },
+            { nome: 'LN / PC / PD', val: resumo.p7 }
+        ];
+        
+        let maxZona = zonas.reduce((max, z) => z.val > max.val ? z : max, zonas[0]);
+        let nomeMaiorPosicao = maxZona.val > 0 ? maxZona.nome : 'Nenhuma';
+        let qtdMaiorPosicao = maxZona.val;
 
         const gerarLinhas = (array, comCheckbox = false) => {
-            if (array.length === 0) return `<tr><td colspan="${comCheckbox ? 5 : 4}">Nenhum registro encontrado.</td></tr>`;
+            if (array.length === 0) return `<tr><td colspan="${comCheckbox ? 6 : 5}">Nenhum registro encontrado.</td></tr>`;
+            return array.map(linha => {
+                let isFeito = linha.feito === true;
+                let classeFeito = isFeito ? 'linha-feita' : '';
+                let atributoChecked = isFeito ? 'checked' : '';
+                
+                return `
+                <tr class="${classeFeito}">
+                    <td data-t="s"><b>${linha.TU}</b></td>
+                    <td data-t="s">${linha.SKU}</td>
+                    <td data-t="s">${linha.Posicao}</td>
+                    <td data-t="n" style="color:var(--neon-blue); font-size:15px;"><b>${linha.Qtd_Retirar}</b></td>
+                    <td data-t="s">${linha.Unidade}</td>
+                    ${comCheckbox ? `<td><input type="checkbox" class="checkbox-feito" onchange="this.closest('tr').classList.toggle('linha-feita', this.checked); atualizarStatusFeito('${linha.id}', this.checked)" ${atributoChecked}></td>` : ''}
+                </tr>`;
+            }).join('');
+        };
+
+        const gerarLinhasCortes = (array) => {
+            if (array.length === 0) return `<tr><td colspan="4">Sem cortes! 100% atendido.</td></tr>`;
             return array.map(linha => `
-                <tr>
-                    <td>${linha.SKU}</td>
-                    <td>${linha.Posicao}</td>
-                    <td><b>${linha.Qtd_Retirar}</b></td>
-                    <td>${linha.Unidade}</td>
-                    ${comCheckbox ? `
-                    <td><input type="checkbox" class="checkbox-feito" onchange="this.closest('tr').classList.toggle('linha-feita', this.checked)"></td>
-                    ` : ''}
+                <tr class="corte-row">
+                    <td data-t="s"><b>${linha.TU}</b></td>
+                    <td data-t="s">${linha.SKU}</td>
+                    <td data-t="s">${linha.Posicao}</td>
+                    <td data-t="n"><b>${linha.Qtd_Retirar}</b></td>
                 </tr>
             `).join('');
         };
 
-        const cabecalhoPadrao = (tabelaId, labelQtd = "Quantidade a Retirar", comCheckbox = false) => `
+        const cabecalhoPadrao = (comCheckbox = false) => `
             <thead>
                 <tr>
-                    <th>Produto / SKU <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar SKU..."></th>
-                    <th>Posição no depósito <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar Posição..."></th>
-                    <th>${labelQtd} <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar Qtd..."></th>
-                    <th>Unidade Comercial <br><input type="text" class="filter-input" onkeyup="filtrarTabela('${tabelaId}')" placeholder="Filtrar UC..."></th>
+                    <th>TU</th>
+                    <th>Produto / SKU</th>
+                    <th>Posição no depósito</th>
+                    <th>Quantidade a Retirar</th>
+                    <th>Unidade Comercial</th>
                     ${comCheckbox ? `<th>Feito</th>` : ''}
                 </tr>
             </thead>
@@ -627,40 +892,71 @@
         const cabecalhoCortes = `
             <thead>
                 <tr>
-                    <th>Produto / SKU <br><input type="text" class="filter-input" onkeyup="filtrarTabela('tabelaCortes')" placeholder="Filtrar SKU..."></th>
-                    <th>Posição no depósito <br><input type="text" class="filter-input" onkeyup="filtrarTabela('tabelaCortes')" placeholder="Filtrar Posição..."></th>
-                    <th>Quantidade Faltante <br><input type="text" class="filter-input" onkeyup="filtrarTabela('tabelaCortes')" placeholder="Filtrar Qtd..."></th>
+                    <th>TU</th>
+                    <th>Produto / SKU</th>
+                    <th>Posição no depósito</th>
+                    <th>Quantidade Faltante</th>
                 </tr>
             </thead>
             <tbody>
         `;
 
-        document.getElementById('tabelaMovimentacoes').innerHTML = `
-            <table id="tableMovs">${cabecalhoPadrao('abaMovimentacoes', 'Quantidade a Retirar', true)}${gerarLinhas(dadosMovimentacoes, true)}</tbody></table>
-        `;
+        document.getElementById('tabelaMovimentacoes').innerHTML = `<table id="tableMovs">${cabecalhoPadrao(true)}${gerarLinhas(dadosMovimentacoes, true)}</tbody></table>`;
+        document.getElementById('tabelaCortes').innerHTML = `<table id="tableCort">${cabecalhoCortes}${gerarLinhasCortes(dadosCortes)}</tbody></table>`;
+        document.getElementById('tabelaRelacao').innerHTML = `<table id="tableRel">${cabecalhoPadrao(false)}${gerarLinhas(dadosRelacao)}</tbody></table>`;
 
-        document.getElementById('tabelaCortes').innerHTML = `
-            <table id="tableCort">${cabecalhoCortes}
-            ${dadosCortes.length === 0 ? '<tr><td colspan="3">Sem cortes! 100% atendido.</td></tr>' : 
-              dadosCortes.map(linha => `
-                <tr class="corte-row">
-                    <td>${linha.SKU}</td>
-                    <td>${linha.Posicao}</td>
-                    <td><b>${linha.Qtd_Retirar}</b></td>
-                </tr>
-            `).join('')}
-            </tbody></table>
-        `;
+        setupTableFilters('abaMovimentacoes');
+        setupTableFilters('abaCortes');
+        setupTableFilters('abaRelacao');
 
-        document.getElementById('tabelaRelacao').innerHTML = `
-            <table id="tableRel">${cabecalhoPadrao('abaRelacao')}${gerarLinhas(dadosRelacao)}</tbody></table>
+        let linhasTU = Object.keys(resumo.porTU).sort().map(tu => {
+            let r = resumo.porTU[tu];
+            return `
+            <tr>
+                <td data-t="s"><b>${tu}</b></td>
+                <td>${r.p1}</td><td>${r.p2}</td><td>${r.p3}</td><td>${r.p4}</td>
+                <td>${r.p5}</td><td>${r.p6}</td><td>${r.p7}</td>
+                <td style="color:var(--neon-blue);"><b>${r.totalTU}</b></td>
+                <td style="color:var(--neon-green);"><b>${r.concluido}</b></td>
+                <td style="color:var(--neon-red); font-weight:bold;">${r.cortes}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('dashboardCards').innerHTML = `
+            <div class="dashboard-cards">
+                <div class="kpi-card blue">
+                    <div class="kpi-header"><span style="font-size:16px;">🚚</span> TU'S ANALISADAS</div>
+                    <div class="kpi-value">${numTUsAnalisadas}</div>
+                    <div class="kpi-sub">Unidades totais validadas</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-header"><span style="font-size:16px;">📦</span> PEÇAS SOLICITADAS</div>
+                    <div class="kpi-value">${resumo.totalTU}</div>
+                    <div class="kpi-sub">Total de demanda agrupada</div>
+                </div>
+                <div class="kpi-card purple">
+                    <div class="kpi-header"><span style="font-size:16px;">🔄</span> MOVIMENTAÇÕES</div>
+                    <div class="kpi-value">${qtdMovimentacoesNecessarias}</div>
+                    <div class="kpi-sub">Linhas/Tarefas de separação</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="kpi-header"><span style="font-size:16px;">✂️</span> VOLUME CORTADO</div>
+                    <div class="kpi-value">${resumo.cortes}</div>
+                    <div class="kpi-sub">Peças em ruptura de estoque</div>
+                </div>
+                <div class="kpi-card orange">
+                    <div class="kpi-header"><span style="font-size:16px;">🏆</span> MAIOR OFENSOR</div>
+                    <div class="kpi-value" style="font-size: 20px;">${nomeMaiorPosicao}</div>
+                    <div class="kpi-sub">${qtdMaiorPosicao} peças extraídas deste local</div>
+                </div>
+            </div>
         `;
 
         document.getElementById('tabelaResumoContainer').innerHTML = `
-            <table id="tableToCopy">
+            <table id="tableTuSummary">
                 <thead>
-                    <tr><th colspan="10" style="background-color: #001040; font-size: 16px;">Quantidade de peças retiradas por posição</th></tr>
                     <tr>
+                        <th>TU</th>
                         <th>DIVCIC</th>
                         <th>DPC.SOBRA. IRDR</th>
                         <th>RECUSA. LOG</th>
@@ -668,23 +964,20 @@
                         <th>DPC.SOBRA. AERO</th>
                         <th>PICLINHA</th>
                         <th>LN</th>
-                        <th>Total Peças TU</th>
+                        <th>Total Peças</th>
                         <th>Concluído</th>
-                        <th class="col-corte-header">Cortes</th>
+                        <th style="color:#FCA5A5;">Cortes</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>${resumo.p1}</td>
-                        <td>${resumo.p2}</td>
-                        <td>${resumo.p3}</td>
-                        <td>${resumo.p4}</td>
-                        <td>${resumo.p5}</td>
-                        <td>${resumo.p6}</td>
-                        <td>${resumo.p7}</td>
-                        <td><b>${resumo.totalTU}</b></td>
-                        <td><b>${resumo.concluido}</b></td>
-                        <td class="col-corte-cell">${resumo.cortes}</td>
+                    ${linhasTU}
+                    <tr class="total-geral-row">
+                        <td><b>TOTAL GERAL</b></td>
+                        <td><b>${resumo.p1}</b></td><td><b>${resumo.p2}</b></td><td><b>${resumo.p3}</b></td><td><b>${resumo.p4}</b></td>
+                        <td><b>${resumo.p5}</b></td><td><b>${resumo.p6}</b></td><td><b>${resumo.p7}</b></td>
+                        <td style="color:var(--neon-blue);"><b>${resumo.totalTU}</b></td>
+                        <td style="color:var(--neon-green);"><b>${resumo.concluido}</b></td>
+                        <td style="color:var(--neon-red);"><b>${resumo.cortes}</b></td>
                     </tr>
                 </tbody>
             </table>
