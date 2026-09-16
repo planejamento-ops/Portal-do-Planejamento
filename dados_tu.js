@@ -1,15 +1,15 @@
 window.dadosDashboard = {
-  "atualizado_em": "15/09/2026 16:15",
-  "total_tus": 43,
-  "caixas_totais": 42820,
-  "caixas_ln": 23980,
-  "caixas_gv": 18840,
+  "atualizado_em": "16/09/2026 09:28",
+  "total_tus": 31,
+  "caixas_totais": 22843,
+  "caixas_ln": 14472,
+  "caixas_gv": 8371,
   "caixas_pendentes": 0,
   "caixas_ln_pend": 0,
   "caixas_gv_pend": 0,
-  "pecas_totais": 1778608,
-  "pecas_ln": 941786,
-  "pecas_gv": 836822,
+  "pecas_totais": 770343,
+  "pecas_ln": 488731,
+  "pecas_gv": 281612,
   "pecas_pendentes": 0,
   "pecas_ln_pend": 0,
   "pecas_gv_pend": 0,
@@ -21,7 +21,7 @@ window.dadosDashboard = {
     "Nenhum"
   ],
   "alertas_atraso": [
-    "Nenhum atraso detectado"
+    "Atraso em SPI"
   ],
   "proxima_carteira": null,
   "proxima_varejo": null,
