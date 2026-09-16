@@ -1,9 +1,9 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "16/09/2026 14:09",
+  "atualizado_em": "16/09/2026 14:16",
   "total_dia": 111,
   "pendentes": 12,
   "demandas_ativas": "REINTEGRAÇÃO, Outros",
-  "etiquetas_totais": 20310,
+  "etiquetas_totais": 111,
   "etiquetas_pendentes": 12,
   "tabela_pendentes": [
     {
