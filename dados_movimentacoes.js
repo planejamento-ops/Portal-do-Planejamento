@@ -1,10 +1,10 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "17/09/2026 09:19",
-  "total_dia": 39,
+  "atualizado_em": "17/09/2026 12:19",
+  "total_dia": 41,
   "pendentes_hoje": 0,
   "pendentes_antigas": 4,
   "demandas_ativas": "SPI, MALHA PRÓ",
-  "etiquetas_totais": 39,
+  "etiquetas_totais": 41,
   "etiquetas_pendentes": 0,
   "tabela_pendentes": [
     {
