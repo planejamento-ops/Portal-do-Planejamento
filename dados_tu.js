@@ -1,28 +1,16 @@
 window.dadosDashboard = {
-  "atualizado_em": "17/09/2026 15:41",
+  "atualizado_em": "17/09/2026 15:48",
   "total_tus": 54,
-  "caixas_totais": 40355,
-  "caixas_ln": 26045,
-  "caixas_gv": 14310,
+  "caixas_total_mes": 170569,
+  "pecas_total_mes": 6487152,
   "caixas_pendentes": 0,
   "caixas_ln_pend": 0,
   "caixas_gv_pend": 0,
-  "pecas_totais": 1550799,
-  "pecas_ln": 993508,
-  "pecas_gv": 557291,
   "pecas_pendentes": 0,
   "pecas_ln_pend": 0,
   "pecas_gv_pend": 0,
   "carretas_pendentes": 0,
   "progresso_pct": 100,
-  "caixas_total_mes": 170569,
-  "pecas_total_mes": 6487152,
-  "atendimentos_em_andamento": [
-    "Nenhum"
-  ],
-  "alertas_atraso": [
-    "Nenhum atraso detectado"
-  ],
   "proxima_carteira": null,
   "proxima_varejo": null,
   "proxima_estojo": null,
