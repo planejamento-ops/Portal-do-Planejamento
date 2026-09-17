@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 12:37",
+  "atualizado_em": "17/09/2026 14:09",
   "periodo": "13/09 a 19/09",
   "ondas": [
     {
@@ -60,8 +60,8 @@ window.dadosDemandaWMS = {
       "onda_atual": "SPI",
       "real_cxs": 15702,
       "real_pcs": 729469,
-      "previa_cxs": 0,
-      "acuracia_cxs": 0,
+      "previa_cxs": 20486,
+      "acuracia_cxs": 77,
       "perfil_est_cx": 2.3,
       "perfil_skus_cx": 10.7,
       "perfil_pcs_cx": 47.4,
