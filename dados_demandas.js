@@ -1,58 +1,58 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 12:31",
+  "atualizado_em": "17/09/2026 12:37",
   "periodo": "13/09 a 19/09",
   "ondas": [
     {
       "onda_atual": "VAREJO",
-      "real_cxs": 6226,
-      "real_pcs": 100716,
+      "real_cxs": 944,
+      "real_pcs": 18824,
       "previa_cxs": 0,
       "acuracia_cxs": 0,
-      "perfil_est_cx": 6.3,
-      "perfil_skus_cx": 8.9,
-      "perfil_pcs_cx": 17.9,
+      "perfil_est_cx": 6.4,
+      "perfil_skus_cx": 9.5,
+      "perfil_pcs_cx": 19.0,
       "top_est_cxs": [
         {
           "estacao": "07",
-          "volume": 4256
+          "volume": 828
         },
         {
-          "estacao": "33",
-          "volume": 1537
+          "estacao": "34",
+          "volume": 405
         },
         {
           "estacao": "21",
-          "volume": 1418
+          "volume": 293
         },
         {
           "estacao": "31",
-          "volume": 1316
+          "volume": 269
         },
         {
           "estacao": "22",
-          "volume": 1199
+          "volume": 233
         }
       ],
       "top_est_pcs": [
         {
           "estacao": "07",
-          "volume": 33360
-        },
-        {
-          "estacao": "33",
-          "volume": 6147
-        },
-        {
-          "estacao": "36",
-          "volume": 2917
+          "volume": 7302
         },
         {
           "estacao": "34",
-          "volume": 2873
+          "volume": 1826
         },
         {
           "estacao": "31",
-          "volume": 2555
+          "volume": 524
+        },
+        {
+          "estacao": "29",
+          "volume": 481
+        },
+        {
+          "estacao": "27",
+          "volume": 469
         }
       ]
     },
@@ -60,8 +60,8 @@ window.dadosDemandaWMS = {
       "onda_atual": "SPI",
       "real_cxs": 15702,
       "real_pcs": 729469,
-      "previa_cxs": 20486,
-      "acuracia_cxs": 77,
+      "previa_cxs": 0,
+      "acuracia_cxs": 0,
       "perfil_est_cx": 2.3,
       "perfil_skus_cx": 10.7,
       "perfil_pcs_cx": 47.4,
