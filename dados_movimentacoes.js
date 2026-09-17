@@ -1,5 +1,5 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "17/09/2026 16:00",
+  "atualizado_em": "17/09/2026 16:11",
   "total_dia": 41,
   "pendentes_hoje": 0,
   "pendentes_antigas": 1,
@@ -15,5 +15,12 @@ window.dadosMovimentacoes = {
       "tipo_dep": "BGLE",
       "duplicidade": "OK"
     }
-  ]
+  ],
+  "tabela_ie": [
+    {
+      "item": "50252",
+      "para": "LN-3-17-3-4-5"
+    }
+  ],
+  "tabela_cf": []
 };
