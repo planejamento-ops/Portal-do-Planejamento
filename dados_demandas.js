@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 14:51",
+  "atualizado_em": "17/09/2026 14:55",
   "periodo": "13/09 a 19/09",
   "ondas": [
     {
@@ -15,19 +15,19 @@ window.dadosDemandaWMS = {
         "pcs": 16808,
         "cxs": 885,
         "pc_cx": 19.0,
-        "pc_tar": 2.0
+        "tar": 8426
       },
       "gv": {
         "pcs": 2016,
         "cxs": 59,
         "pc_cx": 34.2,
-        "pc_tar": 100.8
+        "tar": 20
       },
       "pc": {
         "pcs": 235,
         "cxs": 123,
         "pc_cx": 1.9,
-        "pc_tar": 0
+        "tar": 1
       },
       "top_est_cxs": [
         {
@@ -284,19 +284,19 @@ window.dadosDemandaWMS = {
         "pcs": 456945,
         "cxs": 9636,
         "pc_cx": 47.4,
-        "pc_tar": 4.4
+        "tar": 103342
       },
       "gv": {
         "pcs": 272524,
         "cxs": 6066,
         "pc_cx": 44.9,
-        "pc_tar": 95.5
+        "tar": 2855
       },
       "pc": {
         "pcs": 4232,
         "cxs": 425,
         "pc_cx": 10.0,
-        "pc_tar": 0
+        "tar": 3
       },
       "top_est_cxs": [
         {
@@ -558,19 +558,19 @@ window.dadosDemandaWMS = {
         "pcs": 57060,
         "cxs": 1121,
         "pc_cx": 50.9,
-        "pc_tar": 5.2
+        "tar": 10936
       },
       "gv": {
         "pcs": 59894,
         "cxs": 1266,
         "pc_cx": 47.3,
-        "pc_tar": 122.0
+        "tar": 491
       },
       "pc": {
         "pcs": 730,
         "cxs": 54,
         "pc_cx": 13.5,
-        "pc_tar": 0
+        "tar": 3
       },
       "top_est_cxs": [
         {
