@@ -1,58 +1,58 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 09:23",
+  "atualizado_em": "17/09/2026 11:39",
   "ondas": [
     {
       "onda_atual": "SPI Varejo",
-      "data_onda": "17/09/2026, 01:00:06",
-      "real_cxs": 649,
-      "real_pcs": 12733,
+      "data_onda": "16/09/2026, 01:12:34",
+      "real_cxs": 944,
+      "real_pcs": 18824,
       "previa_cxs": 2036,
-      "acuracia_cxs": 32,
+      "acuracia_cxs": 46,
       "perfil_est_cx": 6.4,
-      "perfil_skus_cx": 9.4,
-      "perfil_pcs_cx": 18.9,
+      "perfil_skus_cx": 9.5,
+      "perfil_pcs_cx": 19.0,
       "top_est_cxs": [
         {
           "estacao": "07",
-          "volume": 615
+          "volume": 828
         },
         {
-          "estacao": "31",
-          "volume": 259
+          "estacao": "34",
+          "volume": 405
         },
         {
           "estacao": "21",
-          "volume": 210
+          "volume": 293
         },
         {
-          "estacao": "10",
-          "volume": 178
+          "estacao": "31",
+          "volume": 269
         },
         {
-          "estacao": "19",
-          "volume": 153
+          "estacao": "22",
+          "volume": 233
         }
       ],
       "top_est_pcs": [
         {
           "estacao": "07",
-          "volume": 4632
+          "volume": 7302
         },
         {
-          "estacao": "09",
-          "volume": 544
-        },
-        {
-          "estacao": "32",
-          "volume": 540
+          "estacao": "34",
+          "volume": 1826
         },
         {
           "estacao": "31",
-          "volume": 508
+          "volume": 524
         },
         {
-          "estacao": "10",
-          "volume": 389
+          "estacao": "29",
+          "volume": 481
+        },
+        {
+          "estacao": "27",
+          "volume": 469
         }
       ]
     },
