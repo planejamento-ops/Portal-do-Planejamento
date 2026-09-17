@@ -1,17 +1,34 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 14:37",
+  "atualizado_em": "17/09/2026 14:41",
   "periodo": "13/09 a 19/09",
   "ondas": [
     {
       "onda_atual": "VAREJO",
       "real_cxs": 944,
       "real_pcs": 18824,
-      "real_tar": 0,
+      "real_tar": 8441,
       "previa_cxs": 0,
       "acuracia_cxs": 0,
       "perfil_est_cx": 6.4,
       "perfil_skus_cx": 9.5,
-      "perfil_pcs_cx": 19.0,
+      "fr": {
+        "pcs": 16808,
+        "cxs": 885,
+        "pc_cx": 19.0,
+        "pc_tar": 2.0
+      },
+      "gv": {
+        "pcs": 2016,
+        "cxs": 59,
+        "pc_cx": 34.2,
+        "pc_tar": 100.8
+      },
+      "pc": {
+        "pcs": 235,
+        "cxs": 123,
+        "pc_cx": 1.9,
+        "pc_tar": 0
+      },
       "top_est_cxs": [
         {
           "estacao": "07",
@@ -258,12 +275,29 @@ window.dadosDemandaWMS = {
       "onda_atual": "SPI",
       "real_cxs": 15702,
       "real_pcs": 729469,
-      "real_tar": 0,
+      "real_tar": 106188,
       "previa_cxs": 20486,
       "acuracia_cxs": 77,
       "perfil_est_cx": 2.3,
       "perfil_skus_cx": 10.7,
-      "perfil_pcs_cx": 47.4,
+      "fr": {
+        "pcs": 456945,
+        "cxs": 9636,
+        "pc_cx": 47.4,
+        "pc_tar": 4.4
+      },
+      "gv": {
+        "pcs": 272524,
+        "cxs": 6066,
+        "pc_cx": 44.9,
+        "pc_tar": 95.5
+      },
+      "pc": {
+        "pcs": 4232,
+        "cxs": 425,
+        "pc_cx": 10.0,
+        "pc_tar": 0
+      },
       "top_est_cxs": [
         {
           "estacao": "04",
@@ -515,12 +549,29 @@ window.dadosDemandaWMS = {
       "onda_atual": "MGC",
       "real_cxs": 2387,
       "real_pcs": 116954,
-      "real_tar": 0,
+      "real_tar": 11416,
       "previa_cxs": 2307,
       "acuracia_cxs": 97,
       "perfil_est_cx": 2.1,
       "perfil_skus_cx": 9.7,
-      "perfil_pcs_cx": 50.9,
+      "fr": {
+        "pcs": 57060,
+        "cxs": 1121,
+        "pc_cx": 50.9,
+        "pc_tar": 5.2
+      },
+      "gv": {
+        "pcs": 59894,
+        "cxs": 1266,
+        "pc_cx": 47.3,
+        "pc_tar": 122.0
+      },
+      "pc": {
+        "pcs": 730,
+        "cxs": 54,
+        "pc_cx": 13.5,
+        "pc_tar": 0
+      },
       "top_est_cxs": [
         {
           "estacao": "04",
