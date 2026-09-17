@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 16:10",
+  "atualizado_em": "17/09/2026 16:26",
   "periodo": "13/09 a 19/09",
   "ondas": [
     {
@@ -7,7 +7,7 @@ window.dadosDemandaWMS = {
       "real_cxs": 496,
       "real_pcs": 11868,
       "real_tar": 3398,
-      "acuracia_cxs": 0,
+      "aderencia_pcs": 0,
       "perfil_est_cx": 6.7,
       "perfil_skus_cx": 9.4,
       "fr": {
@@ -275,7 +275,7 @@ window.dadosDemandaWMS = {
       "real_cxs": 15702,
       "real_pcs": 729469,
       "real_tar": 106188,
-      "acuracia_cxs": 77,
+      "aderencia_pcs": 69,
       "perfil_est_cx": 2.3,
       "perfil_skus_cx": 10.7,
       "fr": {
@@ -548,7 +548,7 @@ window.dadosDemandaWMS = {
       "real_cxs": 2387,
       "real_pcs": 116954,
       "real_tar": 11416,
-      "acuracia_cxs": 97,
+      "aderencia_pcs": 87,
       "perfil_est_cx": 2.1,
       "perfil_skus_cx": 9.7,
       "fr": {
