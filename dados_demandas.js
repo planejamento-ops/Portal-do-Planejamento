@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 15:41",
+  "atualizado_em": "17/09/2026 15:44",
   "periodo": "13/09 a 19/09",
   "ondas": [
     {
@@ -27,7 +27,7 @@ window.dadosDemandaWMS = {
         "pcs": 157,
         "cxs": 76,
         "pc_cx": 2.1,
-        "tar": 0
+        "tar": 105
       },
       "top_est_cxs": [
         {
@@ -296,7 +296,7 @@ window.dadosDemandaWMS = {
         "pcs": 4232,
         "cxs": 425,
         "pc_cx": 10.0,
-        "tar": 0
+        "tar": 1176
       },
       "top_est_cxs": [
         {
@@ -570,7 +570,7 @@ window.dadosDemandaWMS = {
         "pcs": 730,
         "cxs": 54,
         "pc_cx": 13.5,
-        "tar": 0
+        "tar": 243
       },
       "top_est_cxs": [
         {
