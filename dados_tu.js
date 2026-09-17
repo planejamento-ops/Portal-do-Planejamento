@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "17/09/2026 02:01",
+  "atualizado_em": "17/09/2026 02:11",
   "total_tus": 48,
   "caixas_totais": 39209,
   "caixas_ln": 25044,
