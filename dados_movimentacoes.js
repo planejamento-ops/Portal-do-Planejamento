@@ -1,25 +1,34 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "17/09/2026 17:14",
-  "total_dia": 41,
-  "pendentes_hoje": 0,
+  "atualizado_em": "17/09/2026 17:33",
+  "total_dia": 54,
+  "pendentes_hoje": 1,
   "pendentes_antigas": 1,
-  "etiquetas_totais": 41,
-  "etiquetas_pendentes": 0,
+  "etiquetas_totais": 54,
+  "etiquetas_pendentes": 1,
   "tabela_pendentes": [
     {
       "data": "16/09",
-      "item": "50252",
+      "item": "59683",
       "demanda": "MALHA PRÓ",
-      "de": "PC-02-06-4",
-      "para": "LN-3-17-3-4-5",
+      "de": "PC-05-23-2",
+      "para": "LN-3-17-3-4-1",
       "tipo_dep": "BGLE",
+      "duplicidade": "OK"
+    },
+    {
+      "data": "17/09",
+      "item": "94669",
+      "demanda": "SPC",
+      "de": "LN-6-40-4-4-4",
+      "para": "LN-5-44-1-3-2",
+      "tipo_dep": "BGFD",
       "duplicidade": "OK"
     }
   ],
   "tabela_ie": [
     {
-      "item": "50252",
-      "para": "LN-3-17-3-4-5"
+      "item": "59683",
+      "para": "LN-3-17-3-4-1"
     }
   ],
   "tabela_cf": []
