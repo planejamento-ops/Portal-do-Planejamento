@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 09:05",
+  "atualizado_em": "17/09/2026 09:15",
   "onda_atual": "SPI Varejo",
   "data_onda": "17/09/2026, 01:00:06",
   "real_cxs": 649,
