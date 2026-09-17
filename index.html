@@ -11,37 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
     
+    <!-- Biblioteca Chart.js para os gráficos Animados -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- ARQUIVOS GERADOS PELOS ROBÔS -->
     <script src="dados_tu.js"></script>
+    <script src="dados_movimentacoes.js"></script>
+    <script src="dados_demandas.js"></script>
 
     <style>
+        /* ========================================== */
+        /* BASE & BACKGROUND                          */
+        /* ========================================== */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: linear-gradient(#000000bd, #020250d4), url('Background.png'); background-size: cover; background-position: center; background-attachment: fixed; display: flex; flex-direction: column; min-height: 100vh; padding: 2vh 3%; overflow-x: hidden; overflow-y: auto; gap: 16px; align-items: center; position: relative; }
+        .glow-sphere-cyan { position: fixed; top: -100px; left: -100px; width: 550px; height: 500px; background: radial-gradient(circle, rgba(0, 210, 255, 0.18) 0%, rgba(0, 0, 0, 0) 70%); z-index: 0; pointer-events: none; }
+        .glow-sphere-red { position: fixed; bottom: -150px; right: -100px; width: 650px; height: 600px; background: radial-gradient(circle, rgba(230, 67, 67, 0.15) 0%, rgba(0, 0, 0, 0) 70%); z-index: 0; pointer-events: none; }
+        .top-bar, .main-layout, .bar-pilares, .rodape { width: 100%; max-width: 1600px; margin: 0 auto; position: relative; z-index: 2; }
 
-        body {
-            background: linear-gradient(#000000bd, #020250d4), url('Background.png');
-            background-size: cover; 
-            background-position: center;   
-            background-attachment: fixed;
-            display: flex; flex-direction: column; min-height: 100vh;
-            padding: 2vh 3%; overflow-x: hidden; overflow-y: auto; gap: 16px;
-            align-items: center; position: relative;
-        }
-
-        .glow-sphere-cyan {
-            position: fixed; top: -100px; left: -100px; width: 550px; height: 500px;
-            background: radial-gradient(circle, rgba(0, 210, 255, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
-            z-index: 0; pointer-events: none;
-        }
-
-        .glow-sphere-red {
-            position: fixed; bottom: -150px; right: -100px; width: 650px; height: 600px;
-            background: radial-gradient(circle, rgba(230, 67, 67, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-            z-index: 0; pointer-events: none;
-        }
-
-        .top-bar, .main-layout, .bar-pilares, .rodape {
-            width: 100%; max-width: 1600px; margin: 0 auto; position: relative; z-index: 2;
-        }
-
+        /* ========================================== */
+        /* CABEÇALHO (HEADER)                         */
+        /* ========================================== */
         .top-bar { display: flex; justify-content: space-between; align-items: flex-start; }
         .welcome-text { color: #e64343; font-size: 0.75rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 2px; }
         .header h1 { font-family: "Goldman", sans-serif; font-size: 2.1rem; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; line-height: 1.1; margin-bottom: 4px; }
@@ -51,107 +41,124 @@
 
         .main-layout { display: flex; gap: 16px; align-items: stretch; }
         
+        /* ========================================== */
+        /* MENU LATERAL (SIDEBAR)                     */
+        /* ========================================== */
         .sidebar-apps { width: 240px; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
-
-        .card-app {
-            border-radius: 12px; padding: 10px 12px; text-decoration: none;
-            background: rgba(15, 23, 42, 0.55); 
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(16px);
-            color: #FFFFFF; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            display: flex; align-items: center; gap: 10px; position: relative; overflow: hidden;
-        }
-
+        .card-app { border-radius: 12px; padding: 10px 12px; text-decoration: none; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); color: #FFFFFF; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; gap: 10px; overflow: hidden; }
+        .card-app:hover { transform: translateX(4px); background: rgba(30, 41, 59, 0.75); border-color: rgba(0, 210, 255, 0.4); box-shadow: 0 0 20px rgba(0, 210, 255, 0.15); }
         .card-app .icon .material-symbols-outlined { font-size: 22px; padding: 6px; border-radius: 8px; }
         .card-app-info { display: flex; flex-direction: column; flex: 1; }
         .card-app h2 { font-size: 0.78rem; font-weight: 600; margin-bottom: 2px; }
         .card-app p { font-size: 0.68rem; color: #a0aab5; }
+        
+        .bloco-auditor { border-left: 3px solid #00d2ff; } .bloco-auditor .icon .material-symbols-outlined { color: #00d2ff; background: rgba(0, 210, 255, 0.12); }
+        .bloco-wallboard { border-left: 3px solid #ff4b2b; } .bloco-wallboard .icon .material-symbols-outlined { color: #ff4b2b; background: rgba(255, 75, 43, 0.12); }
+        .bloco-validacao { border-left: 3px solid #00b09b; } .bloco-validacao .icon .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.12); }
+        .bloco-irdr { border-left: 3px solid #f6b93b; } .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.12); }
+        .bloco-posicao { border-left: 3px solid #9b59b6; } .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.12); }
+        .bloco-otimizador { border-left: 3px solid #3b82f6; } .bloco-otimizador .icon .material-symbols-outlined { color: #3b82f6; background: rgba(59, 130, 246, 0.12); }
 
-        .card-app:hover { 
-            transform: translateX(4px); 
-            background: rgba(30, 41, 59, 0.75); 
-            border-color: rgba(0, 210, 255, 0.4); 
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.15); 
-        }
+        /* ========================================== */
+        /* ÁREA PRINCIPAL & ABAS                      */
+        /* ========================================== */
+        .dashboard-content { flex: 1; display: flex; flex-direction: column; gap: 0; min-width: 0; }
+        .nav-tabs { display: flex; gap: 10px; margin-bottom: 12px; position: relative; z-index: 3; flex-wrap: wrap; }
+        .btn-tab { background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); color: #8a99ad; padding: 8px 18px; border-radius: 20px; cursor: pointer; font-size: 0.76rem; font-weight: 600; display: flex; align-items: center; gap: 7px; backdrop-filter: blur(12px); transition: all 0.25s ease; }
+        .btn-tab .material-symbols-outlined { font-size: 18px; opacity: 0.7; }
+        .btn-tab:hover { background: rgba(30, 41, 59, 0.6); color: #ffffff; border-color: rgba(0, 210, 255, 0.3); transform: translateY(-1px); }
+        .btn-tab.active { background: rgba(0, 210, 255, 0.12); border: 1px solid rgba(0, 210, 255, 0.4); color: #00d2ff; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.12); }
+        .btn-tab.active .material-symbols-outlined { opacity: 1; color: #00d2ff; filter: drop-shadow(0 0 6px rgba(0, 210, 255, 0.6)); }
 
-        .bloco-auditor { border-left: 3px solid #00d2ff; }
-        .bloco-auditor .icon .material-symbols-outlined { color: #00d2ff; background: rgba(0, 210, 255, 0.12); }
-        .bloco-wallboard { border-left: 3px solid #ff4b2b; }
-        .bloco-wallboard .icon .material-symbols-outlined { color: #ff4b2b; background: rgba(255, 75, 43, 0.12); }
-        .bloco-validacao { border-left: 3px solid #00b09b; }
-        .bloco-validacao .icon .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.12); }
-        .bloco-irdr { border-left: 3px solid #f6b93b; }
-        .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.12); }
-        .bloco-posicao { border-left: 3px solid #9b59b6; }
-        .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.12); }
-        .bloco-otimizador { border-left: 3px solid #3b82f6; }
-        .bloco-otimizador .icon .material-symbols-outlined { color: #3b82f6; background: rgba(59, 130, 246, 0.12); }
-
-        .dashboard-content { flex: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-
-        .tu-dashboard-container {
-            width: 100%; background: rgba(11, 19, 38, 0.6); backdrop-filter: blur(24px);
-            border: 1px solid rgba(0, 210, 255, 0.25); border-radius: 16px; padding: 18px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 210, 255, 0.04); 
-            display: flex; flex-direction: column; gap: 16px; position: relative;
-        }
+        .tu-dashboard-container { width: 100%; background: rgba(11, 19, 38, 0.6); backdrop-filter: blur(24px); border: 1px solid rgba(0, 210, 255, 0.25); border-radius: 16px; padding: 18px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 210, 255, 0.04); display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 2; }
+        .tab-panel { display: none; flex-direction: column; gap: 16px; width: 100%; }
+        .tab-panel.active { display: flex; }
 
         .tu-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; }
         .tu-title-group { display: flex; align-items: center; gap: 10px; }
-        .tu-header h2 { font-size: 1.05rem; color: #ffffff; display: flex; align-items: center; gap: 8px; font-weight: 700; letter-spacing: 0.3px; }
+        .tu-header h2 { font-size: 1.05rem; color: #ffffff; display: flex; align-items: center; gap: 8px; font-weight: 700; }
         .tu-header h2 .material-symbols-outlined { color: #00d2ff; font-size: 22px; filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5)); }
-
         .header-badges { display: flex; align-items: center; gap: 10px; }
 
-        .btn-atalho {
-            display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600;
-            padding: 5px 12px; border-radius: 20px; text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(8px); cursor: pointer;
-        }
+        /* Botões GSheets e M365 */
+        .btn-atalho { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; padding: 5px 12px; border-radius: 20px; text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(8px); cursor: pointer; }
         .btn-atalho .material-symbols-outlined { font-size: 16px; }
-
         .btn-gsheets { background: rgba(15, 157, 88, 0.12); border: 1px solid rgba(15, 157, 88, 0.35); color: #34a853; }
         .btn-gsheets:hover { background: rgba(15, 157, 88, 0.25); border-color: rgba(52, 168, 83, 0.6); box-shadow: 0 0 15px rgba(52, 168, 83, 0.25); transform: translateY(-2px); }
-
         .btn-m365 { background: rgba(16, 124, 65, 0.12); border: 1px solid rgba(16, 124, 65, 0.35); color: #107c41; }
         .btn-m365:hover { background: rgba(16, 124, 65, 0.25); border-color: rgba(16, 124, 65, 0.6); box-shadow: 0 0 15px rgba(16, 124, 65, 0.25); transform: translateY(-2px); }
 
-        .tu-status-badge {
-            font-size: 0.72rem; background: rgba(0, 210, 255, 0.1); color: #00d2ff;
-            padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 210, 255, 0.35); 
-            display: flex; align-items: center; gap: 6px; font-weight: 600;
-        }
-        .status-dot {
-            width: 7px; height: 7px; background-color: #00d2ff; border-radius: 50%;
-            box-shadow: 0 0 10px #00d2ff; animation: pulsar 1.6s infinite ease-in-out;
-        }
-        @keyframes pulsar {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(1.3); }
-            100% { opacity: 1; transform: scale(1); }
-        }
+        .tu-status-badge { font-size: 0.72rem; background: rgba(0, 210, 255, 0.1); color: #00d2ff; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 210, 255, 0.35); display: flex; align-items: center; gap: 6px; font-weight: 600; }
+        .status-dot { width: 7px; height: 7px; background-color: #00d2ff; border-radius: 50%; box-shadow: 0 0 10px #00d2ff; animation: pulsar 1.6s infinite ease-in-out; }
+        @keyframes pulsar { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.3); } 100% { opacity: 1; transform: scale(1); } }
 
+        /* ========================================== */
+        /* CARDS PRINCIPAIS                           */
+        /* ========================================== */
+        .tu-grid-main { display: grid; gap: 10px; transition: all 0.3s ease; }
+        .tu-card { background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 10px; display: flex; align-items: center; gap: 8px; min-width: 0; backdrop-filter: blur(12px); transition: transform 0.3s ease; position: relative; overflow: hidden; }
+        .tu-card:hover { transform: translateY(-3px); background: rgba(30, 41, 59, 0.75); }
+        .tu-card .icon { font-size: 22px; padding: 6px; border-radius: 8px; flex-shrink: 0; }
+        .tu-info { min-width: 0; overflow: hidden; flex: 1; }
+        .tu-info .label { font-size: 0.65rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; display: block; }
+        .tu-info h3 { font-size: 1.25rem; color: #ffffff; font-weight: 800; margin: 1px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .tu-info small { font-size: 0.65rem; color: #a0aab5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+
+        .card-cyan { border-color: rgba(0, 210, 255, 0.3); } .card-cyan .icon { color: #00d2ff; background: rgba(0, 210, 255, 0.12); } .card-cyan:hover { border-color: rgba(0, 210, 255, 0.6); box-shadow: 0 0 20px rgba(0, 210, 255, 0.2); }
+        .card-yellow { border-color: rgba(246, 185, 59, 0.3); } .card-yellow .icon { color: #f6b93b; background: rgba(246, 185, 59, 0.12); } .card-yellow:hover { border-color: rgba(246, 185, 59, 0.6); box-shadow: 0 0 20px rgba(246, 185, 59, 0.2); }
+        .card-purple { border-color: rgba(155, 89, 182, 0.3); } .card-purple .icon { color: #9b59b6; background: rgba(155, 89, 182, 0.12); } .card-purple:hover { border-color: rgba(155, 89, 182, 0.6); box-shadow: 0 0 20px rgba(155, 89, 182, 0.2); }
+        .card-red { border-color: rgba(255, 75, 43, 0.3); } .card-red .icon { color: #ff4b2b; background: rgba(255, 75, 43, 0.12); } .card-red:hover { border-color: rgba(255, 75, 43, 0.6); box-shadow: 0 0 20px rgba(255, 75, 43, 0.2); }
+        .card-green { border-color: rgba(0, 176, 155, 0.3); display: flex; flex-direction: column; align-items: stretch; justify-content: center; } .card-green-content { display: flex; align-items: center; gap: 8px; width: 100%; } .card-green .icon { color: #00b09b; background: rgba(0, 176, 155, 0.12); } .card-green:hover { border-color: rgba(0, 176, 155, 0.6); box-shadow: 0 0 20px rgba(0, 176, 155, 0.2); }
+
+        .progress-bar-container { width: 100%; height: 4px; background: rgba(255, 255, 255, 0.08); border-radius: 4px; margin-top: 6px; overflow: hidden; position: relative; }
+        .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #00b09b 0%, #00d2ff 100%); border-radius: 4px; transition: width 1s ease-in-out; }
+
+        /* ========================================== */
+        /* MACRO VOLUMES (FR, GV, PC)                 */
+        /* ========================================== */
+        .macro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 2px; }
+        .macro-box { background: rgba(15, 23, 42, 0.4); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); overflow: hidden; backdrop-filter: blur(12px); display: flex; flex-direction: column; }
+        .macro-box-fr { border-top: 3px solid #00d2ff; }
+        .macro-box-gv { border-top: 3px solid #ff4b2b; }
+        .macro-box-pc { border-top: 3px solid #9b59b6; }
+        
+        .macro-header { padding: 8px 14px; background: rgba(255, 255, 255, 0.02); font-size: 0.72rem; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 6px; }
+        .macro-box-fr .macro-header { color: #00d2ff; }
+        .macro-box-gv .macro-header { color: #ff4b2b; }
+        .macro-box-pc .macro-header { color: #9b59b6; }
+        .macro-stats { display: grid; grid-template-columns: repeat(4, 1fr); padding: 12px; gap: 10px; }
+        .stat-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .stat-item .label { font-size: 0.60rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+        .stat-item strong { font-size: 1.05rem; color: #ffffff; font-weight: 800; font-feature-settings: 'tnum' on; }
+
+        /* ========================================== */
+        /* BOXES E TABELAS                            */
+        /* ========================================== */
+        .tu-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tu-detail-box { background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 12px 14px; border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
+        .tu-detail-box h4 { color: #ffffff; font-size: 0.8rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; font-weight: 700; }
+        .tu-detail-box h4 .material-symbols-outlined { font-size: 18px; color: #00d2ff; }
+        
+        .box-warning h4 .material-symbols-outlined { color: #f6b93b; } 
+        .box-red h4 .material-symbols-outlined { color: #ff4b2b; }
+        .box-purple h4 .material-symbols-outlined { color: #9b59b6; }
+
+        .tu-table { width: 100%; border-collapse: collapse; font-size: 0.73rem; margin-top: 4px; }
+        .tu-table th { color: #a0aab5; text-transform: uppercase; font-size: 0.63rem; font-weight: 700; padding: 6px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
+        .tu-table td { padding: 5px 4px; color: #a0aab5; border-bottom: 1px dashed rgba(255, 255, 255, 0.05); text-align: center; }
+        .tu-table td:first-child { text-align: left; color: #ffffff; font-weight: 600; }
+        .tu-table td span.val { color: #00d2ff; font-weight: 700; }
+        .carreta-tag { font-size: 0.68rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; }
+
+        /* ========================================== */
+        /* ESPECÍFICOS DA ABA 1 (TUs)                 */
+        /* ========================================== */
         .grid-mes-acumulado { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
         .fifo-triple-container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-
-        .fifo-alert-card {
-            background: linear-gradient(135deg, rgba(0, 210, 255, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid rgba(0, 210, 255, 0.35); border-left: 4px solid #00d2ff;
-            border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between;
-            box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.05);
-        }
-
-        .fifo-card-varejo {
-            background: linear-gradient(135deg, rgba(0, 176, 155, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid rgba(0, 176, 155, 0.35); border-left: 4px solid #00b09b;
-        }
-
-        .fifo-card-estojo {
-            background: linear-gradient(135deg, rgba(246, 185, 59, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid rgba(246, 185, 59, 0.35); border-left: 4px solid #f6b93b;
-        }
-
+        .fifo-alert-card { background: linear-gradient(135deg, rgba(0, 210, 255, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%); border: 1px solid rgba(0, 210, 255, 0.35); border-left: 4px solid #00d2ff; border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.05); }
+        .fifo-card-varejo { background: linear-gradient(135deg, rgba(0, 176, 155, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%); border: 1px solid rgba(0, 176, 155, 0.35); border-left: 4px solid #00b09b; }
+        .fifo-card-estojo { background: linear-gradient(135deg, rgba(246, 185, 59, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%); border: 1px solid rgba(246, 185, 59, 0.35); border-left: 4px solid #f6b93b; }
+        
         .fifo-info { display: flex; align-items: center; gap: 8px; min-width: 0; }
         .fifo-info .material-symbols-outlined { font-size: 20px; color: #00d2ff; background: rgba(0, 210, 255, 0.15); padding: 5px; border-radius: 8px; flex-shrink: 0; }
         .fifo-card-varejo .fifo-info .material-symbols-outlined { color: #00b09b; background: rgba(0, 176, 155, 0.15); }
@@ -165,115 +172,41 @@
         .fifo-card-varejo .fifo-details span strong { color: #00b09b; }
         .fifo-card-estojo .fifo-details span strong { color: #f6b93b; }
 
-        .tu-grid-main { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-
-        .tu-card { 
-            background: rgba(15, 23, 42, 0.55);
-            border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; 
-            padding: 10px 10px; display: flex; align-items: center; gap: 8px; 
-            min-width: 0; backdrop-filter: blur(12px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden;
-        }
-
-        .tu-card:hover { transform: translateY(-3px); background: rgba(30, 41, 59, 0.75); }
-        .tu-card .icon { font-size: 22px; padding: 6px; border-radius: 8px; flex-shrink: 0; }
-        .tu-info { min-width: 0; overflow: hidden; flex: 1; }
-        .tu-info .label { font-size: 0.65rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; display: block; }
-        
-        .tu-info h3 { 
-            font-size: 1.25rem; color: #ffffff; font-weight: 800; margin: 1px 0; 
-            font-feature-settings: 'tnum' on, 'lnum' on; letter-spacing: -0.5px;
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-        }
-        .tu-info small { font-size: 0.65rem; color: #a0aab5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
-
-        .card-cyan { border-color: rgba(0, 210, 255, 0.3); }
-        .card-cyan .icon { color: #00d2ff; background: rgba(0, 210, 255, 0.12); }
-        .card-cyan:hover { border-color: rgba(0, 210, 255, 0.6); box-shadow: 0 0 20px rgba(0, 210, 255, 0.2); }
-        
-        .card-yellow { border-color: rgba(246, 185, 59, 0.3); }
-        .card-yellow .icon { color: #f6b93b; background: rgba(246, 185, 59, 0.12); }
-        .card-yellow:hover { border-color: rgba(246, 185, 59, 0.6); box-shadow: 0 0 20px rgba(246, 185, 59, 0.2); }
-
-        .card-purple { border-color: rgba(155, 89, 182, 0.3); }
-        .card-purple .icon { color: #9b59b6; background: rgba(155, 89, 182, 0.12); }
-        .card-purple:hover { border-color: rgba(155, 89, 182, 0.6); box-shadow: 0 0 20px rgba(155, 89, 182, 0.2); }
-
-        .card-red { border-color: rgba(255, 75, 43, 0.3); }
-        .card-red .icon { color: #ff4b2b; background: rgba(255, 75, 43, 0.12); }
-        .card-red:hover { border-color: rgba(255, 75, 43, 0.6); box-shadow: 0 0 20px rgba(255, 75, 43, 0.2); }
-
-        .card-green { border-color: rgba(0, 176, 155, 0.3); display: flex; flex-direction: column; align-items: stretch; justify-content: center; }
-        .card-green:hover { border-color: rgba(0, 176, 155, 0.6); box-shadow: 0 0 20px rgba(0, 176, 155, 0.2); }
-        .card-green-content { display: flex; align-items: center; gap: 8px; width: 100%; }
-        .card-green .icon { color: #00b09b; background: rgba(0, 176, 155, 0.12); }
-
-        .progress-bar-container {
-            width: 100%; height: 4px; background: rgba(255, 255, 255, 0.08);
-            border-radius: 4px; margin-top: 6px; overflow: hidden; position: relative;
-        }
-        .progress-bar-fill {
-            height: 100%; width: 0%;
-            background: linear-gradient(90deg, #00b09b 0%, #00d2ff 100%);
-            border-radius: 4px; transition: width 1s ease-in-out;
-            box-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
-        }
-
-        .tu-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        .tu-detail-box { 
-            background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 12px 14px; 
-            border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px);
-        }
-        .tu-detail-box h4 { color: #ffffff; font-size: 0.8rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; font-weight: 700; }
-        .tu-detail-box h4 .material-symbols-outlined { font-size: 18px; color: #00d2ff; }
-        
-        .box-warning h4 .material-symbols-outlined { color: #f6b93b; }
-        .box-red h4 .material-symbols-outlined { color: #ff4b2b; }
-        .box-purple h4 .material-symbols-outlined { color: #9b59b6; }
-
-        .tu-table {
-            width: 100%; border-collapse: collapse; font-size: 0.73rem; margin-top: 4px;
-        }
-
-        .tu-table th {
-            color: #a0aab5; text-transform: uppercase; font-size: 0.63rem; font-weight: 700;
-            padding: 6px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); text-align: center;
-        }
-
-        .tu-table td {
-            padding: 5px 4px; color: #a0aab5; border-bottom: 1px dashed rgba(255, 255, 255, 0.05); text-align: center;
-        }
-
-        .tu-table td:first-child { text-align: left; color: #ffffff; font-weight: 600; }
-        .tu-table td span.val { color: #00d2ff; font-weight: 700; }
-
         .detail-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: #a0aab5; padding: 5px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.05); }
         .detail-row span.val { color: #ffffff; font-weight: 700; font-feature-settings: 'tnum' on; }
         .detail-row span.val.status-ok { color: #00b09b; }
-
+        
         .alert-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
-        .carreta-tag { font-size: 0.68rem; color: #00d2ff; background: rgba(0, 210, 255, 0.1); border: 1px solid rgba(0, 210, 255, 0.25); padding: 1px 6px; border-radius: 4px; font-weight: 600; }
-        .pend-tag { color: #f6b93b; background: rgba(246, 185, 59, 0.1); border-color: rgba(246, 185, 59, 0.25); }
-        .ok-tag { color: #00b09b; background: rgba(0, 176, 155, 0.1); border-color: rgba(0, 176, 155, 0.25); }
+        .pend-tag { color: #f6b93b; background: rgba(246, 185, 59, 0.1); border: 1px solid rgba(246, 185, 59, 0.25); }
+        .ok-tag { color: #00b09b; background: rgba(0, 176, 155, 0.1); border: 1px solid rgba(0, 176, 155, 0.25); }
 
-        .bar-pilares {
-            display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 18px; margin-top: 6px; border-radius: 10px;
-            background: linear-gradient(135deg, rgba(0, 210, 255, 0.08) 0%, rgba(11, 19, 38, 0.75) 50%, rgba(230, 67, 67, 0.1) 100%);
-            backdrop-filter: blur(16px); border: 1px solid transparent;
-            border-top: 1px solid rgba(0, 210, 255, 0.4); border-bottom: 1px solid rgba(230, 67, 67, 0.4);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
+        /* ========================================== */
+        /* ESPECÍFICOS DA ABA 2 (WMS)                 */
+        /* ========================================== */
+        .wms-toggles { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 4px; padding: 12px 14px; background: rgba(15, 23, 42, 0.4); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .wms-toggles-title { width: 100%; font-size: 0.65rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+        .btn-wms-onda { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); color: #8a99ad; padding: 8px 16px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+        .btn-wms-onda:hover { background: rgba(30, 41, 59, 1); color: #ffffff; border-color: rgba(0, 210, 255, 0.3); transform: translateY(-2px); }
+        .btn-wms-onda.active { background: rgba(0, 210, 255, 0.15); border-color: rgba(0, 210, 255, 0.6); color: #00d2ff; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.15); }
+        .status-rodando { width: 8px; height: 8px; background-color: #00b09b; border-radius: 50%; box-shadow: 0 0 10px #00b09b; animation: pulsar 1.6s infinite ease-in-out; }
+        .btn-wms-onda.rodando { border-color: rgba(0, 176, 155, 0.5); color: #c0c8d1; }
+        .btn-wms-onda.rodando:hover { background: rgba(0, 176, 155, 0.1); border-color: #00b09b; color: #ffffff; }
+        .btn-wms-onda.rodando.active { background: rgba(0, 176, 155, 0.15); color: #00b09b; border-color: #00b09b; box-shadow: 0 4px 15px rgba(0, 176, 155, 0.2); }
+        .wms-list { list-style: none; padding-top: 6px; }
+        .wms-list li { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(255,255,255,0.05); padding: 6px 0; font-size: 0.75rem; color: #a0aab5; }
+        .wms-list li span.val { color: #ffffff; font-weight: 700; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;}
+        .wms-list li span.val-cx { color: #f6b93b; background: rgba(246, 185, 59, 0.12); }
+        .wms-list li span.val-pc { color: #9b59b6; background: rgba(155, 89, 182, 0.12); }
+
+        /* ========================================== */
+        /* RODAPÉ E PILARES                           */
+        /* ========================================== */
+        .bar-pilares { display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 18px; margin-top: 6px; border-radius: 10px; background: linear-gradient(135deg, rgba(0, 210, 255, 0.08) 0%, rgba(11, 19, 38, 0.75) 50%, rgba(230, 67, 67, 0.1) 100%); backdrop-filter: blur(16px); border: 1px solid transparent; border-top: 1px solid rgba(0, 210, 255, 0.4); border-bottom: 1px solid rgba(230, 67, 67, 0.4); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
         .pilar-item { display: flex; align-items: center; gap: 8px; color: #a0aab5; position: relative; padding: 0 8px; }
-        .pilar-item:not(:last-child)::after {
-            content: ''; position: absolute; right: 0; top: 20%; height: 60%; width: 1px;
-            background: linear-gradient(to bottom, rgba(0, 210, 255, 0.35), rgba(230, 67, 67, 0.35));
-        }
-        .pilar-item .material-symbols-outlined {
-            font-size: 18px; color: #00d2ff; background: rgba(0, 210, 255, 0.12); padding: 5px; border-radius: 6px; border: 1px solid rgba(0, 210, 255, 0.25); transition: all 0.3s ease;
-        }
+        .pilar-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 20%; height: 60%; width: 1px; background: linear-gradient(to bottom, rgba(0, 210, 255, 0.35), rgba(230, 67, 67, 0.35)); }
+        .pilar-item .material-symbols-outlined { font-size: 18px; color: #00d2ff; background: rgba(0, 210, 255, 0.12); padding: 5px; border-radius: 6px; border: 1px solid rgba(0, 210, 255, 0.25); transition: all 0.3s ease; }
         .pilar-text { font-size: 0.7rem; line-height: 1.1; }
         .pilar-text strong { color: #ffffff; display: block; font-size: 0.76rem; letter-spacing: 0.3px; }
-
         .rodape { opacity: 1; text-align: left; margin-top: 2px; }
         .rodape p { color: #ffffff; font-size: 0.72rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
     </style>
@@ -289,9 +222,12 @@
             <h1>Portal do <span class="destaque">Planejamento</span></h1>
             <p>Soluções inteligentes para uma logística mais eficiente</p>
         </div>
+        <img src="white-ceva.png" alt="Logo CEVA" class="logo-topo">
     </header>
 
     <div class="main-layout">
+        
+        <!-- MENU LATERAL -->
         <aside class="sidebar-apps">
             <a href="packspackval.html" class="card-app bloco-auditor">
                 <div class="icon"><span class="material-symbols-outlined">package</span></div>
@@ -319,235 +255,528 @@
             </a>
         </aside>
 
+        <!-- ÁREA CENTRAL DE ABAS -->
         <main class="dashboard-content">
+            
+            <!-- ORDEM DAS ABAS INVERTIDA (TU, WMS, MOV) -->
+            <div class="nav-tabs">
+                <button class="btn-tab active" onclick="trocarAba('tab-tu', this)">
+                    <span class="material-symbols-outlined">analytics</span> Controle de TUs
+                </button>
+                <button class="btn-tab" onclick="trocarAba('tab-wms', this)">
+                    <span class="material-symbols-outlined">warehouse</span> Demanda WMS
+                </button>
+                <button class="btn-tab" onclick="trocarAba('tab-movimentacoes', this)">
+                    <span class="material-symbols-outlined">sync_alt</span> Movimentações
+                </button>
+            </div>
+
             <div class="tu-dashboard-container">
-                <div class="tu-header">
-                    <div class="tu-title-group">
-                        <h2><span class="material-symbols-outlined">analytics</span> Controle de TUs • Mês & Operação Ativa</h2>
-                    </div>
-                    
-                    <div class="header-badges">
-                        <a href="https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8" 
-                           target="_blank" class="btn-atalho btn-gsheets" title="Abrir no Google Sheets">
-                            <span class="material-symbols-outlined">table_chart</span> Google Sheets
-                        </a>
-
-                        <a href="https://cevalogisticsoffice365.sharepoint.com/sites/LATAM-BR-VAG-01-CLBoticario/Shared%20Documents/General/Departamentos/Planejamento/Controle%20de%20TUs%202026.xlsx?d=w612780afbf9b4db0b234f255a0afd1d3&csf=1&web=1&e=YEFyRc" target="_blank" class="btn-atalho btn-m365" title="Abrir no Microsoft 365">
-                            <span class="material-symbols-outlined">description</span> M365 Excel
-                        </a>
-
-                        <span class="tu-status-badge">
-                            <span class="status-dot"></span>
-                            <span id="txt-status-sync">Sincronizando...</span>
-                        </span>
-                    </div>
-                </div>
-
-                <!-- CARDS ACUMULADOS MÊS -->
-                <div class="grid-mes-acumulado">
-                    <div class="tu-card card-cyan">
-                        <span class="material-symbols-outlined icon">calendar_month</span>
-                        <div class="tu-info">
-                            <span class="label">Total Processado no Mês (Caixas)</span>
-                            <h3 id="caixas-mes">--</h3>
-                            <small>Soma do Mês Vigente</small>
+                
+                <!-- ========================================== -->
+                <!-- ABA 1: CONTROLE DE TUS                     -->
+                <!-- ========================================== -->
+                <div id="tab-tu" class="tab-panel active">
+                    <div class="tu-header">
+                        <div class="tu-title-group">
+                            <h2><span class="material-symbols-outlined">analytics</span> Controle de TUs • Mês & Operação Ativa</h2>
                         </div>
-                    </div>
-                    <div class="tu-card card-purple">
-                        <span class="material-symbols-outlined icon">category</span>
-                        <div class="tu-info">
-                            <span class="label">Total Processado no Mês (Peças)</span>
-                            <h3 id="pecas-mes">--</h3>
-                            <small>Soma do Mês Vigente</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FIFO TRIPLE CONTAINERS -->
-                <div class="fifo-triple-container">
-                    <div class="fifo-alert-card">
-                        <div class="fifo-info">
-                            <span class="material-symbols-outlined">local_shipping</span>
-                            <div class="fifo-text">
-                                <span class="tag">FIFO • Carteira</span>
-                                <h3 id="fifo-cart-title">Sem pendências</h3>
-                            </div>
-                        </div>
-                        <div class="fifo-details">
-                            <span>UF: <strong id="fifo-cart-uf">--</strong></span>
-                            <span>Status: <strong id="fifo-cart-status">OK</strong></span>
+                        <div class="header-badges">
+                            <a href="https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8" target="_blank" class="btn-atalho btn-gsheets" title="Abrir Controle de TUs no Google Sheets">
+                                <span class="material-symbols-outlined">table_chart</span> Google Sheets
+                            </a>
+                            <a href="https://cevalogisticsoffice365.sharepoint.com/sites/LATAM-BR-VAG-01-CLBoticario/Shared%20Documents/General/Departamentos/Planejamento/Controle%20de%20TUs%202026.xlsx" target="_blank" class="btn-atalho btn-m365" title="Abrir Controle de TUs no Microsoft 365">
+                                <span class="material-symbols-outlined">description</span> M365 Excel
+                            </a>
+                            <span class="tu-status-badge">
+                                <span class="status-dot"></span>
+                                <span id="txt-status-sync">Sincronizando...</span>
+                            </span>
                         </div>
                     </div>
 
-                    <div class="fifo-alert-card fifo-card-varejo">
-                        <div class="fifo-info">
-                            <span class="material-symbols-outlined">storefront</span>
-                            <div class="fifo-text">
-                                <span class="tag">FIFO • Varejo</span>
-                                <h3 id="fifo-var-title">Sem pendências</h3>
-                            </div>
-                        </div>
-                        <div class="fifo-details">
-                            <span>UF: <strong id="fifo-var-uf">--</strong></span>
-                            <span>Status: <strong id="fifo-var-status">OK</strong></span>
-                        </div>
-                    </div>
-
-                    <div class="fifo-alert-card fifo-card-estojo">
-                        <div class="fifo-info">
-                            <span class="material-symbols-outlined">inventory_2</span>
-                            <div class="fifo-text">
-                                <span class="tag">FIFO • Estojo</span>
-                                <h3 id="fifo-est-title">Sem pendências</h3>
-                            </div>
-                        </div>
-                        <div class="fifo-details">
-                            <span>UF: <strong id="fifo-est-uf">--</strong></span>
-                            <span>Status: <strong id="fifo-est-status">OK</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TOP 5 CARDS PRINCIPAIS -->
-                <div class="tu-grid-main">
-                    <div class="tu-card card-cyan">
-                        <span class="material-symbols-outlined icon">inventory_2</span>
-                        <div class="tu-info">
-                            <span class="label">TUs Pendentes</span>
-                            <h3 id="tus-pendentes">--</h3>
-                            <small id="sub-tus">De -- TUs na Janela</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-yellow">
-                        <span class="material-symbols-outlined icon">package_2</span>
-                        <div class="tu-info">
-                            <span class="label">Caixas Pendentes</span>
-                            <h3 id="caixas-pendentes">--</h3>
-                            <small id="sub-caixas">LN: -- | GV: --</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-purple">
-                        <span class="material-symbols-outlined icon">category</span>
-                        <div class="tu-info">
-                            <span class="label">Peças Pendentes</span>
-                            <h3 id="pecas-pendentes">--</h3>
-                            <small id="sub-pecas">LN: -- | GV: --</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-red">
-                        <span class="material-symbols-outlined icon">local_shipping</span>
-                        <div class="tu-info">
-                            <span class="label">Falta Alocar</span>
-                            <h3 id="carretas-pendentes">--</h3>
-                            <small>Pendentes de Rampa</small>
-                        </div>
-                    </div>
-
-                    <div class="tu-card card-green">
-                        <div class="card-green-content">
-                            <span class="material-symbols-outlined icon">check_circle</span>
+                    <div class="grid-mes-acumulado">
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">calendar_month</span>
                             <div class="tu-info">
-                                <span class="label">Progresso</span>
-                                <h3 id="progresso-pct">--%</h3>
-                                <small id="sub-progresso">Alocado</small>
+                                <span class="label">Total Processado no Mês (Caixas)</span>
+                                <h3 id="caixas-mes">--</h3>
+                                <small>Soma do Mês Vigente</small>
                             </div>
                         </div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar-fill" id="bar-progresso-fill"></div>
+                        <div class="tu-card card-purple">
+                            <span class="material-symbols-outlined icon">category</span>
+                            <div class="tu-info">
+                                <span class="label">Total Processado no Mês (Peças)</span>
+                                <h3 id="pecas-mes">--</h3>
+                                <small>Soma do Mês Vigente</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fifo-triple-container">
+                        <div class="fifo-alert-card">
+                            <div class="fifo-info">
+                                <span class="material-symbols-outlined">local_shipping</span>
+                                <div class="fifo-text">
+                                    <span class="tag">FIFO • Carteira</span>
+                                    <h3 id="fifo-cart-title">Sem pendências</h3>
+                                </div>
+                            </div>
+                            <div class="fifo-details">
+                                <span>UF: <strong id="fifo-cart-uf">--</strong></span>
+                                <span>Status: <strong id="fifo-cart-status">OK</strong></span>
+                            </div>
+                        </div>
+                        <div class="fifo-alert-card fifo-card-varejo">
+                            <div class="fifo-info">
+                                <span class="material-symbols-outlined">storefront</span>
+                                <div class="fifo-text">
+                                    <span class="tag">FIFO • Varejo</span>
+                                    <h3 id="fifo-var-title">Sem pendências</h3>
+                                </div>
+                            </div>
+                            <div class="fifo-details">
+                                <span>UF: <strong id="fifo-var-uf">--</strong></span>
+                                <span>Status: <strong id="fifo-var-status">OK</strong></span>
+                            </div>
+                        </div>
+                        <div class="fifo-alert-card fifo-card-estojo">
+                            <div class="fifo-info">
+                                <span class="material-symbols-outlined">inventory_2</span>
+                                <div class="fifo-text">
+                                    <span class="tag">FIFO • Estojo</span>
+                                    <h3 id="fifo-est-title">Sem pendências</h3>
+                                </div>
+                            </div>
+                            <div class="fifo-details">
+                                <span>UF: <strong id="fifo-est-uf">--</strong></span>
+                                <span>Status: <strong id="fifo-est-status">OK</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">inventory_2</span>
+                            <div class="tu-info">
+                                <span class="label">TUs Pendentes</span>
+                                <h3 id="tus-pendentes">--</h3>
+                                <small id="sub-tus">De -- TUs na Janela</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-yellow">
+                            <span class="material-symbols-outlined icon">package_2</span>
+                            <div class="tu-info">
+                                <span class="label">Caixas Pendentes</span>
+                                <h3 id="caixas-pendentes">--</h3>
+                                <small id="sub-caixas">LN: -- | GV: --</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-purple">
+                            <span class="material-symbols-outlined icon">category</span>
+                            <div class="tu-info">
+                                <span class="label">Peças Pendentes</span>
+                                <h3 id="pecas-pendentes">--</h3>
+                                <small id="sub-pecas">LN: -- | GV: --</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-red">
+                            <span class="material-symbols-outlined icon">local_shipping</span>
+                            <div class="tu-info">
+                                <span class="label">Falta Alocar</span>
+                                <h3 id="carretas-pendentes">--</h3>
+                                <small>Pendentes de Rampa</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-green">
+                            <div class="card-green-content">
+                                <span class="material-symbols-outlined icon">check_circle</span>
+                                <div class="tu-info">
+                                    <span class="label">Progresso</span>
+                                    <h3 id="progresso-pct">--%</h3>
+                                    <small id="sub-progresso">Alocado</small>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="bar-progresso-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tu-details-grid">
+                        <div class="tu-detail-box">
+                            <h4><span class="material-symbols-outlined">pie_chart</span> Perfil & Volume Total do Mês</h4>
+                            <table class="tu-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left;">Atendimento</th>
+                                        <th>Peças</th>
+                                        <th>Caixas</th>
+                                        <th>Perfil (Pç/Cx)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Carteira (LN)</td>
+                                        <td id="pcs-cart_ln-tot">--</td>
+                                        <td id="cx-cart_ln-tot">--</td>
+                                        <td><span class="val" id="perf-cart_ln-tot">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carteira (GV)</td>
+                                        <td id="pcs-cart_gv-tot">--</td>
+                                        <td id="cx-cart_gv-tot">--</td>
+                                        <td><span class="val" id="perf-cart_gv-tot">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Varejo (LN)</td>
+                                        <td id="pcs-var_ln-tot">--</td>
+                                        <td id="cx-var_ln-tot">--</td>
+                                        <td><span class="val" id="perf-var_ln-tot">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Varejo (GV)</td>
+                                        <td id="pcs-var_gv-tot">--</td>
+                                        <td id="cx-var_gv-tot">--</td>
+                                        <td><span class="val" id="perf-var_gv-tot">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estojo (LN)</td>
+                                        <td id="pcs-est_ln-tot">--</td>
+                                        <td id="cx-est_ln-tot">--</td>
+                                        <td><span class="val" id="perf-est_ln-tot">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estojo (GV)</td>
+                                        <td id="pcs-est_gv-tot">--</td>
+                                        <td id="cx-est_gv-tot">--</td>
+                                        <td><span class="val" id="perf-est_gv-tot">--</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tu-detail-box box-warning">
+                            <h4><span class="material-symbols-outlined">pending_actions</span> Perfil & Volume PENDENTE</h4>
+                            <table class="tu-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left;">Atendimento</th>
+                                        <th>Peças</th>
+                                        <th>Caixas</th>
+                                        <th>Perfil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Carteira (LN)</td>
+                                        <td id="pcs-cart_ln-pend">--</td>
+                                        <td id="cx-cart_ln-pend">--</td>
+                                        <td><span class="val" id="perf-cart_ln-pend">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carteira (GV)</td>
+                                        <td id="pcs-cart_gv-pend">--</td>
+                                        <td id="cx-cart_gv-pend">--</td>
+                                        <td><span class="val" id="perf-cart_gv-pend">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Varejo (LN)</td>
+                                        <td id="pcs-var_ln-pend">--</td>
+                                        <td id="cx-var_ln-pend">--</td>
+                                        <td><span class="val" id="perf-var_ln-pend">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Varejo (GV)</td>
+                                        <td id="pcs-var_gv-pend">--</td>
+                                        <td id="cx-var_gv-pend">--</td>
+                                        <td><span class="val" id="perf-var_gv-pend">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estojo (LN)</td>
+                                        <td id="pcs-est_ln-pend">--</td>
+                                        <td id="cx-est_ln-pend">--</td>
+                                        <td><span class="val" id="perf-est_ln-pend">--</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estojo (GV)</td>
+                                        <td id="pcs-est_gv-pend">--</td>
+                                        <td id="cx-est_gv-pend">--</td>
+                                        <td><span class="val" id="perf-est_gv-pend">--</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="tu-detail-box box-red">
+                            <h4><span class="material-symbols-outlined">verified</span> Checklist de PCP & Atendimentos</h4>
+                            <div class="detail-row">
+                                <span>Atendimento(s) em Andamento:</span>
+                                <span id="txt-atendimentos-andamento" class="val" style="color: #00d2ff;">--</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>Alertas de Atraso de Chegada:</span>
+                                <span id="txt-alertas-atraso" class="val" style="color: #f6b93b;">--</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>Conflito de Rampas:</span>
+                                <span id="alert-rampas" class="val status-ok">0 Detectado</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>Saúde Geral da Base:</span>
+                                <span id="alert-saude" class="val status-ok">100% Auditada</span>
+                            </div>
+                        </div>
+
+                        <div class="tu-detail-box box-purple">
+                            <h4><span class="material-symbols-outlined">assignment_late</span> Detalhamento de Pendências</h4>
+                            <div class="detail-row">
+                                <span>Pendências em Estojo:</span>
+                                <div class="alert-group"><span class="val" id="pend-canal-estojo">--</span></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Pendências em Carteira:</span>
+                                <div class="alert-group"><span class="val" id="pend-canal-carteira">--</span></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Pendências em Varejo:</span>
+                                <div class="alert-group"><span class="val" id="pend-canal-varejo">--</span></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Outras Pendências (Doação, etc):</span>
+                                <div class="alert-group"><span class="val" id="pend-canal-outras">--</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- QUADROS INFERIORES -->
-                <div class="tu-details-grid">
-                    <!-- CARD 1: TABELA TOTAL DO MÊS VIGENTE -->
-                    <div class="tu-detail-box">
-                        <h4><span class="material-symbols-outlined">pie_chart</span> Perfil & Volume Total do Mês</h4>
-                        <table class="tu-table">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: left;">Atendimento</th>
-                                    <th>Peças</th>
-                                    <th>Caixas</th>
-                                    <th>Perfil (Pç/Cx)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-tot">--</td><td id="cx-cart_ln-tot">--</td><td><span class="val" id="perf-cart_ln-tot">--</span></td></tr>
-                                <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-tot">--</td><td id="cx-cart_gv-tot">--</td><td><span class="val" id="perf-cart_gv-tot">--</span></td></tr>
-                                <tr><td>Varejo (LN)</td><td id="pcs-var_ln-tot">--</td><td id="cx-var_ln-tot">--</td><td><span class="val" id="perf-var_ln-tot">--</span></td></tr>
-                                <tr><td>Varejo (GV)</td><td id="pcs-var_gv-tot">--</td><td id="cx-var_gv-tot">--</td><td><span class="val" id="perf-var_gv-tot">--</span></td></tr>
-                                <tr><td>Estojo (LN)</td><td id="pcs-est_ln-tot">--</td><td id="cx-est_ln-tot">--</td><td><span class="val" id="perf-est_ln-tot">--</span></td></tr>
-                                <tr><td>Estojo (GV)</td><td id="pcs-est_gv-tot">--</td><td id="cx-est_gv-tot">--</td><td><span class="val" id="perf-est_gv-tot">--</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- CARD 2: TABELA PENDENTE -->
-                    <div class="tu-detail-box box-warning">
-                        <h4><span class="material-symbols-outlined">pending_actions</span> Perfil & Volume PENDENTE</h4>
-                        <table class="tu-table">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: left;">Atendimento</th>
-                                    <th>Peças</th>
-                                    <th>Caixas</th>
-                                    <th>Perfil</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-pend">--</td><td id="cx-cart_ln-pend">--</td><td><span class="val" id="perf-cart_ln-pend">--</span></td></tr>
-                                <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-pend">--</td><td id="cx-cart_gv-pend">--</td><td><span class="val" id="perf-cart_gv-pend">--</span></td></tr>
-                                <tr><td>Varejo (LN)</td><td id="pcs-var_ln-pend">--</td><td id="cx-var_ln-pend">--</td><td><span class="val" id="perf-var_ln-pend">--</span></td></tr>
-                                <tr><td>Varejo (GV)</td><td id="pcs-var_gv-pend">--</td><td id="cx-var_gv-pend">--</td><td><span class="val" id="perf-var_gv-pend">--</span></td></tr>
-                                <tr><td>Estojo (LN)</td><td id="pcs-est_ln-pend">--</td><td id="cx-est_ln-pend">--</td><td><span class="val" id="perf-est_ln-pend">--</span></td></tr>
-                                <tr><td>Estojo (GV)</td><td id="pcs-est_gv-pend">--</td><td id="cx-est_gv-pend">--</td><td><span class="val" id="perf-est_gv-pend">--</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- CARD 3: CHECKLIST DE PCP & ATENDIMENTOS -->
-                    <div class="tu-detail-box box-red">
-                        <h4><span class="material-symbols-outlined">verified</span> Checklist de PCP & Atendimentos</h4>
-                        <div class="detail-row">
-                            <span>Atendimento(s) em Andamento:</span>
-                            <span id="txt-atendimentos-andamento" class="val" style="color: #00d2ff;">--</span>
+                <!-- ========================================== -->
+                <!-- ABA 2: DEMANDAS WMS (TÁTICO)               -->
+                <!-- ========================================== -->
+                <div id="tab-wms" class="tab-panel">
+                    <div class="tu-header">
+                        <div class="tu-title-group">
+                            <h2><span class="material-symbols-outlined">warehouse</span> Cockpit de Demandas WMS • Tático</h2>
                         </div>
-                        <div class="detail-row">
-                            <span>Alertas de Atraso de Chegada:</span>
-                            <span id="txt-alertas-atraso" class="val" style="color: #f6b93b;">--</span>
-                        </div>
-                        <div class="detail-row">
-                            <span>Conflito de Rampas:</span>
-                            <span id="alert-rampas" class="val status-ok">0 Detectado</span>
-                        </div>
-                        <div class="detail-row">
-                            <span>Saúde Geral da Base:</span>
-                            <span id="alert-saude" class="val status-ok">100% Auditada</span>
+                        <div class="header-badges">
+                            <span class="tu-status-badge">
+                                <span class="status-dot"></span>
+                                <span id="txt-wms-status-sync">Sincronizando...</span>
+                            </span>
                         </div>
                     </div>
 
-                    <!-- CARD 4: DETALHAMENTO DE PENDÊNCIAS POR CANAL + OUTRAS -->
-                    <div class="tu-detail-box box-purple">
-                        <h4><span class="material-symbols-outlined">assignment_late</span> Detalhamento de Pendências</h4>
-                        <div class="detail-row">
-                            <span>Pendências em Estojo:</span>
-                            <div class="alert-group"><span class="val" id="pend-canal-estojo">--</span></div>
+                    <div class="wms-toggles" id="container-wms-botoes">
+                        <div class="wms-toggles-title">Aguardando dados da semana...</div>
+                    </div>
+
+                    <div class="tu-grid-main" id="grid-wms-cards" style="grid-template-columns: repeat(4, 1fr);">
+                        
+                        <!-- CARD ATUALIZADO: ADERÊNCIA DA DEMANDA (PEÇAS) -->
+                        <div class="tu-card card-green" id="card-aderencia-wms">
+                            <div class="card-green-content">
+                                <span class="material-symbols-outlined icon">inventory_2</span>
+                                <div class="tu-info">
+                                    <span class="label" id="wms-onda-atual">Onda Atual</span>
+                                    <h3 id="wms-aderencia">--%</h3>
+                                    <small>Aderência da Demanda (Peças)</small>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="bar-aderencia-fill" style="width: 0%;"></div>
+                            </div>
                         </div>
-                        <div class="detail-row">
-                            <span>Pendências em Carteira:</span>
-                            <div class="alert-group"><span class="val" id="pend-canal-carteira">--</span></div>
+
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">route</span>
+                            <div class="tu-info">
+                                <span class="label">Trânsito na Esteira (FR)</span>
+                                <h3 id="wms-est-cx">--</h3>
+                                <small>Estações visitadas por Caixa</small>
+                            </div>
                         </div>
-                        <div class="detail-row">
-                            <span>Pendências em Varejo:</span>
-                            <div class="alert-group"><span class="val" id="pend-canal-varejo">--</span></div>
+
+                        <div class="tu-card card-purple">
+                            <span class="material-symbols-outlined icon">layers</span>
+                            <div class="tu-info">
+                                <span class="label">Complexidade (FR)</span>
+                                <h3 id="wms-skus-cx">--</h3>
+                                <small>SKUs diferentes por Caixa</small>
+                            </div>
                         </div>
-                        <div class="detail-row">
-                            <span>Outras Pendências (Doação, etc):</span>
-                            <div class="alert-group"><span class="val" id="pend-canal-outras">--</span></div>
+
+                        <div class="tu-card card-red" id="card-tarefas-wms">
+                            <span class="material-symbols-outlined icon">assignment</span>
+                            <div class="tu-info">
+                                <span class="label">Volume de Trabalho</span>
+                                <h3 id="wms-tarefas">--</h3>
+                                <small>Total de Tarefas WMS</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="macro-grid">
+                        <div class="macro-box macro-box-fr">
+                            <div class="macro-header"><span class="material-symbols-outlined">conveyor_belt</span> OPERAÇÃO FRACIONADA (FR)</div>
+                            <div class="macro-stats">
+                                <div class="stat-item"><span class="label">Peças</span><strong id="wms-fr-pcs">--</strong></div>
+                                <div class="stat-item"><span class="label">Caixas</span><strong id="wms-fr-cxs">--</strong></div>
+                                <div class="stat-item"><span class="label">Pç/Cx</span><strong id="wms-fr-pc-cx">--</strong></div>
+                                <div class="stat-item"><span class="label">Tarefas</span><strong id="wms-fr-tar">--</strong></div>
+                            </div>
+                        </div>
+                        <div class="macro-box macro-box-gv">
+                            <div class="macro-header"><span class="material-symbols-outlined">pallet</span> GRANDES VOLUMES (GV)</div>
+                            <div class="macro-stats">
+                                <div class="stat-item"><span class="label">Peças</span><strong id="wms-gv-pcs">--</strong></div>
+                                <div class="stat-item"><span class="label">Caixas</span><strong id="wms-gv-cxs">--</strong></div>
+                                <div class="stat-item"><span class="label">Pç/Cx</span><strong id="wms-gv-pc-cx">--</strong></div>
+                                <div class="stat-item"><span class="label">Tarefas</span><strong id="wms-gv-tar">--</strong></div>
+                            </div>
+                        </div>
+                        <div class="macro-box macro-box-pc">
+                            <div class="macro-header"><span class="material-symbols-outlined">shopping_cart</span> PICKING CART (PC)</div>
+                            <div class="macro-stats">
+                                <div class="stat-item"><span class="label">Peças</span><strong id="wms-pc-pcs">--</strong></div>
+                                <div class="stat-item"><span class="label">Caixas</span><strong id="wms-pc-cxs">--</strong></div>
+                                <div class="stat-item"><span class="label">Pç/Cx</span><strong id="wms-pc-pc-cx">--</strong></div>
+                                <div class="stat-item"><span class="label">Tarefas</span><strong id="wms-pc-tar">--</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tu-details-grid" style="margin-top: 6px; height: 260px;">
+                        <div class="tu-detail-box" style="display:flex; flex-direction:column;">
+                            <h4><span class="material-symbols-outlined">bar_chart</span> Curva de Caixas por Estação</h4>
+                            <div style="flex:1; position:relative;">
+                                <canvas id="chartCaixas"></canvas>
+                            </div>
+                        </div>
+                        <div class="tu-detail-box" style="display:flex; flex-direction:column;">
+                            <h4><span class="material-symbols-outlined">stacked_bar_chart</span> Curva de Peças por Estação</h4>
+                            <div style="flex:1; position:relative;">
+                                <canvas id="chartPecas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- ABA 3: MOVIMENTAÇÕES                       -->
+                <!-- ========================================== -->
+                <div id="tab-movimentacoes" class="tab-panel">
+                    <div class="tu-header">
+                        <div class="tu-title-group">
+                            <h2><span class="material-symbols-outlined">sync_alt</span> Controle de Movimentações • Módulo Operacional</h2>
+                        </div>
+                        <div class="header-badges">
+                            <a href="https://docs.google.com/spreadsheets/d/1tNeCyjzmLYqL0YxlRjf5vG6UPwlunrgzu0zzAGIFhz0/edit?gid=0#gid=0" target="_blank" class="btn-atalho btn-gsheets" title="Abrir Movimentações no Google Sheets">
+                                <span class="material-symbols-outlined">table_chart</span> Google Sheets
+                            </a>
+                            <a href="https://cevalogisticsoffice365.sharepoint.com/sites/LATAM-BR-VAG-01-CLBoticario/Shared%20Documents/General/Departamentos/Planejamento/Movimenta%C3%A7%C3%B5es%202026.xlsx?d=w55ef58ff40b94596a34c096999512b6a&csf=1&web=1&e=Ud8s43" target="_blank" class="btn-atalho btn-m365" title="Abrir Movimentações no M365">
+                                <span class="material-symbols-outlined">description</span> M365 Excel
+                            </a>
+                            <span class="tu-status-badge">
+                                <span class="status-dot"></span>
+                                <span id="txt-mov-status-sync">Sincronizando...</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="tu-grid-main" style="grid-template-columns: repeat(4, 1fr);">
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">today</span>
+                            <div class="tu-info">
+                                <span class="label">Movimentações do Dia</span>
+                                <h3 id="mov-card-total-dia">--</h3>
+                                <small>Solicitações Registradas Hoje</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-yellow">
+                            <span class="material-symbols-outlined icon">pending_actions</span>
+                            <div class="tu-info">
+                                <span class="label">Pendentes do Dia</span>
+                                <h3 id="mov-card-pendentes">--</h3>
+                                <small>Pendências do Turno de Hoje</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-purple">
+                            <span class="material-symbols-outlined icon">history_toggle_off</span>
+                            <div class="tu-info">
+                                <span class="label">Passivo de Pendências</span>
+                                <h3 id="mov-card-pendentes-antigas">--</h3>
+                                <small>Pendências de Dias Anteriores</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-red">
+                            <span class="material-symbols-outlined icon">sell</span>
+                            <div class="tu-info">
+                                <span class="label">Quantidade de Etiquetas</span>
+                                <h3 id="mov-card-etiquetas-totais">--</h3>
+                                <small id="sub-etiquetas-pendentes">-- pendentes hoje</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOVO LAYOUT COM 3 TABELAS LADO A LADO -->
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-top: 4px;">
+                        
+                        <!-- TABELA PRINCIPAL -->
+                        <div class="tu-detail-box box-warning" style="min-width: 0;">
+                            <h4><span class="material-symbols-outlined">list_alt</span> Movimentações Pendentes de Execução</h4>
+                            <table class="tu-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">DATA</th>
+                                        <th style="text-align: left;">ITEM</th>
+                                        <th>DEMANDA</th>
+                                        <th>DE</th>
+                                        <th>PARA</th>
+                                        <th>TIPO DEP.</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbl-mov-pendentes-body">
+                                    <tr>
+                                        <td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">
+                                            Carregando pendências...
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- TABELAS IE e CF -->
+                        <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
+                            <div class="tu-detail-box box-purple">
+                                <h4><span class="material-symbols-outlined">print</span> Pendente de Etiqueta (IE)</h4>
+                                <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
+                                    <table class="tu-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left;">ITEM</th>
+                                                <th>PARA</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbl-mov-ie-body"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="tu-detail-box box-red">
+                                <h4><span class="material-symbols-outlined">app_registration</span> Pendente de Fixo (CF)</h4>
+                                <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
+                                    <table class="tu-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left;">ITEM</th>
+                                                <th>PARA</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbl-mov-cf-body"></tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -556,21 +785,47 @@
         </main>
     </div>
 
+    <!-- ========================================== -->
+    <!-- RODAPÉ E PILARES                           -->
+    <!-- ========================================== -->
     <div class="bar-pilares">
-        <div class="pilar-item"><span class="material-symbols-outlined">shield</span><div class="pilar-text">Visão de <strong>Ponta a Ponta</strong></div></div>
-        <div class="pilar-item"><span class="material-symbols-outlined">verified_user</span><div class="pilar-text">Segurança <strong>de dados</strong></div></div>
-        <div class="pilar-item"><span class="material-symbols-outlined">schedule</span><div class="pilar-text">Informações <strong>em tempo real</strong></div></div>
-        <div class="pilar-item"><span class="material-symbols-outlined">group</span><div class="pilar-text">Equipes <strong>em sincronia</strong></div></div>
+        <div class="pilar-item">
+            <span class="material-symbols-outlined">shield</span><div class="pilar-text">Visão de <strong>Ponta a Ponta</strong></div>
+        </div>
+        <div class="pilar-item">
+            <span class="material-symbols-outlined">verified_user</span><div class="pilar-text">Segurança <strong>de dados</strong></div>
+        </div>
+        <div class="pilar-item">
+            <span class="material-symbols-outlined">schedule</span><div class="pilar-text">Informações <strong>em tempo real</strong></div>
+        </div>
+        <div class="pilar-item">
+            <span class="material-symbols-outlined">group</span><div class="pilar-text">Equipes <strong>em sincronia</strong></div>
+        </div>
     </div>
 
     <footer class="rodape">
         <p>Desenvolvido para o Setor de Planejamento CEVA Logistics &copy; 2026</p>
     </footer>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS MÁGICOS (JAVASCRIPT)               -->
+    <!-- ========================================== -->
     <script>
-        function formatarNumeroInteiro(num) {
-            if (!num || num === 0) return '0';
-            return num.toLocaleString('pt-BR');
+        Chart.defaults.color = '#a0aab5';
+        Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
+        
+        let chartCaixas = null; 
+        let chartPecas = null;
+
+        function trocarAba(idAba, elBotao) {
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(idAba).classList.add('active');
+            elBotao.classList.add('active');
+        }
+
+        function formatarNumeroInteiro(num) { 
+            return (!num || num === 0) ? '0' : num.toLocaleString('pt-BR'); 
         }
 
         function formatarAbreviado(num) {
@@ -580,23 +835,19 @@
             return num.toLocaleString('pt-BR');
         }
 
-        function preencherCardPerfil(prefixo, objetoDados) {
-            if (!objetoDados) return;
-            const canais = ['cart_ln', 'cart_gv', 'var_ln', 'var_gv', 'est_ln', 'est_gv'];
-            const chaves = ['carteira_ln', 'carteira_gv', 'varejo_ln', 'varejo_gv', 'estojo_ln', 'estojo_gv'];
+        function setTextoSeguro(id, texto) { 
+            const el = document.getElementById(id); 
+            if (el) el.textContent = texto; 
+        }
 
-            canais.forEach((c, idx) => {
-                const item = objetoDados[chaves[idx]];
-                if (item) {
-                    const elPcs = document.getElementById(`pcs-${c}-${prefixo}`);
-                    const elCx = document.getElementById(`cx-${c}-${prefixo}`);
-                    const elPerf = document.getElementById(`perf-${c}-${prefixo}`);
+        function setHtmlSeguro(id, html) { 
+            const el = document.getElementById(id); 
+            if (el) el.innerHTML = html; 
+        }
 
-                    if (elPcs) elPcs.textContent = formatarNumeroInteiro(item.pcs);
-                    if (elCx) elCx.textContent = formatarNumeroInteiro(item.cx);
-                    if (elPerf) elPerf.textContent = `${Math.round(item.perfil)}`;
-                }
-            });
+        function setEstiloSeguro(id, prop, valor) { 
+            const el = document.getElementById(id); 
+            if (el) el.style[prop] = valor; 
         }
 
         function formatarTextoPendencia(qtd) {
@@ -605,92 +856,295 @@
             return `<small class="carreta-tag pend-tag">${qtd} ${palavra}</small>`;
         }
 
+        function preencherCardPerfil(prefixo, objetoDados) {
+            if (!objetoDados) return;
+            const canais = ['cart_ln', 'cart_gv', 'var_ln', 'var_gv', 'est_ln', 'est_gv'];
+            const chaves = ['carteira_ln', 'carteira_gv', 'varejo_ln', 'varejo_gv', 'estojo_ln', 'estojo_gv'];
+            canais.forEach((c, idx) => {
+                const item = objetoDados[chaves[idx]];
+                if (item) {
+                    setTextoSeguro(`pcs-${c}-${prefixo}`, formatarNumeroInteiro(item.pcs));
+                    setTextoSeguro(`cx-${c}-${prefixo}`, formatarNumeroInteiro(item.cx));
+                    setTextoSeguro(`perf-${c}-${prefixo}`, `${Math.round(item.perfil)}`);
+                }
+            });
+        }
+
         function carregarDados() {
-            if (typeof dadosDashboard === 'undefined') return;
+            let nomesCarretasAtivas = "";
 
-            const dados = dadosDashboard;
-
-            if (dados.atualizado_em) {
-                document.getElementById('txt-status-sync').textContent = `LIVE • ${dados.atualizado_em}`;
-            }
-
-            // ACUMULADOS MÊS
-            document.getElementById('caixas-mes').textContent = formatarNumeroInteiro(dados.caixas_total_mes);
-            document.getElementById('pecas-mes').textContent = formatarNumeroInteiro(dados.pecas_total_mes);
-
-            // ATENDIMENTOS E ALERTAS
-            if (dados.atendimentos_em_andamento) {
-                document.getElementById('txt-atendimentos-andamento').textContent = dados.atendimentos_em_andamento.join(', ');
-            }
-            if (dados.alertas_atraso) {
-                document.getElementById('txt-alertas-atraso').textContent = dados.alertas_atraso.join(' | ');
-            }
-
-            // TOP CARDS
-            const tuPendentes = dados.carretas_pendentes || 0; 
-            document.getElementById('tus-pendentes').textContent = `${tuPendentes}`;
-            document.getElementById('sub-tus').textContent = `De ${dados.total_tus} TUs na Janela`;
-
-            document.getElementById('caixas-pendentes').textContent = formatarNumeroInteiro(dados.caixas_pendentes);
-            document.getElementById('sub-caixas').textContent = `LN: ${formatarAbreviado(dados.caixas_ln_pend)} | GV: ${formatarAbreviado(dados.caixas_gv_pend)}`;
-
-            document.getElementById('pecas-pendentes').textContent = formatarNumeroInteiro(dados.pecas_pendentes);
-            document.getElementById('sub-pecas').textContent = `LN: ${formatarAbreviado(dados.pecas_ln_pend)} | GV: ${formatarAbreviado(dados.pecas_gv_pend)}`;
-            
-            document.getElementById('carretas-pendentes').textContent = `${dados.carretas_pendentes}`;
-            
-            const pct = dados.progresso_pct || 0;
-            document.getElementById('progresso-pct').textContent = `${pct}%`;
-            document.getElementById('bar-progresso-fill').style.width = `${pct}%`;
-
-            // FIFO ALERTS
-            if (dados.proxima_carteira) {
-                document.getElementById('fifo-cart-title').textContent = `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`;
-                document.getElementById('fifo-cart-uf').textContent = dados.proxima_carteira.uf;
-                document.getElementById('fifo-cart-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-cart-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-cart-uf').textContent = "--";
-                document.getElementById('fifo-cart-status').textContent = "Livre";
-            }
-
-            if (dados.proxima_varejo) {
-                document.getElementById('fifo-var-title').textContent = `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`;
-                document.getElementById('fifo-var-uf').textContent = dados.proxima_varejo.uf;
-                document.getElementById('fifo-var-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-var-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-var-uf').textContent = "--";
-                document.getElementById('fifo-var-status').textContent = "Livre";
-            }
-
-            if (dados.proxima_estojo) {
-                document.getElementById('fifo-est-title').textContent = `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`;
-                document.getElementById('fifo-est-uf').textContent = dados.proxima_estojo.uf;
-                document.getElementById('fifo-est-status').textContent = "Pendente";
-            } else {
-                document.getElementById('fifo-est-title').textContent = "Sem Pendências";
-                document.getElementById('fifo-est-uf').textContent = "--";
-                document.getElementById('fifo-est-status').textContent = "Livre";
-            }
-
-            // PERFIS
-            if (dados.perfis_geral) preencherCardPerfil('tot', dados.perfis_geral);
-            if (dados.perfis_pendentes) preencherCardPerfil('pend', dados.perfis_pendentes);
-
-            // DETALHAMENTO DE PENDÊNCIAS
-            if (dados.pendencias_por_canal) {
-                document.getElementById('pend-canal-estojo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.estojo);
-                document.getElementById('pend-canal-carteira').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.carteira);
-                document.getElementById('pend-canal-varejo').innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.varejo);
+            // ==============================================
+            // ABA 1: TUs
+            // ==============================================
+            if (typeof dadosDashboard !== 'undefined') {
+                const dados = dadosDashboard;
+                setTextoSeguro('txt-status-sync', `LIVE • ${dados.atualizado_em || ''}`);
+                setTextoSeguro('caixas-mes', formatarNumeroInteiro(dados.caixas_total_mes));
+                setTextoSeguro('pecas-mes', formatarNumeroInteiro(dados.pecas_total_mes));
+                setTextoSeguro('tus-pendentes', `${dados.carretas_pendentes || 0}`);
+                setTextoSeguro('sub-tus', `De ${dados.total_tus || 0} TUs na Janela`);
+                setTextoSeguro('caixas-pendentes', formatarNumeroInteiro(dados.caixas_pendentes));
+                setTextoSeguro('sub-caixas', `LN: ${formatarAbreviado(dados.caixas_ln_pend)} | GV: ${formatarAbreviado(dados.caixas_gv_pend)}`);
+                setTextoSeguro('pecas-pendentes', formatarNumeroInteiro(dados.pecas_pendentes));
+                setTextoSeguro('sub-pecas', `LN: ${formatarAbreviado(dados.pecas_ln_pend)} | GV: ${formatarAbreviado(dados.pecas_gv_pend)}`);
+                setTextoSeguro('carretas-pendentes', `${dados.carretas_pendentes || 0}`);
                 
-                const elOutras = document.getElementById('pend-canal-outras');
-                if (elOutras) {
-                    elOutras.innerHTML = formatarTextoPendencia(dados.pendencias_por_canal.outras || 0);
+                const pct = dados.progresso_pct || 0;
+                setTextoSeguro('progresso-pct', `${pct}%`);
+                setEstiloSeguro('bar-progresso-fill', 'width', `${pct}%`);
+
+                if (dados.proxima_carteira) {
+                    setTextoSeguro('fifo-cart-title', `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`);
+                    setTextoSeguro('fifo-cart-uf', dados.proxima_carteira.uf);
+                    nomesCarretasAtivas += dados.proxima_carteira.carreta + " ";
+                }
+                
+                if (dados.proxima_varejo) {
+                    setTextoSeguro('fifo-var-title', `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`);
+                    setTextoSeguro('fifo-var-uf', dados.proxima_varejo.uf);
+                    nomesCarretasAtivas += "VAREJO ";
+                }
+                
+                if (dados.proxima_estojo) {
+                    setTextoSeguro('fifo-est-title', `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`);
+                    setTextoSeguro('fifo-est-uf', dados.proxima_estojo.uf);
+                    nomesCarretasAtivas += "ESTOJO ";
+                }
+
+                if (dados.perfis_geral) preencherCardPerfil('tot', dados.perfis_geral);
+                if (dados.perfis_pendentes) preencherCardPerfil('pend', dados.perfis_pendentes);
+                
+                if (dados.atendimentos_em_andamento) {
+                    setTextoSeguro('txt-atendimentos-andamento', dados.atendimentos_em_andamento.join(', '));
+                }
+                if (dados.alertas_atraso) {
+                    setTextoSeguro('txt-alertas-atraso', dados.alertas_atraso.join(' | '));
+                }
+                if (dados.pendencias_por_canal) {
+                    setHtmlSeguro('pend-canal-estojo', formatarTextoPendencia(dados.pendencias_por_canal.estojo));
+                    setHtmlSeguro('pend-canal-carteira', formatarTextoPendencia(dados.pendencias_por_canal.carteira));
+                    setHtmlSeguro('pend-canal-varejo', formatarTextoPendencia(dados.pendencias_por_canal.varejo));
+                    setHtmlSeguro('pend-canal-outras', formatarTextoPendencia(dados.pendencias_por_canal.outras || 0));
+                }
+            }
+
+            nomesCarretasAtivas = nomesCarretasAtivas.toUpperCase();
+
+            // ==============================================
+            // ABA 2: WMS Demandas
+            // ==============================================
+            if (typeof dadosDemandaWMS !== 'undefined') {
+                const wms = dadosDemandaWMS;
+                const textoPeriodo = wms.periodo ? ` | Sem: ${wms.periodo}` : '';
+                setTextoSeguro('txt-wms-status-sync', `LIVE • ${wms.atualizado_em || ''}${textoPeriodo}`);
+                
+                const containerBotoes = document.getElementById('container-wms-botoes');
+                
+                if (containerBotoes && wms.ondas && wms.ondas.length > 0) {
+                    containerBotoes.innerHTML = `<div class="wms-toggles-title">Ondas Processadas na Semana:</div>`;
+                    let renderizouAlgumaOnda = false;
+
+                    wms.ondas.forEach((onda, index) => {
+                        const btn = document.createElement('button');
+                        const siglaOnda = onda.onda_atual.split(' ')[0].toUpperCase(); 
+                        const estaRodandoNaLinha = nomesCarretasAtivas.includes(siglaOnda);
+                        
+                        if (estaRodandoNaLinha) {
+                            btn.className = 'btn-wms-onda rodando' + (!renderizouAlgumaOnda ? ' active' : '');
+                            btn.innerHTML = `<span class="status-rodando"></span> ${onda.onda_atual}`;
+                            if (!renderizouAlgumaOnda) { 
+                                renderizarCardsWMS(onda); 
+                                renderizouAlgumaOnda = true; 
+                            }
+                        } else {
+                            btn.className = 'btn-wms-onda' + (!renderizouAlgumaOnda && index === 0 ? ' active' : '');
+                            btn.innerHTML = onda.onda_atual;
+                        }
+
+                        if (!renderizouAlgumaOnda && index === 0) { 
+                            renderizarCardsWMS(onda); 
+                            renderizouAlgumaOnda = true; 
+                        }
+
+                        btn.onclick = () => {
+                            document.querySelectorAll('.btn-wms-onda').forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+                            renderizarCardsWMS(onda);
+                        };
+                        
+                        containerBotoes.appendChild(btn);
+                    });
+                }
+            }
+
+            // ==============================================
+            // ABA 3: MOVIMENTAÇÕES
+            // ==============================================
+            if (typeof dadosMovimentacoes !== 'undefined') {
+                const mov = dadosMovimentacoes;
+                setTextoSeguro('txt-mov-status-sync', `LIVE • ${mov.atualizado_em || ''}`);
+                setTextoSeguro('mov-card-total-dia', formatarNumeroInteiro(mov.total_dia));
+                setTextoSeguro('mov-card-pendentes', formatarNumeroInteiro(mov.pendentes_hoje));
+                setTextoSeguro('mov-card-pendentes-antigas', formatarNumeroInteiro(mov.pendentes_antigas));
+                setEstiloSeguro('mov-card-pendentes-antigas', 'color', (mov.pendentes_antigas > 0) ? '#ff4b2b' : '#00b09b');
+                setTextoSeguro('mov-card-etiquetas-totais', formatarNumeroInteiro(mov.etiquetas_totais));
+                setTextoSeguro('sub-etiquetas-pendentes', `${formatarNumeroInteiro(mov.etiquetas_pendentes)} pendentes hoje`);
+
+                // TABELA PRINCIPAL COM CORES
+                const tbody = document.getElementById('tbl-mov-pendentes-body');
+                if (tbody) {
+                    if (mov.tabela_pendentes && mov.tabela_pendentes.length > 0) {
+                        let linhas = '';
+                        mov.tabela_pendentes.forEach(item => {
+                            const dem = (item.demanda || '').toUpperCase();
+                            let tagStyle = 'color: #a0aab5; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);';
+                            
+                            if (dem.includes('VAREJO')) {
+                                tagStyle = 'color: #00b09b; background: rgba(0, 176, 155, 0.1); border: 1px solid rgba(0, 176, 155, 0.25);';
+                            } else if (dem.includes('CARTEIRA') || dem.includes('MGC') || dem.includes('MGI')) {
+                                tagStyle = 'color: #00d2ff; background: rgba(0, 210, 255, 0.1); border: 1px solid rgba(0, 210, 255, 0.25);';
+                            } else if (dem.includes('ESTOJO') || dem.includes('KIT')) {
+                                tagStyle = 'color: #f6b93b; background: rgba(246, 185, 59, 0.1); border: 1px solid rgba(246, 185, 59, 0.25);';
+                            } else if (dem.includes('SPI') || dem.includes('SPC')) {
+                                tagStyle = 'color: #9b59b6; background: rgba(155, 89, 182, 0.1); border: 1px solid rgba(155, 89, 182, 0.25);';
+                            }
+
+                            linhas += `
+                                <tr>
+                                    <td style="font-weight: 700; color: #f6b93b;">${item.data}</td>
+                                    <td>${item.item}</td>
+                                    <td><span class="carreta-tag" style="${tagStyle}">${item.demanda}</span></td>
+                                    <td>${item.de}</td>
+                                    <td><span style="color: #00d2ff; font-weight:700;">${item.para}</span></td>
+                                    <td>${item.tipo_dep}</td>
+                                </tr>
+                            `;
+                        });
+                        tbody.innerHTML = linhas;
+                    } else {
+                        tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; color: #00b09b; padding: 18px; font-weight: 600;">✨ Não há movimentações pendentes</td></tr>`;
+                    }
+                }
+
+                // TABELA DE IE (Etiquetas)
+                const tbodyIE = document.getElementById('tbl-mov-ie-body');
+                if (tbodyIE) {
+                    if (mov.tabela_ie && mov.tabela_ie.length > 0) {
+                        let linhasIE = '';
+                        mov.tabela_ie.forEach(i => {
+                            linhasIE += `<tr><td style="color:#ffffff;">${i.item}</td><td><span class="val">${i.para}</span></td></tr>`;
+                        });
+                        tbodyIE.innerHTML = linhasIE;
+                    } else {
+                        tbodyIE.innerHTML = `<tr><td colspan="2" style="text-align: center; color: #00b09b; padding: 10px;">✅ Tudo Impresso</td></tr>`;
+                    }
+                }
+
+                // TABELA DE CF (Cadastro Fixo)
+                const tbodyCF = document.getElementById('tbl-mov-cf-body');
+                if (tbodyCF) {
+                    if (mov.tabela_cf && mov.tabela_cf.length > 0) {
+                        let linhasCF = '';
+                        mov.tabela_cf.forEach(i => {
+                            linhasCF += `<tr><td style="color:#ffffff;">${i.item}</td><td><span class="val">${i.para}</span></td></tr>`;
+                        });
+                        tbodyCF.innerHTML = linhasCF;
+                    } else {
+                        tbodyCF.innerHTML = `<tr><td colspan="2" style="text-align: center; color: #00b09b; padding: 10px;">✅ Sem pendências</td></tr>`;
+                    }
                 }
             }
         }
 
+        // ==============================================
+        // DESENHO DOS GRÁFICOS DO WMS
+        // ==============================================
+        function desenharGraficosChartJS(todasEstacoes) {
+            if (!todasEstacoes || todasEstacoes.length === 0) return;
+            
+            const labels = todasEstacoes.map(e => e.estacao);
+            const dataCxs = todasEstacoes.map(e => e.cxs);
+            const dataPcs = todasEstacoes.map(e => e.pcs);
+
+            const ctxCxs = document.getElementById('chartCaixas').getContext('2d');
+            const ctxPcs = document.getElementById('chartPecas').getContext('2d');
+
+            if (chartCaixas) chartCaixas.destroy(); 
+            chartCaixas = new Chart(ctxCxs, {
+                type: 'bar',
+                data: { 
+                    labels: labels, 
+                    datasets: [{ data: dataCxs, backgroundColor: 'rgba(0, 210, 255, 0.6)', borderColor: 'rgba(0, 210, 255, 1)', borderWidth: 1, borderRadius: 4 }] 
+                },
+                options: { 
+                    responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, 
+                    scales: { y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { font: { size: 10 } } } } 
+                }
+            });
+
+            if (chartPecas) chartPecas.destroy(); 
+            chartPecas = new Chart(ctxPcs, {
+                type: 'bar',
+                data: { 
+                    labels: labels, 
+                    datasets: [{ data: dataPcs, backgroundColor: 'rgba(155, 89, 182, 0.6)', borderColor: 'rgba(155, 89, 182, 1)', borderWidth: 1, borderRadius: 4 }] 
+                },
+                options: { 
+                    responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, 
+                    scales: { y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { font: { size: 10 } } } } 
+                }
+            });
+        }
+
+        // ==============================================
+        // PREENCHIMENTO DOS CARDS WMS
+        // ==============================================
+        function renderizarCardsWMS(onda) {
+            setTextoSeguro('wms-onda-atual', onda.onda_atual);
+            setTextoSeguro('wms-tarefas', formatarNumeroInteiro(onda.real_tar));
+
+            if(onda.fr) { 
+                setTextoSeguro('wms-fr-pcs', formatarNumeroInteiro(onda.fr.pcs)); 
+                setTextoSeguro('wms-fr-cxs', formatarNumeroInteiro(onda.fr.cxs)); 
+                setTextoSeguro('wms-fr-pc-cx', onda.fr.pc_cx); 
+                setTextoSeguro('wms-fr-tar', formatarNumeroInteiro(onda.fr.tar)); 
+            }
+            if(onda.gv) { 
+                setTextoSeguro('wms-gv-pcs', formatarNumeroInteiro(onda.gv.pcs)); 
+                setTextoSeguro('wms-gv-cxs', formatarNumeroInteiro(onda.gv.cxs)); 
+                setTextoSeguro('wms-gv-pc-cx', onda.gv.pc_cx); 
+                setTextoSeguro('wms-gv-tar', formatarNumeroInteiro(onda.gv.tar)); 
+            }
+            if(onda.pc) { 
+                setTextoSeguro('wms-pc-pcs', formatarNumeroInteiro(onda.pc.pcs)); 
+                setTextoSeguro('wms-pc-cxs', formatarNumeroInteiro(onda.pc.cxs)); 
+                setTextoSeguro('wms-pc-pc-cx', onda.pc.pc_cx); 
+                setTextoSeguro('wms-pc-tar', formatarNumeroInteiro(onda.pc.tar)); 
+            }
+
+            const isVarejo = onda.onda_atual.toUpperCase() === 'VAREJO';
+            const cardAderencia = document.getElementById('card-aderencia-wms');
+            const gridWMS = document.getElementById('grid-wms-cards');
+
+            if (isVarejo) {
+                if (cardAderencia) cardAderencia.style.display = 'none';
+                if (gridWMS) gridWMS.style.gridTemplateColumns = 'repeat(3, 1fr)';
+            } else {
+                if (cardAderencia) cardAderencia.style.display = 'flex';
+                if (gridWMS) gridWMS.style.gridTemplateColumns = 'repeat(4, 1fr)';
+                setTextoSeguro('wms-aderencia', `${onda.aderencia_pcs}%`);
+                setEstiloSeguro('bar-aderencia-fill', 'width', `${Math.min(onda.aderencia_pcs, 100)}%`);
+            }
+            
+            setTextoSeguro('wms-est-cx', onda.perfil_est_cx);
+            setTextoSeguro('wms-skus-cx', onda.perfil_skus_cx);
+            
+            desenharGraficosChartJS(onda.todas_estacoes);
+        }
+
+        // ==============================================
+        // INICIALIZAÇÃO
+        // ==============================================
         carregarDados();
     </script>
 </body>
