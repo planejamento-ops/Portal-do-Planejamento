@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "17/09/2026 16:10",
+  "atualizado_em": "17/09/2026 16:25",
   "total_tus": 54,
   "caixas_total_mes": 170569,
   "pecas_total_mes": 6487152,
@@ -11,6 +11,8 @@ window.dadosDashboard = {
   "pecas_gv_pend": 0,
   "carretas_pendentes": 0,
   "progresso_pct": 100,
+  "atendimentos_em_andamento": [],
+  "alertas_atraso": [],
   "proxima_carteira": null,
   "proxima_varejo": null,
   "proxima_estojo": null,
