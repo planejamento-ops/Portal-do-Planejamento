@@ -1,11 +1,11 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "16/09/2026 15:01",
-  "total_dia": 111,
-  "pendentes_hoje": 1,
-  "pendentes_antigas": 0,
-  "demandas_ativas": "SPI",
-  "etiquetas_totais": 111,
-  "etiquetas_pendentes": 1,
+  "atualizado_em": "17/09/2026 09:08",
+  "total_dia": 39,
+  "pendentes_hoje": 0,
+  "pendentes_antigas": 4,
+  "demandas_ativas": "SPI, MALHA PRÓ",
+  "etiquetas_totais": 39,
+  "etiquetas_pendentes": 0,
   "tabela_pendentes": [
     {
       "data": "16/09",
@@ -14,6 +14,33 @@ window.dadosMovimentacoes = {
       "de": "LN-4-23-3-4-3",
       "para": "LN-4-32-2-3-2",
       "tipo_dep": "BGFE",
+      "duplicidade": "OK"
+    },
+    {
+      "data": "16/09",
+      "item": "50480",
+      "demanda": "MALHA PRÓ",
+      "de": "PC-01-07-1",
+      "para": "LN-2-12-1-3-2",
+      "tipo_dep": "BGFD",
+      "duplicidade": "OK"
+    },
+    {
+      "data": "16/09",
+      "item": "50252",
+      "demanda": "MALHA PRÓ",
+      "de": "PC-02-06-4",
+      "para": "LN-3-17-3-4-5",
+      "tipo_dep": "BGLE",
+      "duplicidade": "OK"
+    },
+    {
+      "data": "16/09",
+      "item": "59683",
+      "demanda": "MALHA PRÓ",
+      "de": "PC-05-23-2",
+      "para": "LN-3-17-3-4-1",
+      "tipo_dep": "BGLE",
       "duplicidade": "OK"
     }
   ]
