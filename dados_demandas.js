@@ -1,12 +1,37 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "16/09/2026 17:49",
+  "atualizado_em": "17/09/2026 08:56",
   "onda_atual": "SPI Varejo",
   "data_onda": "16/09/2026, 01:12:34",
-  "real_pcs": 18824,
   "real_cxs": 944,
-  "previa_pcs": 38712,
-  "acuracia_pct": 49,
-  "top_estacoes": [
+  "real_pcs": 18824,
+  "previa_cxs": 2036,
+  "acuracia_cxs": 46,
+  "perfil_est_cx": 6.4,
+  "perfil_skus_cx": 9.5,
+  "perfil_pcs_cx": 19.0,
+  "top_est_cxs": [
+    {
+      "estacao": "07",
+      "volume": 828
+    },
+    {
+      "estacao": "34",
+      "volume": 405
+    },
+    {
+      "estacao": "21",
+      "volume": 293
+    },
+    {
+      "estacao": "31",
+      "volume": 269
+    },
+    {
+      "estacao": "22",
+      "volume": 233
+    }
+  ],
+  "top_est_pcs": [
     {
       "estacao": "07",
       "volume": 7302
@@ -18,27 +43,14 @@ window.dadosDemandaWMS = {
     {
       "estacao": "31",
       "volume": 524
-    }
-  ],
-  "top_familias": [
-    {
-      "familia": "Cabelos",
-      "pct": 23
     },
     {
-      "familia": "SuporteVenda",
-      "pct": 22
+      "estacao": "29",
+      "volume": 481
     },
     {
-      "familia": "Perfumaria",
-      "pct": 14
+      "estacao": "27",
+      "volume": 469
     }
-  ],
-  "predios": {
-    "GV": 2016,
-    "FR": 16808,
-    "AG": 7302,
-    "BG": 9271,
-    "PC": 235
-  }
+  ]
 };
