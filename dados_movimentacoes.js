@@ -1,10 +1,10 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "17/09/2026 23:54",
-  "total_dia": 199,
-  "pendentes_hoje": 38,
-  "pendentes_antigas": 0,
-  "etiquetas_totais": 199,
-  "etiquetas_pendentes": 38,
+  "atualizado_em": "18/09/2026 00:05",
+  "total_dia": 0,
+  "pendentes_hoje": 0,
+  "pendentes_antigas": 38,
+  "etiquetas_totais": 0,
+  "etiquetas_pendentes": 0,
   "tabela_pendentes": [
     {
       "data": "17/09",
