@@ -1,9 +1,9 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 22:54",
+  "atualizado_em": "17/09/2026 22:59",
   "periodo": "13/09 a 19/09",
   "ondas": [
     {
-      "onda_atual": "ESTOJO",
+      "onda_atual": "ESTOJO SPC",
       "real_cxs": 39025,
       "real_pcs": 402943,
       "real_tar": 16363,
