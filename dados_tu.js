@@ -1,25 +1,35 @@
 window.dadosDashboard = {
-  "atualizado_em": "18/09/2026 01:22",
-  "total_tus": 49,
-  "caixas_total_mes": 178353,
-  "pecas_total_mes": 6569010,
-  "caixas_pendentes": 0,
-  "caixas_ln_pend": 0,
-  "caixas_gv_pend": 0,
-  "pecas_pendentes": 0,
-  "pecas_ln_pend": 0,
-  "pecas_gv_pend": 0,
-  "carretas_pendentes": 0,
-  "progresso_pct": 100,
-  "atendimentos_em_andamento": [],
+  "atualizado_em": "18/09/2026 04:07",
+  "total_tus": 60,
+  "caixas_total_mes": 186251,
+  "pecas_total_mes": 6975211,
+  "caixas_pendentes": 6111,
+  "caixas_ln_pend": 2172,
+  "caixas_gv_pend": 3939,
+  "pecas_pendentes": 309250,
+  "pecas_ln_pend": 135837,
+  "pecas_gv_pend": 173413,
+  "carretas_pendentes": 10,
+  "progresso_pct": 83,
+  "atendimentos_em_andamento": [
+    "SPC"
+  ],
   "alertas_atraso": [],
-  "proxima_carteira": null,
+  "proxima_carteira": {
+    "carreta": "Carreta 06",
+    "tu_resumida": "...2723",
+    "uf": "SPC"
+  },
   "proxima_varejo": null,
-  "proxima_estojo": null,
+  "proxima_estojo": {
+    "carreta": "Carreta 12",
+    "tu_resumida": "...2765",
+    "uf": "SPC"
+  },
   "pendencias_por_canal": {
     "varejo": 0,
-    "carteira": 0,
-    "estojo": 0,
+    "carteira": 6,
+    "estojo": 4,
     "outras": 0
   },
   "perfis_geral": {
@@ -34,14 +44,14 @@ window.dadosDashboard = {
       "pcs": 81763
     },
     "carteira_ln": {
-      "perfil": 53,
-      "cx": 63702,
-      "pcs": 3378630
+      "perfil": 54,
+      "cx": 66320,
+      "pcs": 3550506
     },
     "carteira_gv": {
       "perfil": 44,
-      "cx": 53451,
-      "pcs": 2347376
+      "cx": 58731,
+      "pcs": 2581701
     },
     "estojo_ln": {
       "perfil": 11,
@@ -66,14 +76,14 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "carteira_ln": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 63,
+      "cx": 2172,
+      "pcs": 135837
     },
     "carteira_gv": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 44,
+      "cx": 3939,
+      "pcs": 173413
     },
     "estojo_ln": {
       "perfil": 0,
