@@ -816,7 +816,7 @@
         let chartCaixas = null; 
         let chartPecas = null;
 
-        // INJEÇÃO DINÂMICA COM QUERY PARAMETER DE TIMESTAMP (PREVINE CACHE ANTIGO NO REFRESH)
+        // CARREGA OS DADOS GARANTINDO QUE NÃO UTILIZE O CACHE ANTIGO DO NAVEGADOR
         function carregarScriptsSemCache() {
             const timestamp = new Date().getTime();
             const scripts = ["dados_tu.js", "dados_movimentacoes.js", "dados_demandas.js"];
@@ -911,19 +911,19 @@
                 if (dados.proxima_carteira) {
                     setTextoSeguro('fifo-cart-title', `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`);
                     setTextoSeguro('fifo-cart-uf', dados.proxima_carteira.uf);
-                    nomesCarretasAtivas += dados.proxima_carteira.carreta + " ";
+                    nomesCarretasAtivas += `${dados.proxima_carteira.carreta} ${dados.proxima_carteira.uf} `;
                 }
                 
                 if (dados.proxima_varejo) {
                     setTextoSeguro('fifo-var-title', `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`);
                     setTextoSeguro('fifo-var-uf', dados.proxima_varejo.uf);
-                    nomesCarretasAtivas += "VAREJO ";
+                    nomesCarretasAtivas += `VAREJO ${dados.proxima_varejo.uf} `;
                 }
                 
                 if (dados.proxima_estojo) {
                     setTextoSeguro('fifo-est-title', `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`);
                     setTextoSeguro('fifo-est-uf', dados.proxima_estojo.uf);
-                    nomesCarretasAtivas += "ESTOJO ";
+                    nomesCarretasAtivas += `ESTOJO ${dados.proxima_estojo.uf} `;
                 }
 
                 if (dados.perfis_geral) preencherCardPerfil('tot', dados.perfis_geral);
@@ -959,7 +959,7 @@
                     wms.ondas.forEach((onda, index) => {
                         const btn = document.createElement('button');
                         const partesOnda = onda.onda_atual.toUpperCase().split(' ');
-                        const estaRodandoNaLinha = partesOnda.some(part => nomesCarretasAtivas.includes(part));         
+                        const estaRodandoNaLinha = partesOnda.every(part => nomesCarretasAtivas.includes(part));
                         
                         if (estaRodandoNaLinha) {
                             btn.className = 'btn-wms-onda rodando' + (!renderizouAlgumaOnda ? ' active' : '');
@@ -1142,7 +1142,6 @@
             desenharGraficosChartJS(onda.todas_estacoes);
         }
 
-        // CARREGA OS DADOS GARANTINDO QUE NÃO UTILIZE O CACHE ANTIGO DO NAVEGADOR
         window.onload = carregarScriptsSemCache;
     </script>
 </body>
