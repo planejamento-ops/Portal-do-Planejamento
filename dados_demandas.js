@@ -1,7 +1,92 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "18/09/2026 16:28",
+  "atualizado_em": "18/09/2026 17:48",
   "periodo": "13/09 a 19/09",
   "ondas": [
+    {
+      "onda_atual": "ESTOJO MGI",
+      "real_cxs": 21583,
+      "real_pcs": 215860,
+      "real_tar": 11451,
+      "aderencia_pcs": 0,
+      "perfil_est_cx": 0.5,
+      "perfil_skus_cx": 2.3,
+      "fr": {
+        "pcs": 25249,
+        "cxs": 2231,
+        "pc_cx": 11.3,
+        "tar": 5200
+      },
+      "gv": {
+        "pcs": 190611,
+        "cxs": 19352,
+        "pc_cx": 9.8,
+        "tar": 6251
+      },
+      "pc": {
+        "pcs": 0,
+        "cxs": 0,
+        "pc_cx": 0,
+        "tar": 0
+      },
+      "top_est_cxs": [
+        {
+          "estacao": "44",
+          "volume": 927
+        },
+        {
+          "estacao": "43",
+          "volume": 740
+        },
+        {
+          "estacao": "42",
+          "volume": 706
+        },
+        {
+          "estacao": "41",
+          "volume": 674
+        }
+      ],
+      "top_est_pcs": [
+        {
+          "estacao": "41",
+          "volume": 7659
+        },
+        {
+          "estacao": "44",
+          "volume": 6372
+        },
+        {
+          "estacao": "43",
+          "volume": 5875
+        },
+        {
+          "estacao": "42",
+          "volume": 5343
+        }
+      ],
+      "todas_estacoes": [
+        {
+          "estacao": "41",
+          "cxs": 674.0,
+          "pcs": 7659.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 706.0,
+          "pcs": 5343.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 740.0,
+          "pcs": 5875.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 927.0,
+          "pcs": 6372.0
+        }
+      ]
+    },
     {
       "onda_atual": "SPC",
       "real_cxs": 31955,
