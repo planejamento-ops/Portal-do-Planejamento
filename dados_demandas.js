@@ -1,7 +1,111 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "17/09/2026 17:44",
+  "atualizado_em": "17/09/2026 22:00",
   "periodo": "13/09 a 19/09",
   "ondas": [
+    {
+      "onda_atual": "ESTOJO",
+      "real_cxs": 39025,
+      "real_pcs": 402943,
+      "real_tar": 16363,
+      "aderencia_pcs": 62,
+      "perfil_est_cx": 0.5,
+      "perfil_skus_cx": 2.3,
+      "fr": {
+        "pcs": 40047,
+        "cxs": 3524,
+        "pc_cx": 11.4,
+        "tar": 8165
+      },
+      "gv": {
+        "pcs": 362896,
+        "cxs": 35501,
+        "pc_cx": 10.2,
+        "tar": 8198
+      },
+      "pc": {
+        "pcs": 0,
+        "cxs": 0,
+        "pc_cx": 0,
+        "tar": 0
+      },
+      "top_est_cxs": [
+        {
+          "estacao": "43",
+          "volume": 1439
+        },
+        {
+          "estacao": "44",
+          "volume": 1162
+        },
+        {
+          "estacao": "41",
+          "volume": 1098
+        },
+        {
+          "estacao": "42",
+          "volume": 1090
+        },
+        {
+          "estacao": "39",
+          "volume": 96
+        }
+      ],
+      "top_est_pcs": [
+        {
+          "estacao": "41",
+          "volume": 11826
+        },
+        {
+          "estacao": "44",
+          "volume": 10223
+        },
+        {
+          "estacao": "43",
+          "volume": 9613
+        },
+        {
+          "estacao": "42",
+          "volume": 8385
+        }
+      ],
+      "todas_estacoes": [
+        {
+          "estacao": "37",
+          "cxs": 6.0,
+          "pcs": 0
+        },
+        {
+          "estacao": "39",
+          "cxs": 96.0,
+          "pcs": 0
+        },
+        {
+          "estacao": "40",
+          "cxs": 9.0,
+          "pcs": 0
+        },
+        {
+          "estacao": "41",
+          "cxs": 1098.0,
+          "pcs": 11826.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 1090.0,
+          "pcs": 8385.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 1439.0,
+          "pcs": 9613.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 1162.0,
+          "pcs": 10223.0
+        }
+      ]
+    },
     {
       "onda_atual": "VAREJO",
       "real_cxs": 496,
