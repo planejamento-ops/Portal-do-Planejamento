@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Planejamento | Control Tower</title>
 
+    <!-- METATAG DE REFRESH AUTOMÁTICO A CADA 10 MINUTOS -->
+    <meta http-equiv="refresh" content="600">
+
     <link rel="icon" type="image/png" href="planning.png?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
     
-    <!-- Biblioteca Chart.js para os gráficos Animados -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- ARQUIVOS GERADOS PELOS ROBÔS -->
     <script src="dados_tu.js"></script>
     <script src="dados_movimentacoes.js"></script>
     <script src="dados_demandas.js"></script>
@@ -80,13 +81,14 @@
         .tu-header h2 .material-symbols-outlined { color: #00d2ff; font-size: 22px; filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5)); }
         .header-badges { display: flex; align-items: center; gap: 10px; }
 
-        /* Botões GSheets e M365 */
         .btn-atalho { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; padding: 5px 12px; border-radius: 20px; text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(8px); cursor: pointer; }
         .btn-atalho .material-symbols-outlined { font-size: 16px; }
         .btn-gsheets { background: rgba(15, 157, 88, 0.12); border: 1px solid rgba(15, 157, 88, 0.35); color: #34a853; }
         .btn-gsheets:hover { background: rgba(15, 157, 88, 0.25); border-color: rgba(52, 168, 83, 0.6); box-shadow: 0 0 15px rgba(52, 168, 83, 0.25); transform: translateY(-2px); }
         .btn-m365 { background: rgba(16, 124, 65, 0.12); border: 1px solid rgba(16, 124, 65, 0.35); color: #107c41; }
         .btn-m365:hover { background: rgba(16, 124, 65, 0.25); border-color: rgba(16, 124, 65, 0.6); box-shadow: 0 0 15px rgba(16, 124, 65, 0.25); transform: translateY(-2px); }
+        .btn-spoint { background: rgba(0, 120, 212, 0.12); border: 1px solid rgba(0, 120, 212, 0.35); color: #0078d4; }
+        .btn-spoint:hover { background: rgba(0, 120, 212, 0.25); border-color: rgba(0, 120, 212, 0.6); box-shadow: 0 0 15px rgba(0, 120, 212, 0.25); transform: translateY(-2px); }
 
         .tu-status-badge { font-size: 0.72rem; background: rgba(0, 210, 255, 0.1); color: #00d2ff; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 210, 255, 0.35); display: flex; align-items: center; gap: 6px; font-weight: 600; }
         .status-dot { width: 7px; height: 7px; background-color: #00d2ff; border-radius: 50%; box-shadow: 0 0 10px #00d2ff; animation: pulsar 1.6s infinite ease-in-out; }
@@ -258,7 +260,6 @@
         <!-- ÁREA CENTRAL DE ABAS -->
         <main class="dashboard-content">
             
-            <!-- ORDEM DAS ABAS INVERTIDA (TU, WMS, MOV) -->
             <div class="nav-tabs">
                 <button class="btn-tab active" onclick="trocarAba('tab-tu', this)">
                     <span class="material-symbols-outlined">analytics</span> Controle de TUs
@@ -560,6 +561,10 @@
                             <h2><span class="material-symbols-outlined">warehouse</span> Cockpit de Demandas WMS • Tático</h2>
                         </div>
                         <div class="header-badges">
+                            <!-- NOVO BOTÃO DE ATALHO PARA O SHAREPOINT AQUI -->
+                            <a href="https://cevalogisticsoffice365.sharepoint.com/sites/LATAM-BR-VAG-01-CLBoticario/Lists/DB_Demanda_WMS?e=IB0ChN" target="_blank" class="btn-atalho btn-spoint" title="Abrir Base WMS no SharePoint">
+                                <span class="material-symbols-outlined">dns</span> SharePoint WMS
+                            </a>
                             <span class="tu-status-badge">
                                 <span class="status-dot"></span>
                                 <span id="txt-wms-status-sync">Sincronizando...</span>
@@ -573,7 +578,6 @@
 
                     <div class="tu-grid-main" id="grid-wms-cards" style="grid-template-columns: repeat(4, 1fr);">
                         
-                        <!-- CARD ATUALIZADO: ADERÊNCIA DA DEMANDA (PEÇAS) -->
                         <div class="tu-card card-green" id="card-aderencia-wms">
                             <div class="card-green-content">
                                 <span class="material-symbols-outlined icon">inventory_2</span>
@@ -719,10 +723,8 @@
                         </div>
                     </div>
 
-                    <!-- NOVO LAYOUT COM 3 TABELAS LADO A LADO -->
                     <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-top: 4px;">
                         
-                        <!-- TABELA PRINCIPAL -->
                         <div class="tu-detail-box box-warning" style="min-width: 0;">
                             <h4><span class="material-symbols-outlined">list_alt</span> Movimentações Pendentes de Execução</h4>
                             <table class="tu-table">
@@ -746,7 +748,6 @@
                             </table>
                         </div>
 
-                        <!-- TABELAS IE e CF -->
                         <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
                             <div class="tu-detail-box box-purple">
                                 <h4><span class="material-symbols-outlined">print</span> Pendente de Etiqueta (IE)</h4>
@@ -873,9 +874,6 @@
         function carregarDados() {
             let nomesCarretasAtivas = "";
 
-            // ==============================================
-            // ABA 1: TUs
-            // ==============================================
             if (typeof dadosDashboard !== 'undefined') {
                 const dados = dadosDashboard;
                 setTextoSeguro('txt-status-sync', `LIVE • ${dados.atualizado_em || ''}`);
@@ -930,9 +928,6 @@
 
             nomesCarretasAtivas = nomesCarretasAtivas.toUpperCase();
 
-            // ==============================================
-            // ABA 2: WMS Demandas
-            // ==============================================
             if (typeof dadosDemandaWMS !== 'undefined') {
                 const wms = dadosDemandaWMS;
                 const textoPeriodo = wms.periodo ? ` | Sem: ${wms.periodo}` : '';
@@ -977,9 +972,6 @@
                 }
             }
 
-            // ==============================================
-            // ABA 3: MOVIMENTAÇÕES
-            // ==============================================
             if (typeof dadosMovimentacoes !== 'undefined') {
                 const mov = dadosMovimentacoes;
                 setTextoSeguro('txt-mov-status-sync', `LIVE • ${mov.atualizado_em || ''}`);
@@ -990,7 +982,6 @@
                 setTextoSeguro('mov-card-etiquetas-totais', formatarNumeroInteiro(mov.etiquetas_totais));
                 setTextoSeguro('sub-etiquetas-pendentes', `${formatarNumeroInteiro(mov.etiquetas_pendentes)} pendentes hoje`);
 
-                // TABELA PRINCIPAL COM CORES
                 const tbody = document.getElementById('tbl-mov-pendentes-body');
                 if (tbody) {
                     if (mov.tabela_pendentes && mov.tabela_pendentes.length > 0) {
@@ -1026,7 +1017,6 @@
                     }
                 }
 
-                // TABELA DE IE (Etiquetas)
                 const tbodyIE = document.getElementById('tbl-mov-ie-body');
                 if (tbodyIE) {
                     if (mov.tabela_ie && mov.tabela_ie.length > 0) {
@@ -1040,7 +1030,6 @@
                     }
                 }
 
-                // TABELA DE CF (Cadastro Fixo)
                 const tbodyCF = document.getElementById('tbl-mov-cf-body');
                 if (tbodyCF) {
                     if (mov.tabela_cf && mov.tabela_cf.length > 0) {
@@ -1056,9 +1045,6 @@
             }
         }
 
-        // ==============================================
-        // DESENHO DOS GRÁFICOS DO WMS
-        // ==============================================
         function desenharGraficosChartJS(todasEstacoes) {
             if (!todasEstacoes || todasEstacoes.length === 0) return;
             
@@ -1096,9 +1082,6 @@
             });
         }
 
-        // ==============================================
-        // PREENCHIMENTO DOS CARDS WMS
-        // ==============================================
         function renderizarCardsWMS(onda) {
             setTextoSeguro('wms-onda-atual', onda.onda_atual);
             setTextoSeguro('wms-tarefas', formatarNumeroInteiro(onda.real_tar));
@@ -1142,9 +1125,6 @@
             desenharGraficosChartJS(onda.todas_estacoes);
         }
 
-        // ==============================================
-        // INICIALIZAÇÃO
-        // ==============================================
         carregarDados();
     </script>
 </body>
