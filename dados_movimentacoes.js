@@ -1,9 +1,9 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "18/09/2026 16:16",
-  "total_dia": 57,
+  "atualizado_em": "18/09/2026 16:28",
+  "total_dia": 58,
   "pendentes_hoje": 1,
   "pendentes_antigas": 0,
-  "etiquetas_totais": 57,
+  "etiquetas_totais": 58,
   "etiquetas_pendentes": 1,
   "tabela_pendentes": [
     {
@@ -16,11 +16,6 @@ window.dadosMovimentacoes = {
       "duplicidade": "OK"
     }
   ],
-  "tabela_ie": [
-    {
-      "item": "53441",
-      "para": "LN-4-18-1-2-2"
-    }
-  ],
+  "tabela_ie": [],
   "tabela_cf": []
 };
