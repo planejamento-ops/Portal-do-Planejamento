@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "18/09/2026 12:18",
-  "total_tus": 63,
+  "atualizado_em": "18/09/2026 12:30",
+  "total_tus": 74,
   "caixas_total_mes": 199987,
   "pecas_total_mes": 7334743,
   "caixas_pendentes": 3826,
@@ -9,13 +9,17 @@ window.dadosDashboard = {
   "pecas_pendentes": 39157,
   "pecas_ln_pend": 3803,
   "pecas_gv_pend": 35354,
-  "carretas_pendentes": 2,
-  "progresso_pct": 96,
+  "carretas_pendentes": 13,
+  "progresso_pct": 82,
   "atendimentos_em_andamento": [
     "SPC"
   ],
   "alertas_atraso": [],
-  "proxima_carteira": null,
+  "proxima_carteira": {
+    "carreta": "Carreta 16",
+    "tu_resumida": "...2730",
+    "uf": ""
+  },
   "proxima_varejo": null,
   "proxima_estojo": {
     "carreta": "Carreta 14",
@@ -24,8 +28,8 @@ window.dadosDashboard = {
   },
   "pendencias_por_canal": {
     "varejo": 0,
-    "carteira": 0,
-    "estojo": 2,
+    "carteira": 7,
+    "estojo": 6,
     "outras": 0
   },
   "perfis_geral": {
