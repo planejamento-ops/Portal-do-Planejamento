@@ -84,8 +84,8 @@
         .btn-atalho .material-symbols-outlined { font-size: 16px; }
         .btn-gsheets { background: rgba(15, 157, 88, 0.12); border: 1px solid rgba(15, 157, 88, 0.35); color: #34a853; }
         .btn-gsheets:hover { background: rgba(15, 157, 88, 0.25); border-color: rgba(52, 168, 83, 0.6); box-shadow: 0 0 15px rgba(52, 168, 83, 0.25); transform: translateY(-2px); }
-        .btn-m365 { background: rgba(16, 124, 65, 0.12); border: 1px solid rgba(16, 124, 65, 0.35); color: #107c41; }
-        .btn-m365:hover { background: rgba(16, 124, 65, 0.25); border-color: rgba(16, 124, 65, 0.6); box-shadow: 0 0 15px rgba(16, 124, 65, 0.25); transform: translateY(-2px); }
+        .btn-m365 { background: rgba(16, 124, 65, 0.12) !important; border: 1px solid rgba(16, 124, 65, 0.35) !important; color: #107c41 !important; text-decoration: none !important; }
+        .btn-m365:hover { background: rgba(16, 124, 65, 0.25) !important; border-color: rgba(16, 124, 65, 0.6) !important; box-shadow: 0 0 15px rgba(16, 124, 65, 0.25) !important; transform: translateY(-2px); }
         .btn-spoint { background: rgba(0, 120, 212, 0.12); border: 1px solid rgba(0, 120, 212, 0.35); color: #0078d4; }
         .btn-spoint:hover { background: rgba(0, 120, 212, 0.25); border-color: rgba(0, 120, 212, 0.6); box-shadow: 0 0 15px rgba(0, 120, 212, 0.25); transform: translateY(-2px); }
 
@@ -816,7 +816,6 @@
         let chartCaixas = null; 
         let chartPecas = null;
 
-        // CARREGA OS DADOS GARANTINDO QUE NÃO UTILIZE O CACHE ANTIGO DO NAVEGADOR
         function carregarScriptsSemCache() {
             const timestamp = new Date().getTime();
             const scripts = ["dados_tu.js", "dados_movimentacoes.js", "dados_demandas.js"];
@@ -958,8 +957,13 @@
 
                     wms.ondas.forEach((onda, index) => {
                         const btn = document.createElement('button');
-                        const partesOnda = onda.onda_atual.toUpperCase().split(' ');
-                        const estaRodandoNaLinha = partesOnda.every(part => nomesCarretasAtivas.includes(part));
+                        const nomeOnda = onda.onda_atual.toUpperCase();
+                        
+                        // Captura siglas principais (SPC, SPI, MGI, MGC, ESTOJO, VAREJO)
+                        const termosChave = nomeOnda.split(' ').filter(t => t.length >= 3);
+                        
+                        // Valida se qualquer termo chave está ativo no Controle de TU
+                        const estaRodandoNaLinha = termosChave.some(termo => nomesCarretasAtivas.includes(termo));
                         
                         if (estaRodandoNaLinha) {
                             btn.className = 'btn-wms-onda rodando' + (!renderizouAlgumaOnda ? ' active' : '');
