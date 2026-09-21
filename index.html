@@ -955,14 +955,34 @@
                     containerBotoes.innerHTML = `<div class="wms-toggles-title">Ondas Processadas na Semana:</div>`;
                     let renderizouAlgumaOnda = false;
 
+                    // Captura as UFs ativas exatamente pelo tipo de canal
+                    const ufCarteiraAtiva = (dadosDashboard && dadosDashboard.proxima_carteira) ? dadosDashboard.proxima_carteira.uf.toUpperCase() : "";
+                    const ufEstojoAtivo = (dadosDashboard && dadosDashboard.proxima_estojo) ? dadosDashboard.proxima_estojo.uf.toUpperCase() : "";
+                    const ufVarejoAtivo = (dadosDashboard && dadosDashboard.proxima_varejo) ? dadosDashboard.proxima_varejo.uf.toUpperCase() : "";
+
                     wms.ondas.forEach((onda, index) => {
                         const btn = document.createElement('button');
                         const nomeOnda = onda.onda_atual.toUpperCase();
-                        
-                        // Validação exata:
-                        // Se a onda for "ESTOJO MGI", verifica se "ESTOJO" E "MGI" estão ATIVOS no Controle de TUs
-                        const termosOnda = nomeOnda.split(' ').filter(t => t.length >= 2);
-                        const estaRodandoNaLinha = termosOnda.every(termo => nomesCarretasAtivas.includes(termo));
+                        let estaRodandoNaLinha = false;
+
+                        // 1. Se for onda de ESTOJO (Ex: "ESTOJO SPC")
+                        if (nomeOnda.includes("ESTOJO") || nomeOnda.includes("KIT")) {
+                            if (ufEstojoAtivo && nomeOnda.includes(ufEstojoAtivo)) {
+                                estaRodandoNaLinha = true;
+                            }
+                        } 
+                        // 2. Se for onda de VAREJO
+                        else if (nomeOnda.includes("VAREJO")) {
+                            if (ufVarejoAtivo) {
+                                estaRodandoNaLinha = true;
+                            }
+                        }
+                        // 3. Se for onda de CARTEIRA (Ex: "SPC", "SPI", "MGI")
+                        else {
+                            if (ufCarteiraAtiva && nomeOnda.includes(ufCarteiraAtiva)) {
+                                estaRodandoNaLinha = true;
+                            }
+                        }
                         
                         if (estaRodandoNaLinha) {
                             btn.className = 'btn-wms-onda rodando' + (!renderizouAlgumaOnda ? ' active' : '');
