@@ -959,11 +959,10 @@
                         const btn = document.createElement('button');
                         const nomeOnda = onda.onda_atual.toUpperCase();
                         
-                        // Captura siglas principais (SPC, SPI, MGI, MGC, ESTOJO, VAREJO)
-                        const termosChave = nomeOnda.split(' ').filter(t => t.length >= 3);
-                        
-                        // Valida se qualquer termo chave está ativo no Controle de TU
-                        const estaRodandoNaLinha = termosChave.some(termo => nomesCarretasAtivas.includes(termo));
+                        // Validação exata:
+                        // Se a onda for "ESTOJO MGI", verifica se "ESTOJO" E "MGI" estão ATIVOS no Controle de TUs
+                        const termosOnda = nomeOnda.split(' ').filter(t => t.length >= 2);
+                        const estaRodandoNaLinha = termosOnda.every(termo => nomesCarretasAtivas.includes(termo));
                         
                         if (estaRodandoNaLinha) {
                             btn.className = 'btn-wms-onda rodando' + (!renderizouAlgumaOnda ? ' active' : '');
