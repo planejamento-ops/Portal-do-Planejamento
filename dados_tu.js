@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "20/09/2026 23:57",
-  "total_tus": 67,
+  "atualizado_em": "21/09/2026 00:09",
+  "total_tus": 47,
   "caixas_total_mes": 222316,
   "pecas_total_mes": 8116814,
   "caixas_pendentes": 20211,
@@ -14,9 +14,7 @@ window.dadosDashboard = {
   "atendimentos_em_andamento": [
     "SPC"
   ],
-  "alertas_atraso": [
-    "Atraso em MGI"
-  ],
+  "alertas_atraso": [],
   "proxima_carteira": {
     "carreta": "Carreta 17",
     "tu_resumida": "...2731",
