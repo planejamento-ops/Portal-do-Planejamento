@@ -1697,12 +1697,17 @@
             // Filtra os dados apenas para a data escolhida no calendário
             dadosOndasDataFiltrada = dadosOndasGeral.filter(o => o.data_onda === dataSelecionada);
             
-            // Verifica e acende a luzinha apenas dos canais que rodaram nessa data específica
+            // 🚨 CORREÇÃO: As luzinhas voltam a ler o status real de pendências da planilha de TU!
             const canaisFixos = ['MGI', 'MGC', 'SPI', 'SPC', 'VAREJO'];
             canaisFixos.forEach(canal => {
-                const temNaData = dadosOndasDataFiltrada.some(o => o.onda_atual === canal);
+                let isActive = false;
+                
+                if (typeof dadosDashboard !== 'undefined' && dadosDashboard.atendimentos_em_andamento) {
+                    isActive = dadosDashboard.atendimentos_em_andamento.some(a => a.includes(canal));
+                }
+                
                 const dot = document.getElementById('dot-' + canal);
-                if (dot) dot.className = temNaData ? 'status-dot-on' : 'status-dot-off';
+                if (dot) dot.className = isActive ? 'status-dot-on' : 'status-dot-off';
             });
             
             renderizarCardsWMS();
