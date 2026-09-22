@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Validação de Cortes</title>
-    <!-- Adicionando a biblioteca para processar as planilhas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     
     <style>
         body {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; background-color: #f4f6f9; color: #333; margin: 20px; transition: background-color 0.3s, color 0.3s; }
         .container { max-width: 1450px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 0 auto; transition: background-color 0.3s; }
-        h1 { color: #102C87; text-align: center; margin-bottom: 30px; font-size: 34px; border-bottom: 3px solid #e81414; padding-bottom: 15px; text-shadow: 2px 2px #0040ff36}
+        h1 { color: #102C87; text-align: center; margin-bottom: 20px; font-size: 34px; border-bottom: 3px solid #e81414; padding-bottom: 15px; text-shadow: 2px 2px #0040ff36}
 
         .upload-section { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
         .upload-box { border: 2px dashed #b3d7ff; padding: 15px; text-align: center; border-radius: 6px; background: #f8fbff; transition: 0.3s; }
@@ -42,7 +41,6 @@
         .btn-copiar:hover { background-color: #071A5E; }
         .msg-copiado { color: green; font-weight: bold; font-size: 14px; display: none; margin-right: 10px; }
 
-        /* TABELA PRINCIPAL E CÓPIA OUTLOOK */
         table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; background-color: #ffffff; color: #000000; }
         th, td { border: 1px solid #acacac; padding: 8px; text-align: center; color: #000000; }
         
@@ -76,6 +74,10 @@
         .badge-arquivo.ok { border-color: #28a745; color: #155724; background: #d4edda; }
         .badge-arquivo.none { border-color: #6c757d; color: #6c757d; background: #f8f9fa; }
         
+        /* CAIXA MENOR DO JSON */
+        .box-json { display: inline-block; padding: 8px 15px; margin-bottom: 15px; background-color: #e8f4fd; border: 1px dashed #0c437d; border-radius: 5px; text-align: center; transition: 0.3s; vertical-align: top; }
+        .box-json:hover { background-color: #d6ebfc; }
+
         body.tema-escuro .badge-arquivo.ok { border-color: #81c995; color: #81c995; background: #1e3a29; }
         body.tema-escuro .badge-arquivo.none { border-color: #555; color: #aaa; background: #2a2a2a; }
         body.tema-conforto .badge-arquivo.ok { border-color: #a3b899; color: #4e6b41; background: #eef2eb; }
@@ -87,8 +89,8 @@
         body.tema-escuro { background-color: #121212; color: #e0e0e0; }
         body.tema-escuro .container { background: #1e1e1e; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
         body.tema-escuro h1 { color: #90caf9; border-bottom-color: #d32f2f; text-shadow: 2px 2px #000000; }
-        body.tema-escuro h2, body.tema-escuro h3, body.tema-escuro .upload-box label { color: #90caf9 !important; }
-        body.tema-escuro .upload-box { background: #2c2c2c; border-color: #555; }
+        body.tema-escuro h2, body.tema-escuro h3, body.tema-escuro .upload-box label, body.tema-escuro .box-json label { color: #90caf9 !important; }
+        body.tema-escuro .upload-box, body.tema-escuro .box-json { background: #2c2c2c; border-color: #555; }
         body.tema-escuro .alerta-pendente { background-color: #3a2222; border-left-color: #ef5350; }
         body.tema-escuro .tab-btn { background: #2c2c2c; color: #aaa; border-bottom: 1px solid #444; }
         body.tema-escuro .tab-btn.active { background: #102C87; color: white; border-color: transparent; }
@@ -115,9 +117,9 @@
         body.tema-conforto { background-color: #fcf4e6; color: #43392e; }
         body.tema-conforto .container { background: #fffcf5; box-shadow: 0 4px 10px rgba(100,80,50,0.1); }
         body.tema-conforto h1 { color: #785b37; border-bottom-color: #d98a41; text-shadow: 1px 1px #e3d2b6; }
-        body.tema-conforto h2, body.tema-conforto h3, body.tema-conforto .upload-box label { color: #8a6c42 !important; }
-        body.tema-conforto .upload-box { background: #f6ebd4; border-color: #d6c6ac; }
-        body.tema-conforto .upload-box:hover { background: #ecdcc1; }
+        body.tema-conforto h2, body.tema-conforto h3, body.tema-conforto .upload-box label, body.tema-conforto .box-json label { color: #8a6c42 !important; }
+        body.tema-conforto .upload-box, body.tema-conforto .box-json { background: #f6ebd4; border-color: #d6c6ac; }
+        body.tema-conforto .upload-box:hover, body.tema-conforto .box-json:hover { background: #ecdcc1; }
         body.tema-conforto .alerta-pendente { background-color: #f7e6d2; border-left-color: #d98a41; }
         body.tema-conforto .tab-btn { background: #f6ebd4; color: #785b37; border-bottom: 1px solid #d6c6ac; }
         body.tema-conforto .tab-btn.active { background: #8a6c42; color: white; border-color: transparent; }
@@ -148,9 +150,6 @@
         body.tema-conforto div[style*="background-color: #f4fbf5"] { background-color: #fffcf5 !important; border-color: #d6c6ac !important; }
         body.tema-escuro #resumoCritico { color: #90caf9 !important; }
 
-        /* ========================================== */
-        /* ANIMAÇÃO DO LETREIRO                       */
-        /* ========================================== */
         .letreiro-container {
             width: 100%;
             overflow: hidden;
@@ -168,8 +167,8 @@
         }
         .letreiro-animado {
             display: inline-block;
-            padding-left: 100%; /* Faz o texto nascer fora da tela, na direita */
-            animation: marquee 35s linear infinite; /* Tempo da volta completa */
+            padding-left: 100%; 
+            animation: marquee 35s linear infinite; 
         }
         @keyframes marquee {
             0%   { transform: translate(0, 0); }
@@ -184,31 +183,43 @@
 <div class="container">
     <div id="telaEntrada">
         <h1>Validação de Cortes</h1>
-        <div style="margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd; display: inline-block;">
-            <label for="tipoAtendimento" style="font-size: 16px;"><b>1. Selecione o Atendimento:</b></label>
-            <select id="tipoAtendimento" style="padding: 6px; border-radius: 4px; margin-left: 10px; font-size: 14px;" onchange="atualizarTitulo()">
-                <option value="">Selecione...</option>
-                <option value="Carteira MG">Carteira MG</option>
-                <option value="Carteira MGI">Carteira MGI</option>
-                <option value="Carteira MGC">Carteira MGC</option>
-                <option value="Carteira SPI">Carteira SPI</option>
-                <option value="Carteira SPC">Carteira SPC</option>
-                <option value="Varejo">Varejo</option>
-                <option value="Equalização">Equalização</option>
-            </select>
-        </div>
+        
+        <div>
+            <!-- NOVO: CAIXA MENOR DE IMPORTAÇÃO DE JSON -->
+            <div class="box-json">
+                <label for="fileJson" style="cursor: pointer; font-size: 14px; font-weight: bold; color: #0c437d;">
+                    📥 Retomar Validação (.json)
+                </label>
+                <input type="file" id="fileJson" accept=".json" style="display: none;" onchange="importarJson(this)">
+                <div id="status-json" style="margin-top: 5px; font-size: 12px;"></div>
+            </div>
 
-        <div style="margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd; display: inline-block; margin-left: 10px;">
-            <label for="nomeUsuario" style="font-size: 16px;"><b>👤 Operador:</b></label>
-            <select id="nomeUsuario" style="padding: 6px; border-radius: 4px; margin-left: 10px; font-size: 14px;">
-                <option value="">Selecione quem está validando...</option>
-                <option value="RENANPD">RENANPD</option>
-                <option value="RAILANECB">RAILANECB</option>
-                <option value="FERNANDESJA">FERNANDESJA</option>
-                <option value="FRIGO">FRIGO</option>
-                <option value="ALANFR">ALANFR</option>
-                <option value="DEALMEIDAANT">DEALMEIDAANT</option>
-            </select>
+            <div style="margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd; display: inline-block;">
+                <label for="tipoAtendimento" style="font-size: 16px;"><b>1. Selecione o Atendimento:</b></label>
+                <select id="tipoAtendimento" style="padding: 6px; border-radius: 4px; margin-left: 10px; font-size: 14px;" onchange="atualizarTitulo()">
+                    <option value="">Selecione...</option>
+                    <option value="Carteira MG">Carteira MG</option>
+                    <option value="Carteira MGI">Carteira MGI</option>
+                    <option value="Carteira MGC">Carteira MGC</option>
+                    <option value="Carteira SPI">Carteira SPI</option>
+                    <option value="Carteira SPC">Carteira SPC</option>
+                    <option value="Varejo">Varejo</option>
+                    <option value="Equalização">Equalização</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd; display: inline-block; margin-left: 10px;">
+                <label for="nomeUsuario" style="font-size: 16px;"><b>👤 Operador:</b></label>
+                <select id="nomeUsuario" style="padding: 6px; border-radius: 4px; margin-left: 10px; font-size: 14px;">
+                    <option value="">Selecione quem está validando...</option>
+                    <option value="RENANPD">RENANPD</option>
+                    <option value="RAILANECB">RAILANECB</option>
+                    <option value="FERNANDESJA">FERNANDESJA</option>
+                    <option value="FRIGO">FRIGO</option>
+                    <option value="ALANFR">ALANFR</option>
+                    <option value="DEALMEIDAANT">DEALMEIDAANT</option>
+                </select>
+            </div>
         </div>
 
         <div class="upload-section">
@@ -257,15 +268,11 @@
 
     <div id="telaResultados" style="display: none;">
         
-        <!-- ========================================== -->
-        <!-- LETREIRO CHAMATIVO DE AVISO (CSS ANIMADO)  -->
-        <!-- ========================================== -->
         <div class="letreiro-container">
             <div class="letreiro-animado">
                 ⚠️ ATENÇÃO OPERADOR: &nbsp;&nbsp;&nbsp; Lembre-se de clicar no botão "Copiar para SharePoint" e colar na planilha oficial. &nbsp;&nbsp;⚠️
             </div>
         </div>
-        <!-- ========================================== -->
 
         <div class="header-resultados">
             <h2 id="tituloTabela" style="color: #0056b3; margin: 0; display: none;">Cortes Validados: <span id="nomeAtendimento" style="color: #e81414;"></span></h2>
@@ -311,7 +318,7 @@
 
         <div id="abaEmail" class="tab-content active">
             <div class="header-tabela">
-                <p style="margin: 0; font-size: 14px;"><em>A tabela abaixo está classificada pelo <strong>maior volume de cortes</strong>.</em></p>
+                <p style="margin: 0; font-size: 14px;"><em>A tabela abaixo pode conter mais de uma linha por produto caso o corte tenha motivos diferentes.</em></p>
                 <div>
                     <span id="msgCopiado" class="msg-copiado">✔ Copiado com sucesso!</span>
                     <button class="btn-copiar" onclick="copiarTabelaCompleta()">📋 Copiar Tabela Completa</button>
@@ -384,6 +391,46 @@
     let dadosBrutos = { demanda: null, pendente: null, estoque: null, extras: null };
     let totalDemandaSolicitada = 0;
 
+    function importarJson(input) {
+        const file = input.files[0];
+        if (!file) return;
+        
+        const statusDiv = document.getElementById("status-json");
+        statusDiv.innerHTML = `<span class="status-carregando">⏳ A ler ficheiro JSON...</span>`;
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const obj = JSON.parse(e.target.result);
+                if (obj && obj.dadosProcessados) {
+                    dadosBrutos = obj.dadosProcessados;
+                    
+                    if (obj.atendimento) {
+                        document.getElementById("tipoAtendimento").value = obj.atendimento;
+                        atualizarTitulo();
+                    }
+                    
+                    const hasExtras = obj.dadosProcessados.extras && obj.dadosProcessados.extras.length > 0;
+                    const val = hasExtras ? 'sim' : 'nao';
+                    
+                    const radiosC = document.getElementsByName('radioCarretas');
+                    for(let i = 0; i < radiosC.length; i++) { if(radiosC[i].value === val) radiosC[i].checked = true; }
+                    
+                    const radiosE = document.getElementsByName('radioExternas');
+                    for(let i = 0; i < radiosE.length; i++) { if(radiosE[i].value === val) radiosE[i].checked = true; }
+
+                    statusDiv.innerHTML = `<span class="status-ok">✔ Importado (${obj.usuario}). Pode Processar!</span>`;
+                    document.getElementById("fileJson").value = ""; 
+                } else {
+                    statusDiv.innerHTML = `<span class="status-erro">❌ Ficheiro inválido.</span>`;
+                }
+            } catch(err) {
+                statusDiv.innerHTML = `<span class="status-erro">❌ Erro ao ler ficheiro.</span>`;
+            }
+        };
+        reader.readAsText(file);
+    }
+
     function parseNumeroInteiro(valor) {
         if (valor === undefined || valor === null || valor === '') return 0;
         if (typeof valor === 'number') return Math.round(valor);
@@ -439,12 +486,10 @@
         const linhas = document.querySelectorAll("#tabelaResultado tbody tr");
         if(linhas.length === 0 || linhas[0].innerText.includes("Nenhum corte")) { alert("Não há cortes para copiar."); return; }
         
-        // --- INÍCIO DA TRAVA DE CORES ---
         const body = document.body;
         const isEscuro = body.classList.contains("tema-escuro");
         const isConforto = body.classList.contains("tema-conforto");
         body.classList.remove("tema-escuro", "tema-conforto");
-        // ---------------------------------
 
         const divTemp = document.createElement("div");
         divTemp.style.position = "absolute";
@@ -496,10 +541,8 @@
         window.getSelection().removeAllRanges();
         document.body.removeChild(divTemp);
 
-        // --- FIM DA TRAVA DE CORES ---
         if (isEscuro) body.classList.add("tema-escuro");
         if (isConforto) body.classList.add("tema-conforto");
-        // -----------------------------
     }
 
     function acharColuna(obj, palavrasChave) {
@@ -565,12 +608,12 @@
     }
 
     function executarValidacao() {
-        if (!dadosBrutos.demanda || !dadosBrutos.pendente || !dadosBrutos.estoque) return erroNoBotao("⚠ CARREGUE OS 3 ARQUIVOS OBRIGATÓRIOS");
+        if (!dadosBrutos.demanda || !dadosBrutos.pendente || !dadosBrutos.estoque) return erroNoBotao("⚠ CARREGUE OS DADOS OBRIGATÓRIOS (PLANILHAS OU JSON)");
         const respCarretas = document.querySelector('input[name="radioCarretas"]:checked');
         const respExternas = document.querySelector('input[name="radioExternas"]:checked');
         if (!respCarretas) return erroNoBotao("⚠ RESPONDA A PERGUNTA 1 (CARRETAS)");
         if (!respExternas) return erroNoBotao("⚠ RESPONDA A PERGUNTA 2 (EXTERNAS)");
-        if ((respCarretas.value === "sim" || respExternas.value === "sim") && !dadosBrutos.extras) return erroNoBotao("⚠ CARREGUE O ARQUIVO 4 (EXTRAS)");
+        if ((respCarretas.value === "sim" || respExternas.value === "sim") && (!dadosBrutos.extras || dadosBrutos.extras.length === 0)) return erroNoBotao("⚠ CARREGUE O ARQUIVO 4 (EXTRAS)");
 
         const btn = document.getElementById('btnProcessar');
         const textoOriginal = "PROCESSAR CORTES DA DEMANDA";
@@ -578,20 +621,20 @@
         btn.style.backgroundColor = "#141f56"; btn.style.cursor = "wait"; 
 
         setTimeout(() => {
-            const fDemanda = document.getElementById("fileDemanda").files.length;
-            const fPendente = document.getElementById("filePendente").files.length;
-            const fEstoque = document.getElementById("fileEstoque").files.length;
-            const fExtras = document.getElementById("fileExtras").files.length;
+            const fDemanda = dadosBrutos.demanda && dadosBrutos.demanda.length > 0 ? 1 : 0;
+            const fPendente = dadosBrutos.pendente && dadosBrutos.pendente.length > 0 ? 1 : 0;
+            const fEstoque = dadosBrutos.estoque && dadosBrutos.estoque.length > 0 ? 1 : 0;
+            const fExtras = dadosBrutos.extras && dadosBrutos.extras.length > 0 ? 1 : 0;
 
             document.getElementById("painelArquivos").innerHTML = `
-                <span class="badge-arquivo ok">✔ 1. Demanda (${fDemanda})</span>
-                <span class="badge-arquivo ok">✔ 2. Pendente (${fPendente})</span>
-                <span class="badge-arquivo ok">✔ 3. Estoque (${fEstoque})</span>
-                <span class="badge-arquivo ${fExtras > 0 ? 'ok' : 'none'}">${fExtras > 0 ? `✔ 4. Extras (${fExtras})` : '✖ 4. Extras (Nenhum)'}</span>
+                <span class="badge-arquivo ok">✔ 1. Demanda (Carregado)</span>
+                <span class="badge-arquivo ok">✔ 2. Pendente (Carregado)</span>
+                <span class="badge-arquivo ok">✔ 3. Estoque (Carregado)</span>
+                <span class="badge-arquivo ${fExtras > 0 ? 'ok' : 'none'}">${fExtras > 0 ? '✔ 4. Extras (Carregado)' : '✖ 4. Extras (Nenhum)'}</span>
             `;
 
             const produtos = {}; 
-            totalDemandaSolicitada = 0; // Reseta o total da demanda a cada processamento
+            totalDemandaSolicitada = 0; 
 
             dadosBrutos.demanda.forEach(row => {
                 const colProd = acharColuna(row, ['produto', 'material']); 
@@ -602,7 +645,7 @@
                 if(!cod) return;
 
                 const qtdDemanda = parseNumeroInteiro(row[colQtd]);
-                totalDemandaSolicitada += qtdDemanda; // Soma do total de peças solicitadas
+                totalDemandaSolicitada += qtdDemanda; 
 
                 if (!produtos[cod]) produtos[cod] = { desc: row[colDesc] || '', demSol: 0, demPend: 0, equalizacao: 0, estoqueF2: 0, doca: 0, retidos: {}, avisos: {}, cortes: 0, motivoFinal: '-', cod: cod, saldoLivreF2: 0, saldoTotal: 0 };
                 produtos[cod].demSol += qtdDemanda;
@@ -711,7 +754,7 @@
                         let dataApurada = colDataEM ? parseDataExcel(row[colDataEM]) : null;
                         if (dataApurada) { 
                             let dataLimite = new Date(); 
-                            dataLimite.setDate(dataLimite.getDate() - 21); // Trava de 3 semanas (21 dias)
+                            dataLimite.setDate(dataLimite.getDate() - 21); // Trava de 3 semanas
                             if (dataApurada < dataLimite) {
                                 retidoMotivo = 'Divergência de Estoque'; 
                             } else {
@@ -749,57 +792,46 @@
                 p.cortes = Math.max(0, p.demSol - saldoValidoParaCorte);
                 
                 if (p.cortes > 0) {
-                    let qtdPiclinha = p.retidos['Item em PICLINHA'] || 0;
-                    let qtdDivcic = p.retidos['Item em DIVCIC'] || 0;
-                    let qtdQualidade = p.retidos['Estoque em Controle de Qualidade'] || 0;
-                    let qtdEqualizacao = p.retidos['Saldo em Equalização'] || 0;
-                    let qtdSemSaldoF2 = p.retidos['Sem Saldo F2'] || 0;
-                    let qtdDivergencia = p.retidos['Divergência de Estoque'] || 0; // Puxa itens em DIVCIC > 3 semanas
-                    
                     let totalNoCD = p.estoqueF2 + p.doca + Object.values(p.retidos).reduce((a,b)=>a+b, 0);
                     
-                    if (totalNoCD === 0) p.motivoFinal = 'Divergência de Estoque'; // Totalmente zerado
-                    else if (qtdPiclinha >= p.cortes) p.motivoFinal = 'Item em PICLINHA';
-                    else if (qtdDivcic >= p.cortes) p.motivoFinal = 'Item em DIVCIC';
-                    else if (qtdDivergencia >= p.cortes) p.motivoFinal = 'Divergência de Estoque'; // Preso no DIVCIC > 21 dias
-                    else if (qtdEqualizacao >= p.cortes) p.motivoFinal = 'Saldo em Equalização';
-                    else if (qtdQualidade >= p.cortes) p.motivoFinal = 'Estoque em Controle de Qualidade';
-                    else if (qtdSemSaldoF2 >= p.cortes) p.motivoFinal = 'Sem Saldo F2'; // Prioriza o Sem Saldo F2 para DPC/Recusa
-                    else {
-                        // Desempate do maior ofensor
-                        let maiorMotivo = null; let maxQtd = 0;
-                        for (let m in p.retidos) { if (p.retidos[m] > maxQtd) { maxQtd = p.retidos[m]; maiorMotivo = m; } }
-                        
-                        if (maiorMotivo && maxQtd > 0) {
-                            p.motivoFinal = maiorMotivo;
-                        } else if (totalNoCD < p.demSol) {
-                            p.motivoFinal = 'Venda Maior que o Saldo'; // Venda Maior que o Saldo oficializado APENAS para volume CD < Demanda
-                        } else {
-                            p.motivoFinal = 'Sem Saldo F2'; // Sobra não identificada vira Sem Saldo F2
+                    p.detalhesCortes = [];
+                    let cortesRestantes = p.cortes;
+
+                    const motivosPrioritarios = [
+                        'Item em PICLINHA', 
+                        'Item em DIVCIC', 
+                        'Divergência de Estoque', 
+                        'Saldo em Equalização', 
+                        'Estoque em Controle de Qualidade'
+                    ];
+
+                    for (let motivo of motivosPrioritarios) {
+                        let qtdRetida = p.retidos[motivo] || 0;
+                        if (qtdRetida > 0 && cortesRestantes > 0) {
+                            let qtdJustificada = Math.min(qtdRetida, cortesRestantes);
+                            p.detalhesCortes.push({ qtd: qtdJustificada, motivo: motivo });
+                            cortesRestantes -= qtdJustificada;
                         }
                     }
 
-                    // TRAVA DE SEGURANÇA FINAL
-                    const motivosPermitidos = [
-                        'Item em PICLINHA', 
-                        'Item em DIVCIC', 
-                        'Saldo em Equalização', 
-                        'Venda Maior que o Saldo', 
-                        'Divergência de Estoque', 
-                        'Estoque em Controle de Qualidade',
-                        'Sem Saldo F2'
-                    ];
-                    
-                    if (!motivosPermitidos.includes(p.motivoFinal)) {
-                        p.motivoFinal = (totalNoCD < p.demSol) ? 'Venda Maior que o Saldo' : 'Sem Saldo F2';
+                    if (cortesRestantes > 0) {
+                        if (totalNoCD === 0 || totalNoCD < p.demSol) {
+                            p.detalhesCortes.push({ qtd: cortesRestantes, motivo: 'Venda Maior que o Saldo' });
+                        } else {
+                            p.detalhesCortes.push({ qtd: cortesRestantes, motivo: 'Sem Saldo F2' });
+                        }
                     }
 
                     linhasTabelaAgrupada.push(p);
 
-                    if (p.retidos[p.motivoFinal] > 0) {
-                        if (!gruposRetidos[p.motivoFinal]) gruposRetidos[p.motivoFinal] = [];
-                        gruposRetidos[p.motivoFinal].push({ cod: cod, desc: p.desc, qtd: p.retidos[p.motivoFinal] });
-                    }
+                    p.detalhesCortes.forEach(corte => {
+                        if (p.retidos[corte.motivo] > 0) {
+                            if (!gruposRetidos[corte.motivo]) gruposRetidos[corte.motivo] = [];
+                            if (!gruposRetidos[corte.motivo].find(i => i.cod === cod)) {
+                                gruposRetidos[corte.motivo].push({ cod: cod, desc: p.desc, qtd: p.retidos[corte.motivo] });
+                            }
+                        }
+                    });
 
                     if (p.equalizacao > 0 && (p.saldoTotal + p.equalizacao >= p.demSol)) {
                         let msgResgate = '💡 POSSÍVEL RESGATE (Cancelar Tarefa de Equalização)';
@@ -822,13 +854,11 @@
             const tbodyRaioX = document.querySelector("#tabelaRaioX tbody");
             tbodyRaioX.innerHTML = "";
 
-            // Atualiza os dados do novo card e dos cards de resumo
             const totalSkusSolicitados = Object.keys(produtos).length;
             document.getElementById("resumoDemandaTotal").innerText = fmt(totalDemandaSolicitada);
             document.getElementById("resumoSkusSolicitados").innerText = `${totalSkusSolicitados} SKUs solicitados`;
 
             if (linhasTabelaAgrupada.length === 0) {
-                // Mesmo sem cortes, mantemos o painel visível para mostrar a Demanda Total
                 document.getElementById("resumoCortes").innerText = "0";
                 document.getElementById("resumoSkus").innerText = "0 SKUs afetados";
                 document.getElementById("resumoOfensor").innerText = "-";
@@ -843,24 +873,29 @@
                 let trX = document.createElement("tr"); trX.innerHTML = `<td colspan="3">Sem cortes no momento.</td>`; tbodyRaioX.appendChild(trX);
             } else {
                 linhasTabelaAgrupada.forEach(p => {
-                    totalCortes += p.cortes; skusAfetados++;
-                    if (!ofensores[p.motivoFinal]) ofensores[p.motivoFinal] = 0;
-                    ofensores[p.motivoFinal] += p.cortes;
+                    skusAfetados++;
                     if (p.equalizacao > 0 && (p.saldoTotal + p.equalizacao >= p.demSol)) totalResgate += Math.min(p.equalizacao, p.cortes);
 
-                    let tr = document.createElement("tr");
-                    tr.className = "row-corte";
-                    let colLivreF2 = p.saldoLivreF2 < 0 ? 'color:#d9534f;' : 'color:#0056b3;';
-                    let colTotal = p.saldoTotal < 0 ? 'color:#d9534f;' : 'color:#0056b3;';
-                    
-                    tr.innerHTML = `
-                        <td>${p.cod}</td><td style="text-align: left;">${p.desc}</td><td class="col-destaque">${fmt(p.estoqueF2)}</td>
-                        <td class="col-subtracao">${p.demPend > 0 ? '-' + fmt(p.demPend) : 0}</td><td class="col-alerta">${p.equalizacao > 0 ? fmt(p.equalizacao) : '-'}</td>
-                        <td class="col-destaque" style="${colLivreF2}">${fmt(p.saldoLivreF2)}</td><td class="col-soma">${p.doca > 0 ? '+' + fmt(p.doca) : 0}</td>
-                        <td class="col-total" style="${colTotal}">${fmt(p.saldoTotal)}</td><td>${fmt(p.demSol)}</td>
-                        <td><strong style="color:#d9534f; font-size:15px;">${fmt(p.cortes)}</strong></td><td><strong>${p.motivoFinal}</strong></td>
-                    `;
-                    tbody.appendChild(tr);
+                    p.detalhesCortes.forEach(corte => {
+                        totalCortes += corte.qtd;
+                        
+                        if (!ofensores[corte.motivo]) ofensores[corte.motivo] = 0;
+                        ofensores[corte.motivo] += corte.qtd;
+
+                        let tr = document.createElement("tr");
+                        tr.className = "row-corte";
+                        let colLivreF2 = p.saldoLivreF2 < 0 ? 'color:#d9534f;' : 'color:#0056b3;';
+                        let colTotal = p.saldoTotal < 0 ? 'color:#d9534f;' : 'color:#0056b3;';
+                        
+                        tr.innerHTML = `
+                            <td>${p.cod}</td><td style="text-align: left;">${p.desc}</td><td class="col-destaque">${fmt(p.estoqueF2)}</td>
+                            <td class="col-subtracao">${p.demPend > 0 ? '-' + fmt(p.demPend) : 0}</td><td class="col-alerta">${p.equalizacao > 0 ? fmt(p.equalizacao) : '-'}</td>
+                            <td class="col-destaque" style="${colLivreF2}">${fmt(p.saldoLivreF2)}</td><td class="col-soma">${p.doca > 0 ? '+' + fmt(p.doca) : 0}</td>
+                            <td class="col-total" style="${colTotal}">${fmt(p.saldoTotal)}</td><td>${fmt(p.demSol)}</td>
+                            <td><strong style="color:#d9534f; font-size:15px;">${fmt(corte.qtd)}</strong></td><td><strong>${corte.motivo}</strong></td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
                 });
 
                 let arrayOfensores = Object.keys(ofensores).map(motivo => ({ motivo, qtd: ofensores[motivo] })).sort((a,b) => b.qtd - a.qtd); 
@@ -879,7 +914,6 @@
                 document.getElementById("resumoResgate").innerText = fmt(totalResgate);
             }
             
-            // Exibe o painel de 5 cards
             document.getElementById("painelResumo").style.display = "grid";
 
             let htmlRetidos = "";
@@ -912,7 +946,6 @@
         const selectAtendimento = document.getElementById("tipoAtendimento").value;
         const selectUsuario = document.getElementById("nomeUsuario").value;
 
-        // Novas travas de segurança
         if (selectAtendimento === "") return mostrarErroBotao(botao, "❌ Selecione o Atendimento!");
         if (selectUsuario === "") return mostrarErroBotao(botao, "❌ Selecione o Operador!");
 
@@ -955,9 +988,6 @@
         else if (body.classList.contains("tema-conforto")) { body.classList.remove("tema-conforto"); btn.innerText = "🌙 Modo Escuro"; btn.style.backgroundColor = "#102C87"; btn.style.color = "white"; }
     }
 
-    // ==========================================
-    // CAIXA PRETA: GERAR LOG DE ERRO MANUALMENTE
-    // ==========================================
     function baixarLogDeErro() {
         if (!dadosBrutos.demanda || !dadosBrutos.estoque || !dadosBrutos.pendente) {
             alert("Os dados das planilhas não estão carregados corretamente.");
@@ -969,7 +999,7 @@
         btn.innerHTML = '⏳ Preparando Arquivo...';
 
         setTimeout(() => {
-            let usuarioSolicitante = "Analista"; 
+            let usuarioSolicitante = document.getElementById("nomeUsuario").value || "Analista"; 
             try {
                 const caminho = decodeURIComponent(window.location.pathname);
                 const partes = caminho.split('/');
