@@ -808,7 +808,6 @@
                 const qtd = parseNumeroInteiro(row[colQtd]);
 
                 if (tDep === '9020' && pos.includes('PROBL-FATURAMENTO')) return;
-                
                 if (pos.includes('GI-ZONE') || pos.includes('AUTOMACAO')) return;
                 
                 if (pos.startsWith('AREA')) {
@@ -818,7 +817,10 @@
                 
                 if (tDep === '1810') return;
 
-                if (tDep === '0603' && pos !== 'DIVCIC' && pos !== 'RECUSA.LOG' && !pos.startsWith('DPC')) return;
+                // Permitir 0601, 0602, e posições específicas em 0603
+                let is0603Valid = (tDep === '0603' && (pos === 'DIVCIC' || pos === 'RECUSA.LOG' || pos.startsWith('DPC') || pos.includes('PICLINHA')));
+                if (tDep === '0603' && !is0603Valid) return;
+                
                 if (tEst.match(/^[BRS]/) && tDep !== '9017') return;
 
                 let pecaAdicionadaAoSaldo = false;
@@ -829,18 +831,18 @@
                 }
 
                 // ==========================================
-                // REGRAS DE MOTIVO ATUALIZADAS
+                // NOVAS REGRAS ESPECÍFICAS DE MOTIVOS
                 // ==========================================
                 let retidoMotivo = null;
                 if (!pecaAdicionadaAoSaldo) {
-                    if (pos.includes('PICLINHA')) retidoMotivo = 'Item em PICLINHA';
+                    if (pos.includes('PICLINHA')) retidoMotivo = 'Divergência de Estoque (PICLINHA)';
                     else if (tDep === '0603' && pos === 'DIVCIC') retidoMotivo = 'Item em DIVCIC'; 
-                    else if (tEst.startsWith('Q') || tEst.startsWith('C3') || tEst.startsWith('C4') || tEst.startsWith('P4')) retidoMotivo = 'Estoque em Controle de Qualidade';
+                    else if (tDep === '0601' || tDep === '0602' || tEst.startsWith('Q') || tEst.startsWith('C3') || tEst.startsWith('C4') || tEst.startsWith('P4')) retidoMotivo = 'Estoque em Controle de Qualidade';
                     else if (pos.includes('9010')) retidoMotivo = 'Saldo em Equalização'; 
-                    else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Divergência de Estoque'; 
-                    else if (tDep === '0603' && pos.startsWith('DPC')) retidoMotivo = 'Divergência de Estoque'; 
-                    else if (tDep === '9017') retidoMotivo = 'Divergência de Estoque'; 
-                    else if (tDep === '9020') retidoMotivo = 'Divergência de Estoque'; 
+                    else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Venda Maior que o Saldo'; 
+                    else if (tDep === '0603' && pos.startsWith('DPC')) retidoMotivo = 'Venda Maior que o Saldo'; 
+                    else if (tDep === '9017') retidoMotivo = 'Venda Maior que o Saldo'; 
+                    else if (tDep === '9020') retidoMotivo = 'Venda Maior que o Saldo'; 
 
                     if (retidoMotivo) produtos[cod].retidos[retidoMotivo] = (produtos[cod].retidos[retidoMotivo] || 0) + qtd;
                 }
@@ -863,17 +865,16 @@
                 p.cortes = Math.max(0, p.demSol - saldoValidoParaCorte);
                 
                 if (p.cortes > 0) {
-                    let totalNoCD = p.estoqueF2 + p.doca + Object.values(p.retidos).reduce((a,b)=>a+b, 0);
-                    
                     p.detalhesCortes = [];
                     let cortesRestantes = p.cortes;
 
+                    // Justificativas Específicas
                     const motivosPrioritarios = [
-                        'Item em PICLINHA', 
+                        'Divergência de Estoque (PICLINHA)', 
                         'Item em DIVCIC', 
-                        'Divergência de Estoque', 
                         'Saldo em Equalização', 
-                        'Estoque em Controle de Qualidade'
+                        'Estoque em Controle de Qualidade',
+                        'Venda Maior que o Saldo'
                     ];
 
                     for (let motivo of motivosPrioritarios) {
@@ -885,18 +886,22 @@
                         }
                     }
 
+                    // Se sobrar algum corte após as justificativas físicas, vira automaticamente Venda Maior que o Saldo
                     if (cortesRestantes > 0) {
-                        if (totalNoCD === 0 || totalNoCD < p.demSol) {
-                            p.detalhesCortes.push({ qtd: cortesRestantes, motivo: 'Venda Maior que o Saldo' });
+                        let existente = p.detalhesCortes.find(c => c.motivo === 'Venda Maior que o Saldo');
+                        if (existente) {
+                            existente.qtd += cortesRestantes;
                         } else {
-                            p.detalhesCortes.push({ qtd: cortesRestantes, motivo: 'Divergência de Estoque' });
+                            p.detalhesCortes.push({ qtd: cortesRestantes, motivo: 'Venda Maior que o Saldo' });
                         }
                     }
 
                     linhasTabelaAgrupada.push(p);
 
+                    // Alimentar Painel de Avisos
                     p.detalhesCortes.forEach(corte => {
-                        if (p.retidos[corte.motivo] > 0) {
+                        // Não mostramos "Venda Maior que o Saldo" no painel de Retidos (áreas), a menos que venha de RECUSA/DPC etc
+                        if (p.retidos[corte.motivo] > 0 && corte.motivo !== 'Venda Maior que o Saldo') {
                             if (!gruposRetidos[corte.motivo]) gruposRetidos[corte.motivo] = [];
                             if (!gruposRetidos[corte.motivo].find(i => i.cod === cod)) {
                                 gruposRetidos[corte.motivo].push({ cod: cod, desc: p.desc, qtd: p.retidos[corte.motivo] });
