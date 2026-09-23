@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "23/09/2026 16:44",
+  "atualizado_em": "23/09/2026 16:49",
   "atendimentos_rodando": [
     "MGI",
     "MGC"
