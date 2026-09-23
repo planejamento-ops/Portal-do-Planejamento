@@ -1734,10 +1734,22 @@
         function aplicarFiltroDataWMS() {
             const dataSelecionada = document.getElementById('filtro-data-wms').value;
             
-            // Filtra os dados apenas para a data escolhida no calendário
-            dadosOndasDataFiltrada = dadosOndasGeral.filter(o => o.data_onda === dataSelecionada);
+            // Limpa a lista filtrada
+            dadosOndasDataFiltrada = [];
+
+            // Para cada canal (MGI, MGC, VAREJO, etc.), procura a onda mais recente ATÉ à data escolhida
+            const canaisUnicos = [...new Set(dadosOndasGeral.map(o => o.onda_atual))];
+
+            canaisUnicos.forEach(canal => {
+                const ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === canal && o.data_onda <= dataSelecionada);
+                if (ondasCanal.length > 0) {
+                    // Ordena da data mais recente para a mais antiga e guarda o primeiro registo
+                    ondasCanal.sort((a, b) => b.data_onda.localeCompare(a.data_onda));
+                    dadosOndasDataFiltrada.push(ondasCanal[0]);
+                }
+            });
             
-            // 🚨 CORREÇÃO: As luzinhas voltam a ler o status real de pendências da planilha de TU!
+            // 🚨 CORREÇÃO: As luzes de status continuam a ler o estado real da operação (ao vivo) da folha de TU
             const canaisFixos = ['MGI', 'MGC', 'SPI', 'SPC', 'VAREJO'];
             canaisFixos.forEach(canal => {
                 let isActive = false;
@@ -1947,13 +1959,13 @@
 
                 const inputData = document.getElementById('filtro-data-wms');
                 
-                // Se o calendário estiver vazio, procura a data mais recente no histórico e define como padrão
-                if (!inputData.value && dadosOndasGeral.length > 0) {
-                    let maxDate = dadosOndasGeral[0].data_onda;
-                    dadosOndasGeral.forEach(o => { 
-                        if (o.data_onda > maxDate) maxDate = o.data_onda; 
-                    });
-                    inputData.value = maxDate;
+                // Se o calendário estiver vazio ao entrar na página, define a data exata de HOJE como padrão
+                if (!inputData.value) {
+                    const hoje = new Date();
+                    const ano = hoje.getFullYear();
+                    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+                    const dia = String(hoje.getDate()).padStart(2, '0');
+                    inputData.value = `${ano}-${mes}-${dia}`;
                 }
                 
                 // Aplica o filtro com a data atualizada
