@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "23/09/2026 12:19",
+  "atualizado_em": "23/09/2026 12:27",
   "ondas": [
     {
       "onda_atual": "VAREJO",
@@ -2869,7 +2869,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-09-16",
-      "aderencia_pcs": 69,
+      "aderencia_pcs": 34,
       "real": {
         "cxs": 15702,
         "pcs": 729469,
@@ -2894,26 +2894,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 20486,
-        "pcs": 1056825,
-        "tar": 110123,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 484314,
-          "cxs": 10303,
-          "pc_cx": 47.0,
-          "tar": 106893
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 572511,
-          "cxs": 10183,
-          "pc_cx": 56.2,
-          "tar": 3230
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 9561,
-          "cxs": 813,
-          "pc_cx": 11.8,
-          "tar": 2897
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 2.3,
@@ -3379,7 +3379,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-09-14",
-      "aderencia_pcs": 87,
+      "aderencia_pcs": 39,
       "real": {
         "cxs": 2387,
         "pcs": 116954,
@@ -3404,26 +3404,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 2307,
-        "pcs": 101229,
-        "tar": 11563,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 58275,
-          "cxs": 1184,
-          "pc_cx": 49.2,
-          "tar": 11099
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 42954,
-          "cxs": 1123,
-          "pc_cx": 38.2,
-          "tar": 464
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 1263,
+          "pcs": 2834,
           "cxs": 104,
-          "pc_cx": 12.1,
-          "tar": 324
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 2.1,
@@ -4669,7 +4669,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPC",
       "data_onda": "2026-09-10",
-      "aderencia_pcs": 99,
+      "aderencia_pcs": 60,
       "real": {
         "cxs": 18822,
         "pcs": 990353,
@@ -4694,26 +4694,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 18356,
-        "pcs": 979857,
-        "tar": 79279,
+        "cxs": 32251,
+        "pcs": 1644706,
+        "tar": 92809,
         "fr": {
-          "pcs": 490831,
-          "cxs": 9296,
-          "pc_cx": 52.8,
-          "tar": 75823
+          "pcs": 714679,
+          "cxs": 11249,
+          "pc_cx": 63.5,
+          "tar": 86545
         },
         "gv": {
-          "pcs": 489026,
-          "cxs": 9060,
-          "pc_cx": 54.0,
-          "tar": 3456
+          "pcs": 930027,
+          "cxs": 21002,
+          "pc_cx": 44.3,
+          "tar": 6264
         },
         "pc": {
-          "pcs": 8089,
-          "cxs": 557,
-          "pc_cx": 14.5,
-          "tar": 1838
+          "pcs": 31350,
+          "cxs": 955,
+          "pc_cx": 32.8,
+          "tar": 3688
         }
       },
       "perfil_est_cx": 1.8,
@@ -4924,7 +4924,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-09-09",
-      "aderencia_pcs": 58,
+      "aderencia_pcs": 84,
       "real": {
         "cxs": 1758,
         "pcs": 32459,
@@ -4949,26 +4949,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 2912,
-        "pcs": 55948,
-        "tar": 26927,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 53782,
-          "cxs": 2786,
-          "pc_cx": 19.3,
-          "tar": 26884
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 2166,
-          "cxs": 126,
-          "pc_cx": 17.2,
-          "tar": 43
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 3504,
-          "cxs": 841,
-          "pc_cx": 4.2,
-          "tar": 1095
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.6,
@@ -5184,7 +5184,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-09-08",
-      "aderencia_pcs": 70,
+      "aderencia_pcs": 30,
       "real": {
         "cxs": 14064,
         "pcs": 648646,
@@ -5209,26 +5209,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 16924,
-        "pcs": 930680,
-        "tar": 100344,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 521380,
-          "cxs": 10091,
-          "pc_cx": 51.7,
-          "tar": 97319
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 409300,
-          "cxs": 6833,
-          "pc_cx": 59.9,
-          "tar": 3025
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 5334,
-          "cxs": 619,
-          "pc_cx": 8.6,
-          "tar": 1976
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 2.4,
@@ -5444,7 +5444,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-09-08",
-      "aderencia_pcs": 67,
+      "aderencia_pcs": 52,
       "real": {
         "cxs": 2973,
         "pcs": 156855,
@@ -5469,26 +5469,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 4034,
-        "pcs": 233812,
-        "tar": 14973,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 131038,
-          "cxs": 1735,
-          "pc_cx": 75.5,
-          "tar": 14121
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 102774,
-          "cxs": 2299,
-          "pc_cx": 44.7,
-          "tar": 852
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 1795,
-          "cxs": 92,
-          "pc_cx": 19.5,
-          "tar": 544
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 1.6,
@@ -5694,7 +5694,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-09-05",
-      "aderencia_pcs": 41,
+      "aderencia_pcs": 24,
       "real": {
         "cxs": 487,
         "pcs": 9391,
@@ -5719,26 +5719,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.6,
@@ -5949,7 +5949,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-09-04",
-      "aderencia_pcs": 44,
+      "aderencia_pcs": 26,
       "real": {
         "cxs": 517,
         "pcs": 10119,
@@ -5974,26 +5974,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.6,
@@ -6204,7 +6204,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "ESTOJO SPC",
       "data_onda": "2026-09-03",
-      "aderencia_pcs": 3,
+      "aderencia_pcs": 2,
       "real": {
         "cxs": 739,
         "pcs": 5825,
@@ -6229,26 +6229,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 19037,
-        "pcs": 183231,
-        "tar": 2459,
+        "cxs": 22739,
+        "pcs": 250990,
+        "tar": 9689,
         "fr": {
-          "pcs": 5258,
-          "cxs": 610,
-          "pc_cx": 8.6,
-          "tar": 963
+          "pcs": 27324,
+          "cxs": 2941,
+          "pc_cx": 9.3,
+          "tar": 5659
         },
         "gv": {
-          "pcs": 177973,
-          "cxs": 18427,
-          "pc_cx": 9.7,
-          "tar": 1496
+          "pcs": 223666,
+          "cxs": 19798,
+          "pc_cx": 11.3,
+          "tar": 4030
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 14,
+          "cxs": 5,
+          "pc_cx": 2.8,
+          "tar": 5
         }
       },
       "perfil_est_cx": 0,
@@ -6258,7 +6258,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPC",
       "data_onda": "2026-09-03",
-      "aderencia_pcs": 39,
+      "aderencia_pcs": 37,
       "real": {
         "cxs": 12637,
         "pcs": 611420,
@@ -6283,26 +6283,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 22355,
-        "pcs": 237577,
-        "tar": 2932,
+        "cxs": 32251,
+        "pcs": 1644706,
+        "tar": 92809,
         "fr": {
-          "pcs": 6312,
-          "cxs": 636,
-          "pc_cx": 9.9,
-          "tar": 1171
+          "pcs": 714679,
+          "cxs": 11249,
+          "pc_cx": 63.5,
+          "tar": 86545
         },
         "gv": {
-          "pcs": 231265,
-          "cxs": 21719,
-          "pc_cx": 10.6,
-          "tar": 1761
+          "pcs": 930027,
+          "cxs": 21002,
+          "pc_cx": 44.3,
+          "tar": 6264
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 31350,
+          "cxs": 955,
+          "pc_cx": 32.8,
+          "tar": 3688
         }
       },
       "perfil_est_cx": 2.2,
@@ -6518,7 +6518,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-09-03",
-      "aderencia_pcs": 98,
+      "aderencia_pcs": 58,
       "real": {
         "cxs": 1177,
         "pcs": 22551,
@@ -6543,26 +6543,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.0,
@@ -6778,7 +6778,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-09-02",
-      "aderencia_pcs": 91,
+      "aderencia_pcs": 65,
       "real": {
         "cxs": 1463,
         "pcs": 25236,
@@ -6803,26 +6803,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.1,
@@ -7038,7 +7038,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "ESTOJO SPI",
       "data_onda": "2026-09-01",
-      "aderencia_pcs": 88,
+      "aderencia_pcs": 79,
       "real": {
         "cxs": 23627,
         "pcs": 219607,
@@ -7063,26 +7063,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 17514,
-        "pcs": 192637,
-        "tar": 4396,
+        "cxs": 17856,
+        "pcs": 172639,
+        "tar": 14188,
         "fr": {
-          "pcs": 9043,
-          "cxs": 1368,
-          "pc_cx": 6.6,
-          "tar": 2213
+          "pcs": 42150,
+          "cxs": 4295,
+          "pc_cx": 9.8,
+          "tar": 9274
         },
         "gv": {
-          "pcs": 183594,
-          "cxs": 16146,
-          "pc_cx": 11.4,
-          "tar": 2183
+          "pcs": 130489,
+          "cxs": 13561,
+          "pc_cx": 9.6,
+          "tar": 4914
         },
         "pc": {
-          "pcs": 10,
-          "cxs": 6,
-          "pc_cx": 1.7,
-          "tar": 6
+          "pcs": 1,
+          "cxs": 1,
+          "pc_cx": 1.0,
+          "tar": 1
         }
       },
       "perfil_est_cx": 0,
@@ -7092,7 +7092,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-09-01",
-      "aderencia_pcs": 74,
+      "aderencia_pcs": 71,
       "real": {
         "cxs": 28139,
         "pcs": 1531788,
@@ -7117,26 +7117,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 35084,
-        "pcs": 2067243,
-        "tar": 180662,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 1219371,
-          "cxs": 17830,
-          "pc_cx": 68.4,
-          "tar": 174198
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 847872,
-          "cxs": 17254,
-          "pc_cx": 49.1,
-          "tar": 6464
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 24539,
-          "cxs": 1219,
-          "pc_cx": 20.1,
-          "tar": 5985
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 1.7,
@@ -7612,7 +7612,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-31",
-      "aderencia_pcs": 51,
+      "aderencia_pcs": 85,
       "real": {
         "cxs": 2088,
         "pcs": 45400,
@@ -7637,26 +7637,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.6,
@@ -7872,7 +7872,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-08-31",
-      "aderencia_pcs": 96,
+      "aderencia_pcs": 81,
       "real": {
         "cxs": 4312,
         "pcs": 243807,
@@ -7897,26 +7897,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 4034,
-        "pcs": 233812,
-        "tar": 14973,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 131038,
-          "cxs": 1735,
-          "pc_cx": 75.5,
-          "tar": 14121
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 102774,
-          "cxs": 2299,
-          "pc_cx": 44.7,
-          "tar": 852
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 1795,
-          "cxs": 92,
-          "pc_cx": 19.5,
-          "tar": 544
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 1.6,
@@ -8176,7 +8176,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-29",
-      "aderencia_pcs": 18,
+      "aderencia_pcs": 11,
       "real": {
         "cxs": 284,
         "pcs": 4183,
@@ -8201,26 +8201,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.8,
@@ -8475,7 +8475,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGI",
       "data_onda": "2026-08-28",
-      "aderencia_pcs": 100,
+      "aderencia_pcs": 69,
       "real": {
         "cxs": 17779,
         "pcs": 950276,
@@ -8500,26 +8500,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 17149,
-        "pcs": 947091,
-        "tar": 67324,
+        "cxs": 12208,
+        "pcs": 651884,
+        "tar": 59116,
         "fr": {
-          "pcs": 537187,
-          "cxs": 8185,
-          "pc_cx": 65.6,
-          "tar": 63799
+          "pcs": 332742,
+          "cxs": 6586,
+          "pc_cx": 50.5,
+          "tar": 56884
         },
         "gv": {
-          "pcs": 409904,
-          "cxs": 8964,
-          "pc_cx": 45.7,
-          "tar": 3525
+          "pcs": 319142,
+          "cxs": 5622,
+          "pc_cx": 56.8,
+          "tar": 2232
         },
         "pc": {
-          "pcs": 9285,
-          "cxs": 340,
-          "pc_cx": 27.3,
-          "tar": 1308
+          "pcs": 3982,
+          "cxs": 275,
+          "pc_cx": 14.5,
+          "tar": 971
         }
       },
       "perfil_est_cx": 1.4,
@@ -8985,7 +8985,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "ESTOJO SPC",
       "data_onda": "2026-08-27",
-      "aderencia_pcs": 100,
+      "aderencia_pcs": 73,
       "real": {
         "cxs": 19224,
         "pcs": 183282,
@@ -9010,26 +9010,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 19037,
-        "pcs": 183231,
-        "tar": 2459,
+        "cxs": 22739,
+        "pcs": 250990,
+        "tar": 9689,
         "fr": {
-          "pcs": 5258,
-          "cxs": 610,
-          "pc_cx": 8.6,
-          "tar": 963
+          "pcs": 27324,
+          "cxs": 2941,
+          "pc_cx": 9.3,
+          "tar": 5659
         },
         "gv": {
-          "pcs": 177973,
-          "cxs": 18427,
-          "pc_cx": 9.7,
-          "tar": 1496
+          "pcs": 223666,
+          "cxs": 19798,
+          "pc_cx": 11.3,
+          "tar": 4030
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 14,
+          "cxs": 5,
+          "pc_cx": 2.8,
+          "tar": 5
         }
       },
       "perfil_est_cx": 0,
@@ -9039,7 +9039,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPC",
       "data_onda": "2026-08-27",
-      "aderencia_pcs": 88,
+      "aderencia_pcs": 83,
       "real": {
         "cxs": 25021,
         "pcs": 1365875,
@@ -9064,26 +9064,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 47589,
-        "pcs": 1545551,
-        "tar": 102990,
+        "cxs": 32251,
+        "pcs": 1644706,
+        "tar": 92809,
         "fr": {
-          "pcs": 743219,
-          "cxs": 14903,
-          "pc_cx": 49.9,
-          "tar": 96457
+          "pcs": 714679,
+          "cxs": 11249,
+          "pc_cx": 63.5,
+          "tar": 86545
         },
         "gv": {
-          "pcs": 802332,
-          "cxs": 32686,
-          "pc_cx": 24.5,
-          "tar": 6533
+          "pcs": 930027,
+          "cxs": 21002,
+          "pc_cx": 44.3,
+          "tar": 6264
         },
         "pc": {
-          "pcs": 72968,
-          "cxs": 2389,
-          "pc_cx": 30.5,
-          "tar": 6949
+          "pcs": 31350,
+          "cxs": 955,
+          "pc_cx": 32.8,
+          "tar": 3688
         }
       },
       "perfil_est_cx": 1.6,
@@ -9544,7 +9544,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-26",
-      "aderencia_pcs": 68,
+      "aderencia_pcs": 40,
       "real": {
         "cxs": 990,
         "pcs": 15580,
@@ -9569,26 +9569,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.6,
@@ -9799,7 +9799,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "ESTOJO SPI",
       "data_onda": "2026-08-25",
-      "aderencia_pcs": 97,
+      "aderencia_pcs": 59,
       "real": {
         "cxs": 28000,
         "pcs": 294308,
@@ -9824,26 +9824,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 29014,
-        "pcs": 303406,
-        "tar": 4908,
+        "cxs": 17856,
+        "pcs": 172639,
+        "tar": 14188,
         "fr": {
-          "pcs": 9140,
-          "cxs": 1037,
-          "pc_cx": 8.8,
-          "tar": 1707
+          "pcs": 42150,
+          "cxs": 4295,
+          "pc_cx": 9.8,
+          "tar": 9274
         },
         "gv": {
-          "pcs": 294266,
-          "cxs": 27977,
-          "pc_cx": 10.5,
-          "tar": 3201
+          "pcs": 130489,
+          "cxs": 13561,
+          "pc_cx": 9.6,
+          "tar": 4914
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 1,
+          "cxs": 1,
+          "pc_cx": 1.0,
+          "tar": 1
         }
       },
       "perfil_est_cx": 0.3,
@@ -9859,7 +9859,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-08-25",
-      "aderencia_pcs": 76,
+      "aderencia_pcs": 39,
       "real": {
         "cxs": 19427,
         "pcs": 850452,
@@ -9884,26 +9884,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 14061,
-        "pcs": 643045,
-        "tar": 105838,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 427177,
-          "cxs": 9266,
-          "pc_cx": 46.1,
-          "tar": 103272
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 215868,
-          "cxs": 4795,
-          "pc_cx": 45.0,
-          "tar": 2566
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 7210,
-          "cxs": 507,
-          "pc_cx": 14.2,
-          "tar": 2773
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 2.3,
@@ -10119,7 +10119,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-08-25",
-      "aderencia_pcs": 20,
+      "aderencia_pcs": 9,
       "real": {
         "cxs": 659,
         "pcs": 28155,
@@ -10144,26 +10144,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 3159,
-        "pcs": 142965,
-        "tar": 14821,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 68255,
-          "cxs": 1397,
-          "pc_cx": 48.9,
-          "tar": 14229
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 74710,
-          "cxs": 1762,
-          "pc_cx": 42.4,
-          "tar": 592
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 1719,
-          "cxs": 76,
-          "pc_cx": 22.6,
-          "tar": 614
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 0.3,
@@ -10359,7 +10359,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-25",
-      "aderencia_pcs": 23,
+      "aderencia_pcs": 14,
       "real": {
         "cxs": 336,
         "pcs": 5232,
@@ -10384,26 +10384,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.7,
@@ -10614,7 +10614,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-24",
-      "aderencia_pcs": 70,
+      "aderencia_pcs": 42,
       "real": {
         "cxs": 971,
         "pcs": 16156,
@@ -10639,26 +10639,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.2,
@@ -10869,7 +10869,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-22",
-      "aderencia_pcs": 21,
+      "aderencia_pcs": 12,
       "real": {
         "cxs": 331,
         "pcs": 4746,
@@ -10894,26 +10894,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.6,
@@ -11114,7 +11114,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGI",
       "data_onda": "2026-08-21",
-      "aderencia_pcs": 85,
+      "aderencia_pcs": 91,
       "real": {
         "cxs": 13732,
         "pcs": 593980,
@@ -11139,26 +11139,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 10968,
-        "pcs": 502111,
-        "tar": 55431,
+        "cxs": 12208,
+        "pcs": 651884,
+        "tar": 59116,
         "fr": {
-          "pcs": 295593,
-          "cxs": 5992,
-          "pc_cx": 49.3,
-          "tar": 53218
+          "pcs": 332742,
+          "cxs": 6586,
+          "pc_cx": 50.5,
+          "tar": 56884
         },
         "gv": {
-          "pcs": 206518,
-          "cxs": 4976,
-          "pc_cx": 41.5,
-          "tar": 2213
+          "pcs": 319142,
+          "cxs": 5622,
+          "pc_cx": 56.8,
+          "tar": 2232
         },
         "pc": {
-          "pcs": 6503,
-          "cxs": 301,
-          "pc_cx": 21.6,
-          "tar": 1512
+          "pcs": 3982,
+          "cxs": 275,
+          "pc_cx": 14.5,
+          "tar": 971
         }
       },
       "perfil_est_cx": 1.8,
@@ -11684,7 +11684,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPC",
       "data_onda": "2026-08-20",
-      "aderencia_pcs": 81,
+      "aderencia_pcs": 49,
       "real": {
         "cxs": 18460,
         "pcs": 810755,
@@ -11709,26 +11709,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 14569,
-        "pcs": 653063,
-        "tar": 71187,
+        "cxs": 32251,
+        "pcs": 1644706,
+        "tar": 92809,
         "fr": {
-          "pcs": 358688,
-          "cxs": 7365,
-          "pc_cx": 48.7,
-          "tar": 68221
+          "pcs": 714679,
+          "cxs": 11249,
+          "pc_cx": 63.5,
+          "tar": 86545
         },
         "gv": {
-          "pcs": 294375,
-          "cxs": 7204,
-          "pc_cx": 40.9,
-          "tar": 2966
+          "pcs": 930027,
+          "cxs": 21002,
+          "pc_cx": 44.3,
+          "tar": 6264
         },
         "pc": {
-          "pcs": 5342,
-          "cxs": 380,
-          "pc_cx": 14.1,
-          "tar": 1669
+          "pcs": 31350,
+          "cxs": 955,
+          "pc_cx": 32.8,
+          "tar": 3688
         }
       },
       "perfil_est_cx": 1.8,
@@ -11934,7 +11934,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "ESTOJO SPC",
       "data_onda": "2026-08-20",
-      "aderencia_pcs": 0,
+      "aderencia_pcs": 92,
       "real": {
         "cxs": 25856,
         "pcs": 271731,
@@ -11959,26 +11959,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 0,
-        "pcs": 0,
-        "tar": 0,
+        "cxs": 22739,
+        "pcs": 250990,
+        "tar": 9689,
         "fr": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 27324,
+          "cxs": 2941,
+          "pc_cx": 9.3,
+          "tar": 5659
         },
         "gv": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 223666,
+          "cxs": 19798,
+          "pc_cx": 11.3,
+          "tar": 4030
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 14,
+          "cxs": 5,
+          "pc_cx": 2.8,
+          "tar": 5
         }
       },
       "perfil_est_cx": 0.3,
@@ -11994,7 +11994,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-20",
-      "aderencia_pcs": 25,
+      "aderencia_pcs": 15,
       "real": {
         "cxs": 383,
         "pcs": 5869,
@@ -12019,26 +12019,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.3,
@@ -12244,7 +12244,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-19",
-      "aderencia_pcs": 82,
+      "aderencia_pcs": 73,
       "real": {
         "cxs": 1354,
         "pcs": 28306,
@@ -12269,26 +12269,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.7,
@@ -12494,7 +12494,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-08-18",
-      "aderencia_pcs": 99,
+      "aderencia_pcs": 33,
       "real": {
         "cxs": 15080,
         "pcs": 714358,
@@ -12519,26 +12519,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 15419,
-        "pcs": 724114,
-        "tar": 109027,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 504233,
-          "cxs": 9994,
-          "pc_cx": 50.5,
-          "tar": 106412
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 219881,
-          "cxs": 5425,
-          "pc_cx": 40.5,
-          "tar": 2615
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 5020,
-          "cxs": 436,
-          "pc_cx": 11.5,
-          "tar": 2183
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 2.2,
@@ -12754,7 +12754,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-18",
-      "aderencia_pcs": 50,
+      "aderencia_pcs": 30,
       "real": {
         "cxs": 537,
         "pcs": 11421,
@@ -12779,26 +12779,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.1,
@@ -12999,7 +12999,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-17",
-      "aderencia_pcs": 33,
+      "aderencia_pcs": 19,
       "real": {
         "cxs": 462,
         "pcs": 7502,
@@ -13024,26 +13024,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.0,
@@ -13249,7 +13249,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-08-17",
-      "aderencia_pcs": 88,
+      "aderencia_pcs": 46,
       "real": {
         "cxs": 3290,
         "pcs": 138394,
@@ -13274,26 +13274,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 3581,
-        "pcs": 157549,
-        "tar": 16211,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 87225,
-          "cxs": 1670,
-          "pc_cx": 52.2,
-          "tar": 15401
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 70324,
-          "cxs": 1911,
-          "pc_cx": 36.8,
-          "tar": 810
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 3144,
-          "cxs": 78,
-          "pc_cx": 40.3,
-          "tar": 669
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 1.7,
@@ -13494,7 +13494,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-15",
-      "aderencia_pcs": 34,
+      "aderencia_pcs": 20,
       "real": {
         "cxs": 437,
         "pcs": 7773,
@@ -13519,26 +13519,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.1,
@@ -13744,7 +13744,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGI",
       "data_onda": "2026-08-14",
-      "aderencia_pcs": 97,
+      "aderencia_pcs": 53,
       "real": {
         "cxs": 8365,
         "pcs": 346796,
@@ -13769,26 +13769,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 8400,
-        "pcs": 356006,
-        "tar": 50957,
+        "cxs": 12208,
+        "pcs": 651884,
+        "tar": 59116,
         "fr": {
-          "pcs": 249936,
-          "cxs": 5412,
-          "pc_cx": 46.2,
-          "tar": 49297
+          "pcs": 332742,
+          "cxs": 6586,
+          "pc_cx": 50.5,
+          "tar": 56884
         },
         "gv": {
-          "pcs": 106070,
-          "cxs": 2988,
-          "pc_cx": 35.5,
-          "tar": 1660
+          "pcs": 319142,
+          "cxs": 5622,
+          "pc_cx": 56.8,
+          "tar": 2232
         },
         "pc": {
-          "pcs": 5195,
-          "cxs": 250,
-          "pc_cx": 20.8,
-          "tar": 1237
+          "pcs": 3982,
+          "cxs": 275,
+          "pc_cx": 14.5,
+          "tar": 971
         }
       },
       "perfil_est_cx": 2.0,
@@ -13999,7 +13999,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-14",
-      "aderencia_pcs": 98,
+      "aderencia_pcs": 58,
       "real": {
         "cxs": 1069,
         "pcs": 22565,
@@ -14024,26 +14024,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.0,
@@ -14249,7 +14249,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-13",
-      "aderencia_pcs": 61,
+      "aderencia_pcs": 37,
       "real": {
         "cxs": 841,
         "pcs": 14140,
@@ -14274,26 +14274,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.2,
@@ -14499,7 +14499,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPC",
       "data_onda": "2026-08-13",
-      "aderencia_pcs": 82,
+      "aderencia_pcs": 58,
       "real": {
         "cxs": 17752,
         "pcs": 961177,
@@ -14524,26 +14524,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 21265,
-        "pcs": 1165195,
-        "tar": 88661,
+        "cxs": 32251,
+        "pcs": 1644706,
+        "tar": 92809,
         "fr": {
-          "pcs": 636121,
-          "cxs": 9951,
-          "pc_cx": 63.9,
-          "tar": 83981
+          "pcs": 714679,
+          "cxs": 11249,
+          "pc_cx": 63.5,
+          "tar": 86545
         },
         "gv": {
-          "pcs": 529074,
-          "cxs": 11314,
-          "pc_cx": 46.8,
-          "tar": 4680
+          "pcs": 930027,
+          "cxs": 21002,
+          "pc_cx": 44.3,
+          "tar": 6264
         },
         "pc": {
-          "pcs": 12804,
-          "cxs": 494,
-          "pc_cx": 25.9,
-          "tar": 2561
+          "pcs": 31350,
+          "cxs": 955,
+          "pc_cx": 32.8,
+          "tar": 3688
         }
       },
       "perfil_est_cx": 1.7,
@@ -14759,7 +14759,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-12",
-      "aderencia_pcs": 55,
+      "aderencia_pcs": 33,
       "real": {
         "cxs": 700,
         "pcs": 12588,
@@ -14784,26 +14784,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.9,
@@ -15019,7 +15019,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-08-11",
-      "aderencia_pcs": 99,
+      "aderencia_pcs": 56,
       "real": {
         "cxs": 21756,
         "pcs": 1218381,
@@ -15044,26 +15044,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 22003,
-        "pcs": 1227942,
-        "tar": 113072,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 764889,
-          "cxs": 12632,
-          "pc_cx": 60.6,
-          "tar": 108977
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 463053,
-          "cxs": 9371,
-          "pc_cx": 49.4,
-          "tar": 4095
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 7046,
-          "cxs": 566,
-          "pc_cx": 12.4,
-          "tar": 2516
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 1.8,
@@ -15274,7 +15274,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-11",
-      "aderencia_pcs": 34,
+      "aderencia_pcs": 21,
       "real": {
         "cxs": 449,
         "pcs": 7936,
@@ -15299,26 +15299,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.8,
@@ -15524,7 +15524,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-08-10",
-      "aderencia_pcs": 88,
+      "aderencia_pcs": 66,
       "real": {
         "cxs": 3796,
         "pcs": 199204,
@@ -15549,26 +15549,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 4244,
-        "pcs": 225781,
-        "tar": 17235,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 111069,
-          "cxs": 1732,
-          "pc_cx": 64.1,
-          "tar": 16487
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 114712,
-          "cxs": 2512,
-          "pc_cx": 45.7,
-          "tar": 748
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 2504,
-          "cxs": 111,
-          "pc_cx": 22.6,
-          "tar": 556
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 1.7,
@@ -15779,7 +15779,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-10",
-      "aderencia_pcs": 79,
+      "aderencia_pcs": 47,
       "real": {
         "cxs": 1008,
         "pcs": 18254,
@@ -15804,26 +15804,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.1,
@@ -16039,7 +16039,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-08",
-      "aderencia_pcs": 48,
+      "aderencia_pcs": 80,
       "real": {
         "cxs": 1532,
         "pcs": 48397,
@@ -16064,26 +16064,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 4.9,
@@ -16289,7 +16289,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-07",
-      "aderencia_pcs": 57,
+      "aderencia_pcs": 34,
       "real": {
         "cxs": 904,
         "pcs": 13158,
@@ -16314,26 +16314,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.2,
@@ -16539,7 +16539,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPC",
       "data_onda": "2026-08-06",
-      "aderencia_pcs": 60,
+      "aderencia_pcs": 79,
       "real": {
         "cxs": 28968,
         "pcs": 1301389,
@@ -16564,26 +16564,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 18315,
-        "pcs": 779021,
-        "tar": 75038,
+        "cxs": 32251,
+        "pcs": 1644706,
+        "tar": 92809,
         "fr": {
-          "pcs": 390201,
-          "cxs": 8846,
-          "pc_cx": 44.1,
-          "tar": 71712
+          "pcs": 714679,
+          "cxs": 11249,
+          "pc_cx": 63.5,
+          "tar": 86545
         },
         "gv": {
-          "pcs": 388820,
-          "cxs": 9469,
-          "pc_cx": 41.1,
-          "tar": 3326
+          "pcs": 930027,
+          "cxs": 21002,
+          "pc_cx": 44.3,
+          "tar": 6264
         },
         "pc": {
-          "pcs": 7721,
-          "cxs": 697,
-          "pc_cx": 11.1,
-          "tar": 1883
+          "pcs": 31350,
+          "cxs": 955,
+          "pc_cx": 32.8,
+          "tar": 3688
         }
       },
       "perfil_est_cx": 1.7,
@@ -16794,7 +16794,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-06",
-      "aderencia_pcs": 57,
+      "aderencia_pcs": 34,
       "real": {
         "cxs": 861,
         "pcs": 13158,
@@ -16819,26 +16819,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 1523,
-        "pcs": 23070,
-        "tar": 10807,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 18726,
-          "cxs": 1352,
-          "pc_cx": 13.9,
-          "tar": 10746
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 4344,
-          "cxs": 171,
-          "pc_cx": 25.4,
-          "tar": 61
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 355,
-          "cxs": 217,
-          "pc_cx": 1.6,
-          "tar": 296
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.4,
@@ -17044,7 +17044,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-05",
-      "aderencia_pcs": 15,
+      "aderencia_pcs": 67,
       "real": {
         "cxs": 1731,
         "pcs": 25951,
@@ -17069,26 +17069,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 264,
-        "pcs": 3786,
-        "tar": 2305,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 3725,
-          "cxs": 261,
-          "pc_cx": 14.3,
-          "tar": 2302
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 61,
-          "cxs": 3,
-          "pc_cx": 20.3,
-          "tar": 3
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 77,
-          "cxs": 52,
-          "pc_cx": 1.5,
-          "tar": 64
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 4.2,
@@ -17304,7 +17304,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-08-04",
-      "aderencia_pcs": 61,
+      "aderencia_pcs": 66,
       "real": {
         "cxs": 32627,
         "pcs": 1439386,
@@ -17329,26 +17329,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 22076,
-        "pcs": 871152,
-        "tar": 95340,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 490758,
-          "cxs": 13111,
-          "pc_cx": 37.4,
-          "tar": 91874
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 380394,
-          "cxs": 8965,
-          "pc_cx": 42.4,
-          "tar": 3466
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 8083,
-          "cxs": 804,
-          "pc_cx": 10.1,
-          "tar": 1880
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 1.8,
@@ -17564,7 +17564,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-04",
-      "aderencia_pcs": 17,
+      "aderencia_pcs": 56,
       "real": {
         "cxs": 1976,
         "pcs": 21768,
@@ -17589,26 +17589,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 264,
-        "pcs": 3786,
-        "tar": 2305,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 3725,
-          "cxs": 261,
-          "pc_cx": 14.3,
-          "tar": 2302
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 61,
-          "cxs": 3,
-          "pc_cx": 20.3,
-          "tar": 3
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 77,
-          "cxs": 52,
-          "pc_cx": 1.5,
-          "tar": 64
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 4.9,
@@ -17814,7 +17814,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-08-03",
-      "aderencia_pcs": 64,
+      "aderencia_pcs": 89,
       "real": {
         "cxs": 6611,
         "pcs": 265724,
@@ -17839,26 +17839,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 4217,
-        "pcs": 168809,
-        "tar": 15875,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 81534,
-          "cxs": 2111,
-          "pc_cx": 38.6,
-          "tar": 14994
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 87275,
-          "cxs": 2106,
-          "pc_cx": 41.4,
-          "tar": 881
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 1187,
-          "cxs": 147,
-          "pc_cx": 8.1,
-          "tar": 495
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 1.3,
@@ -18064,7 +18064,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-03",
-      "aderencia_pcs": 35,
+      "aderencia_pcs": 28,
       "real": {
         "cxs": 945,
         "pcs": 10935,
@@ -18089,26 +18089,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 264,
-        "pcs": 3786,
-        "tar": 2305,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 3725,
-          "cxs": 261,
-          "pc_cx": 14.3,
-          "tar": 2302
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 61,
-          "cxs": 3,
-          "pc_cx": 20.3,
-          "tar": 3
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 77,
-          "cxs": 52,
-          "pc_cx": 1.5,
-          "tar": 64
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.0,
@@ -18314,7 +18314,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-08-01",
-      "aderencia_pcs": 19,
+      "aderencia_pcs": 53,
       "real": {
         "cxs": 1414,
         "pcs": 20446,
@@ -18339,26 +18339,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 264,
-        "pcs": 3786,
-        "tar": 2305,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 3725,
-          "cxs": 261,
-          "pc_cx": 14.3,
-          "tar": 2302
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 61,
-          "cxs": 3,
-          "pc_cx": 20.3,
-          "tar": 3
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 77,
-          "cxs": 52,
-          "pc_cx": 1.5,
-          "tar": 64
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.8,
@@ -18569,7 +18569,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGI",
       "data_onda": "2026-07-31",
-      "aderencia_pcs": 57,
+      "aderencia_pcs": 84,
       "real": {
         "cxs": 17869,
         "pcs": 775918,
@@ -18594,26 +18594,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 9276,
-        "pcs": 444215,
-        "tar": 52908,
+        "cxs": 12208,
+        "pcs": 651884,
+        "tar": 59116,
         "fr": {
-          "pcs": 277883,
-          "cxs": 5467,
-          "pc_cx": 50.8,
-          "tar": 50681
+          "pcs": 332742,
+          "cxs": 6586,
+          "pc_cx": 50.5,
+          "tar": 56884
         },
         "gv": {
-          "pcs": 166332,
-          "cxs": 3809,
-          "pc_cx": 43.7,
-          "tar": 2227
+          "pcs": 319142,
+          "cxs": 5622,
+          "pc_cx": 56.8,
+          "tar": 2232
         },
         "pc": {
-          "pcs": 5851,
-          "cxs": 389,
-          "pc_cx": 15.0,
-          "tar": 1361
+          "pcs": 3982,
+          "cxs": 275,
+          "pc_cx": 14.5,
+          "tar": 971
         }
       },
       "perfil_est_cx": 1.8,
@@ -18829,7 +18829,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPC",
       "data_onda": "2026-07-30",
-      "aderencia_pcs": 97,
+      "aderencia_pcs": 43,
       "real": {
         "cxs": 15285,
         "pcs": 706819,
@@ -18854,26 +18854,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 14967,
-        "pcs": 726174,
-        "tar": 78777,
+        "cxs": 32251,
+        "pcs": 1644706,
+        "tar": 92809,
         "fr": {
-          "pcs": 455764,
-          "cxs": 8573,
-          "pc_cx": 53.2,
-          "tar": 75671
+          "pcs": 714679,
+          "cxs": 11249,
+          "pc_cx": 63.5,
+          "tar": 86545
         },
         "gv": {
-          "pcs": 270410,
-          "cxs": 6394,
-          "pc_cx": 42.3,
-          "tar": 3106
+          "pcs": 930027,
+          "cxs": 21002,
+          "pc_cx": 44.3,
+          "tar": 6264
         },
         "pc": {
-          "pcs": 8534,
-          "cxs": 604,
-          "pc_cx": 14.1,
-          "tar": 1855
+          "pcs": 31350,
+          "cxs": 955,
+          "pc_cx": 32.8,
+          "tar": 3688
         }
       },
       "perfil_est_cx": 1.9,
@@ -19079,7 +19079,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-07-30",
-      "aderencia_pcs": 0,
+      "aderencia_pcs": 20,
       "real": {
         "cxs": 553,
         "pcs": 7890,
@@ -19104,26 +19104,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 0,
-        "pcs": 0,
-        "tar": 0,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 5.9,
@@ -19334,7 +19334,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-07-29",
-      "aderencia_pcs": 0,
+      "aderencia_pcs": 25,
       "real": {
         "cxs": 516,
         "pcs": 9539,
@@ -19359,26 +19359,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 0,
-        "pcs": 0,
-        "tar": 0,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.4,
@@ -19589,7 +19589,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "SPI",
       "data_onda": "2026-07-28",
-      "aderencia_pcs": 92,
+      "aderencia_pcs": 39,
       "real": {
         "cxs": 17454,
         "pcs": 838539,
@@ -19614,26 +19614,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 16145,
-        "pcs": 775269,
-        "tar": 105931,
+        "cxs": 41378,
+        "pcs": 2168906,
+        "tar": 123441,
         "fr": {
-          "pcs": 520174,
-          "cxs": 10606,
-          "pc_cx": 49.0,
-          "tar": 102808
+          "pcs": 955782,
+          "cxs": 15621,
+          "pc_cx": 61.2,
+          "tar": 116247
         },
         "gv": {
-          "pcs": 255095,
-          "cxs": 5539,
-          "pc_cx": 46.1,
-          "tar": 3123
+          "pcs": 1213124,
+          "cxs": 25757,
+          "pc_cx": 47.1,
+          "tar": 7194
         },
         "pc": {
-          "pcs": 8590,
-          "cxs": 1017,
-          "pc_cx": 8.4,
-          "tar": 2863
+          "pcs": 13742,
+          "cxs": 896,
+          "pc_cx": 15.3,
+          "tar": 2924
         }
       },
       "perfil_est_cx": 2.1,
@@ -19849,7 +19849,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-07-28",
-      "aderencia_pcs": 2,
+      "aderencia_pcs": 1,
       "real": {
         "cxs": 79,
         "pcs": 3762,
@@ -19874,26 +19874,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 3295,
-        "pcs": 158109,
-        "tar": 14630,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 77628,
-          "cxs": 1409,
-          "pc_cx": 55.1,
-          "tar": 13952
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 80481,
-          "cxs": 1886,
-          "pc_cx": 42.7,
-          "tar": 678
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 1671,
-          "cxs": 121,
-          "pc_cx": 13.8,
-          "tar": 619
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 0.5,
@@ -20089,7 +20089,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-07-28",
-      "aderencia_pcs": 0,
+      "aderencia_pcs": 34,
       "real": {
         "cxs": 695,
         "pcs": 13054,
@@ -20114,26 +20114,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 0,
-        "pcs": 0,
-        "tar": 0,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.4,
@@ -20349,7 +20349,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGC",
       "data_onda": "2026-07-27",
-      "aderencia_pcs": 89,
+      "aderencia_pcs": 47,
       "real": {
         "cxs": 3028,
         "pcs": 140575,
@@ -20374,26 +20374,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 3295,
-        "pcs": 158109,
-        "tar": 14630,
+        "cxs": 6231,
+        "pcs": 300100,
+        "tar": 19154,
         "fr": {
-          "pcs": 77628,
-          "cxs": 1409,
-          "pc_cx": 55.1,
-          "tar": 13952
+          "pcs": 150130,
+          "cxs": 2433,
+          "pc_cx": 61.7,
+          "tar": 18019
         },
         "gv": {
-          "pcs": 80481,
-          "cxs": 1886,
-          "pc_cx": 42.7,
-          "tar": 678
+          "pcs": 149970,
+          "cxs": 3798,
+          "pc_cx": 39.5,
+          "tar": 1135
         },
         "pc": {
-          "pcs": 1671,
-          "cxs": 121,
-          "pc_cx": 13.8,
-          "tar": 619
+          "pcs": 2834,
+          "cxs": 104,
+          "pc_cx": 27.2,
+          "tar": 659
         }
       },
       "perfil_est_cx": 2.0,
@@ -20609,7 +20609,7 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "VAREJO",
       "data_onda": "2026-07-27",
-      "aderencia_pcs": 0,
+      "aderencia_pcs": 54,
       "real": {
         "cxs": 1300,
         "pcs": 20884,
@@ -20634,26 +20634,26 @@ window.dadosDemandaWMS = {
         }
       },
       "previa": {
-        "cxs": 0,
-        "pcs": 0,
-        "tar": 0,
+        "cxs": 2036,
+        "pcs": 38712,
+        "tar": 17835,
         "fr": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 36183,
+          "cxs": 1936,
+          "pc_cx": 18.7,
+          "tar": 17802
         },
         "gv": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 2529,
+          "cxs": 100,
+          "pc_cx": 25.3,
+          "tar": 33
         },
         "pc": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 508,
+          "cxs": 288,
+          "pc_cx": 1.8,
+          "tar": 339
         }
       },
       "perfil_est_cx": 6.6,
