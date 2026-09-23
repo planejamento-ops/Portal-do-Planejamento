@@ -324,6 +324,7 @@
             gap: 10px; 
         }
 
+        /* Botões de Atalho Reformatados */
         .btn-atalho { 
             display: inline-flex; 
             align-items: center; 
@@ -346,6 +347,36 @@
             background: rgba(15, 157, 88, 0.12); 
             border: 1px solid rgba(15, 157, 88, 0.35); 
             color: #34a853; 
+        }
+        .btn-gsheets:hover {
+            background: rgba(15, 157, 88, 0.25); 
+            border-color: rgba(52, 168, 83, 0.6); 
+            box-shadow: 0 0 15px rgba(52, 168, 83, 0.25); 
+            transform: translateY(-2px); 
+        }
+
+        .btn-m365 { 
+            background: rgba(16, 124, 65, 0.12) !important; 
+            border: 1px solid rgba(16, 124, 65, 0.35) !important; 
+            color: #107c41 !important; 
+        }
+        .btn-m365:hover {
+            background: rgba(16, 124, 65, 0.25) !important; 
+            border-color: rgba(16, 124, 65, 0.6) !important; 
+            box-shadow: 0 0 15px rgba(16, 124, 65, 0.25) !important; 
+            transform: translateY(-2px); 
+        }
+
+        .btn-spoint { 
+            background: rgba(0, 120, 212, 0.12); 
+            border: 1px solid rgba(0, 120, 212, 0.35); 
+            color: #0078d4; 
+        }
+        .btn-spoint:hover {
+            background: rgba(0, 120, 212, 0.25); 
+            border-color: rgba(0, 120, 212, 0.6); 
+            box-shadow: 0 0 15px rgba(0, 120, 212, 0.25); 
+            transform: translateY(-2px); 
         }
 
         .tu-status-badge { 
@@ -1076,6 +1107,9 @@
                             <a href="https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8" target="_blank" class="btn-atalho btn-gsheets" title="Abrir Controle de TUs no Google Sheets">
                                 <span class="material-symbols-outlined">table_chart</span> Google Sheets
                             </a>
+                            <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/LATAM-BR-VAG-01-CLBoticario/_layouts/15/Doc.aspx?sourcedoc=%7B612780AF-BF9B-4DB0-B234-F255A0AFD1D3%7D&file=Controle%20de%20TUs%202026.xlsx&action=default&mobileredirect=true" target="_blank" class="btn-atalho btn-m365" title="Abrir Controle de TUs no Microsoft 365">
+                                <span class="material-symbols-outlined">description</span> M365 Excel
+                            </a>
                             <span class="tu-status-badge">
                                 <span class="status-dot"></span>
                                 <span id="txt-status-sync">Sincronizando...</span>
@@ -1486,6 +1520,12 @@
                             <h2><span class="material-symbols-outlined">sync_alt</span> Controle de Movimentações</h2>
                         </div>
                         <div class="header-badges">
+                            <a href="https://docs.google.com/spreadsheets/d/1tNeCyjzmLYqL0YxlRjf5vG6UPwlunrgzu0zzAGIFhz0/edit?gid=0#gid=0" target="_blank" class="btn-atalho btn-gsheets" title="Abrir Movimentações no Google Sheets">
+                                <span class="material-symbols-outlined">table_chart</span> Google Sheets
+                            </a>
+                            <a href="https://cevalogisticsoffice365.sharepoint.com/sites/LATAM-BR-VAG-01-CLBoticario/Shared%20Documents/General/Departamentos/Planejamento/Movimenta%C3%A7%C3%B5es%202026.xlsx?d=w55ef58ff40b94596a34c096999512b6a&csf=1&web=1&e=Ud8s43" target="_blank" class="btn-atalho btn-m365" title="Abrir Movimentações no M365">
+                                <span class="material-symbols-outlined">description</span> M365 Excel
+                            </a>
                             <span class="tu-status-badge">
                                 <span class="status-dot"></span>
                                 <span id="txt-mov-status-sync">Sincronizando...</span>
