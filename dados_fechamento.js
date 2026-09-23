@@ -1,8 +1,8 @@
 window.dadosFechamento = {
-  "atualizado_em": "23/09/2026 14:30",
+  "atualizado_em": "23/09/2026 15:01",
   "atendimentos_rodando": [
-    "MGI",
-    "MGC"
+    "MGC",
+    "MGI"
   ],
   "total_pendentes": 26,
   "total_finalizadas": 0,
