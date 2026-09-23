@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "22/09/2026 23:54",
-  "total_tus": 99,
+  "atualizado_em": "23/09/2026 00:05",
+  "total_tus": 72,
   "caixas_total_mes": 289802,
   "pecas_total_mes": 9789777,
   "caixas_pendentes": 21562,
@@ -16,7 +16,8 @@ window.dadosDashboard = {
     "Varejo-Pró (SP)"
   ],
   "alertas_atraso": [
-    "Atraso em MGC"
+    "Atraso em MGC",
+    "Atraso em SPI"
   ],
   "proxima_carteira": {
     "carreta": "Carreta 12",
