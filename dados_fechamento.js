@@ -1,12 +1,84 @@
 window.dadosFechamento = {
-  "atualizado_em": "23/09/2026 15:56",
+  "atualizado_em": "23/09/2026 15:59",
   "atendimentos_rodando": [
-    "MGC",
-    "MGI"
+    "MGI",
+    "MGC"
   ],
-  "total_pendentes": 26,
-  "total_finalizadas": 0,
+  "total_pendentes": 21,
+  "total_finalizadas": 5,
   "tabela": [
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 05",
+      "tu": "610000012739",
+      "total_caixas": 1682,
+      "caixas_carregadas": 1682,
+      "pct": 100,
+      "status": "FINALIZADA"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 06",
+      "tu": "610000012740",
+      "total_caixas": 1709,
+      "caixas_carregadas": 1709,
+      "pct": 100,
+      "status": "FINALIZADA"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 09",
+      "tu": "610000012786",
+      "total_caixas": 1920,
+      "caixas_carregadas": 1920,
+      "pct": 100,
+      "status": "FINALIZADA"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 10",
+      "tu": "610000012787",
+      "total_caixas": 1364,
+      "caixas_carregadas": 1364,
+      "pct": 100,
+      "status": "FINALIZADA"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 08",
+      "tu": "610000012793",
+      "total_caixas": 1852,
+      "caixas_carregadas": 1852,
+      "pct": 100,
+      "status": "FINALIZADA"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 07",
+      "tu": "610000012749",
+      "total_caixas": 2245,
+      "caixas_carregadas": 2244,
+      "pct": 99,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 11",
+      "tu": "610000012800",
+      "total_caixas": 1303,
+      "caixas_carregadas": 1298,
+      "pct": 99,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 12",
+      "tu": "610000012801",
+      "total_caixas": 1389,
+      "caixas_carregadas": 1205,
+      "pct": 86,
+      "status": "PENDENTE"
+    },
     {
       "atendimento": "MGC",
       "carreta": "Carreta 01",
@@ -63,24 +135,6 @@ window.dadosFechamento = {
     },
     {
       "atendimento": "MGI",
-      "carreta": "Carreta 05",
-      "tu": "610000012739",
-      "total_caixas": 1682,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 06",
-      "tu": "610000012740",
-      "total_caixas": 1709,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
       "carreta": "Carreta 13",
       "tu": "610000012742",
       "total_caixas": 1104,
@@ -102,33 +156,6 @@ window.dadosFechamento = {
       "carreta": "Carreta 19",
       "tu": "610000012744",
       "total_caixas": 1801,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 07",
-      "tu": "610000012749",
-      "total_caixas": 2245,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 09",
-      "tu": "610000012786",
-      "total_caixas": 1920,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 10",
-      "tu": "610000012787",
-      "total_caixas": 1364,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -171,36 +198,9 @@ window.dadosFechamento = {
     },
     {
       "atendimento": "MGI",
-      "carreta": "Carreta 08",
-      "tu": "610000012793",
-      "total_caixas": 1852,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
       "carreta": "Carreta 21",
       "tu": "610000012794",
       "total_caixas": 2064,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 11",
-      "tu": "610000012800",
-      "total_caixas": 1303,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 12",
-      "tu": "610000012801",
-      "total_caixas": 1389,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
