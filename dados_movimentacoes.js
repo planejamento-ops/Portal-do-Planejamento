@@ -1,20 +1,11 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "23/09/2026 09:56",
-  "total_dia": 7,
+  "atualizado_em": "23/09/2026 12:19",
+  "total_dia": 20,
   "pendentes_hoje": 6,
-  "pendentes_antigas": 1,
-  "etiquetas_totais": 7,
+  "pendentes_antigas": 0,
+  "etiquetas_totais": 20,
   "etiquetas_pendentes": 6,
   "tabela_pendentes": [
-    {
-      "data": "18/09",
-      "item": "53441",
-      "demanda": "SPC",
-      "de": "LN-3-18-3-4-1",
-      "para": "LN-4-18-1-2-2",
-      "tipo_dep": "BGGZ",
-      "duplicidade": "OK"
-    },
     {
       "data": "23/09",
       "item": "47177",
@@ -70,31 +61,6 @@ window.dadosMovimentacoes = {
       "duplicidade": "OK"
     }
   ],
-  "tabela_ie": [
-    {
-      "item": "47177",
-      "para": "LN-3-18-3-4-1"
-    },
-    {
-      "item": "57076",
-      "para": "LN-3-17-4-3-6"
-    },
-    {
-      "item": "51231",
-      "para": "LN-5-33-3-3-3"
-    },
-    {
-      "item": "52301",
-      "para": "LN-5-37-4-2-5"
-    },
-    {
-      "item": "53919",
-      "para": "LN-5-35-3-3-2"
-    },
-    {
-      "item": "89641",
-      "para": "LN-5-37-4-2-2"
-    }
-  ],
+  "tabela_ie": [],
   "tabela_cf": []
 };
