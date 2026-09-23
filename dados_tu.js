@@ -1,8 +1,8 @@
 window.dadosDashboard = {
-  "atualizado_em": "22/09/2026 20:57",
-  "total_tus": 97,
-  "caixas_total_mes": 288151,
-  "pecas_total_mes": 9762900,
+  "atualizado_em": "22/09/2026 21:19",
+  "total_tus": 99,
+  "caixas_total_mes": 289802,
+  "pecas_total_mes": 9789777,
   "caixas_pendentes": 21562,
   "caixas_ln_pend": 4584,
   "caixas_gv_pend": 16978,
@@ -42,13 +42,13 @@ window.dadosDashboard = {
   "perfis_geral": {
     "varejo_ln": {
       "perfil": 18,
-      "cx": 30703,
-      "pcs": 560455
+      "cx": 31457,
+      "pcs": 573226
     },
     "varejo_gv": {
       "perfil": 17,
-      "cx": 6336,
-      "pcs": 107453
+      "cx": 7233,
+      "pcs": 121559
     },
     "carteira_ln": {
       "perfil": 55,
