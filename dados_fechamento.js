@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "24/09/2026 08:59",
+  "atualizado_em": "24/09/2026 09:11",
   "atendimentos_rodando": [
     "SPI",
     "MGC"
@@ -12,8 +12,8 @@ window.dadosFechamento = {
       "carreta": "Carreta 01",
       "tu": "610000012856",
       "total_caixas": 2092,
-      "caixas_carregadas": 0,
-      "pct": 0,
+      "caixas_carregadas": 2088,
+      "pct": 99,
       "status": "PENDENTE"
     },
     {
@@ -21,8 +21,8 @@ window.dadosFechamento = {
       "carreta": "Carreta 02",
       "tu": "610000012857",
       "total_caixas": 1613,
-      "caixas_carregadas": 0,
-      "pct": 0,
+      "caixas_carregadas": 1611,
+      "pct": 99,
       "status": "PENDENTE"
     },
     {
@@ -30,17 +30,26 @@ window.dadosFechamento = {
       "carreta": "Carreta 03",
       "tu": "610000012858",
       "total_caixas": 2029,
-      "caixas_carregadas": 0,
-      "pct": 0,
+      "caixas_carregadas": 1955,
+      "pct": 96,
       "status": "PENDENTE"
     },
     {
-      "atendimento": "MGC",
-      "carreta": "Carreta 04",
-      "tu": "610000012859",
-      "total_caixas": 1377,
-      "caixas_carregadas": 0,
-      "pct": 0,
+      "atendimento": "SPI",
+      "carreta": "Carreta 01",
+      "tu": "610000012869",
+      "total_caixas": 1560,
+      "caixas_carregadas": 817,
+      "pct": 52,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 02",
+      "tu": "610000012907",
+      "total_caixas": 1932,
+      "caixas_carregadas": 717,
+      "pct": 37,
       "status": "PENDENTE"
     },
     {
@@ -48,6 +57,15 @@ window.dadosFechamento = {
       "carreta": "Carreta 05",
       "tu": "610000012860",
       "total_caixas": 1965,
+      "caixas_carregadas": 28,
+      "pct": 1,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGC",
+      "carreta": "Carreta 04",
+      "tu": "610000012859",
+      "total_caixas": 1377,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -75,15 +93,6 @@ window.dadosFechamento = {
       "carreta": "Carreta 04",
       "tu": "610000012868",
       "total_caixas": 2010,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 01",
-      "tu": "610000012869",
-      "total_caixas": 1560,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -147,15 +156,6 @@ window.dadosFechamento = {
       "carreta": "Carreta 12",
       "tu": "610000012885",
       "total_caixas": 2116,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 02",
-      "tu": "610000012907",
-      "total_caixas": 1932,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
