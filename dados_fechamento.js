@@ -1,18 +1,14 @@
 window.dadosFechamento = {
-  "atualizado_em": "24/09/2026 12:36",
+  "atualizado_em": "24/09/2026 12:40",
   "progresso_geral_pct": 5,
-  "total_tus_geral": 66,
   "total_cxs_geral": 106973,
   "total_loaded_cxs_geral": 5690,
   "total_pending_cxs_geral": 101283,
   "cards_atendimentos": {
     "VAREJO": {
-      "total_tus": 11,
       "total_cxs": 8150,
       "loaded_cxs": 5690,
       "pending_cxs": 2460,
-      "tot_gv_cx": 3699,
-      "tot_fr_cx": 4451,
       "finalizadas_gv_cx": 3220,
       "finalizadas_fr_cx": 2470,
       "pendentes_gv_cx": 479,
@@ -21,12 +17,9 @@ window.dadosFechamento = {
       "status_atend": "EM ANDAMENTO"
     },
     "SPC": {
-      "total_tus": 16,
       "total_cxs": 30309,
       "loaded_cxs": 0,
       "pending_cxs": 30309,
-      "tot_gv_cx": 26229,
-      "tot_fr_cx": 4080,
       "finalizadas_gv_cx": 0,
       "finalizadas_fr_cx": 0,
       "pendentes_gv_cx": 26229,
@@ -35,12 +28,9 @@ window.dadosFechamento = {
       "status_atend": "PENDENTE"
     },
     "MGI": {
-      "total_tus": 20,
       "total_cxs": 32005,
       "loaded_cxs": 0,
       "pending_cxs": 32005,
-      "tot_gv_cx": 24569,
-      "tot_fr_cx": 7436,
       "finalizadas_gv_cx": 0,
       "finalizadas_fr_cx": 0,
       "pendentes_gv_cx": 24569,
@@ -49,12 +39,9 @@ window.dadosFechamento = {
       "status_atend": "PENDENTE"
     },
     "MGC": {
-      "total_tus": 6,
       "total_cxs": 10911,
       "loaded_cxs": 0,
       "pending_cxs": 10911,
-      "tot_gv_cx": 7727,
-      "tot_fr_cx": 3184,
       "finalizadas_gv_cx": 0,
       "finalizadas_fr_cx": 0,
       "pendentes_gv_cx": 7727,
@@ -63,12 +50,9 @@ window.dadosFechamento = {
       "status_atend": "PENDENTE"
     },
     "SPI": {
-      "total_tus": 13,
       "total_cxs": 25598,
       "loaded_cxs": 0,
       "pending_cxs": 25598,
-      "tot_gv_cx": 14824,
-      "tot_fr_cx": 10774,
       "finalizadas_gv_cx": 0,
       "finalizadas_fr_cx": 0,
       "pendentes_gv_cx": 14824,
