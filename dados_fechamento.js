@@ -1,38 +1,38 @@
 window.dadosFechamento = {
-  "atualizado_em": "24/09/2026 11:16",
-  "progresso_geral_pct": 6,
-  "total_tus_geral": 108,
-  "total_finalizadas_geral": 7,
-  "total_pendentes_geral": 101,
+  "atualizado_em": "24/09/2026 11:29",
+  "progresso_geral_pct": 0,
+  "total_tus_geral": 31,
+  "total_finalizadas_geral": 0,
+  "total_pendentes_geral": 31,
   "cards_atendimentos": {
     "VAREJO-PRÓ": {
-      "total_tus": 48,
-      "finalizadas": 7,
-      "finalizadas_gv": 0,
-      "finalizadas_fr": 7,
-      "pendentes": 41,
-      "pendentes_gv": 0,
-      "pendentes_fr": 41,
-      "pct": 14
-    },
-    "CARTEIRA": {
-      "total_tus": 38,
+      "total_tus": 11,
       "finalizadas": 0,
       "finalizadas_gv": 0,
       "finalizadas_fr": 0,
-      "pendentes": 38,
+      "pendentes": 11,
       "pendentes_gv": 0,
-      "pendentes_fr": 38,
+      "pendentes_fr": 11,
+      "pct": 0
+    },
+    "CARTEIRA": {
+      "total_tus": 16,
+      "finalizadas": 0,
+      "finalizadas_gv": 0,
+      "finalizadas_fr": 0,
+      "pendentes": 16,
+      "pendentes_gv": 0,
+      "pendentes_fr": 16,
       "pct": 0
     },
     "ESTOJO": {
-      "total_tus": 21,
+      "total_tus": 3,
       "finalizadas": 0,
       "finalizadas_gv": 0,
       "finalizadas_fr": 0,
-      "pendentes": 21,
-      "pendentes_gv": 4,
-      "pendentes_fr": 17,
+      "pendentes": 3,
+      "pendentes_gv": 0,
+      "pendentes_fr": 3,
       "pct": 0
     },
     "COMPLEMENTO CART": {
@@ -48,101 +48,11 @@ window.dadosFechamento = {
   },
   "tabela": [
     {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012632",
-      "tipo_op": "FR",
-      "total_caixas": 443,
-      "caixas_carregadas": 443,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012639",
-      "tipo_op": "FR",
-      "total_caixas": 625,
-      "caixas_carregadas": 625,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 06",
-      "tu": "610000012640",
-      "tipo_op": "FR",
-      "total_caixas": 398,
-      "caixas_carregadas": 398,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 04",
-      "tu": "610000012670",
-      "tipo_op": "FR",
-      "total_caixas": 567,
-      "caixas_carregadas": 567,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 04",
-      "tu": "610000012671",
-      "tipo_op": "FR",
-      "total_caixas": 486,
-      "caixas_carregadas": 486,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012672",
-      "tipo_op": "FR",
-      "total_caixas": 405,
-      "caixas_carregadas": 405,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012677",
-      "tipo_op": "FR",
-      "total_caixas": 334,
-      "caixas_carregadas": 334,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 06",
-      "tu": "610000012676",
-      "tipo_op": "FR",
-      "total_caixas": 479,
-      "caixas_carregadas": 478,
-      "pct": 99,
-      "status": "PENDENTE"
-    },
-    {
       "atendimento": "CARTEIRA",
       "carreta": "Carreta 01",
-      "tu": "610000012634",
+      "tu": "610000012856",
       "tipo_op": "FR",
-      "total_caixas": 666,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 01",
-      "tu": "610000012635",
-      "tipo_op": "FR",
-      "total_caixas": 1336,
+      "total_caixas": 2092,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -150,9 +60,9 @@ window.dadosFechamento = {
     {
       "atendimento": "CARTEIRA",
       "carreta": "Carreta 02",
-      "tu": "610000012636",
+      "tu": "610000012857",
       "tipo_op": "FR",
-      "total_caixas": 1853,
+      "total_caixas": 1613,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -160,29 +70,9 @@ window.dadosFechamento = {
     {
       "atendimento": "CARTEIRA",
       "carreta": "Carreta 03",
-      "tu": "610000012637",
+      "tu": "610000012858",
       "tipo_op": "FR",
-      "total_caixas": 1434,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 05",
-      "tu": "610000012638",
-      "tipo_op": "FR",
-      "total_caixas": 1551,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 02",
-      "tu": "610000012647",
-      "tipo_op": "FR",
-      "total_caixas": 1335,
+      "total_caixas": 2029,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -190,9 +80,9 @@ window.dadosFechamento = {
     {
       "atendimento": "CARTEIRA",
       "carreta": "Carreta 03",
-      "tu": "610000012673",
+      "tu": "610000012867",
       "tipo_op": "FR",
-      "total_caixas": 590,
+      "total_caixas": 1733,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -200,167 +90,7 @@ window.dadosFechamento = {
     {
       "atendimento": "CARTEIRA",
       "carreta": "Carreta 04",
-      "tu": "610000012674",
-      "tipo_op": "FR",
-      "total_caixas": 1927,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 06",
-      "tu": "610000012675",
-      "tipo_op": "FR",
-      "total_caixas": 1929,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 01",
-      "tu": "610000012685",
-      "tipo_op": "FR",
-      "total_caixas": 1249,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 05",
-      "tu": "610000012695",
-      "tipo_op": "FR",
-      "total_caixas": 1471,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 04",
-      "tu": "610000012696",
-      "tipo_op": "FR",
-      "total_caixas": 1189,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 08",
-      "tu": "610000012697",
-      "tipo_op": "FR",
-      "total_caixas": 1724,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 09",
-      "tu": "610000012698",
-      "tipo_op": "FR",
-      "total_caixas": 940,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 09",
-      "tu": "610000012699",
-      "tipo_op": "FR",
-      "total_caixas": 1289,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 01",
-      "tu": "610000012701",
-      "tipo_op": "FR",
-      "total_caixas": 1323,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 02",
-      "tu": "610000012702",
-      "tipo_op": "FR",
-      "total_caixas": 1404,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 06",
-      "tu": "610000012703",
-      "tipo_op": "FR",
-      "total_caixas": 1272,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 03",
-      "tu": "610000012704",
-      "tipo_op": "FR",
-      "total_caixas": 1209,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 10",
-      "tu": "610000012705",
-      "tipo_op": "FR",
-      "total_caixas": 720,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 06",
-      "tu": "610000012723",
-      "tipo_op": "FR",
-      "total_caixas": 2072,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 08",
-      "tu": "610000012724",
-      "tipo_op": "FR",
-      "total_caixas": 2022,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 20",
-      "tu": "610000012725",
-      "tipo_op": "FR",
-      "total_caixas": 2103,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 09",
-      "tu": "610000012726",
+      "tu": "610000012868",
       "tipo_op": "FR",
       "total_caixas": 2010,
       "caixas_carregadas": 0,
@@ -369,80 +99,20 @@ window.dadosFechamento = {
     },
     {
       "atendimento": "CARTEIRA",
-      "carreta": "Carreta 10",
-      "tu": "610000012727",
+      "carreta": "Carreta 01",
+      "tu": "610000012869",
       "tipo_op": "FR",
-      "total_caixas": 1845,
+      "total_caixas": 1560,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
     },
     {
       "atendimento": "CARTEIRA",
-      "carreta": "Carreta 11",
-      "tu": "610000012728",
+      "carreta": "Carreta 08",
+      "tu": "610000012871",
       "tipo_op": "FR",
-      "total_caixas": 1770,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 27",
-      "tu": "610000012729",
-      "tipo_op": "FR",
-      "total_caixas": 2057,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 16",
-      "tu": "610000012730",
-      "tipo_op": "FR",
-      "total_caixas": 2118,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 17",
-      "tu": "610000012731",
-      "tipo_op": "FR",
-      "total_caixas": 2100,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 26",
-      "tu": "610000012732",
-      "tipo_op": "FR",
-      "total_caixas": 2052,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 07",
-      "tu": "610000012750",
-      "tipo_op": "FR",
-      "total_caixas": 2162,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 10",
-      "tu": "610000012751",
-      "tipo_op": "FR",
-      "total_caixas": 853,
+      "total_caixas": 1688,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -450,9 +120,69 @@ window.dadosFechamento = {
     {
       "atendimento": "CARTEIRA",
       "carreta": "Carreta 05",
-      "tu": "610000012777",
+      "tu": "610000012872",
       "tipo_op": "FR",
-      "total_caixas": 1787,
+      "total_caixas": 2048,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 13",
+      "tu": "610000012873",
+      "tipo_op": "FR",
+      "total_caixas": 2117,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 06",
+      "tu": "610000012874",
+      "tipo_op": "FR",
+      "total_caixas": 2048,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 10",
+      "tu": "610000012881",
+      "tipo_op": "FR",
+      "total_caixas": 2124,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 11",
+      "tu": "610000012883",
+      "tipo_op": "FR",
+      "total_caixas": 2088,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 12",
+      "tu": "610000012885",
+      "tipo_op": "FR",
+      "total_caixas": 2116,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 02",
+      "tu": "610000012907",
+      "tipo_op": "FR",
+      "total_caixas": 1932,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -460,49 +190,19 @@ window.dadosFechamento = {
     {
       "atendimento": "CARTEIRA",
       "carreta": "Carreta 07",
-      "tu": "610000012778",
+      "tu": "610000012908",
       "tipo_op": "FR",
-      "total_caixas": 2017,
+      "total_caixas": 2048,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
     },
     {
       "atendimento": "CARTEIRA",
-      "carreta": "Carreta 21",
-      "tu": "610000012779",
+      "carreta": "Carreta 09",
+      "tu": "610000012913",
       "tipo_op": "FR",
-      "total_caixas": 1976,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 28",
-      "tu": "610000012780",
-      "tipo_op": "FR",
-      "total_caixas": 1949,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 18",
-      "tu": "610000012781",
-      "tipo_op": "FR",
-      "total_caixas": 2151,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "CARTEIRA",
-      "carreta": "Carreta 19",
-      "tu": "610000012782",
-      "tipo_op": "FR",
-      "total_caixas": 2088,
+      "total_caixas": 2086,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -519,220 +219,30 @@ window.dadosFechamento = {
     },
     {
       "atendimento": "ESTOJO",
-      "carreta": "Carreta 33",
-      "tu": "610000012712",
-      "tipo_op": "FR",
-      "total_caixas": 1717,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 29",
-      "tu": "610000012716",
-      "tipo_op": "FR",
-      "total_caixas": 1827,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 31",
-      "tu": "610000012717",
-      "tipo_op": "GV",
-      "total_caixas": 1893,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 34",
-      "tu": "610000012718",
-      "tipo_op": "FR",
-      "total_caixas": 1871,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 24",
-      "tu": "610000012719",
-      "tipo_op": "FR",
-      "total_caixas": 2011,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 25",
-      "tu": "610000012720",
-      "tipo_op": "FR",
-      "total_caixas": 1949,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 37",
-      "tu": "610000012721",
-      "tipo_op": "FR",
-      "total_caixas": 1668,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 01",
-      "tu": "610000012761",
-      "tipo_op": "FR",
-      "total_caixas": 1848,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 02",
-      "tu": "610000012762",
-      "tipo_op": "FR",
-      "total_caixas": 1806,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 03",
-      "tu": "610000012763",
-      "tipo_op": "FR",
-      "total_caixas": 1975,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
       "carreta": "Carreta 04",
-      "tu": "610000012764",
+      "tu": "610000012859",
       "tipo_op": "FR",
-      "total_caixas": 1693,
+      "total_caixas": 1377,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
     },
     {
       "atendimento": "ESTOJO",
-      "carreta": "Carreta 12",
-      "tu": "610000012765",
+      "carreta": "Carreta 05",
+      "tu": "610000012860",
       "tipo_op": "FR",
-      "total_caixas": 1880,
+      "total_caixas": 1965,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
     },
     {
       "atendimento": "ESTOJO",
-      "carreta": "Carreta 13",
-      "tu": "610000012767",
-      "tipo_op": "FR",
-      "total_caixas": 1926,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 15",
-      "tu": "610000012768",
-      "tipo_op": "FR",
-      "total_caixas": 1892,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 30",
-      "tu": "610000012769",
-      "tipo_op": "GV",
-      "total_caixas": 1874,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 14",
-      "tu": "610000012770",
-      "tipo_op": "FR",
-      "total_caixas": 1934,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 32",
-      "tu": "610000012771",
-      "tipo_op": "FR",
-      "total_caixas": 1893,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 23",
-      "tu": "610000012772",
-      "tipo_op": "FR",
-      "total_caixas": 1872,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 22",
-      "tu": "610000012773",
-      "tipo_op": "GV",
-      "total_caixas": 1820,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 35",
-      "tu": "610000012774",
-      "tipo_op": "FR",
-      "total_caixas": 1861,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 36",
-      "tu": "610000012775",
-      "tipo_op": "GV",
-      "total_caixas": 1995,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 06",
-      "tu": "610000012641",
+      "tu": "610000012861",
       "tipo_op": "FR",
-      "total_caixas": 485,
+      "total_caixas": 1835,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -740,29 +250,9 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 01",
-      "tu": "610000012642",
+      "tu": "610000012863",
       "tipo_op": "FR",
-      "total_caixas": 404,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012643",
-      "tipo_op": "FR",
-      "total_caixas": 488,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012644",
-      "tipo_op": "FR",
-      "total_caixas": 270,
+      "total_caixas": 1632,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -770,9 +260,9 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 02",
-      "tu": "610000012646",
+      "tu": "610000012864",
       "tipo_op": "FR",
-      "total_caixas": 856,
+      "total_caixas": 1528,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -780,39 +270,19 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 03",
-      "tu": "610000012648",
+      "tu": "610000012866",
       "tipo_op": "FR",
-      "total_caixas": 546,
+      "total_caixas": 789,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
     },
     {
       "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 06",
-      "tu": "610000012678",
+      "carreta": "Carreta 03",
+      "tu": "610000012897",
       "tipo_op": "FR",
-      "total_caixas": 205,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 06",
-      "tu": "610000012679",
-      "tipo_op": "FR",
-      "total_caixas": 172,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012682",
-      "tipo_op": "FR",
-      "total_caixas": 828,
+      "total_caixas": 309,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -820,19 +290,9 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 02",
-      "tu": "610000012683",
+      "tu": "610000012905",
       "tipo_op": "FR",
-      "total_caixas": 338,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 02",
-      "tu": "610000012684",
-      "tipo_op": "FR",
-      "total_caixas": 331,
+      "total_caixas": 123,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -840,49 +300,9 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 03",
-      "tu": "610000012687",
+      "tu": "610000012921",
       "tipo_op": "FR",
-      "total_caixas": 180,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 03",
-      "tu": "610000012688",
-      "tipo_op": "FR",
-      "total_caixas": 133,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 03",
-      "tu": "610000012689",
-      "tipo_op": "FR",
-      "total_caixas": 279,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 03",
-      "tu": "610000012690",
-      "tipo_op": "FR",
-      "total_caixas": 430,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 03",
-      "tu": "610000012691",
-      "tipo_op": "FR",
-      "total_caixas": 217,
+      "total_caixas": 1046,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -890,109 +310,9 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 04",
-      "tu": "610000012706",
+      "tu": "610000012922",
       "tipo_op": "FR",
-      "total_caixas": 246,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012708",
-      "tipo_op": "FR",
-      "total_caixas": 169,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012709",
-      "tipo_op": "FR",
-      "total_caixas": 342,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012710",
-      "tipo_op": "FR",
-      "total_caixas": 249,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012711",
-      "tipo_op": "FR",
-      "total_caixas": 78,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012713",
-      "tipo_op": "FR",
-      "total_caixas": 104,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012714",
-      "tipo_op": "FR",
-      "total_caixas": 261,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012715",
-      "tipo_op": "FR",
-      "total_caixas": 97,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 06",
-      "tu": "610000012733",
-      "tipo_op": "FR",
-      "total_caixas": 137,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 06",
-      "tu": "610000012734",
-      "tipo_op": "FR",
-      "total_caixas": 98,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012738",
-      "tipo_op": "FR",
-      "total_caixas": 400,
+      "total_caixas": 332,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -1000,9 +320,19 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 04",
-      "tu": "610000012752",
+      "tu": "610000012925",
       "tipo_op": "FR",
-      "total_caixas": 251,
+      "total_caixas": 700,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO-PRÓ",
+      "carreta": "Carreta 05",
+      "tu": "610000012926",
+      "tipo_op": "FR",
+      "total_caixas": 521,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -1010,119 +340,19 @@ window.dadosFechamento = {
     {
       "atendimento": "VAREJO-PRÓ",
       "carreta": "Carreta 04",
-      "tu": "610000012753",
+      "tu": "610000012952",
       "tipo_op": "FR",
-      "total_caixas": 453,
+      "total_caixas": 639,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
     },
     {
       "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta01",
-      "tu": "610000012755",
+      "carreta": "Carreta 04",
+      "tu": "610000012953",
       "tipo_op": "FR",
-      "total_caixas": 238,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta01",
-      "tu": "610000012756",
-      "tipo_op": "FR",
-      "total_caixas": 419,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta01",
-      "tu": "610000012757",
-      "tipo_op": "FR",
-      "total_caixas": 178,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012759",
-      "tipo_op": "FR",
-      "total_caixas": 138,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 05",
-      "tu": "610000012760",
-      "tipo_op": "FR",
-      "total_caixas": 170,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 06",
-      "tu": "610000012783",
-      "tipo_op": "FR",
-      "total_caixas": 244,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012784",
-      "tipo_op": "FR",
-      "total_caixas": 247,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012785",
-      "tipo_op": "FR",
-      "total_caixas": 187,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012795",
-      "tipo_op": "FR",
-      "total_caixas": 210,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012806",
-      "tipo_op": "FR",
-      "total_caixas": 211,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO-PRÓ",
-      "carreta": "Carreta 01",
-      "tu": "610000012807",
-      "tipo_op": "FR",
-      "total_caixas": 95,
+      "total_caixas": 531,
       "caixas_carregadas": 0,
       "pct": 0,
       "status": "PENDENTE"
