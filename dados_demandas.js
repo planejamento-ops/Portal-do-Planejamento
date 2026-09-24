@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "24/09/2026 10:08",
+  "atualizado_em": "24/09/2026 11:09",
   "ondas": [
     {
       "onda_atual": "VAREJO",
@@ -26,7 +26,7 @@ window.dadosDemandaWMS = {
           "pcs": 422,
           "cxs": 270,
           "pc_cx": 1.6,
-          "tar": 301
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -342,7 +342,7 @@ window.dadosDemandaWMS = {
           "pcs": 1635,
           "cxs": 116,
           "pc_cx": 14.1,
-          "tar": 606
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -365,7 +365,7 @@ window.dadosDemandaWMS = {
           "pcs": 1671,
           "cxs": 121,
           "pc_cx": 13.8,
-          "tar": 619
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.0,
@@ -864,7 +864,7 @@ window.dadosDemandaWMS = {
           "pcs": 271,
           "cxs": 116,
           "pc_cx": 2.3,
-          "tar": 159
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -1180,7 +1180,7 @@ window.dadosDemandaWMS = {
           "pcs": 155,
           "cxs": 3,
           "pc_cx": 51.7,
-          "tar": 65
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -1203,7 +1203,7 @@ window.dadosDemandaWMS = {
           "pcs": 1671,
           "cxs": 121,
           "pc_cx": 13.8,
-          "tar": 619
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.5,
@@ -1682,7 +1682,7 @@ window.dadosDemandaWMS = {
           "pcs": 3215,
           "cxs": 538,
           "pc_cx": 6.0,
-          "tar": 1608
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -1705,7 +1705,7 @@ window.dadosDemandaWMS = {
           "pcs": 8590,
           "cxs": 1017,
           "pc_cx": 8.4,
-          "tar": 2863
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -2209,7 +2209,7 @@ window.dadosDemandaWMS = {
           "pcs": 193,
           "cxs": 87,
           "pc_cx": 2.2,
-          "tar": 121
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -2520,7 +2520,7 @@ window.dadosDemandaWMS = {
           "pcs": 155,
           "cxs": 3,
           "pc_cx": 51.7,
-          "tar": 65
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -2543,7 +2543,7 @@ window.dadosDemandaWMS = {
           "pcs": 1671,
           "cxs": 121,
           "pc_cx": 13.8,
-          "tar": 619
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.5,
@@ -3022,7 +3022,7 @@ window.dadosDemandaWMS = {
           "pcs": 3215,
           "cxs": 538,
           "pc_cx": 6.0,
-          "tar": 1608
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -3045,7 +3045,7 @@ window.dadosDemandaWMS = {
           "pcs": 8590,
           "cxs": 1017,
           "pc_cx": 8.4,
-          "tar": 2863
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -3549,7 +3549,7 @@ window.dadosDemandaWMS = {
           "pcs": 211,
           "cxs": 100,
           "pc_cx": 2.1,
-          "tar": 151
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -3860,7 +3860,7 @@ window.dadosDemandaWMS = {
           "pcs": 155,
           "cxs": 3,
           "pc_cx": 51.7,
-          "tar": 65
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -3883,7 +3883,7 @@ window.dadosDemandaWMS = {
           "pcs": 1671,
           "cxs": 121,
           "pc_cx": 13.8,
-          "tar": 619
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.5,
@@ -4362,7 +4362,7 @@ window.dadosDemandaWMS = {
           "pcs": 3215,
           "cxs": 538,
           "pc_cx": 6.0,
-          "tar": 1608
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -4385,7 +4385,7 @@ window.dadosDemandaWMS = {
           "pcs": 8590,
           "cxs": 1017,
           "pc_cx": 8.4,
-          "tar": 2863
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -4889,7 +4889,7 @@ window.dadosDemandaWMS = {
           "pcs": 4205,
           "cxs": 432,
           "pc_cx": 9.7,
-          "tar": 1557
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -4912,7 +4912,7 @@ window.dadosDemandaWMS = {
           "pcs": 8534,
           "cxs": 604,
           "pc_cx": 14.1,
-          "tar": 1855
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -5396,7 +5396,7 @@ window.dadosDemandaWMS = {
           "pcs": 211,
           "cxs": 100,
           "pc_cx": 2.1,
-          "tar": 151
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -5419,7 +5419,7 @@ window.dadosDemandaWMS = {
           "pcs": 77,
           "cxs": 52,
           "pc_cx": 1.5,
-          "tar": 64
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.9,
@@ -5908,7 +5908,7 @@ window.dadosDemandaWMS = {
           "pcs": 155,
           "cxs": 3,
           "pc_cx": 51.7,
-          "tar": 65
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -5931,7 +5931,7 @@ window.dadosDemandaWMS = {
           "pcs": 1671,
           "cxs": 121,
           "pc_cx": 13.8,
-          "tar": 619
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.5,
@@ -6410,7 +6410,7 @@ window.dadosDemandaWMS = {
           "pcs": 3215,
           "cxs": 538,
           "pc_cx": 6.0,
-          "tar": 1608
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -6433,7 +6433,7 @@ window.dadosDemandaWMS = {
           "pcs": 8590,
           "cxs": 1017,
           "pc_cx": 8.4,
-          "tar": 2863
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -6937,7 +6937,7 @@ window.dadosDemandaWMS = {
           "pcs": 4205,
           "cxs": 432,
           "pc_cx": 9.7,
-          "tar": 1557
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -6960,7 +6960,7 @@ window.dadosDemandaWMS = {
           "pcs": 8534,
           "cxs": 604,
           "pc_cx": 14.1,
-          "tar": 1855
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -7444,7 +7444,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -7467,7 +7467,7 @@ window.dadosDemandaWMS = {
           "pcs": 5851,
           "cxs": 389,
           "pc_cx": 15.0,
-          "tar": 1361
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -7971,7 +7971,7 @@ window.dadosDemandaWMS = {
           "pcs": 565,
           "cxs": 296,
           "pc_cx": 1.9,
-          "tar": 353
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -7994,7 +7994,7 @@ window.dadosDemandaWMS = {
           "pcs": 77,
           "cxs": 52,
           "pc_cx": 1.5,
-          "tar": 64
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.8,
@@ -8483,7 +8483,7 @@ window.dadosDemandaWMS = {
           "pcs": 155,
           "cxs": 3,
           "pc_cx": 51.7,
-          "tar": 65
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -8506,7 +8506,7 @@ window.dadosDemandaWMS = {
           "pcs": 1671,
           "cxs": 121,
           "pc_cx": 13.8,
-          "tar": 619
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.5,
@@ -8985,7 +8985,7 @@ window.dadosDemandaWMS = {
           "pcs": 3215,
           "cxs": 538,
           "pc_cx": 6.0,
-          "tar": 1608
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -9008,7 +9008,7 @@ window.dadosDemandaWMS = {
           "pcs": 8590,
           "cxs": 1017,
           "pc_cx": 8.4,
-          "tar": 2863
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -9512,7 +9512,7 @@ window.dadosDemandaWMS = {
           "pcs": 4205,
           "cxs": 432,
           "pc_cx": 9.7,
-          "tar": 1557
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -9535,7 +9535,7 @@ window.dadosDemandaWMS = {
           "pcs": 8534,
           "cxs": 604,
           "pc_cx": 14.1,
-          "tar": 1855
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -10019,7 +10019,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -10042,7 +10042,7 @@ window.dadosDemandaWMS = {
           "pcs": 5851,
           "cxs": 389,
           "pc_cx": 15.0,
-          "tar": 1361
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -10546,7 +10546,7 @@ window.dadosDemandaWMS = {
           "pcs": 157,
           "cxs": 95,
           "pc_cx": 1.7,
-          "tar": 131
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -10569,7 +10569,7 @@ window.dadosDemandaWMS = {
           "pcs": 77,
           "cxs": 52,
           "pc_cx": 1.5,
-          "tar": 64
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.0,
@@ -11053,7 +11053,7 @@ window.dadosDemandaWMS = {
           "pcs": 908,
           "cxs": 99,
           "pc_cx": 9.2,
-          "tar": 378
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -11076,7 +11076,7 @@ window.dadosDemandaWMS = {
           "pcs": 1187,
           "cxs": 147,
           "pc_cx": 8.1,
-          "tar": 495
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -11560,7 +11560,7 @@ window.dadosDemandaWMS = {
           "pcs": 3215,
           "cxs": 538,
           "pc_cx": 6.0,
-          "tar": 1608
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -11583,7 +11583,7 @@ window.dadosDemandaWMS = {
           "pcs": 8590,
           "cxs": 1017,
           "pc_cx": 8.4,
-          "tar": 2863
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -12087,7 +12087,7 @@ window.dadosDemandaWMS = {
           "pcs": 4205,
           "cxs": 432,
           "pc_cx": 9.7,
-          "tar": 1557
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -12110,7 +12110,7 @@ window.dadosDemandaWMS = {
           "pcs": 8534,
           "cxs": 604,
           "pc_cx": 14.1,
-          "tar": 1855
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -12594,7 +12594,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -12617,7 +12617,7 @@ window.dadosDemandaWMS = {
           "pcs": 5851,
           "cxs": 389,
           "pc_cx": 15.0,
-          "tar": 1361
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -13121,7 +13121,7 @@ window.dadosDemandaWMS = {
           "pcs": 240,
           "cxs": 145,
           "pc_cx": 1.7,
-          "tar": 200
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -13144,7 +13144,7 @@ window.dadosDemandaWMS = {
           "pcs": 77,
           "cxs": 52,
           "pc_cx": 1.5,
-          "tar": 64
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 4.9,
@@ -13628,7 +13628,7 @@ window.dadosDemandaWMS = {
           "pcs": 908,
           "cxs": 99,
           "pc_cx": 9.2,
-          "tar": 378
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -13651,7 +13651,7 @@ window.dadosDemandaWMS = {
           "pcs": 1187,
           "cxs": 147,
           "pc_cx": 8.1,
-          "tar": 495
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -14135,7 +14135,7 @@ window.dadosDemandaWMS = {
           "pcs": 6236,
           "cxs": 443,
           "pc_cx": 14.1,
-          "tar": 1327
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -14158,7 +14158,7 @@ window.dadosDemandaWMS = {
           "pcs": 8083,
           "cxs": 804,
           "pc_cx": 10.1,
-          "tar": 1880
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -14657,7 +14657,7 @@ window.dadosDemandaWMS = {
           "pcs": 4205,
           "cxs": 432,
           "pc_cx": 9.7,
-          "tar": 1557
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -14680,7 +14680,7 @@ window.dadosDemandaWMS = {
           "pcs": 8534,
           "cxs": 604,
           "pc_cx": 14.1,
-          "tar": 1855
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -15164,7 +15164,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -15187,7 +15187,7 @@ window.dadosDemandaWMS = {
           "pcs": 5851,
           "cxs": 389,
           "pc_cx": 15.0,
-          "tar": 1361
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -15691,7 +15691,7 @@ window.dadosDemandaWMS = {
           "pcs": 212,
           "cxs": 122,
           "pc_cx": 1.7,
-          "tar": 151
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -15714,7 +15714,7 @@ window.dadosDemandaWMS = {
           "pcs": 77,
           "cxs": 52,
           "pc_cx": 1.5,
-          "tar": 64
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 4.2,
@@ -16208,7 +16208,7 @@ window.dadosDemandaWMS = {
           "pcs": 908,
           "cxs": 99,
           "pc_cx": 9.2,
-          "tar": 378
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -16231,7 +16231,7 @@ window.dadosDemandaWMS = {
           "pcs": 1187,
           "cxs": 147,
           "pc_cx": 8.1,
-          "tar": 495
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -16715,7 +16715,7 @@ window.dadosDemandaWMS = {
           "pcs": 6236,
           "cxs": 443,
           "pc_cx": 14.1,
-          "tar": 1327
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -16738,7 +16738,7 @@ window.dadosDemandaWMS = {
           "pcs": 8083,
           "cxs": 804,
           "pc_cx": 10.1,
-          "tar": 1880
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -17237,7 +17237,7 @@ window.dadosDemandaWMS = {
           "pcs": 4205,
           "cxs": 432,
           "pc_cx": 9.7,
-          "tar": 1557
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -17260,7 +17260,7 @@ window.dadosDemandaWMS = {
           "pcs": 8534,
           "cxs": 604,
           "pc_cx": 14.1,
-          "tar": 1855
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -17744,7 +17744,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -17767,7 +17767,7 @@ window.dadosDemandaWMS = {
           "pcs": 5851,
           "cxs": 389,
           "pc_cx": 15.0,
-          "tar": 1361
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -18271,7 +18271,7 @@ window.dadosDemandaWMS = {
           "pcs": 150,
           "cxs": 106,
           "pc_cx": 1.4,
-          "tar": 125
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -18294,7 +18294,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.4,
@@ -18778,7 +18778,7 @@ window.dadosDemandaWMS = {
           "pcs": 908,
           "cxs": 99,
           "pc_cx": 9.2,
-          "tar": 378
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -18801,7 +18801,7 @@ window.dadosDemandaWMS = {
           "pcs": 1187,
           "cxs": 147,
           "pc_cx": 8.1,
-          "tar": 495
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -19285,7 +19285,7 @@ window.dadosDemandaWMS = {
           "pcs": 6236,
           "cxs": 443,
           "pc_cx": 14.1,
-          "tar": 1327
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -19308,7 +19308,7 @@ window.dadosDemandaWMS = {
           "pcs": 8083,
           "cxs": 804,
           "pc_cx": 10.1,
-          "tar": 1880
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -19807,7 +19807,7 @@ window.dadosDemandaWMS = {
           "pcs": 4861,
           "cxs": 418,
           "pc_cx": 11.6,
-          "tar": 1389
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -19830,7 +19830,7 @@ window.dadosDemandaWMS = {
           "pcs": 7721,
           "cxs": 697,
           "pc_cx": 11.1,
-          "tar": 1883
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -20324,7 +20324,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -20347,7 +20347,7 @@ window.dadosDemandaWMS = {
           "pcs": 5851,
           "cxs": 389,
           "pc_cx": 15.0,
-          "tar": 1361
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -20851,7 +20851,7 @@ window.dadosDemandaWMS = {
           "pcs": 132,
           "cxs": 97,
           "pc_cx": 1.4,
-          "tar": 110
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -20874,7 +20874,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.2,
@@ -21358,7 +21358,7 @@ window.dadosDemandaWMS = {
           "pcs": 908,
           "cxs": 99,
           "pc_cx": 9.2,
-          "tar": 378
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -21381,7 +21381,7 @@ window.dadosDemandaWMS = {
           "pcs": 1187,
           "cxs": 147,
           "pc_cx": 8.1,
-          "tar": 495
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -21865,7 +21865,7 @@ window.dadosDemandaWMS = {
           "pcs": 6236,
           "cxs": 443,
           "pc_cx": 14.1,
-          "tar": 1327
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -21888,7 +21888,7 @@ window.dadosDemandaWMS = {
           "pcs": 8083,
           "cxs": 804,
           "pc_cx": 10.1,
-          "tar": 1880
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -22387,7 +22387,7 @@ window.dadosDemandaWMS = {
           "pcs": 4861,
           "cxs": 418,
           "pc_cx": 11.6,
-          "tar": 1389
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -22410,7 +22410,7 @@ window.dadosDemandaWMS = {
           "pcs": 7721,
           "cxs": 697,
           "pc_cx": 11.1,
-          "tar": 1883
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -22904,7 +22904,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -22927,7 +22927,7 @@ window.dadosDemandaWMS = {
           "pcs": 28700,
           "cxs": 589,
           "pc_cx": 48.7,
-          "tar": 2372
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -23426,7 +23426,7 @@ window.dadosDemandaWMS = {
           "pcs": 149,
           "cxs": 65,
           "pc_cx": 2.3,
-          "tar": 83
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -23449,7 +23449,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 4.9,
@@ -23933,7 +23933,7 @@ window.dadosDemandaWMS = {
           "pcs": 908,
           "cxs": 99,
           "pc_cx": 9.2,
-          "tar": 378
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -23956,7 +23956,7 @@ window.dadosDemandaWMS = {
           "pcs": 1187,
           "cxs": 147,
           "pc_cx": 8.1,
-          "tar": 495
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -24440,7 +24440,7 @@ window.dadosDemandaWMS = {
           "pcs": 6236,
           "cxs": 443,
           "pc_cx": 14.1,
-          "tar": 1327
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -24463,7 +24463,7 @@ window.dadosDemandaWMS = {
           "pcs": 8083,
           "cxs": 804,
           "pc_cx": 10.1,
-          "tar": 1880
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -24962,7 +24962,7 @@ window.dadosDemandaWMS = {
           "pcs": 4861,
           "cxs": 418,
           "pc_cx": 11.6,
-          "tar": 1389
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -24985,7 +24985,7 @@ window.dadosDemandaWMS = {
           "pcs": 7721,
           "cxs": 697,
           "pc_cx": 11.1,
-          "tar": 1883
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -25479,7 +25479,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -25502,7 +25502,7 @@ window.dadosDemandaWMS = {
           "pcs": 28700,
           "cxs": 589,
           "pc_cx": 48.7,
-          "tar": 2372
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -26001,7 +26001,7 @@ window.dadosDemandaWMS = {
           "pcs": 179,
           "cxs": 116,
           "pc_cx": 1.5,
-          "tar": 149
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -26024,7 +26024,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.1,
@@ -26518,7 +26518,7 @@ window.dadosDemandaWMS = {
           "pcs": 1201,
           "cxs": 98,
           "pc_cx": 12.3,
-          "tar": 522
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -26541,7 +26541,7 @@ window.dadosDemandaWMS = {
           "pcs": 2504,
           "cxs": 111,
           "pc_cx": 22.6,
-          "tar": 556
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -27030,7 +27030,7 @@ window.dadosDemandaWMS = {
           "pcs": 6236,
           "cxs": 443,
           "pc_cx": 14.1,
-          "tar": 1327
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -27053,7 +27053,7 @@ window.dadosDemandaWMS = {
           "pcs": 8083,
           "cxs": 804,
           "pc_cx": 10.1,
-          "tar": 1880
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -27552,7 +27552,7 @@ window.dadosDemandaWMS = {
           "pcs": 4861,
           "cxs": 418,
           "pc_cx": 11.6,
-          "tar": 1389
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -27575,7 +27575,7 @@ window.dadosDemandaWMS = {
           "pcs": 7721,
           "cxs": 697,
           "pc_cx": 11.1,
-          "tar": 1883
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -28069,7 +28069,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -28092,7 +28092,7 @@ window.dadosDemandaWMS = {
           "pcs": 28700,
           "cxs": 589,
           "pc_cx": 48.7,
-          "tar": 2372
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -28591,7 +28591,7 @@ window.dadosDemandaWMS = {
           "pcs": 114,
           "cxs": 56,
           "pc_cx": 2.0,
-          "tar": 88
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -28614,7 +28614,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.8,
@@ -29098,7 +29098,7 @@ window.dadosDemandaWMS = {
           "pcs": 1201,
           "cxs": 98,
           "pc_cx": 12.3,
-          "tar": 522
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -29121,7 +29121,7 @@ window.dadosDemandaWMS = {
           "pcs": 2504,
           "cxs": 111,
           "pc_cx": 22.6,
-          "tar": 556
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -29610,7 +29610,7 @@ window.dadosDemandaWMS = {
           "pcs": 6195,
           "cxs": 452,
           "pc_cx": 13.7,
-          "tar": 2212
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -29633,7 +29633,7 @@ window.dadosDemandaWMS = {
           "pcs": 7046,
           "cxs": 566,
           "pc_cx": 12.4,
-          "tar": 2516
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -30122,7 +30122,7 @@ window.dadosDemandaWMS = {
           "pcs": 4861,
           "cxs": 418,
           "pc_cx": 11.6,
-          "tar": 1389
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -30145,7 +30145,7 @@ window.dadosDemandaWMS = {
           "pcs": 7721,
           "cxs": 697,
           "pc_cx": 11.1,
-          "tar": 1883
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -30639,7 +30639,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -30662,7 +30662,7 @@ window.dadosDemandaWMS = {
           "pcs": 28700,
           "cxs": 589,
           "pc_cx": 48.7,
-          "tar": 2372
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -31161,7 +31161,7 @@ window.dadosDemandaWMS = {
           "pcs": 136,
           "cxs": 79,
           "pc_cx": 1.7,
-          "tar": 105
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -31184,7 +31184,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.9,
@@ -31678,7 +31678,7 @@ window.dadosDemandaWMS = {
           "pcs": 1201,
           "cxs": 98,
           "pc_cx": 12.3,
-          "tar": 522
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -31701,7 +31701,7 @@ window.dadosDemandaWMS = {
           "pcs": 2504,
           "cxs": 111,
           "pc_cx": 22.6,
-          "tar": 556
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -32190,7 +32190,7 @@ window.dadosDemandaWMS = {
           "pcs": 6195,
           "cxs": 452,
           "pc_cx": 13.7,
-          "tar": 2212
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -32213,7 +32213,7 @@ window.dadosDemandaWMS = {
           "pcs": 7046,
           "cxs": 566,
           "pc_cx": 12.4,
-          "tar": 2516
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -32702,7 +32702,7 @@ window.dadosDemandaWMS = {
           "pcs": 4861,
           "cxs": 418,
           "pc_cx": 11.6,
-          "tar": 1389
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -32725,7 +32725,7 @@ window.dadosDemandaWMS = {
           "pcs": 7721,
           "cxs": 697,
           "pc_cx": 11.1,
-          "tar": 1883
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -33219,7 +33219,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -33242,7 +33242,7 @@ window.dadosDemandaWMS = {
           "pcs": 28700,
           "cxs": 589,
           "pc_cx": 48.7,
-          "tar": 2372
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -33741,7 +33741,7 @@ window.dadosDemandaWMS = {
           "pcs": 276,
           "cxs": 150,
           "pc_cx": 1.8,
-          "tar": 197
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -33764,7 +33764,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.2,
@@ -34248,7 +34248,7 @@ window.dadosDemandaWMS = {
           "pcs": 1201,
           "cxs": 98,
           "pc_cx": 12.3,
-          "tar": 522
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -34271,7 +34271,7 @@ window.dadosDemandaWMS = {
           "pcs": 2504,
           "cxs": 111,
           "pc_cx": 22.6,
-          "tar": 556
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -34760,7 +34760,7 @@ window.dadosDemandaWMS = {
           "pcs": 6195,
           "cxs": 452,
           "pc_cx": 13.7,
-          "tar": 2212
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -34783,7 +34783,7 @@ window.dadosDemandaWMS = {
           "pcs": 7046,
           "cxs": 566,
           "pc_cx": 12.4,
-          "tar": 2516
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -35272,7 +35272,7 @@ window.dadosDemandaWMS = {
           "pcs": 5768,
           "cxs": 375,
           "pc_cx": 15.4,
-          "tar": 1518
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -35295,7 +35295,7 @@ window.dadosDemandaWMS = {
           "pcs": 12804,
           "cxs": 494,
           "pc_cx": 25.9,
-          "tar": 2561
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -35794,7 +35794,7 @@ window.dadosDemandaWMS = {
           "pcs": 2768,
           "cxs": 297,
           "pc_cx": 9.3,
-          "tar": 893
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -35817,7 +35817,7 @@ window.dadosDemandaWMS = {
           "pcs": 28700,
           "cxs": 589,
           "pc_cx": 48.7,
-          "tar": 2372
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -36316,7 +36316,7 @@ window.dadosDemandaWMS = {
           "pcs": 234,
           "cxs": 129,
           "pc_cx": 1.8,
-          "tar": 138
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -36339,7 +36339,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.0,
@@ -36823,7 +36823,7 @@ window.dadosDemandaWMS = {
           "pcs": 1201,
           "cxs": 98,
           "pc_cx": 12.3,
-          "tar": 522
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -36846,7 +36846,7 @@ window.dadosDemandaWMS = {
           "pcs": 2504,
           "cxs": 111,
           "pc_cx": 22.6,
-          "tar": 556
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -37335,7 +37335,7 @@ window.dadosDemandaWMS = {
           "pcs": 6195,
           "cxs": 452,
           "pc_cx": 13.7,
-          "tar": 2212
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -37358,7 +37358,7 @@ window.dadosDemandaWMS = {
           "pcs": 7046,
           "cxs": 566,
           "pc_cx": 12.4,
-          "tar": 2516
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -37847,7 +37847,7 @@ window.dadosDemandaWMS = {
           "pcs": 5768,
           "cxs": 375,
           "pc_cx": 15.4,
-          "tar": 1518
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -37870,7 +37870,7 @@ window.dadosDemandaWMS = {
           "pcs": 12804,
           "cxs": 494,
           "pc_cx": 25.9,
-          "tar": 2561
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -38369,7 +38369,7 @@ window.dadosDemandaWMS = {
           "pcs": 4504,
           "cxs": 253,
           "pc_cx": 17.8,
-          "tar": 1251
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -38392,7 +38392,7 @@ window.dadosDemandaWMS = {
           "pcs": 5195,
           "cxs": 250,
           "pc_cx": 20.8,
-          "tar": 1237
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.0,
@@ -38881,7 +38881,7 @@ window.dadosDemandaWMS = {
           "pcs": 147,
           "cxs": 65,
           "pc_cx": 2.3,
-          "tar": 86
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -38904,7 +38904,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.1,
@@ -39388,7 +39388,7 @@ window.dadosDemandaWMS = {
           "pcs": 1201,
           "cxs": 98,
           "pc_cx": 12.3,
-          "tar": 522
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -39411,7 +39411,7 @@ window.dadosDemandaWMS = {
           "pcs": 2504,
           "cxs": 111,
           "pc_cx": 22.6,
-          "tar": 556
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -39900,7 +39900,7 @@ window.dadosDemandaWMS = {
           "pcs": 6195,
           "cxs": 452,
           "pc_cx": 13.7,
-          "tar": 2212
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -39923,7 +39923,7 @@ window.dadosDemandaWMS = {
           "pcs": 7046,
           "cxs": 566,
           "pc_cx": 12.4,
-          "tar": 2516
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -40412,7 +40412,7 @@ window.dadosDemandaWMS = {
           "pcs": 5768,
           "cxs": 375,
           "pc_cx": 15.4,
-          "tar": 1518
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -40435,7 +40435,7 @@ window.dadosDemandaWMS = {
           "pcs": 12804,
           "cxs": 494,
           "pc_cx": 25.9,
-          "tar": 2561
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -40934,7 +40934,7 @@ window.dadosDemandaWMS = {
           "pcs": 4504,
           "cxs": 253,
           "pc_cx": 17.8,
-          "tar": 1251
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -40957,7 +40957,7 @@ window.dadosDemandaWMS = {
           "pcs": 5195,
           "cxs": 250,
           "pc_cx": 20.8,
-          "tar": 1237
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.0,
@@ -41446,7 +41446,7 @@ window.dadosDemandaWMS = {
           "pcs": 100,
           "cxs": 59,
           "pc_cx": 1.7,
-          "tar": 71
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -41469,7 +41469,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.0,
@@ -41953,7 +41953,7 @@ window.dadosDemandaWMS = {
           "pcs": 1796,
           "cxs": 89,
           "pc_cx": 20.2,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -41976,7 +41976,7 @@ window.dadosDemandaWMS = {
           "pcs": 3144,
           "cxs": 78,
           "pc_cx": 40.3,
-          "tar": 669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -42450,7 +42450,7 @@ window.dadosDemandaWMS = {
           "pcs": 6195,
           "cxs": 452,
           "pc_cx": 13.7,
-          "tar": 2212
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -42473,7 +42473,7 @@ window.dadosDemandaWMS = {
           "pcs": 7046,
           "cxs": 566,
           "pc_cx": 12.4,
-          "tar": 2516
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -42962,7 +42962,7 @@ window.dadosDemandaWMS = {
           "pcs": 5768,
           "cxs": 375,
           "pc_cx": 15.4,
-          "tar": 1518
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -42985,7 +42985,7 @@ window.dadosDemandaWMS = {
           "pcs": 12804,
           "cxs": 494,
           "pc_cx": 25.9,
-          "tar": 2561
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -43484,7 +43484,7 @@ window.dadosDemandaWMS = {
           "pcs": 4504,
           "cxs": 253,
           "pc_cx": 17.8,
-          "tar": 1251
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -43507,7 +43507,7 @@ window.dadosDemandaWMS = {
           "pcs": 5195,
           "cxs": 250,
           "pc_cx": 20.8,
-          "tar": 1237
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.0,
@@ -43996,7 +43996,7 @@ window.dadosDemandaWMS = {
           "pcs": 83,
           "cxs": 55,
           "pc_cx": 1.5,
-          "tar": 69
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -44019,7 +44019,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.1,
@@ -44498,7 +44498,7 @@ window.dadosDemandaWMS = {
           "pcs": 1796,
           "cxs": 89,
           "pc_cx": 20.2,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -44521,7 +44521,7 @@ window.dadosDemandaWMS = {
           "pcs": 3144,
           "cxs": 78,
           "pc_cx": 40.3,
-          "tar": 669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -44995,7 +44995,7 @@ window.dadosDemandaWMS = {
           "pcs": 4712,
           "cxs": 430,
           "pc_cx": 11.0,
-          "tar": 2142
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -45018,7 +45018,7 @@ window.dadosDemandaWMS = {
           "pcs": 5020,
           "cxs": 436,
           "pc_cx": 11.5,
-          "tar": 2183
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.2,
@@ -45517,7 +45517,7 @@ window.dadosDemandaWMS = {
           "pcs": 5768,
           "cxs": 375,
           "pc_cx": 15.4,
-          "tar": 1518
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -45540,7 +45540,7 @@ window.dadosDemandaWMS = {
           "pcs": 12804,
           "cxs": 494,
           "pc_cx": 25.9,
-          "tar": 2561
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -46039,7 +46039,7 @@ window.dadosDemandaWMS = {
           "pcs": 4504,
           "cxs": 253,
           "pc_cx": 17.8,
-          "tar": 1251
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -46062,7 +46062,7 @@ window.dadosDemandaWMS = {
           "pcs": 5195,
           "cxs": 250,
           "pc_cx": 20.8,
-          "tar": 1237
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.0,
@@ -46551,7 +46551,7 @@ window.dadosDemandaWMS = {
           "pcs": 193,
           "cxs": 127,
           "pc_cx": 1.5,
-          "tar": 148
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -46574,7 +46574,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.7,
@@ -47058,7 +47058,7 @@ window.dadosDemandaWMS = {
           "pcs": 1796,
           "cxs": 89,
           "pc_cx": 20.2,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -47081,7 +47081,7 @@ window.dadosDemandaWMS = {
           "pcs": 3144,
           "cxs": 78,
           "pc_cx": 40.3,
-          "tar": 669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -47555,7 +47555,7 @@ window.dadosDemandaWMS = {
           "pcs": 4712,
           "cxs": 430,
           "pc_cx": 11.0,
-          "tar": 2142
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -47578,7 +47578,7 @@ window.dadosDemandaWMS = {
           "pcs": 5020,
           "cxs": 436,
           "pc_cx": 11.5,
-          "tar": 2183
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.2,
@@ -48077,7 +48077,7 @@ window.dadosDemandaWMS = {
           "pcs": 5768,
           "cxs": 375,
           "pc_cx": 15.4,
-          "tar": 1518
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -48100,7 +48100,7 @@ window.dadosDemandaWMS = {
           "pcs": 12804,
           "cxs": 494,
           "pc_cx": 25.9,
-          "tar": 2561
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -48599,7 +48599,7 @@ window.dadosDemandaWMS = {
           "pcs": 4504,
           "cxs": 253,
           "pc_cx": 17.8,
-          "tar": 1251
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -48622,7 +48622,7 @@ window.dadosDemandaWMS = {
           "pcs": 5195,
           "cxs": 250,
           "pc_cx": 20.8,
-          "tar": 1237
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.0,
@@ -49111,7 +49111,7 @@ window.dadosDemandaWMS = {
           "pcs": 148,
           "cxs": 68,
           "pc_cx": 2.2,
-          "tar": 114
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -49134,7 +49134,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.3,
@@ -49618,7 +49618,7 @@ window.dadosDemandaWMS = {
           "pcs": 1796,
           "cxs": 89,
           "pc_cx": 20.2,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -49641,7 +49641,7 @@ window.dadosDemandaWMS = {
           "pcs": 3144,
           "cxs": 78,
           "pc_cx": 40.3,
-          "tar": 669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -50115,7 +50115,7 @@ window.dadosDemandaWMS = {
           "pcs": 4712,
           "cxs": 430,
           "pc_cx": 11.0,
-          "tar": 2142
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -50138,7 +50138,7 @@ window.dadosDemandaWMS = {
           "pcs": 5020,
           "cxs": 436,
           "pc_cx": 11.5,
-          "tar": 2183
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.2,
@@ -50637,7 +50637,7 @@ window.dadosDemandaWMS = {
           "pcs": 4821,
           "cxs": 360,
           "pc_cx": 13.4,
-          "tar": 1555
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -50660,7 +50660,7 @@ window.dadosDemandaWMS = {
           "pcs": 5342,
           "cxs": 380,
           "pc_cx": 14.1,
-          "tar": 1669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -51145,7 +51145,7 @@ window.dadosDemandaWMS = {
           "pcs": 4504,
           "cxs": 253,
           "pc_cx": 17.8,
-          "tar": 1251
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -51168,7 +51168,7 @@ window.dadosDemandaWMS = {
           "pcs": 5195,
           "cxs": 250,
           "pc_cx": 20.8,
-          "tar": 1237
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.0,
@@ -51657,7 +51657,7 @@ window.dadosDemandaWMS = {
           "pcs": 192,
           "cxs": 120,
           "pc_cx": 1.6,
-          "tar": 148
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -51680,7 +51680,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.1,
@@ -52169,7 +52169,7 @@ window.dadosDemandaWMS = {
           "pcs": 1796,
           "cxs": 89,
           "pc_cx": 20.2,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -52192,7 +52192,7 @@ window.dadosDemandaWMS = {
           "pcs": 3144,
           "cxs": 78,
           "pc_cx": 40.3,
-          "tar": 669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -52666,7 +52666,7 @@ window.dadosDemandaWMS = {
           "pcs": 4712,
           "cxs": 430,
           "pc_cx": 11.0,
-          "tar": 2142
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -52689,7 +52689,7 @@ window.dadosDemandaWMS = {
           "pcs": 5020,
           "cxs": 436,
           "pc_cx": 11.5,
-          "tar": 2183
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.2,
@@ -53188,7 +53188,7 @@ window.dadosDemandaWMS = {
           "pcs": 4821,
           "cxs": 360,
           "pc_cx": 13.4,
-          "tar": 1555
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -53211,7 +53211,7 @@ window.dadosDemandaWMS = {
           "pcs": 5342,
           "cxs": 380,
           "pc_cx": 14.1,
-          "tar": 1669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -53696,7 +53696,7 @@ window.dadosDemandaWMS = {
           "pcs": 5379,
           "cxs": 439,
           "pc_cx": 12.3,
-          "tar": 1681
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -53719,7 +53719,7 @@ window.dadosDemandaWMS = {
           "pcs": 6503,
           "cxs": 301,
           "pc_cx": 21.6,
-          "tar": 1512
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -54235,7 +54235,7 @@ window.dadosDemandaWMS = {
           "pcs": 140,
           "cxs": 65,
           "pc_cx": 2.2,
-          "tar": 93
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -54258,7 +54258,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.6,
@@ -54737,7 +54737,7 @@ window.dadosDemandaWMS = {
           "pcs": 1796,
           "cxs": 89,
           "pc_cx": 20.2,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -54760,7 +54760,7 @@ window.dadosDemandaWMS = {
           "pcs": 3144,
           "cxs": 78,
           "pc_cx": 40.3,
-          "tar": 669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -55234,7 +55234,7 @@ window.dadosDemandaWMS = {
           "pcs": 4712,
           "cxs": 430,
           "pc_cx": 11.0,
-          "tar": 2142
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -55257,7 +55257,7 @@ window.dadosDemandaWMS = {
           "pcs": 5020,
           "cxs": 436,
           "pc_cx": 11.5,
-          "tar": 2183
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.2,
@@ -55756,7 +55756,7 @@ window.dadosDemandaWMS = {
           "pcs": 4821,
           "cxs": 360,
           "pc_cx": 13.4,
-          "tar": 1555
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -55779,7 +55779,7 @@ window.dadosDemandaWMS = {
           "pcs": 5342,
           "cxs": 380,
           "pc_cx": 14.1,
-          "tar": 1669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -56264,7 +56264,7 @@ window.dadosDemandaWMS = {
           "pcs": 5379,
           "cxs": 439,
           "pc_cx": 12.3,
-          "tar": 1681
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -56287,7 +56287,7 @@ window.dadosDemandaWMS = {
           "pcs": 6503,
           "cxs": 301,
           "pc_cx": 21.6,
-          "tar": 1512
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -56803,7 +56803,7 @@ window.dadosDemandaWMS = {
           "pcs": 281,
           "cxs": 119,
           "pc_cx": 2.4,
-          "tar": 176
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -56826,7 +56826,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.2,
@@ -57315,7 +57315,7 @@ window.dadosDemandaWMS = {
           "pcs": 1796,
           "cxs": 89,
           "pc_cx": 20.2,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -57338,7 +57338,7 @@ window.dadosDemandaWMS = {
           "pcs": 1719,
           "cxs": 76,
           "pc_cx": 22.6,
-          "tar": 614
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -57833,7 +57833,7 @@ window.dadosDemandaWMS = {
           "pcs": 4712,
           "cxs": 430,
           "pc_cx": 11.0,
-          "tar": 2142
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -57856,7 +57856,7 @@ window.dadosDemandaWMS = {
           "pcs": 5020,
           "cxs": 436,
           "pc_cx": 11.5,
-          "tar": 2183
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.2,
@@ -58355,7 +58355,7 @@ window.dadosDemandaWMS = {
           "pcs": 4821,
           "cxs": 360,
           "pc_cx": 13.4,
-          "tar": 1555
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -58378,7 +58378,7 @@ window.dadosDemandaWMS = {
           "pcs": 5342,
           "cxs": 380,
           "pc_cx": 14.1,
-          "tar": 1669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -58863,7 +58863,7 @@ window.dadosDemandaWMS = {
           "pcs": 5379,
           "cxs": 439,
           "pc_cx": 12.3,
-          "tar": 1681
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -58886,7 +58886,7 @@ window.dadosDemandaWMS = {
           "pcs": 6503,
           "cxs": 301,
           "pc_cx": 21.6,
-          "tar": 1512
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -59402,7 +59402,7 @@ window.dadosDemandaWMS = {
           "pcs": 115,
           "cxs": 51,
           "pc_cx": 2.3,
-          "tar": 68
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -59425,7 +59425,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.7,
@@ -59914,7 +59914,7 @@ window.dadosDemandaWMS = {
           "pcs": 145,
           "cxs": 3,
           "pc_cx": 48.3,
-          "tar": 48
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -59937,7 +59937,7 @@ window.dadosDemandaWMS = {
           "pcs": 1719,
           "cxs": 76,
           "pc_cx": 22.6,
-          "tar": 614
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.3,
@@ -60427,7 +60427,7 @@ window.dadosDemandaWMS = {
           "pcs": 5318,
           "cxs": 507,
           "pc_cx": 10.5,
-          "tar": 2127
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -60450,7 +60450,7 @@ window.dadosDemandaWMS = {
           "pcs": 7210,
           "cxs": 507,
           "pc_cx": 14.2,
-          "tar": 2773
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -60976,7 +60976,7 @@ window.dadosDemandaWMS = {
           "pcs": 4821,
           "cxs": 360,
           "pc_cx": 13.4,
-          "tar": 1555
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -60999,7 +60999,7 @@ window.dadosDemandaWMS = {
           "pcs": 5342,
           "cxs": 380,
           "pc_cx": 14.1,
-          "tar": 1669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -61484,7 +61484,7 @@ window.dadosDemandaWMS = {
           "pcs": 5379,
           "cxs": 439,
           "pc_cx": 12.3,
-          "tar": 1681
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -61507,7 +61507,7 @@ window.dadosDemandaWMS = {
           "pcs": 6503,
           "cxs": 301,
           "pc_cx": 21.6,
-          "tar": 1512
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -62023,7 +62023,7 @@ window.dadosDemandaWMS = {
           "pcs": 245,
           "cxs": 126,
           "pc_cx": 1.9,
-          "tar": 102
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -62046,7 +62046,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.6,
@@ -62535,7 +62535,7 @@ window.dadosDemandaWMS = {
           "pcs": 145,
           "cxs": 3,
           "pc_cx": 48.3,
-          "tar": 48
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -62558,7 +62558,7 @@ window.dadosDemandaWMS = {
           "pcs": 1719,
           "cxs": 76,
           "pc_cx": 22.6,
-          "tar": 614
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.3,
@@ -63048,7 +63048,7 @@ window.dadosDemandaWMS = {
           "pcs": 5318,
           "cxs": 507,
           "pc_cx": 10.5,
-          "tar": 2127
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -63071,7 +63071,7 @@ window.dadosDemandaWMS = {
           "pcs": 7210,
           "cxs": 507,
           "pc_cx": 14.2,
-          "tar": 2773
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -63597,7 +63597,7 @@ window.dadosDemandaWMS = {
           "pcs": 4821,
           "cxs": 360,
           "pc_cx": 13.4,
-          "tar": 1555
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -63620,7 +63620,7 @@ window.dadosDemandaWMS = {
           "pcs": 5342,
           "cxs": 380,
           "pc_cx": 14.1,
-          "tar": 1669
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -64105,7 +64105,7 @@ window.dadosDemandaWMS = {
           "pcs": 5379,
           "cxs": 439,
           "pc_cx": 12.3,
-          "tar": 1681
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -64128,7 +64128,7 @@ window.dadosDemandaWMS = {
           "pcs": 6503,
           "cxs": 301,
           "pc_cx": 21.6,
-          "tar": 1512
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -64644,7 +64644,7 @@ window.dadosDemandaWMS = {
           "pcs": 177,
           "cxs": 60,
           "pc_cx": 3.0,
-          "tar": 68
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -64667,7 +64667,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.4,
@@ -65146,7 +65146,7 @@ window.dadosDemandaWMS = {
           "pcs": 145,
           "cxs": 3,
           "pc_cx": 48.3,
-          "tar": 48
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -65169,7 +65169,7 @@ window.dadosDemandaWMS = {
           "pcs": 1719,
           "cxs": 76,
           "pc_cx": 22.6,
-          "tar": 614
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.3,
@@ -65659,7 +65659,7 @@ window.dadosDemandaWMS = {
           "pcs": 5318,
           "cxs": 507,
           "pc_cx": 10.5,
-          "tar": 2127
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -65682,7 +65682,7 @@ window.dadosDemandaWMS = {
           "pcs": 7210,
           "cxs": 507,
           "pc_cx": 14.2,
-          "tar": 2773
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -66208,7 +66208,7 @@ window.dadosDemandaWMS = {
           "pcs": 72475,
           "cxs": 1390,
           "pc_cx": 52.1,
-          "tar": 6589
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -66231,7 +66231,7 @@ window.dadosDemandaWMS = {
           "pcs": 72968,
           "cxs": 2389,
           "pc_cx": 30.5,
-          "tar": 6949
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -66771,7 +66771,7 @@ window.dadosDemandaWMS = {
           "pcs": 5379,
           "cxs": 439,
           "pc_cx": 12.3,
-          "tar": 1681
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -66794,7 +66794,7 @@ window.dadosDemandaWMS = {
           "pcs": 6503,
           "cxs": 301,
           "pc_cx": 21.6,
-          "tar": 1512
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -67310,7 +67310,7 @@ window.dadosDemandaWMS = {
           "pcs": 83,
           "cxs": 40,
           "pc_cx": 2.1,
-          "tar": 55
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -67333,7 +67333,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.6,
@@ -67817,7 +67817,7 @@ window.dadosDemandaWMS = {
           "pcs": 145,
           "cxs": 3,
           "pc_cx": 48.3,
-          "tar": 48
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -67840,7 +67840,7 @@ window.dadosDemandaWMS = {
           "pcs": 1719,
           "cxs": 76,
           "pc_cx": 22.6,
-          "tar": 614
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.3,
@@ -68330,7 +68330,7 @@ window.dadosDemandaWMS = {
           "pcs": 5318,
           "cxs": 507,
           "pc_cx": 10.5,
-          "tar": 2127
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -68353,7 +68353,7 @@ window.dadosDemandaWMS = {
           "pcs": 7210,
           "cxs": 507,
           "pc_cx": 14.2,
-          "tar": 2773
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -68879,7 +68879,7 @@ window.dadosDemandaWMS = {
           "pcs": 72475,
           "cxs": 1390,
           "pc_cx": 52.1,
-          "tar": 6589
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -68902,7 +68902,7 @@ window.dadosDemandaWMS = {
           "pcs": 72968,
           "cxs": 2389,
           "pc_cx": 30.5,
-          "tar": 6949
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -69442,7 +69442,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -69465,7 +69465,7 @@ window.dadosDemandaWMS = {
           "pcs": 9285,
           "cxs": 340,
           "pc_cx": 27.3,
-          "tar": 1308
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -69985,7 +69985,7 @@ window.dadosDemandaWMS = {
           "pcs": 111,
           "cxs": 51,
           "pc_cx": 2.2,
-          "tar": 62
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -70008,7 +70008,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.8,
@@ -70487,7 +70487,7 @@ window.dadosDemandaWMS = {
           "pcs": 145,
           "cxs": 3,
           "pc_cx": 48.3,
-          "tar": 48
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -70510,7 +70510,7 @@ window.dadosDemandaWMS = {
           "pcs": 1719,
           "cxs": 76,
           "pc_cx": 22.6,
-          "tar": 614
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 0.3,
@@ -71000,7 +71000,7 @@ window.dadosDemandaWMS = {
           "pcs": 5318,
           "cxs": 507,
           "pc_cx": 10.5,
-          "tar": 2127
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -71023,7 +71023,7 @@ window.dadosDemandaWMS = {
           "pcs": 7210,
           "cxs": 507,
           "pc_cx": 14.2,
-          "tar": 2773
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -71549,7 +71549,7 @@ window.dadosDemandaWMS = {
           "pcs": 72475,
           "cxs": 1390,
           "pc_cx": 52.1,
-          "tar": 6589
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -71572,7 +71572,7 @@ window.dadosDemandaWMS = {
           "pcs": 72968,
           "cxs": 2389,
           "pc_cx": 30.5,
-          "tar": 6949
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -72112,7 +72112,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -72135,7 +72135,7 @@ window.dadosDemandaWMS = {
           "pcs": 9285,
           "cxs": 340,
           "pc_cx": 27.3,
-          "tar": 1308
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -72655,7 +72655,7 @@ window.dadosDemandaWMS = {
           "pcs": 346,
           "cxs": 138,
           "pc_cx": 2.5,
-          "tar": 182
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -72678,7 +72678,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.6,
@@ -73172,7 +73172,7 @@ window.dadosDemandaWMS = {
           "pcs": 2195,
           "cxs": 118,
           "pc_cx": 18.6,
-          "tar": 646
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -73195,7 +73195,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -73720,7 +73720,7 @@ window.dadosDemandaWMS = {
           "pcs": 5318,
           "cxs": 507,
           "pc_cx": 10.5,
-          "tar": 2127
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -73743,7 +73743,7 @@ window.dadosDemandaWMS = {
           "pcs": 7210,
           "cxs": 507,
           "pc_cx": 14.2,
-          "tar": 2773
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -74269,7 +74269,7 @@ window.dadosDemandaWMS = {
           "pcs": 72475,
           "cxs": 1390,
           "pc_cx": 52.1,
-          "tar": 6589
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -74292,7 +74292,7 @@ window.dadosDemandaWMS = {
           "pcs": 72968,
           "cxs": 2389,
           "pc_cx": 30.5,
-          "tar": 6949
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -74832,7 +74832,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -74855,7 +74855,7 @@ window.dadosDemandaWMS = {
           "pcs": 9285,
           "cxs": 340,
           "pc_cx": 27.3,
-          "tar": 1308
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -75375,7 +75375,7 @@ window.dadosDemandaWMS = {
           "pcs": 275,
           "cxs": 129,
           "pc_cx": 2.1,
-          "tar": 172
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -75398,7 +75398,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.9,
@@ -75892,7 +75892,7 @@ window.dadosDemandaWMS = {
           "pcs": 2195,
           "cxs": 118,
           "pc_cx": 18.6,
-          "tar": 646
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -75915,7 +75915,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -76440,7 +76440,7 @@ window.dadosDemandaWMS = {
           "pcs": 8939,
           "cxs": 493,
           "pc_cx": 18.1,
-          "tar": 2554
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -76463,7 +76463,7 @@ window.dadosDemandaWMS = {
           "pcs": 24539,
           "cxs": 1219,
           "pc_cx": 20.1,
-          "tar": 5985
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -76927,7 +76927,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -77028,7 +77028,7 @@ window.dadosDemandaWMS = {
           "pcs": 72475,
           "cxs": 1390,
           "pc_cx": 52.1,
-          "tar": 6589
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -77051,7 +77051,7 @@ window.dadosDemandaWMS = {
           "pcs": 72968,
           "cxs": 2389,
           "pc_cx": 30.5,
-          "tar": 6949
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -77591,7 +77591,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -77614,7 +77614,7 @@ window.dadosDemandaWMS = {
           "pcs": 9285,
           "cxs": 340,
           "pc_cx": 27.3,
-          "tar": 1308
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -78134,7 +78134,7 @@ window.dadosDemandaWMS = {
           "pcs": 281,
           "cxs": 157,
           "pc_cx": 1.8,
-          "tar": 216
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -78157,7 +78157,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.1,
@@ -78651,7 +78651,7 @@ window.dadosDemandaWMS = {
           "pcs": 2195,
           "cxs": 118,
           "pc_cx": 18.6,
-          "tar": 646
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -78674,7 +78674,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -79199,7 +79199,7 @@ window.dadosDemandaWMS = {
           "pcs": 8939,
           "cxs": 493,
           "pc_cx": 18.1,
-          "tar": 2554
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -79222,7 +79222,7 @@ window.dadosDemandaWMS = {
           "pcs": 24539,
           "cxs": 1219,
           "pc_cx": 20.1,
-          "tar": 5985
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -79686,7 +79686,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -79787,7 +79787,7 @@ window.dadosDemandaWMS = {
           "pcs": 72475,
           "cxs": 1390,
           "pc_cx": 52.1,
-          "tar": 6589
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -79810,7 +79810,7 @@ window.dadosDemandaWMS = {
           "pcs": 72968,
           "cxs": 2389,
           "pc_cx": 30.5,
-          "tar": 6949
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -80350,7 +80350,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -80373,7 +80373,7 @@ window.dadosDemandaWMS = {
           "pcs": 9285,
           "cxs": 340,
           "pc_cx": 27.3,
-          "tar": 1308
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -80893,7 +80893,7 @@ window.dadosDemandaWMS = {
           "pcs": 424,
           "cxs": 162,
           "pc_cx": 2.6,
-          "tar": 212
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -80916,7 +80916,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.0,
@@ -81410,7 +81410,7 @@ window.dadosDemandaWMS = {
           "pcs": 2195,
           "cxs": 118,
           "pc_cx": 18.6,
-          "tar": 646
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -81433,7 +81433,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -81958,7 +81958,7 @@ window.dadosDemandaWMS = {
           "pcs": 8939,
           "cxs": 493,
           "pc_cx": 18.1,
-          "tar": 2554
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -81981,7 +81981,7 @@ window.dadosDemandaWMS = {
           "pcs": 24539,
           "cxs": 1219,
           "pc_cx": 20.1,
-          "tar": 5985
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -82445,7 +82445,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -82546,7 +82546,7 @@ window.dadosDemandaWMS = {
           "pcs": 5453,
           "cxs": 379,
           "pc_cx": 14.4,
-          "tar": 1363
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -82949,7 +82949,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -82972,7 +82972,7 @@ window.dadosDemandaWMS = {
           "pcs": 9285,
           "cxs": 340,
           "pc_cx": 27.3,
-          "tar": 1308
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -83492,7 +83492,7 @@ window.dadosDemandaWMS = {
           "pcs": 144,
           "cxs": 68,
           "pc_cx": 2.1,
-          "tar": 85
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -83515,7 +83515,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.6,
@@ -84004,7 +84004,7 @@ window.dadosDemandaWMS = {
           "pcs": 2195,
           "cxs": 118,
           "pc_cx": 18.6,
-          "tar": 646
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -84027,7 +84027,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -84552,7 +84552,7 @@ window.dadosDemandaWMS = {
           "pcs": 8939,
           "cxs": 493,
           "pc_cx": 18.1,
-          "tar": 2554
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -84575,7 +84575,7 @@ window.dadosDemandaWMS = {
           "pcs": 24539,
           "cxs": 1219,
           "pc_cx": 20.1,
-          "tar": 5985
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -85039,7 +85039,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -85140,7 +85140,7 @@ window.dadosDemandaWMS = {
           "pcs": 5453,
           "cxs": 379,
           "pc_cx": 14.4,
-          "tar": 1363
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -85543,7 +85543,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -85566,7 +85566,7 @@ window.dadosDemandaWMS = {
           "pcs": 3087,
           "cxs": 273,
           "pc_cx": 11.3,
-          "tar": 1102
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -86086,7 +86086,7 @@ window.dadosDemandaWMS = {
           "pcs": 137,
           "cxs": 49,
           "pc_cx": 2.8,
-          "tar": 60
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -86109,7 +86109,7 @@ window.dadosDemandaWMS = {
           "pcs": 355,
           "cxs": 217,
           "pc_cx": 1.6,
-          "tar": 296
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.6,
@@ -86598,7 +86598,7 @@ window.dadosDemandaWMS = {
           "pcs": 2195,
           "cxs": 118,
           "pc_cx": 18.6,
-          "tar": 646
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -86621,7 +86621,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -87146,7 +87146,7 @@ window.dadosDemandaWMS = {
           "pcs": 8939,
           "cxs": 493,
           "pc_cx": 18.1,
-          "tar": 2554
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -87169,7 +87169,7 @@ window.dadosDemandaWMS = {
           "pcs": 24539,
           "cxs": 1219,
           "pc_cx": 20.1,
-          "tar": 5985
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.7,
@@ -87633,7 +87633,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -87734,7 +87734,7 @@ window.dadosDemandaWMS = {
           "pcs": 5453,
           "cxs": 379,
           "pc_cx": 14.4,
-          "tar": 1363
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -88137,7 +88137,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -88160,7 +88160,7 @@ window.dadosDemandaWMS = {
           "pcs": 3087,
           "cxs": 273,
           "pc_cx": 11.3,
-          "tar": 1102
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -88680,7 +88680,7 @@ window.dadosDemandaWMS = {
           "pcs": 137,
           "cxs": 49,
           "pc_cx": 2.8,
-          "tar": 60
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -88703,7 +88703,7 @@ window.dadosDemandaWMS = {
           "pcs": 3504,
           "cxs": 841,
           "pc_cx": 4.2,
-          "tar": 1095
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.6,
@@ -89197,7 +89197,7 @@ window.dadosDemandaWMS = {
           "pcs": 1892,
           "cxs": 134,
           "pc_cx": 14.1,
-          "tar": 728
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -89220,7 +89220,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -89745,7 +89745,7 @@ window.dadosDemandaWMS = {
           "pcs": 3656,
           "cxs": 415,
           "pc_cx": 8.8,
-          "tar": 1406
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -89768,7 +89768,7 @@ window.dadosDemandaWMS = {
           "pcs": 5334,
           "cxs": 619,
           "pc_cx": 8.6,
-          "tar": 1976
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.4,
@@ -90232,7 +90232,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -90333,7 +90333,7 @@ window.dadosDemandaWMS = {
           "pcs": 5453,
           "cxs": 379,
           "pc_cx": 14.4,
-          "tar": 1363
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -90736,7 +90736,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -90759,7 +90759,7 @@ window.dadosDemandaWMS = {
           "pcs": 3087,
           "cxs": 273,
           "pc_cx": 11.3,
-          "tar": 1102
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -91279,7 +91279,7 @@ window.dadosDemandaWMS = {
           "pcs": 467,
           "cxs": 205,
           "pc_cx": 2.3,
-          "tar": 187
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -91302,7 +91302,7 @@ window.dadosDemandaWMS = {
           "pcs": 3504,
           "cxs": 841,
           "pc_cx": 4.2,
-          "tar": 1095
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.6,
@@ -91801,7 +91801,7 @@ window.dadosDemandaWMS = {
           "pcs": 1892,
           "cxs": 134,
           "pc_cx": 14.1,
-          "tar": 728
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -91824,7 +91824,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -92349,7 +92349,7 @@ window.dadosDemandaWMS = {
           "pcs": 3656,
           "cxs": 415,
           "pc_cx": 8.8,
-          "tar": 1406
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -92372,7 +92372,7 @@ window.dadosDemandaWMS = {
           "pcs": 5334,
           "cxs": 619,
           "pc_cx": 8.6,
-          "tar": 1976
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.4,
@@ -92836,7 +92836,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -92937,7 +92937,7 @@ window.dadosDemandaWMS = {
           "pcs": 5453,
           "cxs": 379,
           "pc_cx": 14.4,
-          "tar": 1363
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -93340,7 +93340,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -93363,7 +93363,7 @@ window.dadosDemandaWMS = {
           "pcs": 3087,
           "cxs": 273,
           "pc_cx": 11.3,
-          "tar": 1102
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -93883,7 +93883,7 @@ window.dadosDemandaWMS = {
           "pcs": 467,
           "cxs": 205,
           "pc_cx": 2.3,
-          "tar": 187
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -93906,7 +93906,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.6,
@@ -94405,7 +94405,7 @@ window.dadosDemandaWMS = {
           "pcs": 1892,
           "cxs": 134,
           "pc_cx": 14.1,
-          "tar": 728
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -94428,7 +94428,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -94953,7 +94953,7 @@ window.dadosDemandaWMS = {
           "pcs": 3656,
           "cxs": 415,
           "pc_cx": 8.8,
-          "tar": 1406
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -94976,7 +94976,7 @@ window.dadosDemandaWMS = {
           "pcs": 5334,
           "cxs": 619,
           "pc_cx": 8.6,
-          "tar": 1976
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.4,
@@ -95440,7 +95440,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -95541,7 +95541,7 @@ window.dadosDemandaWMS = {
           "pcs": 3779,
           "cxs": 349,
           "pc_cx": 10.8,
-          "tar": 994
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -95564,7 +95564,7 @@ window.dadosDemandaWMS = {
           "pcs": 8089,
           "cxs": 557,
           "pc_cx": 14.5,
-          "tar": 1838
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -96089,7 +96089,7 @@ window.dadosDemandaWMS = {
           "pcs": 8482,
           "cxs": 316,
           "pc_cx": 26.8,
-          "tar": 1195
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -96112,7 +96112,7 @@ window.dadosDemandaWMS = {
           "pcs": 3087,
           "cxs": 273,
           "pc_cx": 11.3,
-          "tar": 1102
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.4,
@@ -96632,7 +96632,7 @@ window.dadosDemandaWMS = {
           "pcs": 419,
           "cxs": 217,
           "pc_cx": 1.9,
-          "tar": 131
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -96655,7 +96655,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.8,
@@ -97154,7 +97154,7 @@ window.dadosDemandaWMS = {
           "pcs": 1892,
           "cxs": 134,
           "pc_cx": 14.1,
-          "tar": 728
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -97177,7 +97177,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -97702,7 +97702,7 @@ window.dadosDemandaWMS = {
           "pcs": 3656,
           "cxs": 415,
           "pc_cx": 8.8,
-          "tar": 1406
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -97725,7 +97725,7 @@ window.dadosDemandaWMS = {
           "pcs": 5334,
           "cxs": 619,
           "pc_cx": 8.6,
-          "tar": 1976
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.4,
@@ -98189,7 +98189,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -98290,7 +98290,7 @@ window.dadosDemandaWMS = {
           "pcs": 3779,
           "cxs": 349,
           "pc_cx": 10.8,
-          "tar": 994
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -98313,7 +98313,7 @@ window.dadosDemandaWMS = {
           "pcs": 8089,
           "cxs": 557,
           "pc_cx": 14.5,
-          "tar": 1838
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -98838,7 +98838,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -98861,7 +98861,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -99381,7 +99381,7 @@ window.dadosDemandaWMS = {
           "pcs": 159,
           "cxs": 70,
           "pc_cx": 2.3,
-          "tar": 88
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -99404,7 +99404,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.5,
@@ -99898,7 +99898,7 @@ window.dadosDemandaWMS = {
           "pcs": 1892,
           "cxs": 134,
           "pc_cx": 14.1,
-          "tar": 728
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -99921,7 +99921,7 @@ window.dadosDemandaWMS = {
           "pcs": 1795,
           "cxs": 92,
           "pc_cx": 19.5,
-          "tar": 544
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -100446,7 +100446,7 @@ window.dadosDemandaWMS = {
           "pcs": 3656,
           "cxs": 415,
           "pc_cx": 8.8,
-          "tar": 1406
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -100469,7 +100469,7 @@ window.dadosDemandaWMS = {
           "pcs": 5334,
           "cxs": 619,
           "pc_cx": 8.6,
-          "tar": 1976
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.4,
@@ -100933,7 +100933,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -101034,7 +101034,7 @@ window.dadosDemandaWMS = {
           "pcs": 3779,
           "cxs": 349,
           "pc_cx": 10.8,
-          "tar": 994
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -101057,7 +101057,7 @@ window.dadosDemandaWMS = {
           "pcs": 8089,
           "cxs": 557,
           "pc_cx": 14.5,
-          "tar": 1838
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -101582,7 +101582,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -101605,7 +101605,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -102125,7 +102125,7 @@ window.dadosDemandaWMS = {
           "pcs": 246,
           "cxs": 149,
           "pc_cx": 1.7,
-          "tar": 164
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -102148,7 +102148,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.0,
@@ -102647,7 +102647,7 @@ window.dadosDemandaWMS = {
           "pcs": 730,
           "cxs": 54,
           "pc_cx": 13.5,
-          "tar": 243
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -102670,7 +102670,7 @@ window.dadosDemandaWMS = {
           "pcs": 1263,
           "cxs": 104,
           "pc_cx": 12.1,
-          "tar": 324
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -103200,7 +103200,7 @@ window.dadosDemandaWMS = {
           "pcs": 3656,
           "cxs": 415,
           "pc_cx": 8.8,
-          "tar": 1406
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -103223,7 +103223,7 @@ window.dadosDemandaWMS = {
           "pcs": 5334,
           "cxs": 619,
           "pc_cx": 8.6,
-          "tar": 1976
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.4,
@@ -103687,7 +103687,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -103788,7 +103788,7 @@ window.dadosDemandaWMS = {
           "pcs": 3779,
           "cxs": 349,
           "pc_cx": 10.8,
-          "tar": 994
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -103811,7 +103811,7 @@ window.dadosDemandaWMS = {
           "pcs": 8089,
           "cxs": 557,
           "pc_cx": 14.5,
-          "tar": 1838
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -104336,7 +104336,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -104359,7 +104359,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -104879,7 +104879,7 @@ window.dadosDemandaWMS = {
           "pcs": 564,
           "cxs": 247,
           "pc_cx": 2.3,
-          "tar": 313
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -104902,7 +104902,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.3,
@@ -105396,7 +105396,7 @@ window.dadosDemandaWMS = {
           "pcs": 730,
           "cxs": 54,
           "pc_cx": 13.5,
-          "tar": 243
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -105419,7 +105419,7 @@ window.dadosDemandaWMS = {
           "pcs": 1263,
           "cxs": 104,
           "pc_cx": 12.1,
-          "tar": 324
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -105949,7 +105949,7 @@ window.dadosDemandaWMS = {
           "pcs": 3656,
           "cxs": 415,
           "pc_cx": 8.8,
-          "tar": 1406
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -105972,7 +105972,7 @@ window.dadosDemandaWMS = {
           "pcs": 9561,
           "cxs": 813,
           "pc_cx": 11.8,
-          "tar": 2897
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.4,
@@ -106436,7 +106436,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -106537,7 +106537,7 @@ window.dadosDemandaWMS = {
           "pcs": 3779,
           "cxs": 349,
           "pc_cx": 10.8,
-          "tar": 994
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -106560,7 +106560,7 @@ window.dadosDemandaWMS = {
           "pcs": 8089,
           "cxs": 557,
           "pc_cx": 14.5,
-          "tar": 1838
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -107085,7 +107085,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -107108,7 +107108,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -107628,7 +107628,7 @@ window.dadosDemandaWMS = {
           "pcs": 235,
           "cxs": 123,
           "pc_cx": 1.9,
-          "tar": 157
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -107651,7 +107651,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.4,
@@ -108140,7 +108140,7 @@ window.dadosDemandaWMS = {
           "pcs": 730,
           "cxs": 54,
           "pc_cx": 13.5,
-          "tar": 243
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -108163,7 +108163,7 @@ window.dadosDemandaWMS = {
           "pcs": 1263,
           "cxs": 104,
           "pc_cx": 12.1,
-          "tar": 324
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -108693,7 +108693,7 @@ window.dadosDemandaWMS = {
           "pcs": 4232,
           "cxs": 425,
           "pc_cx": 10.0,
-          "tar": 1176
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -108716,7 +108716,7 @@ window.dadosDemandaWMS = {
           "pcs": 9561,
           "cxs": 813,
           "pc_cx": 11.8,
-          "tar": 2897
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -109175,7 +109175,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -109276,7 +109276,7 @@ window.dadosDemandaWMS = {
           "pcs": 3779,
           "cxs": 349,
           "pc_cx": 10.8,
-          "tar": 994
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -109299,7 +109299,7 @@ window.dadosDemandaWMS = {
           "pcs": 8089,
           "cxs": 557,
           "pc_cx": 14.5,
-          "tar": 1838
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -109824,7 +109824,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -109847,7 +109847,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -110367,7 +110367,7 @@ window.dadosDemandaWMS = {
           "pcs": 157,
           "cxs": 76,
           "pc_cx": 2.1,
-          "tar": 105
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -110390,7 +110390,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.7,
@@ -110879,7 +110879,7 @@ window.dadosDemandaWMS = {
           "pcs": 730,
           "cxs": 54,
           "pc_cx": 13.5,
-          "tar": 243
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -110902,7 +110902,7 @@ window.dadosDemandaWMS = {
           "pcs": 1263,
           "cxs": 104,
           "pc_cx": 12.1,
-          "tar": 324
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -111432,7 +111432,7 @@ window.dadosDemandaWMS = {
           "pcs": 4232,
           "cxs": 425,
           "pc_cx": 10.0,
-          "tar": 1176
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -111455,7 +111455,7 @@ window.dadosDemandaWMS = {
           "pcs": 9561,
           "cxs": 813,
           "pc_cx": 11.8,
-          "tar": 2897
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -111914,7 +111914,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -112015,7 +112015,7 @@ window.dadosDemandaWMS = {
           "pcs": 3779,
           "cxs": 349,
           "pc_cx": 10.8,
-          "tar": 994
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -112038,7 +112038,7 @@ window.dadosDemandaWMS = {
           "pcs": 31350,
           "cxs": 955,
           "pc_cx": 32.8,
-          "tar": 3688
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.8,
@@ -112497,7 +112497,7 @@ window.dadosDemandaWMS = {
           "pcs": 14,
           "cxs": 5,
           "pc_cx": 2.8,
-          "tar": 5
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.5,
@@ -112634,7 +112634,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -112657,7 +112657,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -113177,7 +113177,7 @@ window.dadosDemandaWMS = {
           "pcs": 281,
           "cxs": 124,
           "pc_cx": 2.3,
-          "tar": 78
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -113200,7 +113200,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.7,
@@ -113694,7 +113694,7 @@ window.dadosDemandaWMS = {
           "pcs": 730,
           "cxs": 54,
           "pc_cx": 13.5,
-          "tar": 243
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -113717,7 +113717,7 @@ window.dadosDemandaWMS = {
           "pcs": 1263,
           "cxs": 104,
           "pc_cx": 12.1,
-          "tar": 324
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -114247,7 +114247,7 @@ window.dadosDemandaWMS = {
           "pcs": 4232,
           "cxs": 425,
           "pc_cx": 10.0,
-          "tar": 1176
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -114270,7 +114270,7 @@ window.dadosDemandaWMS = {
           "pcs": 9561,
           "cxs": 813,
           "pc_cx": 11.8,
-          "tar": 2897
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -114729,7 +114729,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -114830,7 +114830,7 @@ window.dadosDemandaWMS = {
           "pcs": 6430,
           "cxs": 495,
           "pc_cx": 13.0,
-          "tar": 1692
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -114853,7 +114853,7 @@ window.dadosDemandaWMS = {
           "pcs": 31350,
           "cxs": 955,
           "pc_cx": 32.8,
-          "tar": 3688
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.5,
@@ -115312,7 +115312,7 @@ window.dadosDemandaWMS = {
           "pcs": 14,
           "cxs": 5,
           "pc_cx": 2.8,
-          "tar": 5
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.5,
@@ -115449,7 +115449,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -115472,7 +115472,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -116013,7 +116013,7 @@ window.dadosDemandaWMS = {
           "pcs": 115,
           "cxs": 70,
           "pc_cx": 1.6,
-          "tar": 96
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -116036,7 +116036,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 7.1,
@@ -116530,7 +116530,7 @@ window.dadosDemandaWMS = {
           "pcs": 730,
           "cxs": 54,
           "pc_cx": 13.5,
-          "tar": 243
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -116553,7 +116553,7 @@ window.dadosDemandaWMS = {
           "pcs": 1263,
           "cxs": 104,
           "pc_cx": 12.1,
-          "tar": 324
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.1,
@@ -117083,7 +117083,7 @@ window.dadosDemandaWMS = {
           "pcs": 4232,
           "cxs": 425,
           "pc_cx": 10.0,
-          "tar": 1176
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -117106,7 +117106,7 @@ window.dadosDemandaWMS = {
           "pcs": 9561,
           "cxs": 813,
           "pc_cx": 11.8,
-          "tar": 2897
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -117565,7 +117565,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -117666,7 +117666,7 @@ window.dadosDemandaWMS = {
           "pcs": 6430,
           "cxs": 495,
           "pc_cx": 13.0,
-          "tar": 1692
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -117689,7 +117689,7 @@ window.dadosDemandaWMS = {
           "pcs": 31350,
           "cxs": 955,
           "pc_cx": 32.8,
-          "tar": 3688
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.5,
@@ -118148,7 +118148,7 @@ window.dadosDemandaWMS = {
           "pcs": 14,
           "cxs": 5,
           "pc_cx": 2.8,
-          "tar": 5
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.5,
@@ -118285,7 +118285,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -118308,7 +118308,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -118849,7 +118849,7 @@ window.dadosDemandaWMS = {
           "pcs": 337,
           "cxs": 123,
           "pc_cx": 2.7,
-          "tar": 168
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -118872,7 +118872,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 7.2,
@@ -119361,7 +119361,7 @@ window.dadosDemandaWMS = {
           "pcs": 2351,
           "cxs": 113,
           "pc_cx": 20.8,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -119384,7 +119384,7 @@ window.dadosDemandaWMS = {
           "pcs": 2834,
           "cxs": 104,
           "pc_cx": 27.2,
-          "tar": 659
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -119940,7 +119940,7 @@ window.dadosDemandaWMS = {
           "pcs": 4232,
           "cxs": 425,
           "pc_cx": 10.0,
-          "tar": 1176
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -119963,7 +119963,7 @@ window.dadosDemandaWMS = {
           "pcs": 9561,
           "cxs": 813,
           "pc_cx": 11.8,
-          "tar": 2897
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -120422,7 +120422,7 @@ window.dadosDemandaWMS = {
           "pcs": 10,
           "cxs": 6,
           "pc_cx": 1.7,
-          "tar": 6
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -120523,7 +120523,7 @@ window.dadosDemandaWMS = {
           "pcs": 6430,
           "cxs": 495,
           "pc_cx": 13.0,
-          "tar": 1692
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -120546,7 +120546,7 @@ window.dadosDemandaWMS = {
           "pcs": 31350,
           "cxs": 955,
           "pc_cx": 32.8,
-          "tar": 3688
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.5,
@@ -121005,7 +121005,7 @@ window.dadosDemandaWMS = {
           "pcs": 14,
           "cxs": 5,
           "pc_cx": 2.8,
-          "tar": 5
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.5,
@@ -121142,7 +121142,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -121165,7 +121165,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -121706,7 +121706,7 @@ window.dadosDemandaWMS = {
           "pcs": 353,
           "cxs": 101,
           "pc_cx": 3.5,
-          "tar": 136
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -121729,7 +121729,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 4.3,
@@ -122228,7 +122228,7 @@ window.dadosDemandaWMS = {
           "pcs": 2351,
           "cxs": 113,
           "pc_cx": 20.8,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -122251,7 +122251,7 @@ window.dadosDemandaWMS = {
           "pcs": 2834,
           "cxs": 104,
           "pc_cx": 27.2,
-          "tar": 659
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -122807,7 +122807,7 @@ window.dadosDemandaWMS = {
           "pcs": 4232,
           "cxs": 425,
           "pc_cx": 10.0,
-          "tar": 1176
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -122830,7 +122830,7 @@ window.dadosDemandaWMS = {
           "pcs": 13742,
           "cxs": 896,
           "pc_cx": 15.3,
-          "tar": 2924
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 2.3,
@@ -123289,7 +123289,7 @@ window.dadosDemandaWMS = {
           "pcs": 1,
           "cxs": 1,
           "pc_cx": 1.0,
-          "tar": 1
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0,
@@ -123390,7 +123390,7 @@ window.dadosDemandaWMS = {
           "pcs": 6430,
           "cxs": 495,
           "pc_cx": 13.0,
-          "tar": 1692
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -123413,7 +123413,7 @@ window.dadosDemandaWMS = {
           "pcs": 31350,
           "cxs": 955,
           "pc_cx": 32.8,
-          "tar": 3688
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.5,
@@ -123872,7 +123872,7 @@ window.dadosDemandaWMS = {
           "pcs": 14,
           "cxs": 5,
           "pc_cx": 2.8,
-          "tar": 5
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.5,
@@ -124009,7 +124009,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -124032,7 +124032,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -124573,7 +124573,7 @@ window.dadosDemandaWMS = {
           "pcs": 617,
           "cxs": 169,
           "pc_cx": 3.7,
-          "tar": 247
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -124596,7 +124596,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 5.4,
@@ -125095,7 +125095,7 @@ window.dadosDemandaWMS = {
           "pcs": 2351,
           "cxs": 113,
           "pc_cx": 20.8,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -125118,7 +125118,7 @@ window.dadosDemandaWMS = {
           "pcs": 2834,
           "cxs": 104,
           "pc_cx": 27.2,
-          "tar": 659
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -125674,7 +125674,7 @@ window.dadosDemandaWMS = {
           "pcs": 7005,
           "cxs": 884,
           "pc_cx": 7.9,
-          "tar": 2594
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -125697,7 +125697,7 @@ window.dadosDemandaWMS = {
           "pcs": 13742,
           "cxs": 896,
           "pc_cx": 15.3,
-          "tar": 2924
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -126161,7 +126161,7 @@ window.dadosDemandaWMS = {
           "pcs": 1,
           "cxs": 1,
           "pc_cx": 1.0,
-          "tar": 1
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.6,
@@ -126283,7 +126283,7 @@ window.dadosDemandaWMS = {
           "pcs": 6430,
           "cxs": 495,
           "pc_cx": 13.0,
-          "tar": 1692
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -126306,7 +126306,7 @@ window.dadosDemandaWMS = {
           "pcs": 31350,
           "cxs": 955,
           "pc_cx": 32.8,
-          "tar": 3688
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.5,
@@ -126765,7 +126765,7 @@ window.dadosDemandaWMS = {
           "pcs": 14,
           "cxs": 5,
           "pc_cx": 2.8,
-          "tar": 5
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.5,
@@ -126902,7 +126902,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -126925,7 +126925,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
@@ -127466,7 +127466,7 @@ window.dadosDemandaWMS = {
           "pcs": 529,
           "cxs": 250,
           "pc_cx": 2.1,
-          "tar": 151
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -127489,7 +127489,7 @@ window.dadosDemandaWMS = {
           "pcs": 508,
           "cxs": 288,
           "pc_cx": 1.8,
-          "tar": 339
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 6.4,
@@ -127983,7 +127983,7 @@ window.dadosDemandaWMS = {
           "pcs": 2351,
           "cxs": 113,
           "pc_cx": 20.8,
-          "tar": 691
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -128006,7 +128006,7 @@ window.dadosDemandaWMS = {
           "pcs": 2834,
           "cxs": 104,
           "pc_cx": 27.2,
-          "tar": 659
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.3,
@@ -128562,7 +128562,7 @@ window.dadosDemandaWMS = {
           "pcs": 7005,
           "cxs": 884,
           "pc_cx": 7.9,
-          "tar": 2594
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -128585,7 +128585,7 @@ window.dadosDemandaWMS = {
           "pcs": 13742,
           "cxs": 896,
           "pc_cx": 15.3,
-          "tar": 2924
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.6,
@@ -129049,7 +129049,7 @@ window.dadosDemandaWMS = {
           "pcs": 1,
           "cxs": 1,
           "pc_cx": 1.0,
-          "tar": 1
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.6,
@@ -129171,7 +129171,7 @@ window.dadosDemandaWMS = {
           "pcs": 6430,
           "cxs": 495,
           "pc_cx": 13.0,
-          "tar": 1692
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -129194,7 +129194,7 @@ window.dadosDemandaWMS = {
           "pcs": 13869,
           "cxs": 843,
           "pc_cx": 16.5,
-          "tar": 3748
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.5,
@@ -129653,7 +129653,7 @@ window.dadosDemandaWMS = {
           "pcs": 14,
           "cxs": 5,
           "pc_cx": 2.8,
-          "tar": 5
+          "tar": 0
         }
       },
       "perfil_est_cx_rk": 0.5,
@@ -129790,7 +129790,7 @@ window.dadosDemandaWMS = {
           "pcs": 2168,
           "cxs": 263,
           "pc_cx": 8.2,
-          "tar": 803
+          "tar": 0
         }
       },
       "previa_carteira": {
@@ -129813,7 +129813,7 @@ window.dadosDemandaWMS = {
           "pcs": 3982,
           "cxs": 275,
           "pc_cx": 14.5,
-          "tar": 971
+          "tar": 0
         }
       },
       "perfil_est_cx_rc": 1.9,
