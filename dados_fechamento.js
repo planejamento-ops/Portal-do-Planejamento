@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "24/09/2026 11:42",
+  "atualizado_em": "24/09/2026 11:53",
   "progresso_geral_pct": 9,
   "total_tus_geral": 66,
   "total_finalizadas_geral": 6,
@@ -133,8 +133,8 @@ window.dadosFechamento = {
       "tu": "610000012925",
       "tipo_op": "FR",
       "total_caixas": 700,
-      "caixas_carregadas": 46,
-      "pct": 6,
+      "caixas_carregadas": 90,
+      "pct": 12,
       "status": "PENDENTE"
     },
     {
