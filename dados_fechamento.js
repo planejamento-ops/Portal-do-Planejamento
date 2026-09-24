@@ -1,11 +1,11 @@
 window.dadosFechamento = {
-  "atualizado_em": "24/09/2026 08:21",
+  "atualizado_em": "24/09/2026 08:28",
   "atendimentos_rodando": [
     "MGI",
     "MGC"
   ],
-  "total_pendentes": 20,
-  "total_finalizadas": 6,
+  "total_pendentes": 19,
+  "total_finalizadas": 7,
   "tabela": [
     {
       "atendimento": "MGI",
@@ -63,20 +63,20 @@ window.dadosFechamento = {
     },
     {
       "atendimento": "MGI",
+      "carreta": "Carreta 12",
+      "tu": "610000012801",
+      "total_caixas": 1389,
+      "caixas_carregadas": 1389,
+      "pct": 100,
+      "status": "FINALIZADA"
+    },
+    {
+      "atendimento": "MGI",
       "carreta": "Carreta 07",
       "tu": "610000012749",
       "total_caixas": 2245,
       "caixas_carregadas": 2244,
       "pct": 99,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 12",
-      "tu": "610000012801",
-      "total_caixas": 1389,
-      "caixas_carregadas": 1294,
-      "pct": 93,
       "status": "PENDENTE"
     },
     {
