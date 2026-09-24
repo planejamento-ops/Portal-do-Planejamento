@@ -324,7 +324,6 @@
             gap: 10px; 
         }
 
-        /* Botões de Atalho Reformatados */
         .btn-atalho { 
             display: inline-flex; 
             align-items: center; 
@@ -471,7 +470,6 @@
             display: block; 
         }
 
-        /* Cores dos Cards */
         .card-cyan { border-color: rgba(0, 210, 255, 0.3); } 
         .card-cyan .icon { color: #00d2ff; background: rgba(0, 210, 255, 0.12); } 
         
@@ -627,6 +625,7 @@
         .box-warning h4 .material-symbols-outlined { color: #f6b93b; } 
         .box-red h4 .material-symbols-outlined { color: #ff4b2b; } 
         .box-purple h4 .material-symbols-outlined { color: #9b59b6; }
+        .box-cyan h4 .material-symbols-outlined { color: #00d2ff; } 
 
         .tu-table { 
             width: 100%; 
@@ -912,7 +911,6 @@
             box-shadow: 0 0 10px rgba(0, 210, 255, 0.1); 
         }
 
-        /* Estilo do DatePicker (Viagem no Tempo) */
         .date-picker-wrapper { 
             display: flex; 
             align-items: center; 
@@ -1382,7 +1380,9 @@
                             <h2><span class="material-symbols-outlined">history</span> Viagem no Tempo • Cockpit de WMS Histórico</h2>
                         </div>
                         <div class="header-badges">
-                            <!-- 🚨 NOVO FILTRO DE DATA NO CANTO DA ABA WMS -->
+                            <a href="https://cevalogisticsoffice365.sharepoint.com/sites/LATAM-BR-VAG-01-CLBoticario/Lists/DB_Demanda_WMS?e=IB0ChN" target="_blank" class="btn-atalho btn-spoint" title="Abrir Base WMS no SharePoint">
+                                <span class="material-symbols-outlined">dns</span> SharePoint WMS
+                            </a>
                             <div class="date-picker-wrapper" title="Selecione um dia do Histórico">
                                 <span class="material-symbols-outlined" style="font-size: 18px; color: #00d2ff;">calendar_today</span>
                                 <input type="date" id="filtro-data-wms" onchange="aplicarFiltroDataWMS()">
@@ -1394,11 +1394,11 @@
                         </div>
                     </div>
 
-                    <!-- BOTÕES FIXOS COM STATUS LIGHT -->
+                    <!-- NOVA ORDEM DE BOTÕES E DIVISÃO KIT/CARTEIRA -->
                     <div class="wms-toggles" id="container-wms-botoes">
                         <div class="wms-toggles-title">ATENDIMENTOS:</div>
-                        <button class="btn-wms-onda active" onclick="selecionarCanalWMS('MGI', this)">
-                            <span class="status-dot-off" id="dot-MGI"></span> MGI
+                        <button class="btn-wms-onda active" onclick="selecionarCanalWMS('VAREJO', this)">
+                            <span class="status-dot-off" id="dot-VAREJO"></span> VAREJO
                         </button>
                         <button class="btn-wms-onda" onclick="selecionarCanalWMS('MGC', this)">
                             <span class="status-dot-off" id="dot-MGC"></span> MGC
@@ -1409,15 +1409,17 @@
                         <button class="btn-wms-onda" onclick="selecionarCanalWMS('SPC', this)">
                             <span class="status-dot-off" id="dot-SPC"></span> SPC
                         </button>
-                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('VAREJO', this)">
-                            <span class="status-dot-off" id="dot-VAREJO"></span> VAREJO
+                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('MGI', this)">
+                            <span class="status-dot-off" id="dot-MGI"></span> MGI
                         </button>
                     </div>
 
-                    <!-- TOGGLE PRÉVIA VS REAL -->
+                    <!-- TOGGLE PRÉVIA VS REAL VS KITS -->
                     <div class="wms-sub-toggles">
-                        <button class="btn-sub-tab" id="btn-previa" onclick="mudarVisaoWMS('PREVIA')">PRÉVIA (Planejado)</button>
-                        <button class="btn-sub-tab active" id="btn-real" onclick="mudarVisaoWMS('REAL')">REAL (Executado)</button>
+                        <button class="btn-sub-tab" id="btn-previa-carteira" onclick="mudarVisaoWMS('PREVIA_CARTEIRA')" style="display: none;">PRÉVIA CARTEIRA</button>
+                        <button class="btn-sub-tab active" id="btn-real-carteira" onclick="mudarVisaoWMS('REAL_CARTEIRA')">REAL VAREJO</button>
+                        <button class="btn-sub-tab" id="btn-previa-kit" onclick="mudarVisaoWMS('PREVIA_KIT')" style="display: none;">PRÉVIA KIT</button>
+                        <button class="btn-sub-tab" id="btn-real-kit" onclick="mudarVisaoWMS('REAL_KIT')" style="display: none;">REAL KIT</button>
                     </div>
 
                     <div class="tu-grid-main" id="grid-wms-cards" style="grid-template-columns: repeat(4, 1fr);">
@@ -1621,6 +1623,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </main>
     </div>
@@ -1656,11 +1659,10 @@
         let chartCaixas = null; 
         let chartPecas = null;
 
-        // Estado Global da Aba WMS Histórico
-        let wmsCanalAtual = 'MGI';
-        let wmsVisaoAtual = 'REAL';
-        let dadosOndasGeral = []; // Guarda todos os 60 dias extraídos pelo robô
-        let dadosOndasDataFiltrada = []; // Guarda apenas os dados do dia que o usuário escolheu no calendário
+        let wmsCanalAtual = 'VAREJO';
+        let wmsVisaoAtual = 'REAL_CARTEIRA';
+        let dadosOndasGeral = []; 
+        let dadosOndasDataFiltrada = []; 
 
         function carregarScriptsSemCache() {
             const timestamp = new Date().getTime();
@@ -1728,28 +1730,20 @@
             });
         }
 
-        // ==========================================
-        // LÓGICA DO WMS E FILTRO DE DATAS
-        // ==========================================
         function aplicarFiltroDataWMS() {
             const dataSelecionada = document.getElementById('filtro-data-wms').value;
             
-            // Limpa a lista filtrada
             dadosOndasDataFiltrada = [];
-
-            // Para cada canal (MGI, MGC, VAREJO, etc.), procura a onda mais recente ATÉ à data escolhida
             const canaisUnicos = [...new Set(dadosOndasGeral.map(o => o.onda_atual))];
 
             canaisUnicos.forEach(canal => {
                 const ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === canal && o.data_onda <= dataSelecionada);
                 if (ondasCanal.length > 0) {
-                    // Ordena da data mais recente para a mais antiga e guarda o primeiro registo
                     ondasCanal.sort((a, b) => b.data_onda.localeCompare(a.data_onda));
                     dadosOndasDataFiltrada.push(ondasCanal[0]);
                 }
             });
             
-            // 🚨 CORREÇÃO: As luzes de status continuam a ler o estado real da operação (ao vivo) da folha de TU
             const canaisFixos = ['MGI', 'MGC', 'SPI', 'SPC', 'VAREJO'];
             canaisFixos.forEach(canal => {
                 let isActive = false;
@@ -1769,22 +1763,51 @@
             document.querySelectorAll('.btn-wms-onda').forEach(b => b.classList.remove('active'));
             btnElement.classList.add('active');
             wmsCanalAtual = canal;
-            renderizarCardsWMS();
+
+            const btnPreviaCarteira = document.getElementById('btn-previa-carteira');
+            const btnPreviaKit = document.getElementById('btn-previa-kit');
+            const btnRealKit = document.getElementById('btn-real-kit');
+            const btnRealCarteira = document.getElementById('btn-real-carteira');
+
+            if (canal === 'VAREJO') {
+                if (btnPreviaCarteira) btnPreviaCarteira.style.display = 'none';
+                if (btnPreviaKit) btnPreviaKit.style.display = 'none';
+                if (btnRealKit) btnRealKit.style.display = 'none';
+                if (btnRealCarteira) btnRealCarteira.innerHTML = "REAL VAREJO";
+                mudarVisaoWMS('REAL_CARTEIRA');
+            } else {
+                if (btnPreviaCarteira) btnPreviaCarteira.style.display = 'inline-block';
+                if (btnPreviaKit) btnPreviaKit.style.display = 'inline-block';
+                if (btnRealKit) btnRealKit.style.display = 'inline-block';
+                if (btnRealCarteira) btnRealCarteira.innerHTML = "REAL CARTEIRA";
+                if(wmsVisaoAtual !== 'PREVIA_CARTEIRA' && wmsVisaoAtual !== 'PREVIA_KIT' && wmsVisaoAtual !== 'REAL_KIT') {
+                   mudarVisaoWMS('REAL_CARTEIRA');
+                } else {
+                   renderizarCardsWMS();
+                }
+            }
         }
 
         function mudarVisaoWMS(visao) {
-            document.getElementById('btn-previa').classList.remove('active');
-            document.getElementById('btn-real').classList.remove('active');
+            document.querySelectorAll('.btn-sub-tab').forEach(b => b.classList.remove('active'));
             
-            const btnAtivo = visao === 'PREVIA' ? 'btn-previa' : 'btn-real';
-            document.getElementById(btnAtivo).classList.add('active');
+            let btnId = '';
+            if(visao === 'PREVIA_CARTEIRA') btnId = 'btn-previa-carteira';
+            if(visao === 'REAL_CARTEIRA') btnId = 'btn-real-carteira';
+            if(visao === 'PREVIA_KIT') btnId = 'btn-previa-kit';
+            if(visao === 'REAL_KIT') btnId = 'btn-real-kit';
             
+            if(document.getElementById(btnId)) document.getElementById(btnId).classList.add('active');
             wmsVisaoAtual = visao;
             renderizarCardsWMS();
         }
 
         function desenharGraficosChartJS(todasEstacoes) {
-            if (!todasEstacoes || todasEstacoes.length === 0) return;
+            if (!todasEstacoes || todasEstacoes.length === 0) {
+                if (chartCaixas) chartCaixas.destroy(); 
+                if (chartPecas) chartPecas.destroy();
+                return;
+            }
             
             const labels = todasEstacoes.map(e => e.estacao);
             const dataCxs = todasEstacoes.map(e => e.cxs);
@@ -1796,91 +1819,54 @@
             if (chartCaixas) chartCaixas.destroy(); 
             chartCaixas = new Chart(ctxCxs, { 
                 type: 'bar', 
-                data: { 
-                    labels: labels, 
-                    datasets: [{ 
-                        data: dataCxs, 
-                        backgroundColor: 'rgba(0, 210, 255, 0.6)', 
-                        borderColor: 'rgba(0, 210, 255, 1)', 
-                        borderWidth: 1, 
-                        borderRadius: 4 
-                    }] 
-                }, 
-                options: { 
-                    responsive: true, 
-                    maintainAspectRatio: false, 
-                    plugins: { legend: { display: false } }, 
-                    scales: { 
-                        y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true }, 
-                        x: { grid: { display: false }, ticks: { font: { size: 10 } } } 
-                    } 
-                } 
+                data: { labels: labels, datasets: [{ data: dataCxs, backgroundColor: 'rgba(0, 210, 255, 0.6)', borderColor: 'rgba(0, 210, 255, 1)', borderWidth: 1, borderRadius: 4 }] }, 
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { font: { size: 10 } } } } } 
             });
 
             if (chartPecas) chartPecas.destroy(); 
             chartPecas = new Chart(ctxPcs, { 
                 type: 'bar', 
-                data: { 
-                    labels: labels, 
-                    datasets: [{ 
-                        data: dataPcs, 
-                        backgroundColor: 'rgba(155, 89, 182, 0.6)', 
-                        borderColor: 'rgba(155, 89, 182, 1)', 
-                        borderWidth: 1, 
-                        borderRadius: 4 
-                    }] 
-                }, 
-                options: { 
-                    responsive: true, 
-                    maintainAspectRatio: false, 
-                    plugins: { legend: { display: false } }, 
-                    scales: { 
-                        y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true }, 
-                        x: { grid: { display: false }, ticks: { font: { size: 10 } } } 
-                    } 
-                } 
+                data: { labels: labels, datasets: [{ data: dataPcs, backgroundColor: 'rgba(155, 89, 182, 0.6)', borderColor: 'rgba(155, 89, 182, 1)', borderWidth: 1, borderRadius: 4 }] }, 
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { font: { size: 10 } } } } } 
             });
         }
 
         function renderizarCardsWMS() {
-            // Busca o canal atual dentro do dia escolhido no calendário
             let ondaDados = dadosOndasDataFiltrada.find(o => o.onda_atual === wmsCanalAtual);
             
-            // Se o canal não rodou no dia escolhido, zera os gráficos graciosamente
             if (!ondaDados) {
-                ondaDados = { 
-                    real: {}, 
-                    previa: {}, 
-                    aderencia_pcs: 0, 
-                    perfil_est_cx: 0, 
-                    perfil_skus_cx: 0, 
-                    todas_estacoes: [] 
-                };
+                ondaDados = {};
             }
 
-            const dadosVisao = wmsVisaoAtual === 'PREVIA' ? ondaDados.previa : ondaDados.real;
+            let dadosVisao = {}, est_cx = 0, skus_cx = 0, aderencia = 0, todas_est = [];
 
-            setTextoSeguro('wms-onda-atual', `${wmsCanalAtual} (${wmsVisaoAtual})`);
+            if (wmsVisaoAtual === 'PREVIA_CARTEIRA') {
+                dadosVisao = ondaDados.previa_carteira || {};
+                est_cx = ondaDados.perfil_est_cx_pc || 0; skus_cx = ondaDados.perfil_skus_cx_pc || 0;
+                aderencia = ondaDados.aderencia_pcs_carteira || 0; todas_est = ondaDados.todas_estacoes_previa_carteira || [];
+            } else if (wmsVisaoAtual === 'REAL_CARTEIRA') {
+                dadosVisao = ondaDados.real_carteira || {};
+                est_cx = ondaDados.perfil_est_cx_rc || 0; skus_cx = ondaDados.perfil_skus_cx_rc || 0;
+                aderencia = ondaDados.aderencia_pcs_carteira || 0; todas_est = ondaDados.todas_estacoes_real_carteira || [];
+            } else if (wmsVisaoAtual === 'PREVIA_KIT') {
+                dadosVisao = ondaDados.previa_kit || {};
+                est_cx = ondaDados.perfil_est_cx_pk || 0; skus_cx = ondaDados.perfil_skus_cx_pk || 0;
+                aderencia = ondaDados.aderencia_pcs_kit || 0; todas_est = ondaDados.todas_estacoes_previa_kit || [];
+            } else if (wmsVisaoAtual === 'REAL_KIT') {
+                dadosVisao = ondaDados.real_kit || {};
+                est_cx = ondaDados.perfil_est_cx_rk || 0; skus_cx = ondaDados.perfil_skus_cx_rk || 0;
+                aderencia = ondaDados.aderencia_pcs_kit || 0; todas_est = ondaDados.todas_estacoes_real_kit || [];
+            }
+
+            let visaoLabel = wmsCanalAtual === 'VAREJO' ? 'REAL' : wmsVisaoAtual.replace('_', ' ');
+            setTextoSeguro('wms-onda-atual', `${wmsCanalAtual} (${visaoLabel})`);
             setTextoSeguro('wms-tarefas', formatarNumeroInteiro(dadosVisao.tar || 0));
 
-            const fr = dadosVisao.fr || {}; 
-            const gv = dadosVisao.gv || {}; 
-            const pc = dadosVisao.pc || {};
+            const fr = dadosVisao.fr || {}; const gv = dadosVisao.gv || {}; const pc = dadosVisao.pc || {};
             
-            setTextoSeguro('wms-fr-pcs', formatarNumeroInteiro(fr.pcs || 0)); 
-            setTextoSeguro('wms-fr-cxs', formatarNumeroInteiro(fr.cxs || 0)); 
-            setTextoSeguro('wms-fr-pc-cx', fr.pc_cx || 0); 
-            setTextoSeguro('wms-fr-tar', formatarNumeroInteiro(fr.tar || 0));
-            
-            setTextoSeguro('wms-gv-pcs', formatarNumeroInteiro(gv.pcs || 0)); 
-            setTextoSeguro('wms-gv-cxs', formatarNumeroInteiro(gv.cxs || 0)); 
-            setTextoSeguro('wms-gv-pc-cx', gv.pc_cx || 0); 
-            setTextoSeguro('wms-gv-tar', formatarNumeroInteiro(gv.tar || 0));
-            
-            setTextoSeguro('wms-pc-pcs', formatarNumeroInteiro(pc.pcs || 0)); 
-            setTextoSeguro('wms-pc-cxs', formatarNumeroInteiro(pc.cxs || 0)); 
-            setTextoSeguro('wms-pc-pc-cx', pc.pc_cx || 0); 
-            setTextoSeguro('wms-pc-tar', formatarNumeroInteiro(pc.tar || 0));
+            setTextoSeguro('wms-fr-pcs', formatarNumeroInteiro(fr.pcs || 0)); setTextoSeguro('wms-fr-cxs', formatarNumeroInteiro(fr.cxs || 0)); setTextoSeguro('wms-fr-pc-cx', fr.pc_cx || 0); setTextoSeguro('wms-fr-tar', formatarNumeroInteiro(fr.tar || 0));
+            setTextoSeguro('wms-gv-pcs', formatarNumeroInteiro(gv.pcs || 0)); setTextoSeguro('wms-gv-cxs', formatarNumeroInteiro(gv.cxs || 0)); setTextoSeguro('wms-gv-pc-cx', gv.pc_cx || 0); setTextoSeguro('wms-gv-tar', formatarNumeroInteiro(gv.tar || 0));
+            setTextoSeguro('wms-pc-pcs', formatarNumeroInteiro(pc.pcs || 0)); setTextoSeguro('wms-pc-cxs', formatarNumeroInteiro(pc.cxs || 0)); setTextoSeguro('wms-pc-pc-cx', pc.pc_cx || 0); setTextoSeguro('wms-pc-tar', formatarNumeroInteiro(pc.tar || 0));
 
             const cardAderencia = document.getElementById('card-aderencia-wms');
             const gridWMS = document.getElementById('grid-wms-cards');
@@ -1891,20 +1877,16 @@
             } else {
                 if (cardAderencia) cardAderencia.style.display = 'flex';
                 if (gridWMS) gridWMS.style.gridTemplateColumns = 'repeat(4, 1fr)';
-                setTextoSeguro('wms-aderencia', `${ondaDados.aderencia_pcs}%`);
-                setEstiloSeguro('bar-aderencia-fill', 'width', `${Math.min(ondaDados.aderencia_pcs, 100)}%`);
+                setTextoSeguro('wms-aderencia', `${aderencia}%`);
+                setEstiloSeguro('bar-aderencia-fill', 'width', `${Math.min(aderencia, 100)}%`);
             }
             
-            setTextoSeguro('wms-est-cx', ondaDados.perfil_est_cx);
-            setTextoSeguro('wms-skus-cx', ondaDados.perfil_skus_cx);
-            desenharGraficosChartJS(ondaDados.todas_estacoes);
+            setTextoSeguro('wms-est-cx', est_cx);
+            setTextoSeguro('wms-skus-cx', skus_cx);
+            desenharGraficosChartJS(todas_est);
         }
 
-        // ==========================================
-        // CARREGAMENTO GLOBAL
-        // ==========================================
         function carregarDados() {
-            // DADOS TUs
             if (typeof dadosDashboard !== 'undefined') {
                 const dados = dadosDashboard;
                 setTextoSeguro('txt-status-sync', `LIVE • ${dados.atualizado_em || ''}`);
@@ -1952,14 +1934,11 @@
                 }
             }
 
-            // DADOS WMS E FILTRO DE DATA
             if (typeof dadosDemandaWMS !== 'undefined') {
                 dadosOndasGeral = dadosDemandaWMS.ondas || [];
                 setTextoSeguro('txt-wms-status-sync', `LIVE • ${dadosDemandaWMS.atualizado_em || ''}`);
 
                 const inputData = document.getElementById('filtro-data-wms');
-                
-                // Se o calendário estiver vazio ao entrar na página, define a data exata de HOJE como padrão
                 if (!inputData.value) {
                     const hoje = new Date();
                     const ano = hoje.getFullYear();
@@ -1967,12 +1946,9 @@
                     const dia = String(hoje.getDate()).padStart(2, '0');
                     inputData.value = `${ano}-${mes}-${dia}`;
                 }
-                
-                // Aplica o filtro com a data atualizada
                 aplicarFiltroDataWMS();
             }
 
-            // DADOS MOVIMENTAÇÕES
             if (typeof dadosMovimentacoes !== 'undefined') {
                 const mov = dadosMovimentacoes;
                 setTextoSeguro('txt-mov-status-sync', `LIVE • ${mov.atualizado_em || ''}`);
