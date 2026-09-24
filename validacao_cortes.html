@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Validação de Cortes</title>
+    <!-- Adicionando a biblioteca para processar as planilhas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     
     <style>
@@ -755,7 +756,7 @@
                 let retidoMotivo = null;
                 if (!pecaAdicionadaAoSaldo) {
                     if (pos.includes('PICLINHA')) retidoMotivo = 'Divergência de Estoque (PICLINHA)';
-                    else if (tDep === '0603' && pos === 'DIVCIC') retidoMotivo = 'Venda Maior que o Saldo'; 
+                    else if (tDep === '0603' && pos === 'DIVCIC') retidoMotivo = 'Item em DIVCIC'; 
                     else if (tDep === '0601' || tDep === '0602' || tEst.startsWith('Q') || tEst.startsWith('C3') || tEst.startsWith('C4') || tEst.startsWith('P4')) retidoMotivo = 'Estoque em Controle de Qualidade';
                     else if (pos.includes('9010')) retidoMotivo = 'Saldo em Equalização'; 
                     else if (tDep === '0603' && pos === 'RECUSA.LOG') retidoMotivo = 'Venda Maior que o Saldo'; 
