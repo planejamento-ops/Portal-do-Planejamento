@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "24/09/2026 23:25",
+  "atualizado_em": "24/09/2026 23:53",
   "progresso_geral_pct": 68,
   "total_cxs_geral": 86995,
   "total_loaded_cxs_geral": 59825,
@@ -55,267 +55,6 @@ window.dadosFechamento = {
     }
   },
   "tabela": [
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 08",
-      "tu": "610000012871",
-      "total_caixas": 1688,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 05",
-      "tu": "610000012872",
-      "total_caixas": 2048,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 13",
-      "tu": "610000012873",
-      "total_caixas": 2117,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 06",
-      "tu": "610000012874",
-      "total_caixas": 2048,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 10",
-      "tu": "610000012881",
-      "total_caixas": 2124,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 11",
-      "tu": "610000012883",
-      "total_caixas": 2088,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 12",
-      "tu": "610000012885",
-      "total_caixas": 2116,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 09",
-      "tu": "610000012913",
-      "total_caixas": 2086,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 05",
-      "tu": "610000012926",
-      "total_caixas": 521,
-      "caixas_carregadas": 0,
-      "pct": 0,
-      "status": "PENDENTE"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 07",
-      "tu": "610000012908",
-      "total_caixas": 2048,
-      "caixas_carregadas": 185,
-      "pct": 9,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGC",
-      "carreta": "Carreta 05",
-      "tu": "610000012860",
-      "total_caixas": 1965,
-      "caixas_carregadas": 305,
-      "pct": 15,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 04",
-      "tu": "610000012868",
-      "total_caixas": 2010,
-      "caixas_carregadas": 394,
-      "pct": 19,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 04",
-      "tu": "610000012953",
-      "total_caixas": 531,
-      "caixas_carregadas": 178,
-      "pct": 33,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 03",
-      "tu": "610000012867",
-      "total_caixas": 1733,
-      "caixas_carregadas": 659,
-      "pct": 38,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 04",
-      "tu": "610000012952",
-      "total_caixas": 639,
-      "caixas_carregadas": 282,
-      "pct": 44,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGC",
-      "carreta": "Carreta 04",
-      "tu": "610000012859",
-      "total_caixas": 1377,
-      "caixas_carregadas": 678,
-      "pct": 49,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 01",
-      "tu": "610000012869",
-      "total_caixas": 1560,
-      "caixas_carregadas": 903,
-      "pct": 57,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "SPI",
-      "carreta": "Carreta 02",
-      "tu": "610000012907",
-      "total_caixas": 1932,
-      "caixas_carregadas": 1141,
-      "pct": 59,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGC",
-      "carreta": "Carreta 06",
-      "tu": "610000012861",
-      "total_caixas": 1835,
-      "caixas_carregadas": 1197,
-      "pct": 65,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 04",
-      "tu": "610000012925",
-      "total_caixas": 700,
-      "caixas_carregadas": 528,
-      "pct": 75,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 04",
-      "tu": "610000012922",
-      "total_caixas": 332,
-      "caixas_carregadas": 266,
-      "pct": 80,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 22",
-      "tu": "610000012805",
-      "total_caixas": 2085,
-      "caixas_carregadas": 1811,
-      "pct": 86,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGC",
-      "carreta": "Carreta 02",
-      "tu": "610000012857",
-      "total_caixas": 1613,
-      "caixas_carregadas": 1510,
-      "pct": 93,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGC",
-      "carreta": "Carreta 01",
-      "tu": "610000012856",
-      "total_caixas": 2092,
-      "caixas_carregadas": 2088,
-      "pct": 99,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 01",
-      "tu": "610000012745",
-      "total_caixas": 2058,
-      "caixas_carregadas": 2056,
-      "pct": 99,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 02",
-      "tu": "610000012746",
-      "total_caixas": 1236,
-      "caixas_carregadas": 1234,
-      "pct": 99,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 04",
-      "tu": "610000012748",
-      "total_caixas": 1819,
-      "caixas_carregadas": 1818,
-      "pct": 99,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 07",
-      "tu": "610000012749",
-      "total_caixas": 2245,
-      "caixas_carregadas": 2244,
-      "pct": 99,
-      "status": "EM ANDAMENTO"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 01",
-      "tu": "610000012796",
-      "total_caixas": 125,
-      "caixas_carregadas": 124,
-      "pct": 99,
-      "status": "EM ANDAMENTO"
-    },
     {
       "atendimento": "MGC",
       "carreta": "Carreta 03",
@@ -657,6 +396,267 @@ window.dadosFechamento = {
       "caixas_carregadas": 1046,
       "pct": 100,
       "status": "FINALIZADA"
+    },
+    {
+      "atendimento": "MGC",
+      "carreta": "Carreta 01",
+      "tu": "610000012856",
+      "total_caixas": 2092,
+      "caixas_carregadas": 2088,
+      "pct": 99,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 01",
+      "tu": "610000012745",
+      "total_caixas": 2058,
+      "caixas_carregadas": 2056,
+      "pct": 99,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 02",
+      "tu": "610000012746",
+      "total_caixas": 1236,
+      "caixas_carregadas": 1234,
+      "pct": 99,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 04",
+      "tu": "610000012748",
+      "total_caixas": 1819,
+      "caixas_carregadas": 1818,
+      "pct": 99,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 07",
+      "tu": "610000012749",
+      "total_caixas": 2245,
+      "caixas_carregadas": 2244,
+      "pct": 99,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 01",
+      "tu": "610000012796",
+      "total_caixas": 125,
+      "caixas_carregadas": 124,
+      "pct": 99,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGC",
+      "carreta": "Carreta 02",
+      "tu": "610000012857",
+      "total_caixas": 1613,
+      "caixas_carregadas": 1510,
+      "pct": 93,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 22",
+      "tu": "610000012805",
+      "total_caixas": 2085,
+      "caixas_carregadas": 1811,
+      "pct": 86,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 04",
+      "tu": "610000012922",
+      "total_caixas": 332,
+      "caixas_carregadas": 266,
+      "pct": 80,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 04",
+      "tu": "610000012925",
+      "total_caixas": 700,
+      "caixas_carregadas": 528,
+      "pct": 75,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGC",
+      "carreta": "Carreta 06",
+      "tu": "610000012861",
+      "total_caixas": 1835,
+      "caixas_carregadas": 1197,
+      "pct": 65,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 02",
+      "tu": "610000012907",
+      "total_caixas": 1932,
+      "caixas_carregadas": 1141,
+      "pct": 59,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 01",
+      "tu": "610000012869",
+      "total_caixas": 1560,
+      "caixas_carregadas": 903,
+      "pct": 57,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGC",
+      "carreta": "Carreta 04",
+      "tu": "610000012859",
+      "total_caixas": 1377,
+      "caixas_carregadas": 678,
+      "pct": 49,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 04",
+      "tu": "610000012952",
+      "total_caixas": 639,
+      "caixas_carregadas": 282,
+      "pct": 44,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 03",
+      "tu": "610000012867",
+      "total_caixas": 1733,
+      "caixas_carregadas": 659,
+      "pct": 38,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 04",
+      "tu": "610000012953",
+      "total_caixas": 531,
+      "caixas_carregadas": 178,
+      "pct": 33,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 04",
+      "tu": "610000012868",
+      "total_caixas": 2010,
+      "caixas_carregadas": 394,
+      "pct": 19,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGC",
+      "carreta": "Carreta 05",
+      "tu": "610000012860",
+      "total_caixas": 1965,
+      "caixas_carregadas": 305,
+      "pct": 15,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 07",
+      "tu": "610000012908",
+      "total_caixas": 2048,
+      "caixas_carregadas": 185,
+      "pct": 9,
+      "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 08",
+      "tu": "610000012871",
+      "total_caixas": 1688,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 05",
+      "tu": "610000012872",
+      "total_caixas": 2048,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 13",
+      "tu": "610000012873",
+      "total_caixas": 2117,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 06",
+      "tu": "610000012874",
+      "total_caixas": 2048,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 10",
+      "tu": "610000012881",
+      "total_caixas": 2124,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 11",
+      "tu": "610000012883",
+      "total_caixas": 2088,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 12",
+      "tu": "610000012885",
+      "total_caixas": 2116,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "SPI",
+      "carreta": "Carreta 09",
+      "tu": "610000012913",
+      "total_caixas": 2086,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 05",
+      "tu": "610000012926",
+      "total_caixas": 521,
+      "caixas_carregadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
     }
   ]
 };
