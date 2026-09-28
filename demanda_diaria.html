@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Demanda Diária</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        /* ========================================= */
+        /* BASE & TEMA CLARO (PADRÃO DEFINITIVO)     */
+        /* ========================================= */
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f6f9; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; color: #2c3e50; min-height: 100vh; transition: background 0.3s ease, color 0.3s ease; }
+        
+        .btn-theme-toggle { position: absolute; top: 20px; right: 20px; background-color: #002b5e; color: white; border: none; padding: 10px 18px; border-radius: 20px; font-weight: bold; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: all 0.3s ease; z-index: 10; }
+        .btn-theme-toggle:hover { transform: scale(1.05); }
+
+        .top-bar { width: 100%; max-width: 1000px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid #e11b22; padding-bottom: 15px; }
+        .app-title { font-size: 26px; font-weight: 800; text-transform: uppercase; color: #002b5e; margin: 0; letter-spacing: 0.5px; }
+        .app-title span { color: #e11b22; }
+        
+        .ceva-logo { height: 32px; }
+        .ceva-text-path { fill: #002b5e; transition: fill 0.3s ease; }
+
+        .container { background-color: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); width: 100%; max-width: 1000px; margin-bottom: 30px; transition: all 0.3s ease; border: 1px solid #e9ecef; }
+        
+        .section-title { font-size: 14px; color: #002b5e; font-weight: 700; text-transform: uppercase; margin-top: 25px; margin-bottom: 15px; letter-spacing: 1px; display: flex; align-items: center; }
+        .section-title::before { content: ""; display: inline-block; width: 4px; height: 16px; background-color: #e11b22; margin-right: 8px; border-radius: 2px; }
+
+        .grid-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        
+        .file-card { background-color: #ffffff; border: 2px dashed #b0bec5; border-radius: 10px; padding: 20px 15px; text-align: center; cursor: pointer; transition: all 0.2s ease; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 110px; position: relative; }
+        .file-card:hover { border-color: #0052cc; background-color: #f8faff; }
+        .file-card.has-file { border-color: #25d366; border-style: solid; background-color: #f0fff4; }
+        
+        .file-card input[type="file"] { display: none; }
+        .file-title { font-weight: 700; color: #002b5e; font-size: 14px; margin-bottom: 4px; text-transform: uppercase; text-align: center;}
+        .file-subtitle { font-size: 11px; color: #6c757d; margin-bottom: 10px; }
+        .file-name { font-size: 12px; color: #0052cc; font-weight: 700; background: rgba(0, 82, 204, 0.1); padding: 4px 10px; border-radius: 6px; display: none; word-break: break-all; }
+        
+        .card-turno { border-color: #d48806 !important; }
+        .card-turno .file-title { color: #d48806 !important; }
+        .card-turno:hover { border-color: #b27300 !important; background-color: #fffdf8 !important; }
+        
+        .date-card { background-color: #ffffff; border: 2px solid #b0bec5; border-radius: 10px; padding: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .date-card input[type="date"] { width: 100%; background: #ffffff; color: #002b5e; border: 1px solid #b0bec5; padding: 8px; border-radius: 6px; font-weight: bold; font-family: 'Segoe UI', sans-serif; outline: none; margin-top: 8px; cursor: pointer; }
+
+        .loaded-state { border-color: #25d366 !important; background-color: #f0fff4 !important; border-style: solid !important; }
+        .loaded-text { color: #25d366 !important; font-weight: 800 !important; background: rgba(37, 211, 102, 0.1) !important; display: block !important; }
+
+        .btn-acao { background-color: #223f8f; color: white; border: none; padding: 16px 30px; font-size: 15px; font-weight: 700; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; transition: all 0.2s ease; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(34, 63, 143, 0.2); }
+        .btn-acao:hover { background-color: #1a3070; transform: translateY(-1px); }
+        
+        #status-msg { margin-top: 20px; text-align: center; font-weight: bold; font-size: 14px; color: #0052cc; }
+
+        /* ========================================= */
+        /* PRINT FINAL DA TABELA                     */
+        /* ========================================= */
+        #painel-wrapper { display: flex; flex-direction: column; align-items: center; width: 100%; }
+        
+        #btn-container { display: none; gap: 15px; width: 100%; max-width: 950px; margin-top: 20px; margin-bottom: 50px; }
+        .btn-export { background: linear-gradient(90deg, #002b5e 0%, #001a38 100%); flex: 2; margin: 0; box-shadow: 0 4px 12px rgba(0, 43, 94, 0.3); }
+        .btn-export:hover { background: linear-gradient(90deg, #003a80 0%, #002147 100%); }
+        .btn-salvar { background: linear-gradient(90deg, #d48806 0%, #b27300 100%); flex: 1; margin: 0; box-shadow: 0 4px 12px rgba(212, 136, 6, 0.3); }
+        .btn-salvar:hover { background: linear-gradient(90deg, #b27300 0%, #8a5a00 100%); }
+
+        #painel-export { background: #ffffff; padding: 30px 40px; border-radius: 12px; display: none; margin-top: 10px; width: 100%; max-width: 950px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); transition: background 0.3s ease; box-sizing: border-box; }
+        
+        .print-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #f0f2f5; padding-bottom: 15px; }
+        .print-title { color: #002b5e; font-size: 22px; font-weight: 800; margin: 0; text-transform: uppercase; }
+        .print-logo { height: 26px; }
+
+        table { border-collapse: collapse; width: 100%; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 14px; text-align: center; color: #333333; }
+        th, td { border: 1px solid #dcdfe6; padding: 10px 6px; }
+        
+        .bg-titulo { background-color: #002b5e; color: #ffffff; font-weight: 700; font-size: 14px; text-align: left; padding-left: 15px; border-top: 3px solid #e11b22; }
+        .bg-header { background-color: #f8f9fa; color: #495057; font-weight: 700; font-size: 12px; text-transform: uppercase; }
+        
+        .row-cart { font-weight: 700; color: #002b5e; background-color: #ffffff; }
+        .bg-normal { background-color: #ffffff; color: #333333; }
+        .bg-pendente { background-color: #f4f8fd; color: #004085; font-weight: 600; }
+        .bg-concluido { background-color: #fdf5f5; color: #b31016; font-weight: 600; }
+        
+        .bg-total { background-color: #002b5e; color: white; font-weight: 700; }
+        .bg-total-pendente { background-color: #004085; color: #e6f0ff; font-weight: 700; }
+        .bg-total-concluido { background-color: #b31016; color: #fdf5f5; font-weight: 700; }
+        
+        .bg-geral { background-color: #e4e7ed; font-weight: 800; color: #002b5e; }
+        .bg-geral-pend { background-color: #fff8e1; font-weight: 800; color: #b27300; }
+        .bg-geral-concluido { background-color: #fdf5f5; font-weight: 800; color: #b31016; }
+        
+        .col-destaque { font-weight: 700; }
+        .bg-perfil { background-color: #2b3a5c; color: white; font-weight: 700; }
+        .bg-perfil-pend { background-color: #4a5c82; color: white; font-weight: 700; }
+
+        .nota-perfil { font-size: 12px; color: #606266; margin-top: 15px; text-align: left; background: #f8f9fa; padding: 12px 15px; border-radius: 6px; border-left: 3px solid #0052cc; line-height: 1.5; }
+        .nota-perfil strong { color: #002b5e; }
+
+        /* ========================================= */
+        /* TEMA MODO ESCURO (DARK MODE)              */
+        /* ========================================= */
+        body.dark-mode { background-color: #0d1117; color: #c9d1d9; }
+        
+        body.dark-mode .btn-theme-toggle { background-color: #ffffff; color: #0d1117; }
+        body.dark-mode .app-title { color: #ffffff; border-bottom-color: #e11b22; }
+        body.dark-mode .ceva-text-path { fill: #ffffff; }
+        
+        body.dark-mode .container { background-color: #161b22; box-shadow: 0 8px 25px rgba(0,0,0,0.6); border: 1px solid #30363d; }
+        body.dark-mode .section-title { color: #8b949e; }
+        
+        body.dark-mode .file-card { background-color: #0d1117; border-color: #30363d; }
+        body.dark-mode .file-card:hover { border-color: #58a6ff; background-color: #1c2128; }
+        body.dark-mode .file-card.has-file { border-color: #238636; background-color: #102a1b; }
+        body.dark-mode .file-title { color: #c9d1d9; }
+        body.dark-mode .file-subtitle { color: #8b949e; }
+        body.dark-mode .file-name { color: #58a6ff; background: rgba(88, 166, 255, 0.1); }
+        
+        body.dark-mode .card-turno { border-color: #d48806 !important; background-color: #161b22 !important; }
+        body.dark-mode .card-turno:hover { border-color: #ffcc66 !important; background-color: #2b2214 !important; }
+        body.dark-mode .card-turno .file-title { color: #ffcc66 !important; }
+
+        body.dark-mode .loaded-state { background-color: #102a1b !important; border-color: #238636 !important; }
+
+        body.dark-mode .date-card { background-color: #0d1117; border-color: #30363d; }
+        body.dark-mode .date-card input[type="date"] { background: #161b22; color: #58a6ff; border-color: #30363d; }
+
+        body.dark-mode .btn-acao { background-color: #1f6feb; color: #ffffff; }
+        body.dark-mode .btn-acao:hover { background-color: #388bfd; }
+
+        body.dark-mode #status-msg { color: #58a6ff; }
+
+        body.dark-mode #painel-export { background: #161b22; border: 1px solid #30363d; }
+        body.dark-mode .print-title { color: #c9d1d9; }
+        body.dark-mode .print-header { border-bottom-color: #30363d; }
+        
+        body.dark-mode table { color: #c9d1d9; }
+        body.dark-mode th, body.dark-mode td { border-color: #30363d; }
+        
+        body.dark-mode .bg-titulo { background-color: #0d1117; color: #ffffff; border-top: 3px solid #e11b22; }
+        body.dark-mode .bg-header { background-color: #21262d; color: #8b949e; }
+        
+        body.dark-mode .row-cart { color: #58a6ff; background-color: #161b22; }
+        
+        body.dark-mode .bg-normal { background-color: #161b22; color: #c9d1d9; }
+        body.dark-mode .bg-pendente { background-color: #1c2a3f; color: #79c0ff; }
+        body.dark-mode .bg-concluido { background-color: #3f1d1d; color: #ff7b72; }
+        
+        body.dark-mode .bg-total { background-color: #0d1117; color: #ffffff; }
+        body.dark-mode .bg-total-pendente { background-color: #111e30; color: #79c0ff; }
+        body.dark-mode .bg-total-concluido { background-color: #2c1212; color: #ff7b72; }
+        
+        body.dark-mode .bg-geral { background-color: #21262d; color: #ffffff; }
+        body.dark-mode .bg-geral-pend { background-color: #332b1f; color: #e3b341; }
+        body.dark-mode .bg-geral-concluido { background-color: #3f1d1d; color: #ff7b72; }
+        
+        body.dark-mode .bg-perfil { background-color: #0d1117; color: #58a6ff; }
+        body.dark-mode .bg-perfil-pend { background-color: #21262d; color: #8b949e; }
+
+        body.dark-mode .nota-perfil { background: #0d1117; color: #8b949e; border-left: 3px solid #58a6ff; }
+        body.dark-mode .nota-perfil strong { color: #c9d1d9; }
+    </style>
+</head>
+<body>
+
+    <button class="btn-theme-toggle" onclick="toggleTheme()" id="btnTheme">
+        🌙 Modo Escuro
+    </button>
+
+    <div class="top-bar">
+        <h2 class="app-title">Atualizar Demanda Diária</h2>
+        <svg class="ceva-logo" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+            <path class="ceva-text-path" d="M 30 35 C 15 35 10 25 10 17 C 10 9 15 2 30 2 C 40 2 45 8 47 12 L 36 16 C 35 12 32 10 29 10 C 22 10 20 14 20 17 C 20 22 22 26 29 26 C 33 26 36 23 37 19 L 48 23 C 45 30 38 35 30 35 Z"/>
+            <path class="ceva-text-path" d="M 52 2 L 82 2 L 82 10 L 62 10 L 62 14 L 78 14 L 78 22 L 62 22 L 62 27 L 83 27 L 83 35 L 52 35 Z"/>
+            <path class="ceva-text-path" d="M 85 2 L 96 2 L 105 25 L 114 2 L 125 2 L 110 35 L 100 35 Z"/>
+            <path d="M 140 2 L 158 35 L 146 35 L 140 23 L 134 35 L 122 35 Z" fill="#e11b22"/>
+            <text class="ceva-text-path" x="65" y="47" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="800" font-size="11" letter-spacing="3.5">LOGISTICS</text>
+        </svg>
+    </div>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="container">
+        <div class="section-title">Dados Base (SAP)</div>
+        <div class="grid-row">
+            <label class="file-card" id="cardBipagem">
+                <div class="file-title">Relatório de Bipagem</div>
+                <div class="file-subtitle">TU's em Processo (.csv)</div>
+                <input type="file" id="bipagem" accept=".csv" onchange="updateFileUI(this)">
+                <div class="file-name">Nenhum arquivo</div>
+            </label>
+            
+            <label class="file-card" id="cardCaixas">
+                <div class="file-title">Ordens de Depósito</div>
+                <div class="file-subtitle">Caixas SAP (.csv)</div>
+                <input type="file" id="caixas" accept=".csv" onchange="updateFileUI(this)">
+                <div class="file-name">Nenhum arquivo</div>
+            </label>
+
+            <label class="file-card" id="cardPecas">
+                <div class="file-title">Tarefas de Depósito</div>
+                <div class="file-subtitle">Peças SAP (.csv)</div>
+                <input type="file" id="pecas" accept=".csv" multiple onchange="updateFileUI(this)">
+                <div class="file-name">Nenhum arquivo</div>
+            </label>
+        </div>
+
+        <div class="section-title">Planilhas de Controle & Gestão de Turno</div>
+        <div class="grid-row" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            
+            <label class="file-card" id="cardStatusOp">
+                <div class="file-title">Status Operação</div>
+                <div class="file-subtitle">Planilha Mãe (.csv)</div>
+                <input type="file" id="statusOp" accept=".csv" onchange="updateFileUI(this)">
+                <div class="file-name">Nenhum arquivo</div>
+            </label>
+            
+            <label class="file-card" id="cardControleTu">
+                <div class="file-title">Controle TU</div>
+                <div class="file-subtitle">Sempre Atualize Aqui (.csv)</div>
+                <input type="file" id="controleTu" accept=".csv" onchange="updateFileUI(this)">
+                <div class="file-name">Nenhum arquivo</div>
+            </label>
+
+            <label class="file-card card-turno" id="cardTurno">
+                <div class="file-title">Carregar Turno</div>
+                <div class="file-subtitle">Recuperar dados (.json)</div>
+                <input type="file" id="arquivoTurno" accept=".json" onchange="carregarTurno(this)">
+                <div class="file-name">Nenhum arquivo</div>
+            </label>
+
+            <div class="date-card">
+                <div class="file-title" style="margin-bottom: 2px;">Data de Corte</div>
+                <div class="file-subtitle" style="margin-bottom: 0;">Somar apenas concluídos ATÉ:</div>
+                <input type="date" id="dataCorte">
+            </div>
+        </div>
+        
+        <button class="btn-acao" onclick="processarDados()">Processar Demanda Diária</button>
+        <div id="status-msg"></div>
+    </div>
+
+    <!-- ÁREA DO PRINT -->
+    <div id="painel-wrapper">
+        <div id="painel-export">
+            <div class="print-header">
+                <h2 class="print-title">Análise de Demanda Diária</h2>
+                <svg class="print-logo" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+                    <path class="ceva-text-path" d="M 30 35 C 15 35 10 25 10 17 C 10 9 15 2 30 2 C 40 2 45 8 47 12 L 36 16 C 35 12 32 10 29 10 C 22 10 20 14 20 17 C 20 22 22 26 29 26 C 33 26 36 23 37 19 L 48 23 C 45 30 38 35 30 35 Z"/>
+                    <path class="ceva-text-path" d="M 52 2 L 82 2 L 82 10 L 62 10 L 62 14 L 78 14 L 78 22 L 62 22 L 62 27 L 83 27 L 83 35 L 52 35 Z"/>
+                    <path class="ceva-text-path" d="M 85 2 L 96 2 L 105 25 L 114 2 L 125 2 L 110 35 L 100 35 Z"/>
+                    <path d="M 140 2 L 158 35 L 146 35 L 140 23 L 134 35 L 122 35 Z" fill="#e11b22"/>
+                    <text class="ceva-text-path" x="65" y="47" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="800" font-size="11" letter-spacing="3.5">LOGISTICS</text>
+                </svg>
+            </div>
+            
+            <div id="tabela-container"></div>
+            
+            <div class="nota-perfil">
+                <strong>💡 Entendendo o Perfil:</strong> O valor do Perfil representa a média de Peças Fracionadas (LN) por Caixa Fracionada (LN). Este indicador exclui os Grandes Volumes (GV) e serve para medir a densidade da separação (*fill rate*), impactando diretamente o tempo estimado de *picking* na operação.
+            </div>
+        </div>
+
+        <div id="btn-container">
+            <button id="btnCopiar" class="btn-acao btn-export" onclick="copiarImagem()">📸 Copiar Imagem de Envio</button>
+            <button id="btnSalvarTurno" class="btn-acao btn-salvar" onclick="salvarTurno()">💾 Salvar Turno (Backup)</button>
+        </div>
+    </div>
+
+    <script>
+        // MEMÓRIA GLOBAL DO SISTEMA
+        let estadoTurno = { bipagem: [], caixas: [], pecas: [], statusBruto: [], tusConhecidas: [] };
+
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('btnTheme');
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) { btn.innerHTML = '☀️ Modo Claro'; } 
+            else { btn.innerHTML = '🌙 Modo Escuro'; }
+        }
+
+        window.onload = function() {
+            let today = new Date();
+            let dd = String(today.getDate()).padStart(2, '0');
+            let mm = String(today.getMonth() + 1).padStart(2, '0');
+            let yyyy = today.getFullYear();
+            document.getElementById('dataCorte').value = yyyy + '-' + mm + '-' + dd;
+        };
+
+        function updateFileUI(input) {
+            let card = input.parentElement;
+            let nameDiv = card.querySelector('.file-name');
+            card.classList.remove('loaded-state');
+            nameDiv.classList.remove('loaded-text');
+            
+            if (input.files && input.files.length > 0) {
+                card.classList.add('has-file');
+                nameDiv.style.display = 'block';
+                if (input.files.length > 1) nameDiv.innerText = input.files.length + " arquivos";
+                else nameDiv.innerText = input.files[0].name;
+            } else {
+                card.classList.remove('has-file');
+                nameDiv.style.display = 'none';
+            }
+        }
+
+        function marcarCardComoCarregado(cardId) {
+            let card = document.getElementById(cardId);
+            card.classList.add('loaded-state');
+            let nameDiv = card.querySelector('.file-name');
+            nameDiv.classList.add('loaded-text');
+            nameDiv.style.display = 'block';
+            nameDiv.innerText = "RECUPERADO DO TURNO";
+        }
+
+        function carregarTurno(input) {
+            let file = input.files[0];
+            if (!file) return;
+
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    let backup = JSON.parse(e.target.result);
+                    if(backup.bipagem && backup.caixas) {
+                        estadoTurno = backup;
+                        if(!estadoTurno.tusConhecidas) estadoTurno.tusConhecidas = []; 
+                        marcarCardComoCarregado('cardBipagem');
+                        marcarCardComoCarregado('cardCaixas');
+                        marcarCardComoCarregado('cardPecas');
+                        marcarCardComoCarregado('cardStatusOp');
+                        updateFileUI(input);
+                        const statusDiv = document.getElementById('status-msg');
+                        statusDiv.style.color = '#25d366';
+                        statusDiv.innerText = "✅ Turno recuperado! Anexe o NOVO 'Controle TU' e processe.";
+                    } else { alert("Arquivo de turno inválido."); }
+                } catch (err) { alert("Erro ao ler o arquivo de turno. Arquivo corrompido."); }
+            };
+            reader.readAsText(file);
+        }
+
+        function salvarTurno() {
+            if (!estadoTurno.bipagem || estadoTurno.bipagem.length === 0) {
+                alert("A demanda precisa ser processada primeiro!");
+                return;
+            }
+            let dataStr = JSON.stringify(estadoTurno);
+            let blob = new Blob([dataStr], { type: "application/json" });
+            let url = URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = "Backup_Turno_Demanda.json";
+            a.click();
+        }
+
+        function lerCSV(file) { return new Promise((resolve, reject) => { Papa.parse(file, { header: true, skipEmptyLines: true, complete: res => resolve(res.data), error: err => reject(err) }); }); }
+        function lerCSVBruto(file) { return new Promise((resolve, reject) => { Papa.parse(file, { header: false, skipEmptyLines: true, complete: res => resolve(res.data), error: err => reject(err) }); }); }
+        function limparNumero(valor) { let valStr = String(valor||'').trim().replace(/\./g, '').replace(',', '.'); let num = parseFloat(valStr); return isNaN(num) ? 0 : num; }
+        function limparChave(valor) { return String(valor || '').trim().replace(/\.0$/, '').replace(/^0+/, ''); }
+        
+        // CAÇADOR DE COLUNAS
+        function acharValor(linha, possiveisNomes) { 
+            for (let key in linha) { 
+                let kUp = String(key).toUpperCase().trim(); 
+                for (let nome of possiveisNomes) { 
+                    if (kUp.includes(nome.toUpperCase()) || kUp === nome.toUpperCase()) {
+                        return linha[key]; 
+                    }
+                } 
+            } 
+            return ''; 
+        }
+
+        function descobrirCarteira(uf, atendimento) {
+            uf = String(uf || '').trim().toUpperCase(); let at = String(atendimento || '').trim().toUpperCase();
+            if (at.includes('VAREJO') || uf === 'SP') return 'VAREJO';
+            if (uf) return 'BOT ' + uf;
+            return 'BOT INDEFINIDO'; 
+        }
+
+        async function processarDados() {
+            const statusDiv = document.getElementById('status-msg');
+            const painelExport = document.getElementById('painel-export');
+            const btnContainer = document.getElementById('btn-container');
+            const tabelaContainer = document.getElementById('tabela-container');
+            
+            statusDiv.style.color = document.body.classList.contains('dark-mode') ? '#58a6ff' : '#0052cc'; 
+            statusDiv.innerText = "Processando cruzamento... Aguarde.";
+            painelExport.style.display = 'none'; btnContainer.style.display = 'none';
+
+            const inBip = document.getElementById('bipagem').files[0];
+            const inCaixas = document.getElementById('caixas').files[0];
+            const inPecas = document.getElementById('pecas').files;
+            const inStatus = document.getElementById('statusOp').files[0];
+            const inControle = document.getElementById('controleTu').files[0];
+            const valDataCorte = document.getElementById('dataCorte').value;
+
+            let temTurno = (estadoTurno.bipagem.length > 0);
+
+            if (!temTurno && (!inBip || !inCaixas || inPecas.length === 0 || !inStatus)) { 
+                statusDiv.style.color = '#e11b22'; statusDiv.innerText = "⚠️ Erro: Anexe os 4 arquivos base do SAP ou Carregue um Turno."; return; 
+            }
+            if (!inControle) { statusDiv.style.color = '#e11b22'; statusDiv.innerText = "⚠️ Erro: O 'Controle TU' é obrigatório mesmo usando o Turno salvo."; return; }
+            if (!valDataCorte) { statusDiv.style.color = '#e11b22'; statusDiv.innerText = "⚠️ Erro: Escolha a Data de Corte."; return; }
+
+            try {
+                let p = valDataCorte.split('-'); 
+                let dataCorteObj = new Date(p[0], p[1]-1, p[2]);
+                dataCorteObj.setHours(0,0,0,0);
+
+                let statusBruto, bipagem, caixas, pecas;
+                let tusConhecidasLocal = new Set();
+
+                if (temTurno) {
+                    statusBruto = estadoTurno.statusBruto; bipagem = estadoTurno.bipagem; caixas = estadoTurno.caixas; pecas = estadoTurno.pecas;
+                    tusConhecidasLocal = new Set(estadoTurno.tusConhecidas || []);
+                } else {
+                    statusBruto = await lerCSVBruto(inStatus); bipagem = await lerCSV(inBip); caixas = await lerCSV(inCaixas);
+                    pecas = []; for (let i = 0; i < inPecas.length; i++) { pecas = pecas.concat(await lerCSV(inPecas[i])); }
+                    estadoTurno.statusBruto = statusBruto; estadoTurno.bipagem = bipagem; estadoTurno.caixas = caixas; estadoTurno.pecas = pecas;
+                    estadoTurno.tusConhecidas = [];
+                }
+
+                const maeBruto = await lerCSVBruto(inControle);
+
+                let tusAtivas = new Set();
+                statusBruto.forEach(row => {
+                    let txtLinha = row.join(' ').toUpperCase();
+                    if (txtLinha.includes('PROCESSO') || txtLinha.includes('NÃO INICIADO')) {
+                        row.forEach(cell => { let val = limparChave(cell); if (val.startsWith('610') && val.length >= 11) tusAtivas.add(val); });
+                    }
+                });
+
+                // NOVIDADE: Pré-varredura da Bipagem. 
+                // Se a TU aparece na Bipagem de hoje, ela RESSUSCITA e entra no Total, mesmo que esteja Finalizada!
+                let tusBipadasHoje = new Set();
+                bipagem.forEach(linha => {
+                    let tu = limparChave(acharValor(linha, ['UNIDADE DE TRANSPORTE', 'Nº TU', ' TU', 'TU'])); 
+                    if (tu) tusBipadasHoje.add(tu);
+                });
+
+                let headerIndex = maeBruto.findIndex(row => row.includes('TU') && row.includes('CARRETA'));
+                let mae = maeBruto.slice(headerIndex + 1).map(row => { let obj = {}; maeBruto[headerIndex].forEach((col, j) => obj[String(col).trim()] = row[j]); return obj; });
+
+                let infoTUs = {}; 
+                let blocos = { 'NORMAL': {}, 'ESTOJO': {} };
+
+                mae.forEach(linha => {
+                    let tu = limparChave(linha['TU']);
+                    let dataTU = String(linha['DATA'] || '').trim();
+                    let statusPicking = String(linha['STATUS PICKING (Planejado)'] || '').trim().toUpperCase();
+                    
+                    if (!tu) return;
+
+                    let includeTU = false;
+                    
+                    if (statusPicking === 'DESCARTUNIZADO') {
+                        includeTU = false; 
+                    } else if (statusPicking === 'NÃO INICIADO' || statusPicking.includes('NAO INICIADO')) {
+                        includeTU = true;  
+                    } else {
+                        // REGRA DO RENASCIMENTO: Se a TU não tá ativa no SAP, mas está gerando caixas na bipagem, ELA ENTRA!
+                        if (tusAtivas.has(tu) || tusBipadasHoje.has(tu)) {
+                            includeTU = true;
+                        } else {
+                            let pts = dataTU.includes('/') ? dataTU.split('/') : dataTU.split('-');
+                            if (pts.length === 3) {
+                                let dTU = new Date(pts[2], pts[1]-1, pts[0]);
+                                dTU.setHours(0,0,0,0);
+                                if (dTU.getTime() >= dataCorteObj.getTime()) {
+                                    includeTU = true;
+                                }
+                            }
+                        }
+                    }
+
+                    if (includeTU) {
+                        tusAtivas.add(tu);
+                        let atend = String(linha['ATENDIMENTO'] || '').toUpperCase(); let uf = String(linha['UF'] || '').toUpperCase();
+                        let tipo = (atend.includes('ESTOJO') || uf.includes('ESTOJO')) ? 'ESTOJO' : 'NORMAL';
+                        let cart = descobrirCarteira(uf, atend);
+                        
+                        if (cart === 'VAREJO') tipo = 'NORMAL';
+                        
+                        if (!blocos[tipo][cart]) {
+                            blocos[tipo][cart] = {t:{ln:0,gv:0,pln:0,pgv:0}, c:{ln:0,gv:0,pln:0,pgv:0}};
+                        }
+
+                        infoTUs[tu] = { tipo: tipo, cart: cart };
+                        blocos[tipo][cart].t.ln += limparNumero(linha['LN CAIXAS']); blocos[tipo][cart].t.gv += limparNumero(linha['GV CAIXAS']);
+                        blocos[tipo][cart].t.pln += limparNumero(linha['LN PEÇAS']); blocos[tipo][cart].t.pgv += limparNumero(linha['GV PEÇAS']);
+                    }
+                });
+
+                let ordemParaTU = {};
+                bipagem.forEach(linha => {
+                    let tu = limparChave(acharValor(linha, ['UNIDADE DE TRANSPORTE', 'Nº TU', ' TU', 'TU'])); 
+                    let ordem = limparChave(acharValor(linha, ['ORDENS DE DEPOSITO', 'ORDEM DE DEP', 'ORD.DEP', 'ORDENS DE DEPÓSITO', 'ORDEM']));
+                    let dataRaw = String(acharValor(linha, ['DT.CRIAÇÃO', 'DT. CRIAÇÃO', 'DATA DE CRIAÇÃO', 'DT.CRIAÇÃO', 'CRIADO EM', 'DATA'])).trim().split(' ')[0];
+                    
+                    if (tu && ordem && infoTUs[tu]) {
+                        let dataBip = null;
+                        if (dataRaw.includes('-')) { let pts = dataRaw.split('-'); if (pts.length === 3) dataBip = pts[0].length === 4 ? new Date(pts[0], pts[1]-1, pts[2]) : new Date(pts[2], pts[1]-1, pts[0]); } 
+                        else { let pts = dataRaw.includes('/') ? dataRaw.split('/') : dataRaw.split('.'); if (pts.length === 3) dataBip = new Date(pts[2], pts[1]-1, pts[0]); }
+                        
+                        if (!dataBip || dataBip.getTime() < dataCorteObj.getTime()) {
+                            ordemParaTU[ordem] = tu;
+                        }
+                    }
+                });
+
+                let ordemParaRegra = {}; 
+                let caixasVistas = new Set(); 
+                
+                caixas.forEach(linha => {
+                    let ordem = limparChave(acharValor(linha, ['ORDENS DE DEPOSITO', 'ORDEM DE DEP', 'ORD.DEP', 'ORDENS DE DEPÓSITO', 'ORDEM'])); 
+                    let tu = ordemParaTU[ordem];
+                    
+                    if (tu) {
+                        let info = infoTUs[tu]; 
+                        let regra = acharValor(linha, ['REGRA DE CRIAÇÃO', 'REGRA CRIAÇÃO', 'REGRA']).toUpperCase().includes('GV') ? 'GV' : 'LN';
+                        ordemParaRegra[ordem] = regra;
+                        
+                        if (!caixasVistas.has(ordem)) { 
+                            caixasVistas.add(ordem); 
+                            if (regra === 'LN') blocos[info.tipo][info.cart].c.ln += 1; 
+                            else blocos[info.tipo][info.cart].c.gv += 1; 
+                        }
+                    }
+                });
+
+                pecas.forEach(linha => {
+                    let ordem = limparChave(acharValor(linha, ['ORDENS DE DEPOSITO', 'ORDEM DE DEP', 'ORD.DEP', 'ORDENS DE DEPÓSITO', 'ORDEM'])); 
+                    let tu = ordemParaTU[ordem];
+                    
+                    if (!caixasVistas.has(ordem)) return;
+
+                    if (tu) {
+                        let info = infoTUs[tu]; 
+                        let regra = ordemParaRegra[ordem] || 'LN'; 
+                        let qtd = limparNumero(acharValor(linha, ['QTD.REAL DEST', 'QTD.REAL DESTINO UMB', 'QTDDESTINO', 'QTD']));
+                        
+                        if (regra === 'LN') blocos[info.tipo][info.cart].c.pln += qtd; 
+                        else blocos[info.tipo][info.cart].c.pgv += qtd;
+                    }
+                });
+
+                let gTot = {ln:0, gv:0, pln:0, pgv:0}, gCon = {ln:0, gv:0, pln:0, pgv:0};
+                let seqGlob = 1; let html = '<table>';
+
+                function renderizarBloco(titulo, labelCart, tipo) {
+                    let linhas = ''; let hasData = false; let lTot = {ln:0, gv:0, pln:0, pgv:0}, lCon = {ln:0, gv:0, pln:0, pgv:0};
+
+                    let carteiras = Object.keys(blocos[tipo]).sort((a,b) => {
+                        if (a === 'VAREJO') return 1; if (b === 'VAREJO') return -1;
+                        return a.localeCompare(b);
+                    });
+
+                    carteiras.forEach(cart => {
+                        let t = blocos[tipo][cart].t, c = blocos[tipo][cart].c; let tPec = t.pln + t.pgv, cPec = c.pln + c.pgv;
+                        if (t.ln > 0 || t.gv > 0 || c.ln > 0 || c.gv > 0) { 
+                            hasData = true;
+                            let plnC = t.ln - c.ln, pgvC = t.gv - c.gv, plnP = t.pln - c.pln, pgvP = t.pgv - c.pgv;
+                            lTot.ln+=t.ln; lTot.gv+=t.gv; lTot.pln+=t.pln; lTot.pgv+=t.pgv; lCon.ln+=c.ln; lCon.gv+=c.gv; lCon.pln+=c.pln; lCon.pgv+=c.pgv;
+
+                            linhas += `
+                                <tr>
+                                    <td rowspan="3" style="font-weight:700; vertical-align:middle; font-size:14px;">${seqGlob++}</td>
+                                    <td class="row-cart">${cart}</td>
+                                    <td class="bg-normal">${t.ln.toLocaleString('pt-BR')}</td><td class="bg-normal">${t.gv.toLocaleString('pt-BR')}</td><td class="bg-normal">${t.pln.toLocaleString('pt-BR')}</td><td class="bg-normal">${t.pgv.toLocaleString('pt-BR')}</td><td class="bg-normal col-destaque">${tPec.toLocaleString('pt-BR')}</td>
+                                    <td class="bg-perfil">${t.ln > 0 ? Math.round(t.pln/t.ln) : 0}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-pendente">Pendente</td>
+                                    <td class="bg-pendente">${plnC.toLocaleString('pt-BR')}</td><td class="bg-pendente">${pgvC.toLocaleString('pt-BR')}</td><td class="bg-pendente">${plnP.toLocaleString('pt-BR')}</td><td class="bg-pendente">${pgvP.toLocaleString('pt-BR')}</td><td class="bg-pendente col-destaque">${(plnP+pgvP).toLocaleString('pt-BR')}</td>
+                                    <td class="bg-perfil-pend">${plnC > 0 ? Math.round(plnP/plnC) : 0}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-concluido">Concluído</td>
+                                    <td class="bg-concluido">${c.ln.toLocaleString('pt-BR')}</td><td class="bg-concluido">${c.gv.toLocaleString('pt-BR')}</td><td class="bg-concluido">${c.pln.toLocaleString('pt-BR')}</td><td class="bg-concluido">${c.pgv.toLocaleString('pt-BR')}</td><td class="bg-concluido col-destaque">${cPec.toLocaleString('pt-BR')}</td>
+                                    <td class="bg-perfil">${c.ln > 0 ? Math.round(c.pln/c.ln) : 0}</td>
+                                </tr>
+                            `;
+                        }
+                    });
+
+                    if(hasData) {
+                        let plnC = lTot.ln - lCon.ln, pgvC = lTot.gv - lCon.gv, plnP = lTot.pln - lCon.pln, pgvP = lTot.pgv - lCon.pgv;
+                        html += `
+                            <tr><th colspan="8" class="bg-titulo">${titulo}</th></tr>
+                            <tr><th class="bg-header">Seq.</th><th class="bg-header">${labelCart}</th><th class="bg-header">Caixas LN</th><th class="bg-header">Caixas GV</th><th class="bg-header">Peças LN</th><th class="bg-header">Peças GV</th><th class="bg-header">Peças Total</th><th class="bg-header">Perfil</th></tr>
+                            ${linhas}
+                            <tr><td colspan="2" class="bg-total">TOTAL</td><td class="bg-total">${lTot.ln.toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.gv.toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.pln.toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.pgv.toLocaleString('pt-BR')}</td><td class="bg-total">${(lTot.pln+lTot.pgv).toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.ln > 0 ? Math.round(lTot.pln/lTot.ln) : 0}</td></tr>
+                            <tr><td colspan="2" class="bg-total-pendente">PENDENTE</td><td class="bg-total-pendente">${plnC.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${pgvC.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${plnP.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${pgvP.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${(plnP+pgvP).toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${plnC > 0 ? Math.round(plnP/plnC) : 0}</td></tr>
+                            <tr><td colspan="2" class="bg-total-concluido">CONCLUÍDO</td><td class="bg-total-concluido">${lCon.ln.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.gv.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.pln.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.pgv.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${(lCon.pln+lCon.pgv).toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.ln > 0 ? Math.round(lCon.pln/lCon.ln) : 0}</td></tr>
+                            <tr><td colspan="8" style="border:none; height:20px; background:transparent;"></td></tr>
+                        `;
+                        gTot.ln+=lTot.ln; gTot.gv+=lTot.gv; gTot.pln+=lTot.pln; gTot.pgv+=lTot.pgv;
+                        gCon.ln+=lCon.ln; gCon.gv+=lCon.gv; gCon.pln+=lCon.pln; gCon.pgv+=lCon.pgv;
+                    }
+                }
+
+                renderizarBloco("DEMANDA DIÁRIA", "Carteira", 'NORMAL');
+                renderizarBloco("DEMANDA ESTOJO", "Estojo", 'ESTOJO');
+
+                if (gTot.ln > 0 || gTot.gv > 0) {
+                    let gplnC = gTot.ln - gCon.ln, gpgvC = gTot.gv - gCon.gv, gplnP = gTot.pln - gCon.pln, gpgvP = gTot.pgv - gCon.pgv;
+                    html += `
+                        <tr><td colspan="2" class="bg-geral">TOTAL GERAL</td><td class="bg-geral">${gTot.ln.toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.gv.toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.pln.toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.pgv.toLocaleString('pt-BR')}</td><td class="bg-geral">${(gTot.pln+gTot.pgv).toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.ln > 0 ? Math.round(gTot.pln/gTot.ln) : 0}</td></tr>
+                        <tr><td colspan="2" class="bg-geral-pend">PENDENTE GERAL</td><td class="bg-geral-pend">${gplnC.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gpgvC.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gplnP.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gpgvP.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${(gplnP+gpgvP).toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gplnC > 0 ? Math.round(gplnP/gplnC) : 0}</td></tr>
+                        <tr><td colspan="2" class="bg-geral-concluido">CONCLUÍDO GERAL</td><td class="bg-geral-concluido">${gCon.ln.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.gv.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.pln.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.pgv.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${(gCon.pln+gCon.pgv).toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.ln > 0 ? Math.round(gCon.pln/gCon.ln) : 0}</td></tr>
+                    `;
+                }
+
+                html += '</table>';
+                tabelaContainer.innerHTML = html;
+                
+                statusDiv.style.color = '#25d366'; statusDiv.innerText = "Tabela Gerada com Sucesso!";
+                painelExport.style.display = 'block'; btnContainer.style.display = 'flex';
+
+                document.getElementById('btnCopiar').scrollIntoView({ behavior: 'smooth' });
+
+            } catch (erro) {
+                statusDiv.style.color = '#e11b22'; statusDiv.innerText = "⚠️ Erro ao processar. Verifique os arquivos CSV."; console.error(erro);
+            }
+        }
+
+        function copiarImagem() {
+            const painelWrapper = document.getElementById('painel-export');
+            const btnCopiar = document.getElementById('btnCopiar');
+            const statusDiv = document.getElementById('status-msg');
+            
+            let btnOriginalText = btnCopiar.innerHTML;
+            btnCopiar.innerText = "⏳ Gerando Imagem...";
+            
+            let isDark = document.body.classList.contains('dark-mode');
+            let bgColor = isDark ? "#161b22" : "#ffffff";
+
+            html2canvas(painelWrapper, { scale: 2, backgroundColor: bgColor }).then(canvas => {
+                btnCopiar.innerHTML = btnOriginalText;
+                canvas.toBlob(blob => {
+                    try {
+                        navigator.clipboard.write([new ClipboardItem({'image/png': blob})]).then(() => {
+                            statusDiv.style.color = isDark ? '#58a6ff' : '#0052cc';
+                            statusDiv.innerText = "📸 Imagem copiada com sucesso! Cole (Ctrl+V) no WhatsApp.";
+                        });
+                    } catch(e) {
+                        let link = document.createElement('a'); link.download = 'Demanda_Ceva.png'; link.href = canvas.toDataURL(); link.click();
+                        statusDiv.style.color = isDark ? '#58a6ff' : '#0052cc';
+                        statusDiv.innerText = "O download da imagem foi concluído (cópia direta bloqueada pelo navegador).";
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -55,6 +55,7 @@
         .bloco-irdr { border-left: 3px solid #f6b93b; } .bloco-irdr .icon .material-symbols-outlined { color: #f6b93b; background: rgba(246, 185, 59, 0.12); }
         .bloco-posicao { border-left: 3px solid #9b59b6; } .bloco-posicao .icon .material-symbols-outlined { color: #9b59b6; background: rgba(155, 89, 182, 0.12); }
         .bloco-otimizador { border-left: 3px solid #3b82f6; } .bloco-otimizador .icon .material-symbols-outlined { color: #3b82f6; background: rgba(59, 130, 246, 0.12); }
+        .bloco-demanda { border-left: 3px solid #e11b22; } .bloco-demanda .icon .material-symbols-outlined { color: #e11b22; background: rgba(225, 27, 34, 0.12); }
 
         /* ========================================== */
         /* ÁREA PRINCIPAL & ABAS                      */
@@ -138,7 +139,10 @@
         .tu-detail-box { background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 12px 14px; border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
         .tu-detail-box h4 { color: #ffffff; font-size: 0.8rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; font-weight: 700; }
         .tu-detail-box h4 .material-symbols-outlined { font-size: 18px; color: #00d2ff; }
-        .box-warning h4 .material-symbols-outlined { color: #f6b93b; } .box-red h4 .material-symbols-outlined { color: #ff4b2b; } .box-purple h4 .material-symbols-outlined { color: #9b59b6; } .box-cyan h4 .material-symbols-outlined { color: #00d2ff; } 
+        .box-warning h4 .material-symbols-outlined { color: #f6b93b; } 
+        .box-red h4 .material-symbols-outlined { color: #ff4b2b; } 
+        .box-purple h4 .material-symbols-outlined { color: #9b59b6; } 
+        .box-cyan h4 .material-symbols-outlined { color: #00d2ff; } 
         
         .tu-table { width: 100%; border-collapse: collapse; font-size: 0.73rem; margin-top: 4px; }
         .tu-table th { color: #a0aab5; text-transform: uppercase; font-size: 0.63rem; font-weight: 700; padding: 8px 6px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
@@ -190,10 +194,12 @@
         .btn-sub-tab { background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); color: #8a99ad; padding: 6px 16px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
         .btn-sub-tab:hover { background: rgba(255, 255, 255, 0.05); color: #ffffff; }
         .btn-sub-tab.active { background: rgba(0, 210, 255, 0.15); color: #00d2ff; border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.1); }
+        
+        /* FILTRO DE DATA/MÊS */
         .date-picker-wrapper { display: flex; align-items: center; gap: 6px; background: rgba(15, 23, 42, 0.8); padding: 5px 12px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.3); box-shadow: inset 0 0 10px rgba(0, 210, 255, 0.05); }
-        .date-picker-wrapper input[type="date"] { background: transparent; border: none; color: #ffffff; font-family: inherit; font-size: 0.75rem; font-weight: 700; outline: none; cursor: pointer; color-scheme: dark; }
-        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.8; transition: 0.2s; }
-        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+        .date-picker-wrapper input[type="date"], .date-picker-wrapper input[type="month"] { background: transparent; border: none; color: #ffffff; font-family: inherit; font-size: 0.75rem; font-weight: 700; outline: none; cursor: pointer; color-scheme: dark; }
+        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.8; transition: 0.2s; }
+        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator:hover, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
 
         /* ========================================== */
         /* RODAPÉ E PILARES                           */
@@ -247,6 +253,10 @@
                 <div class="icon"><span class="material-symbols-outlined">account_tree</span></div>
                 <div class="card-app-info"><h2>Otimizador de TUs</h2><p>Divisão e cálculo de demanda</p></div>
             </a>
+            <a href="demanda_diaria.html" class="card-app bloco-demanda">
+                <div class="icon"><span class="material-symbols-outlined">update</span></div>
+                <div class="card-app-info"><h2>Demanda Diária</h2><p>Atualização de dados base</p></div>
+            </a>
         </aside>
 
         <main class="dashboard-content">
@@ -267,7 +277,7 @@
 
             <div class="tu-dashboard-container">
                 <!-- ========================================== -->
-                <!-- ABA 1: CONTROLE DE TUS (ORDEM REORGANIZADA) -->
+                <!-- ABA 1: CONTROLE DE TUS                     -->
                 <!-- ========================================== -->
                 <div id="tab-tu" class="tab-panel active">
                     <div class="tu-header">
@@ -275,6 +285,12 @@
                             <h2><span class="material-symbols-outlined">analytics</span> Controle de TUs</h2>
                         </div>
                         <div class="header-badges">
+                            <!-- 1. FILTRO DE MÊS AQUI (COMO PEDIDO) -->
+                            <div class="date-picker-wrapper" title="Filtrar Totais do Mês">
+                                <span class="material-symbols-outlined" style="font-size: 18px; color: #00d2ff;">calendar_month</span>
+                                <input type="month" id="filtro-mes-tu" onchange="aplicarFiltroMesTU()">
+                            </div>
+
                             <a href="https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8" target="_blank" class="btn-atalho btn-gsheets" title="Abrir Controle de TUs no Google Sheets">
                                 <span class="material-symbols-outlined">table_chart</span> Google Sheets
                             </a>
@@ -292,17 +308,17 @@
                         <div class="tu-card card-cyan">
                             <span class="material-symbols-outlined icon">calendar_month</span>
                             <div class="tu-info">
-                                <span class="label">Total Processado no Mês (Caixas)</span>
+                                <span class="label" id="label-caixas-mes">Total Processado no Mês (Caixas)</span>
                                 <h3 id="caixas-mes">--</h3>
-                                <small>Soma do Mês Vigente</small>
+                                <small id="sub-caixas-mes">Soma do Mês Vigente</small>
                             </div>
                         </div>
                         <div class="tu-card card-purple">
                             <span class="material-symbols-outlined icon">category</span>
                             <div class="tu-info">
-                                <span class="label">Total Processado no Mês (Peças)</span>
+                                <span class="label" id="label-pecas-mes">Total Processado no Mês (Peças)</span>
                                 <h3 id="pecas-mes">--</h3>
-                                <small>Soma do Mês Vigente</small>
+                                <small id="sub-pecas-mes">Soma do Mês Vigente</small>
                             </div>
                         </div>
                     </div>
@@ -349,9 +365,8 @@
                         </div>
                     </div>
 
-                    <!-- REORGANIZAÇÃO SOLICITADA DOS CARDS SUPRIORES -->
+                    <!-- 2. ORDEM REORGANIZADA DOS CARDS (TU -> CARRETA -> CAIXAS -> PEÇAS -> PROGRESSO) -->
                     <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
-                        <!-- 1º CARD: TUS PENDENTES -->
                         <div class="tu-card card-cyan">
                             <span class="material-symbols-outlined icon">inventory_2</span>
                             <div class="tu-info">
@@ -360,7 +375,6 @@
                                 <small id="sub-tus">De -- TUs na Janela</small>
                             </div>
                         </div>
-                        <!-- 2º CARD: CARRETAS PENDENTES -->
                         <div class="tu-card card-red">
                             <span class="material-symbols-outlined icon">local_shipping</span>
                             <div class="tu-info">
@@ -369,7 +383,6 @@
                                 <small>Pendentes de Rampa</small>
                             </div>
                         </div>
-                        <!-- 3º CARD: CAIXAS PENDENTES -->
                         <div class="tu-card card-yellow">
                             <span class="material-symbols-outlined icon">package_2</span>
                             <div class="tu-info">
@@ -378,7 +391,6 @@
                                 <small id="sub-caixas">LN: -- | GV: --</small>
                             </div>
                         </div>
-                        <!-- 4º CARD: PEÇAS PENDENTES -->
                         <div class="tu-card card-purple">
                             <span class="material-symbols-outlined icon">category</span>
                             <div class="tu-info">
@@ -387,7 +399,6 @@
                                 <small id="sub-pecas">LN: -- | GV: --</small>
                             </div>
                         </div>
-                        <!-- 5º CARD: PROGRESSO -->
                         <div class="tu-card card-green card-progress">
                             <div class="card-progress-content">
                                 <span class="material-symbols-outlined icon">check_circle</span>
@@ -453,6 +464,15 @@
                                         <td><span class="val" id="perf-est_gv-tot">--</span></td>
                                     </tr>
                                 </tbody>
+                                <!-- 3. LINHA DE TOTAL AQUI -->
+                                <tfoot>
+                                    <tr style="border-top: 2px solid rgba(0, 210, 255, 0.4); font-weight: 800; background: rgba(0, 210, 255, 0.08);">
+                                        <td style="color: #00d2ff; text-align: left; padding: 8px 6px;">TOTAL GERAL</td>
+                                        <td id="pcs-total-tot" style="color: #ffffff;">--</td>
+                                        <td id="cx-total-tot" style="color: #ffffff;">--</td>
+                                        <td><span class="val" id="perf-total-tot" style="color: #00d2ff;">--</span></td>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
 
@@ -505,6 +525,15 @@
                                         <td><span class="val" id="perf-est_gv-pend">--</span></td>
                                     </tr>
                                 </tbody>
+                                <!-- 3. LINHA DE TOTAL AQUI -->
+                                <tfoot>
+                                    <tr style="border-top: 2px solid rgba(246, 185, 59, 0.4); font-weight: 800; background: rgba(246, 185, 59, 0.08);">
+                                        <td style="color: #f6b93b; text-align: left; padding: 8px 6px;">TOTAL GERAL</td>
+                                        <td id="pcs-total-pend" style="color: #ffffff;">--</td>
+                                        <td id="cx-total-pend" style="color: #ffffff;">--</td>
+                                        <td><span class="val" id="perf-total-pend" style="color: #f6b93b;">--</span></td>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                         
@@ -551,7 +580,7 @@
                 </div>
 
                 <!-- ========================================== -->
-                <!-- ABA 2: DEMANDAS WMS (BALANCEAMENTO)        -->
+                <!-- ABA 2: DEMANDAS WMS                        -->
                 <!-- ========================================== -->
                 <div id="tab-wms" class="tab-panel">
                     <div class="tu-header">
@@ -607,7 +636,6 @@
                                 <h3 id="wms-tot-pcs">--</h3>
                             </div>
                         </div>
-
                         <div class="tu-card card-green">
                             <span class="material-symbols-outlined icon">package_2</span>
                             <div class="tu-info">
@@ -630,29 +658,17 @@
                                 <div class="progress-bar-fill" id="bar-aderencia-fill"></div>
                             </div>
                         </div>
-
                         <div class="tu-card card-cyan">
                             <span class="material-symbols-outlined icon">route</span>
-                            <div class="tu-info">
-                                <span class="label">Estações Visitadas por Caixa</span>
-                                <h3 id="wms-est-cx">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Estações Visitadas por Caixa</span><h3 id="wms-est-cx">--</h3></div>
                         </div>
-
                         <div class="tu-card card-purple">
                             <span class="material-symbols-outlined icon">layers</span>
-                            <div class="tu-info">
-                                <span class="label">SKU por Caixa</span>
-                                <h3 id="wms-skus-cx">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">SKU por Caixa</span><h3 id="wms-skus-cx">--</h3></div>
                         </div>
-
                         <div class="tu-card card-red" id="card-tarefas-wms">
                             <span class="material-symbols-outlined icon">assignment</span>
-                            <div class="tu-info">
-                                <span class="label">Tarefas WMS (FR e GV)</span>
-                                <h3 id="wms-tarefas">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Tarefas WMS (FR e GV)</span><h3 id="wms-tarefas">--</h3></div>
                         </div>
                     </div>
 
@@ -660,52 +676,26 @@
                         <div class="macro-box macro-box-fr">
                             <div class="macro-header"><span class="material-symbols-outlined">conveyor_belt</span> OPERAÇÃO FRACIONADA (FR)</div>
                             <div class="macro-stats">
-                                <div class="stat-item">
-                                    <span class="label">Peças</span>
-                                    <strong id="wms-fr-pcs">--</strong>
-                                    <small class="pct" id="wms-fr-pcs-pct">--%</small>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="label">Caixas</span>
-                                    <strong id="wms-fr-cxs">--</strong>
-                                    <small class="pct" id="wms-fr-cxs-pct">--%</small>
-                                </div>
+                                <div class="stat-item"><span class="label">Peças</span><strong id="wms-fr-pcs">--</strong><small class="pct" id="wms-fr-pcs-pct">--%</small></div>
+                                <div class="stat-item"><span class="label">Caixas</span><strong id="wms-fr-cxs">--</strong><small class="pct" id="wms-fr-cxs-pct">--%</small></div>
                                 <div class="stat-item"><span class="label">Pç/Cx</span><strong id="wms-fr-pc-cx">--</strong></div>
                                 <div class="stat-item"><span class="label">Tarefas</span><strong id="wms-fr-tar">--</strong></div>
                             </div>
                         </div>
-
                         <div class="macro-box macro-box-gv">
                             <div class="macro-header"><span class="material-symbols-outlined">pallet</span> GRANDES VOLUMES (GV)</div>
                             <div class="macro-stats">
-                                <div class="stat-item">
-                                    <span class="label">Peças</span>
-                                    <strong id="wms-gv-pcs">--</strong>
-                                    <small class="pct" id="wms-gv-pcs-pct">--%</small>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="label">Caixas</span>
-                                    <strong id="wms-gv-cxs">--</strong>
-                                    <small class="pct" id="wms-gv-cxs-pct">--%</small>
-                                </div>
+                                <div class="stat-item"><span class="label">Peças</span><strong id="wms-gv-pcs">--</strong><small class="pct" id="wms-gv-pcs-pct">--%</small></div>
+                                <div class="stat-item"><span class="label">Caixas</span><strong id="wms-gv-cxs">--</strong><small class="pct" id="wms-gv-cxs-pct">--%</small></div>
                                 <div class="stat-item"><span class="label">Pç/Cx</span><strong id="wms-gv-pc-cx">--</strong></div>
                                 <div class="stat-item"><span class="label">Tarefas</span><strong id="wms-gv-tar">--</strong></div>
                             </div>
                         </div>
-
                         <div class="macro-box macro-box-pc">
                             <div class="macro-header"><span class="material-symbols-outlined">shopping_cart</span> PICKING CART (PC)</div>
                             <div class="macro-stats">
-                                <div class="stat-item">
-                                    <span class="label">Peças</span>
-                                    <strong id="wms-pc-pcs">--</strong>
-                                    <small class="pct" id="wms-pc-pcs-pct">--%</small>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="label">Caixas</span>
-                                    <strong id="wms-pc-cxs">--</strong>
-                                    <small class="pct" id="wms-pc-cxs-pct">--%</small>
-                                </div>
+                                <div class="stat-item"><span class="label">Peças</span><strong id="wms-pc-pcs">--</strong><small class="pct" id="wms-pc-pcs-pct">--%</small></div>
+                                <div class="stat-item"><span class="label">Caixas</span><strong id="wms-pc-cxs">--</strong><small class="pct" id="wms-pc-cxs-pct">--%</small></div>
                                 <div class="stat-item"><span class="label">Pç/Cx</span><strong id="wms-pc-pc-cx">--</strong></div>
                                 <div class="stat-item"><span class="label">Tarefas</span><strong id="wms-pc-tar">--</strong></div>
                             </div>
@@ -721,7 +711,6 @@
                             <h4><span class="material-symbols-outlined">bar_chart</span> Curva de Caixas • Baixo Giro</h4>
                             <div style="flex:1; position:relative;"><canvas id="chartCaixasOutras"></canvas></div>
                         </div>
-
                         <div class="tu-detail-box" style="display:flex; flex-direction:column; height: 230px;">
                             <h4><span class="material-symbols-outlined">stacked_bar_chart</span> Curva de Peças • Alto Giro</h4>
                             <div style="flex:1; position:relative;"><canvas id="chartPecasOutliers"></canvas></div>
@@ -758,31 +747,19 @@
                     <div class="tu-grid-main" style="grid-template-columns: repeat(4, 1fr);">
                         <div class="tu-card card-cyan">
                             <span class="material-symbols-outlined icon">today</span>
-                            <div class="tu-info">
-                                <span class="label">Movimentações do Dia</span>
-                                <h3 id="mov-card-total-dia">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Movimentações do Dia</span><h3 id="mov-card-total-dia">--</h3></div>
                         </div>
                         <div class="tu-card card-yellow">
                             <span class="material-symbols-outlined icon">pending_actions</span>
-                            <div class="tu-info">
-                                <span class="label">Pendentes do Dia</span>
-                                <h3 id="mov-card-pendentes">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Pendentes do Dia</span><h3 id="mov-card-pendentes">--</h3></div>
                         </div>
                         <div class="tu-card card-purple">
                             <span class="material-symbols-outlined icon">history_toggle_off</span>
-                            <div class="tu-info">
-                                <span class="label">Pendências Anteriores</span>
-                                <h3 id="mov-card-pendentes-antigas">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Pendências Anteriores</span><h3 id="mov-card-pendentes-antigas">--</h3></div>
                         </div>
                         <div class="tu-card card-red">
                             <span class="material-symbols-outlined icon">sell</span>
-                            <div class="tu-info">
-                                <span class="label">Etiquetas Totais</span>
-                                <h3 id="mov-card-etiquetas-totais">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Etiquetas Totais</span><h3 id="mov-card-etiquetas-totais">--</h3></div>
                         </div>
                     </div>
 
@@ -801,9 +778,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tbl-mov-pendentes-body">
-                                    <tr>
-                                        <td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando...</td>
-                                    </tr>
+                                    <tr><td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando...</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -831,7 +806,7 @@
                 </div>
 
                 <!-- ========================================== -->
-                <!-- ABA 4: FECHAMENTO DE EXPEDIÇÃO (DUPLA VISÃO: TABELA GV/LN + CARREGADO/RAMPA) -->
+                <!-- ABA 4: FECHAMENTO DE EXPEDIÇÃO             -->
                 <!-- ========================================== -->
                 <div id="tab-fechamento" class="tab-panel">
                     <div class="tu-header">
@@ -846,18 +821,17 @@
                         </div>
                     </div>
 
-                    <!-- CARDS SEPARADOS POR ATENDIMENTO (COM AS DUAS VISÕES REUNIDAS) -->
                     <div>
                         <h4 style="color: #ffffff; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
                             <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">view_carousel</span>
                             Status por Atendimento
                         </h4>
+                        <!-- 4. CARDS COM DUPLO STATUS INCORPORADOS AQUI COM FALLBACKS SEGUROS -->
                         <div id="container-cards-atendimentos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px;">
                             <p style="color:#a0aab5; font-size:0.75rem;">Carregando atendimentos em andamento...</p>
                         </div>
                     </div>
 
-                    <!-- TABELA DETALHADA COM CABEÇALHO ESCURO E FILTROS DISCRETOS -->
                     <div class="tu-detail-box box-cyan" style="margin-top: 10px;">
                         <h4><span class="material-symbols-outlined">list_alt</span> Detalhamento de Carregamento por TU</h4>
                         <div style="max-height: 420px; overflow-y: auto; padding-right: 5px;">
@@ -881,11 +855,11 @@
                                             <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
                                         </th>
                                         <th>
-                                            PROGRESSO<br>
+                                            PROGRESSO FLUXO<br>
                                             <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
                                         </th>
                                         <th>
-                                            STATUS<br>
+                                            STATUS SAP<br>
                                             <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
                                         </th>
                                     </tr>
@@ -979,8 +953,8 @@
 
         function preencherCardPerfil(prefixo, obj) {
             if (!obj) return;
-            const canais = ['cart_ln', 'cart_gv', 'var_ln', 'var_gv', 'est_ln', 'est_gv'];
-            const chaves = ['carteira_ln', 'carteira_gv', 'varejo_ln', 'varejo_gv', 'estojo_ln', 'estojo_gv'];
+            const canais = ['cart_ln', 'cart_gv', 'var_ln', 'var_gv', 'est_ln', 'est_gv', 'total'];
+            const chaves = ['carteira_ln', 'carteira_gv', 'varejo_ln', 'varejo_gv', 'estojo_ln', 'estojo_gv', 'total_geral'];
             
             canais.forEach((c, idx) => {
                 const item = obj[chaves[idx]];
@@ -1012,6 +986,30 @@
                     }
                 });
                 trs[i].style.display = showRow ? '' : 'none';
+            }
+        }
+
+        function aplicarFiltroMesTU() {
+            const inputMes = document.getElementById('filtro-mes-tu');
+            if (!inputMes || !inputMes.value || typeof dadosDashboard === 'undefined') return;
+            
+            const mesAnoSel = inputMes.value;
+            const totaisMes = dadosDashboard.totais_por_mes || {};
+            
+            const [ano, mes] = mesAnoSel.split('-');
+            const nomesMeses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+            const nomeMesExtenso = `${nomesMeses[parseInt(mes) - 1]} / ${ano}`;
+
+            if (totaisMes[mesAnoSel]) {
+                setTextoSeguro('caixas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].caixas));
+                setTextoSeguro('pecas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].pecas));
+                setTextoSeguro('sub-caixas-mes', `Total de ${nomeMesExtenso}`);
+                setTextoSeguro('sub-pecas-mes', `Total de ${nomeMesExtenso}`);
+            } else {
+                setTextoSeguro('caixas-mes', '0');
+                setTextoSeguro('pecas-mes', '0');
+                setTextoSeguro('sub-caixas-mes', `Sem dados em ${nomeMesExtenso}`);
+                setTextoSeguro('sub-pecas-mes', `Sem dados em ${nomeMesExtenso}`);
             }
         }
 
@@ -1250,6 +1248,16 @@
             if (typeof dadosDashboard !== 'undefined') {
                 const dados = dadosDashboard;
                 setTextoSeguro('txt-status-sync', `LIVE • ${dados.atualizado_em || ''}`);
+
+                // Define o mês inicial no filtro se estiver vazio
+                const inputMes = document.getElementById('filtro-mes-tu');
+                if (inputMes && !inputMes.value) {
+                    const hoje = new Date();
+                    const a = hoje.getFullYear();
+                    const m = String(hoje.getMonth() + 1).padStart(2, '0');
+                    inputMes.value = `${a}-${m}`;
+                }
+
                 setTextoSeguro('caixas-mes', formatarNumeroInteiro(dados.caixas_total_mes));
                 setTextoSeguro('pecas-mes', formatarNumeroInteiro(dados.pecas_total_mes));
                 setTextoSeguro('tus-pendentes', `${dados.pendencias_por_canal ? (dados.pendencias_por_canal.varejo + dados.pendencias_por_canal.carteira + dados.pendencias_por_canal.estojo + (dados.pendencias_por_canal.outras || 0)) : (dados.carretas_pendentes || 0)}`);
@@ -1370,7 +1378,7 @@
                 }
             }
 
-            // ------------------ ABA 4: FECHAMENTO DE EXPEDIÇÃO (REUNIÃO DAS DUAS VISÕES) ------------------
+            // ------------------ ABA 4: FECHAMENTO DE EXPEDIÇÃO (DUPLO STATUS COM FALLBACKS SEGUROS) ------------------
             if (typeof dadosFechamento !== 'undefined') {
                 const fech = dadosFechamento;
                 setTextoSeguro('txt-fechamento-status-sync', `LIVE • ${fech.atualizado_em || ''}`);
@@ -1395,11 +1403,13 @@
                             badgeBorder = 'rgba(246, 185, 59, 0.3)';
                         }
 
-                        const totalProc = (item.loaded_cxs || 0) + (item.rampa_cxs || 0);
+                        // Proteção caso o Python não tenha rodado ainda
+                        const carregadoVal = item.loaded_cxs || 0;
+                        const rampaVal = item.rampa_cxs || 0;
+                        const totalProc = carregadoVal + rampaVal;
 
                         htmlCards += `
                             <div class="tu-detail-box" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(0, 210, 255, 0.3); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
-                                <!-- CABEÇALHO DO CARD -->
                                 <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">
                                     <div style="display: flex; align-items: center; gap: 6px;">
                                         <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">local_shipping</span>
@@ -1410,24 +1420,21 @@
                                             ${item.status_atend}
                                         </span>
                                         <span style="font-size: 0.82rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 10px; border-radius: 12px; border: 1px solid ${badgeBorder};">
-                                            ${item.pct}% 
+                                            ${item.pct}% FLUXO
                                         </span>
                                     </div>
                                 </div>
 
-                                <!-- RESUMO DE VOLUMES -->
                                 <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #a0aab5;">
                                     <span>Total Caixas: <strong style="color: #fff;">${formatarNumeroInteiro(item.total_cxs)}</strong></span>
                                     <span>Processadas: <strong style="color: #00d2ff;">${formatarNumeroInteiro(totalProc)}</strong></span>
                                     <span>Pendentes: <strong style="color: #f6b93b;">${formatarNumeroInteiro(item.pending_cxs)}</strong></span>
                                 </div>
 
-                                <!-- BARRA DE PROGRESSO -->
                                 <div class="progress-bar-container" style="height: 6px; margin-top: 0;">
                                     <div class="progress-bar-fill" style="width: ${item.pct}%; background: ${item.pct === 100 ? '#00b09b' : 'linear-gradient(90deg, #00b09b, #00d2ff)'};"></div>
                                 </div>
 
-                                <!-- VISÃO 1: TABELA DETALHADA GV / LN (CONCLUÍDAS E PENDENTES) -->
                                 <table class="tu-table" style="font-size: 0.68rem; background: rgba(0,0,0,0.25); border-radius: 8px; overflow: hidden; margin-top: 2px;">
                                     <thead>
                                         <tr style="background: rgba(255,255,255,0.03);">
@@ -1450,15 +1457,14 @@
                                     </tbody>
                                 </table>
 
-                                <!-- VISÃO 2: SUB-BARRA PROCESSAMENTO EM DOCA (CARREGADO VS RAMPA OK) -->
                                 <div style="display: flex; justify-content: space-between; background: rgba(15, 23, 42, 0.85); padding: 8px 12px; border-radius: 8px; font-size: 0.72rem; border: 1px solid rgba(255, 255, 255, 0.08);">
                                     <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;">
                                         <span style="width: 8px; height: 8px; background: #00b09b; border-radius: 50%; display: inline-block;"></span> 
-                                        Carregado: <strong style="color: #00b09b; font-size: 0.8rem;">${formatarNumeroInteiro(item.loaded_cxs)}</strong>
+                                        Carregado: <strong style="color: #00b09b; font-size: 0.8rem;">${formatarNumeroInteiro(carregadoVal)}</strong>
                                     </span>
                                     <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;">
                                         <span style="width: 8px; height: 8px; background: #00d2ff; border-radius: 50%; display: inline-block;"></span> 
-                                        Rampa OK: <strong style="color: #00d2ff; font-size: 0.8rem;">${formatarNumeroInteiro(item.rampa_cxs)}</strong>
+                                        Rampa OK: <strong style="color: #00d2ff; font-size: 0.8rem;">${formatarNumeroInteiro(rampaVal)}</strong>
                                     </span>
                                 </div>
                             </div>
@@ -1467,7 +1473,6 @@
                     containerAtend.innerHTML = htmlCards || '<p style="color:#a0aab5; font-size:0.75rem;">Nenhum atendimento ativo no momento.</p>';
                 }
 
-                // Renderização da Tabela por TU
                 const tbodyFech = document.getElementById('tbl-fechamento-body');
                 if (tbodyFech) {
                     if (fech.tabela && fech.tabela.length > 0) {
@@ -1487,6 +1492,7 @@
                                 tagBg = 'rgba(246, 185, 59, 0.12)';
                             }
                             
+                            // Proteção de fallbacks na tabela também
                             const carregadoVal = i.caixas_carregadas || 0;
                             const rampaVal = i.caixas_rampa || 0;
                             const totalProc = i.caixas_processadas || (carregadoVal + rampaVal);
