@@ -1,18 +1,18 @@
 window.dadosFechamento = {
-  "atualizado_em": "28/09/2026 11:57",
+  "atualizado_em": "28/09/2026 12:09",
   "progresso_geral_pct": 54,
   "total_cxs_geral": 33588,
-  "total_loaded_cxs_geral": 18248,
-  "total_pending_cxs_geral": 15340,
+  "total_loaded_cxs_geral": 18287,
+  "total_pending_cxs_geral": 15301,
   "cards_atendimentos": {
     "SPI": {
       "total_tus": 22,
       "total_cxs": 28246,
-      "loaded_cxs": 17673,
-      "pending_cxs": 10573,
-      "finalizadas_gv_cx": 13410,
+      "loaded_cxs": 17712,
+      "pending_cxs": 10534,
+      "finalizadas_gv_cx": 13449,
       "finalizadas_fr_cx": 4263,
-      "pendentes_gv_cx": 7901,
+      "pendentes_gv_cx": 7862,
       "pendentes_fr_cx": 2672,
       "pct": 62,
       "status_atend": "EM ANDAMENTO"
@@ -156,8 +156,8 @@ window.dadosFechamento = {
       "carreta": "Carreta 29",
       "tu": "610000012878",
       "total_caixas": 1728,
-      "caixas_carregadas": 1121,
-      "pct": 64,
+      "caixas_carregadas": 1160,
+      "pct": 67,
       "status": "EM ANDAMENTO"
     },
     {
