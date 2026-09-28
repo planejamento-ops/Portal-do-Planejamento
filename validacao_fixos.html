@@ -241,7 +241,9 @@
         if (tipo === 'MISTAS') {
             dataToExport = window.appData.mistas.map(d => ({
                 "Posição (Erro)": d.pos,
-                "Produtos Encontrados Juntos": Array.from(d.prods).join(', ')
+                "Produtos Encontrados Juntos": d.prods.join(', '),
+                "Autores": d.autores.join(', '),
+                "Datas de Modificação": d.datas.join(', ')
             }));
             filename = `Saude_Posicoes_Mistas_${dateSuffix}.xlsx`;
         } 
@@ -317,11 +319,13 @@
             if (dados.length === 0) {
                 html = '<p style="text-align:center; padding: 20px; color: #27ae60;"><b>Tudo limpo!</b> Nenhuma posição mista (SKUs diferentes na mesma posição).</p>';
             } else {
-                html = '<table class="detail-table"><thead><tr><th>Posição (Problema)</th><th>Produtos Vinculados (Conflito)</th></tr></thead><tbody>';
+                html = '<table class="detail-table"><thead><tr><th>Posição (Problema)</th><th>Produtos Vinculados (Conflito)</th><th>Autor</th><th>Data Modificação</th></tr></thead><tbody>';
                 dados.forEach(d => { 
                     html += `<tr>
                                 <td><b>${d.pos}</b> <button class="btn-copy" onclick="copyText(this, '${d.pos}')" title="Copiar Posição">📋</button></td>
-                                <td style="color:#e74c3c;">${Array.from(d.prods).join('<br>')}</td>
+                                <td style="color:#e74c3c;">${d.prods.join('<br>')}</td>
+                                <td>${d.autores.join('<br>')}</td>
+                                <td>${d.datas.join('<br>')}</td>
                              </tr>`; 
                 });
                 html += '</tbody></table>';
@@ -476,6 +480,47 @@
 
                 jsonData.sort((a, b) => b._parsedDate - a._parsedDate);
 
+                // =========================================================
+                // LÓGICA DE SEGURANÇA MÁXIMA PARA POSIÇÕES MISTAS
+                // =========================================================
+                const posicoesRaw = {};
+                
+                jsonData.forEach(row => {
+                    const pos = String(row['Posição no depósito'] || '').trim().toUpperCase();
+                    let prod = row['Produto'];
+                    let autor = row['Autor'] || '-';
+                    let dStr = row._parsedDate ? row._parsedDate.toLocaleDateString('pt-BR') : '-';
+                    
+                    if (prod !== undefined && prod !== null) {
+                        prod = String(prod).replace(/\.0$/, '').trim(); // Limpa formatações decimais do Excel
+                        
+                        if (pos !== '' && prod !== '' && prod !== 'UNDEFINED' && prod !== 'SEM_PRODUTO') {
+                            if (!posicoesRaw[pos]) {
+                                posicoesRaw[pos] = new Map();
+                            }
+                            if (!posicoesRaw[pos].has(prod)) {
+                                posicoesRaw[pos].set(prod, {autor: autor, data: dStr});
+                            }
+                        }
+                    }
+                });
+
+                window.appData.mistas = Object.entries(posicoesRaw)
+                    .filter(([p, prodMap]) => prodMap.size > 1)
+                    .map(([pos, prodMap]) => {
+                        let prods = [];
+                        let autores = [];
+                        let datas = [];
+                        prodMap.forEach((info, prod) => {
+                            prods.push(prod);
+                            autores.push(info.autor);
+                            datas.push(info.data);
+                        });
+                        return { pos, prods, autores, datas };
+                    });
+                // =========================================================
+
+
                 const gruposProdutos = {};
                 jsonData.forEach(row => {
                     const prod = row['Produto'] || 'SEM_PRODUTO';
@@ -490,16 +535,17 @@
                 let ag07ComBg = []; 
 
                 Object.values(gruposProdutos).forEach(grupo => {
-                    // --- REGRAS DE ALERTA INDIVIDUAIS ---
+                    // --- REGRAS DE ALERTA INDIVIDUAIS (LÓGICA LIMPA AG04) ---
                     let hasAG04 = grupo.some(r => r._tipoPosicao === 'AG04');
                     let hasAG07 = grupo.some(r => r._tipoPosicao === 'AG07');
                     let hasBG = grupo.some(r => r._tipoPosicao === 'BG' || r._tipoPosicao === 'PC'); 
 
-                    // Alerta 1: AG04 sem Baixo Giro
+                    // Alerta 1: AG04 sem Baixo Giro (Removido alerta de BG isolado)
                     if (hasAG04 && !hasBG) {
                         let ag04Record = grupo.find(r => r._tipoPosicao === 'AG04');
                         ag04SemBg.push(ag04Record);
                     }
+
                     // Alerta 2: AG07 COM Baixo Giro (Proibido)
                     if (hasAG07 && hasBG) {
                         let ag07Record = grupo.find(r => r._tipoPosicao === 'AG07');
@@ -553,18 +599,7 @@
                 window.appData.ag04SemBg = ag04SemBg;
                 window.appData.ag07ComBg = ag07ComBg;
 
-                const produtosPorPosicao = {};
-                masterData.forEach(row => {
-                    const pos = String(row['Posição no depósito'] || '').trim().toUpperCase();
-                    const prod = String(row['Produto'] || '').trim();
-                    if (pos && prod) {
-                        if (!produtosPorPosicao[pos]) produtosPorPosicao[pos] = new Set();
-                        produtosPorPosicao[pos].add(prod);
-                    }
-                });
-
-                window.appData.mistas = Object.entries(produtosPorPosicao).filter(([p, prods]) => prods.size > 1).map(([pos, prods]) => ({ pos, prods }));
-
+                // Interface e Contagens
                 const posMistas = window.appData.mistas.length;
                 document.getElementById('card-mistas').className = 'card ' + (posMistas > 0 ? 'bg-danger' : 'bg-success');
                 document.getElementById('titulo-mistas').innerText = posMistas > 0 ? "⚠️ Posições Mistas" : "✅ Posições Mistas";
