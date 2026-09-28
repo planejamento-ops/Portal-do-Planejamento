@@ -1,25 +1,17 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "28/09/2026 16:15",
+  "atualizado_em": "28/09/2026 16:38",
   "total_dia": 88,
   "pendentes_hoje": 19,
-  "pendentes_antigas": 0,
+  "pendentes_antigas": 1,
   "etiquetas_totais": 88,
   "etiquetas_pendentes": 19,
   "tabela_pendentes": [
     {
-      "data": "28/09",
-      "item": "88897",
-      "demanda": "MALHA PRÓ",
-      "de": "LN-4-24-3-3-3",
-      "para": "LN-4-32-2-1-1",
-      "tipo_dep": "BGGZ"
-    },
-    {
-      "data": "28/09",
-      "item": "57042",
-      "demanda": "SPC",
-      "de": "LN-4-25-3-4-6",
-      "para": "LN-3-22-1-2-3",
+      "data": "26/09",
+      "item": "97599",
+      "demanda": "Outros",
+      "de": "LN-2-11-3-4-1",
+      "para": "LN-5-31-3-4-6",
       "tipo_dep": "BGGZ"
     },
     {
@@ -72,18 +64,34 @@ window.dadosMovimentacoes = {
     },
     {
       "data": "28/09",
-      "item": "57076",
-      "demanda": "SPC",
-      "de": "LN-3-17-4-3-6",
-      "para": "LN-4-19-2-2-2",
-      "tipo_dep": "BGGZ"
-    },
-    {
-      "data": "28/09",
       "item": "48141",
       "demanda": "SPC",
       "de": "PC-06-28-2",
       "para": "LN-5-27-2-1-2",
+      "tipo_dep": "BGGZ"
+    },
+    {
+      "data": "28/09",
+      "item": "94528",
+      "demanda": "SPC",
+      "de": "LN-5-38-3-5-5",
+      "para": "LN-5-36-3-4-1",
+      "tipo_dep": "BGLE"
+    },
+    {
+      "data": "28/09",
+      "item": "86759",
+      "demanda": "SPC",
+      "de": "LN-5-37-3-1-5",
+      "para": "LN-5-37-3-3-5",
+      "tipo_dep": "BGLE"
+    },
+    {
+      "data": "28/09",
+      "item": "85826",
+      "demanda": "SPC",
+      "de": "LN-3-19-3-1-3",
+      "para": "LN-4-19-2-1-2",
       "tipo_dep": "BGGZ"
     },
     {
@@ -112,14 +120,6 @@ window.dadosMovimentacoes = {
     },
     {
       "data": "28/09",
-      "item": "52018",
-      "demanda": "SPC",
-      "de": "LN-4-25-3-1-3",
-      "para": "LN-5-27-2-1-1",
-      "tipo_dep": "BGGZ"
-    },
-    {
-      "data": "28/09",
       "item": "88508",
       "demanda": "SPC",
       "de": "LN-5-30-4-4-2",
@@ -127,15 +127,6 @@ window.dadosMovimentacoes = {
       "tipo_dep": "BGGZ"
     }
   ],
-  "tabela_ie": [
-    {
-      "item": "88897",
-      "para": "LN-4-32-2-1-1"
-    },
-    {
-      "item": "86176",
-      "para": "PC-02-04-4"
-    }
-  ],
+  "tabela_ie": [],
   "tabela_cf": []
 };
