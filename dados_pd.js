@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "29/09/2026 14:24",
+  "atualizado_em": "29/09/2026 14:39",
   "quadro_ativo": 481,
   "taxa_abs": 9.8,
   "deficit": 48,
@@ -84,167 +84,97 @@ window.dadosPD = {
     ],
     "datasets": [
       {
-        "label": "Separacao",
+        "label": "Total de Faltas do Dia",
         "data": [
-          11.6,
-          10.7,
-          12.0,
-          12.0,
-          10.0,
-          16.1,
-          10.9,
-          12.5,
-          12.8,
-          10.8,
-          6.1,
-          17.5,
-          9.3,
-          17.2,
-          11.5,
-          8.1,
-          11.5,
-          5.6,
-          19.3,
-          9.3,
-          11.1,
-          15.2,
-          11.2,
-          12.4,
-          16.1,
-          25.5,
-          20.3,
-          5.0
-        ],
-        "borderColor": "#e64343",
-        "backgroundColor": "#e64343"
-      },
-      {
-        "label": "Reabastecimento",
-        "data": [
-          13.6,
-          12.5,
-          12.7,
-          12.7,
-          12.2,
-          4.5,
-          9.3,
-          6.6,
-          7.5,
-          6.7,
-          5.1,
-          9.5,
-          13.3,
-          10.0,
-          8.3,
-          4.8,
-          2.4,
-          12.1,
-          0.0,
-          9.5,
-          8.1,
-          6.6,
-          11.5,
-          13.1,
-          12.8,
-          22.7,
-          23.8,
-          5.0
+          49,
+          48,
+          50,
+          47,
+          26,
+          18,
+          38,
+          36,
+          35,
+          44,
+          14,
+          20,
+          42,
+          45,
+          45,
+          37,
+          42,
+          16,
+          14,
+          42,
+          39,
+          37,
+          42,
+          42,
+          19,
+          24,
+          60,
+          7
         ],
         "borderColor": "#00d2ff",
         "backgroundColor": "#00d2ff"
-      },
-      {
-        "label": "Inventario",
-        "data": [
-          14.3,
-          0,
-          7.1,
-          7.1,
-          0,
-          0,
-          14.3,
-          7.1,
-          6.7,
-          0.0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          21.4,
-          0,
-          0,
-          0,
-          14.3,
-          14.3,
-          0,
-          0,
-          7.1,
-          0,
-          0,
-          7.1,
-          0
-        ],
-        "borderColor": "#00b09b",
-        "backgroundColor": "#00b09b"
       }
     ]
   },
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "efetivo": 3272,
+      "efetivo": 179,
       "faltas": 424,
-      "taxa": 13.0
+      "taxa": 0
     },
     {
       "turno": "2º Turno",
-      "efetivo": 3456,
+      "efetivo": 178,
       "faltas": 331,
-      "taxa": 9.6
+      "taxa": 0
     },
     {
       "turno": "1º Turno",
-      "efetivo": 3265,
+      "efetivo": 173,
       "faltas": 223,
-      "taxa": 6.8
+      "taxa": 0
     }
   ],
   "top_setores": [
     {
       "setor": "SEPARACAO",
       "gestor": "LUIS PAULO REIS",
-      "efetivo": 4011,
+      "efetivo": 207,
       "faltas": 485,
-      "taxa": 12.1
-    },
-    {
-      "setor": "REABASTECIMENTO",
-      "gestor": "FLAVIO MARTINS RUFINO",
-      "efetivo": 1311,
-      "faltas": 133,
-      "taxa": 10.1
-    },
-    {
-      "setor": "INVENTARIO",
-      "gestor": "MARIA GABRIELE SANTANA ALVES",
-      "efetivo": 170,
-      "faltas": 17,
-      "taxa": 10.0
+      "taxa": 0
     },
     {
       "setor": "EXPEDICAO",
       "gestor": "TARCISIO RICARDO MARTINS CLARO",
-      "efetivo": 1639,
+      "efetivo": 86,
       "faltas": 139,
-      "taxa": 8.5
+      "taxa": 0
     },
     {
       "setor": "FECHAMENTO",
       "gestor": "RICARDO EUGENIO LAURINDO",
-      "efetivo": 1580,
+      "efetivo": 84,
       "faltas": 133,
-      "taxa": 8.4
+      "taxa": 0
+    },
+    {
+      "setor": "REABASTECIMENTO",
+      "gestor": "FLAVIO MARTINS RUFINO",
+      "efetivo": 70,
+      "faltas": 133,
+      "taxa": 0
+    },
+    {
+      "setor": "RECEBIMENTO",
+      "gestor": "MARCIO VINICIO AMANCIO JUNIOR",
+      "efetivo": 69,
+      "faltas": 71,
+      "taxa": 0
     }
   ]
 };
