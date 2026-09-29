@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "28/09/2026 23:57",
-  "total_tus": 80,
+  "atualizado_em": "29/09/2026 00:08",
+  "total_tus": 63,
   "caixas_total_mes": 389038,
   "pecas_total_mes": 13026682,
   "totais_por_mes": {
@@ -52,11 +52,13 @@ window.dadosDashboard = {
   "pecas_ln_pend": 6996,
   "pecas_gv_pend": 57525,
   "carretas_pendentes": 4,
-  "progresso_pct": 88,
+  "progresso_pct": 87,
   "atendimentos_em_andamento": [
     "SPI"
   ],
-  "alertas_atraso": [],
+  "alertas_atraso": [
+    "Atraso em MGC"
+  ],
   "proxima_carteira": null,
   "proxima_varejo": null,
   "proxima_estojo": {
