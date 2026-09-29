@@ -1,8 +1,8 @@
 window.dadosDashboard = {
-  "atualizado_em": "28/09/2026 20:53",
-  "total_tus": 77,
-  "caixas_total_mes": 388186,
-  "pecas_total_mes": 13009977,
+  "atualizado_em": "28/09/2026 21:05",
+  "total_tus": 80,
+  "caixas_total_mes": 389038,
+  "pecas_total_mes": 13026682,
   "totais_por_mes": {
     "2025-01": {
       "caixas": 17712,
@@ -41,18 +41,18 @@ window.dadosDashboard = {
       "pecas": 15054439
     },
     "2026-09": {
-      "caixas": 388186,
-      "pecas": 13009977
+      "caixas": 389038,
+      "pecas": 13026682
     }
   },
-  "caixas_pendentes": 9911,
-  "caixas_ln_pend": 1208,
-  "caixas_gv_pend": 8703,
-  "pecas_pendentes": 99809,
-  "pecas_ln_pend": 13302,
-  "pecas_gv_pend": 86507,
-  "carretas_pendentes": 6,
-  "progresso_pct": 83,
+  "caixas_pendentes": 6346,
+  "caixas_ln_pend": 632,
+  "caixas_gv_pend": 5714,
+  "pecas_pendentes": 64521,
+  "pecas_ln_pend": 6996,
+  "pecas_gv_pend": 57525,
+  "carretas_pendentes": 4,
+  "progresso_pct": 88,
   "atendimentos_em_andamento": [
     "SPI"
   ],
@@ -60,26 +60,26 @@ window.dadosDashboard = {
   "proxima_carteira": null,
   "proxima_varejo": null,
   "proxima_estojo": {
-    "carreta": "Carreta 35",
-    "tu_resumida": "...2890",
+    "carreta": "Carreta 37",
+    "tu_resumida": "...2891",
     "uf": "SPI"
   },
   "pendencias_por_canal": {
     "varejo": 0,
     "carteira": 0,
-    "estojo": 7,
+    "estojo": 5,
     "outras": 0
   },
   "perfis_geral": {
     "varejo_ln": {
       "perfil": 19,
-      "cx": 38652,
-      "pcs": 722759
+      "cx": 39450,
+      "pcs": 738736
     },
     "varejo_gv": {
       "perfil": 16,
-      "cx": 9645,
-      "pcs": 158706
+      "cx": 9699,
+      "pcs": 159434
     },
     "carteira_ln": {
       "perfil": 56,
@@ -102,9 +102,9 @@ window.dadosDashboard = {
       "pcs": 1103657
     },
     "total_geral": {
-      "cx": 388185,
-      "pcs": 13009777,
-      "perfil": 34
+      "cx": 389037,
+      "pcs": 13026482,
+      "perfil": 33
     }
   },
   "perfis_pendentes": {
@@ -130,17 +130,17 @@ window.dadosDashboard = {
     },
     "estojo_ln": {
       "perfil": 11,
-      "cx": 1208,
-      "pcs": 13302
+      "cx": 632,
+      "pcs": 6996
     },
     "estojo_gv": {
       "perfil": 10,
-      "cx": 8703,
-      "pcs": 86507
+      "cx": 5714,
+      "pcs": 57525
     },
     "total_geral": {
-      "cx": 9911,
-      "pcs": 99809,
+      "cx": 6346,
+      "pcs": 64521,
       "perfil": 10
     }
   }
