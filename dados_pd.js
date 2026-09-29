@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "29/09/2026 14:39",
+  "atualizado_em": "29/09/2026 15:01",
   "quadro_ativo": 481,
   "taxa_abs": 9.8,
   "deficit": 48,
@@ -18,7 +18,7 @@ window.dadosPD = {
       12.1,
       10.1,
       10.0,
-      8.5,
+      8.4,
       8.4,
       5.5
     ],
@@ -26,7 +26,7 @@ window.dadosPD = {
       485,
       133,
       17,
-      139,
+      140,
       133,
       71
     ]
@@ -40,13 +40,13 @@ window.dadosPD = {
     ],
     "data": [
       12.3,
-      10.1,
+      10.2,
       9.5,
       7.8
     ],
     "absolutos": [
       194,
-      126,
+      127,
       544,
       114
     ]
@@ -113,7 +113,7 @@ window.dadosPD = {
           19,
           24,
           60,
-          7
+          8
         ],
         "borderColor": "#00d2ff",
         "backgroundColor": "#00d2ff"
@@ -123,58 +123,50 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "efetivo": 179,
       "faltas": 424,
-      "taxa": 0
+      "taxa": 13.0
     },
     {
       "turno": "2º Turno",
-      "efetivo": 178,
-      "faltas": 331,
-      "taxa": 0
+      "faltas": 332,
+      "taxa": 9.5
     },
     {
       "turno": "1º Turno",
-      "efetivo": 173,
       "faltas": 223,
-      "taxa": 0
+      "taxa": 6.8
     }
   ],
   "top_setores": [
     {
       "setor": "SEPARACAO",
       "gestor": "LUIS PAULO REIS",
-      "efetivo": 207,
       "faltas": 485,
-      "taxa": 0
+      "taxa": 12.1
     },
     {
       "setor": "EXPEDICAO",
       "gestor": "TARCISIO RICARDO MARTINS CLARO",
-      "efetivo": 86,
-      "faltas": 139,
-      "taxa": 0
+      "faltas": 140,
+      "taxa": 8.4
     },
     {
       "setor": "FECHAMENTO",
       "gestor": "RICARDO EUGENIO LAURINDO",
-      "efetivo": 84,
       "faltas": 133,
-      "taxa": 0
+      "taxa": 8.4
     },
     {
       "setor": "REABASTECIMENTO",
       "gestor": "FLAVIO MARTINS RUFINO",
-      "efetivo": 70,
       "faltas": 133,
-      "taxa": 0
+      "taxa": 10.1
     },
     {
       "setor": "RECEBIMENTO",
       "gestor": "MARCIO VINICIO AMANCIO JUNIOR",
-      "efetivo": 69,
       "faltas": 71,
-      "taxa": 0
+      "taxa": 5.5
     }
   ]
 };
