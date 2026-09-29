@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "29/09/2026 15:28",
+  "atualizado_em": "29/09/2026 15:46",
   "quadro_ativo": 481,
   "taxa_abs": 9.8,
   "deficit": 48,
@@ -213,33 +213,55 @@ window.dadosPD = {
   "top_setores": [
     {
       "setor": "SEPARACAO",
-      "gestor": "LUIS PAULO REIS",
       "faltas": 485,
       "taxa": 12.1
     },
     {
       "setor": "EXPEDICAO",
-      "gestor": "TARCISIO RICARDO MARTINS CLARO",
       "faltas": 140,
       "taxa": 8.4
     },
     {
       "setor": "FECHAMENTO",
-      "gestor": "RICARDO EUGENIO LAURINDO",
       "faltas": 136,
       "taxa": 8.5
     },
     {
       "setor": "REABASTECIMENTO",
-      "gestor": "FLAVIO MARTINS RUFINO",
       "faltas": 133,
       "taxa": 10.1
     },
     {
       "setor": "RECEBIMENTO",
-      "gestor": "MARCIO VINICIO AMANCIO JUNIOR",
       "faltas": 71,
       "taxa": 5.5
+    }
+  ],
+  "top_lideres": [
+    {
+      "lider": "JAQUELINE RODRIGUES DE CARVALHO",
+      "faltas": 239,
+      "taxa": 18.1
+    },
+    {
+      "lider": "LUIS PAULO REIS",
+      "faltas": 136,
+      "taxa": 9.3
+    },
+    {
+      "lider": "JOYCE SILVA DE OLIVEIRA",
+      "faltas": 108,
+      "taxa": 9.3
+    },
+    {
+      "lider": "GEOVANI PAULO PAULINO JUNIOR",
+      "faltas": 63,
+      "taxa": 12.8
+    },
+    {
+      "lider": "KAROLINE NASCIMENTO DE CARVALHO",
+      "faltas": 56,
+      "taxa": 9.7
     }
   ]
 };
