@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "29/09/2026 12:43",
+  "atualizado_em": "29/09/2026 14:23",
   "quadro_ativo": 481,
   "taxa_abs": 9.8,
   "deficit": 48,
-  "fi_dias": 356,
-  "fj_dias": 462,
+  "fi_dias": 355,
+  "fj_dias": 463,
   "grafico_setor": {
     "labels": [
       "SEPARACAO",
@@ -193,19 +193,19 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "efetivo": 179,
+      "efetivo": 3272,
       "faltas": 424,
       "taxa": 13.0
     },
     {
       "turno": "2º Turno",
-      "efetivo": 178,
+      "efetivo": 3456,
       "faltas": 331,
       "taxa": 9.6
     },
     {
       "turno": "1º Turno",
-      "efetivo": 173,
+      "efetivo": 3265,
       "faltas": 223,
       "taxa": 6.8
     }
@@ -214,35 +214,35 @@ window.dadosPD = {
     {
       "setor": "SEPARACAO",
       "gestor": "LUIS PAULO REIS",
-      "efetivo": 207,
+      "efetivo": 4011,
       "faltas": 485,
       "taxa": 12.1
     },
     {
       "setor": "REABASTECIMENTO",
       "gestor": "FLAVIO MARTINS RUFINO",
-      "efetivo": 70,
+      "efetivo": 1311,
       "faltas": 133,
       "taxa": 10.1
     },
     {
       "setor": "INVENTARIO",
       "gestor": "MARIA GABRIELE SANTANA ALVES",
-      "efetivo": 15,
+      "efetivo": 170,
       "faltas": 17,
       "taxa": 10.0
     },
     {
       "setor": "EXPEDICAO",
       "gestor": "TARCISIO RICARDO MARTINS CLARO",
-      "efetivo": 86,
+      "efetivo": 1639,
       "faltas": 139,
       "taxa": 8.5
     },
     {
       "setor": "FECHAMENTO",
       "gestor": "RICARDO EUGENIO LAURINDO",
-      "efetivo": 84,
+      "efetivo": 1580,
       "faltas": 133,
       "taxa": 8.4
     }
