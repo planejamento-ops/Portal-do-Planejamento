@@ -1,24 +1,24 @@
 window.dadosPD = {
-  "atualizado_em": "29/09/2026 15:01",
+  "atualizado_em": "29/09/2026 15:28",
   "quadro_ativo": 481,
   "taxa_abs": 9.8,
   "deficit": 48,
   "fi_dias": 355,
-  "fj_dias": 463,
+  "fj_dias": 466,
   "grafico_setor": {
     "labels": [
       "SEPARACAO",
       "REABASTECIMENTO",
       "INVENTARIO",
-      "EXPEDICAO",
       "FECHAMENTO",
+      "EXPEDICAO",
       "RECEBIMENTO"
     ],
     "data": [
       12.1,
       10.1,
       10.0,
-      8.4,
+      8.5,
       8.4,
       5.5
     ],
@@ -26,8 +26,8 @@ window.dadosPD = {
       485,
       133,
       17,
+      136,
       140,
-      133,
       71
     ]
   },
@@ -39,7 +39,7 @@ window.dadosPD = {
       "PACTUAL"
     ],
     "data": [
-      12.3,
+      12.2,
       10.2,
       9.5,
       7.8
@@ -47,7 +47,7 @@ window.dadosPD = {
     "absolutos": [
       194,
       127,
-      544,
+      547,
       114
     ]
   },
@@ -84,39 +84,112 @@ window.dadosPD = {
     ],
     "datasets": [
       {
-        "label": "Total de Faltas do Dia",
+        "label": "1º Turno",
         "data": [
-          49,
-          48,
-          50,
-          47,
-          26,
-          18,
-          38,
-          36,
-          35,
-          44,
+          12,
+          15,
+          15,
+          12,
           14,
-          20,
-          42,
-          45,
-          45,
-          37,
-          42,
-          16,
+          0,
+          9,
+          3,
+          11,
+          10,
+          6,
+          0,
+          12,
+          5,
+          9,
+          7,
+          7,
+          4,
+          0,
+          11,
+          6,
+          10,
+          12,
+          10,
+          2,
+          0,
           14,
-          42,
-          39,
-          37,
-          42,
-          42,
-          19,
-          24,
-          60,
-          8
+          7
         ],
         "borderColor": "#00d2ff",
-        "backgroundColor": "#00d2ff"
+        "backgroundColor": "#00d2ff",
+        "borderWidth": 2
+      },
+      {
+        "label": "2º Turno",
+        "data": [
+          14,
+          11,
+          14,
+          11,
+          12,
+          0,
+          14,
+          17,
+          11,
+          12,
+          8,
+          0,
+          12,
+          18,
+          19,
+          15,
+          15,
+          12,
+          0,
+          14,
+          16,
+          11,
+          17,
+          17,
+          17,
+          0,
+          24,
+          4
+        ],
+        "borderColor": "#f6b93b",
+        "backgroundColor": "#f6b93b",
+        "borderWidth": 2
+      },
+      {
+        "label": "3º Turno",
+        "data": [
+          23,
+          22,
+          21,
+          24,
+          0,
+          18,
+          15,
+          16,
+          13,
+          22,
+          0,
+          20,
+          18,
+          22,
+          17,
+          15,
+          20,
+          0,
+          14,
+          17,
+          17,
+          16,
+          13,
+          15,
+          0,
+          24,
+          22,
+          0
+        ],
+        "borderColor": "#e64343",
+        "backgroundColor": "#e64343",
+        "borderWidth": 2
       }
     ]
   },
@@ -128,8 +201,8 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 332,
-      "taxa": 9.5
+      "faltas": 335,
+      "taxa": 9.6
     },
     {
       "turno": "1º Turno",
@@ -153,8 +226,8 @@ window.dadosPD = {
     {
       "setor": "FECHAMENTO",
       "gestor": "RICARDO EUGENIO LAURINDO",
-      "faltas": 133,
-      "taxa": 8.4
+      "faltas": 136,
+      "taxa": 8.5
     },
     {
       "setor": "REABASTECIMENTO",
