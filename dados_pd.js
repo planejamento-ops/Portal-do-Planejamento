@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "29/09/2026 21:44",
+  "atualizado_em": "29/09/2026 22:00",
   "taxa_abs": 9.8,
   "deficit": 48,
   "fi_dias": 360,
@@ -761,7 +761,7 @@ window.dadosPD = {
     "datasets": [
       {
         "type": "bar",
-        "label": "Geral",
+        "label": "Faltas Totais",
         "data": [
           11.1,
           10.3,
