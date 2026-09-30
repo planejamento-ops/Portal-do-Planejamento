@@ -40,7 +40,7 @@
         /* ========================================== */
         /* MENU LATERAL (SIDEBAR)                     */
         /* ========================================== */
-        .main-layout { display: flex; gap: 16px; align-items: stretch; }
+        .main-layout { display: flex; gap: 16px; align-items: stretch; width: 100%; }
         .sidebar-apps { width: 240px; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
         .card-app { border-radius: 12px; padding: 10px 12px; text-decoration: none; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); color: #FFFFFF; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; gap: 10px; overflow: hidden; }
         .card-app:hover { transform: translateX(4px); background: rgba(30, 41, 59, 0.75); border-color: rgba(0, 210, 255, 0.4); box-shadow: 0 0 20px rgba(0, 210, 255, 0.15); }
@@ -108,32 +108,10 @@
         .card-red { border-color: rgba(255, 75, 43, 0.3); } .card-red .icon { color: #ff4b2b; background: rgba(255, 75, 43, 0.12); } 
         .card-green { border-color: rgba(0, 176, 155, 0.3); } .card-green .icon { color: #00b09b; background: rgba(0, 176, 155, 0.12); }
 
-        /* CARD DE PROGRESSO E ADERÊNCIA */
         .card-progress { display: flex; flex-direction: column; align-items: stretch; justify-content: center; }
         .card-progress-content { display: flex; align-items: center; gap: 8px; width: 100%; }
-        
         .progress-bar-container { width: 100%; height: 4px; background: rgba(255, 255, 255, 0.08); border-radius: 4px; margin-top: 6px; overflow: hidden; position: relative; }
         .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #00b09b 0%, #00d2ff 100%); border-radius: 4px; transition: width 1s ease-in-out; }
-
-        /* ========================================== */
-        /* MACRO VOLUMES E CAIXAS DETALHE             */
-        /* ========================================== */
-        .macro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 2px; }
-        .macro-box { background: rgba(15, 23, 42, 0.4); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); overflow: hidden; backdrop-filter: blur(12px); display: flex; flex-direction: column; }
-        .macro-box-fr { border-top: 3px solid #00d2ff; } 
-        .macro-box-gv { border-top: 3px solid #ff4b2b; } 
-        .macro-box-pc { border-top: 3px solid #9b59b6; }
-        
-        .macro-header { padding: 8px 14px; background: rgba(255, 255, 255, 0.02); font-size: 0.72rem; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 6px; }
-        .macro-box-fr .macro-header { color: #00d2ff; } 
-        .macro-box-gv .macro-header { color: #ff4b2b; } 
-        .macro-box-pc .macro-header { color: #9b59b6; }
-
-        .macro-stats { display: grid; grid-template-columns: repeat(4, 1fr); padding: 12px; gap: 10px; }
-        .stat-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .stat-item .label { font-size: 0.60rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
-        .stat-item strong { font-size: 1.05rem; color: #ffffff; font-weight: 800; font-feature-settings: 'tnum' on; }
-        .stat-item small.pct { font-size: 0.62rem; color: #00d2ff; font-weight: 700; margin-top: 2px; }
 
         .tu-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .tu-detail-box { background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 12px 14px; border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
@@ -151,15 +129,11 @@
         .tu-table td span.val { color: #00d2ff; font-weight: 700; }
         .carreta-tag { font-size: 0.68rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; }
 
-        /* Estilo dos Filtros da Tabela de Fechamento */
         .table-fechamento-header { background: #1e293b !important; }
         .table-fechamento-header th { color: #cbd5e1 !important; border-bottom: 2px solid rgba(0, 210, 255, 0.3) !important; padding: 6px 4px !important; }
         .input-filtro-tabela { width: 95%; max-width: 110px; margin-top: 4px; padding: 3px 6px; font-size: 0.62rem; font-weight: 600; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(15, 23, 42, 0.7); color: #ffffff; outline: none; transition: border-color 0.2s; }
         .input-filtro-tabela:focus { border-color: #00d2ff; box-shadow: 0 0 6px rgba(0, 210, 255, 0.4); }
 
-        /* ========================================== */
-        /* ESPECÍFICOS DA ABA 1 (TUs)                 */
-        /* ========================================== */
         .grid-mes-acumulado { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .fifo-triple-container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
         .fifo-alert-card { background: linear-gradient(135deg, rgba(0, 210, 255, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%); border: 1px solid rgba(0, 210, 255, 0.35); border-left: 4px solid #00d2ff; border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.05); }
@@ -180,9 +154,6 @@
         .pend-tag { color: #f6b93b; background: rgba(246, 185, 59, 0.1); border: 1px solid rgba(246, 185, 59, 0.25); }
         .ok-tag { color: #00b09b; background: rgba(0, 176, 155, 0.1); border: 1px solid rgba(0, 176, 155, 0.25); }
 
-        /* ========================================== */
-        /* ESPECÍFICOS DA ABA 2 (WMS - BOTÕES FIXOS)  */
-        /* ========================================== */
         .wms-toggles { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding: 12px 14px; background: rgba(15, 23, 42, 0.4); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); align-items: center; }
         .wms-toggles-title { font-size: 0.65rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; margin-right: 10px; }
         .btn-wms-onda { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); color: #8a99ad; padding: 8px 16px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
@@ -195,19 +166,40 @@
         .btn-sub-tab:hover { background: rgba(255, 255, 255, 0.05); color: #ffffff; }
         .btn-sub-tab.active { background: rgba(0, 210, 255, 0.15); color: #00d2ff; border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.1); }
         
-        /* FILTRO DE DATA/MÊS */
         .date-picker-wrapper { display: flex; align-items: center; gap: 6px; background: rgba(15, 23, 42, 0.8); padding: 5px 12px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.3); box-shadow: inset 0 0 10px rgba(0, 210, 255, 0.05); }
         .date-picker-wrapper input[type="date"], .date-picker-wrapper input[type="month"] { background: transparent; border: none; color: #ffffff; font-family: inherit; font-size: 0.75rem; font-weight: 700; outline: none; cursor: pointer; color-scheme: dark; }
         .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.8; transition: 0.2s; }
         .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator:hover, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
 
         /* ========================================== */
-        /* RODAPÉ E PILARES                           */
+        /* ESTATÍSTICAS MACRO (TAB 2 WMS CORRIGIDA)   */
         /* ========================================== */
-        .bar-pilares { display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 18px; margin-top: 6px; border-radius: 10px; background: linear-gradient(135deg, rgba(0, 210, 255, 0.08) 0%, rgba(11, 19, 38, 0.75) 50%, rgba(230, 67, 67, 0.1) 100%); backdrop-filter: blur(16px); border: 1px solid transparent; border-top: 1px solid rgba(0, 210, 255, 0.4); border-bottom: 1px solid rgba(230, 67, 67, 0.4); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+        .macro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 2px; }
+        .macro-box { background: rgba(15, 23, 42, 0.55); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); overflow: hidden; backdrop-filter: blur(12px); display: flex; flex-direction: column; }
+        .macro-box-fr { border-top: 3px solid #00d2ff; } 
+        .macro-box-gv { border-top: 3px solid #ff4b2b; } 
+        .macro-box-pc { border-top: 3px solid #9b59b6; }
+        .macro-header { padding: 10px 14px; background: rgba(255, 255, 255, 0.03); font-size: 0.75rem; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 6px; }
+        .macro-box-fr .macro-header { color: #00d2ff; } 
+        .macro-box-gv .macro-header { color: #ff4b2b; } 
+        .macro-box-pc .macro-header { color: #9b59b6; }
+        .macro-stats { display: grid; grid-template-columns: repeat(4, 1fr); padding: 14px 12px; gap: 10px; }
+        
+        .stat-item { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 0; }
+        .stat-item .label { font-size: 0.63rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 3px; }
+        .stat-item strong { font-size: 1.15rem; color: #ffffff; font-weight: 800; font-feature-settings: 'tnum' on; display: block; line-height: 1.1; }
+        .stat-item .pct { font-size: 0.68rem; color: #00d2ff; font-weight: 700; margin-top: 3px; display: block; }
+
+        /* SCROLLBAR CUSTOMIZADA E DISCRETA PARA TABELAS */
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(0, 210, 255, 0.3); border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(0, 210, 255, 0.6); }
+
+        .bar-pilares { display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 18px; margin-top: 6px; border-radius: 10px; background: linear-gradient(135deg, rgba(0, 210, 255, 0.08) 0%, rgba(11, 19, 38, 0.75) 50%, rgba(230, 67, 67, 0.1) 100%); backdrop-filter: blur(16px); border-top: 1px solid rgba(0, 210, 255, 0.4); border-bottom: 1px solid rgba(230, 67, 67, 0.4); }
         .pilar-item { display: flex; align-items: center; gap: 8px; color: #a0aab5; position: relative; padding: 0 8px; }
         .pilar-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 20%; height: 60%; width: 1px; background: linear-gradient(to bottom, rgba(0, 210, 255, 0.35), rgba(230, 67, 67, 0.35)); }
-        .pilar-item .material-symbols-outlined { font-size: 18px; color: #00d2ff; background: rgba(0, 210, 255, 0.12); padding: 5px; border-radius: 6px; border: 1px solid rgba(0, 210, 255, 0.25); transition: all 0.3s ease; }
+        .pilar-item .material-symbols-outlined { font-size: 18px; color: #00d2ff; background: rgba(0, 210, 255, 0.12); padding: 5px; border-radius: 6px; border: 1px solid rgba(0, 210, 255, 0.25); }
         .pilar-text { font-size: 0.7rem; line-height: 1.1; }
         .pilar-text strong { color: #ffffff; display: block; font-size: 0.76rem; letter-spacing: 0.3px; }
         .rodape { opacity: 1; text-align: left; margin-top: 2px; }
@@ -228,6 +220,7 @@
     </header>
 
     <div class="main-layout">
+        <!-- BARRA LATERAL COM APLICATIVOS MANTIDA -->
         <aside class="sidebar-apps">
             <a href="packspackval.html" class="card-app bloco-auditor">
                 <div class="icon"><span class="material-symbols-outlined">package</span></div>
@@ -273,24 +266,23 @@
                 <button class="btn-tab" onclick="trocarAba('tab-fechamento', this)">
                     <span class="material-symbols-outlined">done_all</span> Fechamento
                 </button>
+                <button class="btn-tab" onclick="trocarAba('tab-pd', this)" style="border-color: rgba(230, 67, 67, 0.4);">
+                    <span class="material-symbols-outlined" style="color: #e64343;">group</span> PD Digital
+                </button>
             </div>
 
             <div class="tu-dashboard-container">
-                <!-- ========================================== -->
-                <!-- ABA 1: CONTROLE DE TUS                     -->
-                <!-- ========================================== -->
+                <!-- ABA 1: CONTROLE DE TUS -->
                 <div id="tab-tu" class="tab-panel active">
                     <div class="tu-header">
                         <div class="tu-title-group">
                             <h2><span class="material-symbols-outlined">analytics</span> Controle de TUs</h2>
                         </div>
                         <div class="header-badges">
-                            <!-- 1. FILTRO DE MÊS AQUI (COMO PEDIDO) -->
                             <div class="date-picker-wrapper" title="Filtrar Totais do Mês">
                                 <span class="material-symbols-outlined" style="font-size: 18px; color: #00d2ff;">calendar_month</span>
                                 <input type="month" id="filtro-mes-tu" onchange="aplicarFiltroMesTU()">
                             </div>
-
                             <a href="https://docs.google.com/spreadsheets/d/1MQ0zlahgcO6Y04dKfe2DQVnN_C0ReZL0kuOwv06-Iw8" target="_blank" class="btn-atalho btn-gsheets" title="Abrir Controle de TUs no Google Sheets">
                                 <span class="material-symbols-outlined">table_chart</span> Google Sheets
                             </a>
@@ -327,90 +319,34 @@
                         <div class="fifo-alert-card">
                             <div class="fifo-info">
                                 <span class="material-symbols-outlined">local_shipping</span>
-                                <div class="fifo-text">
-                                    <span class="tag">Carteira</span>
-                                    <h3 id="fifo-cart-title">Sem pendências</h3>
-                                </div>
+                                <div class="fifo-text"><span class="tag">Carteira</span><h3 id="fifo-cart-title">Sem pendências</h3></div>
                             </div>
-                            <div class="fifo-details">
-                                <span>UF: <strong id="fifo-cart-uf">--</strong></span>
-                                <span>Status: <strong id="fifo-cart-status">OK</strong></span>
-                            </div>
+                            <div class="fifo-details"><span>UF: <strong id="fifo-cart-uf">--</strong></span><span>Status: <strong id="fifo-cart-status">OK</strong></span></div>
                         </div>
                         <div class="fifo-alert-card fifo-card-varejo">
                             <div class="fifo-info">
                                 <span class="material-symbols-outlined">storefront</span>
-                                <div class="fifo-text">
-                                    <span class="tag">Varejo</span>
-                                    <h3 id="fifo-var-title">Sem pendências</h3>
-                                </div>
+                                <div class="fifo-text"><span class="tag">Varejo</span><h3 id="fifo-var-title">Sem pendências</h3></div>
                             </div>
-                            <div class="fifo-details">
-                                <span>UF: <strong id="fifo-var-uf">--</strong></span>
-                                <span>Status: <strong id="fifo-var-status">OK</strong></span>
-                            </div>
+                            <div class="fifo-details"><span>UF: <strong id="fifo-var-uf">--</strong></span><span>Status: <strong id="fifo-var-status">OK</strong></span></div>
                         </div>
                         <div class="fifo-alert-card fifo-card-estojo">
                             <div class="fifo-info">
                                 <span class="material-symbols-outlined">inventory_2</span>
-                                <div class="fifo-text">
-                                    <span class="tag">Estojo</span>
-                                    <h3 id="fifo-est-title">Sem pendências</h3>
-                                </div>
+                                <div class="fifo-text"><span class="tag">Estojo</span><h3 id="fifo-est-title">Sem pendências</h3></div>
                             </div>
-                            <div class="fifo-details">
-                                <span>UF: <strong id="fifo-est-uf">--</strong></span>
-                                <span>Status: <strong id="fifo-est-status">OK</strong></span>
-                            </div>
+                            <div class="fifo-details"><span>UF: <strong id="fifo-est-uf">--</strong></span><span>Status: <strong id="fifo-est-status">OK</strong></span></div>
                         </div>
                     </div>
 
-                    <!-- 2. ORDEM REORGANIZADA DOS CARDS (TU -> CARRETA -> CAIXAS -> PEÇAS -> PROGRESSO) -->
                     <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">inventory_2</span>
-                            <div class="tu-info">
-                                <span class="label">TUs Pendentes</span>
-                                <h3 id="tus-pendentes">--</h3>
-                                <small id="sub-tus">De -- TUs na Janela</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-red">
-                            <span class="material-symbols-outlined icon">local_shipping</span>
-                            <div class="tu-info">
-                                <span class="label">Carretas Pendentes</span>
-                                <h3 id="carretas-pendentes">--</h3>
-                                <small>Pendentes de Rampa</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-yellow">
-                            <span class="material-symbols-outlined icon">package_2</span>
-                            <div class="tu-info">
-                                <span class="label">Caixas Pendentes</span>
-                                <h3 id="caixas-pendentes">--</h3>
-                                <small id="sub-caixas">LN: -- | GV: --</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-purple">
-                            <span class="material-symbols-outlined icon">category</span>
-                            <div class="tu-info">
-                                <span class="label">Peças Pendentes</span>
-                                <h3 id="pecas-pendentes">--</h3>
-                                <small id="sub-pecas">LN: -- | GV: --</small>
-                            </div>
-                        </div>
+                        <div class="tu-card card-cyan"><span class="material-symbols-outlined icon">inventory_2</span><div class="tu-info"><span class="label">TUs Pendentes</span><h3 id="tus-pendentes">--</h3><small id="sub-tus">De -- TUs na Janela</small></div></div>
+                        <div class="tu-card card-red"><span class="material-symbols-outlined icon">local_shipping</span><div class="tu-info"><span class="label">Carretas Pendentes</span><h3 id="carretas-pendentes">--</h3><small>Pendentes de Rampa</small></div></div>
+                        <div class="tu-card card-yellow"><span class="material-symbols-outlined icon">package_2</span><div class="tu-info"><span class="label">Caixas Pendentes</span><h3 id="caixas-pendentes">--</h3><small id="sub-caixas">LN: -- | GV: --</small></div></div>
+                        <div class="tu-card card-purple"><span class="material-symbols-outlined icon">category</span><div class="tu-info"><span class="label">Peças Pendentes</span><h3 id="pecas-pendentes">--</h3><small id="sub-pecas">LN: -- | GV: --</small></div></div>
                         <div class="tu-card card-green card-progress">
-                            <div class="card-progress-content">
-                                <span class="material-symbols-outlined icon">check_circle</span>
-                                <div class="tu-info">
-                                    <span class="label">Progresso</span>
-                                    <h3 id="progresso-pct">--%</h3>
-                                    <small id="sub-progresso">Alocado</small>
-                                </div>
-                            </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-fill" id="bar-progresso-fill"></div>
-                            </div>
+                            <div class="card-progress-content"><span class="material-symbols-outlined icon">check_circle</span><div class="tu-info"><span class="label">Progresso</span><h3 id="progresso-pct">--%</h3><small id="sub-progresso">Alocado</small></div></div>
+                            <div class="progress-bar-container"><div class="progress-bar-fill" id="bar-progresso-fill"></div></div>
                         </div>
                     </div>
 
@@ -418,59 +354,18 @@
                         <div class="tu-detail-box">
                             <h4><span class="material-symbols-outlined">pie_chart</span> Perfil & Volume REALIZADO</h4>
                             <table class="tu-table">
-                                <thead>
-                                    <tr>
-                                        <th style="text-align: left;">Atendimento</th>
-                                        <th>Peças</th>
-                                        <th>Caixas</th>
-                                        <th>Perfil (Pç/Cx)</th>
-                                    </tr>
-                                </thead>
+                                <thead><tr><th style="text-align: left;">Atendimento</th><th>Peças</th><th>Caixas</th><th>Perfil (Pç/Cx)</th></tr></thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Carteira (LN)</td>
-                                        <td id="pcs-cart_ln-tot">--</td>
-                                        <td id="cx-cart_ln-tot">--</td>
-                                        <td><span class="val" id="perf-cart_ln-tot">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Carteira (GV)</td>
-                                        <td id="pcs-cart_gv-tot">--</td>
-                                        <td id="cx-cart_gv-tot">--</td>
-                                        <td><span class="val" id="perf-cart_gv-tot">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Varejo (LN)</td>
-                                        <td id="pcs-var_ln-tot">--</td>
-                                        <td id="cx-var_ln-tot">--</td>
-                                        <td><span class="val" id="perf-var_ln-tot">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Varejo (GV)</td>
-                                        <td id="pcs-var_gv-tot">--</td>
-                                        <td id="cx-var_gv-tot">--</td>
-                                        <td><span class="val" id="perf-var_gv-tot">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Estojo (LN)</td>
-                                        <td id="pcs-est_ln-tot">--</td>
-                                        <td id="cx-est_ln-tot">--</td>
-                                        <td><span class="val" id="perf-est_ln-tot">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Estojo (GV)</td>
-                                        <td id="pcs-est_gv-tot">--</td>
-                                        <td id="cx-est_gv-tot">--</td>
-                                        <td><span class="val" id="perf-est_gv-tot">--</span></td>
-                                    </tr>
+                                    <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-tot">--</td><td id="cx-cart_ln-tot">--</td><td><span class="val" id="perf-cart_ln-tot">--</span></td></tr>
+                                    <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-tot">--</td><td id="cx-cart_gv-tot">--</td><td><span class="val" id="perf-cart_gv-tot">--</span></td></tr>
+                                    <tr><td>Varejo (LN)</td><td id="pcs-var_ln-tot">--</td><td id="cx-var_ln-tot">--</td><td><span class="val" id="perf-var_ln-tot">--</span></td></tr>
+                                    <tr><td>Varejo (GV)</td><td id="pcs-var_gv-tot">--</td><td id="cx-var_gv-tot">--</td><td><span class="val" id="perf-var_gv-tot">--</span></td></tr>
+                                    <tr><td>Estojo (LN)</td><td id="pcs-est_ln-tot">--</td><td id="cx-est_ln-tot">--</td><td><span class="val" id="perf-est_ln-tot">--</span></td></tr>
+                                    <tr><td>Estojo (GV)</td><td id="pcs-est_gv-tot">--</td><td id="cx-est_gv-tot">--</td><td><span class="val" id="perf-est_gv-tot">--</span></td></tr>
                                 </tbody>
-                                <!-- 3. LINHA DE TOTAL AQUI -->
                                 <tfoot>
                                     <tr style="border-top: 2px solid rgba(0, 210, 255, 0.4); font-weight: 800; background: rgba(0, 210, 255, 0.08);">
-                                        <td style="color: #00d2ff; text-align: left; padding: 8px 6px;">TOTAL GERAL</td>
-                                        <td id="pcs-total-tot" style="color: #ffffff;">--</td>
-                                        <td id="cx-total-tot" style="color: #ffffff;">--</td>
-                                        <td><span class="val" id="perf-total-tot" style="color: #00d2ff;">--</span></td>
+                                        <td style="color: #00d2ff; text-align: left; padding: 8px 6px;">TOTAL GERAL</td><td id="pcs-total-tot" style="color: #ffffff;">--</td><td id="cx-total-tot" style="color: #ffffff;">--</td><td><span class="val" id="perf-total-tot" style="color: #00d2ff;">--</span></td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -479,59 +374,18 @@
                         <div class="tu-detail-box box-warning">
                             <h4><span class="material-symbols-outlined">pending_actions</span> Perfil & Volume PENDENTE</h4>
                             <table class="tu-table">
-                                <thead>
-                                    <tr>
-                                        <th style="text-align: left;">Atendimento</th>
-                                        <th>Peças</th>
-                                        <th>Caixas</th>
-                                        <th>Perfil</th>
-                                    </tr>
-                                </thead>
+                                <thead><tr><th style="text-align: left;">Atendimento</th><th>Peças</th><th>Caixas</th><th>Perfil</th></tr></thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Carteira (LN)</td>
-                                        <td id="pcs-cart_ln-pend">--</td>
-                                        <td id="cx-cart_ln-pend">--</td>
-                                        <td><span class="val" id="perf-cart_ln-pend">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Carteira (GV)</td>
-                                        <td id="pcs-cart_gv-pend">--</td>
-                                        <td id="cx-cart_gv-pend">--</td>
-                                        <td><span class="val" id="perf-cart_gv-pend">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Varejo (LN)</td>
-                                        <td id="pcs-var_ln-pend">--</td>
-                                        <td id="cx-var_ln-pend">--</td>
-                                        <td><span class="val" id="perf-var_ln-pend">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Varejo (GV)</td>
-                                        <td id="pcs-var_gv-pend">--</td>
-                                        <td id="cx-var_gv-pend">--</td>
-                                        <td><span class="val" id="perf-var_gv-pend">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Estojo (LN)</td>
-                                        <td id="pcs-est_ln-pend">--</td>
-                                        <td id="cx-est_ln-pend">--</td>
-                                        <td><span class="val" id="perf-est_ln-pend">--</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Estojo (GV)</td>
-                                        <td id="pcs-est_gv-pend">--</td>
-                                        <td id="cx-est_gv-pend">--</td>
-                                        <td><span class="val" id="perf-est_gv-pend">--</span></td>
-                                    </tr>
+                                    <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-pend">--</td><td id="cx-cart_ln-pend">--</td><td><span class="val" id="perf-cart_ln-pend">--</span></td></tr>
+                                    <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-pend">--</td><td id="cx-cart_gv-pend">--</td><td><span class="val" id="perf-cart_gv-pend">--</span></td></tr>
+                                    <tr><td>Varejo (LN)</td><td id="pcs-var_ln-pend">--</td><td id="cx-var_ln-pend">--</td><td><span class="val" id="perf-var_ln-pend">--</span></td></tr>
+                                    <tr><td>Varejo (GV)</td><td id="pcs-var_gv-pend">--</td><td id="cx-var_gv-pend">--</td><td><span class="val" id="perf-var_gv-pend">--</span></td></tr>
+                                    <tr><td>Estojo (LN)</td><td id="pcs-est_ln-pend">--</td><td id="cx-est_ln-pend">--</td><td><span class="val" id="perf-est_ln-pend">--</span></td></tr>
+                                    <tr><td>Estojo (GV)</td><td id="pcs-est_gv-pend">--</td><td id="cx-est_gv-pend">--</td><td><span class="val" id="perf-est_gv-pend">--</span></td></tr>
                                 </tbody>
-                                <!-- 3. LINHA DE TOTAL AQUI -->
                                 <tfoot>
                                     <tr style="border-top: 2px solid rgba(246, 185, 59, 0.4); font-weight: 800; background: rgba(246, 185, 59, 0.08);">
-                                        <td style="color: #f6b93b; text-align: left; padding: 8px 6px;">TOTAL GERAL</td>
-                                        <td id="pcs-total-pend" style="color: #ffffff;">--</td>
-                                        <td id="cx-total-pend" style="color: #ffffff;">--</td>
-                                        <td><span class="val" id="perf-total-pend" style="color: #f6b93b;">--</span></td>
+                                        <td style="color: #f6b93b; text-align: left; padding: 8px 6px;">TOTAL GERAL</td><td id="pcs-total-pend" style="color: #ffffff;">--</td><td id="cx-total-pend" style="color: #ffffff;">--</td><td><span class="val" id="perf-total-pend" style="color: #f6b93b;">--</span></td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -539,49 +393,23 @@
                         
                         <div class="tu-detail-box box-red">
                             <h4><span class="material-symbols-outlined">verified</span> Acompanhamento </h4>
-                            <div class="detail-row">
-                                <span>Atendimento(s) em Andamento:</span>
-                                <span id="txt-atendimentos-andamento" class="val" style="color: #00d2ff;">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span>Alertas de Atraso de Atendimento:</span>
-                                <span id="txt-alertas-atraso" class="val" style="color: #f6b93b;">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span>Conflito de Rampas:</span>
-                                <span id="alert-rampas" class="val status-ok">0 Detectado</span>
-                            </div>
-                            <div class="detail-row">
-                                <span>Saúde Geral</span>
-                                <span id="alert-saude" class="val status-ok">100% Auditada</span>
-                            </div>
+                            <div class="detail-row"><span>Atendimento(s) em Andamento:</span><span id="txt-atendimentos-andamento" class="val" style="color: #00d2ff;">--</span></div>
+                            <div class="detail-row"><span>Alertas de Atraso de Atendimento:</span><span id="txt-alertas-atraso" class="val" style="color: #f6b93b;">--</span></div>
+                            <div class="detail-row"><span>Conflito de Rampas:</span><span id="alert-rampas" class="val status-ok">0 Detectado</span></div>
+                            <div class="detail-row"><span>Saúde Geral</span><span id="alert-saude" class="val status-ok">100% Auditada</span></div>
                         </div>
 
                         <div class="tu-detail-box box-purple">
                             <h4><span class="material-symbols-outlined">assignment_late</span>Pendências de TU</h4>
-                            <div class="detail-row">
-                                <span>Pendências em Estojo:</span>
-                                <div class="alert-group"><span class="val" id="pend-canal-estojo">--</span></div>
-                            </div>
-                            <div class="detail-row">
-                                <span>Pendências em Carteira:</span>
-                                <div class="alert-group"><span class="val" id="pend-canal-carteira">--</span></div>
-                            </div>
-                            <div class="detail-row">
-                                <span>Pendências em Varejo:</span>
-                                <div class="alert-group"><span class="val" id="pend-canal-varejo">--</span></div>
-                            </div>
-                            <div class="detail-row">
-                                <span>Outras Pendências:</span>
-                                <div class="alert-group"><span class="val" id="pend-canal-outras">--</span></div>
-                            </div>
+                            <div class="detail-row"><span>Pendências em Estojo:</span><div class="alert-group"><span class="val" id="pend-canal-estojo">--</span></div></div>
+                            <div class="detail-row"><span>Pendências em Carteira:</span><div class="alert-group"><span class="val" id="pend-canal-carteira">--</span></div></div>
+                            <div class="detail-row"><span>Pendências em Varejo:</span><div class="alert-group"><span class="val" id="pend-canal-varejo">--</span></div></div>
+                            <div class="detail-row"><span>Outras Pendências:</span><div class="alert-group"><span class="val" id="pend-canal-outras">--</span></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- ABA 2: DEMANDAS WMS                        -->
-                <!-- ========================================== -->
+                <!-- ABA 2: DEMANDAS WMS -->
                 <div id="tab-wms" class="tab-panel">
                     <div class="tu-header">
                         <div class="tu-title-group">
@@ -604,21 +432,11 @@
 
                     <div class="wms-toggles" id="container-wms-botoes">
                         <div class="wms-toggles-title">ATENDIMENTOS:</div>
-                        <button class="btn-wms-onda active" onclick="selecionarCanalWMS('VAREJO', this)">
-                            <span class="status-dot-off" id="dot-VAREJO"></span> VAREJO
-                        </button>
-                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('MGC', this)">
-                            <span class="status-dot-off" id="dot-MGC"></span> MGC
-                        </button>
-                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('SPI', this)">
-                            <span class="status-dot-off" id="dot-SPI"></span> SPI
-                        </button>
-                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('SPC', this)">
-                            <span class="status-dot-off" id="dot-SPC"></span> SPC
-                        </button>
-                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('MGI', this)">
-                            <span class="status-dot-off" id="dot-MGI"></span> MGI
-                        </button>
+                        <button class="btn-wms-onda active" onclick="selecionarCanalWMS('VAREJO', this)"><span class="status-dot-off" id="dot-VAREJO"></span> VAREJO</button>
+                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('MGC', this)"><span class="status-dot-off" id="dot-MGC"></span> MGC</button>
+                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('SPI', this)"><span class="status-dot-off" id="dot-SPI"></span> SPI</button>
+                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('SPC', this)"><span class="status-dot-off" id="dot-SPC"></span> SPC</button>
+                        <button class="btn-wms-onda" onclick="selecionarCanalWMS('MGI', this)"><span class="status-dot-off" id="dot-MGI"></span> MGI</button>
                     </div>
 
                     <div class="wms-sub-toggles">
@@ -631,17 +449,11 @@
                     <div class="tu-grid-main" id="grid-wms-globais" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 10px;">
                         <div class="tu-card card-green">
                             <span class="material-symbols-outlined icon">category</span>
-                            <div class="tu-info">
-                                <span class="label">Total Global Peças</span>
-                                <h3 id="wms-tot-pcs">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Total Global Peças</span><h3 id="wms-tot-pcs">--</h3></div>
                         </div>
                         <div class="tu-card card-green">
                             <span class="material-symbols-outlined icon">package_2</span>
-                            <div class="tu-info">
-                                <span class="label">Total Global Caixas</span>
-                                <h3 id="wms-tot-cxs">--</h3>
-                            </div>
+                            <div class="tu-info"><span class="label">Total Global Caixas</span><h3 id="wms-tot-cxs">--</h3></div>
                         </div>
                     </div>
 
@@ -649,27 +461,13 @@
                         <div class="tu-card card-green card-progress" id="card-aderencia-wms" style="display: none;">
                             <div class="card-progress-content">
                                 <span class="material-symbols-outlined icon">verified</span>
-                                <div class="tu-info">
-                                    <span class="label">Aderência da Demanda</span>
-                                    <h3 id="wms-aderencia">--%</h3>
-                                </div>
+                                <div class="tu-info"><span class="label">Aderência da Demanda</span><h3 id="wms-aderencia">--%</h3></div>
                             </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-fill" id="bar-aderencia-fill"></div>
-                            </div>
+                            <div class="progress-bar-container"><div class="progress-bar-fill" id="bar-aderencia-fill"></div></div>
                         </div>
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">route</span>
-                            <div class="tu-info"><span class="label">Estações Visitadas por Caixa</span><h3 id="wms-est-cx">--</h3></div>
-                        </div>
-                        <div class="tu-card card-purple">
-                            <span class="material-symbols-outlined icon">layers</span>
-                            <div class="tu-info"><span class="label">SKU por Caixa</span><h3 id="wms-skus-cx">--</h3></div>
-                        </div>
-                        <div class="tu-card card-red" id="card-tarefas-wms">
-                            <span class="material-symbols-outlined icon">assignment</span>
-                            <div class="tu-info"><span class="label">Tarefas WMS (FR e GV)</span><h3 id="wms-tarefas">--</h3></div>
-                        </div>
+                        <div class="tu-card card-cyan"><span class="material-symbols-outlined icon">route</span><div class="tu-info"><span class="label">Estações Visitadas por Caixa</span><h3 id="wms-est-cx">--</h3></div></div>
+                        <div class="tu-card card-purple"><span class="material-symbols-outlined icon">layers</span><div class="tu-info"><span class="label">SKU por Caixa</span><h3 id="wms-skus-cx">--</h3></div></div>
+                        <div class="tu-card card-red" id="card-tarefas-wms"><span class="material-symbols-outlined icon">assignment</span><div class="tu-info"><span class="label">Tarefas WMS (FR e GV)</span><h3 id="wms-tarefas">--</h3></div></div>
                     </div>
 
                     <div class="macro-grid">
@@ -722,9 +520,7 @@
                     </div>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- ABA 3: MOVIMENTAÇÕES                       -->
-                <!-- ========================================== -->
+                <!-- ABA 3: MOVIMENTAÇÕES -->
                 <div id="tab-movimentacoes" class="tab-panel">
                     <div class="tu-header">
                         <div class="tu-title-group">
@@ -734,7 +530,7 @@
                             <a href="https://docs.google.com/spreadsheets/d/1tNeCyjzmLYqL0YxlRjf5vG6UPwlunrgzu0zzAGIFhz0/edit?gid=0#gid=0" target="_blank" class="btn-atalho btn-gsheets" title="Abrir Movimentações no Google Sheets">
                                 <span class="material-symbols-outlined">table_chart</span> Google Sheets
                             </a>
-                            <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/LATAM-BR-VAG-01-CLBoticario/_layouts/15/Doc.aspx?sourcedoc=%7B58CFF1F4-026C-4F36-8C7C-CCEB1BD82621%7D&file=Movimenta%C3%A7%C3%B5es%202026.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&wdwpf=c" target="_blank" class="btn-atalho btn-m365" title="Abrir Movimentações no M365">
+                            <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/LATAM-BR-VAG-01-CLBoticario/_layouts/15/Doc.aspx?sourcedoc=%7B58CFF1F4-026C-4F36-8C7C-CCEB1BD82621%7D&file=Movimenta%C3%A7%C3%B5es%202026.xlsx&action=default&mobileredirect=true&wdwpf=doclib-t" target="_blank" class="btn-atalho btn-m365" title="Abrir Movimentações no M365">
                                 <span class="material-symbols-outlined">description</span> M365 Excel
                             </a>
                             <span class="tu-status-badge">
@@ -745,69 +541,34 @@
                     </div>
 
                     <div class="tu-grid-main" style="grid-template-columns: repeat(4, 1fr);">
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">today</span>
-                            <div class="tu-info"><span class="label">Movimentações do Dia</span><h3 id="mov-card-total-dia">--</h3></div>
-                        </div>
-                        <div class="tu-card card-yellow">
-                            <span class="material-symbols-outlined icon">pending_actions</span>
-                            <div class="tu-info"><span class="label">Pendentes do Dia</span><h3 id="mov-card-pendentes">--</h3></div>
-                        </div>
-                        <div class="tu-card card-purple">
-                            <span class="material-symbols-outlined icon">history_toggle_off</span>
-                            <div class="tu-info"><span class="label">Pendências Anteriores</span><h3 id="mov-card-pendentes-antigas">--</h3></div>
-                        </div>
-                        <div class="tu-card card-red">
-                            <span class="material-symbols-outlined icon">sell</span>
-                            <div class="tu-info"><span class="label">Etiquetas Totais</span><h3 id="mov-card-etiquetas-totais">--</h3></div>
-                        </div>
+                        <div class="tu-card card-cyan"><span class="material-symbols-outlined icon">today</span><div class="tu-info"><span class="label">Movimentações do Dia</span><h3 id="mov-card-total-dia">--</h3></div></div>
+                        <div class="tu-card card-yellow"><span class="material-symbols-outlined icon">pending_actions</span><div class="tu-info"><span class="label">Pendentes do Dia</span><h3 id="mov-card-pendentes">--</h3></div></div>
+                        <div class="tu-card card-purple"><span class="material-symbols-outlined icon">history_toggle_off</span><div class="tu-info"><span class="label">Pendências Anteriores</span><h3 id="mov-card-pendentes-antigas">--</h3></div></div>
+                        <div class="tu-card card-red"><span class="material-symbols-outlined icon">sell</span><div class="tu-info"><span class="label">Etiquetas Totais</span><h3 id="mov-card-etiquetas-totais">--</h3></div></div>
                     </div>
 
                     <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-top: 4px;">
                         <div class="tu-detail-box box-warning" style="min-width: 0;">
                             <h4><span class="material-symbols-outlined">list_alt</span> Movimentações Pendentes</h4>
                             <table class="tu-table">
-                                <thead>
-                                    <tr>
-                                        <th>DATA</th>
-                                        <th style="text-align: left;">ITEM</th>
-                                        <th>DEMANDA</th>
-                                        <th>DE</th>
-                                        <th>PARA</th>
-                                        <th>TIPO DEP.</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbl-mov-pendentes-body">
-                                    <tr><td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando...</td></tr>
-                                </tbody>
+                                <thead><tr><th>DATA</th><th style="text-align: left;">ITEM</th><th>DEMANDA</th><th>DE</th><th>PARA</th><th>TIPO DEP.</th></tr></thead>
+                                <tbody id="tbl-mov-pendentes-body"><tr><td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando...</td></tr></tbody>
                             </table>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
                             <div class="tu-detail-box box-purple">
                                 <h4><span class="material-symbols-outlined">print</span> Pendente Etiqueta (IE)</h4>
-                                <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
-                                    <table class="tu-table">
-                                        <thead><tr><th style="text-align: left;">ITEM</th><th>PARA</th></tr></thead>
-                                        <tbody id="tbl-mov-ie-body"></tbody>
-                                    </table>
-                                </div>
+                                <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;"><table class="tu-table"><thead><tr><th style="text-align: left;">ITEM</th><th>PARA</th></tr></thead><tbody id="tbl-mov-ie-body"></tbody></table></div>
                             </div>
                             <div class="tu-detail-box box-red">
                                 <h4><span class="material-symbols-outlined">app_registration</span> Pendente Fixo (CF)</h4>
-                                <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
-                                    <table class="tu-table">
-                                        <thead><tr><th style="text-align: left;">ITEM</th><th>PARA</th></tr></thead>
-                                        <tbody id="tbl-mov-cf-body"></tbody>
-                                    </table>
-                                </div>
+                                <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;"><table class="tu-table"><thead><tr><th style="text-align: left;">ITEM</th><th>PARA</th></tr></thead><tbody id="tbl-mov-cf-body"></tbody></table></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- ABA 4: FECHAMENTO DE EXPEDIÇÃO             -->
-                <!-- ========================================== -->
+                <!-- ABA 4: FECHAMENTO DE EXPEDIÇÃO -->
                 <div id="tab-fechamento" class="tab-panel">
                     <div class="tu-header">
                         <div class="tu-title-group">
@@ -826,7 +587,6 @@
                             <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">view_carousel</span>
                             Status por Atendimento
                         </h4>
-                        <!-- 4. CARDS COM DUPLO STATUS INCORPORADOS AQUI COM FALLBACKS SEGUROS -->
                         <div id="container-cards-atendimentos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px;">
                             <p style="color:#a0aab5; font-size:0.75rem;">Carregando atendimentos em andamento...</p>
                         </div>
@@ -838,38 +598,142 @@
                             <table class="tu-table" id="tbl-fechamento">
                                 <thead style="position: sticky; top: 0; z-index: 2;">
                                     <tr class="table-fechamento-header">
-                                        <th style="text-align: left; padding-left: 8px;">
-                                            ATENDIMENTO<br>
-                                            <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
-                                        </th>
-                                        <th style="text-align: left;">
-                                            CARRETA<br>
-                                            <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
-                                        </th>
-                                        <th>
-                                            TU<br>
-                                            <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
-                                        </th>
-                                        <th>
-                                            CAIXAS PROCESSADAS<br>
-                                            <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
-                                        </th>
-                                        <th>
-                                            PROGRESSO FLUXO<br>
-                                            <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
-                                        </th>
-                                        <th>
-                                            STATUS SAP<br>
-                                            <input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar...">
-                                        </th>
+                                        <th style="text-align: left; padding-left: 8px;">ATENDIMENTO<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
+                                        <th style="text-align: left;">CARRETA<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
+                                        <th>TU<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
+                                        <th>CAIXAS PROCESSADAS<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
+                                        <th>PROGRESSO FLUXO<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
+                                        <th>STATUS SAP<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
                                     </tr>
                                 </thead>
                                 <tbody id="tbl-fechamento-body">
-                                    <tr>
-                                        <td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados do SAP...</td>
-                                    </tr>
+                                    <tr><td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados do SAP...</td></tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ABA 5: PD DIGITAL -->
+                <div id="tab-pd" class="tab-panel">
+                    <div class="tu-header">
+                        <div class="tu-title-group">
+                            <h2><span class="material-symbols-outlined" style="color: #e64343;">group</span> Controle de Absenteísmo (PD Digital)</h2>
+                        </div>
+                        <div class="header-badges">
+                            <span class="tu-status-badge" style="color: #e64343; border-color: rgba(230,67,67,0.35); background: rgba(230,67,67,0.1);">
+                                <span class="status-dot" style="background-color: #e64343; box-shadow: 0 0 10px #e64343;"></span>
+                                <span id="txt-pd-status-sync">Sincronizando...</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 4 CARDS NO TOPO -->
+                    <div class="tu-grid-main" style="grid-template-columns: repeat(4, 1fr);">
+                        <div class="tu-card card-red">
+                            <span class="material-symbols-outlined icon">person_off</span>
+                            <div class="tu-info"><span class="label">Taxa de Absenteísmo Geral (%)</span><h3 id="pd-taxa-abs">--%</h3><small>Operação Planta</small></div>
+                        </div>
+                        <div class="tu-card card-red" style="border-color: rgba(255, 75, 43, 0.6); box-shadow: inset 0 0 15px rgba(255, 75, 43, 0.1);">
+                            <span class="material-symbols-outlined icon">warning</span>
+                            <div class="tu-info"><span class="label">Déficit de Efetivo (Turnover)</span><h3 id="pd-deficit">--</h3><small>Desligamentos / Abandono</small></div>
+                        </div>
+                        <div class="tu-card card-yellow">
+                            <span class="material-symbols-outlined icon">engineering</span>
+                            <div class="tu-info"><span class="label">Faltas Injustificadas (Dias)</span><h3 id="pd-injustificadas">--</h3><small>Sem Atestado / Motivos Pessoais</small></div>
+                        </div>
+                        <div class="tu-card card-purple">
+                            <span class="material-symbols-outlined icon">fact_check</span>
+                            <div class="tu-info"><span class="label">Ausências Justificadas (Dias)</span><h3 id="pd-justificadas">--</h3><small>Férias / Atestado / Licença</small></div>
+                        </div>
+                    </div>
+
+                    <!-- GRÁFICOS MENSAIS E DIÁRIO DE SETORES -->
+                    <div class="tu-details-grid" style="margin-top: 6px; display: grid; grid-template-columns: 2fr 1fr; gap: 12px;">
+                        
+                        <div class="tu-detail-box" style="display:flex; flex-direction:column; height: 260px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <h4 style="margin: 0;"><span class="material-symbols-outlined">bar_chart</span> Absenteísmo Diário por Setor (%)</h4>
+                                <div class="date-picker-wrapper" title="Selecione o Dia para o Gráfico de Setores" style="padding: 2px 8px;">
+                                    <span class="material-symbols-outlined" style="font-size: 15px; color: #00d2ff;">calendar_today</span>
+                                    <input type="date" id="filtro-data-setor" onchange="atualizarGraficoSetorDia()" style="font-size: 0.7rem;">
+                                </div>
+                            </div>
+                            <div style="flex:1; position:relative;"><canvas id="chartPdSetor"></canvas></div>
+                        </div>
+
+                        <div class="tu-detail-box" style="display:flex; flex-direction:column; height: 260px;">
+                            <h4><span class="material-symbols-outlined">pie_chart</span> Absenteísmo por Empresa (%)</h4>
+                            <div style="flex:1; position:relative;"><canvas id="chartPdEmpresa"></canvas></div>
+                        </div>
+                    </div>
+
+                    <!-- GRÁFICO DIÁRIO MISTO (BARRAS + LINHA META) -->
+                    <div class="tu-detail-box box-cyan" style="margin-top: 12px; display:flex; flex-direction:column; height: 280px;">
+                        <h4><span class="material-symbols-outlined">analytics</span> Evolução Diária de Absenteísmo (%)</h4>
+                        <div style="flex:1; position:relative;"><canvas id="chartPdDiario"></canvas></div>
+                    </div>
+
+                    <!-- VISÃO LADO A LADO -->
+                    <div class="tu-details-grid" style="margin-top: 12px; display: grid; grid-template-columns: 1fr 1.2fr 1.2fr; gap: 12px;">
+                        
+                        <div class="tu-detail-box box-cyan" style="height: 250px; display: flex; flex-direction: column;">
+                            <h4>
+                                <div style="display: flex; flex-direction: column;">
+                                    <div style="display: flex; align-items: center; gap: 6px;"><span class="material-symbols-outlined">schedule</span> Absenteísmo por Turno</div>
+                                    <small style="color: #a0aab5; font-size: 0.65rem; margin-top: 2px; margin-left: 28px;">Acumulado do Mês</small>
+                                </div>
+                            </h4>
+                            <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
+                                <table class="tu-table">
+                                    <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
+                                        <tr>
+                                            <th style="text-align: left;">TURNO</th>
+                                            <th>FALTAS (DIAS)</th>
+                                            <th>TAXA (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl-pd-turnos-body">
+                                        <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tu-detail-box box-red" style="height: 250px; display: flex; flex-direction: column;">
+                            <h4><span class="material-symbols-outlined">factory</span> 🔴 Absenteísmo por Setor</h4>
+                            <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
+                                <table class="tu-table">
+                                    <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
+                                        <tr>
+                                            <th style="text-align: left;">SETOR OFENSOR</th>
+                                            <th>FALTAS</th>
+                                            <th>TAXA (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl-pd-setores-body">
+                                        <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tu-detail-box box-purple" style="height: 250px; display: flex; flex-direction: column;">
+                            <h4><span class="material-symbols-outlined">badge</span> 🔴 Absenteísmo por Líder</h4>
+                            <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
+                                <table class="tu-table">
+                                    <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
+                                        <tr>
+                                            <th style="text-align: left;">LÍDER OFENSOR</th>
+                                            <th>FALTAS</th>
+                                            <th>TAXA (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl-pd-lideres-body">
+                                        <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -894,26 +758,70 @@
         
         let chartCaixasOutliers = null, chartCaixasOutras = null;
         let chartPecasOutliers = null, chartPecasOutras = null;
+        let chartPdSetor = null, chartPdEmpresa = null, chartPdDiario = null;
 
         let wmsCanalAtual = 'VAREJO';
         let wmsVisaoAtual = 'REAL_CARTEIRA';
         let dadosOndasGeral = []; 
         let dadosOndasDataFiltrada = []; 
 
+       // PLUGIN PERSONALIZADO CHART.JS: DESENHA VALORES APENAS SE A BARRA ESTIVER VISÍVEL
+        const chartDataLabelsPlugin = {
+            id: 'chartDataLabelsPlugin',
+            afterDatasetsDraw(chart, args, options) {
+                if(chart.config.type === 'line') return; 
+
+                const { ctx } = chart;
+                chart.data.datasets.forEach((dataset, i) => {
+                    if (!chart.isDatasetVisible(i)) return; 
+
+                    const meta = chart.getDatasetMeta(i);
+                    if (dataset.type === 'line' || chart.config.type === 'line') return; 
+
+                    meta.data.forEach((element, index) => {
+                        const data = dataset.data[index];
+                        const abs_data = dataset.absoluteData ? dataset.absoluteData[index] : null;
+                        if (data > 0) {
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            
+                            let x = element.x;
+                            let y = element.y;
+                            
+                            if (dataset.type === 'bar' || chart.config.type === 'bar') { 
+                                y = y + 16; 
+                            } 
+                            else if (chart.config.type === 'doughnut') {
+                                const pos = element.tooltipPosition();
+                                x = pos.x; y = pos.y;
+                            }
+
+                            // Força a cor BRANCA para a porcentagem
+                            ctx.fillStyle = '#ffffff'; 
+                            ctx.font = 'bold 12px "Plus Jakarta Sans"';
+                            ctx.fillText(data + '%', x, y - 5);
+                            
+                            if (abs_data !== null) {
+                                ctx.font = 'bold 10px "Plus Jakarta Sans"';
+                                // Força a cor BRANCA para o número absoluto também!
+                                ctx.fillStyle = '#ffffff'; 
+                                ctx.fillText('(' + abs_data + ')', x, y + 9);
+                            }
+                        }
+                    });
+                });
+            }
+        };
+
         function carregarScriptsSemCache() {
             const timestamp = new Date().getTime();
-            const scripts = ["dados_tu.js", "dados_movimentacoes.js", "dados_demandas.js", "dados_fechamento.js"];
+            const scripts = ["dados_tu.js", "dados_movimentacoes.js", "dados_demandas.js", "dados_fechamento.js", "dados_pd.js"];
             let carregados = 0;
-            
             scripts.forEach(src => {
                 const script = document.createElement("script");
                 script.src = `${src}?v=${timestamp}`;
-                script.onload = () => { 
-                    carregados++; 
-                    if (carregados === scripts.length) {
-                        carregarDados();
-                    }
-                };
+                script.onload = () => { carregados++; if (carregados === scripts.length) carregarDados(); };
+                script.onerror = () => { carregados++; if (carregados === scripts.length) carregarDados(); };
                 document.head.appendChild(script);
             });
         }
@@ -925,29 +833,13 @@
             elBotao.classList.add('active');
         }
 
-        function formatarNumeroInteiro(num) { 
-            return (!num || num === 0) ? '0' : num.toLocaleString('pt-BR'); 
-        }
-
-        function setTextoSeguro(id, texto) { 
-            const el = document.getElementById(id); 
-            if (el) el.textContent = texto; 
-        }
-
-        function setHtmlSeguro(id, html) { 
-            const el = document.getElementById(id); 
-            if (el) el.innerHTML = html; 
-        }
-
-        function setEstiloSeguro(id, prop, valor) { 
-            const el = document.getElementById(id); 
-            if (el) el.style[prop] = valor; 
-        }
+        function formatarNumeroInteiro(num) { return (!num || num === 0) ? '0' : num.toLocaleString('pt-BR'); }
+        function setTextoSeguro(id, texto) { const el = document.getElementById(id); if (el) el.textContent = texto; }
+        function setHtmlSeguro(id, html) { const el = document.getElementById(id); if (el) el.innerHTML = html; }
+        function setEstiloSeguro(id, prop, valor) { const el = document.getElementById(id); if (el) el.style[prop] = valor; }
 
         function formatarTextoPendencia(qtd) {
-            if (qtd === 0) {
-                return `<small class="carreta-tag ok-tag">SEM PENDÊNCIAS</small>`;
-            }
+            if (qtd === 0) return `<small class="carreta-tag ok-tag">SEM PENDÊNCIAS</small>`;
             return `<small class="carreta-tag pend-tag">${qtd} ${qtd === 1 ? 'TU PENDENTE' : 'TUs PENDENTES'}</small>`;
         }
 
@@ -955,7 +847,6 @@
             if (!obj) return;
             const canais = ['cart_ln', 'cart_gv', 'var_ln', 'var_gv', 'est_ln', 'est_gv', 'total'];
             const chaves = ['carteira_ln', 'carteira_gv', 'varejo_ln', 'varejo_gv', 'estojo_ln', 'estojo_gv', 'total_geral'];
-            
             canais.forEach((c, idx) => {
                 const item = obj[chaves[idx]];
                 if (item) {
@@ -970,19 +861,15 @@
             const tbody = document.getElementById('tbl-fechamento-body');
             const trs = tbody.getElementsByTagName('tr');
             const inputs = document.querySelectorAll('.input-filtro-tabela');
-
             for (let i = 0; i < trs.length; i++) {
                 let showRow = true;
                 const tds = trs[i].getElementsByTagName('td');
                 if (tds.length <= 1) continue;
-
                 inputs.forEach((input, index) => {
                     const filterVal = input.value.toLowerCase().trim();
                     if (filterVal && tds[index]) {
                         const cellText = tds[index].textContent.toLowerCase();
-                        if (!cellText.includes(filterVal)) {
-                            showRow = false;
-                        }
+                        if (!cellText.includes(filterVal)) showRow = false;
                     }
                 });
                 trs[i].style.display = showRow ? '' : 'none';
@@ -992,22 +879,18 @@
         function aplicarFiltroMesTU() {
             const inputMes = document.getElementById('filtro-mes-tu');
             if (!inputMes || !inputMes.value || typeof dadosDashboard === 'undefined') return;
-            
             const mesAnoSel = inputMes.value;
             const totaisMes = dadosDashboard.totais_por_mes || {};
-            
             const [ano, mes] = mesAnoSel.split('-');
             const nomesMeses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
             const nomeMesExtenso = `${nomesMeses[parseInt(mes) - 1]} / ${ano}`;
-
             if (totaisMes[mesAnoSel]) {
                 setTextoSeguro('caixas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].caixas));
                 setTextoSeguro('pecas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].pecas));
                 setTextoSeguro('sub-caixas-mes', `Total de ${nomeMesExtenso}`);
                 setTextoSeguro('sub-pecas-mes', `Total de ${nomeMesExtenso}`);
             } else {
-                setTextoSeguro('caixas-mes', '0');
-                setTextoSeguro('pecas-mes', '0');
+                setTextoSeguro('caixas-mes', '0'); setTextoSeguro('pecas-mes', '0');
                 setTextoSeguro('sub-caixas-mes', `Sem dados em ${nomeMesExtenso}`);
                 setTextoSeguro('sub-pecas-mes', `Sem dados em ${nomeMesExtenso}`);
             }
@@ -1015,10 +898,8 @@
 
         function aplicarFiltroDataWMS() {
             const dataSelecionada = document.getElementById('filtro-data-wms').value;
-            
             dadosOndasDataFiltrada = [];
             const canaisUnicos = [...new Set(dadosOndasGeral.map(o => o.onda_atual))];
-
             canaisUnicos.forEach(canal => {
                 const ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === canal && o.data_onda <= dataSelecionada);
                 if (ondasCanal.length > 0) {
@@ -1026,7 +907,6 @@
                     dadosOndasDataFiltrada.push(ondasCanal[0]);
                 }
             });
-            
             const canaisFixos = ['MGI', 'MGC', 'SPI', 'SPC', 'VAREJO'];
             canaisFixos.forEach(canal => {
                 let isActive = false;
@@ -1036,7 +916,6 @@
                 const dot = document.getElementById('dot-' + canal);
                 if (dot) dot.className = isActive ? 'status-dot-on' : 'status-dot-off';
             });
-            
             renderizarCardsWMS();
         }
 
@@ -1044,12 +923,10 @@
             document.querySelectorAll('.btn-wms-onda').forEach(b => b.classList.remove('active'));
             btnElement.classList.add('active');
             wmsCanalAtual = canal;
-
             const btnPreviaCarteira = document.getElementById('btn-previa-carteira');
             const btnPreviaKit = document.getElementById('btn-previa-kit');
             const btnRealKit = document.getElementById('btn-real-kit');
             const btnRealCarteira = document.getElementById('btn-real-carteira');
-
             if (canal === 'VAREJO') {
                 if (btnPreviaCarteira) btnPreviaCarteira.style.display = 'none';
                 if (btnPreviaKit) btnPreviaKit.style.display = 'none';
@@ -1061,23 +938,18 @@
                 if (btnPreviaKit) btnPreviaKit.style.display = 'inline-block';
                 if (btnRealKit) btnRealKit.style.display = 'inline-block';
                 if (btnRealCarteira) btnRealCarteira.innerHTML = "REAL CARTEIRA";
-                if(wmsVisaoAtual !== 'PREVIA_CARTEIRA' && wmsVisaoAtual !== 'PREVIA_KIT' && wmsVisaoAtual !== 'REAL_KIT') {
-                   mudarVisaoWMS('REAL_CARTEIRA');
-                } else {
-                   renderizarCardsWMS();
-                }
+                if(wmsVisaoAtual !== 'PREVIA_CARTEIRA' && wmsVisaoAtual !== 'PREVIA_KIT' && wmsVisaoAtual !== 'REAL_KIT') mudarVisaoWMS('REAL_CARTEIRA');
+                else renderizarCardsWMS();
             }
         }
 
         function mudarVisaoWMS(visao) {
             document.querySelectorAll('.btn-sub-tab').forEach(b => b.classList.remove('active'));
-            
             let btnId = '';
             if(visao === 'PREVIA_CARTEIRA') btnId = 'btn-previa-carteira';
             if(visao === 'REAL_CARTEIRA') btnId = 'btn-real-carteira';
             if(visao === 'PREVIA_KIT') btnId = 'btn-previa-kit';
             if(visao === 'REAL_KIT') btnId = 'btn-real-kit';
-            
             if(document.getElementById(btnId)) document.getElementById(btnId).classList.add('active');
             wmsVisaoAtual = visao;
             renderizarCardsWMS();
@@ -1091,59 +963,22 @@
                 if (chartPecasOutras) chartPecasOutras.destroy();
                 return;
             }
-            
-            const estEspeciaisData = todasEstacoes.filter(e => {
-                const cod = String(e.estacao).trim().replace(/[^\d]/g, '').padStart(2, '0');
-                return cod === '04' || cod === '07';
-            });
-
-            const estOutrasData = todasEstacoes.filter(e => {
-                const cod = String(e.estacao).trim().replace(/[^\d]/g, '').padStart(2, '0');
-                return cod !== '04' && cod !== '07';
-            });
+            const estEspeciaisData = todasEstacoes.filter(e => { const cod = String(e.estacao).trim().replace(/[^\d]/g, '').padStart(2, '0'); return cod === '04' || cod === '07'; });
+            const estOutrasData = todasEstacoes.filter(e => { const cod = String(e.estacao).trim().replace(/[^\d]/g, '').padStart(2, '0'); return cod !== '04' && cod !== '07'; });
 
             function renderBarChart(canvasId, currentChart, dataList, valueKey, bgColor, borderColor, maxThickness = null) {
                 const elCanvas = document.getElementById(canvasId);
                 if (!elCanvas) return null;
                 const ctx = elCanvas.getContext('2d');
                 if (currentChart) currentChart.destroy();
-                
                 const labels = dataList.map(e => e.estacao);
                 const values = dataList.map(e => e[valueKey]);
-
-                const datasetConfig = {
-                    data: values,
-                    backgroundColor: bgColor,
-                    borderColor: borderColor,
-                    borderWidth: 1,
-                    borderRadius: 4
-                };
-
-                if (maxThickness) {
-                    datasetConfig.maxBarThickness = maxThickness;
-                }
-
-                return new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [datasetConfig]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: { legend: { display: false } },
-                        scales: {
-                            y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true },
-                            x: { grid: { display: false }, ticks: { font: { size: 10 } } }
-                        }
-                    }
-                });
+                const datasetConfig = { data: values, backgroundColor: bgColor, borderColor: borderColor, borderWidth: 1, borderRadius: 4 };
+                if (maxThickness) datasetConfig.maxBarThickness = maxThickness;
+                return new Chart(ctx, { type: 'bar', data: { labels: labels, datasets: [datasetConfig] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { font: { size: 10 } } } } } });
             }
-
             chartCaixasOutliers = renderBarChart('chartCaixasOutliers', chartCaixasOutliers, estEspeciaisData, 'cxs', 'rgba(0, 210, 255, 0.6)', 'rgba(0, 210, 255, 1)', 45);
             chartCaixasOutras   = renderBarChart('chartCaixasOutras', chartCaixasOutras, estOutrasData, 'cxs', 'rgba(0, 210, 255, 0.6)', 'rgba(0, 210, 255, 1)');
-
             chartPecasOutliers  = renderBarChart('chartPecasOutliers', chartPecasOutliers, estEspeciaisData, 'pcs', 'rgba(155, 89, 182, 0.6)', 'rgba(155, 89, 182, 1)', 45);
             chartPecasOutras    = renderBarChart('chartPecasOutras', chartPecasOutras, estOutrasData, 'pcs', 'rgba(155, 89, 182, 0.6)', 'rgba(155, 89, 182, 1)');
         }
@@ -1151,92 +986,163 @@
         function renderizarCardsWMS() {
             let ondaDados = dadosOndasDataFiltrada.find(o => o.onda_atual === wmsCanalAtual);
             if (!ondaDados) ondaDados = {};
-
             let dadosVisao = {}, est_cx = 0, skus_cx = 0, todas_est = [];
-
-            if (wmsVisaoAtual === 'PREVIA_CARTEIRA') {
-                dadosVisao = ondaDados.previa_carteira || {};
-                est_cx = ondaDados.perfil_est_cx_pc || 0; skus_cx = ondaDados.perfil_skus_cx_pc || 0;
-                todas_est = ondaDados.todas_estacoes_previa_carteira || [];
-            } else if (wmsVisaoAtual === 'REAL_CARTEIRA') {
-                dadosVisao = ondaDados.real_carteira || {};
-                est_cx = ondaDados.perfil_est_cx_rc || 0; skus_cx = ondaDados.perfil_skus_cx_rc || 0;
-                todas_est = ondaDados.todas_estacoes_real_carteira || [];
-            } else if (wmsVisaoAtual === 'PREVIA_KIT') {
-                dadosVisao = ondaDados.previa_kit || {};
-                est_cx = ondaDados.perfil_est_cx_pk || 0; skus_cx = ondaDados.perfil_skus_cx_pk || 0;
-                todas_est = ondaDados.todas_estacoes_previa_kit || [];
-            } else if (wmsVisaoAtual === 'REAL_KIT') {
-                dadosVisao = ondaDados.real_kit || {};
-                est_cx = ondaDados.perfil_est_cx_rk || 0; skus_cx = ondaDados.perfil_skus_cx_rk || 0;
-                todas_est = ondaDados.todas_estacoes_real_kit || [];
-            }
+            if (wmsVisaoAtual === 'PREVIA_CARTEIRA') { dadosVisao = ondaDados.previa_carteira || {}; est_cx = ondaDados.perfil_est_cx_pc || 0; skus_cx = ondaDados.perfil_skus_cx_pc || 0; todas_est = ondaDados.todas_estacoes_previa_carteira || []; } 
+            else if (wmsVisaoAtual === 'REAL_CARTEIRA') { dadosVisao = ondaDados.real_carteira || {}; est_cx = ondaDados.perfil_est_cx_rc || 0; skus_cx = ondaDados.perfil_skus_cx_rc || 0; todas_est = ondaDados.todas_estacoes_real_carteira || []; } 
+            else if (wmsVisaoAtual === 'PREVIA_KIT') { dadosVisao = ondaDados.previa_kit || {}; est_cx = ondaDados.perfil_est_cx_pk || 0; skus_cx = ondaDados.perfil_skus_cx_pk || 0; todas_est = ondaDados.todas_estacoes_previa_kit || []; } 
+            else if (wmsVisaoAtual === 'REAL_KIT') { dadosVisao = ondaDados.real_kit || {}; est_cx = ondaDados.perfil_est_cx_rk || 0; skus_cx = ondaDados.perfil_skus_cx_rk || 0; todas_est = ondaDados.todas_estacoes_real_kit || []; }
 
             const cardAderencia = document.getElementById('card-aderencia-wms');
             const gridWmsIndicadores = document.getElementById('grid-wms-indicadores');
-
             if (wmsCanalAtual === 'VAREJO') {
                 if (cardAderencia) cardAderencia.style.display = 'none';
                 if (gridWmsIndicadores) gridWmsIndicadores.style.gridTemplateColumns = 'repeat(3, 1fr)';
             } else {
                 if (cardAderencia) cardAderencia.style.display = 'flex';
                 if (gridWmsIndicadores) gridWmsIndicadores.style.gridTemplateColumns = 'repeat(4, 1fr)';
-
                 let adValor = 0;
-                if (wmsVisaoAtual.includes('KIT')) {
-                    adValor = ondaDados.aderencia_pcs_kit || 0;
-                } else {
-                    adValor = ondaDados.aderencia_pcs_carteira || 0;
-                }
-                setTextoSeguro('wms-aderencia', `${adValor}%`);
-                setEstiloSeguro('bar-aderencia-fill', 'width', `${adValor}%`);
+                if (wmsVisaoAtual.includes('KIT')) adValor = ondaDados.aderencia_pcs_kit || 0; else adValor = ondaDados.aderencia_pcs_carteira || 0;
+                setTextoSeguro('wms-aderencia', `${adValor}%`); setEstiloSeguro('bar-aderencia-fill', 'width', `${adValor}%`);
             }
-
             setTextoSeguro('wms-tarefas', formatarNumeroInteiro(dadosVisao.tar || 0));
 
             const fr = dadosVisao.fr || {pcs: 0, cxs: 0, pc_cx: 0, tar: 0}; 
             const gv = dadosVisao.gv || {pcs: 0, cxs: 0, pc_cx: 0, tar: 0}; 
             const pc = dadosVisao.pc || {pcs: 0, cxs: 0, pc_cx: 0, tar: 0};
+            const totPcs = (fr.pcs || 0) + (gv.pcs || 0) + (pc.pcs || 0); const totCxs = (fr.cxs || 0) + (gv.cxs || 0) + (pc.cxs || 0);
 
-            const totPcs = (fr.pcs || 0) + (gv.pcs || 0) + (pc.pcs || 0);
-            const totCxs = (fr.cxs || 0) + (gv.cxs || 0) + (pc.cxs || 0);
+            setTextoSeguro('wms-fr-pcs', formatarNumeroInteiro(fr.pcs || 0)); setTextoSeguro('wms-fr-pcs-pct', `${totPcs>0 ? ((fr.pcs/totPcs)*100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-fr-cxs', formatarNumeroInteiro(fr.cxs || 0)); setTextoSeguro('wms-fr-cxs-pct', `${totCxs>0 ? ((fr.cxs/totCxs)*100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-fr-pc-cx', fr.pc_cx || 0); setTextoSeguro('wms-fr-tar', formatarNumeroInteiro(fr.tar || 0));
 
-            const frPcsPct = totPcs > 0 ? ((fr.pcs / totPcs) * 100).toFixed(1) : '0';
-            const frCxsPct = totCxs > 0 ? ((fr.cxs / totCxs) * 100).toFixed(1) : '0';
+            setTextoSeguro('wms-gv-pcs', formatarNumeroInteiro(gv.pcs || 0)); setTextoSeguro('wms-gv-pcs-pct', `${totPcs>0 ? ((gv.pcs/totPcs)*100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-gv-cxs', formatarNumeroInteiro(gv.cxs || 0)); setTextoSeguro('wms-gv-cxs-pct', `${totCxs>0 ? ((gv.cxs/totCxs)*100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-gv-pc-cx', gv.pc_cx || 0); setTextoSeguro('wms-gv-tar', formatarNumeroInteiro(gv.tar || 0));
 
-            const gvPcsPct = totPcs > 0 ? ((gv.pcs / totPcs) * 100).toFixed(1) : '0';
-            const gvCxsPct = totCxs > 0 ? ((gv.cxs / totCxs) * 100).toFixed(1) : '0';
+            setTextoSeguro('wms-pc-pcs', formatarNumeroInteiro(pc.pcs || 0)); setTextoSeguro('wms-pc-pcs-pct', `${totPcs>0 ? ((pc.pcs/totPcs)*100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-pc-cxs', formatarNumeroInteiro(pc.cxs || 0)); setTextoSeguro('wms-pc-cxs-pct', `${totCxs>0 ? ((pc.cxs/totCxs)*100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-pc-pc-cx', pc.pc_cx || 0); setTextoSeguro('wms-pc-tar', formatarNumeroInteiro(pc.tar || 0));
 
-            const pcPcsPct = totPcs > 0 ? ((pc.pcs / totPcs) * 100).toFixed(1) : '0';
-            const pcCxsPct = totCxs > 0 ? ((pc.cxs / totCxs) * 100).toFixed(1) : '0';
-
-            setTextoSeguro('wms-fr-pcs', formatarNumeroInteiro(fr.pcs || 0));
-            setTextoSeguro('wms-fr-pcs-pct', `${frPcsPct}%`);
-            setTextoSeguro('wms-fr-cxs', formatarNumeroInteiro(fr.cxs || 0));
-            setTextoSeguro('wms-fr-cxs-pct', `${frCxsPct}%`);
-            setTextoSeguro('wms-fr-pc-cx', fr.pc_cx || 0);
-            setTextoSeguro('wms-fr-tar', formatarNumeroInteiro(fr.tar || 0));
-
-            setTextoSeguro('wms-gv-pcs', formatarNumeroInteiro(gv.pcs || 0));
-            setTextoSeguro('wms-gv-pcs-pct', `${gvPcsPct}%`);
-            setTextoSeguro('wms-gv-cxs', formatarNumeroInteiro(gv.cxs || 0));
-            setTextoSeguro('wms-gv-cxs-pct', `${gvCxsPct}%`);
-            setTextoSeguro('wms-gv-pc-cx', gv.pc_cx || 0);
-            setTextoSeguro('wms-gv-tar', formatarNumeroInteiro(gv.tar || 0));
-
-            setTextoSeguro('wms-pc-pcs', formatarNumeroInteiro(pc.pcs || 0));
-            setTextoSeguro('wms-pc-pcs-pct', `${pcPcsPct}%`);
-            setTextoSeguro('wms-pc-cxs', formatarNumeroInteiro(pc.cxs || 0));
-            setTextoSeguro('wms-pc-cxs-pct', `${pcCxsPct}%`);
-            setTextoSeguro('wms-pc-pc-cx', pc.pc_cx || 0);
-            setTextoSeguro('wms-pc-tar', formatarNumeroInteiro(pc.tar || 0));
-
-            setTextoSeguro('wms-tot-pcs', formatarNumeroInteiro(totPcs));
-            setTextoSeguro('wms-tot-cxs', formatarNumeroInteiro(totCxs));
-            
-            setTextoSeguro('wms-est-cx', est_cx);
-            setTextoSeguro('wms-skus-cx', skus_cx);
+            setTextoSeguro('wms-tot-pcs', formatarNumeroInteiro(totPcs)); setTextoSeguro('wms-tot-cxs', formatarNumeroInteiro(totCxs));
+            setTextoSeguro('wms-est-cx', est_cx); setTextoSeguro('wms-skus-cx', skus_cx);
             desenharGraficosChartJS(todas_est);
+        }
+
+        // ==========================================
+        // ATUALIZAÇÃO DINÂMICA DO GRÁFICO DE SETORES
+        // ==========================================
+        function atualizarGraficoSetorDia() {
+            const elInput = document.getElementById('filtro-data-setor');
+            if (!elInput || typeof dadosPD === 'undefined') return;
+            
+            let dadosDia = null;
+            if (dadosPD.grafico_setor_map && elInput.value) {
+                dadosDia = dadosPD.grafico_setor_map[elInput.value];
+            }
+            if (!dadosDia) {
+                dadosDia = dadosPD.grafico_setor || { labels: [], data: [], absolutos: [] };
+            }
+            
+            const elSetor = document.getElementById('chartPdSetor');
+            if (elSetor && dadosDia) {
+                const ctx = elSetor.getContext('2d');
+                if (chartPdSetor) chartPdSetor.destroy();
+                chartPdSetor = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: dadosDia.labels,
+                        datasets: [{
+                            data: dadosDia.data,
+                            absoluteData: dadosDia.absolutos, 
+                            backgroundColor: 'rgba(230, 67, 67, 0.75)',
+                            borderColor: 'rgba(230, 67, 67, 1)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false, 
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { return c.raw + '%'; } } } },
+                        scales: { 
+                            y: { display: false, beginAtZero: true }, 
+                            x: { 
+                                grid: { display: false }, 
+                                ticks: { color: '#ffffff', font: { size: 11, weight: 'bold' } } 
+                            } 
+                        }
+                    },
+                    plugins: [chartDataLabelsPlugin]
+                });
+            }
+        }
+
+        // ==========================================
+        // DESENHAR GRÁFICOS PD DIGITAL
+        // ==========================================
+        function desenharGraficosPD(dadosSetor, dadosEmpresa, dadosDiario) {
+            const elInput = document.getElementById('filtro-data-setor');
+            if (elInput && dadosPD && dadosPD.data_padrao_setor && !elInput.value) {
+                elInput.value = dadosPD.data_padrao_setor;
+            }
+            atualizarGraficoSetorDia();
+
+            const elEmpresa = document.getElementById('chartPdEmpresa');
+            if (elEmpresa && dadosEmpresa) {
+                const ctx = elEmpresa.getContext('2d');
+                if (chartPdEmpresa) chartPdEmpresa.destroy();
+                chartPdEmpresa = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: dadosEmpresa.labels,
+                        datasets: [{
+                            data: dadosEmpresa.data,
+                            absoluteData: dadosEmpresa.absolutos, 
+                            backgroundColor: ['rgba(0, 210, 255, 0.7)', 'rgba(0, 176, 155, 0.7)', 'rgba(155, 89, 182, 0.7)', 'rgba(246, 185, 59, 0.7)'],
+                            borderColor: 'rgba(15, 23, 42, 1)',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { 
+                            legend: { position: 'right', labels: { color: '#a0aab5', font: { size: 10 } } },
+                            tooltip: { callbacks: { label: function(c) { return c.raw + '%'; } } }
+                        },
+                        cutout: '50%' 
+                    },
+                    plugins: [chartDataLabelsPlugin] 
+                });
+            }
+
+            // GRÁFICO DIÁRIO MISTO (BARRAS + LINHA META)
+            const elDiario = document.getElementById('chartPdDiario');
+            if (elDiario && dadosDiario) {
+                const ctx = elDiario.getContext('2d');
+                if (chartPdDiario) chartPdDiario.destroy();
+                
+                chartPdDiario = new Chart(ctx, {
+                    type: 'bar', 
+                    data: {
+                        labels: dadosDiario.labels, 
+                        datasets: dadosDiario.datasets
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { 
+                            legend: { 
+                                position: 'top', 
+                                labels: { color: '#a0aab5', font: { size: 11 }, usePointStyle: true, boxWidth: 8 } 
+                            },
+                            tooltip: { callbacks: { label: function(c) { return c.dataset.label + ': ' + c.raw + '%'; } } }
+                        },
+                        scales: { 
+                            y: { display: false, beginAtZero: true }, 
+                            x: { grid: { display: false }, ticks: { color: '#a0aab5', font: { size: 10 } } } 
+                        }
+                    },
+                    plugins: [chartDataLabelsPlugin]
+                });
+            }
         }
 
         // ==========================================
@@ -1244,12 +1150,10 @@
         // ==========================================
         function carregarDados() {
             
-            // ------------------ ABA 1: TUs ------------------
             if (typeof dadosDashboard !== 'undefined') {
                 const dados = dadosDashboard;
                 setTextoSeguro('txt-status-sync', `LIVE • ${dados.atualizado_em || ''}`);
 
-                // Define o mês inicial no filtro se estiver vazio
                 const inputMes = document.getElementById('filtro-mes-tu');
                 if (inputMes && !inputMes.value) {
                     const hoje = new Date();
@@ -1263,46 +1167,23 @@
                 setTextoSeguro('tus-pendentes', `${dados.pendencias_por_canal ? (dados.pendencias_por_canal.varejo + dados.pendencias_por_canal.carteira + dados.pendencias_por_canal.estojo + (dados.pendencias_por_canal.outras || 0)) : (dados.carretas_pendentes || 0)}`);
                 setTextoSeguro('sub-tus', `De ${dados.total_tus || 0} TUs na Janela`);
                 setTextoSeguro('caixas-pendentes', formatarNumeroInteiro(dados.caixas_pendentes));
-                
-                if(dados.caixas_ln_pend !== undefined && dados.caixas_gv_pend !== undefined) {
-                    setTextoSeguro('sub-caixas', `LN: ${formatarNumeroInteiro(dados.caixas_ln_pend)} | GV: ${formatarNumeroInteiro(dados.caixas_gv_pend)}`);
-                }
-                
+                if(dados.caixas_ln_pend !== undefined && dados.caixas_gv_pend !== undefined) setTextoSeguro('sub-caixas', `LN: ${formatarNumeroInteiro(dados.caixas_ln_pend)} | GV: ${formatarNumeroInteiro(dados.caixas_gv_pend)}`);
                 setTextoSeguro('pecas-pendentes', formatarNumeroInteiro(dados.pecas_pendentes));
-                
-                if(dados.pecas_ln_pend !== undefined && dados.pecas_gv_pend !== undefined) {
-                    setTextoSeguro('sub-pecas', `LN: ${formatarNumeroInteiro(dados.pecas_ln_pend)} | GV: ${formatarNumeroInteiro(dados.pecas_gv_pend)}`);
-                }
-                
+                if(dados.pecas_ln_pend !== undefined && dados.pecas_gv_pend !== undefined) setTextoSeguro('sub-pecas', `LN: ${formatarNumeroInteiro(dados.pecas_ln_pend)} | GV: ${formatarNumeroInteiro(dados.pecas_gv_pend)}`);
                 setTextoSeguro('carretas-pendentes', `${dados.carretas_pendentes || 0}`);
                 
                 const pct = dados.progresso_pct || 0;
-                setTextoSeguro('progresso-pct', `${pct}%`);
-                setEstiloSeguro('bar-progresso-fill', 'width', `${pct}%`);
+                setTextoSeguro('progresso-pct', `${pct}%`); setEstiloSeguro('bar-progresso-fill', 'width', `${pct}%`);
 
-                if (dados.proxima_carteira) { 
-                    setTextoSeguro('fifo-cart-title', `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`); 
-                    setTextoSeguro('fifo-cart-uf', dados.proxima_carteira.uf); 
-                }
-                if (dados.proxima_varejo) { 
-                    setTextoSeguro('fifo-var-title', `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`); 
-                    setTextoSeguro('fifo-var-uf', dados.proxima_varejo.uf); 
-                }
-                if (dados.proxima_estojo) { 
-                    setTextoSeguro('fifo-est-title', `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`); 
-                    setTextoSeguro('fifo-est-uf', dados.proxima_estojo.uf); 
-                }
+                if (dados.proxima_carteira) { setTextoSeguro('fifo-cart-title', `${dados.proxima_carteira.carreta} (${dados.proxima_carteira.tu_resumida})`); setTextoSeguro('fifo-cart-uf', dados.proxima_carteira.uf); }
+                if (dados.proxima_varejo) { setTextoSeguro('fifo-var-title', `${dados.proxima_varejo.carreta} (${dados.proxima_varejo.tu_resumida})`); setTextoSeguro('fifo-var-uf', dados.proxima_varejo.uf); }
+                if (dados.proxima_estojo) { setTextoSeguro('fifo-est-title', `${dados.proxima_estojo.carreta} (${dados.proxima_estojo.tu_resumida})`); setTextoSeguro('fifo-est-uf', dados.proxima_estojo.uf); }
 
                 if (dados.perfis_geral) preencherCardPerfil('tot', dados.perfis_geral);
                 if (dados.perfis_pendentes) preencherCardPerfil('pend', dados.perfis_pendentes);
                 
-                if (dados.atendimentos_em_andamento) {
-                    setTextoSeguro('txt-atendimentos-andamento', dados.atendimentos_em_andamento.join(', '));
-                }
-                
-                if (dados.alertas_atraso) {
-                    setTextoSeguro('txt-alertas-atraso', dados.alertas_atraso.join(' | '));
-                }
+                if (dados.atendimentos_em_andamento) setTextoSeguro('txt-atendimentos-andamento', dados.atendimentos_em_andamento.join(', '));
+                if (dados.alertas_atraso) setTextoSeguro('txt-alertas-atraso', dados.alertas_atraso.join(' | '));
                 
                 if (dados.pendencias_por_canal) {
                     setHtmlSeguro('pend-canal-estojo', formatarTextoPendencia(dados.pendencias_por_canal.estojo));
@@ -1312,7 +1193,6 @@
                 }
             }
 
-            // ------------------ ABA 2: WMS ------------------
             if (typeof dadosDemandaWMS !== 'undefined') {
                 dadosOndasGeral = dadosDemandaWMS.ondas || [];
                 setTextoSeguro('txt-wms-status-sync', `LIVE • ${dadosDemandaWMS.atualizado_em || ''}`);
@@ -1328,7 +1208,6 @@
                 aplicarFiltroDataWMS();
             }
 
-            // ------------------ ABA 3: MOVIMENTAÇÕES ------------------
             if (typeof dadosMovimentacoes !== 'undefined') {
                 const mov = dadosMovimentacoes;
                 setTextoSeguro('txt-mov-status-sync', `LIVE • ${mov.atualizado_em || ''}`);
@@ -1343,42 +1222,23 @@
                     if (mov.tabela_pendentes && mov.tabela_pendentes.length > 0) {
                         let linhas = '';
                         mov.tabela_pendentes.forEach(i => { 
-                            linhas += `
-                                <tr>
-                                    <td style="font-weight:700; color:#f6b93b;">${i.data}</td>
-                                    <td>${i.item}</td>
-                                    <td><span class="carreta-tag" style="color:#00d2ff;">${i.demanda}</span></td>
-                                    <td>${i.de}</td>
-                                    <td><span style="color:#00d2ff;font-weight:700;">${i.para}</span></td>
-                                    <td>${i.tipo_dep}</td>
-                                </tr>`; 
+                            linhas += `<tr><td style="font-weight:700; color:#f6b93b;">${i.data}</td><td>${i.item}</td><td><span class="carreta-tag" style="color:#00d2ff;">${i.demanda}</span></td><td>${i.de}</td><td><span style="color:#00d2ff;font-weight:700;">${i.para}</span></td><td>${i.tipo_dep}</td></tr>`; 
                         });
                         tbody.innerHTML = linhas;
-                    } else {
-                        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; color:#00b09b;">✨ Não há pendências</td></tr>`;
-                    }
+                    } else tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; color:#00b09b;">✨ Não há pendências</td></tr>`;
                 }
-
                 const tbodyIE = document.getElementById('tbl-mov-ie-body');
                 if (tbodyIE) {
-                    if (mov.tabela_ie && mov.tabela_ie.length > 0) {
-                        tbodyIE.innerHTML = mov.tabela_ie.map(i => `<tr><td style="color:#fff;">${i.item}</td><td><span class="val">${i.para}</span></td></tr>`).join('');
-                    } else {
-                        tbodyIE.innerHTML = `<tr><td colspan="2" style="text-align:center; color:#00b09b;">✅ Tudo Impresso</td></tr>`;
-                    }
+                    if (mov.tabela_ie && mov.tabela_ie.length > 0) tbodyIE.innerHTML = mov.tabela_ie.map(i => `<tr><td style="color:#fff;">${i.item}</td><td><span class="val">${i.para}</span></td></tr>`).join('');
+                    else tbodyIE.innerHTML = `<tr><td colspan="2" style="text-align:center; color:#00b09b;">✅ Tudo Impresso</td></tr>`;
                 }
-
                 const tbodyCF = document.getElementById('tbl-mov-cf-body');
                 if (tbodyCF) {
-                    if (mov.tabela_cf && mov.tabela_cf.length > 0) {
-                        tbodyCF.innerHTML = mov.tabela_cf.map(i => `<tr><td style="color:#fff;">${i.item}</td><td><span class="val">${i.para}</span></td></tr>`).join('');
-                    } else {
-                        tbodyCF.innerHTML = `<tr><td colspan="2" style="text-align:center; color:#00b09b;">✅ Sem pendências</td></tr>`;
-                    }
+                    if (mov.tabela_cf && mov.tabela_cf.length > 0) tbodyCF.innerHTML = mov.tabela_cf.map(i => `<tr><td style="color:#fff;">${i.item}</td><td><span class="val">${i.para}</span></td></tr>`).join('');
+                    else tbodyCF.innerHTML = `<tr><td colspan="2" style="text-align:center; color:#00b09b;">✅ Sem pendências</td></tr>`;
                 }
             }
 
-            // ------------------ ABA 4: FECHAMENTO DE EXPEDIÇÃO (DUPLO STATUS COM FALLBACKS SEGUROS) ------------------
             if (typeof dadosFechamento !== 'undefined') {
                 const fech = dadosFechamento;
                 setTextoSeguro('txt-fechamento-status-sync', `LIVE • ${fech.atualizado_em || ''}`);
@@ -1388,25 +1248,11 @@
                     let htmlCards = '';
                     Object.keys(fech.cards_atendimentos).forEach(atend => {
                         const item = fech.cards_atendimentos[atend];
-                        
-                        let badgeColor = '#00d2ff';
-                        let badgeBg = 'rgba(0, 210, 255, 0.12)';
-                        let badgeBorder = 'rgba(0, 210, 255, 0.3)';
+                        let badgeColor = '#00d2ff'; let badgeBg = 'rgba(0, 210, 255, 0.12)'; let badgeBorder = 'rgba(0, 210, 255, 0.3)';
+                        if (item.status_atend === 'FINALIZADO') { badgeColor = '#00b09b'; badgeBg = 'rgba(0, 176, 155, 0.12)'; badgeBorder = 'rgba(0, 176, 155, 0.3)'; } 
+                        else if (item.status_atend === 'PENDENTE') { badgeColor = '#f6b93b'; badgeBg = 'rgba(246, 185, 59, 0.12)'; badgeBorder = 'rgba(246, 185, 59, 0.3)'; }
 
-                        if (item.status_atend === 'FINALIZADO') {
-                            badgeColor = '#00b09b';
-                            badgeBg = 'rgba(0, 176, 155, 0.12)';
-                            badgeBorder = 'rgba(0, 176, 155, 0.3)';
-                        } else if (item.status_atend === 'PENDENTE') {
-                            badgeColor = '#f6b93b';
-                            badgeBg = 'rgba(246, 185, 59, 0.12)';
-                            badgeBorder = 'rgba(246, 185, 59, 0.3)';
-                        }
-
-                        // Proteção caso o Python não tenha rodado ainda
-                        const carregadoVal = item.loaded_cxs || 0;
-                        const rampaVal = item.rampa_cxs || 0;
-                        const totalProc = carregadoVal + rampaVal;
+                        const totalProc = (item.loaded_cxs || 0) + (item.rampa_cxs || 0);
 
                         htmlCards += `
                             <div class="tu-detail-box" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(0, 210, 255, 0.3); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
@@ -1416,56 +1262,28 @@
                                         <span style="font-size: 0.95rem; font-weight: 800; color: #ffffff; letter-spacing: 0.5px;">${atend}</span>
                                     </div>
                                     <div style="display: flex; align-items: center; gap: 6px;">
-                                        <span style="font-size: 0.7rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 8px; border-radius: 6px; border: 1px solid ${badgeBorder};">
-                                            ${item.status_atend}
-                                        </span>
-                                        <span style="font-size: 0.82rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 10px; border-radius: 12px; border: 1px solid ${badgeBorder};">
-                                            ${item.pct}% FLUXO
-                                        </span>
+                                        <span style="font-size: 0.7rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 8px; border-radius: 6px; border: 1px solid ${badgeBorder};">${item.status_atend}</span>
+                                        <span style="font-size: 0.82rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 10px; border-radius: 12px; border: 1px solid ${badgeBorder};">${item.pct}% FLUXO</span>
                                     </div>
                                 </div>
-
                                 <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #a0aab5;">
                                     <span>Total Caixas: <strong style="color: #fff;">${formatarNumeroInteiro(item.total_cxs)}</strong></span>
                                     <span>Processadas: <strong style="color: #00d2ff;">${formatarNumeroInteiro(totalProc)}</strong></span>
                                     <span>Pendentes: <strong style="color: #f6b93b;">${formatarNumeroInteiro(item.pending_cxs)}</strong></span>
                                 </div>
-
                                 <div class="progress-bar-container" style="height: 6px; margin-top: 0;">
                                     <div class="progress-bar-fill" style="width: ${item.pct}%; background: ${item.pct === 100 ? '#00b09b' : 'linear-gradient(90deg, #00b09b, #00d2ff)'};"></div>
                                 </div>
-
                                 <table class="tu-table" style="font-size: 0.68rem; background: rgba(0,0,0,0.25); border-radius: 8px; overflow: hidden; margin-top: 2px;">
-                                    <thead>
-                                        <tr style="background: rgba(255,255,255,0.03);">
-                                            <th style="text-align: left; padding-left: 8px;">CAIXAS</th>
-                                            <th>GV</th>
-                                            <th>LN</th>
-                                        </tr>
-                                    </thead>
+                                    <thead><tr style="background: rgba(255,255,255,0.03);"><th style="text-align: left; padding-left: 8px;">CAIXAS</th><th>GV</th><th>LN</th></tr></thead>
                                     <tbody>
-                                        <tr>
-                                            <td style="color: #00b09b; font-weight:700; text-align: left; padding-left: 8px;">CONCLUÍDAS</td>
-                                            <td><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_gv_cx)}</span></td>
-                                            <td><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_fr_cx)}</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: #f6b93b; font-weight:700; text-align: left; padding-left: 8px;">PENDENTES</td>
-                                            <td><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_gv_cx)}</span></td>
-                                            <td><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_fr_cx)}</span></td>
-                                        </tr>
+                                        <tr><td style="color: #00b09b; font-weight:700; text-align: left; padding-left: 8px;">CONCLUÍDAS</td><td><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_gv_cx)}</span></td><td><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_fr_cx)}</span></td></tr>
+                                        <tr><td style="color: #f6b93b; font-weight:700; text-align: left; padding-left: 8px;">PENDENTES</td><td><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_gv_cx)}</span></td><td><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_fr_cx)}</span></td></tr>
                                     </tbody>
                                 </table>
-
                                 <div style="display: flex; justify-content: space-between; background: rgba(15, 23, 42, 0.85); padding: 8px 12px; border-radius: 8px; font-size: 0.72rem; border: 1px solid rgba(255, 255, 255, 0.08);">
-                                    <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;">
-                                        <span style="width: 8px; height: 8px; background: #00b09b; border-radius: 50%; display: inline-block;"></span> 
-                                        Carregado: <strong style="color: #00b09b; font-size: 0.8rem;">${formatarNumeroInteiro(carregadoVal)}</strong>
-                                    </span>
-                                    <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;">
-                                        <span style="width: 8px; height: 8px; background: #00d2ff; border-radius: 50%; display: inline-block;"></span> 
-                                        Rampa OK: <strong style="color: #00d2ff; font-size: 0.8rem;">${formatarNumeroInteiro(rampaVal)}</strong>
-                                    </span>
+                                    <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; background: #00b09b; border-radius: 50%; display: inline-block;"></span> Carregado: <strong style="color: #00b09b; font-size: 0.8rem;">${formatarNumeroInteiro(item.loaded_cxs)}</strong></span>
+                                    <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; background: #00d2ff; border-radius: 50%; display: inline-block;"></span> Rampa OK: <strong style="color: #00d2ff; font-size: 0.8rem;">${formatarNumeroInteiro(item.rampa_cxs)}</strong></span>
                                 </div>
                             </div>
                         `;
@@ -1478,23 +1296,12 @@
                     if (fech.tabela && fech.tabela.length > 0) {
                         let linhasFech = '';
                         fech.tabela.forEach(i => {
-                            let tagColor = '#00d2ff';
-                            let tagBg = 'rgba(0, 210, 255, 0.12)';
+                            let tagColor = '#00d2ff'; let tagBg = 'rgba(0, 210, 255, 0.12)';
+                            if (i.status === 'FINALIZADA') { tagColor = '#00b09b'; tagBg = 'rgba(0, 176, 155, 0.12)'; } 
+                            else if (i.status === 'EM RAMPA') { tagColor = '#3b82f6'; tagBg = 'rgba(59, 130, 246, 0.12)'; } 
+                            else if (i.status === 'PENDENTE') { tagColor = '#f6b93b'; tagBg = 'rgba(246, 185, 59, 0.12)'; }
                             
-                            if (i.status === 'FINALIZADA') {
-                                tagColor = '#00b09b';
-                                tagBg = 'rgba(0, 176, 155, 0.12)';
-                            } else if (i.status === 'EM RAMPA') {
-                                tagColor = '#3b82f6';
-                                tagBg = 'rgba(59, 130, 246, 0.12)';
-                            } else if (i.status === 'PENDENTE') {
-                                tagColor = '#f6b93b';
-                                tagBg = 'rgba(246, 185, 59, 0.12)';
-                            }
-                            
-                            // Proteção de fallbacks na tabela também
-                            const carregadoVal = i.caixas_carregadas || 0;
-                            const rampaVal = i.caixas_rampa || 0;
+                            const carregadoVal = i.caixas_carregadas || 0; const rampaVal = i.caixas_rampa || 0;
                             const totalProc = i.caixas_processadas || (carregadoVal + rampaVal);
 
                             linhasFech += `
@@ -1504,26 +1311,125 @@
                                     <td style="font-weight:700;">${i.tu}</td>
                                     <td>
                                         <div><strong style="color:#fff;">${formatarNumeroInteiro(totalProc)}</strong> / ${formatarNumeroInteiro(i.total_caixas)}</div>
-                                        <div style="font-size:0.64rem; color:#cbd5e1; margin-top:2px; font-weight:600;">
-                                            <span style="color:#00b09b;">${carregadoVal} Carregado</span> | <span style="color:#00d2ff;">${rampaVal} Rampa OK</span>
-                                        </div>
+                                        <div style="font-size:0.64rem; color:#cbd5e1; margin-top:2px; font-weight:600;"><span style="color:#00b09b;">${carregadoVal} Carregado</span> | <span style="color:#00d2ff;">${rampaVal} Rampa OK</span></div>
                                     </td>
                                     <td>
                                         <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
                                             <span>${i.pct}%</span>
-                                            <div style="width: 60px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
-                                                <div style="width: ${i.pct}%; height: 100%; background: ${tagColor};"></div>
-                                            </div>
+                                            <div style="width: 60px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;"><div style="width: ${i.pct}%; height: 100%; background: ${tagColor};"></div></div>
                                         </div>
                                     </td>
                                     <td><span style="color: ${tagColor}; background: ${tagBg}; padding: 3px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 700;">${i.status}</span></td>
                                 </tr>`;
                         });
                         tbodyFech.innerHTML = linhasFech;
-                    } else {
-                        tbodyFech.innerHTML = `<tr><td colspan="6" style="text-align:center; color:#00b09b;">✨ Nenhuma TU pendente ou na linha no momento</td></tr>`;
-                    }
+                    } else tbodyFech.innerHTML = `<tr><td colspan="6" style="text-align:center; color:#00b09b;">✨ Nenhuma TU pendente ou na linha no momento</td></tr>`;
                 }
+            }
+
+            // ------------------ ABA 5: PD DIGITAL ------------------
+            if (typeof dadosPD === 'undefined') {
+                window.dadosPD = {
+                    atualizado_em: "Mock Data (Aguardando Python)",
+                    taxa_abs: 9.7, deficit: 90, fi_dias: 268, fj_dias: 233,
+                    data_padrao_setor: '2026-09-29',
+                    grafico_setor_map: {
+                        '2026-09-29': { labels: ['FECHAMENTO', 'EXPEDICAO', 'SEPARACAO', 'REABASTECIMENTO'], data: [9.3, 6.8, 5.0, 4.8], absolutos: [4, 3, 3, 1] }
+                    },
+                    grafico_setor: { labels: ['FECHAMENTO', 'EXPEDICAO', 'SEPARACAO', 'REABASTECIMENTO'], data: [9.3, 6.8, 5.0, 4.8], absolutos: [4, 3, 3, 1] },
+                    grafico_empresa: { labels: ['America', 'Meet', 'CEVA', 'Pactual'], data: [11.9, 10.3, 9.4, 7.7], absolutos: [178, 121, 506, 106] },
+                    
+                    grafico_diario: {
+                        labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15'],
+                        datasets: [
+                            { type: 'bar', label: 'Faltas Totais', data: [11.1, 10.3, 10.6, 10.0, 8.6, 11.9, 8.5, 8.9, 8.3, 9.6, 10.1, 8.2, 11.5, 8.7, 9.1], backgroundColor: 'rgba(0, 210, 255, 0.75)', borderColor: 'rgba(0, 210, 255, 1)', borderWidth: 1, borderRadius: 4, hidden: false },
+                            { type: 'bar', label: '1º Turno', data: [8.6, 9.7, 9.3, 7.6, 9.2, 0, 6.6, 3.2, 8.0, 6.4, 6.9, 0, 8.2, 5.7, 6.1], backgroundColor: '#3b82f6', borderColor: '#3b82f6', borderWidth: 1, borderRadius: 4, hidden: true },
+                            { type: 'bar', label: '2º Turno', data: [8.6, 7.1, 8.8, 6.9, 8.0, 0, 4.2, 2.1, 5.0, 4.1, 4.5, 0, 5.8, 3.9, 4.2], backgroundColor: '#f6b93b', borderColor: '#f6b93b', borderWidth: 1, borderRadius: 4, hidden: true },
+                            { type: 'bar', label: '3º Turno', data: [16.4, 14.1, 13.7, 15.8, 0, 0, 9.5, 6.4, 10.8, 9.2, 10.1, 0, 11.5, 8.7, 9.1], backgroundColor: '#e64343', borderColor: '#e64343', borderWidth: 1, borderRadius: 4, hidden: true },
+                            { type: 'line', label: 'Meta (4%)', data: [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0], borderColor: '#00b09b', borderDash: [5, 5], borderWidth: 2, pointRadius: 0, fill: false, hidden: false }
+                        ]
+                    },
+
+                    tabela_turnos: [
+                        {turno: '3º Turno', faltas: 424, taxa: 13.0},
+                        {turno: '2º Turno', faltas: 332, taxa: 9.5},
+                        {turno: '1º Turno', faltas: 223, taxa: 6.8}
+                    ],
+                    todos_setores: [
+                        {setor: 'SEPARAÇÃO', faltas: 485, taxa: 12.1},
+                        {setor: 'EXPEDIÇÃO', faltas: 140, taxa: 8.4},
+                        {setor: 'FECHAMENTO', faltas: 133, taxa: 8.4},
+                        {setor: 'REABASTECIMENTO', faltas: 133, taxa: 10.1},
+                        {setor: 'RECEBIMENTO', faltas: 71, taxa: 5.5},
+                        {setor: 'INVENTÁRIO', faltas: 17, taxa: 10.0}
+                    ],
+                    todos_lideres: [
+                        {lider: 'LUIS PAULO REIS', faltas: 485, taxa: 12.1},
+                        {lider: 'TARCISIO RICARDO MARTINS CLARO', faltas: 140, taxa: 8.4},
+                        {lider: 'RICARDO EUGENIO LAURINDO', faltas: 133, taxa: 8.4},
+                        {lider: 'FLAVIO MARTINS RUFINO', faltas: 133, taxa: 10.1},
+                        {lider: 'MARCIO VINICIO AMANCIO JUNIOR', faltas: 71, taxa: 5.5},
+                        {lider: 'MARIA GABRIELE SANTANA ALVES', faltas: 17, taxa: 10.0}
+                    ]
+                };
+            }
+
+            if (typeof dadosPD !== 'undefined') {
+                const pd = dadosPD;
+                setTextoSeguro('txt-pd-status-sync', `LIVE • ${pd.atualizado_em || ''}`);
+                setTextoSeguro('pd-taxa-abs', `${pd.taxa_abs}%`);
+                setTextoSeguro('pd-deficit', formatarNumeroInteiro(pd.deficit));
+                setTextoSeguro('pd-injustificadas', formatarNumeroInteiro(pd.fi_dias));
+                setTextoSeguro('pd-justificadas', formatarNumeroInteiro(pd.fj_dias));
+
+                const tbodyTurnos = document.getElementById('tbl-pd-turnos-body');
+                if (tbodyTurnos && pd.tabela_turnos) {
+                    let htmlTurnos = '';
+                    pd.tabela_turnos.forEach(t => {
+                        htmlTurnos += `
+                            <tr>
+                                <td style="text-align: left; color: #ffffff; font-weight: 700;">${t.turno}</td>
+                                <td><span class="val" style="color: #ff4b2b;">${t.faltas}</span></td>
+                                <td><span style="color: #00d2ff; background: rgba(0, 210, 255, 0.12); padding: 3px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 700;">${t.taxa}%</span></td>
+                            </tr>
+                        `;
+                    });
+                    tbodyTurnos.innerHTML = htmlTurnos;
+                }
+
+                const tbodySetores = document.getElementById('tbl-pd-setores-body');
+                const listaSetores = pd.todos_setores || pd.top_setores || [];
+                if (tbodySetores && listaSetores.length > 0) {
+                    let htmlSetores = '';
+                    listaSetores.forEach(g => {
+                        htmlSetores += `
+                            <tr>
+                                <td style="text-align: left; color: #ffffff; font-weight: 700;">${g.setor}</td>
+                                <td><span class="val" style="color: #ff4b2b;">${g.faltas}</span></td>
+                                <td><span style="color: #f6b93b; background: rgba(246, 185, 59, 0.12); padding: 3px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 700;">${g.taxa}%</span></td>
+                            </tr>
+                        `;
+                    });
+                    tbodySetores.innerHTML = htmlSetores;
+                }
+
+                const tbodyLideres = document.getElementById('tbl-pd-lideres-body');
+                const listaLideres = pd.todos_lideres || pd.top_lideres || [];
+                if (tbodyLideres && listaLideres.length > 0) {
+                    let htmlLideres = '';
+                    listaLideres.forEach(g => {
+                        htmlLideres += `
+                            <tr>
+                                <td style="text-align: left; color: #ffffff; font-weight: 700;">${g.lider}</td>
+                                <td><span class="val" style="color: #ff4b2b;">${g.faltas}</span></td>
+                                <td><span style="color: #f6b93b; background: rgba(246, 185, 59, 0.12); padding: 3px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 700;">${g.taxa}%</span></td>
+                            </tr>
+                        `;
+                    });
+                    tbodyLideres.innerHTML = htmlLideres;
+                }
+                
+                desenharGraficosPD(pd.grafico_setor, pd.grafico_empresa, pd.grafico_diario);
             }
         }
 
