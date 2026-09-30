@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "29/09/2026 21:23",
+  "atualizado_em": "29/09/2026 21:44",
   "taxa_abs": 9.8,
   "deficit": 48,
   "fi_dias": 360,
@@ -760,6 +760,7 @@ window.dadosPD = {
     ],
     "datasets": [
       {
+        "type": "bar",
         "label": "Geral",
         "data": [
           11.1,
@@ -798,6 +799,7 @@ window.dadosPD = {
         "hidden": false
       },
       {
+        "type": "bar",
         "label": "1º Turno",
         "data": [
           8.6,
@@ -836,6 +838,7 @@ window.dadosPD = {
         "hidden": true
       },
       {
+        "type": "bar",
         "label": "2º Turno",
         "data": [
           8.6,
@@ -874,6 +877,7 @@ window.dadosPD = {
         "hidden": true
       },
       {
+        "type": "bar",
         "label": "3º Turno",
         "data": [
           16.4,
@@ -910,6 +914,49 @@ window.dadosPD = {
         "borderWidth": 1,
         "borderRadius": 4,
         "hidden": true
+      },
+      {
+        "type": "line",
+        "label": "Meta (4%)",
+        "data": [
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "borderColor": "#00b09b",
+        "borderDash": [
+          5,
+          5
+        ],
+        "borderWidth": 2,
+        "pointRadius": 0,
+        "fill": false,
+        "hidden": false
       }
     ]
   },
