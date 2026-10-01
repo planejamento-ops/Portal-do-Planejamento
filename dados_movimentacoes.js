@@ -1,89 +1,73 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "29/09/2026 17:14",
-  "total_dia": 15,
-  "pendentes_hoje": 10,
-  "pendentes_antigas": 0,
-  "etiquetas_totais": 15,
-  "etiquetas_pendentes": 10,
+  "atualizado_em": "01/10/2026 09:03",
+  "total_dia": 0,
+  "pendentes_hoje": 0,
+  "pendentes_antigas": 8,
+  "etiquetas_totais": 0,
+  "etiquetas_pendentes": 0,
   "tabela_pendentes": [
     {
-      "data": "29/09",
-      "item": "50956",
-      "demanda": "Outros",
-      "de": "LN-1-04-2-1-5",
-      "para": "LN-4-19-1-3-2",
-      "tipo_dep": "BGFD"
+      "data": "30/09",
+      "item": "84688",
+      "demanda": "MALHA PRÓ",
+      "de": "PD-14-261-2-2",
+      "para": "PC-01-13-4",
+      "tipo_dep": "PC"
     },
     {
-      "data": "29/09",
-      "item": "49878",
-      "demanda": "Outros",
-      "de": "LN-2-04-3-2-4",
-      "para": "LN-4-31-1-2-1",
-      "tipo_dep": "BGFD"
+      "data": "30/09",
+      "item": "90507",
+      "demanda": "MALHA PRÓ",
+      "de": "PD-14-260-1-3",
+      "para": "PC-04-20-2",
+      "tipo_dep": "PC"
     },
     {
-      "data": "29/09",
-      "item": "95094",
-      "demanda": "Outros",
-      "de": "LN-2-04-3-3-3",
-      "para": "LN-4-34-1-3-4",
-      "tipo_dep": "BGGZ"
+      "data": "30/09",
+      "item": "86038",
+      "demanda": "MALHA PRÓ",
+      "de": "PD-14-259-3-4",
+      "para": "PC-04-18-1",
+      "tipo_dep": "PC"
     },
     {
-      "data": "29/09",
-      "item": "96166",
-      "demanda": "Outros",
-      "de": "LN-2-04-4-2-6",
-      "para": "LN-4-23-3-5-4",
-      "tipo_dep": "BGLE"
+      "data": "30/09",
+      "item": "87415",
+      "demanda": "MALHA PRÓ",
+      "de": "PD-14-256-4-3",
+      "para": "PC-04-18-4",
+      "tipo_dep": "PC"
     },
     {
-      "data": "29/09",
-      "item": "95036",
-      "demanda": "Outros",
-      "de": "LN-2-04-4-2-7",
-      "para": "LN-4-23-3-5-5",
-      "tipo_dep": "BGLE"
+      "data": "30/09",
+      "item": "71807",
+      "demanda": "MALHA PRÓ",
+      "de": "PD-14-248-1-2",
+      "para": "PC-02-14-4",
+      "tipo_dep": "PC"
     },
     {
-      "data": "29/09",
-      "item": "83684",
-      "demanda": "Outros",
-      "de": "LN-1-07-1-1-3",
-      "para": "LN-4-22-3-3-3",
-      "tipo_dep": "BGLE"
+      "data": "30/09",
+      "item": "55427",
+      "demanda": "MALHA PRÓ",
+      "de": "PD-14-247-3-3",
+      "para": "PC-01-21-2",
+      "tipo_dep": "PC"
     },
     {
-      "data": "29/09",
-      "item": "48657",
-      "demanda": "Outros",
-      "de": "LN-2-07-3-2-7",
-      "para": "LN-4-25-3-5-6",
-      "tipo_dep": "BGLE"
-    },
-    {
-      "data": "29/09",
-      "item": "84214",
-      "demanda": "Outros",
-      "de": "LN-1-04-1-1-2",
-      "para": "LN-4-25-3-2-6",
-      "tipo_dep": "BGLE"
-    },
-    {
-      "data": "29/09",
-      "item": "48785",
-      "demanda": "Outros",
-      "de": "LN-1-07-2-1-4",
-      "para": "LN-4-27-4-5-5",
+      "data": "30/09",
+      "item": "53921",
+      "demanda": "MALHA PRÓ",
+      "de": "PC-03-27-1",
+      "para": "LN-3-18-4-3-4",
       "tipo_dep": "BGLD"
     },
     {
-      "data": "29/09",
-      "item": "89681",
-      "demanda": "Outros",
-      "de": "LN-2-07-4-3-3",
-      "para": "LN-4-29-3-4-1",
+      "data": "30/09",
+      "item": "95003",
+      "demanda": "MALHA PRÓ",
+      "de": "PC-02-34-1",
+      "para": "LN-3-19-3-3-4",
       "tipo_dep": "BGLE"
     }
   ],
