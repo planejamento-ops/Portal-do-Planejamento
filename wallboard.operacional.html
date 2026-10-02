@@ -1773,8 +1773,11 @@
                 });
             }
             
-            // Helper global para as tabelas
+            // Helper global para as tabelas (Agora suporta a Simulação)
             window.getCxsUnicas = function(sku) {
+                if (window.simCaixasTocadasPorSku && window.simCaixasTocadasPorSku[sku]) {
+                    return window.simCaixasTocadasPorSku[sku].size;
+                }
                 return window.globalCaixasTocadasPorSku[sku] ? window.globalCaixasTocadasPorSku[sku].size : 0;
             };
 
@@ -2713,38 +2716,8 @@
             // =========================================================================
             // LÓGICA DE POPULAÇÃO DA NOVA TABELA GERAL FR (PARETO DE PEÇAS)
             // =========================================================================
-            let sortedFRForTable = [...globalSKUsFR].sort((a, b) => b.pcs - a.pcs);
-            let totalPcsFRTable = sortedFRForTable.reduce((acc, curr) => acc + curr.pcs, 0);
-            let cumAcum = 0;
-            let tbGeralFR = "";
-            
-            sortedFRForTable.forEach(s => {
-                let percent = totalPcsFRTable > 0 ? (s.pcs / totalPcsFRTable) * 100 : 0;
-                cumAcum += percent;
-                
-                // NOVO: Cálculo das caixas mestre de reabastecimento
-                let cxsReab = (s.cxMestre && s.cxMestre !== 9999) ? Math.ceil(s.pcs / s.cxMestre) : "-";
-                
-                tbGeralFR += `<tr>
-                    <td style="font-weight:bold;">${s.sku}</td>
-                    <td>${formatarMilhar(s.pcs)}</td>
-                    <td style="font-weight:900; color:#002E6D; background-color: #ebf8ff;">${window.getCxsUnicas(s.sku)}</td>
-                    <td style="font-weight:bold; color:#718096; background-color: #f7fafc;">${cxsReab}</td>
-                    <td style="text-align: left; max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${s.desc}">${s.desc}</td>
-                    <td>${window.getFamilia(s.sku)}</td>
-                    
-                    <!-- NOVAS COLUNAS RENDENRIZADAS -->
-                    <td style="font-weight:bold; color:#2d3748;">${s.tamanho || '-'}</td>
-                    <td style="font-weight:bold; color:#2d3748;">${s.peso || '-'}</td>
-                    
-                    <td>${percent.toFixed(2).replace('.', ',')}%</td>
-                    <td>${cumAcum.toFixed(2).replace('.', ',')}%</td>
-                    <td>${s.pos}</td>
-                    <td style="font-weight:bold;">${s.estacao}</td>
-                </tr>`;
-            });
-            let tblBodyFR = document.querySelector("#tblVisaoGeralFR tbody");
-            if (tblBodyFR) tblBodyFR.innerHTML = tbGeralFR || "<tr><td colspan='10'>Sem dados FR</td></tr>";
+            // Chama a nova função global para gerar a tabela e mantê-la atualizada
+            window.atualizarTabelaGeralFR();
             // =========================================================================
            
             // 👇 RESTAURAÇÃO DOS DADOS DE TURNO (Checkboxes e Balanceamento)
@@ -2960,83 +2933,114 @@
                 return;
             }
 
-            let poolDestino = window.globalEmptyLocs[toStation] || [];
-            
-            let filPadrao = document.getElementById('chkFilPadrao').checked;
-            let priGolden = document.getElementById('chkPriGolden').checked;
-            let filMod34 = document.getElementById('chkFilMod34').checked;
-            let filFrontal = document.getElementById('chkFilFrontal').checked;
-            let filNivel15 = document.getElementById('chkFilNivel15').checked;
-
             let successCount = 0;
             let failCount = 0;
 
-            checkboxes.forEach(cb => {
-                let skuObj = globalSKUsFR.find(s => s.sku === cb.value);
-                if (skuObj) {
-                    let validIndices = [];
+            if (direcao === 'ida') {
+                // ==========================================
+                // MODO IDA: Congela a posição original
+                // ==========================================
+                let poolDestino = window.globalEmptyLocs[toStation] || [];
+                
+                let filPadrao = document.getElementById('chkFilPadrao').checked;
+                let priGolden = document.getElementById('chkPriGolden').checked;
+                let filMod34 = document.getElementById('chkFilMod34').checked;
+                let filFrontal = document.getElementById('chkFilFrontal').checked;
+                let filNivel15 = document.getElementById('chkFilNivel15').checked;
 
-                    for(let i=0; i<poolDestino.length; i++) {
-                        let p = poolDestino[i]; 
-                        let pts = p.split('-');
-                        let mod = pts.length > 3 ? pts[3] : '';
-                        let nv = pts.length > 4 ? pts[4] : '';
-                        let frontal = pts.length > 5 ? pts[5] : '';
-                        
-                        let isG = false;
-                        if (window.globalDictTopo && window.globalDictTopo[p]) {
-                            isG = window.globalDictTopo[p].toUpperCase().includes('GOLDEN');
-                        }
-                        let isFrontalPos = ((frontal === '1' || frontal === '01') && (mod === '1' || mod === '2' || mod === '01' || mod === '02') && !isG);
-                        let isNivel15 = (nv === '1' || nv === '5' || nv === '01' || nv === '05');
+                checkboxes.forEach(cb => {
+                    let skuObj = globalSKUsFR.find(s => s.sku === cb.value);
+                    if (skuObj) {
+                        // Evita re-transferências inválidas
+                        if (skuObj.estacao === toStation && skuObj.pos !== skuObj.posicaoOriginal) return;
 
-                        let passMod = filMod34 ? (mod === '3' || mod === '4' || mod === '03' || mod === '04') : true;
-                        let passFrontal = filFrontal ? (isFrontalPos) : true;
-                        let passGolden = priGolden ? isG : true;
-                        
-                        let passPadrao = true;
-                        if (filPadrao) {
-                            if (isG || isFrontalPos || isNivel15 || p.startsWith('PC')) {
-                                passPadrao = false;
+                        let validIndices = [];
+
+                        for(let i = 0; i < poolDestino.length; i++) {
+                            let p = poolDestino[i]; 
+                            let pts = p.split('-');
+                            let mod = pts.length > 3 ? pts[3] : '';
+                            let nv = pts.length > 4 ? pts[4] : '';
+                            let frontal = pts.length > 5 ? pts[5] : '';
+                            
+                            let isG = false;
+                            if (window.globalDictTopo && window.globalDictTopo[p]) {
+                                isG = window.globalDictTopo[p].toUpperCase().includes('GOLDEN');
+                            }
+                            let isFrontalPos = ((frontal === '1' || frontal === '01') && (mod === '1' || mod === '2' || mod === '01' || mod === '02') && !isG);
+                            let isNivel15 = (nv === '1' || nv === '5' || nv === '01' || nv === '05');
+
+                            let passMod = filMod34 ? (mod === '3' || mod === '4' || mod === '03' || mod === '04') : true;
+                            let passFrontal = filFrontal ? (isFrontalPos) : true;
+                            let passGolden = priGolden ? isG : true;
+                            
+                            let passPadrao = true;
+                            if (filPadrao) {
+                                if (isG || isFrontalPos || isNivel15 || p.startsWith('PC')) {
+                                    passPadrao = false;
+                                }
+                            }
+
+                            let passNivel15 = true;
+                            if (filNivel15) {
+                                passNivel15 = isNivel15; 
+                            } else {
+                                if (!priGolden && !filFrontal && !filMod34 && !filPadrao) {
+                                    if (isNivel15) passNivel15 = false; 
+                                } else if (filPadrao || filMod34) {
+                                    if (isNivel15) passNivel15 = false;
+                                }
+                            }
+
+                            if(passMod && passFrontal && passGolden && passNivel15 && passPadrao) {
+                                validIndices.push(i);
                             }
                         }
 
-                        let passNivel15 = true;
-                        if (filNivel15) {
-                            passNivel15 = isNivel15; 
-                        } else {
-                            if (!priGolden && !filFrontal && !filMod34 && !filPadrao) {
-                                if (isNivel15) passNivel15 = false; 
-                            } else if (filPadrao || filMod34) {
-                                if (isNivel15) passNivel15 = false;
-                            }
+                        if (validIndices.length === 0) {
+                            failCount++;
+                            return; 
                         }
 
-                        if(passMod && passFrontal && passGolden && passNivel15 && passPadrao) {
-                            validIndices.push(i);
-                        }
-                    }
+                        let bestIdx = validIndices[0]; 
+                        let newEmptyPos = poolDestino.splice(bestIdx, 1)[0];
+                        
+                        // 🛑 A MAGIA ESTÁ AQUI: Removemos a instrução que devolvia a oldPos para as vagas vazias.
+                        // A posição original fica em "limbo" e protegida.
 
-                    if (validIndices.length === 0) {
-                        failCount++;
-                        return; 
+                        skuObj.estacao = toStation;
+                        skuObj.pos = newEmptyPos;
+                        successCount++;
                     }
+                });
 
-                    let bestIdx = validIndices[0]; 
-                    let newEmptyPos = poolDestino.splice(bestIdx, 1)[0];
-                    let oldPos = skuObj.pos;
+            } else {
+                // ==========================================
+                // MODO VOLTA: Força o regresso à casa exata
+                // ==========================================
+                checkboxes.forEach(cb => {
+                    let skuObj = globalSKUsFR.find(s => s.sku === cb.value);
                     
-                    if (oldPos && (oldPos.startsWith("LN") || oldPos.startsWith("PC"))) {
-                        if (!window.globalEmptyLocs[fromStation]) window.globalEmptyLocs[fromStation] = [];
-                        window.globalEmptyLocs[fromStation].push(oldPos);
-                        window.globalEmptyLocs[fromStation].sort();
-                    }
+                    // Só retorna quem efetivamente mudou de lugar
+                    if (skuObj && skuObj.pos !== skuObj.posicaoOriginal) {
+                        
+                        // 1. Devolve a vaga simulada que ele estava a usar à lista de vazias daquela estação
+                        let vagaSimulada = skuObj.pos;
+                        let estacaoSimulada = skuObj.estacao;
+                        
+                        if (vagaSimulada.startsWith("LN") || vagaSimulada.startsWith("PC")) {
+                            if (!window.globalEmptyLocs[estacaoSimulada]) window.globalEmptyLocs[estacaoSimulada] = [];
+                            window.globalEmptyLocs[estacaoSimulada].push(vagaSimulada);
+                            window.globalEmptyLocs[estacaoSimulada].sort(); // Reorganiza
+                        }
 
-                    skuObj.estacao = toStation;
-                    skuObj.pos = newEmptyPos;
-                    successCount++;
-                }
-            });
+                        // 2. Regressa exatamente à coordenada de origem e liberta o status
+                        skuObj.estacao = skuObj.estacaoOriginal;
+                        skuObj.pos = skuObj.posicaoOriginal;
+                        successCount++;
+                    }
+                });
+            }
 
             if (failCount > 0) {
                 alert(`⚠️ ALERTA DE SISTEMA: ${failCount} SKU(s) NÃO foram movidos porque não há posições vazias na Estação selecionada que atendam aos seus filtros!`);
@@ -3044,7 +3048,8 @@
 
             let info = document.getElementById('lblInfoBalanco');
             if(successCount > 0) {
-                info.innerHTML = `✅ ${successCount} Alocados!`;
+                let msg = direcao === 'ida' ? 'Alocados!' : 'Retornados!';
+                info.innerHTML = `✅ ${successCount} ${msg}`;
                 info.style.color = "#38a169";
                 setTimeout(() => { info.innerHTML = "Auto-Alocação Ativa"; info.style.color = "#002E6D"; }, 4000);
             }
@@ -3059,6 +3064,8 @@
     }
     function renderGraficoSimulacao() {
         try {
+            window.simCaixasTocadasPorSku = {};
+            globalSKUsFR.forEach(s => window.simCaixasTocadasPorSku[s.sku] = new Set());
             let xAxis = estacoesGlobais;
             let simStationMap = {}; 
             globalSKUsFR.forEach(s => simStationMap[s.sku] = s.estacao);
@@ -3162,6 +3169,10 @@
                         if (qtdColocada > 0) {
                             if (cxsSimuladasPorEstacao[i.EstacaoSimulada]) {
                                 cxsSimuladasPorEstacao[i.EstacaoSimulada].add(boxId);
+                            }
+
+                            if (window.simCaixasTocadasPorSku[i.SKU]) {
+                                window.simCaixasTocadasPorSku[i.SKU].add(boxId);
                             }
                             
                             cxsSimuladasUnicas.add(boxId);
@@ -3329,6 +3340,9 @@
                 if(document.getElementById(plotlyIds[0])) Plotly.react(plotlyIds[0], [trSimPcsBar, trSimAvgPcs], { ...cfgPrincipal, title: {text:'PEÇAS A SEPARAR (FR)', font:{size: 13, color:'#2d3748'}}, annotations: gerarAnotacoes(xAxis, arrSimPcsGeral, 11, '#1a202c') });
                 if(document.getElementById(plotlyIds[1])) Plotly.react(plotlyIds[1], [trSimCxsBar, trSimAvgCxs], { ...cfgPrincipal, title: {text:'CAIXAS A MONTAR (FR)', font:{size: 13, color:'#2d3748'}}, annotations: gerarAnotacoes(xAxis, arrSimCxsGeral, 11, '#1a202c') });
                 if(document.getElementById(plotlyIds[2])) Plotly.react(plotlyIds[2], [trSimTarBarMain, trSimAvgTarMain], { ...cfgPrincipal, title: {text:'TAREFAS DE PICKING (FR)', font:{size: 13, color:'#2d3748'}}, annotations: gerarAnotacoes(xAxis, arrSimTar, 11, '#1a202c') });
+
+                // ---> ATUALIZAÇÃO DA TABELA AQUI <---
+                window.atualizarTabelaGeralFR();
 
             } catch (erroVisual) {
                 console.error("Erro ignorado ao atualizar gráficos visuais: ", erroVisual);
@@ -3859,7 +3873,38 @@ function copiarLinhaSharePoint() {
         
         event.target.value = '';
     }
-    // 👆 FIM DO CÓDIGO INSERIDO 👆 
+    // 👆 FIM DO CÓDIGO INSERIDO 👆
+    // Função Global para manter a Tabela sempre sincronizada com os gráficos
+    window.atualizarTabelaGeralFR = function() {
+        let sortedFRForTable = [...globalSKUsFR].sort((a, b) => b.pcs - a.pcs);
+        let totalPcsFRTable = sortedFRForTable.reduce((acc, curr) => acc + curr.pcs, 0);
+        let cumAcum = 0;
+        let tbGeralFR = "";
+        
+        sortedFRForTable.forEach(s => {
+            let percent = totalPcsFRTable > 0 ? (s.pcs / totalPcsFRTable) * 100 : 0;
+            cumAcum += percent;
+            
+            let cxsReab = (s.cxMestre && s.cxMestre !== 9999) ? Math.ceil(s.pcs / s.cxMestre) : "-";
+            
+            tbGeralFR += `<tr>
+                <td style="font-weight:bold;">${s.sku}</td>
+                <td>${formatarMilhar(s.pcs)}</td>
+                <td style="font-weight:900; color:#002E6D; background-color: #ebf8ff;">${window.getCxsUnicas(s.sku)}</td>
+                <td style="font-weight:bold; color:#718096; background-color: #f7fafc;">${cxsReab}</td>
+                <td style="text-align: left; max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${s.desc}">${s.desc}</td>
+                <td>${window.getFamilia(s.sku)}</td>
+                <td style="font-weight:bold; color:#2d3748;">${s.tamanho || '-'}</td>
+                <td style="font-weight:bold; color:#2d3748;">${s.peso || '-'}</td>
+                <td>${percent.toFixed(2).replace('.', ',')}%</td>
+                <td>${cumAcum.toFixed(2).replace('.', ',')}%</td>
+                <td>${s.pos}</td>
+                <td style="font-weight:bold;">${s.estacao}</td>
+            </tr>`;
+        });
+        let tblBodyFR = document.querySelector("#tblVisaoGeralFR tbody");
+        if (tblBodyFR) tblBodyFR.innerHTML = tbGeralFR || "<tr><td colspan='12'>Sem dados FR</td></tr>";
+    } 
 </script>
 
 </body>
