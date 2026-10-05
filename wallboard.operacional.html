@@ -482,6 +482,15 @@
                     <h3 style="color: #002E6D; font-size: 14px; margin: 0;">📋 TABELA GERAL - DEMANDA FRACIONADA (FR)</h3>
                     <button class="copy-btn" onclick="copiarTabelaParaExcel(event, 'tblVisaoGeralFR')">📋 Copiar para Excel</button>
                 </div>
+                
+                <!-- NOVO PAINEL DE SUBTOTAL FIXO NO TOPO -->
+                <div style="display: flex; gap: 25px; background-color: #f7fafc; border: 1px solid #cbd5e0; padding: 8px 15px; border-radius: 6px; margin-bottom: 8px; align-items: center;">
+                    <span style="color: #4a5568; font-weight: 900; text-transform: uppercase; font-size: 11px;">📊 Subtotal do Filtro:</span>
+                    <span style="font-weight: bold; color: #4a5568; font-size: 12px;">Soma de Peças: <span id="subtotalPecasFR" style="font-size: 15px; color: #E3000F; font-weight: 900;">0</span></span>
+                    <span style="font-weight: bold; color: #4a5568; font-size: 12px;">Cxs Envio: <span id="subtotalCxsEnvioFR" style="font-size: 15px; color: #002E6D; font-weight: 900;">0</span></span>
+                    <span style="font-weight: bold; color: #718096; font-size: 12px;">Cxs Reabastecimento: <span id="subtotalCxsReabFR" style="font-size: 15px; color: #718096;">0</span></span>
+                </div>
+
                 <div class="table-wrapper" style="max-height: 800px; overflow-y: auto; background: white; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
                     <table id="tblVisaoGeralFR">
                         <thead>
@@ -503,6 +512,8 @@
                             </tr>
                         </thead>
                         <tbody></tbody>
+                        <!-- NOVO RODAPÉ DE SUBTOTAL FIXO -->
+                        
                     </table>
                 </div>
             </div>
@@ -989,7 +1000,7 @@
         
         for (let i = 1; i < tr.length; i++) {
             let row = tr[i];
-            if (row.parentNode.tagName.toLowerCase() === 'thead') continue;
+            if (row.parentNode.tagName.toLowerCase() === 'thead' || row.parentNode.tagName.toLowerCase() === 'tfoot') continue;
             
             let displayRow = true;
             for (let j = 0; j < filterValues.length; j++) {
@@ -999,15 +1010,10 @@
                     if (td) {
                         let txtValue = td.textContent || td.innerText;
                         
-                        // Verifica se o usuário digitou um operador lógico no começo (ex: >100, <=50, =10)
                         let match = filterVal.match(/^(>=|<=|>|<|=)\s*([-0-9.,]+)$/);
-                        
                         if (match) {
                             let operator = match[1];
-                            // Transforma o número do filtro (remove pontos de milhar e troca vírgula por ponto)
                             let filterNumber = parseFloat(match[2].replace(/\./g, '').replace(',', '.'));
-                            
-                            // Transforma o número da célula da tabela (remove pontos, porcentagem e ajusta vírgula)
                             let cellNumber = parseFloat(txtValue.replace(/\./g, '').replace('%', '').replace(',', '.'));
                             
                             if (!isNaN(cellNumber) && !isNaN(filterNumber)) {
@@ -1017,21 +1023,68 @@
                                 else if (operator === '<=' && !(cellNumber <= filterNumber)) displayRow = false;
                                 else if (operator === '=' && !(cellNumber === filterNumber)) displayRow = false;
                             } else {
-                                displayRow = false; // Se a célula não for número, oculta
+                                displayRow = false; 
                             }
                         } else {
-                            // Pesquisa padrão de texto (se não usou nenhum operador matemático)
                             if (txtValue.toUpperCase().indexOf(filterVal) === -1) {
                                 displayRow = false;
                             }
                         }
                     }
                 }
-                // Se falhou em qualquer coluna, nem precisa checar as próximas para esta linha
                 if (!displayRow) break;
             }
             row.style.display = displayRow ? "" : "none";
         }
+
+        // Chama o recálculo do subtotal sempre que o usuário digitar um filtro
+        if (tableId === 'tblVisaoGeralFR' && typeof window.calcularSubtotalTabelaFR === 'function') {
+            window.calcularSubtotalTabelaFR();
+        }
+    }
+
+    // NOVA FUNÇÃO: Calcula o subtotal apenas das linhas visíveis
+    window.calcularSubtotalTabelaFR = function() {
+        let table = document.getElementById('tblVisaoGeralFR');
+        if (!table) return;
+        
+        let tbody = table.querySelector('tbody');
+        let rows = tbody.getElementsByTagName('tr');
+        
+        let sumPecas = 0;
+        let sumCxsEnvio = 0;
+        let sumCxsReab = 0;
+        
+        for (let i = 0; i < rows.length; i++) {
+            let row = rows[i];
+            // Soma apenas se a linha NÃO estiver oculta pelo filtro
+            if (row.style.display !== 'none') {
+                let cols = row.getElementsByTagName('td');
+                if (cols.length >= 4) {
+                    // Coluna 1: Soma de PEÇAS
+                    let valPecas = parseInt(cols[1].innerText.replace(/\./g, '').trim()) || 0;
+                    sumPecas += valPecas;
+                    
+                    // Coluna 2: Cxs Envio
+                    let valCxsEnvio = parseInt(cols[2].innerText.replace(/\./g, '').trim()) || 0;
+                    sumCxsEnvio += valCxsEnvio;
+                    
+                    // Coluna 3: Cxs Reabastecimento
+                    let txtReab = cols[3].innerText.replace(/\./g, '').trim();
+                    let valCxsReab = txtReab === '-' ? 0 : (parseInt(txtReab) || 0);
+                    sumCxsReab += valCxsReab;
+                }
+            }
+        }
+        
+        // Atualiza os números no rodapé
+        let elPecas = document.getElementById('subtotalPecasFR');
+        let elCxsEnvio = document.getElementById('subtotalCxsEnvioFR');
+        let elCxsReab = document.getElementById('subtotalCxsReabFR');
+        
+        if (elPecas) elPecas.innerText = formatarMilhar(sumPecas);
+        if (elCxsEnvio) elCxsEnvio.innerText = formatarMilhar(sumCxsEnvio);
+        if (elCxsReab) elCxsReab.innerText = formatarMilhar(sumCxsReab);
     }
 
     function toggleAccordion(button) {
@@ -3904,6 +3957,11 @@ function copiarLinhaSharePoint() {
         });
         let tblBodyFR = document.querySelector("#tblVisaoGeralFR tbody");
         if (tblBodyFR) tblBodyFR.innerHTML = tbGeralFR || "<tr><td colspan='12'>Sem dados FR</td></tr>";
+        
+        // Dispara o cálculo do subtotal para o estado inicial da tabela
+        if (typeof window.calcularSubtotalTabelaFR === 'function') {
+            window.calcularSubtotalTabelaFR();
+        }
     } 
 </script>
 
