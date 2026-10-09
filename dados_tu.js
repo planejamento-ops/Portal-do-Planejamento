@@ -1,8 +1,8 @@
 window.dadosDashboard = {
-  "atualizado_em": "09/10/2026 17:38",
-  "total_tus": 0,
-  "caixas_total_mes": 30374,
-  "pecas_total_mes": 1158132,
+  "atualizado_em": "09/10/2026 17:45",
+  "total_tus": 63,
+  "caixas_total_mes": 103089,
+  "pecas_total_mes": 3572979,
   "totais_por_mes": {
     "2025-01": {
       "caixas": 17712,
@@ -45,8 +45,8 @@ window.dadosDashboard = {
       "pecas": 14499018
     },
     "2026-10": {
-      "caixas": 30374,
-      "pecas": 1158132
+      "caixas": 103089,
+      "pecas": 3572979
     }
   },
   "caixas_pendentes": 0,
@@ -58,11 +58,7 @@ window.dadosDashboard = {
   "carretas_pendentes": 0,
   "progresso_pct": 100,
   "atendimentos_em_andamento": [],
-  "alertas_atraso": [
-    "Atraso em MGC",
-    "Atraso em SPI",
-    "Atraso em SPC"
-  ],
+  "alertas_atraso": [],
   "proxima_carteira": null,
   "proxima_varejo": null,
   "proxima_estojo": null,
@@ -74,39 +70,39 @@ window.dadosDashboard = {
   },
   "perfis_geral": {
     "varejo_ln": {
-      "perfil": 19,
-      "cx": 1729,
-      "pcs": 33615
+      "perfil": 18,
+      "cx": 10452,
+      "pcs": 192754
     },
     "varejo_gv": {
-      "perfil": 16,
-      "cx": 302,
-      "pcs": 4926
+      "perfil": 18,
+      "cx": 939,
+      "pcs": 17102
     },
     "carteira_ln": {
-      "perfil": 45,
-      "cx": 13316,
-      "pcs": 603750
+      "perfil": 42,
+      "cx": 44316,
+      "pcs": 1880068
     },
     "carteira_gv": {
-      "perfil": 35,
-      "cx": 14837,
-      "pcs": 513995
+      "perfil": 36,
+      "cx": 39385,
+      "pcs": 1414095
     },
     "estojo_ln": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 9,
+      "cx": 3650,
+      "pcs": 32376
     },
     "estojo_gv": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 8,
+      "cx": 4018,
+      "pcs": 33429
     },
     "total_geral": {
-      "cx": 30184,
-      "pcs": 1156286,
-      "perfil": 38
+      "cx": 102760,
+      "pcs": 3569824,
+      "perfil": 35
     }
   },
   "perfis_pendentes": {
