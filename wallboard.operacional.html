@@ -1410,7 +1410,11 @@
                 return true;
             });
 
+            const tipoAnaliseSelecionado = document.getElementById('tipoAnalise') ? document.getElementById('tipoAnalise').value : "Prévia";
+
             let demandaAgrupada = {};
+            let demandaConsolidada = [];
+
             demandaValida.forEach(row => {
                 let sku = padronizarSKU(row['Produto'] || row['Material'] || row['SKU']);
                 let doc = String(row['Documento']).trim();
@@ -1419,20 +1423,35 @@
                 
                 if(qtd <= 0 || !sku || !doc) return;
                 
-                let key = doc + "_" + sku;
-                if(!demandaAgrupada[key]) {
-                    demandaAgrupada[key] = {
+                if (tipoAnaliseSelecionado === "Prévia") {
+                    // MODO PRÉVIA: Agrupa linhas com a mesma Remessa + SKU
+                    let key = doc + "_" + sku;
+                    if(!demandaAgrupada[key]) {
+                        demandaAgrupada[key] = {
+                            ...row,
+                            SKU: sku,
+                            Documento: doc,
+                            Descricao: desc,
+                            Quantidade: 0
+                        };
+                    }
+                    demandaAgrupada[key].Quantidade += qtd;
+                } else {
+                    // MODO REAL: Respeita a quebra exata de linhas do arquivo CSV do WMS
+                    demandaConsolidada.push({
                         ...row,
                         SKU: sku,
                         Documento: doc,
                         Descricao: desc,
-                        Quantidade: 0
-                    };
+                        Quantidade: qtd
+                    });
                 }
-                demandaAgrupada[key].Quantidade += qtd;
             });
 
-            let demandaConsolidada = Object.values(demandaAgrupada);
+            // Se for Prévia, extrai o array do objeto agrupado
+            if (tipoAnaliseSelecionado === "Prévia") {
+                demandaConsolidada = Object.values(demandaAgrupada);
+            }
 
             let sumOriginalPecas = demandaConsolidada.reduce((acc, row) => acc + row.Quantidade, 0);
 
