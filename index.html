@@ -884,15 +884,30 @@
             const [ano, mes] = mesAnoSel.split('-');
             const nomesMeses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
             const nomeMesExtenso = `${nomesMeses[parseInt(mes) - 1]} / ${ano}`;
+            
             if (totaisMes[mesAnoSel]) {
                 setTextoSeguro('caixas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].caixas));
                 setTextoSeguro('pecas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].pecas));
                 setTextoSeguro('sub-caixas-mes', `Total de ${nomeMesExtenso}`);
                 setTextoSeguro('sub-pecas-mes', `Total de ${nomeMesExtenso}`);
+                
+                // NOVO: Atualiza as tabelas de perfil com o mês selecionado
+                if (totaisMes[mesAnoSel].perfis_geral) preencherCardPerfil('tot', totaisMes[mesAnoSel].perfis_geral);
+                if (totaisMes[mesAnoSel].perfis_pendentes) preencherCardPerfil('pend', totaisMes[mesAnoSel].perfis_pendentes);
             } else {
                 setTextoSeguro('caixas-mes', '0'); setTextoSeguro('pecas-mes', '0');
                 setTextoSeguro('sub-caixas-mes', `Sem dados em ${nomeMesExtenso}`);
                 setTextoSeguro('sub-pecas-mes', `Sem dados em ${nomeMesExtenso}`);
+                
+                // NOVO: Zera as tabelas se não houver dados no mês
+                const zeros = {
+                    varejo_ln: {cx:0, pcs:0, perfil:0}, varejo_gv: {cx:0, pcs:0, perfil:0},
+                    carteira_ln: {cx:0, pcs:0, perfil:0}, carteira_gv: {cx:0, pcs:0, perfil:0},
+                    estojo_ln: {cx:0, pcs:0, perfil:0}, estojo_gv: {cx:0, pcs:0, perfil:0},
+                    total_geral: {cx:0, pcs:0, perfil:0}
+                };
+                preencherCardPerfil('tot', zeros);
+                preencherCardPerfil('pend', zeros);
             }
         }
 
@@ -919,28 +934,47 @@
             renderizarCardsWMS();
         }
 
+        function buscarUltimaDataCanalWMS() {
+            // Busca a data mais recente especificamente para o canal selecionado
+            const ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === wmsCanalAtual);
+            if (ondasCanal.length > 0) {
+                // Ordena da data mais recente para a mais antiga
+                ondasCanal.sort((a, b) => b.data_onda.localeCompare(a.data_onda));
+                const dataMaisRecente = ondasCanal[0].data_onda;
+                
+                // Atualiza o calendário visualmente e aplica o filtro
+                document.getElementById('filtro-data-wms').value = dataMaisRecente;
+                aplicarFiltroDataWMS();
+            }
+        }
+
         function selecionarCanalWMS(canal, btnElement) {
             document.querySelectorAll('.btn-wms-onda').forEach(b => b.classList.remove('active'));
             btnElement.classList.add('active');
             wmsCanalAtual = canal;
+            
             const btnPreviaCarteira = document.getElementById('btn-previa-carteira');
             const btnPreviaKit = document.getElementById('btn-previa-kit');
             const btnRealKit = document.getElementById('btn-real-kit');
             const btnRealCarteira = document.getElementById('btn-real-carteira');
+            
             if (canal === 'VAREJO') {
                 if (btnPreviaCarteira) btnPreviaCarteira.style.display = 'none';
                 if (btnPreviaKit) btnPreviaKit.style.display = 'none';
                 if (btnRealKit) btnRealKit.style.display = 'none';
                 if (btnRealCarteira) btnRealCarteira.innerHTML = "REAL VAREJO";
-                mudarVisaoWMS('REAL_CARTEIRA');
+                wmsVisaoAtual = 'REAL_CARTEIRA';
             } else {
                 if (btnPreviaCarteira) btnPreviaCarteira.style.display = 'inline-block';
                 if (btnPreviaKit) btnPreviaKit.style.display = 'inline-block';
                 if (btnRealKit) btnRealKit.style.display = 'inline-block';
                 if (btnRealCarteira) btnRealCarteira.innerHTML = "REAL CARTEIRA";
-                if(wmsVisaoAtual !== 'PREVIA_CARTEIRA' && wmsVisaoAtual !== 'PREVIA_KIT' && wmsVisaoAtual !== 'REAL_KIT') mudarVisaoWMS('REAL_CARTEIRA');
-                else renderizarCardsWMS();
+                if(wmsVisaoAtual !== 'PREVIA_CARTEIRA' && wmsVisaoAtual !== 'PREVIA_KIT' && wmsVisaoAtual !== 'REAL_KIT') wmsVisaoAtual = 'REAL_CARTEIRA';
             }
+            
+            // NOVO: Ao mudar de canal, ele busca automaticamente a última atualização disponível daquele canal
+            mudarVisaoWMS(wmsVisaoAtual);
+            buscarUltimaDataCanalWMS();
         }
 
         function mudarVisaoWMS(visao) {
@@ -1197,15 +1231,8 @@
                 dadosOndasGeral = dadosDemandaWMS.ondas || [];
                 setTextoSeguro('txt-wms-status-sync', `LIVE • ${dadosDemandaWMS.atualizado_em || ''}`);
 
-                const inputData = document.getElementById('filtro-data-wms');
-                if (!inputData.value) {
-                    const hoje = new Date();
-                    const ano = hoje.getFullYear();
-                    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
-                    const dia = String(hoje.getDate()).padStart(2, '0');
-                    inputData.value = `${ano}-${mes}-${dia}`;
-                }
-                aplicarFiltroDataWMS();
+                // Em vez de forçar a data de hoje, pega a data mais recente do canal padrão (Varejo)
+                buscarUltimaDataCanalWMS();
             }
 
             if (typeof dadosMovimentacoes !== 'undefined') {
