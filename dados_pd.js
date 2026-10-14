@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "14/10/2026 12:36",
-  "taxa_abs": 12.1,
+  "atualizado_em": "14/10/2026 17:17",
+  "taxa_abs": 12.2,
   "deficit": 32,
-  "fi_dias": 194,
-  "fj_dias": 244,
+  "fi_dias": 201,
+  "fj_dias": 251,
   "data_padrao_setor": "2026-10-14",
   "grafico_setor_map": {
     "2026-10-01_GERAL": {
@@ -1087,20 +1087,23 @@ window.dadosPD = {
       "labels": [
         "EXPEDICAO",
         "REABASTECIMENTO",
-        "FECHAMENTO",
-        "RECEBIMENTO"
+        "SEPARACAO",
+        "RECEBIMENTO",
+        "FECHAMENTO"
       ],
       "data": [
-        16.0,
-        13.6,
-        5.0,
-        4.5
+        23.8,
+        12.8,
+        10.7,
+        7.3,
+        7.1
       ],
       "absolutos": [
-        4,
+        10,
+        5,
+        6,
         3,
-        1,
-        1
+        3
       ]
     },
     "2026-10-14_1": {
@@ -1124,9 +1127,27 @@ window.dadosPD = {
       ]
     },
     "2026-10-14_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "EXPEDICAO",
+        "REABASTECIMENTO",
+        "SEPARACAO",
+        "RECEBIMENTO",
+        "FECHAMENTO"
+      ],
+      "data": [
+        35.3,
+        11.8,
+        10.7,
+        10.5,
+        9.1
+      ],
+      "absolutos": [
+        6,
+        2,
+        6,
+        2,
+        2
+      ]
     },
     "2026-10-14_3": {
       "labels": [],
@@ -2886,28 +2907,32 @@ window.dadosPD = {
     },
     "2026-10-14_GERAL": {
       "labels": [
-        "EXPEDICAO",
-        "RECEBIMENTO",
+        "SEPARACAO",
         "FECHAMENTO",
-        "REABASTECIMENTO"
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "EXPEDICAO"
       ],
       "horas_disp": [
-        149.1,
-        149.1,
-        134.9,
-        134.9
+        349.0,
+        274.5,
+        267.8,
+        239.6,
+        225.9
       ],
       "horas_prev": [
-        177.5,
-        156.2,
-        142.0,
-        156.2
+        390.9,
+        295.6,
+        288.8,
+        274.9,
+        296.2
       ],
       "pct_capacidade": [
-        84.0,
-        95.5,
-        95.0,
-        86.4
+        89.3,
+        92.9,
+        92.7,
+        87.2,
+        76.3
       ]
     },
     "2026-10-14_1": {
@@ -2937,10 +2962,34 @@ window.dadosPD = {
       ]
     },
     "2026-10-14_2": {
-      "labels": [],
-      "horas_disp": [],
-      "horas_prev": [],
-      "pct_capacidade": []
+      "labels": [
+        "SEPARACAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "EXPEDICAO"
+      ],
+      "horas_disp": [
+        349.0,
+        139.6,
+        118.7,
+        104.7,
+        76.8
+      ],
+      "horas_prev": [
+        390.9,
+        153.6,
+        132.6,
+        118.7,
+        118.7
+      ],
+      "pct_capacidade": [
+        89.3,
+        90.9,
+        89.5,
+        88.2,
+        64.7
+      ]
     },
     "2026-10-14_3": {
       "labels": [],
@@ -2969,15 +3018,15 @@ window.dadosPD = {
       "MEET"
     ],
     "data": [
-      16.3,
-      11.9,
-      11.6,
-      10.2
+      16.6,
+      11.8,
+      11.7,
+      10.0
     ],
     "absolutos": [
-      98,
-      63,
-      298,
+      104,
+      64,
+      309,
       54
     ]
   },
@@ -3014,7 +3063,7 @@ window.dadosPD = {
           10.4,
           12.8,
           9.7,
-          10.1
+          12.3
         ],
         "backgroundColor": "rgba(0, 210, 255, 0.75)",
         "borderColor": "rgba(0, 210, 255, 1)",
@@ -3062,7 +3111,7 @@ window.dadosPD = {
           10.7,
           0,
           9.3,
-          0
+          13.7
         ],
         "backgroundColor": "#f6b93b",
         "borderColor": "#f6b93b",
@@ -3157,7 +3206,7 @@ window.dadosPD = {
           1816.8,
           752.1,
           2466.7,
-          568.0
+          1356.7
         ],
         "backgroundColor": "rgba(0, 176, 155, 0.75)",
         "borderColor": "#00b09b",
@@ -3174,8 +3223,8 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 144,
-      "taxa": 10.7
+      "faltas": 162,
+      "taxa": 10.9
     },
     {
       "turno": "1º Turno",
@@ -3186,28 +3235,28 @@ window.dadosPD = {
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 245,
-      "taxa": 16.1
-    },
-    {
-      "setor": "REABASTECIMENTO",
-      "faltas": 74,
-      "taxa": 12.1
+      "faltas": 251,
+      "taxa": 15.9
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 70,
-      "taxa": 9.6
+      "faltas": 76,
+      "taxa": 10.1
+    },
+    {
+      "setor": "REABASTECIMENTO",
+      "faltas": 76,
+      "taxa": 12.1
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 69,
-      "taxa": 10.8
+      "faltas": 71,
+      "taxa": 10.7
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 49,
-      "taxa": 8.1
+      "faltas": 51,
+      "taxa": 8.2
     },
     {
       "setor": "INVENTARIO",
@@ -3222,29 +3271,29 @@ window.dadosPD = {
       "taxa": 26.4
     },
     {
+      "lider": "LUIS PAULO REIS",
+      "faltas": 49,
+      "taxa": 8.7
+    },
+    {
       "lider": "JOYCE SILVA DE OLIVEIRA",
       "faltas": 44,
       "taxa": 13.7
     },
     {
-      "lider": "LUIS PAULO REIS",
-      "faltas": 43,
-      "taxa": 8.5
+      "lider": "RENAN ALVES REZENDE",
+      "faltas": 37,
+      "taxa": 19.0
+    },
+    {
+      "lider": "GEOVANI PAULO PAULINO JUNIOR",
+      "faltas": 32,
+      "taxa": 13.3
     },
     {
       "lider": "DIEGO CUNHA BOER",
       "faltas": 31,
       "taxa": 13.9
-    },
-    {
-      "lider": "RENAN ALVES REZENDE",
-      "faltas": 31,
-      "taxa": 17.4
-    },
-    {
-      "lider": "GEOVANI PAULO PAULINO JUNIOR",
-      "faltas": 30,
-      "taxa": 13.7
     },
     {
       "lider": "RICARDO EUGENIO LAURINDO",
@@ -3262,19 +3311,19 @@ window.dadosPD = {
       "taxa": 9.4
     },
     {
-      "lider": "PEDRO LEMOS DE SOUZA",
-      "faltas": 21,
-      "taxa": 13.3
-    },
-    {
       "lider": "EDMILSON BERTOLDO",
-      "faltas": 20,
+      "faltas": 22,
       "taxa": 10.5
     },
     {
       "lider": "FLAVIO MARTINS RUFINO",
-      "faltas": 19,
-      "taxa": 10.3
+      "faltas": 21,
+      "taxa": 10.4
+    },
+    {
+      "lider": "PEDRO LEMOS DE SOUZA",
+      "faltas": 21,
+      "taxa": 13.3
     },
     {
       "lider": "TARCISIO RICARDO MARTINS CLARO",
