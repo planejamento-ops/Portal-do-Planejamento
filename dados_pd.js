@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "14/10/2026 09:34",
+  "atualizado_em": "14/10/2026 11:13",
   "taxa_abs": 12.1,
   "deficit": 32,
   "fi_dias": 194,
@@ -347,6 +347,452 @@ window.dadosPD = {
       1
     ]
   },
+  "grafico_horas_setor_map": {
+    "2026-10-01": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        622.9,
+        444.0,
+        403.9,
+        377.7,
+        357.4,
+        89.0
+      ],
+      "horas_prev": [
+        726.6,
+        484.9,
+        442.5,
+        409.1,
+        408.7,
+        96.1
+      ],
+      "pct_capacidade": [
+        85.7,
+        91.6,
+        91.3,
+        92.3,
+        87.4,
+        92.6
+      ]
+    },
+    "2026-10-02": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        974.6,
+        437.2,
+        379.4,
+        376.5,
+        350.3,
+        89.0
+      ],
+      "horas_prev": [
+        1157.2,
+        484.9,
+        442.5,
+        402.1,
+        408.7,
+        96.1
+      ],
+      "pct_capacidade": [
+        84.2,
+        90.2,
+        85.7,
+        93.6,
+        85.7,
+        92.6
+      ]
+    },
+    "2026-10-03": {
+      "labels": [
+        "SEPARACAO",
+        "RECEBIMENTO",
+        "FECHAMENTO",
+        "EXPEDICAO",
+        "REABASTECIMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        703.8,
+        282.1,
+        281.5,
+        260.8,
+        239.5,
+        103.1
+      ],
+      "horas_prev": [
+        830.7,
+        303.0,
+        302.5,
+        310.0,
+        274.6,
+        110.2
+      ],
+      "pct_capacidade": [
+        84.7,
+        93.1,
+        93.1,
+        84.1,
+        87.2,
+        93.6
+      ]
+    },
+    "2026-10-04": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO"
+      ],
+      "horas_disp": [
+        198.2,
+        139.9,
+        104.9,
+        104.9,
+        87.4
+      ],
+      "horas_prev": [
+        326.5,
+        169.1,
+        139.9,
+        128.3,
+        99.1
+      ],
+      "pct_capacidade": [
+        60.7,
+        82.7,
+        75.0,
+        81.8,
+        88.2
+      ]
+    },
+    "2026-10-05": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        597.3,
+        398.3,
+        392.4,
+        364.2,
+        349.5,
+        96.1
+      ],
+      "horas_prev": [
+        725.5,
+        465.1,
+        425.0,
+        402.9,
+        395.0,
+        96.1
+      ],
+      "pct_capacidade": [
+        82.3,
+        85.6,
+        92.3,
+        90.4,
+        88.5,
+        100.0
+      ]
+    },
+    "2026-10-06": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO"
+      ],
+      "horas_disp": [
+        935.6,
+        403.1,
+        372.3,
+        361.8,
+        253.7
+      ],
+      "horas_prev": [
+        1132.3,
+        444.2,
+        412.2,
+        395.9,
+        288.8
+      ],
+      "pct_capacidade": [
+        82.6,
+        90.7,
+        90.3,
+        91.4,
+        87.8
+      ]
+    },
+    "2026-10-07": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO",
+        "FECHAMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        947.7,
+        416.0,
+        370.2,
+        366.9,
+        362.0,
+        103.1
+      ],
+      "horas_prev": [
+        1137.0,
+        451.0,
+        403.0,
+        400.9,
+        419.1,
+        103.1
+      ],
+      "pct_capacidade": [
+        83.4,
+        92.2,
+        91.9,
+        91.5,
+        86.4,
+        100.0
+      ]
+    },
+    "2026-10-08": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        495.3,
+        429.8,
+        384.0,
+        368.1,
+        364.3,
+        103.1
+      ],
+      "horas_prev": [
+        626.6,
+        451.0,
+        412.0,
+        400.9,
+        403.0,
+        103.1
+      ],
+      "pct_capacidade": [
+        79.0,
+        95.3,
+        93.2,
+        91.8,
+        90.4,
+        100.0
+      ]
+    },
+    "2026-10-09": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO",
+        "FECHAMENTO"
+      ],
+      "horas_disp": [
+        989.7,
+        431.1,
+        357.2,
+        350.7,
+        256.2
+      ],
+      "horas_prev": [
+        1125.4,
+        451.0,
+        403.0,
+        393.8,
+        277.1
+      ],
+      "pct_capacidade": [
+        87.9,
+        95.6,
+        88.6,
+        89.1,
+        92.5
+      ]
+    },
+    "2026-10-10": {
+      "labels": [
+        "SEPARACAO",
+        "RECEBIMENTO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        689.7,
+        281.8,
+        268.0,
+        267.4,
+        225.5,
+        84.4
+      ],
+      "horas_prev": [
+        760.1,
+        295.9,
+        296.2,
+        302.5,
+        281.8,
+        91.5
+      ],
+      "pct_capacidade": [
+        90.7,
+        95.2,
+        90.5,
+        88.4,
+        80.0,
+        92.2
+      ]
+    },
+    "2026-10-12": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO"
+      ],
+      "horas_disp": [
+        274.0,
+        169.1,
+        104.9,
+        104.9,
+        99.1
+      ],
+      "horas_prev": [
+        344.0,
+        169.1,
+        116.6,
+        128.3,
+        104.9
+      ],
+      "pct_capacidade": [
+        79.7,
+        100.0,
+        90.0,
+        81.8,
+        94.5
+      ]
+    },
+    "2026-10-13": {
+      "labels": [
+        "SEPARACAO",
+        "RECEBIMENTO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "INVENTARIO"
+      ],
+      "horas_disp": [
+        1023.3,
+        389.2,
+        383.0,
+        352.7,
+        229.4,
+        89.0
+      ],
+      "horas_prev": [
+        1104.1,
+        400.9,
+        451.0,
+        412.0,
+        253.9,
+        103.1
+      ],
+      "pct_capacidade": [
+        92.7,
+        97.1,
+        84.9,
+        85.6,
+        90.4,
+        86.3
+      ]
+    },
+    "2026-10-14": {
+      "labels": [
+        "EXPEDICAO",
+        "RECEBIMENTO",
+        "FECHAMENTO",
+        "REABASTECIMENTO"
+      ],
+      "horas_disp": [
+        149.1,
+        149.1,
+        134.9,
+        134.9
+      ],
+      "horas_prev": [
+        177.5,
+        156.2,
+        142.0,
+        156.2
+      ],
+      "pct_capacidade": [
+        84.0,
+        95.5,
+        95.0,
+        86.4
+      ]
+    }
+  },
+  "grafico_horas_setor": {
+    "labels": [
+      "EXPEDICAO",
+      "RECEBIMENTO",
+      "FECHAMENTO",
+      "REABASTECIMENTO"
+    ],
+    "horas_disp": [
+      149.1,
+      149.1,
+      134.9,
+      134.9
+    ],
+    "horas_prev": [
+      177.5,
+      156.2,
+      142.0,
+      156.2
+    ],
+    "pct_capacidade": [
+      84.0,
+      95.5,
+      95.0,
+      86.4
+    ]
+  },
   "grafico_empresa": {
     "labels": [
       "AMERICA",
@@ -386,7 +832,7 @@ window.dadosPD = {
     "datasets": [
       {
         "type": "bar",
-        "label": "Faltas Totais",
+        "label": "Faltas Totais (%)",
         "data": [
           11.0,
           13.3,
@@ -507,6 +953,48 @@ window.dadosPD = {
         "pointRadius": 0,
         "fill": false,
         "hidden": false
+      }
+    ]
+  },
+  "grafico_diario_horas": {
+    "labels": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "12",
+      "13",
+      "14"
+    ],
+    "datasets": [
+      {
+        "type": "bar",
+        "label": "Horas Disponíveis (Planta)",
+        "data": [
+          2294.9,
+          2607.1,
+          1870.7,
+          635.5,
+          2197.8,
+          2326.5,
+          2565.8,
+          2144.7,
+          2384.9,
+          1816.8,
+          752.1,
+          2466.7,
+          568.0
+        ],
+        "backgroundColor": "rgba(0, 176, 155, 0.75)",
+        "borderColor": "#00b09b",
+        "borderWidth": 1,
+        "borderRadius": 4
       }
     ]
   },
