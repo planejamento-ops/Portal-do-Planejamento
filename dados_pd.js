@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "13/10/2026 16:38",
+  "atualizado_em": "14/10/2026 09:34",
   "taxa_abs": 12.1,
-  "deficit": 30,
-  "fi_dias": 177,
-  "fj_dias": 231,
-  "data_padrao_setor": "2026-10-13",
+  "deficit": 32,
+  "fi_dias": 194,
+  "fj_dias": 244,
+  "data_padrao_setor": "2026-10-14",
   "grafico_setor_map": {
     "2026-10-01": {
       "labels": [
@@ -284,47 +284,67 @@ window.dadosPD = {
       "labels": [
         "EXPEDICAO",
         "FECHAMENTO",
+        "INVENTARIO",
         "REABASTECIMENTO",
         "SEPARACAO",
         "RECEBIMENTO"
       ],
       "data": [
-        17.4,
-        14.3,
-        5.6,
-        3.7,
-        0.0
+        14.5,
+        14.5,
+        13.3,
+        10.0,
+        7.8,
+        3.3
+      ],
+      "absolutos": [
+        10,
+        9,
+        2,
+        4,
+        13,
+        2
+      ]
+    },
+    "2026-10-14": {
+      "labels": [
+        "EXPEDICAO",
+        "REABASTECIMENTO",
+        "FECHAMENTO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        16.0,
+        13.6,
+        5.0,
+        4.5
       ],
       "absolutos": [
         4,
-        6,
+        3,
         1,
-        4,
-        0
+        1
       ]
     }
   },
   "grafico_setor": {
     "labels": [
       "EXPEDICAO",
-      "FECHAMENTO",
       "REABASTECIMENTO",
-      "SEPARACAO",
+      "FECHAMENTO",
       "RECEBIMENTO"
     ],
     "data": [
-      17.4,
-      14.3,
-      5.6,
-      3.7,
-      0.0
+      16.0,
+      13.6,
+      5.0,
+      4.5
     ],
     "absolutos": [
       4,
-      6,
+      3,
       1,
-      4,
-      0
+      1
     ]
   },
   "grafico_empresa": {
@@ -335,16 +355,16 @@ window.dadosPD = {
       "MEET"
     ],
     "data": [
-      16.2,
+      16.3,
       11.9,
       11.6,
-      10.0
+      10.2
     ],
     "absolutos": [
-      92,
-      59,
-      279,
-      49
+      98,
+      63,
+      298,
+      54
     ]
   },
   "grafico_diario": {
@@ -360,7 +380,8 @@ window.dadosPD = {
       "09",
       "10",
       "12",
-      "13"
+      "13",
+      "14"
     ],
     "datasets": [
       {
@@ -378,7 +399,8 @@ window.dadosPD = {
           10.2,
           10.4,
           12.8,
-          6.5
+          9.7,
+          10.1
         ],
         "backgroundColor": "rgba(0, 210, 255, 0.75)",
         "borderColor": "rgba(0, 210, 255, 1)",
@@ -401,7 +423,8 @@ window.dadosPD = {
           7.4,
           10.1,
           0,
-          6.0
+          6.5,
+          10.1
         ],
         "backgroundColor": "#3b82f6",
         "borderColor": "#3b82f6",
@@ -424,7 +447,8 @@ window.dadosPD = {
           9.8,
           10.7,
           0,
-          6.9
+          9.3,
+          0
         ],
         "backgroundColor": "#f6b93b",
         "borderColor": "#f6b93b",
@@ -447,6 +471,7 @@ window.dadosPD = {
           12.8,
           0,
           12.8,
+          12.7,
           0
         ],
         "backgroundColor": "#e64343",
@@ -459,6 +484,7 @@ window.dadosPD = {
         "type": "line",
         "label": "Meta (4%)",
         "data": [
+          4.0,
           4.0,
           4.0,
           4.0,
@@ -487,57 +513,57 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 226,
-      "taxa": 17.0
+      "faltas": 245,
+      "taxa": 16.6
     },
     {
       "turno": "2º Turno",
-      "faltas": 139,
-      "taxa": 10.5
+      "faltas": 144,
+      "taxa": 10.7
     },
     {
       "turno": "1º Turno",
-      "faltas": 114,
-      "taxa": 8.8
+      "faltas": 124,
+      "taxa": 8.9
     }
   ],
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 236,
-      "taxa": 16.2
+      "faltas": 245,
+      "taxa": 16.1
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 68,
-      "taxa": 12.0
-    },
-    {
-      "setor": "FECHAMENTO",
-      "faltas": 65,
-      "taxa": 10.8
+      "faltas": 74,
+      "taxa": 12.1
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 60,
-      "taxa": 9.1
+      "faltas": 70,
+      "taxa": 9.6
+    },
+    {
+      "setor": "FECHAMENTO",
+      "faltas": 69,
+      "taxa": 10.8
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 46,
-      "taxa": 8.2
+      "faltas": 49,
+      "taxa": 8.1
     },
     {
       "setor": "INVENTARIO",
-      "faltas": 4,
-      "taxa": 4.0
+      "faltas": 6,
+      "taxa": 5.2
     }
   ],
   "todos_lideres": [
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
-      "faltas": 141,
-      "taxa": 27.6
+      "faltas": 150,
+      "taxa": 26.4
     },
     {
       "lider": "JOYCE SILVA DE OLIVEIRA",
@@ -550,24 +576,29 @@ window.dadosPD = {
       "taxa": 8.5
     },
     {
+      "lider": "DIEGO CUNHA BOER",
+      "faltas": 31,
+      "taxa": 13.9
+    },
+    {
+      "lider": "RENAN ALVES REZENDE",
+      "faltas": 31,
+      "taxa": 17.4
+    },
+    {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
       "faltas": 30,
       "taxa": 13.7
     },
     {
-      "lider": "DIEGO CUNHA BOER",
-      "faltas": 28,
-      "taxa": 13.9
-    },
-    {
-      "lider": "RENAN ALVES REZENDE",
-      "faltas": 27,
-      "taxa": 16.8
-    },
-    {
       "lider": "RICARDO EUGENIO LAURINDO",
-      "faltas": 26,
-      "taxa": 13.5
+      "faltas": 29,
+      "taxa": 13.6
+    },
+    {
+      "lider": "KAROLINE NASCIMENTO DE CARVALHO",
+      "faltas": 25,
+      "taxa": 9.7
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
@@ -575,9 +606,9 @@ window.dadosPD = {
       "taxa": 9.4
     },
     {
-      "lider": "KAROLINE NASCIMENTO DE CARVALHO",
+      "lider": "PEDRO LEMOS DE SOUZA",
       "faltas": 21,
-      "taxa": 8.9
+      "taxa": 13.3
     },
     {
       "lider": "EDMILSON BERTOLDO",
@@ -590,34 +621,29 @@ window.dadosPD = {
       "taxa": 10.3
     },
     {
-      "lider": "PEDRO LEMOS DE SOUZA",
-      "faltas": 19,
-      "taxa": 13.6
-    },
-    {
       "lider": "TARCISIO RICARDO MARTINS CLARO",
-      "faltas": 12,
-      "taxa": 4.7
+      "faltas": 14,
+      "taxa": 4.9
     },
     {
       "lider": "GABRIELLY DA SILVA ALEXANDRIA",
-      "faltas": 9,
+      "faltas": 10,
       "taxa": 5.1
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
-      "faltas": 7,
-      "taxa": 3.1
+      "faltas": 8,
+      "taxa": 3.3
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
-      "faltas": 4,
-      "taxa": 16.0
+      "faltas": 7,
+      "taxa": 14.0
     },
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
-      "faltas": 4,
-      "taxa": 3.7
+      "faltas": 6,
+      "taxa": 4.8
     }
   ]
 };
