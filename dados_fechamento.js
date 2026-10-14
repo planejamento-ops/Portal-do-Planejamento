@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "14/10/2026 07:40",
+  "atualizado_em": "14/10/2026 07:54",
   "progresso_geral_pct": 96,
-  "total_cxs_geral": 99269,
-  "total_loaded_cxs_geral": 95779,
-  "total_pending_cxs_geral": 3490,
+  "total_cxs_geral": 99280,
+  "total_loaded_cxs_geral": 95861,
+  "total_pending_cxs_geral": 3419,
   "cards_atendimentos": {
     "VAREJO": {
       "total_tus": 40,
@@ -22,16 +22,16 @@ window.dadosFechamento = {
     },
     "SPC": {
       "total_tus": 24,
-      "total_cxs": 42157,
-      "loaded_cxs": 37915,
-      "rampa_cxs": 752,
-      "pending_cxs": 3490,
-      "finalizadas_gv_cx": 24057,
-      "finalizadas_fr_cx": 13858,
-      "rampa_gv_cx": 470,
-      "rampa_fr_cx": 282,
-      "pendentes_gv_cx": 1158,
-      "pendentes_fr_cx": 2332,
+      "total_cxs": 42168,
+      "loaded_cxs": 38107,
+      "rampa_cxs": 642,
+      "pending_cxs": 3419,
+      "finalizadas_gv_cx": 24180,
+      "finalizadas_fr_cx": 13927,
+      "rampa_gv_cx": 415,
+      "rampa_fr_cx": 227,
+      "pendentes_gv_cx": 1100,
+      "pendentes_fr_cx": 2319,
       "pct": 91,
       "status_atend": "EM ANDAMENTO"
     }
@@ -41,10 +41,10 @@ window.dadosFechamento = {
       "atendimento": "SPC",
       "carreta": "Carreta 18",
       "tu": "610000013119",
-      "total_caixas": 1554,
+      "total_caixas": 1565,
       "caixas_carregadas": 1517,
-      "caixas_rampa": 37,
-      "caixas_processadas": 1554,
+      "caixas_rampa": 48,
+      "caixas_processadas": 1565,
       "pct": 100,
       "status": "EM ANDAMENTO"
     },
@@ -241,9 +241,9 @@ window.dadosFechamento = {
       "tu": "610000013130",
       "total_caixas": 1859,
       "caixas_carregadas": 1687,
-      "caixas_rampa": 36,
-      "caixas_processadas": 1723,
-      "pct": 92,
+      "caixas_rampa": 45,
+      "caixas_processadas": 1732,
+      "pct": 93,
       "status": "EM ANDAMENTO"
     },
     {
@@ -251,10 +251,10 @@ window.dadosFechamento = {
       "carreta": "Carreta 20",
       "tu": "610000013153",
       "total_caixas": 1873,
-      "caixas_carregadas": 1324,
-      "caixas_rampa": 80,
-      "caixas_processadas": 1404,
-      "pct": 74,
+      "caixas_carregadas": 1374,
+      "caixas_rampa": 34,
+      "caixas_processadas": 1408,
+      "pct": 75,
       "status": "EM ANDAMENTO"
     },
     {
@@ -263,9 +263,9 @@ window.dadosFechamento = {
       "tu": "610000013154",
       "total_caixas": 1856,
       "caixas_carregadas": 1128,
-      "caixas_rampa": 54,
-      "caixas_processadas": 1182,
-      "pct": 63,
+      "caixas_rampa": 65,
+      "caixas_processadas": 1193,
+      "pct": 64,
       "status": "EM ANDAMENTO"
     },
     {
@@ -273,10 +273,10 @@ window.dadosFechamento = {
       "carreta": "Carreta 22",
       "tu": "610000013129",
       "total_caixas": 1799,
-      "caixas_carregadas": 697,
-      "caixas_rampa": 285,
-      "caixas_processadas": 982,
-      "pct": 54,
+      "caixas_carregadas": 796,
+      "caixas_rampa": 204,
+      "caixas_processadas": 1000,
+      "pct": 55,
       "status": "EM ANDAMENTO"
     },
     {
@@ -284,10 +284,10 @@ window.dadosFechamento = {
       "carreta": "Carreta 23",
       "tu": "610000013128",
       "total_caixas": 1848,
-      "caixas_carregadas": 194,
-      "caixas_rampa": 260,
-      "caixas_processadas": 454,
-      "pct": 24,
+      "caixas_carregadas": 237,
+      "caixas_rampa": 246,
+      "caixas_processadas": 483,
+      "pct": 26,
       "status": "EM ANDAMENTO"
     }
   ]
