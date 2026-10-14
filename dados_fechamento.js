@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "14/10/2026 06:00",
+  "atualizado_em": "14/10/2026 06:12",
   "progresso_geral_pct": 95,
   "total_cxs_geral": 99221,
-  "total_loaded_cxs_geral": 94795,
-  "total_pending_cxs_geral": 4426,
+  "total_loaded_cxs_geral": 94815,
+  "total_pending_cxs_geral": 4406,
   "cards_atendimentos": {
     "VAREJO": {
       "total_tus": 40,
@@ -24,14 +24,14 @@ window.dadosFechamento = {
       "total_tus": 24,
       "total_cxs": 42109,
       "loaded_cxs": 36490,
-      "rampa_cxs": 1193,
-      "pending_cxs": 4426,
+      "rampa_cxs": 1213,
+      "pending_cxs": 4406,
       "finalizadas_gv_cx": 23302,
       "finalizadas_fr_cx": 13188,
       "rampa_gv_cx": 692,
-      "rampa_fr_cx": 501,
+      "rampa_fr_cx": 521,
       "pendentes_gv_cx": 1691,
-      "pendentes_fr_cx": 2735,
+      "pendentes_fr_cx": 2715,
       "pct": 89,
       "status_atend": "EM ANDAMENTO"
     }
@@ -263,8 +263,8 @@ window.dadosFechamento = {
       "tu": "610000013130",
       "total_caixas": 1859,
       "caixas_carregadas": 1479,
-      "caixas_rampa": 103,
-      "caixas_processadas": 1582,
+      "caixas_rampa": 109,
+      "caixas_processadas": 1588,
       "pct": 85,
       "status": "EM ANDAMENTO"
     },
@@ -274,9 +274,9 @@ window.dadosFechamento = {
       "tu": "610000013153",
       "total_caixas": 1873,
       "caixas_carregadas": 1122,
-      "caixas_rampa": 127,
-      "caixas_processadas": 1249,
-      "pct": 66,
+      "caixas_rampa": 139,
+      "caixas_processadas": 1261,
+      "pct": 67,
       "status": "EM ANDAMENTO"
     },
     {
@@ -285,8 +285,8 @@ window.dadosFechamento = {
       "tu": "610000013154",
       "total_caixas": 1856,
       "caixas_carregadas": 1128,
-      "caixas_rampa": 24,
-      "caixas_processadas": 1152,
+      "caixas_rampa": 25,
+      "caixas_processadas": 1153,
       "pct": 62,
       "status": "EM ANDAMENTO"
     },
@@ -296,8 +296,8 @@ window.dadosFechamento = {
       "tu": "610000013129",
       "total_caixas": 1799,
       "caixas_carregadas": 0,
-      "caixas_rampa": 824,
-      "caixas_processadas": 824,
+      "caixas_rampa": 825,
+      "caixas_processadas": 825,
       "pct": 45,
       "status": "EM RAMPA"
     },
