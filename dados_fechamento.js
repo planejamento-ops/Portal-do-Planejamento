@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "14/10/2026 09:33",
-  "progresso_geral_pct": 97,
-  "total_cxs_geral": 99322,
+  "atualizado_em": "14/10/2026 12:23",
+  "progresso_geral_pct": 95,
+  "total_cxs_geral": 101303,
   "total_loaded_cxs_geral": 96773,
-  "total_pending_cxs_geral": 2549,
+  "total_pending_cxs_geral": 4530,
   "cards_atendimentos": {
     "VAREJO": {
       "total_tus": 40,
@@ -33,6 +33,21 @@ window.dadosFechamento = {
       "pendentes_gv_cx": 546,
       "pendentes_fr_cx": 2003,
       "pct": 93,
+      "status_atend": "EM ANDAMENTO"
+    },
+    "MGI": {
+      "total_tus": 15,
+      "total_cxs": 18268,
+      "loaded_cxs": 16287,
+      "rampa_cxs": 0,
+      "pending_cxs": 1981,
+      "finalizadas_gv_cx": 6504,
+      "finalizadas_fr_cx": 9783,
+      "rampa_gv_cx": 0,
+      "rampa_fr_cx": 0,
+      "pendentes_gv_cx": 1313,
+      "pendentes_fr_cx": 668,
+      "pct": 89,
       "status_atend": "EM ANDAMENTO"
     }
   },
@@ -133,17 +148,6 @@ window.dadosFechamento = {
       "caixas_carregadas": 2056,
       "caixas_rampa": 0,
       "caixas_processadas": 2056,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 01",
-      "tu": "610000013175",
-      "total_caixas": 444,
-      "caixas_carregadas": 444,
-      "caixas_rampa": 0,
-      "caixas_processadas": 444,
       "pct": 100,
       "status": "FINALIZADA"
     },
@@ -256,6 +260,17 @@ window.dadosFechamento = {
       "caixas_processadas": 908,
       "pct": 49,
       "status": "EM ANDAMENTO"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 01",
+      "tu": "610000013204",
+      "total_caixas": 1981,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
     }
   ]
 };
