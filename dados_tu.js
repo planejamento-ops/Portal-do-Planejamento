@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "13/10/2026 23:52",
-  "total_tus": 47,
+  "atualizado_em": "14/10/2026 00:05",
+  "total_tus": 41,
   "caixas_total_mes": 149467,
   "pecas_total_mes": 5190460,
   "totais_por_mes": {
@@ -875,7 +875,8 @@ window.dadosDashboard = {
     "SPC"
   ],
   "alertas_atraso": [
-    "Atraso em MGC"
+    "Atraso em MGC",
+    "Atraso em SPI"
   ],
   "proxima_carteira": {
     "carreta": "Carreta 20",
