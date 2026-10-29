@@ -94,11 +94,9 @@
         .close-btn:hover { color: var(--ceva-red); }
         .modal h2 { margin-top: 0; color: var(--ceva-blue); border-bottom: 2px solid #cbd5e1; padding-bottom: 12px; font-size: 20px; margin-bottom: 10px;}
 
-        /* Estilos Específicos para Demanda */
+        /* Estilos Específicos */
         textarea.custom-tu-order { width: 100%; height: 120px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-family: monospace; font-size: 13px; resize: vertical; box-sizing: border-box; margin-top: 10px;}
         .totais-row { font-weight: bold; background-color: #e2e8f0 !important; color: var(--ceva-blue); }
-        
-        /* Animação para a mensagem de sucesso do Upload */
         .upload-success { color: #16a34a; font-size: 12px; font-weight: bold; display: none; margin-top: 5px; animation: fadeInOut 4s forwards; }
         @keyframes fadeInOut { 0% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
     </style>
@@ -112,14 +110,14 @@
     <div class="tabs">
         <button class="tab-btn active" onclick="openTab('tab-tu', this)">🚚 1. DIVISÃO DE PACOTES EM MASSA</button>
         <button class="tab-btn" onclick="openTab('tab-oen', this)">📦 2. DIVISÃO INDIVIDUAL</button>
-        <button class="tab-btn" onclick="openTab('tab-demanda', this)">📊 3. ATUALIZAR PEÇAS E CAIXAS</button>
+        <button class="tab-btn" onclick="openTab('tab-demanda', this)">📊 3. ATUALIZAR DEMANDA</button>
     </div>
 
     <!-- ABA 1: DIVISÃO DE PACOTES EM MASSA -->
     <div id="tab-tu" class="tab-content active">
         <div class="step">
             <p style="font-size: 13px; color: #666; margin-top: 0; margin-bottom: 15px;">
-                Carregue os arquivos abaixo. O motor usará a <b>UCEP</b> como base principal. O <b>ITEM OEN</b> será usado para o empacotamento aqui nesta aba, e o <b>ITEM UCEP</b> servirá para gerar o quadro na Aba 3 (Atualizar Peças e Caixas).
+                Carregue os arquivos abaixo. O motor usará a <b>UCEP</b> e o <b>ITEM OEN</b> obrigatoriamente para o empacotamento aqui nesta aba. O <b>ITEM UCEP</b> é opcional aqui, servindo apenas para alimentar o quadro na Aba 3 (Atualizar Demanda).
             </p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px;">
@@ -129,30 +127,40 @@
                     <span style="font-size:11px; color:#64748b; display: block;">*Obrigatório (Base Principal)</span>
                     <span id="tuInputMsg" class="upload-success">✅ Arquivo carregado e atualizado!</span>
                 </div>
-                <div style="background: #fdfdfd; padding: 15px; border-radius: 6px; border: 1px solid #e2e8f0;">
+                <div style="background: #eef2f6; padding: 15px; border-radius: 6px; border: 1px dashed #94a3b8;">
                     <label>2. Carregar ITEM OEN</label>
                     <input type="file" id="pacotesInput" accept=".xlsx, .xls, .csv">
-                    <span style="font-size:11px; color:#64748b; display: block;">(Gera Divisão de Pacotes em Massa)</span>
+                    <span style="font-size:11px; color:#64748b; display: block;">*Obrigatório p/ Divisão de Pacotes</span>
                     <span id="pacotesInputMsg" class="upload-success">✅ Arquivo carregado e atualizado!</span>
                 </div>
                 <div style="background: #fdfdfd; padding: 15px; border-radius: 6px; border: 1px solid #e2e8f0;">
                     <label>3. Carregar ITEM UCEP</label>
                     <input type="file" id="demandaItemInput" accept=".xlsx, .xls, .csv">
-                    <span style="font-size:11px; color:#64748b; display: block;">(Alimenta a Aba 3 - Peças e Caixas)</span>
+                    <span style="font-size:11px; color:#64748b; display: block;">(Opcional - Alimenta a Aba 3)</span>
                     <span id="demandaItemInputMsg" class="upload-success">✅ Arquivo carregado e atualizado!</span>
                 </div>
             </div>
 
-            <label style="color: var(--ceva-blue); margin-top: 15px;">Diretriz de Corte Operacional (Para Divisão de Pacotes em Massa)</label>
-            <div class="radio-group" style="margin-bottom: 20px;">
-                <label style="margin-right: 30px;">
-                    <input type="radio" name="perfilOperacao" id="radioCarteira" value="carteira" checked> 
-                    <b style="margin-left: 5px;">[1] CARTEIRA</b> (<input type="number" id="customLimitCarteira" class="custom-input" value="50" min="1"> lin)
-                </label>
-                <label>
-                    <input type="radio" name="perfilOperacao" id="radioVarejo" value="varejo"> 
-                    <b style="margin-left: 5px;">[2] VAREJO</b> (<input type="number" id="customLimitVarejo" class="custom-input" value="69" min="1"> lin)
-                </label>
+            <!-- OPÇÕES DE CORTE E ORDEM -->
+            <div style="border-top: 1px solid #e1e8ed; margin: 25px 0; padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <label style="color: var(--ceva-blue); margin-top: 0px;">Diretriz de Corte Operacional</label>
+                    <div class="radio-group" style="margin-bottom: 20px; margin-top: 10px;">
+                        <label style="margin-right: 30px;">
+                            <input type="radio" name="perfilOperacao" id="radioCarteira" value="carteira" checked> 
+                            <b style="margin-left: 5px;">[1] CARTEIRA</b> (<input type="number" id="customLimitCarteira" class="custom-input" value="50" min="1"> lin)
+                        </label>
+                        <label>
+                            <input type="radio" name="perfilOperacao" id="radioVarejo" value="varejo"> 
+                            <b style="margin-left: 5px;">[2] VAREJO</b> (<input type="number" id="customLimitVarejo" class="custom-input" value="69" min="1"> lin)
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label style="color: var(--ceva-blue); font-size: 14px;">Ordem Customizada das TUs (Opcional)</label>
+                    <p style="font-size: 11px; color: #666; margin-top: 2px;">Para ordenar a Tabela de Resumo, cole as TUs em coluna.</p>
+                    <textarea id="customTuOrderMassa" class="custom-tu-order" style="height: 60px; margin-top:0;" placeholder="Ex:&#10;610000012598&#10;610000012606"></textarea>
+                </div>
             </div>
 
             <button id="btnProcessTu" class="primary-btn" onclick="processarArquivosTU()">EXECUTAR DIVISÃO DE PACOTES EM MASSA</button>
@@ -161,7 +169,11 @@
         <div id="report-area-tu">
             <!-- ÁREA DIVISÃO OEN EM MASSA -->
             <div id="divisao-container" style="display:none;">
-                <h2 style="color: var(--ceva-blue); font-size: 20px; margin-bottom: 15px;">📋 Tabela de Resumo Rápido (Divisão de Pacotes em Massa)</h2>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h2 style="color: var(--ceva-blue); font-size: 20px; margin: 0;">📋 Tabela de Resumo Rápido (Divisão de Pacotes em Massa)</h2>
+                    <button class="btn-copy" onclick="copiarColunaAcao()"><span style="font-size:14px;">📋</span> COPIAR AÇÕES</button>
+                </div>
+                
                 <div id="tu-summary-container"></div>
 
                 <h2 style="color: var(--ceva-blue); font-size: 20px; margin-bottom: 20px; border-top: 1px solid #ddd; padding-top: 30px;">📦 Análise Detalhada por Unidade de Transporte (TU)</h2>
@@ -204,18 +216,18 @@
         </div>
     </div>
 
-    <!-- ABA 3: ATUALIZAR PEÇAS E CAIXAS -->
+    <!-- ABA 3: ATUALIZAR DEMANDA -->
     <div id="tab-demanda" class="tab-content">
         <div class="step">
             <p style="font-size: 13px; color: #666; margin-top: 0; margin-bottom: 15px;">
-                Esta ferramenta cruza as bases <b>UCEP</b> e <b>ITEM UCEP</b> (carregadas na Aba 1) para gerar um quadro consolidado de caixas e peças agrupadas por TU, separando por GV (Caixa Fechada) e LN (Linha/Fracionada). Considera apenas UCs com prefixo <b>$_</b>.
+                Esta ferramenta cruza as bases <b>UCEP</b> e <b>ITEM UCEP</b> (carregadas na Aba 1) para gerar um quadro consolidado da DEMANDA de caixas e peças agrupadas por TU, separando por GV (Caixa Fechada) e LN (Linha/Fracionada). Considera apenas UCs com prefixo <b>$_</b>.
             </p>
             
             <label style="color: var(--ceva-blue); font-size: 16px;">Ordem Customizada das TUs (Opcional)</label>
             <p style="font-size: 13px; color: #666; margin-top: 5px;">Cole as TUs <b>uma abaixo da outra (em coluna)</b> na ordem que deseja que apareçam no relatório.</p>
             <textarea id="customTuOrder" class="custom-tu-order" placeholder="Ex:&#10;610000012598&#10;610000012606&#10;610000012607"></textarea>
 
-            <button id="btnProcessDemanda" class="primary-btn" style="margin-top: 15px;" onclick="processarDemanda()">ATUALIZAR PEÇAS E CAIXAS</button>
+            <button id="btnProcessDemanda" class="primary-btn" style="margin-top: 15px;" onclick="processarDemanda()">ATUALIZAR DEMANDA</button>
         </div>
 
         <div id="report-area-demanda">
@@ -272,6 +284,23 @@
         textarea.select();
         navigator.clipboard.writeText(textarea.value);
         alert('Copiado para a área de transferência!');
+    }
+
+    // Função para Copiar a Coluna "Ações" na Aba 1
+    function copiarColunaAcao() {
+        const elementos = document.querySelectorAll('#tu-summary-container .acao-text');
+        if (elementos.length === 0) {
+            alert('Não há dados para copiar. Por favor, execute a análise primeiro.');
+            return;
+        }
+        // Extrai o texto limpo de cada célula da coluna de Ação
+        const acoes = Array.from(elementos).map(el => el.innerText.trim()).join('\n');
+        
+        navigator.clipboard.writeText(acoes).then(() => {
+            alert('Coluna de Ações copiada com sucesso! Agora é só colar no seu Excel.');
+        }).catch(err => {
+            alert('Erro ao copiar. Tente selecionar o texto manualmente.');
+        });
     }
 
     // ==========================================
@@ -407,13 +436,19 @@
     // ==========================================
     function processarArquivosTU() {
         if (window.appDataTU.tuData.length === 0 || window.appDataTU.pacotesData.length === 0) {
-            alert('⚠️ Por favor, carregue a Base UCEP e o ITEM OEN para realizar a Divisão de Pacotes em Massa.'); return;
+            alert('⚠️ Por favor, carregue a Base UCEP e o ITEM OEN obrigatoriamente para realizar a Divisão de Pacotes em Massa.'); return;
         }
 
         const btn = document.getElementById('btnProcessTu'); btn.disabled = true; btn.innerText = "Processando...";
 
         setTimeout(() => {
             try {
+                // Lê a Ordem Customizada de TUs colada na Aba 1
+                const tuOrderText = document.getElementById('customTuOrderMassa').value;
+                const customOrderList = tuOrderText.split(/[\r\n,]+/).map(s => s.trim()).filter(s => s);
+                const orderMap = new Map();
+                customOrderList.forEach((tu, idx) => orderMap.set(tu, idx));
+
                 const radioSelecionado = document.querySelector('input[name="perfilOperacao"]:checked').value;
                 if (radioSelecionado === 'carteira') {
                     const customVal = parseInt(document.getElementById('customLimitCarteira').value);
@@ -444,7 +479,7 @@
                     if (!doc) return; 
 
                     let tu = tuMap[doc] || 'SEM_TU_VINCULADA';
-                    window.appDataTU.mergedData.push({ 'Documento': doc, 'Nº do item': item, 'Produto': prod, 'Descrição produto': desc, 'Quantidade': qtd, 'Unidade de transporte': tu !== 'SEM_TU_VINCULADA' ? tu : '' });
+                    window.appDataTU.mergedData.push({ 'Documento': doc, 'Nº do item': item, 'Produto': prod, 'Descrição produto': desc, 'Quantidade': qtd, 'Unidade de transporte': tu });
 
                     linhasPorTu[tu] = (linhasPorTu[tu] || 0) + 1;
 
@@ -480,12 +515,21 @@
                     }
                 }
 
+                // Aplica a ordenação na listagem de TUs
+                const allTus = Object.keys(linhasPorTu);
+                allTus.sort((a, b) => {
+                    let idxA = orderMap.has(a) ? orderMap.get(a) : 999999;
+                    let idxB = orderMap.has(b) ? orderMap.get(b) : 999999;
+                    if (idxA !== idxB) return idxA - idxB;
+                    return a.localeCompare(b);
+                });
+
                 const tuContainer = document.getElementById('tu-list-container'); tuContainer.innerHTML = ''; 
                 const summaryContainer = document.getElementById('tu-summary-container');
                 let summaryHtml = `<div class="table-container"><table class="summary-table">
-                    <thead><tr><th>Unidade de Transporte (TU)</th><th>Maior Ocorrência<br><span style="font-size: 11px; font-weight: normal; color: #cbd5e1; text-transform: none;">(Qualquer Material)</span></th><th>Ação Recomendada (Grupos)</th><th>Status</th></tr></thead><tbody>`;
+                    <thead><tr><th>UNIDADE DE TRANSPORTE (TU)</th><th>MAIOR OCORRÊNCIA<br><span style="font-size: 11px; font-weight: normal; color: #cbd5e1; text-transform: none;">(Qualquer Material)</span></th><th>AÇÃO RECOMENDADA (GRUPOS)</th><th>STATUS</th></tr></thead><tbody>`;
 
-                Object.keys(linhasPorTu).forEach(tu => {
+                allTus.forEach(tu => {
                     const totalLinhas = linhasPorTu[tu];
                     const totalRemessas = window.appDataTU.docsPorTu[tu] ? window.appDataTU.docsPorTu[tu].size : 0;
                     const sortedProdsTu = Object.entries(prodCountsPorTu[tu] || {}).sort((a, b) => b[1] - a[1]);
@@ -500,18 +544,19 @@
                         textoAcao = '<span style="color:#16a34a; font-weight:bold;">Nenhuma</span>'; statusVisual = '<span style="color:#16a34a; font-weight:bold;">✅ OK</span>';
                     } else {
                         rowClass = 'row-excedido'; statusVisual = '<span style="color:#e3000f; font-weight:bold;">⚠️ EXCEDIDO</span>';
-                        if (numGrupos === 2) textoAcao = 'Duplicar (2)'; else if (numGrupos === 3) textoAcao = 'Triplicar (3)'; else if (numGrupos === 4) textoAcao = 'Quadruplicar (4)'; else if (numGrupos === 5) textoAcao = 'Quintuplicar (5)'; else textoAcao = `Dividir em ${numGrupos}`;
+                        if (numGrupos === 2) textoAcao = 'Duplicar'; else if (numGrupos === 3) textoAcao = 'Triplicar'; else if (numGrupos === 4) textoAcao = 'Quadruplicar'; else if (numGrupos === 5) textoAcao = 'Quintuplicar'; else textoAcao = `Dividir em ${numGrupos}`;
                         textoAcao = `<strong>${textoAcao}</strong>`;
                     }
 
+                    // A classe 'acao-text' serve para podermos copiar apenas o texto puro da ação depois
                     summaryHtml += `<tr class="${rowClass}">
-                        <td style="font-weight: bold; color: var(--ceva-blue);">${tu === 'SEM_TU_VINCULADA' ? 'Sem TU' : tu}</td>
-                        <td><strong>${maxOcorrenciaValor}</strong> linhas</td> <td>${textoAcao}</td> <td>${statusVisual}</td>
+                        <td style="font-weight: bold; color: var(--ceva-blue);">${tu}</td>
+                        <td><strong>${maxOcorrenciaValor}</strong> linhas</td> <td class="acao-text">${textoAcao}</td> <td>${statusVisual}</td>
                     </tr>`;
 
                     const row = document.createElement('div');
                     row.className = `tu-row ${qtdProblemas > 0 ? 'has-alert' : ''}`;
-                    row.innerHTML = `<div class="tu-stats"><span class="tu-name">📦 ${tu === 'SEM_TU_VINCULADA' ? 'Sem TU Informada' : tu}</span><span><strong>Total de Linhas:</strong> ${totalLinhas}</span><span><strong>Remessas Únicas:</strong> ${totalRemessas}</span><span><strong>Maior Frequência:</strong> ${topProdText}</span></div><div class="tu-actions"></div>`;
+                    row.innerHTML = `<div class="tu-stats"><span class="tu-name">📦 ${tu}</span><span><strong>Total de Linhas:</strong> ${totalLinhas}</span><span><strong>Remessas Únicas:</strong> ${totalRemessas}</span><span><strong>Maior Frequência:</strong> ${topProdText}</span></div><div class="tu-actions"></div>`;
                     
                     const actionsDiv = row.querySelector('.tu-actions');
                     if (qtdProblemas > 0) {
@@ -531,7 +576,7 @@
                 document.getElementById('divisao-container').style.display = 'block';
                 document.getElementById('report-area-tu').style.display = 'block';
 
-            } catch (error) { alert("Erro ao processar Análises em Massa: " + error); } 
+            } catch (error) { alert("Erro ao processar Divisão em Massa: " + error); } 
             finally { btn.disabled = false; btn.innerText = "EXECUTAR DIVISÃO DE PACOTES EM MASSA"; }
         }, 300);
     }
@@ -545,9 +590,9 @@
             html += '</tbody></table>';
         } else if (tipo === 'GRUPOS') {
             const grupos = window.appDataTU.gruposPorTu[tuId];
-            html = `<p style="margin-top:0; margin-bottom: 20px; color:#666; font-size: 15px;">O sistema distribuiu as remessas garantindo o limite de <b>${window.appDataTU.limiteSelecionado} linhas</b> e mantendo os grupos balanceados.</p>`;
+            html = `<p style="margin-top:0; margin-bottom: 20px; color:#666; font-size: 15px;">O sistema distribuiu as remessas garantindo o limite de <b>${window.appDataTU.limiteSelecionado} linhas</b> e mantendo os groups balanceados.</p>`;
             grupos.forEach((gDocs, index) => {
-                const txtId = `txtGroup_${tuId}_${index}`;
+                const txtId = `txtGroup_${tuId.replace(/[^a-zA-Z0-9_-]/g, "_")}_${index}`;
                 html += `<div class="group-box"><div class="group-header"><h4>Grupo ${index + 1} (${gDocs.length} remessas)</h4><button class="btn-copy" onclick="copiarTexto('${txtId}')">📄 COPIAR REMESSAS</button></div><textarea id="${txtId}" class="group-text" readonly>${gDocs.join('\n')}</textarea></div>`;
             });
         }
@@ -556,7 +601,6 @@
 
     function baixarExcelTU(tu) {
         const tuDataOriginal = window.appDataTU.mergedData.filter(row => {
-            if (tu === 'SEM_TU_VINCULADA') return row['Unidade de transporte'] === '';
             return row['Unidade de transporte'] === tu;
         });
 
@@ -573,16 +617,16 @@
         });
 
         const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(exportData), "Remessas e Grupos");
-        const safeTuName = tu === 'SEM_TU_VINCULADA' ? 'Sem_TU' : tu;
+        const safeTuName = (tu === 'SEM_TU_VINCULADA' || tu === 'BASE OEN (SEM TU)') ? 'Geral' : tu.replace(/[^a-zA-Z0-9_-]/g, "_");
         XLSX.writeFile(wb, `Base_TU_${safeTuName}_Remessas.xlsx`);
     }
 
     // ==========================================
-    // LÓGICA DA ABA 3: ATUALIZAR PEÇAS E CAIXAS
+    // LÓGICA DA ABA 3: ATUALIZAR DEMANDA
     // ==========================================
     function processarDemanda() {
         if (window.appDataTU.tuData.length === 0 || window.appDataTU.itemDemandaData.length === 0) {
-            alert('⚠️ Por favor, carregue os arquivos UCEP e ITEM UCEP na Aba 1 antes de gerar a atualização.');
+            alert('⚠️ Por favor, carregue os arquivos UCEP e ITEM UCEP na Aba 1 antes de gerar a demanda.');
             return;
         }
 
@@ -686,8 +730,8 @@
                 
                 document.getElementById('report-area-demanda').style.display = 'block';
 
-            } catch (error) { alert("Erro ao gerar: " + error); } 
-            finally { btn.disabled = false; btn.innerText = "ATUALIZAR PEÇAS E CAIXAS"; }
+            } catch (error) { alert("Erro ao gerar Demanda: " + error); } 
+            finally { btn.disabled = false; btn.innerText = "ATUALIZAR DEMANDA"; }
         }, 300);
     }
 
@@ -796,7 +840,7 @@
                     textoAcao = '<span style="color:#16a34a; font-weight:bold;">Nenhuma</span>'; statusVisual = '<span style="color:#16a34a; font-weight:bold;">✅ OK</span>';
                 } else {
                     rowClass = 'row-excedido'; statusVisual = '<span style="color:#e3000f; font-weight:bold;">⚠️ EXCEDIDO</span>';
-                    if (numGrupos === 2) textoAcao = 'Duplicar (2)'; else if (numGrupos === 3) textoAcao = 'Triplicar (3)'; else if (numGrupos === 4) textoAcao = 'Quadruplicar (4)'; else if (numGrupos === 5) textoAcao = 'Quintuplicar (5)'; else textoAcao = `Dividir em ${numGrupos}`;
+                    if (numGrupos === 2) textoAcao = 'Duplicar'; else if (numGrupos === 3) textoAcao = 'Triplicar'; else if (numGrupos === 4) textoAcao = 'Quadruplicar'; else if (numGrupos === 5) textoAcao = 'Quintuplicar'; else textoAcao = `Dividir em ${numGrupos}`;
                     textoAcao = `<strong>${textoAcao}</strong>`;
                 }
 
