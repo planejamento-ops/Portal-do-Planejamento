@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "02/11/2026 12:28",
+  "atualizado_em": "02/11/2026 14:14",
   "progresso_geral_pct": 72,
-  "total_cxs_geral": 103461,
+  "total_cxs_geral": 103063,
   "total_loaded_cxs_geral": 74936,
-  "total_pending_cxs_geral": 28525,
+  "total_pending_cxs_geral": 28127,
   "cards_atendimentos": {
     "VAREJO": {
       "total_tus": 27,
@@ -22,17 +22,17 @@ window.dadosFechamento = {
     },
     "SPC": {
       "total_tus": 34,
-      "total_cxs": 54038,
+      "total_cxs": 53640,
       "loaded_cxs": 26524,
       "rampa_cxs": 998,
-      "pending_cxs": 26516,
+      "pending_cxs": 26118,
       "finalizadas_gv_cx": 13985,
       "finalizadas_fr_cx": 12539,
       "rampa_gv_cx": 607,
       "rampa_fr_cx": 391,
-      "pendentes_gv_cx": 18242,
-      "pendentes_fr_cx": 8274,
-      "pct": 50,
+      "pendentes_gv_cx": 17773,
+      "pendentes_fr_cx": 8345,
+      "pct": 51,
       "status_atend": "EM ANDAMENTO"
     },
     "SPI": {
@@ -144,11 +144,11 @@ window.dadosFechamento = {
       "atendimento": "SPC",
       "carreta": "Carreta 07",
       "tu": "610000013393",
-      "total_caixas": 2284,
+      "total_caixas": 1897,
       "caixas_carregadas": 488,
       "caixas_rampa": 373,
       "caixas_processadas": 861,
-      "pct": 37,
+      "pct": 45,
       "status": "EM ANDAMENTO"
     },
     {
@@ -364,7 +364,7 @@ window.dadosFechamento = {
       "atendimento": "SPC",
       "carreta": "Carreta 09",
       "tu": "610000013407",
-      "total_caixas": 1742,
+      "total_caixas": 1731,
       "caixas_carregadas": 0,
       "caixas_rampa": 0,
       "caixas_processadas": 0,
