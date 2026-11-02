@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "02/11/2026 14:25",
+  "atualizado_em": "02/11/2026 14:38",
   "total_tus": 69,
   "caixas_total_mes": 2834,
   "pecas_total_mes": 54720,
@@ -707,43 +707,43 @@ window.dadosDashboard = {
       }
     },
     "2026-09": {
-      "caixas": 2111,
-      "pecas": 45400,
+      "caixas": 424976,
+      "pecas": 14500403,
       "perfis_geral": {
         "varejo_ln": {
-          "perfil": 21,
-          "cx": 1535,
-          "pcs": 32202
+          "perfil": 19,
+          "cx": 42081,
+          "pcs": 790514
         },
         "varejo_gv": {
-          "perfil": 23,
-          "cx": 576,
-          "pcs": 13198
+          "perfil": 17,
+          "cx": 9831,
+          "pcs": 162257
         },
         "carteira_ln": {
-          "perfil": 0,
-          "cx": 0,
-          "pcs": 0
+          "perfil": 55,
+          "cx": 119021,
+          "pcs": 6523210
         },
         "carteira_gv": {
-          "perfil": 0,
-          "cx": 0,
-          "pcs": 0
+          "perfil": 45,
+          "cx": 129198,
+          "pcs": 5780355
         },
         "estojo_ln": {
-          "perfil": 0,
-          "cx": 0,
-          "pcs": 0
+          "perfil": 11,
+          "cx": 12419,
+          "pcs": 137298
         },
         "estojo_gv": {
-          "perfil": 0,
-          "cx": 0,
-          "pcs": 0
+          "perfil": 10,
+          "cx": 112276,
+          "pcs": 1103657
         },
         "total_geral": {
-          "cx": 2111,
-          "pcs": 45400,
-          "perfil": 22
+          "cx": 424826,
+          "pcs": 14497291,
+          "perfil": 34
         }
       },
       "perfis_pendentes": {
