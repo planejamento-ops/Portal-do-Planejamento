@@ -1,12 +1,12 @@
 window.dadosFechamento = {
-  "atualizado_em": "02/11/2026 16:33",
+  "atualizado_em": "04/11/2026 08:33",
   "progresso_geral_pct": 72,
   "total_cxs_geral": 103063,
   "total_loaded_cxs_geral": 74936,
   "total_pending_cxs_geral": 28127,
   "cards_atendimentos": {
     "VAREJO": {
-      "total_tus": 27,
+      "total_tus": 34,
       "total_cxs": 10796,
       "loaded_cxs": 8421,
       "rampa_cxs": 366,
@@ -35,6 +35,21 @@ window.dadosFechamento = {
       "pct": 51,
       "status_atend": "EM ANDAMENTO"
     },
+    "MGI": {
+      "total_tus": 21,
+      "total_cxs": 11171,
+      "loaded_cxs": 11171,
+      "rampa_cxs": 0,
+      "pending_cxs": 0,
+      "finalizadas_gv_cx": 4967,
+      "finalizadas_fr_cx": 6204,
+      "rampa_gv_cx": 0,
+      "rampa_fr_cx": 0,
+      "pendentes_gv_cx": 0,
+      "pendentes_fr_cx": 0,
+      "pct": 100,
+      "status_atend": "FINALIZADO"
+    },
     "SPI": {
       "total_tus": 15,
       "total_cxs": 23001,
@@ -52,28 +67,6 @@ window.dadosFechamento = {
     }
   },
   "tabela": [
-    {
-      "atendimento": "SPC",
-      "carreta": "Carreta 04",
-      "tu": "610000013395",
-      "total_caixas": 1023,
-      "caixas_carregadas": 1023,
-      "caixas_rampa": 0,
-      "caixas_processadas": 1023,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "SPC",
-      "carreta": "Carreta 02",
-      "tu": "610000013405",
-      "total_caixas": 1132,
-      "caixas_carregadas": 1132,
-      "caixas_rampa": 0,
-      "caixas_processadas": 1132,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
     {
       "atendimento": "SPI",
       "carreta": "Carreta 10",
@@ -229,6 +222,116 @@ window.dadosFechamento = {
       "status": "EM RAMPA"
     },
     {
+      "atendimento": "MGI",
+      "carreta": "Carreta 04",
+      "tu": "610000013411",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 06",
+      "tu": "610000013412",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 07",
+      "tu": "610000013413",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 08",
+      "tu": "610000013414",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 08 LONA",
+      "tu": "610000013415",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 02",
+      "tu": "610000013416",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 04 LONA",
+      "tu": "610000013451",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 05",
+      "tu": "610000013452",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 01",
+      "tu": "610000013453",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "MGI",
+      "carreta": "Carreta 03",
+      "tu": "610000013454",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
       "atendimento": "SPC",
       "carreta": "Carreta 12",
       "tu": "610000013348",
@@ -365,6 +468,83 @@ window.dadosFechamento = {
       "carreta": "Carreta 09",
       "tu": "610000013407",
       "total_caixas": 1731,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 04",
+      "tu": "610000013426",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 03",
+      "tu": "610000013459",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 03",
+      "tu": "610000013460",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 03",
+      "tu": "610000013462",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 03",
+      "tu": "610000013463",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 04",
+      "tu": "610000013464",
+      "total_caixas": 0,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 04",
+      "tu": "610000013465",
+      "total_caixas": 0,
       "caixas_carregadas": 0,
       "caixas_rampa": 0,
       "caixas_processadas": 0,
