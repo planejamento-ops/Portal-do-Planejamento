@@ -628,8 +628,8 @@
                         </div>
                     </div>
 
-                    <!-- 4 CARDS NO TOPO (MÉTRICAS ACUMULADAS DO MÊS) -->
-                    <div class="tu-grid-main" style="grid-template-columns: repeat(4, 1fr);">
+                    <!-- 5 CARDS NO TOPO (MÉTRICAS ACUMULADAS DO MÊS) -->
+                    <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
                         <div class="tu-card card-red">
                             <span class="material-symbols-outlined icon">person_off</span>
                             <div class="tu-info">
@@ -662,7 +662,16 @@
                                 <small>Férias / Atestados / Licenças</small>
                             </div>
                         </div>
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">flight_takeoff</span>
+                            <div class="tu-info">
+                                <span class="label">Colaboradores em Férias</span>
+                                <h3 id="pd-ferias">--</h3>
+                                <small>Mês Vigente (Sem impacto no Abs)</small>
+                            </div>
+                        </div>
                     </div>
+                    
 
                     <!-- LINHA 1: ABSENTEÍSMO MENSAL/DIÁRIO -->
                     <div class="tu-details-grid" style="margin-top: 6px; display: grid; grid-template-columns: 2fr 1fr; gap: 12px;">
@@ -857,12 +866,13 @@
         };
 
         function carregarScriptsSemCache() {
-            const timestamp = new Date().getTime();
+            // Só adiciona o timestamp se NÃO estiver rodando localmente (file://)
+            const timestamp = window.location.protocol === 'file:' ? '' : `?v=${new Date().getTime()}`;
             const scripts = ["dados_tu.js", "dados_movimentacoes.js", "dados_demandas.js", "dados_fechamento.js", "dados_pd.js"];
             let carregados = 0;
             scripts.forEach(src => {
                 const script = document.createElement("script");
-                script.src = `${src}?v=${timestamp}`;
+                script.src = `${src}${timestamp}`;
                 script.onload = () => { carregados++; if (carregados === scripts.length) carregarDados(); };
                 script.onerror = () => { carregados++; if (carregados === scripts.length) carregarDados(); };
                 document.head.appendChild(script);
@@ -1351,17 +1361,47 @@
             }
         }
 
+        // Função auxiliar para garantir que a data vá para o formato YYYY-MM-DD
+        function formatarDataParaInput(dataStr) {
+            if (!dataStr) return '';
+            // Se já estiver no padrão YYYY-MM-DD, passa direto
+            if (dataStr.includes('-') && dataStr.split('-')[0].length === 4) return dataStr;
+            
+            // Converte datas com ponto ou barra (04.11.2026 -> 2026-11-04)
+            const partes = dataStr.split(/[\/\.-]/);
+            if (partes.length === 3 && partes[2].length === 4) {
+                return `${partes[2]}-${partes[1].padStart(2,'0')}-${partes[0].padStart(2,'0')}`;
+            }
+            return dataStr;
+        }
+
         // ==========================================
-        // DESENHAR GRÁFICOS PD DIGITAL (CARREGAMENTO INICIAL)
+        // DESENHAR GRÁFICOS PD DIGITAL (VERSÃO ÚNICA E CORRIGIDA)
         // ==========================================
         function desenharGraficosPD(dadosSetor, dadosEmpresa, dadosDiario) {
             const elInput = document.getElementById('filtro-data-setor');
             if (elInput && dadosPD && dadosPD.data_padrao_setor && !elInput.value) {
-                elInput.value = dadosPD.data_padrao_setor;
+                elInput.value = formatarDataParaInput(dadosPD.data_padrao_setor);
             }
             
-            // Chama a atualização para desenhar todos os gráficos da data inicial
+            // Chama a atualização para desenhar todos os gráficos de setor (barras) da data inicial
             atualizarGraficoSetorDia();
+
+            // Renderiza o Histórico Diário de Horas Disponíveis
+            const elHorasDiario = document.getElementById('chartHorasDiario');
+            if (elHorasDiario && dadosPD && dadosPD.grafico_diario_horas) {
+                const ctxHD = elHorasDiario.getContext('2d');
+                if (chartHorasDiario) chartHorasDiario.destroy();
+                chartHorasDiario = new Chart(ctxHD, {
+                    type: 'bar',
+                    data: dadosPD.grafico_diario_horas,
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => c.raw + ' h' } } },
+                        scales: { y: { grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { color: '#a0aab5', font: { size: 10 } } } }
+                    }
+                });
+            }
 
             // Gráfico de Pizza (Empresas)
             const elEmpresa = document.getElementById('chartPdEmpresa');
@@ -1411,108 +1451,7 @@
                     plugins: [chartDataLabelsPlugin]
                 });
             }
-
-            // Histórico Diário de Horas Disponíveis na Planta
-            const elHorasDiario = document.getElementById('chartHorasDiario');
-            if (elHorasDiario && dadosPD && dadosPD.grafico_diario_horas) {
-                const ctxHD = elHorasDiario.getContext('2d');
-                if (chartHorasDiario) chartHorasDiario.destroy();
-                chartHorasDiario = new Chart(ctxHD, {
-                    type: 'bar',
-                    data: dadosPD.grafico_diario_horas,
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => c.raw + ' h' } } },
-                        scales: { y: { grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { color: '#a0aab5', font: { size: 10 } } } }
-                    }
-                });
-            }
         }
-        // ==========================================
-        // DESENHAR GRÁFICOS PD DIGITAL
-        // ==========================================
-        function desenharGraficosPD(dadosSetor, dadosEmpresa, dadosDiario) {
-            const elInput = document.getElementById('filtro-data-setor');
-            if (elInput && dadosPD && dadosPD.data_padrao_setor && !elInput.value) {
-                elInput.value = dadosPD.data_padrao_setor;
-            }
-            atualizarGraficoSetorDia();
-            
-            // Renderiza o Histórico Diário de Horas Disponíveis
-            const elHorasDiario = document.getElementById('chartHorasDiario');
-            if (elHorasDiario && dadosPD && dadosPD.grafico_diario_horas) {
-                const ctxHD = elHorasDiario.getContext('2d');
-                if (chartHorasDiario) chartHorasDiario.destroy();
-                chartHorasDiario = new Chart(ctxHD, {
-                    type: 'bar',
-                    data: dadosPD.grafico_diario_horas,
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => c.raw + ' h' } } },
-                        scales: { y: { grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }, x: { grid: { display: false }, ticks: { color: '#a0aab5', font: { size: 10 } } } }
-                    }
-                });
-            }
-            
-            const elEmpresa = document.getElementById('chartPdEmpresa');
-            if (elEmpresa && dadosEmpresa) {
-                const ctx = elEmpresa.getContext('2d');
-                if (chartPdEmpresa) chartPdEmpresa.destroy();
-                chartPdEmpresa = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: dadosEmpresa.labels,
-                        datasets: [{
-                            data: dadosEmpresa.data,
-                            absoluteData: dadosEmpresa.absolutos, 
-                            backgroundColor: ['rgba(0, 210, 255, 0.7)', 'rgba(0, 176, 155, 0.7)', 'rgba(155, 89, 182, 0.7)', 'rgba(246, 185, 59, 0.7)'],
-                            borderColor: 'rgba(15, 23, 42, 1)',
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { 
-                            legend: { position: 'right', labels: { color: '#a0aab5', font: { size: 10 } } },
-                            tooltip: { callbacks: { label: function(c) { return c.raw + '%'; } } }
-                        },
-                        cutout: '50%' 
-                    },
-                    plugins: [chartDataLabelsPlugin] 
-                });
-            }
-
-            // GRÁFICO DIÁRIO MISTO (BARRAS + LINHA META)
-            const elDiario = document.getElementById('chartPdDiario');
-            if (elDiario && dadosDiario) {
-                const ctx = elDiario.getContext('2d');
-                if (chartPdDiario) chartPdDiario.destroy();
-                
-                chartPdDiario = new Chart(ctx, {
-                    type: 'bar', 
-                    data: {
-                        labels: dadosDiario.labels, 
-                        datasets: dadosDiario.datasets
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { 
-                            legend: { 
-                                position: 'top', 
-                                labels: { color: '#a0aab5', font: { size: 11 }, usePointStyle: true, boxWidth: 8 } 
-                            },
-                            tooltip: { callbacks: { label: function(c) { return c.dataset.label + ': ' + c.raw + '%'; } } }
-                        },
-                        scales: { 
-                            y: { display: false, beginAtZero: true }, 
-                            x: { grid: { display: false }, ticks: { color: '#a0aab5', font: { size: 10 } } } 
-                        }
-                    },
-                    plugins: [chartDataLabelsPlugin]
-                });
-            }
-        }
-
         // ==========================================
         // CARREGADOR MESTRE DE DADOS
         // ==========================================
@@ -1742,6 +1681,7 @@
                 setTextoSeguro('pd-deficit', formatarNumeroInteiro(pd.deficit));
                 setTextoSeguro('pd-injustificadas', formatarNumeroInteiro(pd.fi_dias));
                 setTextoSeguro('pd-justificadas', formatarNumeroInteiro(pd.fj_dias));
+                setTextoSeguro('pd-ferias', formatarNumeroInteiro(pd.ferias));
 
                 const tbodyTurnos = document.getElementById('tbl-pd-turnos-body');
                 if (tbodyTurnos && pd.tabela_turnos) {
