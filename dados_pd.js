@@ -1,11 +1,11 @@
 window.dadosPD = {
-  "atualizado_em": "04/11/2026 17:35",
+  "atualizado_em": "05/11/2026 12:26",
   "taxa_abs": 11.2,
   "deficit": 350,
-  "fi_dias": 656,
+  "fi_dias": 657,
   "fj_dias": 542,
   "ferias": 113,
-  "data_padrao_setor": "2026-11-04",
+  "data_padrao_setor": "2026-11-05",
   "grafico_setor_map": {
     "2026-01-02_GERAL": {
       "labels": [],
@@ -15371,26 +15371,26 @@ window.dadosPD = {
     "2026-11-04_GERAL": {
       "labels": [
         "REABASTECIMENTO",
+        "SEPARACAO",
         "EXPEDICAO",
         "RECEBIMENTO",
         "FECHAMENTO",
-        "PLANEJAMENTO",
-        "SEPARACAO"
+        "PLANEJAMENTO"
       ],
       "data": [
-        14.0,
-        11.6,
-        10.3,
-        2.3,
-        0.0,
+        12.3,
+        7.5,
+        7.1,
+        6.9,
+        4.5,
         0.0
       ],
       "absolutos": [
-        6,
+        8,
+        8,
         5,
         4,
-        1,
-        0,
+        3,
         0
       ]
     },
@@ -15422,15 +15422,15 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "RECEBIMENTO",
         "EXPEDICAO",
+        "SEPARACAO",
         "FECHAMENTO",
-        "PLANEJAMENTO",
-        "SEPARACAO"
+        "PLANEJAMENTO"
       ],
       "data": [
         16.7,
         11.8,
         10.5,
-        0.0,
+        5.3,
         0.0,
         0.0
       ],
@@ -15438,12 +15438,98 @@ window.dadosPD = {
         4,
         2,
         2,
-        0,
+        3,
         0,
         0
       ]
     },
     "2026-11-04_3": {
+      "labels": [
+        "SEPARACAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "EXPEDICAO",
+        "PLANEJAMENTO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        10.0,
+        9.1,
+        9.1,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "absolutos": [
+        5,
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "2026-11-05_GERAL": {
+      "labels": [
+        "REABASTECIMENTO",
+        "FECHAMENTO",
+        "EXPEDICAO",
+        "SEPARACAO",
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
+      ],
+      "data": [
+        10.5,
+        9.1,
+        8.3,
+        5.9,
+        4.8,
+        0.0
+      ],
+      "absolutos": [
+        2,
+        2,
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    "2026-11-05_1": {
+      "labels": [
+        "REABASTECIMENTO",
+        "FECHAMENTO",
+        "EXPEDICAO",
+        "SEPARACAO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        10.5,
+        9.1,
+        8.3,
+        5.9,
+        4.8
+      ],
+      "absolutos": [
+        2,
+        2,
+        2,
+        3,
+        1
+      ]
+    },
+    "2026-11-05_2": {
+      "labels": [
+        "PLANEJAMENTO"
+      ],
+      "data": [
+        0.0
+      ],
+      "absolutos": [
+        0
+      ]
+    },
+    "2026-11-05_3": {
       "labels": [
         "PLANEJAMENTO"
       ],
@@ -39959,35 +40045,35 @@ window.dadosPD = {
     },
     "2026-11-04_GERAL": {
       "labels": [
-        "FECHAMENTO",
+        "SEPARACAO",
         "EXPEDICAO",
+        "FECHAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO",
-        "PLANEJAMENTO",
-        "SEPARACAO"
+        "PLANEJAMENTO"
       ],
       "horas_disp": [
-        302.7,
-        267.8,
-        260.3,
-        246.7,
-        53.8,
-        7.0
+        639.3,
+        425.2,
+        419.3,
+        376.9,
+        357.5,
+        53.8
       ],
       "horas_prev": [
-        309.8,
-        303.0,
-        302.4,
-        274.9,
-        53.8,
-        7.0
+        689.4,
+        460.4,
+        438.0,
+        430.7,
+        385.6,
+        53.8
       ],
       "pct_capacidade": [
-        97.7,
-        88.4,
-        86.1,
-        89.7,
-        100.0,
+        92.7,
+        92.4,
+        95.7,
+        87.5,
+        92.7,
         100.0
       ]
     },
@@ -40023,61 +40109,207 @@ window.dadosPD = {
     },
     "2026-11-04_2": {
       "labels": [
+        "SEPARACAO",
         "FECHAMENTO",
         "REABASTECIMENTO",
         "EXPEDICAO",
         "RECEBIMENTO",
-        "PLANEJAMENTO",
-        "SEPARACAO"
+        "PLANEJAMENTO"
       ],
       "horas_disp": [
+        376.9,
         153.6,
         139.6,
         118.7,
         104.7,
-        20.9,
-        7.0
+        20.9
       ],
       "horas_prev": [
+        397.9,
         153.6,
         167.5,
         132.6,
         118.7,
-        20.9,
-        7.0
+        20.9
       ],
       "pct_capacidade": [
+        94.7,
         100.0,
         83.3,
         89.5,
         88.2,
-        100.0,
         100.0
       ]
     },
     "2026-11-04_3": {
       "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
+        262.4,
+        157.4,
+        116.6,
+        116.6,
+        110.8,
         11.7
       ],
       "horas_prev": [
+        291.5,
+        157.4,
+        128.3,
+        128.3,
+        110.8,
         11.7
       ],
       "pct_capacidade": [
+        90.0,
+        100.0,
+        90.9,
+        90.9,
+        100.0,
         100.0
       ]
     },
     "2026-11-04": {
       "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
+        262.4,
+        157.4,
+        116.6,
+        116.6,
+        110.8,
         11.7
       ],
       "horas_prev": [
+        291.5,
+        157.4,
+        128.3,
+        128.3,
+        110.8,
         11.7
+      ],
+      "pct_capacidade": [
+        90.0,
+        100.0,
+        90.9,
+        90.9,
+        100.0,
+        100.0
+      ]
+    },
+    "2026-11-05_GERAL": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "PLANEJAMENTO"
+      ],
+      "horas_disp": [
+        340.8,
+        156.2,
+        142.0,
+        142.0,
+        120.7,
+        12.8
+      ],
+      "horas_prev": [
+        362.1,
+        170.4,
+        156.2,
+        149.1,
+        134.9,
+        12.8
+      ],
+      "pct_capacidade": [
+        94.1,
+        91.7,
+        90.9,
+        95.2,
+        89.5,
+        100.0
+      ]
+    },
+    "2026-11-05_1": {
+      "labels": [
+        "SEPARACAO",
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "REABASTECIMENTO"
+      ],
+      "horas_disp": [
+        340.8,
+        156.2,
+        142.0,
+        142.0,
+        120.7
+      ],
+      "horas_prev": [
+        362.1,
+        170.4,
+        156.2,
+        149.1,
+        134.9
+      ],
+      "pct_capacidade": [
+        94.1,
+        91.7,
+        90.9,
+        95.2,
+        89.5
+      ]
+    },
+    "2026-11-05_2": {
+      "labels": [
+        "PLANEJAMENTO"
+      ],
+      "horas_disp": [
+        7.0
+      ],
+      "horas_prev": [
+        7.0
+      ],
+      "pct_capacidade": [
+        100.0
+      ]
+    },
+    "2026-11-05_3": {
+      "labels": [
+        "PLANEJAMENTO"
+      ],
+      "horas_disp": [
+        5.8
+      ],
+      "horas_prev": [
+        5.8
+      ],
+      "pct_capacidade": [
+        100.0
+      ]
+    },
+    "2026-11-05": {
+      "labels": [
+        "PLANEJAMENTO"
+      ],
+      "horas_disp": [
+        5.8
+      ],
+      "horas_prev": [
+        5.8
       ],
       "pct_capacidade": [
         100.0
@@ -40089,10 +40321,10 @@ window.dadosPD = {
       "PLANEJAMENTO"
     ],
     "horas_disp": [
-      11.7
+      5.8
     ],
     "horas_prev": [
-      11.7
+      5.8
     ],
     "pct_capacidade": [
       100.0
@@ -40101,24 +40333,24 @@ window.dadosPD = {
   "grafico_empresa": {
     "labels": [
       "MEET",
-      "AMERICA",
       "G3 SERVICOS",
+      "AMERICA",
       "PACTUAL",
       "CEVA"
     ],
     "data": [
       15.3,
       13.7,
-      13.7,
+      13.6,
       12.3,
-      9.4
+      9.3
     ],
     "absolutos": [
-      1583,
-      895,
+      1588,
       74,
-      1267,
-      3716
+      899,
+      1269,
+      3727
     ]
   },
   "grafico_diario": {
@@ -40162,8 +40394,8 @@ window.dadosPD = {
           23.1,
           16.6,
           10.7,
-          9.0,
-          null,
+          7.5,
+          7.2,
           null,
           null,
           null,
@@ -40204,7 +40436,7 @@ window.dadosPD = {
           13.6,
           11.6,
           9.0,
-          null,
+          7.3,
           null,
           null,
           null,
@@ -40244,8 +40476,8 @@ window.dadosPD = {
           null,
           19.7,
           12.3,
-          9.3,
-          null,
+          7.7,
+          0.0,
           null,
           null,
           null,
@@ -40285,8 +40517,8 @@ window.dadosPD = {
           23.1,
           16.4,
           8.3,
+          6.3,
           0.0,
-          null,
           null,
           null,
           null,
@@ -40407,8 +40639,8 @@ window.dadosPD = {
           641.3,
           2436.6,
           2593.0,
-          1138.2,
-          null,
+          2271.9,
+          914.5,
           null,
           null,
           null,
@@ -40445,25 +40677,25 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 3066,
+      "faltas": 3075,
       "taxa": 14.0
     },
     {
       "turno": "2º Turno",
-      "faltas": 2706,
+      "faltas": 2709,
       "taxa": 10.3
     },
     {
       "turno": "1º Turno",
-      "faltas": 1763,
+      "faltas": 1773,
       "taxa": 9.2
     }
   ],
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 1538,
-      "taxa": 12.0
+      "faltas": 1549,
+      "taxa": 11.9
     },
     {
       "setor": "SEPARAÇÃO",
@@ -40472,22 +40704,22 @@ window.dadosPD = {
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 582,
+      "faltas": 586,
       "taxa": 9.2
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 544,
+      "faltas": 548,
       "taxa": 7.7
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 512,
+      "faltas": 514,
       "taxa": 9.5
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 423,
+      "faltas": 424,
       "taxa": 6.2
     },
     {
@@ -40509,7 +40741,7 @@ window.dadosPD = {
   "todos_lideres": [
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
-      "faltas": 1420,
+      "faltas": 1425,
       "taxa": 18.3
     },
     {
@@ -40519,7 +40751,7 @@ window.dadosPD = {
     },
     {
       "lider": "RICARDO EUGENIO LAURINDO",
-      "faltas": 554,
+      "faltas": 556,
       "taxa": 12.6
     },
     {
@@ -40535,12 +40767,12 @@ window.dadosPD = {
     {
       "lider": "TARCISIO RICARDO MARTINS CLARO",
       "faltas": 464,
-      "taxa": 11.0
+      "taxa": 10.9
     },
     {
       "lider": "LUIS PAULO REIS",
-      "faltas": 377,
-      "taxa": 8.0
+      "faltas": 380,
+      "taxa": 7.9
     },
     {
       "lider": "RENAN ALVES REZENDE",
@@ -40549,7 +40781,7 @@ window.dadosPD = {
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
-      "faltas": 314,
+      "faltas": 315,
       "taxa": 9.4
     },
     {
@@ -40564,17 +40796,17 @@ window.dadosPD = {
     },
     {
       "lider": "GABRIELLY DA SILVA ALEXANDRIA",
-      "faltas": 241,
+      "faltas": 243,
       "taxa": 7.4
     },
     {
       "lider": "DIEGO CUNHA BOER",
-      "faltas": 203,
-      "taxa": 10.6
+      "faltas": 205,
+      "taxa": 10.5
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
-      "faltas": 200,
+      "faltas": 203,
       "taxa": 7.0
     },
     {
@@ -40599,13 +40831,13 @@ window.dadosPD = {
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
-      "faltas": 60,
-      "taxa": 16.6
+      "faltas": 62,
+      "taxa": 16.1
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
-      "faltas": 55,
-      "taxa": 12.4
+      "faltas": 57,
+      "taxa": 12.3
     },
     {
       "lider": "EDUARDO ROSSI",
