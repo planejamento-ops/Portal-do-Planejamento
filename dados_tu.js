@@ -1,8 +1,8 @@
 window.dadosDashboard = {
-  "atualizado_em": "05/11/2026 15:47",
-  "total_tus": 45,
-  "caixas_total_mes": 22576,
-  "pecas_total_mes": 835210,
+  "atualizado_em": "05/11/2026 16:01",
+  "total_tus": 53,
+  "caixas_total_mes": 29467,
+  "pecas_total_mes": 1068453,
   "totais_por_mes": {
     "2025-01": {
       "caixas": 17712,
@@ -863,43 +863,43 @@ window.dadosDashboard = {
       }
     },
     "2026-11": {
-      "caixas": 22576,
-      "pecas": 835210,
+      "caixas": 29467,
+      "pecas": 1068453,
       "perfis_geral": {
         "varejo_ln": {
           "perfil": 23,
-          "cx": 6071,
-          "pcs": 139302
+          "cx": 8058,
+          "pcs": 185375
         },
         "varejo_gv": {
-          "perfil": 45,
-          "cx": 1087,
-          "pcs": 48855
+          "perfil": 44,
+          "cx": 1392,
+          "pcs": 61403
         },
         "carteira_ln": {
           "perfil": 45,
-          "cx": 7531,
-          "pcs": 339505
+          "cx": 8904,
+          "pcs": 402402
         },
         "carteira_gv": {
-          "perfil": 39,
-          "cx": 7887,
-          "pcs": 307548
+          "perfil": 40,
+          "cx": 9900,
+          "pcs": 393002
         },
         "estojo_ln": {
-          "perfil": 0,
-          "cx": 0,
-          "pcs": 0
+          "perfil": 20,
+          "cx": 117,
+          "pcs": 2324
         },
         "estojo_gv": {
-          "perfil": 0,
-          "cx": 0,
-          "pcs": 0
+          "perfil": 22,
+          "cx": 1090,
+          "pcs": 23776
         },
         "total_geral": {
-          "cx": 22576,
-          "pcs": 835210,
-          "perfil": 37
+          "cx": 29461,
+          "pcs": 1068282,
+          "perfil": 36
         }
       },
       "perfis_pendentes": {
@@ -953,8 +953,7 @@ window.dadosDashboard = {
     "MGI"
   ],
   "alertas_atraso": [
-    "Atraso em MGC",
-    "Atraso em SPI"
+    "Atraso em MGC"
   ],
   "proxima_carteira": {
     "carreta": "Carreta 08 LONA",
@@ -972,38 +971,38 @@ window.dadosDashboard = {
   "perfis_geral": {
     "varejo_ln": {
       "perfil": 23,
-      "cx": 6071,
-      "pcs": 139302
+      "cx": 8058,
+      "pcs": 185375
     },
     "varejo_gv": {
-      "perfil": 45,
-      "cx": 1087,
-      "pcs": 48855
+      "perfil": 44,
+      "cx": 1392,
+      "pcs": 61403
     },
     "carteira_ln": {
       "perfil": 45,
-      "cx": 7531,
-      "pcs": 339505
+      "cx": 8904,
+      "pcs": 402402
     },
     "carteira_gv": {
-      "perfil": 39,
-      "cx": 7887,
-      "pcs": 307548
+      "perfil": 40,
+      "cx": 9900,
+      "pcs": 393002
     },
     "estojo_ln": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 20,
+      "cx": 117,
+      "pcs": 2324
     },
     "estojo_gv": {
-      "perfil": 0,
-      "cx": 0,
-      "pcs": 0
+      "perfil": 22,
+      "cx": 1090,
+      "pcs": 23776
     },
     "total_geral": {
-      "cx": 22576,
-      "pcs": 835210,
-      "perfil": 37
+      "cx": 29461,
+      "pcs": 1068282,
+      "perfil": 36
     }
   },
   "perfis_pendentes": {
