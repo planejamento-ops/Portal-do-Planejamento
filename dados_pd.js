@@ -1,6 +1,6 @@
 window.dadosPD = {
-  "atualizado_em": "05/11/2026 14:25",
-  "taxa_abs": 12.5,
+  "atualizado_em": "05/11/2026 14:26",
+  "taxa_abs": 12.4,
   "deficit": 8,
   "fi_dias": 70,
   "fj_dias": 35,
@@ -399,6 +399,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "EXPEDICAO",
         "SEPARACAO",
+        "INVENTARIO",
         "RECEBIMENTO",
         "PLANEJAMENTO"
       ],
@@ -407,7 +408,8 @@ window.dadosPD = {
         9.1,
         8.3,
         7.8,
-        4.8,
+        6.7,
+        4.5,
         0.0
       ],
       "absolutos": [
@@ -416,11 +418,13 @@ window.dadosPD = {
         2,
         4,
         1,
+        1,
         0
       ]
     },
     "2026-11-05_1": {
       "labels": [
+        "INVENTARIO",
         "REABASTECIMENTO",
         "FECHAMENTO",
         "EXPEDICAO",
@@ -429,14 +433,16 @@ window.dadosPD = {
         "PLANEJAMENTO"
       ],
       "data": [
+        16.7,
         10.5,
         9.1,
         8.3,
         7.8,
-        4.8,
+        4.5,
         0.0
       ],
       "absolutos": [
+        1,
         2,
         2,
         2,
@@ -447,23 +453,29 @@ window.dadosPD = {
     },
     "2026-11-05_2": {
       "labels": [
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "data": [
+        0.0,
         0.0
       ],
       "absolutos": [
+        0,
         0
       ]
     },
     "2026-11-05_3": {
       "labels": [
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "data": [
+        0.0,
         0.0
       ],
       "absolutos": [
+        0,
         0
       ]
     }
@@ -1118,33 +1130,37 @@ window.dadosPD = {
       "labels": [
         "SEPARACAO",
         "EXPEDICAO",
-        "FECHAMENTO",
         "RECEBIMENTO",
+        "FECHAMENTO",
         "REABASTECIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
         333.7,
         156.2,
-        142.0,
+        149.1,
         142.0,
         120.7,
+        96.0,
         53.8
       ],
       "horas_prev": [
         362.1,
         170.4,
         156.2,
-        149.1,
+        156.2,
         134.9,
+        103.1,
         53.8
       ],
       "pct_capacidade": [
         92.2,
         91.7,
+        95.5,
         90.9,
-        95.2,
         89.5,
+        93.1,
         100.0
       ]
     },
@@ -1152,110 +1168,130 @@ window.dadosPD = {
       "labels": [
         "SEPARACAO",
         "EXPEDICAO",
-        "FECHAMENTO",
         "RECEBIMENTO",
+        "FECHAMENTO",
         "REABASTECIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
         333.7,
         156.2,
-        142.0,
+        149.1,
         142.0,
         120.7,
+        35.5,
         14.2
       ],
       "horas_prev": [
         362.1,
         170.4,
         156.2,
-        149.1,
+        156.2,
         134.9,
+        42.6,
         14.2
       ],
       "pct_capacidade": [
         92.2,
         91.7,
+        95.5,
         90.9,
-        95.2,
         89.5,
+        83.3,
         100.0
       ]
     },
     "2026-11-05_2": {
       "labels": [
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
+        48.9,
         20.9
       ],
       "horas_prev": [
+        48.9,
         20.9
       ],
       "pct_capacidade": [
+        100.0,
         100.0
       ]
     },
     "2026-11-05_3": {
       "labels": [
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
+        11.7,
         11.7
       ],
       "horas_prev": [
+        11.7,
         11.7
       ],
       "pct_capacidade": [
+        100.0,
         100.0
       ]
     },
     "2026-11-05": {
       "labels": [
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
+        11.7,
         11.7
       ],
       "horas_prev": [
+        11.7,
         11.7
       ],
       "pct_capacidade": [
+        100.0,
         100.0
       ]
     }
   },
   "grafico_horas_setor": {
     "labels": [
+      "INVENTARIO",
       "PLANEJAMENTO"
     ],
     "horas_disp": [
+      11.7,
       11.7
     ],
     "horas_prev": [
+      11.7,
       11.7
     ],
     "pct_capacidade": [
+      100.0,
       100.0
     ]
   },
   "grafico_empresa": {
     "labels": [
       "MEET",
-      "AMERICA",
       "PACTUAL",
+      "AMERICA",
       "CEVA"
     ],
     "data": [
-      15.0,
+      14.8,
+      14.4,
       14.3,
-      13.9,
-      11.2
+      11.1
     ],
     "absolutos": [
       35,
+      25,
       27,
-      24,
       106
     ]
   },
@@ -1301,7 +1337,7 @@ window.dadosPD = {
           16.6,
           10.7,
           7.5,
-          7.6,
+          7.5,
           null,
           null,
           null,
@@ -1342,7 +1378,7 @@ window.dadosPD = {
           13.6,
           11.6,
           9.0,
-          7.9,
+          8.2,
           null,
           null,
           null,
@@ -1546,7 +1582,7 @@ window.dadosPD = {
           2436.6,
           2593.0,
           2271.9,
-          948.4,
+          1051.5,
           null,
           null,
           null,
@@ -1589,12 +1625,12 @@ window.dadosPD = {
     {
       "turno": "2º Turno",
       "faltas": 58,
-      "taxa": 13.2
+      "taxa": 13.0
     },
     {
       "turno": "1º Turno",
-      "faltas": 56,
-      "taxa": 10.7
+      "faltas": 57,
+      "taxa": 10.8
     }
   ],
   "todos_setores": [
@@ -1635,8 +1671,8 @@ window.dadosPD = {
     },
     {
       "setor": "INVENTARIO",
-      "faltas": 1,
-      "taxa": 3.3
+      "faltas": 2,
+      "taxa": 4.4
     }
   ],
   "todos_lideres": [
@@ -1716,14 +1752,14 @@ window.dadosPD = {
       "taxa": 3.9
     },
     {
+      "lider": "MARIA GABRIELE SANTANA ALVES",
+      "faltas": 2,
+      "taxa": 4.2
+    },
+    {
       "lider": "FABIANE ALVES",
       "faltas": 1,
       "taxa": 16.7
-    },
-    {
-      "lider": "MARIA GABRIELE SANTANA ALVES",
-      "faltas": 1,
-      "taxa": 3.1
     }
   ]
 };
