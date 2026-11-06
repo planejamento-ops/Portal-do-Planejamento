@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 16:08",
+  "atualizado_em": "06/11/2026 17:11",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -70283,6 +70283,14 @@ window.dadosPD = {
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR"
+    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
+    "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T2</strong>: EDMILSON BERTOLDO",
+    "<strong style='color:#ffffff;'>T2</strong>: FABIANE ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
+    "<strong style='color:#ffffff;'>T2</strong>: GEOVANI PAULO PAULINO JUNIOR",
+    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
+    "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: RENAN ALVES REZENDE"
   ]
 };
