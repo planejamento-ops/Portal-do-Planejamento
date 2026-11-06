@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 11:30",
+  "atualizado_em": "06/11/2026 12:00",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -34289,8 +34289,8 @@ window.dadosPD = {
           "DE HORAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESCOMPROMETIMENTO"
@@ -34412,8 +34412,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESCOMPROMETIMENTO"
@@ -35385,8 +35385,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35471,8 +35471,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35710,8 +35710,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -35741,8 +35741,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35766,8 +35766,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35792,8 +35792,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -35826,8 +35826,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35857,8 +35857,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35888,8 +35888,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35944,8 +35944,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -35971,8 +35971,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36054,8 +36054,8 @@ window.dadosPD = {
           "DE HORAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -36110,8 +36110,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36145,8 +36145,8 @@ window.dadosPD = {
           "DE HORAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36181,8 +36181,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36210,8 +36210,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36293,8 +36293,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -36335,8 +36335,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36362,8 +36362,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -36405,8 +36405,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -36500,8 +36500,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -36536,8 +36536,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36564,8 +36564,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36595,8 +36595,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36629,8 +36629,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36690,8 +36690,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36723,8 +36723,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36757,8 +36757,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36812,8 +36812,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36872,8 +36872,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36924,8 +36924,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -36988,8 +36988,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -37017,8 +37017,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -37100,8 +37100,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -37164,8 +37164,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -37197,8 +37197,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -37256,8 +37256,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "NÃO PERTENCE",
@@ -37327,8 +37327,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -37394,8 +37394,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -37457,8 +37457,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -37492,8 +37492,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -37528,8 +37528,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -37585,8 +37585,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -37646,8 +37646,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -37694,8 +37694,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -37730,8 +37730,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "COM ATESTADO",
@@ -37829,8 +37829,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "NÃO PERTENCE",
@@ -37868,8 +37868,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -37934,8 +37934,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "BANCO",
@@ -37972,8 +37972,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -38042,8 +38042,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -38078,8 +38078,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "BANCO",
@@ -38120,8 +38120,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -38149,8 +38149,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -38198,8 +38198,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -38251,8 +38251,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -38298,8 +38298,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -38337,8 +38337,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "BANCO",
@@ -38382,8 +38382,8 @@ window.dadosPD = {
           "ESCALA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -38478,8 +38478,8 @@ window.dadosPD = {
           "ESCALA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -38650,8 +38650,8 @@ window.dadosPD = {
           "ESCALA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -38685,8 +38685,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -39485,8 +39485,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -39556,8 +39556,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "HD - HC DIVERGENTE"
@@ -39630,8 +39630,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -39666,8 +39666,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -40433,8 +40433,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -40485,8 +40485,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -40544,8 +40544,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "HD - HC DIVERGENTE"
@@ -40614,8 +40614,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "HD - HC DIVERGENTE"
@@ -40686,8 +40686,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "HD - HC DIVERGENTE"
@@ -40807,8 +40807,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -40837,8 +40837,8 @@ window.dadosPD = {
           "HD - HC DIVERGENTE"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -43306,8 +43306,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -43408,8 +43408,8 @@ window.dadosPD = {
           "ESCALA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -43478,8 +43478,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -43519,8 +43519,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -43566,8 +43566,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -43674,8 +43674,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -45103,8 +45103,8 @@ window.dadosPD = {
           "DESCOMPROMETIMENTO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -45186,8 +45186,8 @@ window.dadosPD = {
           "DESCOMPROMETIMENTO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -46510,8 +46510,8 @@ window.dadosPD = {
           "MEDIDA DISCIPLINAR"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -46640,8 +46640,8 @@ window.dadosPD = {
           "DE EMPREGO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "HD - HC DIVERGENTE"
@@ -46733,8 +46733,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESCOMPROMETIMENTO"
@@ -46854,8 +46854,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -49895,8 +49895,8 @@ window.dadosPD = {
     "2026-06-04_GERAL": {
       "labels": [
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -49946,8 +49946,8 @@ window.dadosPD = {
     "2026-06-04_1": {
       "labels": [
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -50165,8 +50165,8 @@ window.dadosPD = {
           "DE HORAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "HD - HC DIVERGENTE"
@@ -50214,8 +50214,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -51376,8 +51376,8 @@ window.dadosPD = {
           "DESCOMPROMETIMENTO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ESCALA"
@@ -51436,8 +51436,8 @@ window.dadosPD = {
           "ESCALA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -51482,8 +51482,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -51600,8 +51600,8 @@ window.dadosPD = {
           "PROBLEMAS PESSOAIS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -51692,8 +51692,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -52519,8 +52519,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -52629,8 +52629,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -52805,8 +52805,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -52867,8 +52867,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -52929,8 +52929,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -52985,8 +52985,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -53033,8 +53033,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -53112,8 +53112,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "BANCO",
@@ -53164,8 +53164,8 @@ window.dadosPD = {
           "DE EMPREGO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESCOMPROMETIMENTO"
@@ -53292,8 +53292,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -53353,8 +53353,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -53381,8 +53381,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -53488,8 +53488,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -53561,8 +53561,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -53590,8 +53590,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -53666,8 +53666,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -53694,8 +53694,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -53782,8 +53782,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -53817,8 +53817,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -53902,8 +53902,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -53934,8 +53934,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -53989,8 +53989,8 @@ window.dadosPD = {
     "2026-06-27_1": {
       "labels": [
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "COM ATESTADO",
@@ -54039,8 +54039,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -54095,8 +54095,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -54119,8 +54119,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESCOMPROMETIMENTO"
@@ -54165,8 +54165,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESCOMPROMETIMENTO"
@@ -54205,8 +54205,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -54286,8 +54286,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -54322,8 +54322,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -54393,8 +54393,8 @@ window.dadosPD = {
           "PROBLEMAS PESSOAIS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -54451,8 +54451,8 @@ window.dadosPD = {
           "DESCOMPROMETIMENTO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -54523,8 +54523,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -54553,8 +54553,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "PROBLEMAS PESSOAIS"
@@ -54671,8 +54671,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -54760,8 +54760,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -54845,8 +54845,8 @@ window.dadosPD = {
           "DE EMPREGO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -54932,8 +54932,8 @@ window.dadosPD = {
           "DE EMPREGO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -55017,8 +55017,8 @@ window.dadosPD = {
           "DESCOMPROMETIMENTO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -55065,8 +55065,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -55115,8 +55115,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -55162,8 +55162,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -55189,8 +55189,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -55257,8 +55257,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -55294,8 +55294,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -55351,8 +55351,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "COM ATESTADO",
@@ -55413,8 +55413,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -55475,8 +55475,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -55527,8 +55527,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -55582,8 +55582,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -55652,8 +55652,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -55714,8 +55714,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -55746,8 +55746,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -55801,8 +55801,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "NÃO PERTENCE",
@@ -55837,8 +55837,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -56233,8 +56233,8 @@ window.dadosPD = {
           "MEDIDA DISCIPLINAR"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -56277,8 +56277,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -56731,8 +56731,8 @@ window.dadosPD = {
           "DESCOMPROMETIMENTO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "COM ATESTADO",
@@ -56781,8 +56781,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -56805,8 +56805,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -57070,8 +57070,8 @@ window.dadosPD = {
           "PROBLEMAS PESSOAIS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -57108,8 +57108,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -57907,8 +57907,8 @@ window.dadosPD = {
           "PROBLEMAS PESSOAIS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "PROBLEMAS FAMILIARES"
@@ -57986,8 +57986,8 @@ window.dadosPD = {
           "PROBLEMAS PESSOAIS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -66486,8 +66486,8 @@ window.dadosPD = {
           "DOAÇÃO DE SANGUE"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -66614,8 +66614,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -67485,8 +67485,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -67549,8 +67549,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "SEM ATESTADO",
@@ -67592,8 +67592,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -67667,8 +67667,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "ABANDONO",
@@ -67722,8 +67722,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -67753,8 +67753,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -67812,8 +67812,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -67877,8 +67877,8 @@ window.dadosPD = {
     "2026-10-28_1": {
       "labels": [
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -67925,8 +67925,8 @@ window.dadosPD = {
     "2026-10-28_2": {
       "labels": [
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -67994,8 +67994,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -68085,8 +68085,8 @@ window.dadosPD = {
     "2026-10-29_2": {
       "labels": [
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -68149,8 +68149,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -68193,8 +68193,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -68230,8 +68230,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -68292,8 +68292,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -68345,8 +68345,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "BANCO",
@@ -68389,8 +68389,8 @@ window.dadosPD = {
     "2026-10-31_2": {
       "labels": [
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -68477,8 +68477,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -68553,8 +68553,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "BANCO",
@@ -68605,8 +68605,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -68668,8 +68668,8 @@ window.dadosPD = {
           "FALECIMENTO PARENTE/CÔNJUGE"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -68704,8 +68704,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FÉRIAS"
@@ -68769,8 +68769,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -68824,8 +68824,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "FALTA",
@@ -68875,8 +68875,8 @@ window.dadosPD = {
           "FALECIMENTO PARENTE/CÔNJUGE"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -68921,8 +68921,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "SEM ATESTADO",
@@ -69006,8 +69006,8 @@ window.dadosPD = {
           "INJUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -69046,8 +69046,8 @@ window.dadosPD = {
           "MÉDICO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -69084,8 +69084,8 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "SEM ATESTADO",
@@ -69174,8 +69174,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -69207,8 +69207,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -69238,8 +69238,8 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ],
         [
           "DESLIGADO"
@@ -69328,8 +69328,8 @@ window.dadosPD = {
           "JUSTIFICADA"
         ],
         [
-          "FOLGA",
-          "EXTRA (DSR)"
+          "BANCO DE HORAS",
+          "(DSR)"
         ]
       ],
       "data_abs": [
@@ -69360,8 +69360,8 @@ window.dadosPD = {
         "FÉRIAS"
       ],
       [
-        "FOLGA",
-        "EXTRA (DSR)"
+        "BANCO DE HORAS",
+        "(DSR)"
       ],
       [
         "DESLIGADO"
@@ -70034,5 +70034,22 @@ window.dadosPD = {
       "faltas": 1,
       "taxa": 12.5
     }
+  ],
+  "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
+    "<strong style='color:#ffffff;'>T1</strong>: EDSON SANTOS CAMPOS",
+    "<strong style='color:#ffffff;'>T1</strong>: GABRIELLY DA SILVA ALEXANDRIA",
+    "<strong style='color:#ffffff;'>T1</strong>: MARCIO VINICIO AMANCIO JUNIOR",
+    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
+    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T3</strong>: CLEITON MAGNO SILVA JUVENTINO",
+    "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
+    "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
+    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
+    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T3</strong>: RICARDO EUGENIO LAURINDO",
+    "<strong style='color:#ffffff;'>T3</strong>: TARCISIO RICARDO MARTINS CLARO"
   ]
 };
