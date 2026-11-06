@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "06/11/2026 16:54",
+  "atualizado_em": "06/11/2026 17:29",
   "progresso_geral_pct": 90,
   "total_cxs_geral": 157652,
   "total_loaded_cxs_geral": 142613,
@@ -86,17 +86,6 @@ window.dadosFechamento = {
       "caixas_carregadas": 1639,
       "caixas_rampa": 0,
       "caixas_processadas": 1639,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "MGI",
-      "carreta": "Carreta 08",
-      "tu": "610000013414",
-      "total_caixas": 542,
-      "caixas_carregadas": 542,
-      "caixas_rampa": 0,
-      "caixas_processadas": 542,
       "pct": 100,
       "status": "FINALIZADA"
     },
