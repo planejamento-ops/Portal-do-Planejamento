@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 14:13",
+  "atualizado_em": "06/11/2026 15:14",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -5373,27 +5373,30 @@ window.dadosPD = {
         "FECHAMENTO",
         "EXPEDICAO",
         "SEPARACAO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
-        16.7,
+        12.0,
         11.9,
         10.2,
-        9.4,
+        9.2,
         8.9,
-        8.3,
+        7.3,
         6.1,
-        5.3
+        5.3,
+        0.0
       ],
       "absolutos": [
-        2,
+        3,
         8,
         14,
         6,
-        7,
-        2,
+        9,
         3,
-        5
+        3,
+        5,
+        0
       ]
     },
     "2026-06-11_1": {
@@ -5405,7 +5408,8 @@ window.dadosPD = {
         "EXPEDICAO",
         "FECHAMENTO",
         "SEPARACAO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
         16.7,
@@ -5415,42 +5419,50 @@ window.dadosPD = {
         8.3,
         7.3,
         6.1,
-        6.0
+        5.9,
+        0.0
       ],
       "absolutos": [
-        1,
+        2,
         5,
         2,
         4,
         2,
         3,
         3,
-        3
+        3,
+        0
       ]
     },
     "2026-06-11_2": {
       "labels": [
-        "INVENTARIO",
         "SEPARAÇÃO",
         "EXPEDIÇÃO",
+        "INVENTARIO",
         "REABASTECIMENTO",
         "FECHAMENTO",
+        "EXPEDICAO",
+        "PLANEJAMENTO",
         "RECEBIMENTO"
       ],
       "data": [
-        25.0,
         16.3,
         15.0,
-        7.7,
-        4.8,
+        9.1,
+        7.1,
+        7.0,
+        5.9,
+        0.0,
         0.0
       ],
       "absolutos": [
-        1,
         8,
         3,
         1,
         1,
+        3,
+        1,
+        0,
         0
       ]
     },
@@ -5487,15 +5499,17 @@ window.dadosPD = {
         "FECHAMENTO",
         "INVENTARIO",
         "REABASTECIMENTO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
         19.4,
         16.8,
         8.8,
-        8.3,
         7.1,
-        6.8
+        7.1,
+        6.8,
+        0.0
       ],
       "absolutos": [
         13,
@@ -5503,7 +5517,8 @@ window.dadosPD = {
         5,
         1,
         3,
-        5
+        5,
+        0
       ]
     },
     "2026-06-12_1": {
@@ -5565,6 +5580,7 @@ window.dadosPD = {
         "SEPARAÇÃO",
         "RECEBIMENTO",
         "INVENTARIO",
+        "PLANEJAMENTO",
         "REABASTECIMENTO"
       ],
       "data": [
@@ -5573,6 +5589,7 @@ window.dadosPD = {
         11.4,
         9.1,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
@@ -5580,6 +5597,7 @@ window.dadosPD = {
         2,
         5,
         2,
+        0,
         0,
         0
       ]
@@ -25478,36 +25496,36 @@ window.dadosPD = {
       "labels": [
         "PACTUAL",
         "MEET",
-        "AMERICA",
-        "CEVA"
+        "CEVA",
+        "AMERICA"
       ],
       "data": [
-        14.8,
-        10.9,
-        8.8,
-        7.6
+        15.9,
+        12.5,
+        7.2,
+        6.5
       ],
       "absolutos": [
+        10,
         9,
-        7,
-        3,
-        28
+        29,
+        3
       ]
     },
     "2026-06-11_1": {
       "labels": [
-        "AMERICA",
         "PACTUAL",
+        "AMERICA",
         "CEVA"
       ],
       "data": [
+        16.0,
         14.3,
-        12.5,
-        8.6
+        8.3
       ],
       "absolutos": [
+        4,
         2,
-        3,
         18
       ]
     },
@@ -25519,16 +25537,16 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        31.6,
-        25.0,
-        11.1,
+        29.6,
+        23.5,
+        4.8,
         3.5
       ],
       "absolutos": [
-        6,
+        8,
         4,
         1,
-        3
+        4
       ]
     },
     "2026-06-11_3": {
@@ -25558,7 +25576,7 @@ window.dadosPD = {
       "data": [
         23.9,
         20.4,
-        10.2,
+        10.0,
         7.4
       ],
       "absolutos": [
@@ -25614,7 +25632,7 @@ window.dadosPD = {
       "data": [
         14.3,
         13.6,
-        11.1
+        10.5
       ],
       "absolutos": [
         3,
@@ -50981,10 +50999,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        17,
-        13,
-        6,
-        5,
+        18,
+        14,
+        8,
+        7,
         4,
         2,
         2,
@@ -50994,16 +51012,16 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        32.1,
-        56.6,
-        67.9,
-        77.4,
-        84.9,
-        88.7,
-        92.5,
-        94.3,
-        96.2,
-        98.1,
+        30.5,
+        54.2,
+        67.8,
+        79.7,
+        86.4,
+        89.8,
+        93.2,
+        94.9,
+        96.6,
+        98.3,
         100.0
       ]
     },
@@ -51042,21 +51060,21 @@ window.dadosPD = {
       "data_abs": [
         9,
         7,
+        4,
         3,
-        3,
-        1,
+        2,
         1,
         1,
         1
       ],
       "data_cum": [
-        34.6,
-        61.5,
-        73.1,
-        84.6,
-        88.5,
-        92.3,
-        96.2,
+        32.1,
+        57.1,
+        71.4,
+        82.1,
+        89.3,
+        92.9,
+        96.4,
         100.0
       ]
     },
@@ -51070,29 +51088,34 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
           "ABANDONO",
           "DE EMPREGO"
         ],
         [
           "DESCOMPROMETIMENTO"
-        ],
-        [
-          "FALTA",
-          "JUSTIFICADA"
         ]
       ],
       "data_abs": [
-        7,
-        4,
+        8,
+        5,
+        2,
         1,
         1,
         1
       ],
       "data_cum": [
-        50.0,
-        78.6,
-        85.7,
-        92.9,
+        44.4,
+        72.2,
+        83.3,
+        88.9,
+        94.4,
         100.0
       ]
     },
