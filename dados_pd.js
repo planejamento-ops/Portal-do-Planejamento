@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 15:42",
+  "atualizado_em": "06/11/2026 16:01",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -5384,7 +5384,7 @@ window.dadosPD = {
         8.9,
         7.3,
         6.1,
-        5.3,
+        5.4,
         0.0
       ],
       "absolutos": [
@@ -5395,7 +5395,7 @@ window.dadosPD = {
         9,
         3,
         3,
-        5,
+        6,
         0
       ]
     },
@@ -5442,8 +5442,8 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "FECHAMENTO",
         "EXPEDICAO",
-        "PLANEJAMENTO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
         16.3,
@@ -5452,7 +5452,7 @@ window.dadosPD = {
         7.1,
         7.0,
         5.9,
-        0.0,
+        2.5,
         0.0
       ],
       "absolutos": [
@@ -5462,7 +5462,7 @@ window.dadosPD = {
         1,
         3,
         1,
-        0,
+        1,
         0
       ]
     },
@@ -25500,15 +25500,15 @@ window.dadosPD = {
         "AMERICA"
       ],
       "data": [
-        15.9,
+        15.6,
         12.5,
-        7.2,
+        7.1,
         6.5
       ],
       "absolutos": [
         10,
         9,
-        29,
+        30,
         3
       ]
     },
@@ -25538,15 +25538,15 @@ window.dadosPD = {
       ],
       "data": [
         29.6,
-        23.5,
+        22.2,
         4.8,
-        3.5
+        3.8
       ],
       "absolutos": [
         8,
         4,
         1,
-        4
+        5
       ]
     },
     "2026-06-11_3": {
@@ -51000,8 +51000,8 @@ window.dadosPD = {
       ],
       "data_abs": [
         18,
-        14,
-        8,
+        15,
+        9,
         7,
         4,
         2,
@@ -51012,16 +51012,16 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        30.5,
-        54.2,
-        67.8,
-        79.7,
-        86.4,
-        89.8,
-        93.2,
-        94.9,
-        96.6,
-        98.3,
+        29.5,
+        54.1,
+        68.9,
+        80.3,
+        86.9,
+        90.2,
+        93.4,
+        95.1,
+        96.7,
+        98.4,
         100.0
       ]
     },
@@ -51105,17 +51105,17 @@ window.dadosPD = {
       "data_abs": [
         8,
         5,
+        3,
         2,
-        1,
         1,
         1
       ],
       "data_cum": [
-        44.4,
-        72.2,
-        83.3,
-        88.9,
-        94.4,
+        40.0,
+        65.0,
+        80.0,
+        90.0,
+        95.0,
         100.0
       ]
     },
@@ -69388,10 +69388,6 @@ window.dadosPD = {
       ],
       [
         "DESLIGADO"
-      ],
-      [
-        "OUTROS",
-        "MOTIVOS"
       ]
     ],
     "data_abs": [
@@ -69399,8 +69395,7 @@ window.dadosPD = {
       47,
       32,
       24,
-      18,
-      35
+      18
     ]
   },
   "grafico_diario": {
