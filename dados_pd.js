@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 09:03",
+  "atualizado_em": "06/11/2026 09:36",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -2103,6 +2103,7 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "EXPEDICAO",
         "RECEBIMENTO",
+        "INVENTARIO",
         "SEPARACAO",
         "FECHAMENTO",
         "PLANEJAMENTO"
@@ -2110,7 +2111,8 @@ window.dadosPD = {
       "data": [
         14.0,
         11.6,
-        10.3,
+        10.0,
+        7.7,
         5.3,
         2.3,
         0.0
@@ -2119,6 +2121,7 @@ window.dadosPD = {
         6,
         5,
         4,
+        1,
         3,
         1,
         0
@@ -2126,6 +2129,7 @@ window.dadosPD = {
     },
     "2026-04-11_1": {
       "labels": [
+        "INVENTARIO",
         "EXPEDICAO",
         "REABASTECIMENTO",
         "RECEBIMENTO",
@@ -2133,13 +2137,15 @@ window.dadosPD = {
         "PLANEJAMENTO"
       ],
       "data": [
+        16.7,
         12.5,
         10.5,
-        9.1,
+        8.7,
         4.5,
         0.0
       ],
       "absolutos": [
+        1,
         3,
         2,
         2,
@@ -2154,6 +2160,7 @@ window.dadosPD = {
         "EXPEDICAO",
         "SEPARACAO",
         "FECHAMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "data": [
@@ -2162,6 +2169,7 @@ window.dadosPD = {
         10.5,
         5.3,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
@@ -2169,6 +2177,7 @@ window.dadosPD = {
         2,
         2,
         3,
+        0,
         0,
         0
       ]
@@ -2184,6 +2193,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "REABASTECIMENTO",
         "EXPEDICAO",
+        "INVENTARIO",
         "PLANEJAMENTO",
         "RECEBIMENTO"
       ],
@@ -2193,12 +2203,14 @@ window.dadosPD = {
         9.1,
         0.0,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
         5,
         2,
         2,
+        0,
         0,
         0,
         0
@@ -2220,6 +2232,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "REABASTECIMENTO",
         "EXPEDICAO",
+        "INVENTARIO",
         "PLANEJAMENTO",
         "RECEBIMENTO"
       ],
@@ -2229,12 +2242,14 @@ window.dadosPD = {
         9.1,
         0.0,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
         5,
         2,
         2,
+        0,
         0,
         0,
         0
@@ -5353,6 +5368,7 @@ window.dadosPD = {
       "labels": [
         "INVENTARIO",
         "EXPEDIÇÃO",
+        "SEPARACAO",
         "SEPARAÇÃO",
         "REABASTECIMENTO",
         "FECHAMENTO",
@@ -5362,6 +5378,7 @@ window.dadosPD = {
       "data": [
         16.7,
         11.9,
+        10.7,
         10.2,
         9.4,
         8.9,
@@ -5371,6 +5388,7 @@ window.dadosPD = {
       "absolutos": [
         2,
         8,
+        3,
         14,
         6,
         7,
@@ -5382,6 +5400,7 @@ window.dadosPD = {
       "labels": [
         "INVENTARIO",
         "REABASTECIMENTO",
+        "SEPARACAO",
         "EXPEDIÇÃO",
         "SEPARAÇÃO",
         "EXPEDICAO",
@@ -5391,6 +5410,7 @@ window.dadosPD = {
       "data": [
         16.7,
         14.3,
+        10.7,
         9.1,
         9.1,
         8.3,
@@ -5400,6 +5420,7 @@ window.dadosPD = {
       "absolutos": [
         1,
         5,
+        3,
         2,
         4,
         2,
@@ -19314,6 +19335,7 @@ window.dadosPD = {
         "EXPEDICAO",
         "REABASTECIMENTO",
         "RECEBIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
@@ -19321,7 +19343,8 @@ window.dadosPD = {
         302.7,
         267.8,
         260.3,
-        246.7,
+        253.8,
+        84.4,
         42.1
       ],
       "horas_prev": [
@@ -19329,7 +19352,8 @@ window.dadosPD = {
         309.8,
         303.0,
         302.4,
-        274.9,
+        282.0,
+        91.5,
         42.1
       ],
       "pct_capacidade": [
@@ -19337,7 +19361,8 @@ window.dadosPD = {
         97.7,
         88.4,
         86.1,
-        89.7,
+        90.0,
+        92.2,
         100.0
       ]
     },
@@ -19347,27 +19372,31 @@ window.dadosPD = {
         "FECHAMENTO",
         "RECEBIMENTO",
         "REABASTECIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
         149.1,
         149.1,
-        142.0,
+        149.1,
         120.7,
+        35.5,
         14.2
       ],
       "horas_prev": [
         170.4,
         156.2,
-        156.2,
+        163.3,
         134.9,
+        42.6,
         14.2
       ],
       "pct_capacidade": [
         87.5,
         95.5,
-        90.9,
+        91.3,
         89.5,
+        83.3,
         100.0
       ]
     },
@@ -19378,6 +19407,7 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "EXPEDICAO",
         "RECEBIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
@@ -19386,6 +19416,7 @@ window.dadosPD = {
         139.6,
         118.7,
         104.7,
+        48.9,
         20.9
       ],
       "horas_prev": [
@@ -19394,6 +19425,7 @@ window.dadosPD = {
         167.5,
         132.6,
         118.7,
+        48.9,
         20.9
       ],
       "pct_capacidade": [
@@ -19402,6 +19434,7 @@ window.dadosPD = {
         83.3,
         89.5,
         88.2,
+        100.0,
         100.0
       ]
     },
@@ -19424,6 +19457,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
@@ -19432,6 +19466,7 @@ window.dadosPD = {
         116.6,
         116.6,
         110.8,
+        11.7,
         11.7
       ],
       "horas_prev": [
@@ -19440,6 +19475,7 @@ window.dadosPD = {
         128.3,
         128.3,
         110.8,
+        11.7,
         11.7
       ],
       "pct_capacidade": [
@@ -19447,6 +19483,7 @@ window.dadosPD = {
         100.0,
         90.9,
         90.9,
+        100.0,
         100.0,
         100.0
       ]
@@ -19470,6 +19507,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
@@ -19478,6 +19516,7 @@ window.dadosPD = {
         116.6,
         116.6,
         110.8,
+        11.7,
         11.7
       ],
       "horas_prev": [
@@ -19486,6 +19525,7 @@ window.dadosPD = {
         128.3,
         128.3,
         110.8,
+        11.7,
         11.7
       ],
       "pct_capacidade": [
@@ -19493,6 +19533,7 @@ window.dadosPD = {
         100.0,
         90.9,
         90.9,
+        100.0,
         100.0,
         100.0
       ]
@@ -19504,6 +19545,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "horas_disp": [
@@ -19512,6 +19554,7 @@ window.dadosPD = {
         116.6,
         116.6,
         110.8,
+        11.7,
         11.7
       ],
       "horas_prev": [
@@ -19520,6 +19563,7 @@ window.dadosPD = {
         128.3,
         128.3,
         110.8,
+        11.7,
         11.7
       ],
       "pct_capacidade": [
@@ -19527,6 +19571,7 @@ window.dadosPD = {
         100.0,
         90.9,
         90.9,
+        100.0,
         100.0,
         100.0
       ]
@@ -24428,6 +24473,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "REABASTECIMENTO",
         "EXPEDIÇÃO",
+        "SEPARACAO",
         "EXPEDICAO",
         "INVENTARIO"
       ],
@@ -24437,6 +24483,7 @@ window.dadosPD = {
         491.0,
         390.0,
         388.9,
+        177.5,
         156.2,
         68.1
       ],
@@ -24446,6 +24493,7 @@ window.dadosPD = {
         536.8,
         432.5,
         441.6,
+        198.8,
         170.4,
         82.2
       ],
@@ -24455,6 +24503,7 @@ window.dadosPD = {
         91.5,
         90.2,
         88.1,
+        89.3,
         91.7,
         82.8
       ]
@@ -24465,6 +24514,7 @@ window.dadosPD = {
         "SEPARAÇÃO",
         "FECHAMENTO",
         "REABASTECIMENTO",
+        "SEPARACAO",
         "EXPEDICAO",
         "EXPEDIÇÃO",
         "INVENTARIO"
@@ -24474,6 +24524,7 @@ window.dadosPD = {
         284.0,
         269.8,
         213.0,
+        177.5,
         156.2,
         142.0,
         35.5
@@ -24483,6 +24534,7 @@ window.dadosPD = {
         312.4,
         291.1,
         248.5,
+        198.8,
         170.4,
         156.2,
         42.6
@@ -24492,6 +24544,7 @@ window.dadosPD = {
         90.9,
         92.7,
         85.7,
+        89.3,
         91.7,
         90.9,
         83.3
@@ -41967,6 +42020,17332 @@ window.dadosPD = {
       100.0,
       100.0
     ]
+  },
+  "grafico_empresa_map": {
+    "2026-01-02_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        20.0,
+        16.7,
+        12.0,
+        7.7
+      ],
+      "absolutos": [
+        4,
+        2,
+        11,
+        2
+      ]
+    },
+    "2026-01-02_1": {
+      "labels": [
+        "G3 SERVICOS",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        14.3,
+        14.0,
+        11.1,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        8,
+        1,
+        1
+      ]
+    },
+    "2026-01-02_2": {
+      "labels": [
+        "PACTUAL",
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        20.0,
+        12.5,
+        8.6
+      ],
+      "absolutos": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    "2026-01-02_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-01-03_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        28.6,
+        18.8,
+        13.3,
+        9.1
+      ],
+      "absolutos": [
+        2,
+        3,
+        11,
+        3
+      ]
+    },
+    "2026-01-03_1": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        33.3,
+        7.7
+      ],
+      "absolutos": [
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-01-03_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        18.2,
+        14.3
+      ],
+      "absolutos": [
+        1,
+        2,
+        5
+      ]
+    },
+    "2026-01-03_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        18.2
+      ],
+      "absolutos": [
+        3,
+        4
+      ]
+    },
+    "2026-01-05_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        16.1,
+        13.5,
+        10.3
+      ],
+      "absolutos": [
+        3,
+        20,
+        7,
+        3
+      ]
+    },
+    "2026-01-05_1": {
+      "labels": [
+        "CEVA",
+        "G3 SERVICOS",
+        "MEET"
+      ],
+      "data": [
+        14.3,
+        14.3,
+        12.5
+      ],
+      "absolutos": [
+        5,
+        1,
+        2
+      ]
+    },
+    "2026-01-05_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        15.8,
+        11.5,
+        5.9
+      ],
+      "absolutos": [
+        2,
+        3,
+        6,
+        1
+      ]
+    },
+    "2026-01-05_3": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        24.3,
+        21.1
+      ],
+      "absolutos": [
+        9,
+        4
+      ]
+    },
+    "2026-01-06_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET",
+        "G3 SERVICOS"
+      ],
+      "data": [
+        16.7,
+        16.2,
+        10.0,
+        8.7
+      ],
+      "absolutos": [
+        6,
+        25,
+        6,
+        2
+      ]
+    },
+    "2026-01-06_1": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        10.0,
+        4.5
+      ],
+      "absolutos": [
+        8,
+        1,
+        1
+      ]
+    },
+    "2026-01-06_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        22.7,
+        12.1,
+        10.5
+      ],
+      "absolutos": [
+        2,
+        5,
+        8,
+        2
+      ]
+    },
+    "2026-01-06_3": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        15.8
+      ],
+      "absolutos": [
+        9,
+        3
+      ]
+    },
+    "2026-01-07_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET",
+        "G3 SERVICOS"
+      ],
+      "data": [
+        18.8,
+        16.2,
+        11.3,
+        11.1
+      ],
+      "absolutos": [
+        6,
+        22,
+        6,
+        2
+      ]
+    },
+    "2026-01-07_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        17.6
+      ],
+      "absolutos": [
+        2,
+        6
+      ]
+    },
+    "2026-01-07_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        13.6,
+        12.1,
+        5.6
+      ],
+      "absolutos": [
+        2,
+        3,
+        8,
+        1
+      ]
+    },
+    "2026-01-07_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.3,
+        25.0,
+        22.2
+      ],
+      "absolutos": [
+        5,
+        1,
+        8
+      ]
+    },
+    "2026-01-08_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "G3 SERVICOS"
+      ],
+      "data": [
+        18.6,
+        12.9,
+        12.0,
+        11.1
+      ],
+      "absolutos": [
+        8,
+        4,
+        15,
+        2
+      ]
+    },
+    "2026-01-08_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        14.3,
+        12.5
+      ],
+      "absolutos": [
+        1,
+        5,
+        2
+      ]
+    },
+    "2026-01-08_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        22.2,
+        13.6,
+        9.2
+      ],
+      "absolutos": [
+        2,
+        4,
+        3,
+        6
+      ]
+    },
+    "2026-01-08_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        16.0
+      ],
+      "absolutos": [
+        2,
+        4
+      ]
+    },
+    "2026-01-09_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        15.4,
+        13.8,
+        13.0,
+        11.5
+      ],
+      "absolutos": [
+        2,
+        4,
+        6,
+        14
+      ]
+    },
+    "2026-01-09_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        4.8
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-01-09_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        18.2,
+        10.8,
+        5.6
+      ],
+      "absolutos": [
+        2,
+        4,
+        7,
+        1
+      ]
+    },
+    "2026-01-09_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        26.3,
+        16.7
+      ],
+      "absolutos": [
+        5,
+        6
+      ]
+    },
+    "2026-01-12_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "G3 SERVICOS",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        31.8,
+        23.5,
+        22.2,
+        19.6,
+        14.3
+      ],
+      "absolutos": [
+        7,
+        19,
+        4,
+        41,
+        7
+      ]
+    },
+    "2026-01-12_1": {
+      "labels": [
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        14.3,
+        9.1,
+        6.2
+      ],
+      "absolutos": [
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    "2026-01-12_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        22.2,
+        13.6,
+        9.4
+      ],
+      "absolutos": [
+        2,
+        4,
+        3,
+        6
+      ]
+    },
+    "2026-01-12_3": {
+      "labels": [
+        "G3 SERVICOS",
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        33.3,
+        31.8,
+        29.8,
+        28.6,
+        14.3
+      ],
+      "absolutos": [
+        1,
+        7,
+        14,
+        32,
+        3
+      ]
+    },
+    "2026-01-13_GERAL": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        28.3,
+        16.7,
+        15.8,
+        15.6
+      ],
+      "absolutos": [
+        15,
+        3,
+        21,
+        5
+      ]
+    },
+    "2026-01-13_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        16.7,
+        14.3,
+        5.9
+      ],
+      "absolutos": [
+        3,
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-01-13_2": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.8,
+        25.0,
+        13.6,
+        12.5
+      ],
+      "absolutos": [
+        5,
+        2,
+        3,
+        8
+      ]
+    },
+    "2026-01-13_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        36.8,
+        31.4,
+        25.0
+      ],
+      "absolutos": [
+        7,
+        11,
+        1
+      ]
+    },
+    "2026-01-14_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        30.8,
+        23.9,
+        14.9,
+        13.8
+      ],
+      "absolutos": [
+        4,
+        11,
+        18,
+        4
+      ]
+    },
+    "2026-01-14_1": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        33.3,
+        4.8
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-01-14_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        37.5,
+        27.8,
+        15.4,
+        13.6
+      ],
+      "absolutos": [
+        3,
+        5,
+        10,
+        3
+      ]
+    },
+    "2026-01-14_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        31.6,
+        20.0
+      ],
+      "absolutos": [
+        6,
+        7
+      ]
+    },
+    "2026-01-15_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        10.3,
+        6.5,
+        4.8
+      ],
+      "absolutos": [
+        3,
+        5,
+        1
+      ]
+    },
+    "2026-01-15_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        4.8
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-01-15_2": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        9.7
+      ],
+      "absolutos": [
+        3
+      ]
+    },
+    "2026-01-15_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        4.0
+      ],
+      "absolutos": [
+        3,
+        1
+      ]
+    },
+    "2026-01-16_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.9,
+        8.3,
+        3.6
+      ],
+      "absolutos": [
+        9,
+        8,
+        1
+      ]
+    },
+    "2026-01-16_1": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        6.7,
+        5.3
+      ],
+      "absolutos": [
+        2,
+        1
+      ]
+    },
+    "2026-01-16_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        7.1,
+        3.2
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-01-16_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        41.2,
+        14.3
+      ],
+      "absolutos": [
+        7,
+        5
+      ]
+    },
+    "2026-01-17_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.2,
+        7.4,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        7,
+        2
+      ]
+    },
+    "2026-01-17_1": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        6.7,
+        5.3
+      ],
+      "absolutos": [
+        2,
+        1
+      ]
+    },
+    "2026-01-17_2": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        7.1,
+        6.5
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-01-17_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.7,
+        12.5,
+        9.1
+      ],
+      "absolutos": [
+        4,
+        1,
+        3
+      ]
+    },
+    "2026-01-18_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-01-18_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-01-18_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-01-18_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-01-19_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        17.0,
+        15.5
+      ],
+      "absolutos": [
+        9,
+        16
+      ]
+    },
+    "2026-01-19_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        10.0
+      ],
+      "absolutos": [
+        2,
+        2
+      ]
+    },
+    "2026-01-19_2": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        14.3,
+        8.3
+      ],
+      "absolutos": [
+        7,
+        1
+      ]
+    },
+    "2026-01-19_3": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        20.6,
+        19.4
+      ],
+      "absolutos": [
+        7,
+        6
+      ]
+    },
+    "2026-01-20_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "G3 SERVIÇOS"
+      ],
+      "data": [
+        10.9,
+        8.1,
+        7.8,
+        6.7
+      ],
+      "absolutos": [
+        5,
+        3,
+        9,
+        1
+      ]
+    },
+    "2026-01-20_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        10.5,
+        6.7
+      ],
+      "absolutos": [
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-01-20_2": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        8.3,
+        5.9,
+        3.7
+      ],
+      "absolutos": [
+        1,
+        5,
+        1,
+        1
+      ]
+    },
+    "2026-01-20_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        8.0
+      ],
+      "absolutos": [
+        2,
+        2
+      ]
+    },
+    "2026-01-21_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        13.0,
+        11.4,
+        5.1
+      ],
+      "absolutos": [
+        6,
+        14,
+        2
+      ]
+    },
+    "2026-01-21_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        9.3
+      ],
+      "absolutos": [
+        4,
+        4
+      ]
+    },
+    "2026-01-21_2": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        8.7,
+        8.5
+      ],
+      "absolutos": [
+        2,
+        4
+      ]
+    },
+    "2026-01-21_3": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        18.2,
+        13.3
+      ],
+      "absolutos": [
+        6,
+        2
+      ]
+    },
+    "2026-01-22_GERAL": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        12.1,
+        10.6,
+        7.5
+      ],
+      "absolutos": [
+        17,
+        5,
+        3
+      ]
+    },
+    "2026-01-22_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        18.8,
+        11.4
+      ],
+      "absolutos": [
+        2,
+        3,
+        5
+      ]
+    },
+    "2026-01-22_2": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        6.2
+      ],
+      "absolutos": [
+        3
+      ]
+    },
+    "2026-01-22_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        18.8,
+        11.1,
+        11.1
+      ],
+      "absolutos": [
+        9,
+        2,
+        1
+      ]
+    },
+    "2026-01-23_GERAL": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        12.5,
+        6.1,
+        5.3
+      ],
+      "absolutos": [
+        19,
+        4,
+        3
+      ]
+    },
+    "2026-01-23_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        11.1,
+        6.7
+      ],
+      "absolutos": [
+        1,
+        3
+      ]
+    },
+    "2026-01-23_2": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        8.5
+      ],
+      "absolutos": [
+        4
+      ]
+    },
+    "2026-01-23_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        20.0,
+        11.1,
+        8.0
+      ],
+      "absolutos": [
+        12,
+        4,
+        2
+      ]
+    },
+    "2026-01-24_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.3,
+        9.5,
+        2.4
+      ],
+      "absolutos": [
+        8,
+        13,
+        1
+      ]
+    },
+    "2026-01-24_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        11.1,
+        4.4
+      ],
+      "absolutos": [
+        3,
+        1,
+        2
+      ]
+    },
+    "2026-01-24_2": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        10.6,
+        7.7
+      ],
+      "absolutos": [
+        5,
+        1
+      ]
+    },
+    "2026-01-24_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        13.3
+      ],
+      "absolutos": [
+        4,
+        6
+      ]
+    },
+    "2026-01-26_GERAL": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        14.2,
+        12.8,
+        9.5
+      ],
+      "absolutos": [
+        2,
+        20,
+        6,
+        4
+      ]
+    },
+    "2026-01-26_1": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        8.7,
+        6.2
+      ],
+      "absolutos": [
+        1,
+        4,
+        1
+      ]
+    },
+    "2026-01-26_2": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        8.7,
+        8.3
+      ],
+      "absolutos": [
+        1,
+        2,
+        4
+      ]
+    },
+    "2026-01-26_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        27.8,
+        25.5,
+        20.0
+      ],
+      "absolutos": [
+        5,
+        12,
+        2
+      ]
+    },
+    "2026-01-27_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "G3 SERVIÇOS"
+      ],
+      "data": [
+        11.1,
+        9.0,
+        8.6,
+        8.3
+      ],
+      "absolutos": [
+        6,
+        6,
+        11,
+        1
+      ]
+    },
+    "2026-01-27_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        28.6,
+        9.4,
+        5.6
+      ],
+      "absolutos": [
+        2,
+        3,
+        1
+      ]
+    },
+    "2026-01-27_2": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        13.3,
+        8.0,
+        4.2
+      ],
+      "absolutos": [
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-01-27_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        12.5,
+        9.1,
+        8.8
+      ],
+      "absolutos": [
+        6,
+        2,
+        3
+      ]
+    },
+    "2026-01-28_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        8.2,
+        6.7,
+        5.1
+      ],
+      "absolutos": [
+        4,
+        4,
+        6
+      ]
+    },
+    "2026-01-28_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        9.5
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-01-28_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        8.0,
+        6.7
+      ],
+      "absolutos": [
+        2,
+        1
+      ]
+    },
+    "2026-01-28_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        9.1,
+        8.6,
+        8.2
+      ],
+      "absolutos": [
+        2,
+        3,
+        4
+      ]
+    },
+    "2026-01-29_GERAL": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        10.2,
+        9.1,
+        3.5
+      ],
+      "absolutos": [
+        2,
+        5,
+        5,
+        4
+      ]
+    },
+    "2026-01-29_1": {
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        33.3
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-01-29_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        8.0,
+        6.7,
+        2.1
+      ],
+      "absolutos": [
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-01-29_3": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        66.7,
+        13.6,
+        8.1,
+        6.1
+      ],
+      "absolutos": [
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    "2026-01-30_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.7,
+        8.9,
+        5.4
+      ],
+      "absolutos": [
+        7,
+        4,
+        6
+      ]
+    },
+    "2026-01-30_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        14.3
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-01-30_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        7.1,
+        5.3,
+        2.9
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-01-30_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.2,
+        12.5,
+        4.8
+      ],
+      "absolutos": [
+        6,
+        3,
+        3
+      ]
+    },
+    "2026-01-31_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVIÇOS",
+        "CEVA"
+      ],
+      "data": [
+        27.0,
+        16.2,
+        14.3,
+        11.0
+      ],
+      "absolutos": [
+        10,
+        6,
+        1,
+        12
+      ]
+    },
+    "2026-01-31_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        25.0,
+        14.3
+      ],
+      "absolutos": [
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-01-31_2": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        13.3,
+        12.5,
+        12.0
+      ],
+      "absolutos": [
+        2,
+        6,
+        3
+      ]
+    },
+    "2026-01-31_3": {
+      "labels": [
+        "MEET",
+        "G3 SERVIÇOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        38.9,
+        33.3,
+        20.0,
+        8.5
+      ],
+      "absolutos": [
+        7,
+        1,
+        2,
+        4
+      ]
+    },
+    "2026-02-01_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        25.0,
+        18.8
+      ],
+      "absolutos": [
+        4,
+        5,
+        3
+      ]
+    },
+    "2026-02-01_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-01_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-01_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        25.0,
+        18.8
+      ],
+      "absolutos": [
+        4,
+        5,
+        3
+      ]
+    },
+    "2026-02-02_GERAL": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        25.0,
+        12.9,
+        8.6
+      ],
+      "absolutos": [
+        1,
+        6,
+        4,
+        6
+      ]
+    },
+    "2026-02-02_1": {
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        66.7
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-02-02_2": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        13.3,
+        12.0,
+        10.6
+      ],
+      "absolutos": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    "2026-02-02_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        25.0,
+        12.5
+      ],
+      "absolutos": [
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-02-03_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        15.0,
+        12.0,
+        11.4
+      ],
+      "absolutos": [
+        2,
+        6,
+        12,
+        4
+      ]
+    },
+    "2026-02-03_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        9.1
+      ],
+      "absolutos": [
+        2,
+        2
+      ]
+    },
+    "2026-02-03_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        16.0,
+        13.3,
+        12.8
+      ],
+      "absolutos": [
+        1,
+        4,
+        2,
+        6
+      ]
+    },
+    "2026-02-03_3": {
+      "labels": [
+        "G3 SERVICOS",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        33.3,
+        12.9,
+        12.5
+      ],
+      "absolutos": [
+        1,
+        4,
+        2
+      ]
+    },
+    "2026-02-04_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        13.6,
+        10.5,
+        9.1,
+        8.3
+      ],
+      "absolutos": [
+        6,
+        4,
+        1,
+        10
+      ]
+    },
+    "2026-02-04_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        4.0
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-02-04_2": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        16.7,
+        14.3,
+        11.1
+      ],
+      "absolutos": [
+        4,
+        1,
+        4,
+        7
+      ]
+    },
+    "2026-02-04_3": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        6.2,
+        6.2
+      ],
+      "absolutos": [
+        2,
+        1
+      ]
+    },
+    "2026-02-05_GERAL": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.3,
+        11.1,
+        11.1,
+        11.0
+      ],
+      "absolutos": [
+        11,
+        1,
+        6,
+        14
+      ]
+    },
+    "2026-02-05_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        17.4,
+        12.2
+      ],
+      "absolutos": [
+        4,
+        5
+      ]
+    },
+    "2026-02-05_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        33.3,
+        12.5,
+        12.0,
+        12.0
+      ],
+      "absolutos": [
+        1,
+        2,
+        6,
+        3
+      ]
+    },
+    "2026-02-05_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.2,
+        15.0,
+        8.3
+      ],
+      "absolutos": [
+        5,
+        3,
+        3
+      ]
+    },
+    "2026-02-06_GERAL": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.3,
+        20.0,
+        15.2,
+        7.6
+      ],
+      "absolutos": [
+        10,
+        2,
+        5,
+        8
+      ]
+    },
+    "2026-02-06_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-02-06_2": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        36.8,
+        33.3,
+        17.4,
+        11.5
+      ],
+      "absolutos": [
+        7,
+        2,
+        4,
+        6
+      ]
+    },
+    "2026-02-06_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        2.9
+      ],
+      "absolutos": [
+        3,
+        1
+      ]
+    },
+    "2026-02-07_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "G3 SERVICOS"
+      ],
+      "data": [
+        25.3,
+        20.3,
+        17.6,
+        6.7
+      ],
+      "absolutos": [
+        20,
+        12,
+        27,
+        1
+      ]
+    },
+    "2026-02-07_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        19.0,
+        17.5
+      ],
+      "absolutos": [
+        3,
+        4,
+        7
+      ]
+    },
+    "2026-02-07_2": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.8,
+        16.7,
+        14.3,
+        7.9
+      ],
+      "absolutos": [
+        5,
+        1,
+        4,
+        5
+      ]
+    },
+    "2026-02-07_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        30.0,
+        29.7,
+        22.7
+      ],
+      "absolutos": [
+        15,
+        11,
+        5
+      ]
+    },
+    "2026-02-08_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-08_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-08_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-08_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-09_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "G3 SERVICOS"
+      ],
+      "data": [
+        26.1,
+        18.2,
+        15.3,
+        9.1
+      ],
+      "absolutos": [
+        18,
+        10,
+        19,
+        1
+      ]
+    },
+    "2026-02-09_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        31.8,
+        24.3,
+        11.1
+      ],
+      "absolutos": [
+        7,
+        9,
+        1
+      ]
+    },
+    "2026-02-09_2": {
+      "labels": [
+        "PACTUAL",
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        20.0,
+        19.0,
+        6.5
+      ],
+      "absolutos": [
+        6,
+        1,
+        4,
+        4
+      ]
+    },
+    "2026-02-09_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        26.9,
+        24.0,
+        16.7
+      ],
+      "absolutos": [
+        7,
+        6,
+        3
+      ]
+    },
+    "2026-02-10_GERAL": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.6,
+        12.5,
+        11.5,
+        11.0
+      ],
+      "absolutos": [
+        15,
+        2,
+        7,
+        16
+      ]
+    },
+    "2026-02-10_1": {
+      "labels": [
+        "PACTUAL",
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        18.2,
+        16.1,
+        12.2
+      ],
+      "absolutos": [
+        3,
+        2,
+        5,
+        6
+      ]
+    },
+    "2026-02-10_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        7.4,
+        6.6
+      ],
+      "absolutos": [
+        3,
+        2,
+        4
+      ]
+    },
+    "2026-02-10_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        21.2,
+        17.1,
+        10.0
+      ],
+      "absolutos": [
+        7,
+        6,
+        2
+      ]
+    },
+    "2026-02-11_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        20.2,
+        16.0,
+        15.6,
+        13.3,
+        12.1
+      ],
+      "absolutos": [
+        18,
+        12,
+        5,
+        2,
+        39
+      ]
+    },
+    "2026-02-11_1": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        14.3,
+        14.3,
+        12.6
+      ],
+      "absolutos": [
+        7,
+        1,
+        3,
+        18
+      ]
+    },
+    "2026-02-11_2": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        21.1,
+        20.0,
+        19.2,
+        15.2,
+        12.4
+      ],
+      "absolutos": [
+        8,
+        1,
+        5,
+        7,
+        18
+      ]
+    },
+    "2026-02-11_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        18.8,
+        9.1
+      ],
+      "absolutos": [
+        2,
+        3,
+        3
+      ]
+    },
+    "2026-02-12_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "G3 SERVICOS",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        24.0,
+        18.2,
+        13.3,
+        12.9,
+        6.8
+      ],
+      "absolutos": [
+        25,
+        4,
+        2,
+        29,
+        5
+      ]
+    },
+    "2026-02-12_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        14.3,
+        5.6
+      ],
+      "absolutos": [
+        4,
+        1,
+        2
+      ]
+    },
+    "2026-02-12_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        40.0,
+        25.0,
+        11.5,
+        7.4
+      ],
+      "absolutos": [
+        2,
+        5,
+        7,
+        2
+      ]
+    },
+    "2026-02-12_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        24.2,
+        18.2,
+        15.7,
+        5.1
+      ],
+      "absolutos": [
+        16,
+        4,
+        20,
+        2
+      ]
+    },
+    "2026-02-13_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "G3 SERVICOS",
+        "PACTUAL"
+      ],
+      "data": [
+        26.2,
+        17.4,
+        13.3,
+        6.5
+      ],
+      "absolutos": [
+        21,
+        24,
+        2,
+        4
+      ]
+    },
+    "2026-02-13_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        30.8,
+        14.3,
+        14.3
+      ],
+      "absolutos": [
+        8,
+        6,
+        2
+      ]
+    },
+    "2026-02-13_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        40.0,
+        19.0,
+        14.8,
+        3.7
+      ],
+      "absolutos": [
+        2,
+        4,
+        9,
+        1
+      ]
+    },
+    "2026-02-13_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        27.3,
+        25.7,
+        4.8
+      ],
+      "absolutos": [
+        9,
+        9,
+        1
+      ]
+    },
+    "2026-02-14_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "G3 SERVICOS"
+      ],
+      "data": [
+        26.0,
+        18.4,
+        13.5,
+        13.3
+      ],
+      "absolutos": [
+        19,
+        25,
+        7,
+        2
+      ]
+    },
+    "2026-02-14_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.5,
+        10.0,
+        9.1
+      ],
+      "absolutos": [
+        3,
+        5,
+        1
+      ]
+    },
+    "2026-02-14_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        40.0,
+        25.0,
+        20.8,
+        4.8
+      ],
+      "absolutos": [
+        2,
+        5,
+        10,
+        1
+      ]
+    },
+    "2026-02-14_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        37.9,
+        26.3,
+        25.0
+      ],
+      "absolutos": [
+        11,
+        10,
+        5
+      ]
+    },
+    "2026-02-16_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-16_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-16_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-16_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-17_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        40.0,
+        29.5,
+        22.4
+      ],
+      "absolutos": [
+        2,
+        18,
+        13,
+        19
+      ]
+    },
+    "2026-02-17_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-17_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        21.1,
+        19.2,
+        18.3
+      ],
+      "absolutos": [
+        2,
+        4,
+        5,
+        11
+      ]
+    },
+    "2026-02-17_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        53.8,
+        44.4,
+        33.3
+      ],
+      "absolutos": [
+        14,
+        8,
+        8
+      ]
+    },
+    "2026-02-18_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        32.4,
+        23.8,
+        23.1,
+        19.2
+      ],
+      "absolutos": [
+        22,
+        10,
+        3,
+        23
+      ]
+    },
+    "2026-02-18_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        28.6,
+        5.3
+      ],
+      "absolutos": [
+        2,
+        4,
+        1
+      ]
+    },
+    "2026-02-18_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        35.3,
+        15.4,
+        15.0
+      ],
+      "absolutos": [
+        2,
+        6,
+        2,
+        6
+      ]
+    },
+    "2026-02-18_3": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        33.3,
+        32.4,
+        26.2,
+        25.0
+      ],
+      "absolutos": [
+        1,
+        12,
+        16,
+        6
+      ]
+    },
+    "2026-02-19_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        31.7,
+        27.9,
+        16.7,
+        15.9
+      ],
+      "absolutos": [
+        20,
+        12,
+        2,
+        18
+      ]
+    },
+    "2026-02-19_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        33.3,
+        8.3
+      ],
+      "absolutos": [
+        2,
+        3,
+        1
+      ]
+    },
+    "2026-02-19_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        41.2,
+        23.1,
+        12.5
+      ],
+      "absolutos": [
+        2,
+        7,
+        3,
+        5
+      ]
+    },
+    "2026-02-19_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.0,
+        27.0,
+        19.7
+      ],
+      "absolutos": [
+        7,
+        10,
+        12
+      ]
+    },
+    "2026-02-20_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        31.2,
+        21.4,
+        15.4,
+        14.0
+      ],
+      "absolutos": [
+        20,
+        9,
+        2,
+        16
+      ]
+    },
+    "2026-02-20_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        42.9,
+        27.3,
+        7.4
+      ],
+      "absolutos": [
+        3,
+        3,
+        2
+      ]
+    },
+    "2026-02-20_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        47.1,
+        23.1,
+        10.3
+      ],
+      "absolutos": [
+        2,
+        8,
+        3,
+        4
+      ]
+    },
+    "2026-02-20_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        20.8,
+        13.6
+      ],
+      "absolutos": [
+        9,
+        10,
+        3
+      ]
+    },
+    "2026-02-21_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        22.2,
+        18.2,
+        16.7
+      ],
+      "absolutos": [
+        2,
+        4,
+        1
+      ]
+    },
+    "2026-02-21_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-21_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-21_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        22.2,
+        18.2,
+        16.7
+      ],
+      "absolutos": [
+        2,
+        4,
+        1
+      ]
+    },
+    "2026-02-22_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-22_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-22_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-22_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-02-23_GERAL": {
+      "labels": [
+        "MEET",
+        "G3 SERVICOS",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.1,
+        25.0,
+        25.0,
+        17.0
+      ],
+      "absolutos": [
+        16,
+        3,
+        11,
+        19
+      ]
+    },
+    "2026-02-23_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        23.5,
+        22.2,
+        20.0,
+        16.7
+      ],
+      "absolutos": [
+        4,
+        2,
+        1,
+        5
+      ]
+    },
+    "2026-02-23_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        21.1,
+        21.1,
+        13.2
+      ],
+      "absolutos": [
+        2,
+        4,
+        4,
+        7
+      ]
+    },
+    "2026-02-23_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        34.8,
+        31.2,
+        24.1
+      ],
+      "absolutos": [
+        8,
+        5,
+        7
+      ]
+    },
+    "2026-02-24_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "G3 SERVICOS",
+        "CEVA"
+      ],
+      "data": [
+        30.6,
+        21.4,
+        20.0,
+        9.1
+      ],
+      "absolutos": [
+        19,
+        9,
+        2,
+        10
+      ]
+    },
+    "2026-02-24_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        18.2,
+        8.9
+      ],
+      "absolutos": [
+        4,
+        2,
+        4
+      ]
+    },
+    "2026-02-24_2": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        38.9,
+        23.1,
+        4.9
+      ],
+      "absolutos": [
+        2,
+        7,
+        3,
+        2
+      ]
+    },
+    "2026-02-24_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.8,
+        22.2,
+        16.7
+      ],
+      "absolutos": [
+        8,
+        4,
+        4
+      ]
+    },
+    "2026-02-25_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.4,
+        20.0,
+        12.8
+      ],
+      "absolutos": [
+        16,
+        9,
+        14
+      ]
+    },
+    "2026-02-25_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        22.2,
+        14.3
+      ],
+      "absolutos": [
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-02-25_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.8,
+        10.5,
+        6.7
+      ],
+      "absolutos": [
+        5,
+        2,
+        4
+      ]
+    },
+    "2026-02-25_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        23.8,
+        22.9
+      ],
+      "absolutos": [
+        9,
+        5,
+        8
+      ]
+    },
+    "2026-02-26_GERAL": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        30.0,
+        22.2,
+        9.4,
+        7.5
+      ],
+      "absolutos": [
+        1,
+        3,
+        14,
+        5,
+        10
+      ]
+    },
+    "2026-02-26_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        12.5,
+        3.6
+      ],
+      "absolutos": [
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-02-26_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        36.8,
+        1.9
+      ],
+      "absolutos": [
+        2,
+        7,
+        1
+      ]
+    },
+    "2026-02-26_3": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        100.0,
+        33.3,
+        16.0,
+        14.8,
+        14.7
+      ],
+      "absolutos": [
+        1,
+        1,
+        4,
+        8,
+        5
+      ]
+    },
+    "2026-02-27_GERAL": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        50.0,
+        22.0,
+        10.0,
+        7.2,
+        7.0
+      ],
+      "absolutos": [
+        1,
+        11,
+        1,
+        10,
+        3
+      ]
+    },
+    "2026-02-27_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        11.1,
+        8.1
+      ],
+      "absolutos": [
+        2,
+        1,
+        3
+      ]
+    },
+    "2026-02-27_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        16.7,
+        4.2,
+        2.9
+      ],
+      "absolutos": [
+        6,
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-02-27_3": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        100.0,
+        17.6,
+        15.6,
+        10.0
+      ],
+      "absolutos": [
+        1,
+        3,
+        5,
+        1
+      ]
+    },
+    "2026-02-28_GERAL": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        21.7,
+        20.6,
+        17.6
+      ],
+      "absolutos": [
+        1,
+        10,
+        7,
+        15
+      ]
+    },
+    "2026-02-28_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        20.0,
+        17.6,
+        12.5
+      ],
+      "absolutos": [
+        1,
+        3,
+        1
+      ]
+    },
+    "2026-02-28_2": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        13.3
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-02-28_3": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        24.0,
+        23.5,
+        18.9
+      ],
+      "absolutos": [
+        1,
+        6,
+        8,
+        10
+      ]
+    },
+    "2026-03-01_GERAL": {
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        100.0
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-03-01_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-01_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-01_3": {
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        100.0
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-03-02_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        26.1,
+        5.9,
+        4.3
+      ],
+      "absolutos": [
+        6,
+        4,
+        1
+      ]
+    },
+    "2026-03-02_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-02_2": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        26.1,
+        5.9,
+        4.3
+      ],
+      "absolutos": [
+        6,
+        4,
+        1
+      ]
+    },
+    "2026-03-02_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-03_GERAL": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        33.3,
+        24.5,
+        4.1
+      ],
+      "absolutos": [
+        1,
+        3,
+        12,
+        4
+      ]
+    },
+    "2026-03-03_1": {
+      "labels": [
+        "G3 SERVIÇOS",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        37.5,
+        12.5
+      ],
+      "absolutos": [
+        1,
+        3,
+        2
+      ]
+    },
+    "2026-03-03_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        16.7,
+        3.0
+      ],
+      "absolutos": [
+        6,
+        1,
+        2
+      ]
+    },
+    "2026-03-03_3": {
+      "labels": [
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        66.7,
+        15.8
+      ],
+      "absolutos": [
+        2,
+        3
+      ]
+    },
+    "2026-03-04_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        33.3,
+        19.1,
+        12.5,
+        4.0
+      ],
+      "absolutos": [
+        1,
+        3,
+        9,
+        5,
+        4
+      ]
+    },
+    "2026-03-04_1": {
+      "labels": [
+        "G3 SERVICOS",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        28.6,
+        20.0,
+        5.9
+      ],
+      "absolutos": [
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-03-04_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        13.6,
+        7.1,
+        4.4
+      ],
+      "absolutos": [
+        1,
+        3,
+        2,
+        3
+      ]
+    },
+    "2026-03-04_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        66.7,
+        28.6,
+        22.2
+      ],
+      "absolutos": [
+        2,
+        2,
+        4
+      ]
+    },
+    "2026-03-05_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        55.6,
+        15.0,
+        14.9,
+        3.9
+      ],
+      "absolutos": [
+        1,
+        5,
+        6,
+        7,
+        4
+      ]
+    },
+    "2026-03-05_1": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        20.0,
+        14.3,
+        5.9
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-03-05_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        18.2,
+        10.7,
+        4.3
+      ],
+      "absolutos": [
+        3,
+        4,
+        3,
+        3
+      ]
+    },
+    "2026-03-05_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        66.7,
+        28.6,
+        11.1
+      ],
+      "absolutos": [
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-03-06_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        42.9,
+        15.2,
+        11.4,
+        4.3
+      ],
+      "absolutos": [
+        1,
+        3,
+        7,
+        4,
+        4
+      ]
+    },
+    "2026-03-06_1": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        50.0,
+        28.6,
+        5.9
+      ],
+      "absolutos": [
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-03-06_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        19.0,
+        8.3,
+        5.1
+      ],
+      "absolutos": [
+        2,
+        4,
+        2,
+        3
+      ]
+    },
+    "2026-03-06_3": {
+      "labels": [
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        33.3,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-03-07_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        44.4,
+        22.5,
+        11.4,
+        4.8
+      ],
+      "absolutos": [
+        4,
+        9,
+        4,
+        4
+      ]
+    },
+    "2026-03-07_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-07_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        27.3,
+        14.3,
+        5.9
+      ],
+      "absolutos": [
+        2,
+        6,
+        4,
+        4
+      ]
+    },
+    "2026-03-07_3": {
+      "labels": [
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        66.7,
+        16.7
+      ],
+      "absolutos": [
+        2,
+        3
+      ]
+    },
+    "2026-03-08_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-08_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-08_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-08_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-09_GERAL": {
+      "labels": [
+        "G3 SERVICOS",
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        50.0,
+        21.4,
+        14.3,
+        4.7
+      ],
+      "absolutos": [
+        1,
+        4,
+        9,
+        5,
+        4
+      ]
+    },
+    "2026-03-09_1": {
+      "labels": [
+        "G3 SERVICOS",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        60.0,
+        14.3,
+        11.8
+      ],
+      "absolutos": [
+        1,
+        3,
+        1,
+        2
+      ]
+    },
+    "2026-03-09_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        27.8,
+        8.7,
+        3.8
+      ],
+      "absolutos": [
+        2,
+        5,
+        2,
+        2
+      ]
+    },
+    "2026-03-09_3": {
+      "labels": [
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        66.7,
+        17.6
+      ],
+      "absolutos": [
+        2,
+        3
+      ]
+    },
+    "2026-03-10_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        36.4,
+        6.1,
+        2.9,
+        2.8
+      ],
+      "absolutos": [
+        4,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-03-10_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-10_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        12.5,
+        3.8
+      ],
+      "absolutos": [
+        3,
+        2,
+        2
+      ]
+    },
+    "2026-03-10_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        33.3,
+        14.3
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-03-11_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.9,
+        14.3,
+        11.7,
+        9.4
+      ],
+      "absolutos": [
+        9,
+        10,
+        9,
+        26
+      ]
+    },
+    "2026-03-11_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        21.4,
+        11.1,
+        10.5
+      ],
+      "absolutos": [
+        3,
+        12,
+        2
+      ]
+    },
+    "2026-03-11_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.5,
+        15.0,
+        14.3,
+        8.6
+      ],
+      "absolutos": [
+        8,
+        6,
+        7,
+        13
+      ]
+    },
+    "2026-03-11_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        33.3,
+        6.2,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-03-12_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        13.6,
+        12.9,
+        6.9,
+        2.0
+      ],
+      "absolutos": [
+        9,
+        4,
+        10,
+        1
+      ]
+    },
+    "2026-03-12_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-12_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        33.3,
+        5.6,
+        5.6
+      ],
+      "absolutos": [
+        2,
+        3,
+        1
+      ]
+    },
+    "2026-03-12_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        8.0,
+        7.7,
+        4.2
+      ],
+      "absolutos": [
+        8,
+        2,
+        7,
+        1
+      ]
+    },
+    "2026-03-13_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        44.4,
+        14.3,
+        2.9
+      ],
+      "absolutos": [
+        4,
+        5,
+        2
+      ]
+    },
+    "2026-03-13_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-13_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        16.7,
+        1.9
+      ],
+      "absolutos": [
+        2,
+        3,
+        1
+      ]
+    },
+    "2026-03-13_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        66.7,
+        11.8,
+        6.2
+      ],
+      "absolutos": [
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-03-14_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        18.2,
+        14.3,
+        5.3
+      ],
+      "absolutos": [
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-03-14_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-14_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        14.3,
+        10.0,
+        3.4
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-03-14_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        25.0,
+        11.1
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-03-16_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        19.2,
+        8.6,
+        6.6
+      ],
+      "absolutos": [
+        4,
+        5,
+        3,
+        5
+      ]
+    },
+    "2026-03-16_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-16_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        18.2,
+        6.5,
+        6.0
+      ],
+      "absolutos": [
+        4,
+        4,
+        2,
+        4
+      ]
+    },
+    "2026-03-16_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        25.0,
+        11.1
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-03-17_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        54.5,
+        28.2,
+        10.5,
+        3.6
+      ],
+      "absolutos": [
+        6,
+        11,
+        4,
+        3
+      ]
+    },
+    "2026-03-17_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-17_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        27.3,
+        9.7,
+        3.0
+      ],
+      "absolutos": [
+        4,
+        6,
+        3,
+        2
+      ]
+    },
+    "2026-03-17_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        66.7,
+        29.4,
+        14.3,
+        5.9
+      ],
+      "absolutos": [
+        2,
+        5,
+        1,
+        1
+      ]
+    },
+    "2026-03-18_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        23.3,
+        6.2,
+        4.8
+      ],
+      "absolutos": [
+        3,
+        7,
+        2,
+        3
+      ]
+    },
+    "2026-03-18_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-18_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        20.0,
+        7.7,
+        4.3
+      ],
+      "absolutos": [
+        3,
+        1,
+        2,
+        2
+      ]
+    },
+    "2026-03-18_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        66.7,
+        25.0,
+        6.2
+      ],
+      "absolutos": [
+        2,
+        4,
+        1
+      ]
+    },
+    "2026-03-19_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        40.0,
+        28.6,
+        6.5,
+        3.7
+      ],
+      "absolutos": [
+        2,
+        4,
+        3,
+        1
+      ]
+    },
+    "2026-03-19_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-19_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        20.0,
+        4.2,
+        2.7
+      ],
+      "absolutos": [
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-03-19_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        22.2
+      ],
+      "absolutos": [
+        2,
+        2
+      ]
+    },
+    "2026-03-20_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        17.4,
+        10.0,
+        5.0
+      ],
+      "absolutos": [
+        2,
+        4,
+        1,
+        2
+      ]
+    },
+    "2026-03-20_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-20_2": {
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        14.3
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-03-20_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        66.7,
+        18.8,
+        16.7,
+        12.5
+      ],
+      "absolutos": [
+        2,
+        3,
+        1,
+        2
+      ]
+    },
+    "2026-03-21_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        12.5,
+        12.0,
+        3.7
+      ],
+      "absolutos": [
+        1,
+        2,
+        3,
+        2
+      ]
+    },
+    "2026-03-21_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-21_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        8.3,
+        2.6
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-03-21_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        15.4,
+        6.2
+      ],
+      "absolutos": [
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-03-23_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.2,
+        11.3,
+        11.1,
+        11.1
+      ],
+      "absolutos": [
+        6,
+        12,
+        1,
+        4
+      ]
+    },
+    "2026-03-23_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        66.7,
+        40.0
+      ],
+      "absolutos": [
+        1,
+        2,
+        8
+      ]
+    },
+    "2026-03-23_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        6.9,
+        4.8,
+        4.3
+      ],
+      "absolutos": [
+        1,
+        2,
+        1,
+        3
+      ]
+    },
+    "2026-03-23_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        16.7,
+        6.2
+      ],
+      "absolutos": [
+        3,
+        1,
+        1
+      ]
+    },
+    "2026-03-24_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        24.1,
+        16.1,
+        6.7
+      ],
+      "absolutos": [
+        7,
+        5,
+        6
+      ]
+    },
+    "2026-03-24_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-24_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        8.7,
+        1.8
+      ],
+      "absolutos": [
+        3,
+        2,
+        1
+      ]
+    },
+    "2026-03-24_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        30.8,
+        14.7
+      ],
+      "absolutos": [
+        3,
+        4,
+        5
+      ]
+    },
+    "2026-03-25_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        9.7,
+        8.3,
+        3.3
+      ],
+      "absolutos": [
+        3,
+        3,
+        3
+      ]
+    },
+    "2026-03-25_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        10.0
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-03-25_2": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        3.4,
+        1.8
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-03-25_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        23.1,
+        16.7
+      ],
+      "absolutos": [
+        3,
+        1
+      ]
+    },
+    "2026-03-26_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        19.4,
+        11.1,
+        6.2,
+        2.4
+      ],
+      "absolutos": [
+        7,
+        1,
+        8,
+        1
+      ]
+    },
+    "2026-03-26_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        10.0
+      ],
+      "absolutos": [
+        2,
+        4
+      ]
+    },
+    "2026-03-26_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        6.7,
+        5.5
+      ],
+      "absolutos": [
+        1,
+        1,
+        3
+      ]
+    },
+    "2026-03-26_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.8,
+        12.5,
+        2.9
+      ],
+      "absolutos": [
+        4,
+        1,
+        1
+      ]
+    },
+    "2026-03-27_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.4,
+        14.3,
+        14.0,
+        10.6
+      ],
+      "absolutos": [
+        7,
+        1,
+        7,
+        15
+      ]
+    },
+    "2026-03-27_1": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        36.8,
+        25.0
+      ],
+      "absolutos": [
+        7,
+        1
+      ]
+    },
+    "2026-03-27_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        4.8,
+        4.2,
+        3.3
+      ],
+      "absolutos": [
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    "2026-03-27_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        38.5,
+        30.0,
+        9.8
+      ],
+      "absolutos": [
+        5,
+        6,
+        5
+      ]
+    },
+    "2026-03-28_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.9,
+        12.5,
+        12.2
+      ],
+      "absolutos": [
+        5,
+        4,
+        10
+      ]
+    },
+    "2026-03-28_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-28_2": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        12.8,
+        7.1,
+        4.2
+      ],
+      "absolutos": [
+        6,
+        1,
+        1
+      ]
+    },
+    "2026-03-28_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        30.8,
+        11.4
+      ],
+      "absolutos": [
+        3,
+        4,
+        4
+      ]
+    },
+    "2026-03-29_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-29_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-29_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-29_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-03-30_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.3,
+        18.9,
+        13.3
+      ],
+      "absolutos": [
+        10,
+        7,
+        17
+      ]
+    },
+    "2026-03-30_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        17.5
+      ],
+      "absolutos": [
+        2,
+        7
+      ]
+    },
+    "2026-03-30_2": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        8.3,
+        5.1
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-03-30_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        53.8,
+        35.0,
+        16.3
+      ],
+      "absolutos": [
+        7,
+        7,
+        8
+      ]
+    },
+    "2026-03-31_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.4,
+        12.5,
+        11.8,
+        6.8
+      ],
+      "absolutos": [
+        11,
+        1,
+        6,
+        9
+      ]
+    },
+    "2026-03-31_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        10.0
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-03-31_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        13.6,
+        6.7,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "2026-03-31_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.4,
+        19.0,
+        7.3
+      ],
+      "absolutos": [
+        7,
+        4,
+        3
+      ]
+    },
+    "2026-04-01_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        27.8,
+        16.7,
+        10.5
+      ],
+      "absolutos": [
+        2,
+        10,
+        8,
+        11
+      ]
+    },
+    "2026-04-01_1": {
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        100.0
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-04-01_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        22.7,
+        13.3,
+        7.0
+      ],
+      "absolutos": [
+        2,
+        5,
+        4,
+        5
+      ]
+    },
+    "2026-04-01_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.8,
+        22.2,
+        18.2
+      ],
+      "absolutos": [
+        4,
+        4,
+        6
+      ]
+    },
+    "2026-04-02_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        30.2,
+        12.5,
+        12.4,
+        8.2
+      ],
+      "absolutos": [
+        13,
+        1,
+        15,
+        4
+      ]
+    },
+    "2026-04-02_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        23.8
+      ],
+      "absolutos": [
+        2,
+        5
+      ]
+    },
+    "2026-04-02_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        16.7,
+        12.3,
+        7.1
+      ],
+      "absolutos": [
+        4,
+        1,
+        7,
+        2
+      ]
+    },
+    "2026-04-02_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.4,
+        9.5,
+        7.0
+      ],
+      "absolutos": [
+        7,
+        2,
+        3
+      ]
+    },
+    "2026-04-03_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        33.3,
+        22.2,
+        17.4,
+        15.2
+      ],
+      "absolutos": [
+        2,
+        8,
+        21,
+        7
+      ]
+    },
+    "2026-04-03_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        30.0
+      ],
+      "absolutos": [
+        1,
+        6
+      ]
+    },
+    "2026-04-03_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        50.0,
+        14.3,
+        13.0,
+        10.0
+      ],
+      "absolutos": [
+        2,
+        6,
+        3,
+        1
+      ]
+    },
+    "2026-04-03_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.1,
+        17.4,
+        15.3
+      ],
+      "absolutos": [
+        6,
+        4,
+        9
+      ]
+    },
+    "2026-04-05_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-05_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-05_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-05_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-06_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        30.0,
+        24.1,
+        7.2
+      ],
+      "absolutos": [
+        2,
+        9,
+        7,
+        6
+      ]
+    },
+    "2026-04-06_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-06_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        66.7,
+        42.9,
+        33.3
+      ],
+      "absolutos": [
+        2,
+        3,
+        2
+      ]
+    },
+    "2026-04-06_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.1,
+        21.7,
+        10.3
+      ],
+      "absolutos": [
+        6,
+        5,
+        6
+      ]
+    },
+    "2026-04-07_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        31.0,
+        25.5,
+        8.3
+      ],
+      "absolutos": [
+        2,
+        13,
+        12,
+        11
+      ]
+    },
+    "2026-04-07_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        66.7,
+        10.0
+      ],
+      "absolutos": [
+        2,
+        2
+      ]
+    },
+    "2026-04-07_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        33.3,
+        31.2,
+        7.1
+      ],
+      "absolutos": [
+        2,
+        8,
+        5,
+        4
+      ]
+    },
+    "2026-04-07_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.1,
+        17.4,
+        8.8
+      ],
+      "absolutos": [
+        6,
+        4,
+        5
+      ]
+    },
+    "2026-04-08_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        17.9,
+        17.0,
+        8.6
+      ],
+      "absolutos": [
+        2,
+        7,
+        8,
+        13
+      ]
+    },
+    "2026-04-08_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-04-08_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        27.3,
+        23.1,
+        7.3
+      ],
+      "absolutos": [
+        2,
+        6,
+        3,
+        4
+      ]
+    },
+    "2026-04-08_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        11.5,
+        10.0
+      ],
+      "absolutos": [
+        3,
+        7,
+        2
+      ]
+    },
+    "2026-04-09_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.9,
+        25.0,
+        10.7
+      ],
+      "absolutos": [
+        7,
+        10,
+        9
+      ]
+    },
+    "2026-04-09_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-09_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        22.2,
+        10.0
+      ],
+      "absolutos": [
+        5,
+        2,
+        4
+      ]
+    },
+    "2026-04-09_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.8,
+        25.0,
+        11.4
+      ],
+      "absolutos": [
+        5,
+        5,
+        5
+      ]
+    },
+    "2026-04-10_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        28.6,
+        25.9,
+        13.0,
+        13.0
+      ],
+      "absolutos": [
+        2,
+        7,
+        12,
+        3
+      ]
+    },
+    "2026-04-10_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-10_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        28.6,
+        15.4,
+        13.0
+      ],
+      "absolutos": [
+        2,
+        6,
+        2,
+        7
+      ]
+    },
+    "2026-04-10_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        13.2,
+        10.0
+      ],
+      "absolutos": [
+        1,
+        5,
+        1
+      ]
+    },
+    "2026-04-11_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        20.0,
+        10.0,
+        8.8,
+        4.4
+      ],
+      "absolutos": [
+        8,
+        23,
+        3,
+        2
+      ]
+    },
+    "2026-04-11_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        14.0
+      ],
+      "absolutos": [
+        3,
+        13
+      ]
+    },
+    "2026-04-11_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        19.0,
+        11.1,
+        5.0,
+        4.5
+      ],
+      "absolutos": [
+        4,
+        3,
+        5,
+        1
+      ]
+    },
+    "2026-04-11_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        13.5,
+        10.0
+      ],
+      "absolutos": [
+        1,
+        5,
+        1
+      ]
+    },
+    "2026-04-12_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        13.0,
+        6.7,
+        6.7
+      ],
+      "absolutos": [
+        3,
+        5,
+        2
+      ]
+    },
+    "2026-04-12_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-12_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-12_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        13.0,
+        6.7,
+        6.7
+      ],
+      "absolutos": [
+        3,
+        5,
+        2
+      ]
+    },
+    "2026-04-13_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        25.0,
+        18.2,
+        13.6
+      ],
+      "absolutos": [
+        2,
+        7,
+        6,
+        15
+      ]
+    },
+    "2026-04-13_1": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        27.8,
+        20.0,
+        20.0
+      ],
+      "absolutos": [
+        5,
+        1,
+        1
+      ]
+    },
+    "2026-04-13_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        38.5,
+        22.7,
+        5.5
+      ],
+      "absolutos": [
+        2,
+        5,
+        5,
+        3
+      ]
+    },
+    "2026-04-13_3": {
+      "labels": [
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        18.9,
+        10.0
+      ],
+      "absolutos": [
+        7,
+        1
+      ]
+    },
+    "2026-04-14_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        25.0,
+        21.3,
+        15.8
+      ],
+      "absolutos": [
+        2,
+        9,
+        10,
+        21
+      ]
+    },
+    "2026-04-14_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        23.5
+      ],
+      "absolutos": [
+        4
+      ]
+    },
+    "2026-04-14_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        38.5,
+        27.3,
+        9.3
+      ],
+      "absolutos": [
+        2,
+        5,
+        6,
+        5
+      ]
+    },
+    "2026-04-14_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        20.0,
+        19.4
+      ],
+      "absolutos": [
+        4,
+        4,
+        12
+      ]
+    },
+    "2026-04-15_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        50.0,
+        18.8,
+        16.7,
+        16.7
+      ],
+      "absolutos": [
+        3,
+        6,
+        16,
+        4
+      ]
+    },
+    "2026-04-15_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        17.6
+      ],
+      "absolutos": [
+        3
+      ]
+    },
+    "2026-04-15_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        75.0,
+        44.4,
+        28.6,
+        17.1
+      ],
+      "absolutos": [
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    "2026-04-15_3": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        15.8
+      ],
+      "absolutos": [
+        6
+      ]
+    },
+    "2026-04-16_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        66.7,
+        19.6,
+        15.6,
+        14.7
+      ],
+      "absolutos": [
+        4,
+        9,
+        5,
+        15
+      ]
+    },
+    "2026-04-16_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        11.8
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-04-16_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        75.0,
+        23.8,
+        22.2,
+        7.3
+      ],
+      "absolutos": [
+        3,
+        5,
+        2,
+        3
+      ]
+    },
+    "2026-04-16_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        50.0,
+        22.7,
+        20.0,
+        16.7
+      ],
+      "absolutos": [
+        1,
+        10,
+        4,
+        3
+      ]
+    },
+    "2026-04-17_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        62.5,
+        25.0,
+        20.8,
+        18.4
+      ],
+      "absolutos": [
+        5,
+        9,
+        10,
+        21
+      ]
+    },
+    "2026-04-17_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        17.6
+      ],
+      "absolutos": [
+        3
+      ]
+    },
+    "2026-04-17_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        60.0,
+        22.7,
+        15.4,
+        9.4
+      ],
+      "absolutos": [
+        3,
+        5,
+        2,
+        5
+      ]
+    },
+    "2026-04-17_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        66.7,
+        38.9,
+        29.5,
+        23.8
+      ],
+      "absolutos": [
+        2,
+        7,
+        13,
+        5
+      ]
+    },
+    "2026-04-18_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        26.8,
+        22.6,
+        18.6
+      ],
+      "absolutos": [
+        2,
+        11,
+        7,
+        18
+      ]
+    },
+    "2026-04-18_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-18_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        28.6,
+        23.1,
+        9.4
+      ],
+      "absolutos": [
+        2,
+        6,
+        3,
+        5
+      ]
+    },
+    "2026-04-18_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        29.5,
+        25.0,
+        22.2
+      ],
+      "absolutos": [
+        13,
+        5,
+        4
+      ]
+    },
+    "2026-04-20_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-20_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-20_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-20_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-21_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        42.9,
+        34.1,
+        19.4,
+        12.5
+      ],
+      "absolutos": [
+        3,
+        14,
+        6,
+        12
+      ]
+    },
+    "2026-04-21_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-21_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        60.0,
+        38.1,
+        15.4,
+        11.5
+      ],
+      "absolutos": [
+        3,
+        8,
+        2,
+        6
+      ]
+    },
+    "2026-04-21_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        30.0,
+        22.2,
+        13.6
+      ],
+      "absolutos": [
+        6,
+        4,
+        6
+      ]
+    },
+    "2026-04-22_GERAL": {
+      "labels": [
+        "PACTUAL"
+      ],
+      "data": [
+        33.3
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-04-22_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-22_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-04-22_3": {
+      "labels": [
+        "PACTUAL"
+      ],
+      "data": [
+        33.3
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-04-23_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        20.7,
+        16.7,
+        10.0,
+        8.0
+      ],
+      "absolutos": [
+        6,
+        1,
+        9,
+        2
+      ]
+    },
+    "2026-04-23_1": {
+      "labels": [
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        29.4,
+        25.0
+      ],
+      "absolutos": [
+        5,
+        1
+      ]
+    },
+    "2026-04-23_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        26.3,
+        25.0,
+        7.3
+      ],
+      "absolutos": [
+        5,
+        1,
+        4
+      ]
+    },
+    "2026-04-23_3": {
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        22.2
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-04-24_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        20.0,
+        10.6
+      ],
+      "absolutos": [
+        1,
+        5,
+        7
+      ]
+    },
+    "2026-04-24_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        31.2
+      ],
+      "absolutos": [
+        5
+      ]
+    },
+    "2026-04-24_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        22.2,
+        4.9
+      ],
+      "absolutos": [
+        1,
+        4,
+        2
+      ]
+    },
+    "2026-04-24_3": {
+      "labels": [
+        "PACTUAL"
+      ],
+      "data": [
+        33.3
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-04-25_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        19.4,
+        14.3,
+        13.7,
+        12.2
+      ],
+      "absolutos": [
+        6,
+        1,
+        20,
+        5
+      ]
+    },
+    "2026-04-25_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        17.6
+      ],
+      "absolutos": [
+        1,
+        6
+      ]
+    },
+    "2026-04-25_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        18.2,
+        15.8,
+        7.3
+      ],
+      "absolutos": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "2026-04-25_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        17.5,
+        5.9
+      ],
+      "absolutos": [
+        4,
+        10,
+        1
+      ]
+    },
+    "2026-04-27_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        14.3,
+        12.5,
+        5.6
+      ],
+      "absolutos": [
+        6,
+        1,
+        3,
+        6
+      ]
+    },
+    "2026-04-27_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        5.9
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-04-27_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        26.3,
+        25.0,
+        18.2,
+        7.3
+      ],
+      "absolutos": [
+        5,
+        1,
+        2,
+        4
+      ]
+    },
+    "2026-04-27_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        11.1
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-04-28_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        17.9,
+        15.2,
+        11.1,
+        7.4
+      ],
+      "absolutos": [
+        5,
+        5,
+        1,
+        10
+      ]
+    },
+    "2026-04-28_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        2.9
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-04-28_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        18.2,
+        16.7,
+        7.4
+      ],
+      "absolutos": [
+        3,
+        4,
+        1,
+        5
+      ]
+    },
+    "2026-04-28_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        16.7,
+        12.1
+      ],
+      "absolutos": [
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-04-29_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        15.2,
+        14.8,
+        11.1,
+        5.0
+      ],
+      "absolutos": [
+        5,
+        4,
+        1,
+        6
+      ]
+    },
+    "2026-04-29_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        2.9
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-04-29_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        16.7,
+        13.6,
+        5.9
+      ],
+      "absolutos": [
+        3,
+        1,
+        3,
+        4
+      ]
+    },
+    "2026-04-29_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        11.1,
+        5.6
+      ],
+      "absolutos": [
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-04-30_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.0,
+        25.0,
+        15.0,
+        8.6
+      ],
+      "absolutos": [
+        7,
+        2,
+        3,
+        8
+      ]
+    },
+    "2026-04-30_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        15.8
+      ],
+      "absolutos": [
+        3
+      ]
+    },
+    "2026-04-30_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        22.2,
+        18.2,
+        7.1
+      ],
+      "absolutos": [
+        2,
+        4,
+        2,
+        4
+      ]
+    },
+    "2026-04-30_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        11.1,
+        5.6
+      ],
+      "absolutos": [
+        3,
+        1,
+        1
+      ]
+    },
+    "2026-05-01_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        43.8,
+        29.2,
+        16.7,
+        13.0
+      ],
+      "absolutos": [
+        7,
+        7,
+        1,
+        10
+      ]
+    },
+    "2026-05-01_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        25.0
+      ],
+      "absolutos": [
+        5
+      ]
+    },
+    "2026-05-01_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        57.1,
+        33.3,
+        29.4,
+        10.3
+      ],
+      "absolutos": [
+        4,
+        1,
+        5,
+        4
+      ]
+    },
+    "2026-05-01_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        33.3,
+        5.6
+      ],
+      "absolutos": [
+        3,
+        2,
+        1
+      ]
+    },
+    "2026-05-04_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        17.2,
+        13.3,
+        9.6
+      ],
+      "absolutos": [
+        5,
+        2,
+        9
+      ]
+    },
+    "2026-05-04_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        11.8
+      ],
+      "absolutos": [
+        4
+      ]
+    },
+    "2026-05-04_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        19.0,
+        7.7
+      ],
+      "absolutos": [
+        2,
+        4,
+        4
+      ]
+    },
+    "2026-05-04_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        12.5
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-05-05_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        17.4,
+        16.1,
+        12.5,
+        9.6
+      ],
+      "absolutos": [
+        4,
+        5,
+        1,
+        10
+      ]
+    },
+    "2026-05-05_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        11.8
+      ],
+      "absolutos": [
+        1,
+        4
+      ]
+    },
+    "2026-05-05_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.0,
+        20.0,
+        9.5,
+        5.7
+      ],
+      "absolutos": [
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    "2026-05-05_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        33.3,
+        17.6,
+        11.1
+      ],
+      "absolutos": [
+        2,
+        3,
+        1
+      ]
+    },
+    "2026-05-06_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        26.3,
+        18.5,
+        12.5,
+        8.9
+      ],
+      "absolutos": [
+        5,
+        5,
+        1,
+        8
+      ]
+    },
+    "2026-05-06_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        15.0
+      ],
+      "absolutos": [
+        1,
+        3
+      ]
+    },
+    "2026-05-06_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        20.0,
+        15.0,
+        3.8
+      ],
+      "absolutos": [
+        4,
+        1,
+        3,
+        2
+      ]
+    },
+    "2026-05-06_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        17.6,
+        16.7,
+        11.1
+      ],
+      "absolutos": [
+        3,
+        1,
+        1
+      ]
+    },
+    "2026-05-07_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        26.7,
+        18.6,
+        9.5,
+        5.6
+      ],
+      "absolutos": [
+        4,
+        8,
+        18,
+        2
+      ]
+    },
+    "2026-05-07_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        14.3,
+        13.1
+      ],
+      "absolutos": [
+        1,
+        2,
+        13
+      ]
+    },
+    "2026-05-07_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        24.0,
+        10.5,
+        4.9
+      ],
+      "absolutos": [
+        3,
+        6,
+        2,
+        4
+      ]
+    },
+    "2026-05-07_3": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        11.1
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-05-08_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        31.6,
+        16.3,
+        10.5,
+        8.9
+      ],
+      "absolutos": [
+        6,
+        8,
+        22,
+        4
+      ]
+    },
+    "2026-05-08_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        33.3,
+        10.3,
+        7.1
+      ],
+      "absolutos": [
+        1,
+        10,
+        1
+      ]
+    },
+    "2026-05-08_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        36.4,
+        20.0,
+        11.2,
+        10.5
+      ],
+      "absolutos": [
+        4,
+        5,
+        9,
+        2
+      ]
+    },
+    "2026-05-08_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        20.0,
+        18.2,
+        9.4
+      ],
+      "absolutos": [
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    "2026-05-09_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        18.4,
+        15.4,
+        11.8,
+        8.0
+      ],
+      "absolutos": [
+        7,
+        2,
+        19,
+        2
+      ]
+    },
+    "2026-05-09_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        33.3,
+        13.6,
+        9.1,
+        9.1
+      ],
+      "absolutos": [
+        1,
+        11,
+        1,
+        1
+      ]
+    },
+    "2026-05-09_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        23.8,
+        8.3,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        1,
+        4
+      ]
+    },
+    "2026-05-09_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        50.0,
+        16.7,
+        16.7
+      ],
+      "absolutos": [
+        1,
+        4,
+        1
+      ]
+    },
+    "2026-05-11_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        19.8,
+        11.5,
+        9.6,
+        9.1
+      ],
+      "absolutos": [
+        16,
+        6,
+        8,
+        37
+      ]
+    },
+    "2026-05-11_1": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        17.9,
+        11.1,
+        10.6,
+        2.8
+      ],
+      "absolutos": [
+        5,
+        1,
+        22,
+        1
+      ]
+    },
+    "2026-05-11_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        23.3,
+        13.5,
+        10.5,
+        6.7
+      ],
+      "absolutos": [
+        10,
+        5,
+        4,
+        11
+      ]
+    },
+    "2026-05-11_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.0,
+        20.0,
+        12.1,
+        10.0
+      ],
+      "absolutos": [
+        1,
+        2,
+        4,
+        1
+      ]
+    },
+    "2026-05-12_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        18.6,
+        18.0,
+        14.6,
+        13.0
+      ],
+      "absolutos": [
+        11,
+        11,
+        6,
+        30
+      ]
+    },
+    "2026-05-12_1": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        41.7,
+        25.0,
+        21.4,
+        17.7
+      ],
+      "absolutos": [
+        5,
+        1,
+        3,
+        14
+      ]
+    },
+    "2026-05-12_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        20.8,
+        20.0,
+        5.9
+      ],
+      "absolutos": [
+        4,
+        5,
+        3,
+        4
+      ]
+    },
+    "2026-05-12_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        15.6,
+        14.3,
+        4.3,
+        4.3
+      ],
+      "absolutos": [
+        5,
+        12,
+        1,
+        1
+      ]
+    },
+    "2026-05-13_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.6,
+        16.7,
+        15.0,
+        13.4
+      ],
+      "absolutos": [
+        3,
+        5,
+        6,
+        21
+      ]
+    },
+    "2026-05-13_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        18.2,
+        16.0
+      ],
+      "absolutos": [
+        2,
+        2,
+        13
+      ]
+    },
+    "2026-05-13_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        18.8,
+        17.4,
+        9.0
+      ],
+      "absolutos": [
+        3,
+        3,
+        4,
+        6
+      ]
+    },
+    "2026-05-13_3": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        22.2
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-05-14_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        15.2,
+        9.1,
+        6.2,
+        5.7
+      ],
+      "absolutos": [
+        5,
+        3,
+        1,
+        8
+      ]
+    },
+    "2026-05-14_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        9.8
+      ],
+      "absolutos": [
+        1,
+        5
+      ]
+    },
+    "2026-05-14_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        12.5,
+        6.7,
+        3.4
+      ],
+      "absolutos": [
+        4,
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-05-14_3": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        3.1
+      ],
+      "absolutos": [
+        2,
+        1
+      ]
+    },
+    "2026-05-15_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        27.3,
+        17.5,
+        7.7,
+        5.6
+      ],
+      "absolutos": [
+        6,
+        7,
+        13,
+        2
+      ]
+    },
+    "2026-05-15_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        11.1,
+        6.2
+      ],
+      "absolutos": [
+        1,
+        4
+      ]
+    },
+    "2026-05-15_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        42.9,
+        25.0,
+        14.3,
+        11.8
+      ],
+      "absolutos": [
+        6,
+        6,
+        2,
+        8
+      ]
+    },
+    "2026-05-15_3": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        2.9
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-05-16_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        26.8,
+        14.8,
+        12.7,
+        11.8
+      ],
+      "absolutos": [
+        11,
+        4,
+        17,
+        2
+      ]
+    },
+    "2026-05-16_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        17.1
+      ],
+      "absolutos": [
+        1,
+        6
+      ]
+    },
+    "2026-05-16_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        25.0,
+        12.5,
+        10.9
+      ],
+      "absolutos": [
+        7,
+        3,
+        1,
+        6
+      ]
+    },
+    "2026-05-16_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        17.6,
+        14.3,
+        11.4,
+        8.3
+      ],
+      "absolutos": [
+        3,
+        1,
+        5,
+        1
+      ]
+    },
+    "2026-05-17_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-17_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-17_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-17_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-18_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        18.2,
+        12.5,
+        10.8
+      ],
+      "absolutos": [
+        6,
+        8,
+        2,
+        14
+      ]
+    },
+    "2026-05-18_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        4.3
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-05-18_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        18.2,
+        11.1,
+        8.9
+      ],
+      "absolutos": [
+        4,
+        4,
+        1,
+        5
+      ]
+    },
+    "2026-05-18_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        20.0,
+        20.0,
+        18.8
+      ],
+      "absolutos": [
+        7,
+        1,
+        2,
+        3
+      ]
+    },
+    "2026-05-19_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        28.3,
+        20.5,
+        14.3,
+        11.1
+      ],
+      "absolutos": [
+        15,
+        9,
+        3,
+        21
+      ]
+    },
+    "2026-05-19_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        36.4,
+        18.2,
+        8.8
+      ],
+      "absolutos": [
+        4,
+        2,
+        7
+      ]
+    },
+    "2026-05-19_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        25.0,
+        19.0,
+        3.6
+      ],
+      "absolutos": [
+        4,
+        2,
+        4,
+        2
+      ]
+    },
+    "2026-05-19_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        33.3,
+        22.6,
+        14.3,
+        10.0
+      ],
+      "absolutos": [
+        7,
+        12,
+        3,
+        1
+      ]
+    },
+    "2026-05-20_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.6,
+        18.5,
+        17.9,
+        8.8
+      ],
+      "absolutos": [
+        12,
+        5,
+        7,
+        15
+      ]
+    },
+    "2026-05-20_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        14.3,
+        4.2
+      ],
+      "absolutos": [
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-05-20_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        25.0,
+        21.4,
+        8.5
+      ],
+      "absolutos": [
+        5,
+        6,
+        3,
+        6
+      ]
+    },
+    "2026-05-20_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.7,
+        15.8,
+        13.5
+      ],
+      "absolutos": [
+        5,
+        3,
+        7
+      ]
+    },
+    "2026-05-21_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        31.8,
+        18.6,
+        17.2,
+        11.6
+      ],
+      "absolutos": [
+        7,
+        8,
+        5,
+        17
+      ]
+    },
+    "2026-05-21_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        14.3
+      ],
+      "absolutos": [
+        1,
+        5
+      ]
+    },
+    "2026-05-21_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        53.8,
+        21.4,
+        16.7,
+        9.1
+      ],
+      "absolutos": [
+        7,
+        3,
+        4,
+        6
+      ]
+    },
+    "2026-05-21_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        16.7,
+        13.0
+      ],
+      "absolutos": [
+        3,
+        2,
+        6
+      ]
+    },
+    "2026-05-22_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        25.0,
+        18.2,
+        12.3,
+        5.9
+      ],
+      "absolutos": [
+        7,
+        8,
+        18,
+        1
+      ]
+    },
+    "2026-05-22_1": {
+      "labels": [
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        16.7
+      ],
+      "absolutos": [
+        8,
+        1
+      ]
+    },
+    "2026-05-22_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        18.2,
+        12.5,
+        7.3
+      ],
+      "absolutos": [
+        4,
+        4,
+        1,
+        4
+      ]
+    },
+    "2026-05-22_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        18.8,
+        14.0
+      ],
+      "absolutos": [
+        3,
+        3,
+        6
+      ]
+    },
+    "2026-05-23_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.9,
+        20.0,
+        19.4,
+        9.9
+      ],
+      "absolutos": [
+        11,
+        4,
+        7,
+        15
+      ]
+    },
+    "2026-05-23_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        11.1
+      ],
+      "absolutos": [
+        2,
+        5
+      ]
+    },
+    "2026-05-23_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        33.3,
+        22.7,
+        9.3
+      ],
+      "absolutos": [
+        3,
+        4,
+        5,
+        5
+      ]
+    },
+    "2026-05-23_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        15.8,
+        10.0,
+        9.6
+      ],
+      "absolutos": [
+        4,
+        3,
+        1,
+        5
+      ]
+    },
+    "2026-05-25_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        18.2,
+        14.3,
+        7.3
+      ],
+      "absolutos": [
+        9,
+        2,
+        5,
+        10
+      ]
+    },
+    "2026-05-25_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        14.3,
+        8.6
+      ],
+      "absolutos": [
+        2,
+        1,
+        5
+      ]
+    },
+    "2026-05-25_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        43.8,
+        25.0,
+        17.4,
+        7.0
+      ],
+      "absolutos": [
+        7,
+        2,
+        4,
+        5
+      ]
+    },
+    "2026-05-25_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-26_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        31.2,
+        26.7,
+        23.9,
+        8.8
+      ],
+      "absolutos": [
+        10,
+        4,
+        11,
+        14
+      ]
+    },
+    "2026-05-26_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        20.0,
+        14.3,
+        10.3
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        6
+      ]
+    },
+    "2026-05-26_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        33.3,
+        25.0,
+        7.1
+      ],
+      "absolutos": [
+        6,
+        8,
+        2,
+        5
+      ]
+    },
+    "2026-05-26_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        20.0,
+        13.3,
+        9.7
+      ],
+      "absolutos": [
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    "2026-05-27_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        25.0,
+        18.2,
+        7.1
+      ],
+      "absolutos": [
+        8,
+        9,
+        2,
+        10
+      ]
+    },
+    "2026-05-27_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        20.0,
+        10.1
+      ],
+      "absolutos": [
+        2,
+        2,
+        7
+      ]
+    },
+    "2026-05-27_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        29.2,
+        25.0,
+        4.8
+      ],
+      "absolutos": [
+        6,
+        7,
+        2,
+        3
+      ]
+    },
+    "2026-05-27_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-28_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        27.6,
+        14.6,
+        12.5,
+        9.9
+      ],
+      "absolutos": [
+        8,
+        6,
+        2,
+        21
+      ]
+    },
+    "2026-05-28_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        18.2,
+        13.0
+      ],
+      "absolutos": [
+        3,
+        2,
+        14
+      ]
+    },
+    "2026-05-28_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        10.0,
+        6.2,
+        2.7
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-05-28_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        21.4,
+        16.7
+      ],
+      "absolutos": [
+        4,
+        3,
+        5
+      ]
+    },
+    "2026-05-29_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        21.7,
+        16.1,
+        10.5,
+        9.2
+      ],
+      "absolutos": [
+        5,
+        5,
+        4,
+        18
+      ]
+    },
+    "2026-05-29_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        33.3,
+        13.0
+      ],
+      "absolutos": [
+        1,
+        2,
+        10
+      ]
+    },
+    "2026-05-29_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        30.8,
+        18.8,
+        17.6,
+        6.7
+      ],
+      "absolutos": [
+        4,
+        3,
+        3,
+        6
+      ]
+    },
+    "2026-05-29_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        7.1,
+        6.7
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-05-30_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        26.3,
+        23.1,
+        10.5,
+        8.8
+      ],
+      "absolutos": [
+        5,
+        6,
+        19,
+        3
+      ]
+    },
+    "2026-05-30_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        11.0
+      ],
+      "absolutos": [
+        2,
+        8
+      ]
+    },
+    "2026-05-30_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        44.4,
+        40.0,
+        20.0,
+        10.7
+      ],
+      "absolutos": [
+        4,
+        4,
+        3,
+        8
+      ]
+    },
+    "2026-05-30_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        9.1
+      ],
+      "absolutos": [
+        1,
+        3
+      ]
+    },
+    "2026-05-31_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-31_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-31_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-05-31_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-01_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        30.0,
+        9.9,
+        9.1,
+        8.3
+      ],
+      "absolutos": [
+        9,
+        27,
+        4,
+        4
+      ]
+    },
+    "2026-06-01_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        11.1,
+        9.6
+      ],
+      "absolutos": [
+        1,
+        1,
+        11
+      ]
+    },
+    "2026-06-01_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        46.2,
+        12.5,
+        8.0
+      ],
+      "absolutos": [
+        6,
+        2,
+        7
+      ]
+    },
+    "2026-06-01_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        19.0,
+        15.4,
+        12.9,
+        5.3
+      ],
+      "absolutos": [
+        4,
+        2,
+        9,
+        1
+      ]
+    },
+    "2026-06-02_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        20.7,
+        8.9,
+        8.9,
+        7.1
+      ],
+      "absolutos": [
+        6,
+        21,
+        4,
+        3
+      ]
+    },
+    "2026-06-02_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        16.7,
+        6.6
+      ],
+      "absolutos": [
+        1,
+        1,
+        5
+      ]
+    },
+    "2026-06-02_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        30.8,
+        8.0,
+        6.2
+      ],
+      "absolutos": [
+        4,
+        7,
+        1
+      ]
+    },
+    "2026-06-02_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        13.6,
+        12.5,
+        5.0
+      ],
+      "absolutos": [
+        2,
+        3,
+        9,
+        1
+      ]
+    },
+    "2026-06-03_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        23.3,
+        18.6,
+        11.5,
+        11.1
+      ],
+      "absolutos": [
+        7,
+        8,
+        32,
+        5
+      ]
+    },
+    "2026-06-03_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        15.3
+      ],
+      "absolutos": [
+        2,
+        18
+      ]
+    },
+    "2026-06-03_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        46.2,
+        20.0,
+        17.6,
+        8.0
+      ],
+      "absolutos": [
+        6,
+        3,
+        3,
+        7
+      ]
+    },
+    "2026-06-03_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        15.0,
+        11.1,
+        9.6,
+        7.7
+      ],
+      "absolutos": [
+        3,
+        2,
+        7,
+        1
+      ]
+    },
+    "2026-06-04_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        26.1,
+        16.5,
+        10.0,
+        7.1
+      ],
+      "absolutos": [
+        6,
+        16,
+        2,
+        1
+      ]
+    },
+    "2026-06-04_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        30.4
+      ],
+      "absolutos": [
+        1,
+        7
+      ]
+    },
+    "2026-06-04_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-04_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        25.0,
+        12.3,
+        10.5,
+        8.3
+      ],
+      "absolutos": [
+        5,
+        9,
+        2,
+        1
+      ]
+    },
+    "2026-06-05_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        28.6,
+        11.0,
+        8.7,
+        5.0
+      ],
+      "absolutos": [
+        4,
+        17,
+        2,
+        1
+      ]
+    },
+    "2026-06-05_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        10.8
+      ],
+      "absolutos": [
+        1,
+        7
+      ]
+    },
+    "2026-06-05_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        36.4,
+        11.2,
+        6.7,
+        5.6
+      ],
+      "absolutos": [
+        4,
+        10,
+        1,
+        1
+      ]
+    },
+    "2026-06-05_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-06_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        24.0,
+        11.9,
+        9.4,
+        7.7
+      ],
+      "absolutos": [
+        6,
+        5,
+        20,
+        3
+      ]
+    },
+    "2026-06-06_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        11.1
+      ],
+      "absolutos": [
+        1,
+        7
+      ]
+    },
+    "2026-06-06_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        37.5,
+        14.3,
+        9.1,
+        6.7
+      ],
+      "absolutos": [
+        3,
+        2,
+        7,
+        1
+      ]
+    },
+    "2026-06-06_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        13.6,
+        8.2,
+        4.2
+      ],
+      "absolutos": [
+        3,
+        3,
+        6,
+        1
+      ]
+    },
+    "2026-06-07_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-07_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-07_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-07_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-08_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.8,
+        18.4,
+        11.2,
+        10.4
+      ],
+      "absolutos": [
+        8,
+        9,
+        30,
+        5
+      ]
+    },
+    "2026-06-08_1": {
+      "labels": [
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        13.5,
+        9.1
+      ],
+      "absolutos": [
+        15,
+        1
+      ]
+    },
+    "2026-06-08_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        54.5,
+        30.0,
+        20.0,
+        9.2
+      ],
+      "absolutos": [
+        6,
+        6,
+        3,
+        8
+      ]
+    },
+    "2026-06-08_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        13.0,
+        10.0,
+        4.5
+      ],
+      "absolutos": [
+        2,
+        3,
+        7,
+        1
+      ]
+    },
+    "2026-06-09_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        22.4,
+        19.4,
+        10.7,
+        10.6
+      ],
+      "absolutos": [
+        11,
+        6,
+        29,
+        5
+      ]
+    },
+    "2026-06-09_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        12.7
+      ],
+      "absolutos": [
+        1,
+        14
+      ]
+    },
+    "2026-06-09_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        35.0,
+        27.3,
+        26.7,
+        9.1
+      ],
+      "absolutos": [
+        7,
+        3,
+        4,
+        8
+      ]
+    },
+    "2026-06-09_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        13.0,
+        9.7,
+        4.8
+      ],
+      "absolutos": [
+        3,
+        3,
+        7,
+        1
+      ]
+    },
+    "2026-06-10_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        23.4,
+        12.8,
+        11.5,
+        10.1
+      ],
+      "absolutos": [
+        11,
+        6,
+        3,
+        26
+      ]
+    },
+    "2026-06-10_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        12.5,
+        10.0
+      ],
+      "absolutos": [
+        1,
+        1,
+        11
+      ]
+    },
+    "2026-06-10_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        25.0,
+        11.1,
+        8.0
+      ],
+      "absolutos": [
+        5,
+        4,
+        1,
+        7
+      ]
+    },
+    "2026-06-10_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        23.8,
+        13.6,
+        11.1,
+        10.0
+      ],
+      "absolutos": [
+        5,
+        8,
+        1,
+        2
+      ]
+    },
+    "2026-06-11_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        15.5,
+        11.9,
+        9.1,
+        7.9
+      ],
+      "absolutos": [
+        9,
+        7,
+        3,
+        28
+      ]
+    },
+    "2026-06-11_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.4,
+        14.3,
+        9.1
+      ],
+      "absolutos": [
+        2,
+        3,
+        18
+      ]
+    },
+    "2026-06-11_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        31.6,
+        25.0,
+        11.1,
+        3.5
+      ],
+      "absolutos": [
+        6,
+        4,
+        1,
+        3
+      ]
+    },
+    "2026-06-11_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        9.7,
+        9.5,
+        4.8
+      ],
+      "absolutos": [
+        7,
+        2,
+        1
+      ]
+    },
+    "2026-06-12_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        23.9,
+        20.4,
+        10.2,
+        7.4
+      ],
+      "absolutos": [
+        11,
+        10,
+        27,
+        2
+      ]
+    },
+    "2026-06-12_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        12.1,
+        9.1
+      ],
+      "absolutos": [
+        1,
+        13,
+        1
+      ]
+    },
+    "2026-06-12_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        36.8,
+        22.2,
+        6.9
+      ],
+      "absolutos": [
+        6,
+        7,
+        2,
+        6
+      ]
+    },
+    "2026-06-12_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        13.6,
+        11.1
+      ],
+      "absolutos": [
+        3,
+        3,
+        8
+      ]
+    },
+    "2026-06-13_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        21.6,
+        20.0,
+        10.1,
+        8.0
+      ],
+      "absolutos": [
+        8,
+        9,
+        26,
+        2
+      ]
+    },
+    "2026-06-13_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        14.3,
+        11.0,
+        9.1
+      ],
+      "absolutos": [
+        1,
+        12,
+        1
+      ]
+    },
+    "2026-06-13_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        36.8,
+        31.2,
+        11.1,
+        8.0
+      ],
+      "absolutos": [
+        7,
+        5,
+        1,
+        7
+      ]
+    },
+    "2026-06-13_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        11.3,
+        8.3
+      ],
+      "absolutos": [
+        3,
+        7,
+        1
+      ]
+    },
+    "2026-06-14_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-14_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-14_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-14_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-15_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        22.7,
+        17.4,
+        10.2
+      ],
+      "absolutos": [
+        10,
+        10,
+        4,
+        22
+      ]
+    },
+    "2026-06-15_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        10.0,
+        9.5
+      ],
+      "absolutos": [
+        1,
+        8
+      ]
+    },
+    "2026-06-15_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        42.1,
+        37.5,
+        33.3,
+        10.6
+      ],
+      "absolutos": [
+        8,
+        6,
+        3,
+        9
+      ]
+    },
+    "2026-06-15_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        16.7,
+        12.5,
+        10.6
+      ],
+      "absolutos": [
+        2,
+        3,
+        1,
+        5
+      ]
+    },
+    "2026-06-16_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        25.5,
+        20.8,
+        10.6,
+        10.3
+      ],
+      "absolutos": [
+        12,
+        10,
+        28,
+        3
+      ]
+    },
+    "2026-06-16_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        14.3,
+        11.3
+      ],
+      "absolutos": [
+        2,
+        1,
+        12
+      ]
+    },
+    "2026-06-16_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        47.4,
+        31.2,
+        20.0,
+        11.6
+      ],
+      "absolutos": [
+        9,
+        5,
+        2,
+        10
+      ]
+    },
+    "2026-06-16_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        9.5,
+        8.3,
+        8.2
+      ],
+      "absolutos": [
+        3,
+        2,
+        1,
+        6
+      ]
+    },
+    "2026-06-17_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        21.6,
+        13.0,
+        10.7,
+        8.9
+      ],
+      "absolutos": [
+        8,
+        6,
+        3,
+        22
+      ]
+    },
+    "2026-06-17_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        7.8
+      ],
+      "absolutos": [
+        3,
+        8
+      ]
+    },
+    "2026-06-17_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        16.7,
+        15.4,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        2,
+        2,
+        6
+      ]
+    },
+    "2026-06-17_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.0,
+        13.3,
+        11.1,
+        5.3
+      ],
+      "absolutos": [
+        3,
+        8,
+        1,
+        1
+      ]
+    },
+    "2026-06-18_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        13.3,
+        12.5,
+        10.5
+      ],
+      "absolutos": [
+        6,
+        6,
+        6,
+        27
+      ]
+    },
+    "2026-06-18_1": {
+      "labels": [
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        10.7,
+        7.1
+      ],
+      "absolutos": [
+        11,
+        1
+      ]
+    },
+    "2026-06-18_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        20.0,
+        15.4,
+        7.1
+      ],
+      "absolutos": [
+        4,
+        3,
+        2,
+        6
+      ]
+    },
+    "2026-06-18_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        14.5,
+        14.3,
+        13.0
+      ],
+      "absolutos": [
+        2,
+        10,
+        3,
+        3
+      ]
+    },
+    "2026-06-19_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        16.0,
+        10.1,
+        8.9
+      ],
+      "absolutos": [
+        5,
+        8,
+        26,
+        4
+      ]
+    },
+    "2026-06-19_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        7.1,
+        6.8
+      ],
+      "absolutos": [
+        1,
+        1,
+        7
+      ]
+    },
+    "2026-06-19_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        20.0,
+        13.3,
+        9.3
+      ],
+      "absolutos": [
+        2,
+        3,
+        2,
+        8
+      ]
+    },
+    "2026-06-19_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        19.0,
+        15.9,
+        15.4,
+        8.7
+      ],
+      "absolutos": [
+        4,
+        11,
+        2,
+        2
+      ]
+    },
+    "2026-06-20_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        35.0,
+        27.3,
+        14.8,
+        10.0
+      ],
+      "absolutos": [
+        7,
+        6,
+        4,
+        19
+      ]
+    },
+    "2026-06-20_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        57.1,
+        14.3,
+        7.8,
+        7.1
+      ],
+      "absolutos": [
+        4,
+        1,
+        8,
+        1
+      ]
+    },
+    "2026-06-20_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        25.0,
+        23.1,
+        12.9
+      ],
+      "absolutos": [
+        5,
+        3,
+        3,
+        11
+      ]
+    },
+    "2026-06-20_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-21_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        26.3,
+        25.0,
+        21.4,
+        20.0
+      ],
+      "absolutos": [
+        5,
+        3,
+        9,
+        4
+      ]
+    },
+    "2026-06-21_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-21_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-21_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        30.0,
+        26.3,
+        21.4,
+        20.0
+      ],
+      "absolutos": [
+        3,
+        5,
+        9,
+        4
+      ]
+    },
+    "2026-06-22_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        20.8,
+        18.6,
+        14.5,
+        13.8
+      ],
+      "absolutos": [
+        10,
+        8,
+        35,
+        4
+      ]
+    },
+    "2026-06-22_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        21.4,
+        14.3,
+        10.7
+      ],
+      "absolutos": [
+        2,
+        3,
+        1,
+        11
+      ]
+    },
+    "2026-06-22_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        23.1,
+        20.0,
+        15.3,
+        8.3
+      ],
+      "absolutos": [
+        3,
+        3,
+        13,
+        1
+      ]
+    },
+    "2026-06-22_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        20.8,
+        19.0,
+        19.0,
+        10.0
+      ],
+      "absolutos": [
+        11,
+        4,
+        4,
+        1
+      ]
+    },
+    "2026-06-23_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        24.0,
+        20.5,
+        14.6,
+        11.3
+      ],
+      "absolutos": [
+        6,
+        9,
+        6,
+        26
+      ]
+    },
+    "2026-06-23_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        16.7,
+        9.0
+      ],
+      "absolutos": [
+        1,
+        2,
+        9
+      ]
+    },
+    "2026-06-23_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        25.0,
+        21.4,
+        9.5
+      ],
+      "absolutos": [
+        2,
+        3,
+        3,
+        7
+      ]
+    },
+    "2026-06-23_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        20.0,
+        17.9,
+        15.0
+      ],
+      "absolutos": [
+        3,
+        4,
+        10,
+        3
+      ]
+    },
+    "2026-06-24_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        19.6,
+        10.8,
+        7.1,
+        6.4
+      ],
+      "absolutos": [
+        9,
+        4,
+        18,
+        3
+      ]
+    },
+    "2026-06-24_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        12.5,
+        6.7,
+        3.7
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-06-24_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        23.5,
+        20.0,
+        12.2,
+        8.3
+      ],
+      "absolutos": [
+        4,
+        2,
+        11,
+        1
+      ]
+    },
+    "2026-06-24_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        19.0,
+        5.4,
+        5.0
+      ],
+      "absolutos": [
+        4,
+        3,
+        1
+      ]
+    },
+    "2026-06-25_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        23.7,
+        14.7,
+        12.9,
+        8.6
+      ],
+      "absolutos": [
+        9,
+        5,
+        4,
+        21
+      ]
+    },
+    "2026-06-25_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        10.0,
+        9.8,
+        7.7
+      ],
+      "absolutos": [
+        1,
+        10,
+        1
+      ]
+    },
+    "2026-06-25_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        31.2,
+        25.0,
+        12.5,
+        10.7
+      ],
+      "absolutos": [
+        5,
+        3,
+        1,
+        9
+      ]
+    },
+    "2026-06-25_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        15.4,
+        11.1,
+        3.4
+      ],
+      "absolutos": [
+        4,
+        2,
+        1,
+        2
+      ]
+    },
+    "2026-06-26_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.2,
+        13.9,
+        13.0,
+        11.3
+      ],
+      "absolutos": [
+        7,
+        5,
+        6,
+        28
+      ]
+    },
+    "2026-06-26_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        27.3,
+        8.3,
+        7.1
+      ],
+      "absolutos": [
+        3,
+        8,
+        1
+      ]
+    },
+    "2026-06-26_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        23.5,
+        18.2,
+        13.8,
+        12.5
+      ],
+      "absolutos": [
+        4,
+        2,
+        11,
+        1
+      ]
+    },
+    "2026-06-26_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        14.3,
+        13.0,
+        12.5,
+        5.9
+      ],
+      "absolutos": [
+        3,
+        3,
+        9,
+        1
+      ]
+    },
+    "2026-06-27_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        19.4,
+        18.5,
+        12.8,
+        11.7
+      ],
+      "absolutos": [
+        6,
+        5,
+        5,
+        26
+      ]
+    },
+    "2026-06-27_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        15.4,
+        10.5,
+        10.0,
+        9.5
+      ],
+      "absolutos": [
+        2,
+        2,
+        1,
+        10
+      ]
+    },
+    "2026-06-27_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.8,
+        20.0,
+        20.0,
+        15.3
+      ],
+      "absolutos": [
+        5,
+        2,
+        3,
+        13
+      ]
+    },
+    "2026-06-27_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        9.4
+      ],
+      "absolutos": [
+        1,
+        3
+      ]
+    },
+    "2026-06-28_GERAL": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        13.3,
+        7.7
+      ],
+      "absolutos": [
+        6,
+        2,
+        1
+      ]
+    },
+    "2026-06-28_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-28_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-06-28_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        13.3,
+        7.7
+      ],
+      "absolutos": [
+        6,
+        2,
+        1
+      ]
+    },
+    "2026-06-29_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        18.0,
+        15.0,
+        11.9,
+        7.5
+      ],
+      "absolutos": [
+        9,
+        38,
+        5,
+        4
+      ]
+    },
+    "2026-06-29_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        22.2,
+        10.3
+      ],
+      "absolutos": [
+        3,
+        2,
+        11
+      ]
+    },
+    "2026-06-29_2": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        18.8,
+        18.3,
+        18.2,
+        9.1
+      ],
+      "absolutos": [
+        3,
+        13,
+        2,
+        1
+      ]
+    },
+    "2026-06-29_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        18.9,
+        16.0,
+        8.3,
+        5.6
+      ],
+      "absolutos": [
+        14,
+        4,
+        2,
+        1
+      ]
+    },
+    "2026-06-30_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        20.0,
+        10.5,
+        9.1,
+        7.3
+      ],
+      "absolutos": [
+        10,
+        27,
+        5,
+        3
+      ]
+    },
+    "2026-06-30_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        23.1,
+        8.6,
+        6.2
+      ],
+      "absolutos": [
+        3,
+        8,
+        1
+      ]
+    },
+    "2026-06-30_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.5,
+        18.8,
+        12.8
+      ],
+      "absolutos": [
+        4,
+        3,
+        11
+      ]
+    },
+    "2026-06-30_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        10.1,
+        4.3
+      ],
+      "absolutos": [
+        6,
+        8,
+        1
+      ]
+    },
+    "2026-07-01_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        13.8,
+        11.1,
+        10.8,
+        8.1
+      ],
+      "absolutos": [
+        4,
+        3,
+        4,
+        18
+      ]
+    },
+    "2026-07-01_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        10.0,
+        8.3,
+        7.5
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        8
+      ]
+    },
+    "2026-07-01_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        18.8,
+        13.3,
+        10.5
+      ],
+      "absolutos": [
+        2,
+        3,
+        2,
+        9
+      ]
+    },
+    "2026-07-01_3": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        3.4
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-07-02_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.3,
+        15.0,
+        9.4,
+        7.8
+      ],
+      "absolutos": [
+        8,
+        6,
+        5,
+        20
+      ]
+    },
+    "2026-07-02_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        10.0,
+        6.5
+      ],
+      "absolutos": [
+        3,
+        1,
+        7
+      ]
+    },
+    "2026-07-02_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        21.4,
+        17.6,
+        12.6
+      ],
+      "absolutos": [
+        3,
+        3,
+        3,
+        11
+      ]
+    },
+    "2026-07-02_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        9.1,
+        3.3
+      ],
+      "absolutos": [
+        4,
+        2,
+        2
+      ]
+    },
+    "2026-07-03_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        17.9,
+        17.5,
+        16.0,
+        9.9
+      ],
+      "absolutos": [
+        10,
+        7,
+        8,
+        26
+      ]
+    },
+    "2026-07-03_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        10.0,
+        8.3,
+        7.8,
+        6.2
+      ],
+      "absolutos": [
+        1,
+        1,
+        8,
+        1
+      ]
+    },
+    "2026-07-03_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        25.0,
+        12.5,
+        10.8
+      ],
+      "absolutos": [
+        4,
+        4,
+        2,
+        9
+      ]
+    },
+    "2026-07-03_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        20.8,
+        20.8,
+        11.5,
+        11.1
+      ],
+      "absolutos": [
+        5,
+        5,
+        9,
+        2
+      ]
+    },
+    "2026-07-04_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.0,
+        20.0,
+        18.2,
+        16.2
+      ],
+      "absolutos": [
+        11,
+        8,
+        10,
+        42
+      ]
+    },
+    "2026-07-04_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        11.9,
+        10.0,
+        6.2
+      ],
+      "absolutos": [
+        2,
+        12,
+        1,
+        1
+      ]
+    },
+    "2026-07-04_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        30.0,
+        20.0,
+        19.3,
+        18.8
+      ],
+      "absolutos": [
+        3,
+        3,
+        16,
+        3
+      ]
+    },
+    "2026-07-04_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        29.2,
+        25.0,
+        18.7,
+        16.7
+      ],
+      "absolutos": [
+        7,
+        6,
+        14,
+        3
+      ]
+    },
+    "2026-07-06_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        42.6,
+        32.1,
+        23.1,
+        18.1
+      ],
+      "absolutos": [
+        20,
+        17,
+        9,
+        41
+      ]
+    },
+    "2026-07-06_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        26.7,
+        23.1,
+        19.1
+      ],
+      "absolutos": [
+        3,
+        4,
+        3,
+        17
+      ]
+    },
+    "2026-07-06_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        37.5,
+        35.3,
+        18.2,
+        13.1
+      ],
+      "absolutos": [
+        6,
+        6,
+        2,
+        11
+      ]
+    },
+    "2026-07-06_3": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        31.8,
+        26.7,
+        24.1
+      ],
+      "absolutos": [
+        11,
+        7,
+        4,
+        13
+      ]
+    },
+    "2026-07-07_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        33.3,
+        21.9,
+        20.8,
+        16.7
+      ],
+      "absolutos": [
+        8,
+        16,
+        5,
+        3
+      ]
+    },
+    "2026-07-07_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-07-07_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-07-07_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        33.3,
+        21.9,
+        20.8,
+        16.7
+      ],
+      "absolutos": [
+        8,
+        16,
+        5,
+        3
+      ]
+    },
+    "2026-08-01_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        12.9,
+        9.4,
+        7.4
+      ],
+      "absolutos": [
+        5,
+        18,
+        3,
+        2
+      ]
+    },
+    "2026-08-01_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        16.9
+      ],
+      "absolutos": [
+        2,
+        10
+      ]
+    },
+    "2026-08-01_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        11.1,
+        9.9,
+        9.5
+      ],
+      "absolutos": [
+        3,
+        3,
+        8,
+        2
+      ]
+    },
+    "2026-08-01_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-08-03_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        15.0,
+        12.2,
+        8.6
+      ],
+      "absolutos": [
+        6,
+        6,
+        6,
+        16
+      ]
+    },
+    "2026-08-03_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        18.8,
+        5.6
+      ],
+      "absolutos": [
+        4,
+        3,
+        5
+      ]
+    },
+    "2026-08-03_2": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        16.7,
+        6.6,
+        5.9,
+        4.2
+      ],
+      "absolutos": [
+        3,
+        4,
+        1,
+        1
+      ]
+    },
+    "2026-08-03_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        28.6,
+        27.3,
+        19.4,
+        9.1
+      ],
+      "absolutos": [
+        2,
+        3,
+        7,
+        1
+      ]
+    },
+    "2026-08-04_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.6,
+        16.7,
+        9.8,
+        9.0
+      ],
+      "absolutos": [
+        9,
+        6,
+        4,
+        15
+      ]
+    },
+    "2026-08-04_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        17.6,
+        8.3
+      ],
+      "absolutos": [
+        3,
+        3,
+        6
+      ]
+    },
+    "2026-08-04_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        18.5,
+        5.9,
+        3.3
+      ],
+      "absolutos": [
+        4,
+        5,
+        1,
+        2
+      ]
+    },
+    "2026-08-04_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        20.6,
+        18.2,
+        9.1
+      ],
+      "absolutos": [
+        7,
+        2,
+        1
+      ]
+    },
+    "2026-08-05_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        17.4,
+        12.8,
+        10.7,
+        9.3
+      ],
+      "absolutos": [
+        8,
+        29,
+        6,
+        5
+      ]
+    },
+    "2026-08-05_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.0,
+        12.7,
+        9.1
+      ],
+      "absolutos": [
+        1,
+        9,
+        1
+      ]
+    },
+    "2026-08-05_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        27.8,
+        10.7,
+        8.2,
+        4.8
+      ],
+      "absolutos": [
+        5,
+        3,
+        7,
+        1
+      ]
+    },
+    "2026-08-05_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        18.6,
+        13.6,
+        13.0,
+        8.7
+      ],
+      "absolutos": [
+        13,
+        3,
+        3,
+        2
+      ]
+    },
+    "2026-08-06_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        13.6,
+        12.7,
+        11.1,
+        5.4
+      ],
+      "absolutos": [
+        8,
+        7,
+        5,
+        12
+      ]
+    },
+    "2026-08-06_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        9.1,
+        5.6
+      ],
+      "absolutos": [
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-08-06_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        11.8,
+        9.7,
+        9.1
+      ],
+      "absolutos": [
+        2,
+        3,
+        2
+      ]
+    },
+    "2026-08-06_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        13.6,
+        13.0,
+        11.4
+      ],
+      "absolutos": [
+        4,
+        3,
+        3,
+        8
+      ]
+    },
+    "2026-08-07_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        11.5,
+        8.5,
+        8.3,
+        4.1
+      ],
+      "absolutos": [
+        6,
+        4,
+        5,
+        8
+      ]
+    },
+    "2026-08-07_1": {
+      "labels": [
+        "AMERICA"
+      ],
+      "data": [
+        16.7
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-08-07_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        11.8,
+        9.1,
+        3.3,
+        1.2
+      ],
+      "absolutos": [
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-08-07_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        19.0,
+        12.5,
+        10.3,
+        9.1
+      ],
+      "absolutos": [
+        4,
+        3,
+        7,
+        2
+      ]
+    },
+    "2026-08-08_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        13.3,
+        11.5,
+        10.0,
+        6.8
+      ],
+      "absolutos": [
+        6,
+        23,
+        5,
+        4
+      ]
+    },
+    "2026-08-08_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        9.0
+      ],
+      "absolutos": [
+        6
+      ]
+    },
+    "2026-08-08_2": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        17.6,
+        10.1,
+        9.1,
+        3.6
+      ],
+      "absolutos": [
+        3,
+        8,
+        2,
+        1
+      ]
+    },
+    "2026-08-08_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        16.7,
+        15.8,
+        14.3,
+        12.5
+      ],
+      "absolutos": [
+        9,
+        3,
+        3,
+        3
+      ]
+    },
+    "2026-08-10_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        11.3,
+        10.5,
+        6.0
+      ],
+      "absolutos": [
+        9,
+        7,
+        6,
+        15
+      ]
+    },
+    "2026-08-10_1": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        11.1,
+        6.2,
+        5.9,
+        4.9
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        5
+      ]
+    },
+    "2026-08-10_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.9,
+        11.1,
+        8.7,
+        1.2
+      ],
+      "absolutos": [
+        4,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-08-10_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.0,
+        14.3,
+        13.6,
+        13.6
+      ],
+      "absolutos": [
+        4,
+        3,
+        9,
+        3
+      ]
+    },
+    "2026-08-11_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.4,
+        7.8,
+        7.0,
+        6.7
+      ],
+      "absolutos": [
+        11,
+        4,
+        14,
+        3
+      ]
+    },
+    "2026-08-11_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        20.0,
+        7.1
+      ],
+      "absolutos": [
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-08-11_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        12.1,
+        10.5,
+        3.9
+      ],
+      "absolutos": [
+        3,
+        4,
+        2,
+        3
+      ]
+    },
+    "2026-08-11_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        18.5,
+        10.6,
+        4.8
+      ],
+      "absolutos": [
+        5,
+        7,
+        1
+      ]
+    },
+    "2026-08-12_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        11.0,
+        5.4,
+        3.2,
+        3.1
+      ],
+      "absolutos": [
+        9,
+        13,
+        2,
+        2
+      ]
+    },
+    "2026-08-12_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        5.3,
+        4.2,
+        1.1
+      ],
+      "absolutos": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-08-12_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        8.3,
+        7.7,
+        5.9,
+        4.5
+      ],
+      "absolutos": [
+        3,
+        6,
+        1,
+        1
+      ]
+    },
+    "2026-08-12_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        18.5,
+        9.0,
+        4.8
+      ],
+      "absolutos": [
+        5,
+        6,
+        1
+      ]
+    },
+    "2026-08-13_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        9.1,
+        8.1,
+        5.0,
+        4.6
+      ],
+      "absolutos": [
+        7,
+        5,
+        12,
+        3
+      ]
+    },
+    "2026-08-13_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        11.1,
+        4.2,
+        3.1
+      ],
+      "absolutos": [
+        2,
+        1,
+        3
+      ]
+    },
+    "2026-08-13_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        9.1,
+        5.9,
+        5.9,
+        1.3
+      ],
+      "absolutos": [
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-08-13_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        14.3,
+        12.3,
+        12.0,
+        5.0
+      ],
+      "absolutos": [
+        3,
+        8,
+        3,
+        1
+      ]
+    },
+    "2026-08-14_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        13.7,
+        12.1,
+        7.1,
+        6.8
+      ],
+      "absolutos": [
+        7,
+        8,
+        4,
+        14
+      ]
+    },
+    "2026-08-14_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        14.3,
+        1.5
+      ],
+      "absolutos": [
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-08-14_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        14.7,
+        12.5,
+        10.5,
+        9.2
+      ],
+      "absolutos": [
+        5,
+        3,
+        2,
+        7
+      ]
+    },
+    "2026-08-14_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        14.3,
+        9.2,
+        8.0,
+        5.0
+      ],
+      "absolutos": [
+        3,
+        6,
+        2,
+        1
+      ]
+    },
+    "2026-08-15_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        16.7,
+        8.9,
+        7.4,
+        6.1
+      ],
+      "absolutos": [
+        8,
+        5,
+        14,
+        4
+      ]
+    },
+    "2026-08-15_1": {
+      "labels": [
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        25.0,
+        16.7
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-08-15_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        21.1,
+        17.4,
+        6.8,
+        6.2
+      ],
+      "absolutos": [
+        4,
+        4,
+        5,
+        2
+      ]
+    },
+    "2026-08-15_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        14.1,
+        12.0,
+        3.7,
+        3.6
+      ],
+      "absolutos": [
+        9,
+        3,
+        1,
+        1
+      ]
+    },
+    "2026-08-17_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        10.4,
+        10.4,
+        7.3,
+        6.1
+      ],
+      "absolutos": [
+        8,
+        7,
+        16,
+        4
+      ]
+    },
+    "2026-08-17_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.6,
+        17.6,
+        2.4
+      ],
+      "absolutos": [
+        3,
+        3,
+        2
+      ]
+    },
+    "2026-08-17_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        9.4,
+        8.7,
+        5.4
+      ],
+      "absolutos": [
+        3,
+        3,
+        2,
+        4
+      ]
+    },
+    "2026-08-17_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        16.1,
+        7.4,
+        7.1,
+        4.0
+      ],
+      "absolutos": [
+        10,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-08-18_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        5.9,
+        5.7,
+        5.6,
+        4.8
+      ],
+      "absolutos": [
+        3,
+        12,
+        4,
+        3
+      ]
+    },
+    "2026-08-18_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        7.1,
+        5.6,
+        3.2
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        3
+      ]
+    },
+    "2026-08-18_2": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        4.8,
+        1.6
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
+    },
+    "2026-08-18_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        14.3,
+        10.0,
+        8.7,
+        4.3
+      ],
+      "absolutos": [
+        8,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-08-19_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        7.6,
+        6.6,
+        4.9,
+        4.2
+      ],
+      "absolutos": [
+        5,
+        17,
+        3,
+        3
+      ]
+    },
+    "2026-08-19_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.8,
+        6.2,
+        5.6,
+        3.9
+      ],
+      "absolutos": [
+        5,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-08-19_2": {
+      "labels": [
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        4.9,
+        3.1
+      ],
+      "absolutos": [
+        4,
+        1
+      ]
+    },
+    "2026-08-19_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        12.3,
+        8.7,
+        4.2
+      ],
+      "absolutos": [
+        9,
+        2,
+        1
+      ]
+    },
+    "2026-08-20_GERAL": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        7.0,
+        6.9,
+        3.0,
+        1.6
+      ],
+      "absolutos": [
+        18,
+        5,
+        2,
+        1
+      ]
+    },
+    "2026-08-20_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        12.5,
+        4.9,
+        4.2
+      ],
+      "absolutos": [
+        2,
+        5,
+        1
+      ]
+    },
+    "2026-08-20_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        6.2,
+        2.4
+      ],
+      "absolutos": [
+        2,
+        2
+      ]
+    },
+    "2026-08-20_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        15.1,
+        4.3,
+        4.3,
+        4.2
+      ],
+      "absolutos": [
+        11,
+        1,
+        1,
+        1
+      ]
+    },
+    "2026-08-21_GERAL": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        6.5,
+        6.1,
+        4.2,
+        3.0
+      ],
+      "absolutos": [
+        17,
+        4,
+        3,
+        2
+      ]
+    },
+    "2026-08-21_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        6.7,
+        4.8,
+        4.5
+      ],
+      "absolutos": [
+        1,
+        5,
+        1
+      ]
+    },
+    "2026-08-21_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        6.2,
+        5.0,
+        2.4
+      ],
+      "absolutos": [
+        2,
+        1,
+        2
+      ]
+    },
+    "2026-08-21_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        13.5,
+        8.3,
+        7.4
+      ],
+      "absolutos": [
+        10,
+        2,
+        2
+      ]
+    },
+    "2026-08-22_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        9.9,
+        7.8,
+        7.7,
+        6.6
+      ],
+      "absolutos": [
+        7,
+        5,
+        5,
+        15
+      ]
+    },
+    "2026-08-22_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        6.7,
+        6.5,
+        4.8
+      ],
+      "absolutos": [
+        1,
+        5,
+        1
+      ]
+    },
+    "2026-08-22_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        15.6,
+        10.5,
+        1.3
+      ],
+      "absolutos": [
+        5,
+        2,
+        1
+      ]
+    },
+    "2026-08-22_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        18.5,
+        12.3,
+        8.3,
+        4.2
+      ],
+      "absolutos": [
+        5,
+        9,
+        2,
+        1
+      ]
+    },
+    "2026-08-24_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        9.7,
+        8.6,
+        4.7,
+        4.5
+      ],
+      "absolutos": [
+        7,
+        21,
+        3,
+        3
+      ]
+    },
+    "2026-08-24_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        6.2,
+        5.6,
+        4.5,
+        3.9
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-08-24_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        6.1,
+        6.0,
+        5.0
+      ],
+      "absolutos": [
+        2,
+        5,
+        1
+      ]
+    },
+    "2026-08-24_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        21.1,
+        17.4,
+        8.3,
+        4.2
+      ],
+      "absolutos": [
+        12,
+        4,
+        2,
+        1
+      ]
+    },
+    "2026-08-25_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.3,
+        11.8,
+        7.0,
+        4.3
+      ],
+      "absolutos": [
+        7,
+        8,
+        17,
+        3
+      ]
+    },
+    "2026-08-25_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        4.8,
+        3.0
+      ],
+      "absolutos": [
+        2,
+        1,
+        3
+      ]
+    },
+    "2026-08-25_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        10.7,
+        8.3,
+        4.2,
+        4.2
+      ],
+      "absolutos": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    "2026-08-25_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.8,
+        15.1,
+        12.5,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        11,
+        3,
+        2
+      ]
+    },
+    "2026-08-26_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        9.0,
+        4.2,
+        3.6,
+        2.7
+      ],
+      "absolutos": [
+        6,
+        3,
+        9,
+        2
+      ]
+    },
+    "2026-08-26_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        11.1,
+        6.2,
+        2.0
+      ],
+      "absolutos": [
+        3,
+        2,
+        1,
+        2
+      ]
+    },
+    "2026-08-26_2": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        1.3
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-08-26_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        11.5,
+        8.5,
+        3.7,
+        3.4
+      ],
+      "absolutos": [
+        3,
+        6,
+        1,
+        1
+      ]
+    },
+    "2026-08-27_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        9.3,
+        8.8,
+        5.6,
+        2.8
+      ],
+      "absolutos": [
+        7,
+        6,
+        14,
+        2
+      ]
+    },
+    "2026-08-27_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        9.5,
+        1.0
+      ],
+      "absolutos": [
+        3,
+        2,
+        1
+      ]
+    },
+    "2026-08-27_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.5,
+        10.0,
+        5.1,
+        4.2
+      ],
+      "absolutos": [
+        4,
+        2,
+        4,
+        1
+      ]
+    },
+    "2026-08-27_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        12.7,
+        7.4,
+        3.4
+      ],
+      "absolutos": [
+        9,
+        2,
+        1
+      ]
+    },
+    "2026-08-28_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        9.9,
+        8.0,
+        6.0,
+        5.9
+      ],
+      "absolutos": [
+        7,
+        6,
+        15,
+        4
+      ]
+    },
+    "2026-08-28_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        11.1,
+        9.5,
+        2.0
+      ],
+      "absolutos": [
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-08-28_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        9.4,
+        8.3,
+        2.6
+      ],
+      "absolutos": [
+        3,
+        2,
+        2
+      ]
+    },
+    "2026-08-28_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        15.5,
+        10.3,
+        7.4
+      ],
+      "absolutos": [
+        11,
+        3,
+        2
+      ]
+    },
+    "2026-08-29_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        12.5,
+        9.3,
+        8.8,
+        6.6
+      ],
+      "absolutos": [
+        8,
+        20,
+        5,
+        4
+      ]
+    },
+    "2026-08-29_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        10.0,
+        6.0
+      ],
+      "absolutos": [
+        1,
+        4
+      ]
+    },
+    "2026-08-29_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.6,
+        5.0,
+        4.3,
+        3.8
+      ],
+      "absolutos": [
+        5,
+        1,
+        1,
+        3
+      ]
+    },
+    "2026-08-29_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        18.6,
+        11.1,
+        11.1,
+        10.3
+      ],
+      "absolutos": [
+        13,
+        3,
+        3,
+        3
+      ]
+    },
+    "2026-08-31_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        18.5,
+        13.6,
+        7.3,
+        6.0
+      ],
+      "absolutos": [
+        10,
+        8,
+        14,
+        3
+      ]
+    },
+    "2026-08-31_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        14.3,
+        11.8,
+        7.6
+      ],
+      "absolutos": [
+        3,
+        3,
+        2,
+        6
+      ]
+    },
+    "2026-08-31_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        15.0,
+        12.5,
+        5.1
+      ],
+      "absolutos": [
+        3,
+        4,
+        4
+      ]
+    },
+    "2026-08-31_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        30.8,
+        11.8,
+        10.0,
+        7.7
+      ],
+      "absolutos": [
+        4,
+        4,
+        1,
+        1
+      ]
+    },
+    "2026-09-01_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        17.3,
+        10.0,
+        6.3,
+        5.9
+      ],
+      "absolutos": [
+        9,
+        6,
+        14,
+        3
+      ]
+    },
+    "2026-09-01_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        7.7,
+        6.4
+      ],
+      "absolutos": [
+        3,
+        1,
+        6
+      ]
+    },
+    "2026-09-01_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        9.5,
+        9.1,
+        8.3,
+        4.9
+      ],
+      "absolutos": [
+        2,
+        3,
+        2,
+        4
+      ]
+    },
+    "2026-09-01_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        30.8,
+        14.3,
+        8.3,
+        7.1
+      ],
+      "absolutos": [
+        4,
+        2,
+        4,
+        1
+      ]
+    },
+    "2026-09-02_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        19.1,
+        13.7,
+        7.6,
+        6.4
+      ],
+      "absolutos": [
+        13,
+        10,
+        5,
+        15
+      ]
+    },
+    "2026-09-02_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.0,
+        14.3,
+        6.9,
+        5.6
+      ],
+      "absolutos": [
+        4,
+        2,
+        7,
+        1
+      ]
+    },
+    "2026-09-02_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        10.0,
+        4.3,
+        1.3
+      ],
+      "absolutos": [
+        4,
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-09-02_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        14.8,
+        12.3,
+        12.0
+      ],
+      "absolutos": [
+        7,
+        4,
+        7,
+        3
+      ]
+    },
+    "2026-09-03_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        19.1,
+        15.8,
+        6.3,
+        5.6
+      ],
+      "absolutos": [
+        13,
+        12,
+        16,
+        4
+      ]
+    },
+    "2026-09-03_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        19.0,
+        6.6
+      ],
+      "absolutos": [
+        3,
+        4,
+        7
+      ]
+    },
+    "2026-09-03_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.2,
+        10.5,
+        4.2,
+        2.5
+      ],
+      "absolutos": [
+        5,
+        2,
+        1,
+        2
+      ]
+    },
+    "2026-09-03_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        14.3,
+        10.3,
+        10.1
+      ],
+      "absolutos": [
+        7,
+        4,
+        3,
+        7
+      ]
+    },
+    "2026-09-04_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        13.2,
+        12.9,
+        9.9,
+        5.5
+      ],
+      "absolutos": [
+        10,
+        8,
+        7,
+        14
+      ]
+    },
+    "2026-09-04_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        10.5,
+        7.6,
+        6.7
+      ],
+      "absolutos": [
+        2,
+        8,
+        1
+      ]
+    },
+    "2026-09-04_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        15.2,
+        10.5,
+        4.2
+      ],
+      "absolutos": [
+        5,
+        2,
+        1
+      ]
+    },
+    "2026-09-04_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        20.7,
+        16.7,
+        14.3,
+        8.6
+      ],
+      "absolutos": [
+        6,
+        4,
+        4,
+        6
+      ]
+    },
+    "2026-09-05_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.9,
+        13.7,
+        8.9,
+        5.8
+      ],
+      "absolutos": [
+        10,
+        10,
+        22,
+        4
+      ]
+    },
+    "2026-09-05_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        14.3,
+        7.9
+      ],
+      "absolutos": [
+        3,
+        2,
+        8
+      ]
+    },
+    "2026-09-05_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.9,
+        11.8,
+        8.7,
+        2.6
+      ],
+      "absolutos": [
+        4,
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-09-05_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.8,
+        17.1,
+        14.3,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        12,
+        4,
+        2
+      ]
+    },
+    "2026-09-08_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.3,
+        12.1,
+        6.3,
+        4.5
+      ],
+      "absolutos": [
+        9,
+        7,
+        15,
+        3
+      ]
+    },
+    "2026-09-08_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        7.7,
+        7.1,
+        6.2,
+        5.4
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        5
+      ]
+    },
+    "2026-09-08_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        11.1,
+        9.4,
+        4.2,
+        3.8
+      ],
+      "absolutos": [
+        2,
+        3,
+        1,
+        3
+      ]
+    },
+    "2026-09-08_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        17.9,
+        16.7,
+        10.3,
+        3.4
+      ],
+      "absolutos": [
+        5,
+        4,
+        7,
+        1
+      ]
+    },
+    "2026-09-09_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        14.1,
+        10.0,
+        5.5,
+        3.2
+      ],
+      "absolutos": [
+        9,
+        5,
+        12,
+        2
+      ]
+    },
+    "2026-09-09_1": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        2.9
+      ],
+      "absolutos": [
+        2
+      ]
+    },
+    "2026-09-09_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.5,
+        11.8,
+        6.4,
+        4.2
+      ],
+      "absolutos": [
+        4,
+        2,
+        5,
+        1
+      ]
+    },
+    "2026-09-09_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        17.9,
+        12.5,
+        7.1,
+        3.4
+      ],
+      "absolutos": [
+        5,
+        3,
+        5,
+        1
+      ]
+    },
+    "2026-09-10_GERAL": {
+      "labels": [
+        "AMERICA",
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        11.6,
+        7.4,
+        7.1,
+        6.1
+      ],
+      "absolutos": [
+        1,
+        8,
+        5,
+        4,
+        15
+      ]
+    },
+    "2026-09-10_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        15.4,
+        7.5,
+        7.1
+      ],
+      "absolutos": [
+        2,
+        7,
+        1
+      ]
+    },
+    "2026-09-10_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        6.9,
+        6.2,
+        5.9
+      ],
+      "absolutos": [
+        2,
+        5,
+        1
+      ]
+    },
+    "2026-09-10_3": {
+      "labels": [
+        "AMERICA",
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        14.8,
+        13.0,
+        12.9,
+        4.2
+      ],
+      "absolutos": [
+        1,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    "2026-09-11_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        9.0,
+        7.1,
+        5.9,
+        3.5
+      ],
+      "absolutos": [
+        6,
+        17,
+        4,
+        2
+      ]
+    },
+    "2026-09-11_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        7.1,
+        6.7,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        7,
+        1
+      ]
+    },
+    "2026-09-11_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        10.3,
+        6.3
+      ],
+      "absolutos": [
+        3,
+        5
+      ]
+    },
+    "2026-09-11_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        11.1,
+        9.5,
+        8.6,
+        8.3
+      ],
+      "absolutos": [
+        3,
+        2,
+        5,
+        2
+      ]
+    },
+    "2026-09-12_GERAL": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        9.4,
+        8.9,
+        6.7,
+        4.9
+      ],
+      "absolutos": [
+        20,
+        4,
+        4,
+        3
+      ]
+    },
+    "2026-09-12_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        4.7
+      ],
+      "absolutos": [
+        2,
+        3
+      ]
+    },
+    "2026-09-12_2": {
+      "labels": [
+        "CEVA"
+      ],
+      "data": [
+        6.6
+      ],
+      "absolutos": [
+        5
+      ]
+    },
+    "2026-09-12_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        15.4,
+        10.0,
+        10.0
+      ],
+      "absolutos": [
+        12,
+        4,
+        2,
+        3
+      ]
+    },
+    "2026-09-14_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.7,
+        10.3,
+        8.4,
+        3.0
+      ],
+      "absolutos": [
+        7,
+        7,
+        19,
+        2
+      ]
+    },
+    "2026-09-14_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        15.8,
+        6.2,
+        5.9
+      ],
+      "absolutos": [
+        3,
+        6,
+        1
+      ]
+    },
+    "2026-09-14_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        2.7
+      ],
+      "absolutos": [
+        5,
+        2
+      ]
+    },
+    "2026-09-14_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        20.0,
+        20.0,
+        8.0,
+        3.7
+      ],
+      "absolutos": [
+        11,
+        4,
+        2,
+        1
+      ]
+    },
+    "2026-09-15_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.6,
+        13.6,
+        8.1,
+        6.3
+      ],
+      "absolutos": [
+        7,
+        8,
+        5,
+        13
+      ]
+    },
+    "2026-09-15_1": {
+      "labels": [
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        25.0,
+        22.2
+      ],
+      "absolutos": [
+        1,
+        2
+      ]
+    },
+    "2026-09-15_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        16.7,
+        9.1,
+        4.1
+      ],
+      "absolutos": [
+        3,
+        5,
+        2,
+        3
+      ]
+    },
+    "2026-09-15_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        14.3,
+        10.0,
+        9.7,
+        8.0
+      ],
+      "absolutos": [
+        10,
+        2,
+        3,
+        2
+      ]
+    },
+    "2026-09-16_GERAL": {
+      "labels": [
+        "AMERICA",
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        100.0,
+        15.9,
+        9.1,
+        8.3,
+        7.1
+      ],
+      "absolutos": [
+        1,
+        11,
+        5,
+        20,
+        5
+      ]
+    },
+    "2026-09-16_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        5.9,
+        5.3,
+        3.1
+      ],
+      "absolutos": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    "2026-09-16_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        23.3,
+        12.5,
+        9.1,
+        4.1
+      ],
+      "absolutos": [
+        7,
+        2,
+        2,
+        3
+      ]
+    },
+    "2026-09-16_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        100.0,
+        20.3,
+        10.0,
+        6.5,
+        3.8
+      ],
+      "absolutos": [
+        1,
+        14,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-09-17_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        10.9,
+        7.7,
+        6.6,
+        5.2
+      ],
+      "absolutos": [
+        5,
+        17,
+        4,
+        3
+      ]
+    },
+    "2026-09-17_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        10.0,
+        5.9
+      ],
+      "absolutos": [
+        1,
+        4
+      ]
+    },
+    "2026-09-17_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        6.5,
+        5.9,
+        4.7
+      ],
+      "absolutos": [
+        2,
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-09-17_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        13.0,
+        10.0,
+        7.7,
+        6.5
+      ],
+      "absolutos": [
+        9,
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-09-18_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        8.6,
+        7.3,
+        6.5,
+        2.0
+      ],
+      "absolutos": [
+        6,
+        19,
+        4,
+        1
+      ]
+    },
+    "2026-09-18_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        8.3,
+        5.9,
+        4.9
+      ],
+      "absolutos": [
+        1,
+        1,
+        5
+      ]
+    },
+    "2026-09-18_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        12.9,
+        6.7,
+        6.1
+      ],
+      "absolutos": [
+        4,
+        1,
+        5
+      ]
+    },
+    "2026-09-18_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        12.0,
+        10.3,
+        3.7
+      ],
+      "absolutos": [
+        9,
+        3,
+        1
+      ]
+    },
+    "2026-09-19_GERAL": {
+      "labels": [
+        "AMERICA",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        100.0,
+        10.6,
+        9.1,
+        7.7,
+        2.1
+      ],
+      "absolutos": [
+        1,
+        7,
+        5,
+        17,
+        1
+      ]
+    },
+    "2026-09-19_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        10.0,
+        6.2,
+        2.1
+      ],
+      "absolutos": [
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-09-19_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        6.7,
+        6.7,
+        6.7,
+        6.3
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-09-19_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        100.0,
+        18.3,
+        15.4,
+        12.5
+      ],
+      "absolutos": [
+        1,
+        11,
+        4,
+        3
+      ]
+    },
+    "2026-09-21_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        9.8,
+        8.8,
+        8.7,
+        6.6
+      ],
+      "absolutos": [
+        1,
+        5,
+        5,
+        4,
+        15
+      ]
+    },
+    "2026-09-21_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        11.1,
+        5.6,
+        3.8
+      ],
+      "absolutos": [
+        2,
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-09-21_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        11.8,
+        6.2,
+        4.8,
+        3.2
+      ],
+      "absolutos": [
+        2,
+        1,
+        4,
+        1
+      ]
+    },
+    "2026-09-21_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        100.0,
+        17.9,
+        13.3,
+        12.5,
+        8.3
+      ],
+      "absolutos": [
+        1,
+        7,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-09-22_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        11.6,
+        6.1,
+        5.7,
+        4.9
+      ],
+      "absolutos": [
+        8,
+        16,
+        3,
+        3
+      ]
+    },
+    "2026-09-22_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        5.6,
+        2.9
+      ],
+      "absolutos": [
+        1,
+        3
+      ]
+    },
+    "2026-09-22_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        9.7,
+        6.2,
+        4.9
+      ],
+      "absolutos": [
+        2,
+        3,
+        1,
+        4
+      ]
+    },
+    "2026-09-22_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        18.5,
+        11.8,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        9,
+        2
+      ]
+    },
+    "2026-09-23_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        11.8,
+        9.0,
+        8.3,
+        5.5
+      ],
+      "absolutos": [
+        6,
+        6,
+        5,
+        14
+      ]
+    },
+    "2026-09-23_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        11.8,
+        9.1,
+        4.0
+      ],
+      "absolutos": [
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-09-23_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        13.3,
+        13.3,
+        6.5,
+        2.5
+      ],
+      "absolutos": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "2026-09-23_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        12.0,
+        10.7,
+        10.5,
+        10.3
+      ],
+      "absolutos": [
+        3,
+        8,
+        2,
+        3
+      ]
+    },
+    "2026-09-24_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        17.5,
+        10.6,
+        7.8,
+        6.6
+      ],
+      "absolutos": [
+        10,
+        7,
+        4,
+        16
+      ]
+    },
+    "2026-09-24_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        18.8,
+        5.9,
+        5.9
+      ],
+      "absolutos": [
+        3,
+        6,
+        1
+      ]
+    },
+    "2026-09-24_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        16.1,
+        13.3,
+        2.6
+      ],
+      "absolutos": [
+        3,
+        5,
+        2,
+        2
+      ]
+    },
+    "2026-09-24_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        19.2,
+        13.1,
+        8.3
+      ],
+      "absolutos": [
+        5,
+        8,
+        2
+      ]
+    },
+    "2026-09-25_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        11.9,
+        9.7,
+        9.4,
+        4.2
+      ],
+      "absolutos": [
+        8,
+        6,
+        5,
+        11
+      ]
+    },
+    "2026-09-25_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        11.1,
+        9.1,
+        3.8
+      ],
+      "absolutos": [
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-09-25_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        16.1,
+        12.5,
+        1.2
+      ],
+      "absolutos": [
+        3,
+        5,
+        2,
+        1
+      ]
+    },
+    "2026-09-25_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        10.3,
+        8.2,
+        8.0,
+        5.3
+      ],
+      "absolutos": [
+        3,
+        6,
+        2,
+        1
+      ]
+    },
+    "2026-09-26_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        19.6,
+        15.0,
+        4.8,
+        2.7
+      ],
+      "absolutos": [
+        10,
+        9,
+        2,
+        6
+      ]
+    },
+    "2026-09-26_1": {
+      "labels": [
+        "AMERICA"
+      ],
+      "data": [
+        25.0
+      ],
+      "absolutos": [
+        1
+      ]
+    },
+    "2026-09-26_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        28.6,
+        16.1,
+        13.3,
+        1.3
+      ],
+      "absolutos": [
+        4,
+        5,
+        2,
+        1
+      ]
+    },
+    "2026-09-26_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        20.7,
+        12.0,
+        6.6
+      ],
+      "absolutos": [
+        6,
+        3,
+        5
+      ]
+    },
+    "2026-09-28_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        24.2,
+        14.3,
+        10.7,
+        6.0
+      ],
+      "absolutos": [
+        16,
+        8,
+        25,
+        3
+      ]
+    },
+    "2026-09-28_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        30.0,
+        7.5,
+        7.1,
+        6.7
+      ],
+      "absolutos": [
+        3,
+        7,
+        1,
+        1
+      ]
+    },
+    "2026-09-28_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        21.9,
+        18.8,
+        12.5,
+        6.2
+      ],
+      "absolutos": [
+        7,
+        3,
+        2,
+        5
+      ]
+    },
+    "2026-09-28_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        25.0,
+        21.7,
+        15.4
+      ],
+      "absolutos": [
+        6,
+        13,
+        4
+      ]
+    },
+    "2026-09-29_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        13.8,
+        7.5,
+        7.0,
+        6.5
+      ],
+      "absolutos": [
+        9,
+        4,
+        4,
+        16
+      ]
+    },
+    "2026-09-29_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        9.1,
+        5.6,
+        1.9
+      ],
+      "absolutos": [
+        1,
+        1,
+        2
+      ]
+    },
+    "2026-09-29_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        10.0,
+        3.8
+      ],
+      "absolutos": [
+        2,
+        3,
+        3
+      ]
+    },
+    "2026-09-29_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        20.8,
+        17.7,
+        15.4,
+        5.3
+      ],
+      "absolutos": [
+        5,
+        11,
+        4,
+        1
+      ]
+    },
+    "2026-09-30_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        10.7,
+        9.1,
+        6.8,
+        6.2
+      ],
+      "absolutos": [
+        6,
+        6,
+        4,
+        16
+      ]
+    },
+    "2026-09-30_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        9.1,
+        5.6,
+        4.8
+      ],
+      "absolutos": [
+        1,
+        1,
+        5
+      ]
+    },
+    "2026-09-30_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        10.0,
+        6.2
+      ],
+      "absolutos": [
+        2,
+        3,
+        5
+      ]
+    },
+    "2026-09-30_3": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        13.6,
+        8.0,
+        8.0
+      ],
+      "absolutos": [
+        4,
+        3,
+        2,
+        6
+      ]
+    },
+    "2026-10-01_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        19.1,
+        13.3,
+        8.0,
+        3.9
+      ],
+      "absolutos": [
+        9,
+        8,
+        4,
+        9
+      ]
+    },
+    "2026-10-01_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        1.4
+      ],
+      "absolutos": [
+        2,
+        1
+      ]
+    },
+    "2026-10-01_2": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        16.7,
+        7.1,
+        3.5
+      ],
+      "absolutos": [
+        4,
+        5,
+        1,
+        3
+      ]
+    },
+    "2026-10-01_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        13.6,
+        11.5,
+        11.1,
+        6.6
+      ],
+      "absolutos": [
+        3,
+        3,
+        3,
+        5
+      ]
+    },
+    "2026-10-02_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        21.5,
+        12.3,
+        8.9,
+        7.6
+      ],
+      "absolutos": [
+        14,
+        7,
+        5,
+        20
+      ]
+    },
+    "2026-10-02_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        18.2,
+        5.6,
+        4.8
+      ],
+      "absolutos": [
+        2,
+        1,
+        5
+      ]
+    },
+    "2026-10-02_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        23.3,
+        18.8,
+        6.0
+      ],
+      "absolutos": [
+        7,
+        3,
+        5
+      ]
+    },
+    "2026-10-02_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        25.9,
+        20.8,
+        13.2,
+        4.5
+      ],
+      "absolutos": [
+        7,
+        5,
+        10,
+        1
+      ]
+    },
+    "2026-10-03_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.9,
+        16.1,
+        15.8,
+        9.4
+      ],
+      "absolutos": [
+        18,
+        9,
+        9,
+        25
+      ]
+    },
+    "2026-10-03_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        27.3,
+        16.7,
+        11.8,
+        6.7
+      ],
+      "absolutos": [
+        3,
+        3,
+        2,
+        7
+      ]
+    },
+    "2026-10-03_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        23.3,
+        12.5,
+        8.2
+      ],
+      "absolutos": [
+        7,
+        2,
+        7
+      ]
+    },
+    "2026-10-03_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        30.8,
+        25.9,
+        18.2,
+        14.5
+      ],
+      "absolutos": [
+        8,
+        7,
+        4,
+        11
+      ]
+    },
+    "2026-10-04_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-10-04_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-10-04_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-10-04_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-10-05_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        18.6,
+        13.0,
+        12.8
+      ],
+      "absolutos": [
+        10,
+        11,
+        6,
+        29
+      ]
+    },
+    "2026-10-05_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        12.5,
+        11.1,
+        5.6
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-10-05_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        13.8,
+        12.5,
+        7.1,
+        5.0
+      ],
+      "absolutos": [
+        4,
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-10-05_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        29.6,
+        28.4,
+        23.1,
+        13.6
+      ],
+      "absolutos": [
+        8,
+        21,
+        6,
+        3
+      ]
+    },
+    "2026-10-06_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        14.5,
+        14.5,
+        9.1,
+        6.4
+      ],
+      "absolutos": [
+        9,
+        36,
+        5,
+        3
+      ]
+    },
+    "2026-10-06_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        30.0,
+        13.1,
+        12.5,
+        6.2
+      ],
+      "absolutos": [
+        3,
+        13,
+        2,
+        1
+      ]
+    },
+    "2026-10-06_2": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        8.0,
+        7.7,
+        3.7
+      ],
+      "absolutos": [
+        6,
+        1,
+        1
+      ]
+    },
+    "2026-10-06_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        22.7,
+        20.0,
+        11.5,
+        5.3
+      ],
+      "absolutos": [
+        17,
+        5,
+        3,
+        1
+      ]
+    },
+    "2026-10-07_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        15.4,
+        15.0,
+        8.9,
+        8.6
+      ],
+      "absolutos": [
+        8,
+        9,
+        5,
+        21
+      ]
+    },
+    "2026-10-07_1": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        18.8,
+        10.0,
+        5.8
+      ],
+      "absolutos": [
+        3,
+        1,
+        6
+      ]
+    },
+    "2026-10-07_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        19.2,
+        7.1,
+        6.7,
+        6.2
+      ],
+      "absolutos": [
+        5,
+        1,
+        1,
+        5
+      ]
+    },
+    "2026-10-07_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        18.2,
+        16.9,
+        16.7,
+        12.5
+      ],
+      "absolutos": [
+        4,
+        10,
+        4,
+        3
+      ]
+    },
+    "2026-10-08_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        11.1,
+        10.7,
+        8.2
+      ],
+      "absolutos": [
+        7,
+        5,
+        24,
+        4
+      ]
+    },
+    "2026-10-08_1": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        12.5,
+        7.4,
+        7.1
+      ],
+      "absolutos": [
+        2,
+        1,
+        7,
+        1
+      ]
+    },
+    "2026-10-08_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        8.3,
+        5.5
+      ],
+      "absolutos": [
+        1,
+        3
+      ]
+    },
+    "2026-10-08_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        19.2,
+        18.4,
+        12.5,
+        12.0
+      ],
+      "absolutos": [
+        5,
+        14,
+        3,
+        3
+      ]
+    },
+    "2026-10-09_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        14.8,
+        9.3,
+        8.2,
+        3.9
+      ],
+      "absolutos": [
+        9,
+        5,
+        19,
+        2
+      ]
+    },
+    "2026-10-09_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        7.1,
+        6.7,
+        4.9
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-10-09_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        19.2,
+        7.1,
+        3.9
+      ],
+      "absolutos": [
+        5,
+        1,
+        3
+      ]
+    },
+    "2026-10-09_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        15.8,
+        12.0,
+        8.0,
+        4.2
+      ],
+      "absolutos": [
+        12,
+        3,
+        2,
+        1
+      ]
+    },
+    "2026-10-10_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.5,
+        10.5,
+        8.3,
+        5.5
+      ],
+      "absolutos": [
+        7,
+        27,
+        5,
+        3
+      ]
+    },
+    "2026-10-10_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        11.8,
+        9.7,
+        5.9
+      ],
+      "absolutos": [
+        2,
+        10,
+        1
+      ]
+    },
+    "2026-10-10_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        15.4,
+        13.3,
+        6.2
+      ],
+      "absolutos": [
+        4,
+        2,
+        5
+      ]
+    },
+    "2026-10-10_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        16.2,
+        12.5,
+        8.3,
+        4.0
+      ],
+      "absolutos": [
+        12,
+        3,
+        2,
+        1
+      ]
+    },
+    "2026-10-13_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        13.6,
+        9.8,
+        8.2,
+        5.8
+      ],
+      "absolutos": [
+        8,
+        5,
+        20,
+        3
+      ]
+    },
+    "2026-10-13_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        12.5,
+        7.7,
+        5.7
+      ],
+      "absolutos": [
+        1,
+        1,
+        5
+      ]
+    },
+    "2026-10-13_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        11.5,
+        7.2,
+        7.1,
+        6.7
+      ],
+      "absolutos": [
+        3,
+        6,
+        1,
+        1
+      ]
+    },
+    "2026-10-13_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.0,
+        12.5,
+        12.2,
+        8.3
+      ],
+      "absolutos": [
+        4,
+        3,
+        9,
+        2
+      ]
+    },
+    "2026-10-14_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        20.0,
+        10.5,
+        8.7,
+        8.7
+      ],
+      "absolutos": [
+        11,
+        23,
+        4,
+        4
+      ]
+    },
+    "2026-10-14_1": {
+      "labels": [
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        10.3
+      ],
+      "absolutos": [
+        2,
+        7
+      ]
+    },
+    "2026-10-14_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        23.1,
+        9.5,
+        7.1
+      ],
+      "absolutos": [
+        6,
+        7,
+        1
+      ]
+    },
+    "2026-10-14_3": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        20.0,
+        12.5,
+        11.7,
+        8.3
+      ],
+      "absolutos": [
+        5,
+        3,
+        9,
+        2
+      ]
+    },
+    "2026-10-15_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        14.9,
+        8.8,
+        4.3
+      ],
+      "absolutos": [
+        8,
+        7,
+        20,
+        2
+      ]
+    },
+    "2026-10-15_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        11.1,
+        11.1,
+        10.6
+      ],
+      "absolutos": [
+        1,
+        1,
+        7
+      ]
+    },
+    "2026-10-15_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.4,
+        14.3,
+        7.0
+      ],
+      "absolutos": [
+        4,
+        2,
+        6
+      ]
+    },
+    "2026-10-15_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.7,
+        16.0,
+        9.5,
+        4.2
+      ],
+      "absolutos": [
+        4,
+        4,
+        7,
+        1
+      ]
+    },
+    "2026-10-16_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        15.7,
+        15.4,
+        8.9,
+        6.7
+      ],
+      "absolutos": [
+        8,
+        8,
+        25,
+        4
+      ]
+    },
+    "2026-10-16_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        33.3,
+        13.3,
+        8.9,
+        5.3
+      ],
+      "absolutos": [
+        2,
+        2,
+        10,
+        1
+      ]
+    },
+    "2026-10-16_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        10.0,
+        7.1,
+        4.8
+      ],
+      "absolutos": [
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-10-16_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        26.1,
+        16.0,
+        13.1,
+        7.4
+      ],
+      "absolutos": [
+        6,
+        4,
+        11,
+        2
+      ]
+    },
+    "2026-10-17_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        9.1,
+        6.1,
+        5.1
+      ],
+      "absolutos": [
+        8,
+        25,
+        3,
+        3
+      ]
+    },
+    "2026-10-17_1": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        20.0,
+        9.3,
+        6.7,
+        5.3
+      ],
+      "absolutos": [
+        1,
+        10,
+        1,
+        1
+      ]
+    },
+    "2026-10-17_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        10.0,
+        7.1,
+        7.1,
+        3.7
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        3
+      ]
+    },
+    "2026-10-17_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        26.1,
+        14.1,
+        3.8
+      ],
+      "absolutos": [
+        6,
+        12,
+        1
+      ]
+    },
+    "2026-10-19_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        15.4,
+        12.2,
+        10.0,
+        8.3
+      ],
+      "absolutos": [
+        8,
+        6,
+        27,
+        5
+      ]
+    },
+    "2026-10-19_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        13.3,
+        10.5,
+        5.5
+      ],
+      "absolutos": [
+        1,
+        2,
+        2,
+        6
+      ]
+    },
+    "2026-10-19_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        15.0,
+        14.3,
+        7.1,
+        4.9
+      ],
+      "absolutos": [
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-10-19_3": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        21.0,
+        17.4,
+        8.3,
+        7.4
+      ],
+      "absolutos": [
+        17,
+        4,
+        2,
+        2
+      ]
+    },
+    "2026-10-20_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        22.6,
+        12.2,
+        11.5,
+        10.3
+      ],
+      "absolutos": [
+        12,
+        6,
+        7,
+        28
+      ]
+    },
+    "2026-10-20_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        40.0,
+        26.7,
+        21.1,
+        11.1
+      ],
+      "absolutos": [
+        2,
+        4,
+        4,
+        12
+      ]
+    },
+    "2026-10-20_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        10.0,
+        7.1,
+        6.7,
+        4.9
+      ],
+      "absolutos": [
+        2,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-10-20_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        29.2,
+        14.5,
+        8.3,
+        7.4
+      ],
+      "absolutos": [
+        7,
+        12,
+        2,
+        2
+      ]
+    },
+    "2026-10-21_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        16.0,
+        8.2,
+        6.7,
+        6.6
+      ],
+      "absolutos": [
+        8,
+        4,
+        4,
+        18
+      ]
+    },
+    "2026-10-21_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        13.3,
+        10.5,
+        4.6
+      ],
+      "absolutos": [
+        1,
+        2,
+        2,
+        5
+      ]
+    },
+    "2026-10-21_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        7.1,
+        6.7,
+        5.0,
+        4.8
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-10-21_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        23.8,
+        11.0,
+        8.3,
+        3.8
+      ],
+      "absolutos": [
+        5,
+        9,
+        2,
+        1
+      ]
+    },
+    "2026-10-22_GERAL": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        13.8,
+        10.4,
+        9.0,
+        6.0
+      ],
+      "absolutos": [
+        8,
+        5,
+        25,
+        3
+      ]
+    },
+    "2026-10-22_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        16.7,
+        9.0
+      ],
+      "absolutos": [
+        3,
+        3,
+        10
+      ]
+    },
+    "2026-10-22_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        9.5,
+        7.1,
+        3.5
+      ],
+      "absolutos": [
+        2,
+        1,
+        3
+      ]
+    },
+    "2026-10-22_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        15.4,
+        14.8,
+        10.0,
+        4.2
+      ],
+      "absolutos": [
+        4,
+        12,
+        2,
+        1
+      ]
+    },
+    "2026-10-23_GERAL": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        11.0,
+        10.7,
+        10.0,
+        6.8
+      ],
+      "absolutos": [
+        29,
+        6,
+        5,
+        3
+      ]
+    },
+    "2026-10-23_1": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        26.7,
+        25.0,
+        9.1,
+        8.3
+      ],
+      "absolutos": [
+        4,
+        1,
+        1,
+        8
+      ]
+    },
+    "2026-10-23_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        9.1,
+        7.1,
+        4.7
+      ],
+      "absolutos": [
+        2,
+        1,
+        4
+      ]
+    },
+    "2026-10-23_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        20.7,
+        8.3,
+        7.4,
+        5.3
+      ],
+      "absolutos": [
+        17,
+        2,
+        2,
+        1
+      ]
+    },
+    "2026-10-24_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        11.1,
+        7.2,
+        5.3,
+        5.0
+      ],
+      "absolutos": [
+        5,
+        18,
+        2,
+        2
+      ]
+    },
+    "2026-10-24_1": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        11.1,
+        7.1,
+        6.4
+      ],
+      "absolutos": [
+        1,
+        2,
+        1,
+        7
+      ]
+    },
+    "2026-10-24_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        13.0,
+        7.1,
+        6.1
+      ],
+      "absolutos": [
+        3,
+        1,
+        5
+      ]
+    },
+    "2026-10-24_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        10.3,
+        5.6
+      ],
+      "absolutos": [
+        6,
+        1
+      ]
+    },
+    "2026-10-26_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        15.4,
+        11.7,
+        10.9,
+        10.4
+      ],
+      "absolutos": [
+        8,
+        7,
+        30,
+        5
+      ]
+    },
+    "2026-10-26_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        25.0,
+        14.3,
+        11.1,
+        10.6
+      ],
+      "absolutos": [
+        1,
+        2,
+        2,
+        12
+      ]
+    },
+    "2026-10-26_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        16.0,
+        7.1,
+        5.9
+      ],
+      "absolutos": [
+        4,
+        6,
+        1
+      ]
+    },
+    "2026-10-26_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        16.0,
+        15.8,
+        15.8,
+        13.0
+      ],
+      "absolutos": [
+        4,
+        12,
+        3,
+        3
+      ]
+    },
+    "2026-10-27_GERAL": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        10.9,
+        10.4,
+        8.1,
+        8.1
+      ],
+      "absolutos": [
+        6,
+        5,
+        22,
+        5
+      ]
+    },
+    "2026-10-27_1": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.7,
+        8.1,
+        7.1
+      ],
+      "absolutos": [
+        3,
+        9,
+        1
+      ]
+    },
+    "2026-10-27_2": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.0,
+        7.3,
+        6.7
+      ],
+      "absolutos": [
+        4,
+        6,
+        1
+      ]
+    },
+    "2026-10-27_3": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "AMERICA",
+        "MEET"
+      ],
+      "data": [
+        15.8,
+        8.8,
+        8.3,
+        7.4
+      ],
+      "absolutos": [
+        3,
+        7,
+        2,
+        2
+      ]
+    },
+    "2026-10-28_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        14.6,
+        9.1,
+        7.7,
+        4.8
+      ],
+      "absolutos": [
+        7,
+        5,
+        21,
+        3
+      ]
+    },
+    "2026-10-28_1": {
+      "labels": [
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        9.1,
+        7.1,
+        5.6
+      ],
+      "absolutos": [
+        10,
+        1,
+        1
+      ]
+    },
+    "2026-10-28_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        20.0,
+        8.0,
+        6.0
+      ],
+      "absolutos": [
+        3,
+        2,
+        5
+      ]
+    },
+    "2026-10-28_3": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        15.8,
+        12.5,
+        7.7,
+        7.4
+      ],
+      "absolutos": [
+        3,
+        3,
+        6,
+        2
+      ]
+    },
+    "2026-10-29_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        11.3,
+        6.8,
+        6.5,
+        4.8
+      ],
+      "absolutos": [
+        6,
+        19,
+        3,
+        3
+      ]
+    },
+    "2026-10-29_1": {
+      "labels": [
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        8.0,
+        7.1
+      ],
+      "absolutos": [
+        9,
+        1
+      ]
+    },
+    "2026-10-29_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        24.0,
+        6.7,
+        5.9,
+        3.4
+      ],
+      "absolutos": [
+        6,
+        1,
+        1,
+        3
+      ]
+    },
+    "2026-10-29_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        9.1,
+        7.1,
+        5.9
+      ],
+      "absolutos": [
+        7,
+        2,
+        1
+      ]
+    },
+    "2026-10-30_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        13.0,
+        11.3,
+        7.9,
+        7.1
+      ],
+      "absolutos": [
+        6,
+        6,
+        5,
+        20
+      ]
+    },
+    "2026-10-30_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        7.1,
+        5.6,
+        5.3
+      ],
+      "absolutos": [
+        1,
+        1,
+        6
+      ]
+    },
+    "2026-10-30_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        26.7,
+        24.0,
+        11.8,
+        5.7
+      ],
+      "absolutos": [
+        4,
+        6,
+        2,
+        5
+      ]
+    },
+    "2026-10-30_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        11.2,
+        7.1,
+        5.9
+      ],
+      "absolutos": [
+        9,
+        2,
+        1
+      ]
+    },
+    "2026-10-31_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.5,
+        13.2,
+        13.0,
+        12.9
+      ],
+      "absolutos": [
+        11,
+        7,
+        6,
+        36
+      ]
+    },
+    "2026-10-31_1": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        21.4,
+        16.7,
+        11.5
+      ],
+      "absolutos": [
+        4,
+        3,
+        1,
+        13
+      ]
+    },
+    "2026-10-31_2": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        24.0,
+        23.5,
+        13.3,
+        10.3
+      ],
+      "absolutos": [
+        6,
+        4,
+        2,
+        9
+      ]
+    },
+    "2026-10-31_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "PACTUAL"
+      ],
+      "data": [
+        17.7,
+        10.7,
+        5.9
+      ],
+      "absolutos": [
+        14,
+        3,
+        1
+      ]
+    },
+    "2026-11-01_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-01_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-01_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-01_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-02_GERAL": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        22.2,
+        21.9,
+        20.0,
+        17.1
+      ],
+      "absolutos": [
+        12,
+        14,
+        10,
+        46
+      ]
+    },
+    "2026-11-02_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        21.4,
+        16.7,
+        12.8
+      ],
+      "absolutos": [
+        3,
+        3,
+        14
+      ]
+    },
+    "2026-11-02_2": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        26.3,
+        22.2,
+        19.2,
+        17.9
+      ],
+      "absolutos": [
+        5,
+        4,
+        5,
+        15
+      ]
+    },
+    "2026-11-02_3": {
+      "labels": [
+        "AMERICA",
+        "MEET",
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        31.8,
+        25.0,
+        22.4,
+        11.8
+      ],
+      "absolutos": [
+        7,
+        7,
+        17,
+        2
+      ]
+    },
+    "2026-11-03_GERAL": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        17.9,
+        16.7,
+        12.0,
+        11.9
+      ],
+      "absolutos": [
+        12,
+        9,
+        6,
+        32
+      ]
+    },
+    "2026-11-03_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        21.4,
+        11.1,
+        10.5
+      ],
+      "absolutos": [
+        3,
+        12,
+        2
+      ]
+    },
+    "2026-11-03_2": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        19.2,
+        15.8,
+        11.1,
+        9.6
+      ],
+      "absolutos": [
+        5,
+        3,
+        2,
+        8
+      ]
+    },
+    "2026-11-03_3": {
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        26.7,
+        18.2,
+        15.6
+      ],
+      "absolutos": [
+        8,
+        4,
+        12
+      ]
+    },
+    "2026-11-04_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        11.6,
+        11.1,
+        7.5,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        6,
+        4,
+        16
+      ]
+    },
+    "2026-11-04_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        14.3,
+        10.1
+      ],
+      "absolutos": [
+        1,
+        7
+      ]
+    },
+    "2026-11-04_2": {
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        15.8,
+        11.5,
+        6.2,
+        4.9
+      ],
+      "absolutos": [
+        3,
+        3,
+        1,
+        4
+      ]
+    },
+    "2026-11-04_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        16.7,
+        6.7,
+        5.9,
+        4.5
+      ],
+      "absolutos": [
+        5,
+        5,
+        1,
+        1
+      ]
+    },
+    "2026-11-05_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        14.6,
+        9.1,
+        6.0,
+        5.8
+      ],
+      "absolutos": [
+        7,
+        6,
+        16,
+        3
+      ]
+    },
+    "2026-11-05_1": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        28.6,
+        6.5,
+        5.3
+      ],
+      "absolutos": [
+        4,
+        7,
+        1
+      ]
+    },
+    "2026-11-05_2": {
+      "labels": [
+        "MEET",
+        "PACTUAL",
+        "CEVA",
+        "AMERICA"
+      ],
+      "data": [
+        17.6,
+        17.6,
+        4.8,
+        4.2
+      ],
+      "absolutos": [
+        3,
+        3,
+        4,
+        1
+      ]
+    },
+    "2026-11-05_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA",
+        "MEET"
+      ],
+      "data": [
+        9.1,
+        6.8,
+        6.7
+      ],
+      "absolutos": [
+        2,
+        5,
+        2
+      ]
+    },
+    "2026-11-06_GERAL": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        13.5,
+        9.9,
+        8.3,
+        7.1
+      ],
+      "absolutos": [
+        5,
+        14,
+        2,
+        2
+      ]
+    },
+    "2026-11-06_1": {
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        16.7,
+        14.3,
+        6.0
+      ],
+      "absolutos": [
+        1,
+        1,
+        4
+      ]
+    },
+    "2026-11-06_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-06_3": {
+      "labels": [
+        "MEET",
+        "CEVA",
+        "PACTUAL",
+        "AMERICA"
+      ],
+      "data": [
+        17.2,
+        13.3,
+        5.9,
+        4.5
+      ],
+      "absolutos": [
+        5,
+        10,
+        1,
+        1
+      ]
+    }
   },
   "grafico_empresa": {
     "labels": [
