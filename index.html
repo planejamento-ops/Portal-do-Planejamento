@@ -1140,68 +1140,79 @@
             const turnoSel = elTurno ? elTurno.value : 'GERAL';
             const chaveBusca = `${dataSel}_${turnoSel}`;
 
-            let dadosDiaAbs = null;
-            let dadosDiaEmp = null;
-
-            // 1. Busca Absenteísmo por Setor (%) no mapa (tenta chave por turno, depois por data simples)
+            // 1. Busca Dados Setor
+            let dadosDiaAbs = { labels: [], data: [], absolutos: [] };
             if (dadosPD.grafico_setor_map && dadosPD.grafico_setor_map[chaveBusca]) {
                 dadosDiaAbs = dadosPD.grafico_setor_map[chaveBusca];
             } else if (dadosPD.grafico_setor_map && dataSel && dadosPD.grafico_setor_map[dataSel]) {
                 dadosDiaAbs = dadosPD.grafico_setor_map[dataSel];
-            } else {
-                dadosDiaAbs = { labels: [], data: [], absolutos: [] };
             }
 
-            // 2. Busca Absenteísmo por Empresa (%) no mapa
+            // NOVO: Remove os setores que têm 0% de absenteísmo para não poluir o gráfico
+            let absLabels = [];
+            let absData = [];
+            let absAbsolutos = [];
+            
+            if (dadosDiaAbs.labels) {
+                for (let i = 0; i < dadosDiaAbs.labels.length; i++) {
+                    if (dadosDiaAbs.data[i] > 0) {
+                        absLabels.push(dadosDiaAbs.labels[i]);
+                        absData.push(dadosDiaAbs.data[i]);
+                        absAbsolutos.push(dadosDiaAbs.absolutos[i]);
+                    }
+                }
+            }
+
+            // 2. Busca Dados Empresa
+            let dadosDiaEmp = { labels: [], data: [], absolutos: [] };
             if (dadosPD.grafico_empresa_map && dadosPD.grafico_empresa_map[chaveBusca]) {
                 dadosDiaEmp = dadosPD.grafico_empresa_map[chaveBusca];
             } else if (dadosPD.grafico_empresa_map && dataSel && dadosPD.grafico_empresa_map[dataSel]) {
                 dadosDiaEmp = dadosPD.grafico_empresa_map[dataSel];
-            } else {
-                dadosDiaEmp = { labels: [], data: [], absolutos: [] };
             }
 
-            let labelsSetor = dadosDiaAbs.labels || [];
+            // 3. Busca Horas
+            let labelsSetorHoras = [];
             let horasDispSetor = [];
-
-            // 3. Busca ou calcula Horas Disponíveis e Déficit
             if (dadosPD.grafico_horas_setor_map && dadosPD.grafico_horas_setor_map[chaveBusca]) {
                 const dH = dadosPD.grafico_horas_setor_map[chaveBusca];
-                labelsSetor = dH.labels;
+                labelsSetorHoras = dH.labels;
                 horasDispSetor = dH.horas_disp;
             } else if (dadosPD.grafico_horas_setor_map && dataSel && dadosPD.grafico_horas_setor_map[dataSel]) {
                 const dH = dadosPD.grafico_horas_setor_map[dataSel];
-                labelsSetor = dH.labels;
+                labelsSetorHoras = dH.labels;
                 horasDispSetor = dH.horas_disp;
             } else {
                 const basePessoasSetor = {
                     'SEPARACAO': 154, 'SEPARAÇÃO': 154,
                     'EXPEDICAO': 59, 'EXPEDIÇÃO': 59,
                     'FECHAMENTO': 53, 'RECEBIMENTO': 58,
-                    'REABASTECIMENTO': 36, 'INVENTARIO': 13, 'INVENTÁRIO': 13
+                    'REABASTECIMENTO': 36, 'INVENTARIO': 13, 'INVENTÁRIO': 13,
+                    'PLANEJAMENTO': 10
                 };
-
-                labelsSetor.forEach((st, idx) => {
+                let labelsBase = dadosDiaAbs.labels || []; 
+                labelsBase.forEach((st, idx) => {
                     const absPct = (dadosDiaAbs.data && dadosDiaAbs.data[idx] !== undefined) ? dadosDiaAbs.data[idx] : 0;
                     const capPct = Math.max(0, Math.round((100 - absPct) * 10) / 10);
                     const totalPessoas = basePessoasSetor[st] || 40;
                     const hDisp = Math.round((totalPessoas * (capPct / 100) * 6.64) * 10) / 10;
+                    labelsSetorHoras.push(st);
                     horasDispSetor.push(hDisp);
                 });
             }
 
-            // RENDERIZA 1: Absenteísmo por Setor (%)
+            // RENDERIZA 1: Setor (Agora usa as listas limpas sem os zerados)
             const elSetor = document.getElementById('chartPdSetor');
-            if (elSetor && labelsSetor.length > 0) {
+            if (elSetor) {
                 const ctx = elSetor.getContext('2d');
                 if (chartPdSetor) chartPdSetor.destroy();
                 chartPdSetor = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: labelsSetor,
+                        labels: absLabels, 
                         datasets: [{
-                            data: dadosDiaAbs.data || [],
-                            absoluteData: dadosDiaAbs.absolutos || [], 
+                            data: absData,
+                            absoluteData: absAbsolutos, 
                             backgroundColor: 'rgba(230, 67, 67, 0.75)',
                             borderColor: 'rgba(230, 67, 67, 1)',
                             borderWidth: 1,
@@ -1217,20 +1228,29 @@
                 });
             }
 
-            // RENDERIZA 2: Absenteísmo por Empresa (%)
+            // RENDERIZA 2: Empresa (BLINDADO)
             const elEmpresa = document.getElementById('chartPdEmpresa');
-            if (elEmpresa && dadosDiaEmp && dadosDiaEmp.labels && dadosDiaEmp.labels.length > 0) {
+            if (elEmpresa) {
                 const ctxE = elEmpresa.getContext('2d');
                 if (chartPdEmpresa) chartPdEmpresa.destroy();
+                
+                const hasData = dadosDiaEmp.labels && dadosDiaEmp.labels.length > 0;
+                const empLabels = hasData ? dadosDiaEmp.labels : ['Sem dados'];
+                const empData = hasData ? dadosDiaEmp.data : [100];
+                const empColors = hasData ? 
+                    ['rgba(0, 210, 255, 0.7)', 'rgba(0, 176, 155, 0.7)', 'rgba(155, 89, 182, 0.7)', 'rgba(246, 185, 59, 0.7)'] : 
+                    ['rgba(255, 255, 255, 0.05)'];
+                const empBorder = hasData ? 'rgba(15, 23, 42, 1)' : 'rgba(255, 255, 255, 0.1)';
+
                 chartPdEmpresa = new Chart(ctxE, {
                     type: 'doughnut',
                     data: {
-                        labels: dadosDiaEmp.labels,
+                        labels: empLabels,
                         datasets: [{
-                            data: dadosDiaEmp.data,
-                            absoluteData: dadosDiaEmp.absolutos, 
-                            backgroundColor: ['rgba(0, 210, 255, 0.7)', 'rgba(0, 176, 155, 0.7)', 'rgba(155, 89, 182, 0.7)', 'rgba(246, 185, 59, 0.7)'],
-                            borderColor: 'rgba(15, 23, 42, 1)',
+                            data: empData,
+                            absoluteData: hasData ? dadosDiaEmp.absolutos : [], 
+                            backgroundColor: empColors,
+                            borderColor: empBorder,
                             borderWidth: 2
                         }]
                     },
@@ -1240,23 +1260,23 @@
                         layout: { padding: { top: 10, bottom: 10, left: 10, right: 10 } },
                         plugins: { 
                             legend: { position: 'right', labels: { color: '#a0aab5', font: { size: 10 }, boxWidth: 12 } },
-                            tooltip: { callbacks: { label: c => c.raw + '%' } }
+                            tooltip: { callbacks: { label: c => hasData ? c.raw + '%' : 'Nenhum absenteísmo' } }
                         },
                         cutout: '60%' 
                     },
-                    plugins: [chartDataLabelsPlugin] 
+                    plugins: hasData ? [chartDataLabelsPlugin] : []
                 });
             }
 
-            // RENDERIZA 3: Horas Disponíveis por Setor (h)
+            // RENDERIZA 3: Horas
             const elHoras = document.getElementById('chartHorasSetor');
-            if (elHoras && labelsSetor.length > 0) {
+            if (elHoras) {
                 const ctxH = elHoras.getContext('2d');
                 if (chartHorasSetor) chartHorasSetor.destroy();
                 chartHorasSetor = new Chart(ctxH, {
                     type: 'bar',
                     data: {
-                        labels: labelsSetor,
+                        labels: labelsSetorHoras,
                         datasets: [{
                             label: 'Horas Disponíveis',
                             data: horasDispSetor,
@@ -1293,20 +1313,27 @@
                 });
             }
 
-            // RENDERIZA 4: Déficit em Horas por Setor (h)
+            // RENDERIZA 4: Déficit (Cálculo Corrigido para cruzar o nome do Setor e não a ordem)
             const elCap = document.getElementById('chartCapacidadeSetor');
-            if (elCap && labelsSetor.length > 0) {
+            if (elCap) {
                 const ctxC = elCap.getContext('2d');
                 if (chartCapacidadeSetor) chartCapacidadeSetor.destroy();
 
                 let deficitHorasSetor = [];
-                labelsSetor.forEach((st, idx) => {
-                    const absPct = (dadosDiaAbs.data && dadosDiaAbs.data[idx] !== undefined) ? dadosDiaAbs.data[idx] : 0;
+                labelsSetorHoras.forEach((st) => {
+                    let absPct = 0;
+                    if (dadosDiaAbs.labels) {
+                        const idxMatch = dadosDiaAbs.labels.indexOf(st);
+                        if (idxMatch !== -1) {
+                            absPct = dadosDiaAbs.data[idxMatch];
+                        }
+                    }
                     const basePessoasSetor = {
                         'SEPARACAO': 154, 'SEPARAÇÃO': 154,
                         'EXPEDICAO': 59, 'EXPEDIÇÃO': 59,
                         'FECHAMENTO': 53, 'RECEBIMENTO': 58,
-                        'REABASTECIMENTO': 36, 'INVENTARIO': 13, 'INVENTÁRIO': 13
+                        'REABASTECIMENTO': 36, 'INVENTARIO': 13, 'INVENTÁRIO': 13,
+                        'PLANEJAMENTO': 10
                     };
                     const totalPessoas = basePessoasSetor[st] || 40;
                     const hPerdidas = Math.round((totalPessoas * (absPct / 100) * 6.64) * 10) / 10;
@@ -1316,7 +1343,7 @@
                 chartCapacidadeSetor = new Chart(ctxC, {
                     type: 'bar',
                     data: {
-                        labels: labelsSetor,
+                        labels: labelsSetorHoras,
                         datasets: [{
                             label: 'Déficit (h)',
                             data: deficitHorasSetor,
