@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "06/11/2026 09:44",
+  "atualizado_em": "06/11/2026 10:52",
   "progresso_geral_pct": 86,
   "total_cxs_geral": 157710,
   "total_loaded_cxs_geral": 137156,
@@ -123,17 +123,6 @@ window.dadosFechamento = {
       "status": "FINALIZADA"
     },
     {
-      "atendimento": "MGI",
-      "carreta": "Carreta 05",
-      "tu": "610000013452",
-      "total_caixas": 1910,
-      "caixas_carregadas": 1910,
-      "caixas_rampa": 0,
-      "caixas_processadas": 1910,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
       "atendimento": "SPI",
       "carreta": "Carreta 10",
       "tu": "610000013381",
@@ -185,17 +174,6 @@ window.dadosFechamento = {
       "caixas_carregadas": 878,
       "caixas_rampa": 0,
       "caixas_processadas": 878,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 04",
-      "tu": "610000013464",
-      "total_caixas": 670,
-      "caixas_carregadas": 670,
-      "caixas_rampa": 0,
-      "caixas_processadas": 670,
       "pct": 100,
       "status": "FINALIZADA"
     },
