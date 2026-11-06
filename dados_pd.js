@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 11:11",
+  "atualizado_em": "06/11/2026 11:30",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -33477,11 +33477,24 @@ window.dadosPD = {
   "grafico_pareto_map": {
     "2026-01-02_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "SEM JUSTIFICATIVA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM",
+          "JUSTIFICATIVA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         11,
@@ -33500,10 +33513,21 @@ window.dadosPD = {
     },
     "2026-01-02_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "SEM JUSTIFICATIVA",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM",
+          "JUSTIFICATIVA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -33520,8 +33544,13 @@ window.dadosPD = {
     },
     "2026-01-02_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -33539,10 +33568,21 @@ window.dadosPD = {
     },
     "2026-01-03_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -33559,9 +33599,18 @@ window.dadosPD = {
     },
     "2026-01-03_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         2,
@@ -33576,9 +33625,17 @@ window.dadosPD = {
     },
     "2026-01-03_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -33593,8 +33650,14 @@ window.dadosPD = {
     },
     "2026-01-03_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -33607,11 +33670,24 @@ window.dadosPD = {
     },
     "2026-01-05_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         14,
@@ -33630,9 +33706,17 @@ window.dadosPD = {
     },
     "2026-01-05_1": {
       "labels": [
-        "BH - BANCO DE HORAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -33647,10 +33731,20 @@ window.dadosPD = {
     },
     "2026-01-05_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -33667,10 +33761,20 @@ window.dadosPD = {
     },
     "2026-01-05_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -33687,10 +33791,20 @@ window.dadosPD = {
     },
     "2026-01-06_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         19,
@@ -33707,9 +33821,16 @@ window.dadosPD = {
     },
     "2026-01-06_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         8,
@@ -33724,10 +33845,20 @@ window.dadosPD = {
     },
     "2026-01-06_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -33744,10 +33875,20 @@ window.dadosPD = {
     },
     "2026-01-06_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         7,
@@ -33764,10 +33905,20 @@ window.dadosPD = {
     },
     "2026-01-07_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         13,
@@ -33784,10 +33935,20 @@ window.dadosPD = {
     },
     "2026-01-07_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -33804,10 +33965,20 @@ window.dadosPD = {
     },
     "2026-01-07_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -33824,10 +33995,20 @@ window.dadosPD = {
     },
     "2026-01-07_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -33844,10 +34025,20 @@ window.dadosPD = {
     },
     "2026-01-08_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         13,
@@ -33864,10 +34055,20 @@ window.dadosPD = {
     },
     "2026-01-08_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -33884,10 +34085,20 @@ window.dadosPD = {
     },
     "2026-01-08_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -33904,10 +34115,20 @@ window.dadosPD = {
     },
     "2026-01-08_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -33924,11 +34145,24 @@ window.dadosPD = {
     },
     "2026-01-09_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -33947,8 +34181,13 @@ window.dadosPD = {
     },
     "2026-01-09_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -33961,11 +34200,24 @@ window.dadosPD = {
     },
     "2026-01-09_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -33984,10 +34236,20 @@ window.dadosPD = {
     },
     "2026-01-09_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -34004,17 +34266,45 @@ window.dadosPD = {
     },
     "2026-01-12_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "BH - BANCO DE HORAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ]
       ],
       "data_abs": [
         20,
@@ -34045,9 +34335,16 @@ window.dadosPD = {
     },
     "2026-01-12_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -34062,10 +34359,20 @@ window.dadosPD = {
     },
     "2026-01-12_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         12,
@@ -34082,17 +34389,45 @@ window.dadosPD = {
     },
     "2026-01-12_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "BH - BANCO DE HORAS",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ]
       ],
       "data_abs": [
         16,
@@ -34123,10 +34458,20 @@ window.dadosPD = {
     },
     "2026-01-13_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         22,
@@ -34143,9 +34488,16 @@ window.dadosPD = {
     },
     "2026-01-13_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -34160,10 +34512,20 @@ window.dadosPD = {
     },
     "2026-01-13_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         13,
@@ -34180,10 +34542,20 @@ window.dadosPD = {
     },
     "2026-01-13_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -34200,10 +34572,20 @@ window.dadosPD = {
     },
     "2026-01-14_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         19,
@@ -34220,10 +34602,20 @@ window.dadosPD = {
     },
     "2026-01-14_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -34240,10 +34632,20 @@ window.dadosPD = {
     },
     "2026-01-14_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         13,
@@ -34260,10 +34662,20 @@ window.dadosPD = {
     },
     "2026-01-14_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -34280,10 +34692,20 @@ window.dadosPD = {
     },
     "2026-01-15_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -34300,9 +34722,16 @@ window.dadosPD = {
     },
     "2026-01-15_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -34317,9 +34746,17 @@ window.dadosPD = {
     },
     "2026-01-15_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -34334,9 +34771,16 @@ window.dadosPD = {
     },
     "2026-01-15_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -34351,10 +34795,20 @@ window.dadosPD = {
     },
     "2026-01-16_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         10,
@@ -34371,9 +34825,17 @@ window.dadosPD = {
     },
     "2026-01-16_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -34388,9 +34850,17 @@ window.dadosPD = {
     },
     "2026-01-16_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -34405,10 +34875,20 @@ window.dadosPD = {
     },
     "2026-01-16_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -34425,10 +34905,20 @@ window.dadosPD = {
     },
     "2026-01-17_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         10,
@@ -34445,10 +34935,20 @@ window.dadosPD = {
     },
     "2026-01-17_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -34465,8 +34965,13 @@ window.dadosPD = {
     },
     "2026-01-17_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         3,
@@ -34479,9 +34984,17 @@ window.dadosPD = {
     },
     "2026-01-17_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -34516,10 +35029,20 @@ window.dadosPD = {
     },
     "2026-01-19_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         18,
@@ -34536,10 +35059,20 @@ window.dadosPD = {
     },
     "2026-01-19_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -34556,10 +35089,20 @@ window.dadosPD = {
     },
     "2026-01-19_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -34576,9 +35119,17 @@ window.dadosPD = {
     },
     "2026-01-19_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         11,
@@ -34593,10 +35144,20 @@ window.dadosPD = {
     },
     "2026-01-20_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         14,
@@ -34613,10 +35174,20 @@ window.dadosPD = {
     },
     "2026-01-20_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -34633,8 +35204,13 @@ window.dadosPD = {
     },
     "2026-01-20_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -34647,9 +35223,17 @@ window.dadosPD = {
     },
     "2026-01-20_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -34664,11 +35248,24 @@ window.dadosPD = {
     },
     "2026-01-21_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         15,
@@ -34687,9 +35284,17 @@ window.dadosPD = {
     },
     "2026-01-21_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -34704,10 +35309,21 @@ window.dadosPD = {
     },
     "2026-01-21_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         4,
@@ -34724,10 +35340,20 @@ window.dadosPD = {
     },
     "2026-01-21_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -34744,11 +35370,24 @@ window.dadosPD = {
     },
     "2026-01-22_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         12,
@@ -34767,9 +35406,17 @@ window.dadosPD = {
     },
     "2026-01-22_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -34784,9 +35431,17 @@ window.dadosPD = {
     },
     "2026-01-22_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -34801,11 +35456,24 @@ window.dadosPD = {
     },
     "2026-01-22_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -34824,10 +35492,20 @@ window.dadosPD = {
     },
     "2026-01-23_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         13,
@@ -34844,9 +35522,17 @@ window.dadosPD = {
     },
     "2026-01-23_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -34861,9 +35547,17 @@ window.dadosPD = {
     },
     "2026-01-23_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -34878,10 +35572,20 @@ window.dadosPD = {
     },
     "2026-01-23_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         10,
@@ -34898,9 +35602,17 @@ window.dadosPD = {
     },
     "2026-01-24_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         13,
@@ -34915,9 +35627,17 @@ window.dadosPD = {
     },
     "2026-01-24_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -34932,9 +35652,17 @@ window.dadosPD = {
     },
     "2026-01-24_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -34949,9 +35677,17 @@ window.dadosPD = {
     },
     "2026-01-24_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -34966,10 +35702,21 @@ window.dadosPD = {
     },
     "2026-01-26_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         23,
@@ -34986,9 +35733,17 @@ window.dadosPD = {
     },
     "2026-01-26_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -35003,9 +35758,17 @@ window.dadosPD = {
     },
     "2026-01-26_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -35020,10 +35783,21 @@ window.dadosPD = {
     },
     "2026-01-26_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         13,
@@ -35040,10 +35814,21 @@ window.dadosPD = {
     },
     "2026-01-27_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         13,
@@ -35060,10 +35845,21 @@ window.dadosPD = {
     },
     "2026-01-27_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -35080,10 +35876,21 @@ window.dadosPD = {
     },
     "2026-01-27_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -35100,9 +35907,17 @@ window.dadosPD = {
     },
     "2026-01-27_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -35117,10 +35932,21 @@ window.dadosPD = {
     },
     "2026-01-28_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         10,
@@ -35137,9 +35963,17 @@ window.dadosPD = {
     },
     "2026-01-28_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -35154,9 +35988,17 @@ window.dadosPD = {
     },
     "2026-01-28_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -35171,9 +36013,17 @@ window.dadosPD = {
     },
     "2026-01-28_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -35188,12 +36038,28 @@ window.dadosPD = {
     },
     "2026-01-29_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         8,
@@ -35214,8 +36080,13 @@ window.dadosPD = {
     },
     "2026-01-29_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -35228,10 +36099,20 @@ window.dadosPD = {
     },
     "2026-01-29_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -35248,11 +36129,25 @@ window.dadosPD = {
     },
     "2026-01-29_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -35271,11 +36166,24 @@ window.dadosPD = {
     },
     "2026-01-30_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         10,
@@ -35294,9 +36202,17 @@ window.dadosPD = {
     },
     "2026-01-30_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -35311,9 +36227,16 @@ window.dadosPD = {
     },
     "2026-01-30_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -35328,10 +36251,20 @@ window.dadosPD = {
     },
     "2026-01-30_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         8,
@@ -35348,12 +36281,28 @@ window.dadosPD = {
     },
     "2026-01-31_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -35374,10 +36323,21 @@ window.dadosPD = {
     },
     "2026-01-31_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -35394,12 +36354,28 @@ window.dadosPD = {
     },
     "2026-01-31_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "BH - BANCO DE HORAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -35420,11 +36396,24 @@ window.dadosPD = {
     },
     "2026-01-31_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -35443,9 +36432,17 @@ window.dadosPD = {
     },
     "2026-02-01_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -35470,9 +36467,17 @@ window.dadosPD = {
     },
     "2026-02-01_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -35487,11 +36492,24 @@ window.dadosPD = {
     },
     "2026-02-02_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -35510,9 +36528,17 @@ window.dadosPD = {
     },
     "2026-02-02_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -35527,10 +36553,20 @@ window.dadosPD = {
     },
     "2026-02-02_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -35547,10 +36583,21 @@ window.dadosPD = {
     },
     "2026-02-02_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         2,
@@ -35567,11 +36614,24 @@ window.dadosPD = {
     },
     "2026-02-03_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         13,
@@ -35590,9 +36650,17 @@ window.dadosPD = {
     },
     "2026-02-03_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -35607,11 +36675,24 @@ window.dadosPD = {
     },
     "2026-02-03_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -35630,10 +36711,21 @@ window.dadosPD = {
     },
     "2026-02-03_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -35650,11 +36742,24 @@ window.dadosPD = {
     },
     "2026-02-04_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         10,
@@ -35673,8 +36778,13 @@ window.dadosPD = {
     },
     "2026-02-04_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -35687,11 +36797,24 @@ window.dadosPD = {
     },
     "2026-02-04_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -35710,9 +36833,16 @@ window.dadosPD = {
     },
     "2026-02-04_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -35727,11 +36857,24 @@ window.dadosPD = {
     },
     "2026-02-05_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         16,
@@ -35750,8 +36893,13 @@ window.dadosPD = {
     },
     "2026-02-05_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -35764,10 +36912,21 @@ window.dadosPD = {
     },
     "2026-02-05_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -35784,10 +36943,20 @@ window.dadosPD = {
     },
     "2026-02-05_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -35804,11 +36973,24 @@ window.dadosPD = {
     },
     "2026-02-06_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         9,
@@ -35827,9 +37009,17 @@ window.dadosPD = {
     },
     "2026-02-06_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -35844,10 +37034,20 @@ window.dadosPD = {
     },
     "2026-02-06_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -35864,9 +37064,16 @@ window.dadosPD = {
     },
     "2026-02-06_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         2,
@@ -35881,11 +37088,24 @@ window.dadosPD = {
     },
     "2026-02-07_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         26,
@@ -35904,9 +37124,17 @@ window.dadosPD = {
     },
     "2026-02-07_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -35921,11 +37149,24 @@ window.dadosPD = {
     },
     "2026-02-07_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -35944,11 +37185,24 @@ window.dadosPD = {
     },
     "2026-02-07_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         13,
@@ -35987,12 +37241,28 @@ window.dadosPD = {
     },
     "2026-02-09_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         26,
@@ -36013,11 +37283,24 @@ window.dadosPD = {
     },
     "2026-02-09_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -36036,10 +37319,20 @@ window.dadosPD = {
     },
     "2026-02-09_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -36056,10 +37349,20 @@ window.dadosPD = {
     },
     "2026-02-09_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -36076,11 +37379,24 @@ window.dadosPD = {
     },
     "2026-02-10_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         16,
@@ -36099,10 +37415,20 @@ window.dadosPD = {
     },
     "2026-02-10_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -36119,11 +37445,24 @@ window.dadosPD = {
     },
     "2026-02-10_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         3,
@@ -36142,11 +37481,24 @@ window.dadosPD = {
     },
     "2026-02-10_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -36165,15 +37517,40 @@ window.dadosPD = {
     },
     "2026-02-11_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         40,
@@ -36200,15 +37577,40 @@ window.dadosPD = {
     },
     "2026-02-11_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - BANCO DE HORAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         18,
@@ -36235,12 +37637,28 @@ window.dadosPD = {
     },
     "2026-02-11_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         21,
@@ -36261,11 +37679,24 @@ window.dadosPD = {
     },
     "2026-02-11_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -36284,17 +37715,45 @@ window.dadosPD = {
     },
     "2026-02-12_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         21,
@@ -36325,10 +37784,20 @@ window.dadosPD = {
     },
     "2026-02-12_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -36345,12 +37814,28 @@ window.dadosPD = {
     },
     "2026-02-12_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         5,
@@ -36371,16 +37856,41 @@ window.dadosPD = {
     },
     "2026-02-12_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ]
       ],
       "data_abs": [
         12,
@@ -36409,12 +37919,28 @@ window.dadosPD = {
     },
     "2026-02-13_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         24,
@@ -36435,10 +37961,20 @@ window.dadosPD = {
     },
     "2026-02-13_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         9,
@@ -36455,11 +37991,24 @@ window.dadosPD = {
     },
     "2026-02-13_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -36478,11 +38027,24 @@ window.dadosPD = {
     },
     "2026-02-13_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -36501,12 +38063,28 @@ window.dadosPD = {
     },
     "2026-02-14_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         20,
@@ -36527,11 +38105,24 @@ window.dadosPD = {
     },
     "2026-02-14_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -36550,12 +38141,28 @@ window.dadosPD = {
     },
     "2026-02-14_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -36576,11 +38183,24 @@ window.dadosPD = {
     },
     "2026-02-14_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         10,
@@ -36619,12 +38239,28 @@ window.dadosPD = {
     },
     "2026-02-17_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         26,
@@ -36650,11 +38286,24 @@ window.dadosPD = {
     },
     "2026-02-17_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -36673,12 +38322,28 @@ window.dadosPD = {
     },
     "2026-02-17_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "BH - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         19,
@@ -36699,12 +38364,27 @@ window.dadosPD = {
     },
     "2026-02-18_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DR - ESCALA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         30,
@@ -36725,9 +38405,17 @@ window.dadosPD = {
     },
     "2026-02-18_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -36742,10 +38430,20 @@ window.dadosPD = {
     },
     "2026-02-18_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -36762,12 +38460,27 @@ window.dadosPD = {
     },
     "2026-02-18_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DR - ESCALA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         15,
@@ -36788,12 +38501,27 @@ window.dadosPD = {
     },
     "2026-02-19_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS",
-        "DR - ESCALA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ESCALA"
+        ]
       ],
       "data_abs": [
         23,
@@ -36814,8 +38542,13 @@ window.dadosPD = {
     },
     "2026-02-19_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -36828,10 +38561,20 @@ window.dadosPD = {
     },
     "2026-02-19_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -36848,12 +38591,27 @@ window.dadosPD = {
     },
     "2026-02-19_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS",
-        "DR - ESCALA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ESCALA"
+        ]
       ],
       "data_abs": [
         11,
@@ -36874,12 +38632,27 @@ window.dadosPD = {
     },
     "2026-02-20_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DR - ESCALA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         19,
@@ -36900,10 +38673,21 @@ window.dadosPD = {
     },
     "2026-02-20_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -36920,10 +38704,20 @@ window.dadosPD = {
     },
     "2026-02-20_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -36940,11 +38734,23 @@ window.dadosPD = {
     },
     "2026-02-20_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DR - ESCALA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ]
       ],
       "data_abs": [
         11,
@@ -36963,10 +38769,20 @@ window.dadosPD = {
     },
     "2026-02-21_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -36993,10 +38809,20 @@ window.dadosPD = {
     },
     "2026-02-21_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -37033,11 +38859,23 @@ window.dadosPD = {
     },
     "2026-02-23_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         23,
@@ -37056,9 +38894,16 @@ window.dadosPD = {
     },
     "2026-02-23_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -37073,11 +38918,23 @@ window.dadosPD = {
     },
     "2026-02-23_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -37096,10 +38953,20 @@ window.dadosPD = {
     },
     "2026-02-23_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         12,
@@ -37116,10 +38983,20 @@ window.dadosPD = {
     },
     "2026-02-24_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         24,
@@ -37136,10 +39013,20 @@ window.dadosPD = {
     },
     "2026-02-24_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -37156,10 +39043,20 @@ window.dadosPD = {
     },
     "2026-02-24_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -37176,10 +39073,20 @@ window.dadosPD = {
     },
     "2026-02-24_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -37196,11 +39103,23 @@ window.dadosPD = {
     },
     "2026-02-25_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         19,
@@ -37219,9 +39138,17 @@ window.dadosPD = {
     },
     "2026-02-25_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -37236,11 +39163,23 @@ window.dadosPD = {
     },
     "2026-02-25_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -37259,10 +39198,20 @@ window.dadosPD = {
     },
     "2026-02-25_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         10,
@@ -37279,11 +39228,23 @@ window.dadosPD = {
     },
     "2026-02-26_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         24,
@@ -37302,9 +39263,17 @@ window.dadosPD = {
     },
     "2026-02-26_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -37319,10 +39288,20 @@ window.dadosPD = {
     },
     "2026-02-26_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -37339,11 +39318,23 @@ window.dadosPD = {
     },
     "2026-02-26_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         13,
@@ -37362,11 +39353,23 @@ window.dadosPD = {
     },
     "2026-02-27_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         16,
@@ -37385,8 +39388,13 @@ window.dadosPD = {
     },
     "2026-02-27_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -37399,11 +39407,23 @@ window.dadosPD = {
     },
     "2026-02-27_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -37422,9 +39442,17 @@ window.dadosPD = {
     },
     "2026-02-27_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -37439,12 +39467,27 @@ window.dadosPD = {
     },
     "2026-02-28_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         19,
@@ -37465,7 +39508,10 @@ window.dadosPD = {
     },
     "2026-02-28_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5
@@ -37476,8 +39522,13 @@ window.dadosPD = {
     },
     "2026-02-28_2": {
       "labels": [
-        "HD - HC DIVERGENTE",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -37490,12 +39541,27 @@ window.dadosPD = {
     },
     "2026-02-28_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         14,
@@ -37516,7 +39582,9 @@ window.dadosPD = {
     },
     "2026-03-01_GERAL": {
       "labels": [
-        "HD - HC DIVERGENTE"
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         1
@@ -37537,7 +39605,9 @@ window.dadosPD = {
     },
     "2026-03-01_3": {
       "labels": [
-        "HD - HC DIVERGENTE"
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         1
@@ -37548,10 +39618,21 @@ window.dadosPD = {
     },
     "2026-03-02_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -37573,10 +39654,21 @@ window.dadosPD = {
     },
     "2026-03-02_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -37598,10 +39690,20 @@ window.dadosPD = {
     },
     "2026-03-03_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         10,
@@ -37618,8 +39720,13 @@ window.dadosPD = {
     },
     "2026-03-03_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -37632,10 +39739,20 @@ window.dadosPD = {
     },
     "2026-03-03_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -37652,10 +39769,20 @@ window.dadosPD = {
     },
     "2026-03-03_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -37672,10 +39799,20 @@ window.dadosPD = {
     },
     "2026-03-04_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         14,
@@ -37692,9 +39829,16 @@ window.dadosPD = {
     },
     "2026-03-04_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         3,
@@ -37709,9 +39853,17 @@ window.dadosPD = {
     },
     "2026-03-04_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -37726,10 +39878,20 @@ window.dadosPD = {
     },
     "2026-03-04_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -37746,10 +39908,20 @@ window.dadosPD = {
     },
     "2026-03-05_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         12,
@@ -37766,9 +39938,16 @@ window.dadosPD = {
     },
     "2026-03-05_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         2,
@@ -37783,9 +39962,17 @@ window.dadosPD = {
     },
     "2026-03-05_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -37800,10 +39987,20 @@ window.dadosPD = {
     },
     "2026-03-05_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -37820,10 +40017,20 @@ window.dadosPD = {
     },
     "2026-03-06_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         9,
@@ -37840,9 +40047,16 @@ window.dadosPD = {
     },
     "2026-03-06_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -37857,9 +40071,17 @@ window.dadosPD = {
     },
     "2026-03-06_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -37874,9 +40096,16 @@ window.dadosPD = {
     },
     "2026-03-06_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         1,
@@ -37891,10 +40120,20 @@ window.dadosPD = {
     },
     "2026-03-07_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         13,
@@ -37916,9 +40155,17 @@ window.dadosPD = {
     },
     "2026-03-07_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -37933,9 +40180,16 @@ window.dadosPD = {
     },
     "2026-03-07_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -37970,10 +40224,20 @@ window.dadosPD = {
     },
     "2026-03-09_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         14,
@@ -37990,9 +40254,16 @@ window.dadosPD = {
     },
     "2026-03-09_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -38007,8 +40278,13 @@ window.dadosPD = {
     },
     "2026-03-09_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         7,
@@ -38021,10 +40297,20 @@ window.dadosPD = {
     },
     "2026-03-09_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -38041,11 +40327,23 @@ window.dadosPD = {
     },
     "2026-03-10_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -38069,10 +40367,20 @@ window.dadosPD = {
     },
     "2026-03-10_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         3,
@@ -38089,9 +40397,16 @@ window.dadosPD = {
     },
     "2026-03-10_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -38106,15 +40421,39 @@ window.dadosPD = {
     },
     "2026-03-11_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         21,
@@ -38141,13 +40480,33 @@ window.dadosPD = {
     },
     "2026-03-11_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -38170,12 +40529,27 @@ window.dadosPD = {
     },
     "2026-03-11_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         14,
@@ -38196,9 +40570,17 @@ window.dadosPD = {
     },
     "2026-03-11_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -38213,13 +40595,31 @@ window.dadosPD = {
     },
     "2026-03-12_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         13,
@@ -38247,8 +40647,14 @@ window.dadosPD = {
     },
     "2026-03-12_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -38261,13 +40667,31 @@ window.dadosPD = {
     },
     "2026-03-12_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         9,
@@ -38290,10 +40714,20 @@ window.dadosPD = {
     },
     "2026-03-13_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         7,
@@ -38315,8 +40749,13 @@ window.dadosPD = {
     },
     "2026-03-13_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -38329,9 +40768,17 @@ window.dadosPD = {
     },
     "2026-03-13_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -38346,11 +40793,23 @@ window.dadosPD = {
     },
     "2026-03-14_GERAL": {
       "labels": [
-        "HD - HC DIVERGENTE",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -38374,8 +40833,13 @@ window.dadosPD = {
     },
     "2026-03-14_2": {
       "labels": [
-        "HD - HC DIVERGENTE",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -38388,9 +40852,16 @@ window.dadosPD = {
     },
     "2026-03-14_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         2,
@@ -38405,11 +40876,23 @@ window.dadosPD = {
     },
     "2026-03-16_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         10,
@@ -38433,10 +40916,20 @@ window.dadosPD = {
     },
     "2026-03-16_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         9,
@@ -38453,10 +40946,20 @@ window.dadosPD = {
     },
     "2026-03-16_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         1,
@@ -38473,11 +40976,23 @@ window.dadosPD = {
     },
     "2026-03-17_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         14,
@@ -38501,10 +41016,20 @@ window.dadosPD = {
     },
     "2026-03-17_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -38521,10 +41046,20 @@ window.dadosPD = {
     },
     "2026-03-17_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -38541,11 +41076,23 @@ window.dadosPD = {
     },
     "2026-03-18_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         10,
@@ -38569,9 +41116,17 @@ window.dadosPD = {
     },
     "2026-03-18_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -38586,10 +41141,20 @@ window.dadosPD = {
     },
     "2026-03-18_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -38606,10 +41171,20 @@ window.dadosPD = {
     },
     "2026-03-19_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -38631,7 +41206,10 @@ window.dadosPD = {
     },
     "2026-03-19_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6
@@ -38642,9 +41220,16 @@ window.dadosPD = {
     },
     "2026-03-19_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         3,
@@ -38659,9 +41244,16 @@ window.dadosPD = {
     },
     "2026-03-20_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -38681,7 +41273,10 @@ window.dadosPD = {
     },
     "2026-03-20_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         1
@@ -38692,9 +41287,16 @@ window.dadosPD = {
     },
     "2026-03-20_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -38709,10 +41311,20 @@ window.dadosPD = {
     },
     "2026-03-21_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -38734,8 +41346,14 @@ window.dadosPD = {
     },
     "2026-03-21_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -38748,10 +41366,20 @@ window.dadosPD = {
     },
     "2026-03-21_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         2,
@@ -38768,10 +41396,20 @@ window.dadosPD = {
     },
     "2026-03-23_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         16,
@@ -38788,10 +41426,20 @@ window.dadosPD = {
     },
     "2026-03-23_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -38808,8 +41456,14 @@ window.dadosPD = {
     },
     "2026-03-23_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -38822,10 +41476,20 @@ window.dadosPD = {
     },
     "2026-03-23_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         2,
@@ -38842,9 +41506,17 @@ window.dadosPD = {
     },
     "2026-03-24_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         13,
@@ -38864,8 +41536,14 @@ window.dadosPD = {
     },
     "2026-03-24_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -38878,9 +41556,17 @@ window.dadosPD = {
     },
     "2026-03-24_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -38895,10 +41581,20 @@ window.dadosPD = {
     },
     "2026-03-25_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -38915,9 +41611,16 @@ window.dadosPD = {
     },
     "2026-03-25_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -38932,7 +41635,10 @@ window.dadosPD = {
     },
     "2026-03-25_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2
@@ -38943,9 +41649,17 @@ window.dadosPD = {
     },
     "2026-03-25_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -38960,10 +41674,20 @@ window.dadosPD = {
     },
     "2026-03-26_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         13,
@@ -38980,8 +41704,13 @@ window.dadosPD = {
     },
     "2026-03-26_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -38994,9 +41723,17 @@ window.dadosPD = {
     },
     "2026-03-26_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         3,
@@ -39011,9 +41748,17 @@ window.dadosPD = {
     },
     "2026-03-26_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -39028,10 +41773,20 @@ window.dadosPD = {
     },
     "2026-03-27_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         20,
@@ -39048,9 +41803,17 @@ window.dadosPD = {
     },
     "2026-03-27_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -39065,8 +41828,14 @@ window.dadosPD = {
     },
     "2026-03-27_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -39079,10 +41848,20 @@ window.dadosPD = {
     },
     "2026-03-27_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -39099,10 +41878,20 @@ window.dadosPD = {
     },
     "2026-03-28_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         10,
@@ -39124,9 +41913,17 @@ window.dadosPD = {
     },
     "2026-03-28_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -39141,9 +41938,17 @@ window.dadosPD = {
     },
     "2026-03-28_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -39178,10 +41983,20 @@ window.dadosPD = {
     },
     "2026-03-30_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         18,
@@ -39198,9 +42013,17 @@ window.dadosPD = {
     },
     "2026-03-30_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -39215,8 +42038,14 @@ window.dadosPD = {
     },
     "2026-03-30_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -39229,10 +42058,20 @@ window.dadosPD = {
     },
     "2026-03-30_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         11,
@@ -39249,11 +42088,23 @@ window.dadosPD = {
     },
     "2026-03-31_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         14,
@@ -39272,9 +42123,17 @@ window.dadosPD = {
     },
     "2026-03-31_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -39289,11 +42148,23 @@ window.dadosPD = {
     },
     "2026-03-31_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         6,
@@ -39312,10 +42183,20 @@ window.dadosPD = {
     },
     "2026-03-31_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -39332,11 +42213,23 @@ window.dadosPD = {
     },
     "2026-04-01_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         15,
@@ -39355,7 +42248,9 @@ window.dadosPD = {
     },
     "2026-04-01_1": {
       "labels": [
-        "HD - HC DIVERGENTE"
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         1
@@ -39366,11 +42261,23 @@ window.dadosPD = {
     },
     "2026-04-01_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -39389,10 +42296,20 @@ window.dadosPD = {
     },
     "2026-04-01_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -39409,13 +42326,31 @@ window.dadosPD = {
     },
     "2026-04-02_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -39438,9 +42373,17 @@ window.dadosPD = {
     },
     "2026-04-02_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -39455,10 +42398,20 @@ window.dadosPD = {
     },
     "2026-04-02_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -39475,11 +42428,24 @@ window.dadosPD = {
     },
     "2026-04-02_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -39498,15 +42464,37 @@ window.dadosPD = {
     },
     "2026-04-03_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         11,
@@ -39533,8 +42521,14 @@ window.dadosPD = {
     },
     "2026-04-03_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -39547,9 +42541,17 @@ window.dadosPD = {
     },
     "2026-04-03_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -39564,14 +42566,33 @@ window.dadosPD = {
     },
     "2026-04-03_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -39616,14 +42637,35 @@ window.dadosPD = {
     },
     "2026-04-06_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         10,
@@ -39653,9 +42695,16 @@ window.dadosPD = {
     },
     "2026-04-06_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -39670,13 +42719,31 @@ window.dadosPD = {
     },
     "2026-04-06_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -39699,12 +42766,27 @@ window.dadosPD = {
     },
     "2026-04-07_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -39725,7 +42807,10 @@ window.dadosPD = {
     },
     "2026-04-07_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4
@@ -39736,10 +42821,20 @@ window.dadosPD = {
     },
     "2026-04-07_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -39756,11 +42851,23 @@ window.dadosPD = {
     },
     "2026-04-07_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -39779,13 +42886,30 @@ window.dadosPD = {
     },
     "2026-04-08_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DESCONTENTAMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -39808,9 +42932,17 @@ window.dadosPD = {
     },
     "2026-04-08_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -39825,10 +42957,20 @@ window.dadosPD = {
     },
     "2026-04-08_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         9,
@@ -39845,12 +42987,26 @@ window.dadosPD = {
     },
     "2026-04-08_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCONTENTAMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -39871,13 +43027,30 @@ window.dadosPD = {
     },
     "2026-04-09_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         8,
@@ -39905,10 +43078,20 @@ window.dadosPD = {
     },
     "2026-04-09_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -39925,12 +43108,26 @@ window.dadosPD = {
     },
     "2026-04-09_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -39951,13 +43148,31 @@ window.dadosPD = {
     },
     "2026-04-10_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -39985,10 +43200,20 @@ window.dadosPD = {
     },
     "2026-04-10_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -40005,12 +43230,27 @@ window.dadosPD = {
     },
     "2026-04-10_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -40031,17 +43271,44 @@ window.dadosPD = {
     },
     "2026-04-11_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DR - ESCALA",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         13,
@@ -40072,14 +43339,33 @@ window.dadosPD = {
     },
     "2026-04-11_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -40104,12 +43390,27 @@ window.dadosPD = {
     },
     "2026-04-11_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DR - ESCALA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -40130,11 +43431,23 @@ window.dadosPD = {
     },
     "2026-04-11_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -40153,10 +43466,21 @@ window.dadosPD = {
     },
     "2026-04-12_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -40183,10 +43507,21 @@ window.dadosPD = {
     },
     "2026-04-12_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -40203,15 +43538,37 @@ window.dadosPD = {
     },
     "2026-04-13_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         12,
@@ -40238,11 +43595,22 @@ window.dadosPD = {
     },
     "2026-04-13_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         4,
@@ -40261,10 +43629,20 @@ window.dadosPD = {
     },
     "2026-04-13_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -40281,11 +43659,24 @@ window.dadosPD = {
     },
     "2026-04-13_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -40304,15 +43695,37 @@ window.dadosPD = {
     },
     "2026-04-14_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         14,
@@ -40339,10 +43752,19 @@ window.dadosPD = {
     },
     "2026-04-14_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -40359,10 +43781,20 @@ window.dadosPD = {
     },
     "2026-04-14_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -40379,12 +43811,27 @@ window.dadosPD = {
     },
     "2026-04-14_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -40405,12 +43852,27 @@ window.dadosPD = {
     },
     "2026-04-15_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         12,
@@ -40431,9 +43893,16 @@ window.dadosPD = {
     },
     "2026-04-15_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         3,
@@ -40448,10 +43917,20 @@ window.dadosPD = {
     },
     "2026-04-15_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -40468,10 +43947,20 @@ window.dadosPD = {
     },
     "2026-04-15_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         3,
@@ -40488,13 +43977,30 @@ window.dadosPD = {
     },
     "2026-04-16_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         12,
@@ -40517,9 +44023,16 @@ window.dadosPD = {
     },
     "2026-04-16_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -40534,10 +44047,20 @@ window.dadosPD = {
     },
     "2026-04-16_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -40554,11 +44077,23 @@ window.dadosPD = {
     },
     "2026-04-16_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -40577,15 +44112,37 @@ window.dadosPD = {
     },
     "2026-04-17_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DIFICULDADE DE TRANSPORTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ]
       ],
       "data_abs": [
         12,
@@ -40612,9 +44169,16 @@ window.dadosPD = {
     },
     "2026-04-17_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -40629,10 +44193,20 @@ window.dadosPD = {
     },
     "2026-04-17_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -40649,13 +44223,30 @@ window.dadosPD = {
     },
     "2026-04-17_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FE - FÉRIAS",
-        "FI - DIFICULDADE DE TRANSPORTE"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -40678,15 +44269,38 @@ window.dadosPD = {
     },
     "2026-04-18_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         13,
@@ -40718,10 +44332,20 @@ window.dadosPD = {
     },
     "2026-04-18_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -40738,14 +44362,34 @@ window.dadosPD = {
     },
     "2026-04-18_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -40790,14 +44434,33 @@ window.dadosPD = {
     },
     "2026-04-21_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         14,
@@ -40827,10 +44490,20 @@ window.dadosPD = {
     },
     "2026-04-21_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -40847,13 +44520,29 @@ window.dadosPD = {
     },
     "2026-04-21_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -40876,8 +44565,12 @@ window.dadosPD = {
     },
     "2026-04-22_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         1,
@@ -40900,8 +44593,12 @@ window.dadosPD = {
     },
     "2026-04-22_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         1,
@@ -40914,13 +44611,31 @@ window.dadosPD = {
     },
     "2026-04-23_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - BANCO DE HORAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         10,
@@ -40943,10 +44658,19 @@ window.dadosPD = {
     },
     "2026-04-23_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         4,
@@ -40963,9 +44687,17 @@ window.dadosPD = {
     },
     "2026-04-23_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -40980,9 +44712,17 @@ window.dadosPD = {
     },
     "2026-04-23_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - BANCO DE HORAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         1,
@@ -40997,12 +44737,27 @@ window.dadosPD = {
     },
     "2026-04-24_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - BANCO DE HORAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -41023,10 +44778,20 @@ window.dadosPD = {
     },
     "2026-04-24_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - BANCO DE HORAS"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         3,
@@ -41043,9 +44808,17 @@ window.dadosPD = {
     },
     "2026-04-24_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -41060,8 +44833,12 @@ window.dadosPD = {
     },
     "2026-04-24_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         1,
@@ -41074,13 +44851,30 @@ window.dadosPD = {
     },
     "2026-04-25_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         17,
@@ -41103,9 +44897,17 @@ window.dadosPD = {
     },
     "2026-04-25_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -41120,11 +44922,23 @@ window.dadosPD = {
     },
     "2026-04-25_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -41143,10 +44957,20 @@ window.dadosPD = {
     },
     "2026-04-25_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -41163,10 +44987,20 @@ window.dadosPD = {
     },
     "2026-04-27_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         9,
@@ -41183,8 +45017,13 @@ window.dadosPD = {
     },
     "2026-04-27_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -41197,9 +45036,17 @@ window.dadosPD = {
     },
     "2026-04-27_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -41214,9 +45061,16 @@ window.dadosPD = {
     },
     "2026-04-27_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         1,
@@ -41231,12 +45085,27 @@ window.dadosPD = {
     },
     "2026-04-28_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         13,
@@ -41257,8 +45126,13 @@ window.dadosPD = {
     },
     "2026-04-28_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -41271,10 +45145,20 @@ window.dadosPD = {
     },
     "2026-04-28_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -41291,10 +45175,20 @@ window.dadosPD = {
     },
     "2026-04-28_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -41311,11 +45205,23 @@ window.dadosPD = {
     },
     "2026-04-29_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         8,
@@ -41334,8 +45240,13 @@ window.dadosPD = {
     },
     "2026-04-29_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -41348,10 +45259,20 @@ window.dadosPD = {
     },
     "2026-04-29_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -41368,9 +45289,16 @@ window.dadosPD = {
     },
     "2026-04-29_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         3,
@@ -41385,11 +45313,24 @@ window.dadosPD = {
     },
     "2026-04-30_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         12,
@@ -41408,9 +45349,17 @@ window.dadosPD = {
     },
     "2026-04-30_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -41425,8 +45374,14 @@ window.dadosPD = {
     },
     "2026-04-30_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -41439,10 +45394,20 @@ window.dadosPD = {
     },
     "2026-04-30_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -41459,12 +45424,27 @@ window.dadosPD = {
     },
     "2026-05-01_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         12,
@@ -41485,9 +45465,18 @@ window.dadosPD = {
     },
     "2026-05-01_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -41502,9 +45491,17 @@ window.dadosPD = {
     },
     "2026-05-01_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -41519,10 +45516,19 @@ window.dadosPD = {
     },
     "2026-05-01_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         4,
@@ -41539,12 +45545,27 @@ window.dadosPD = {
     },
     "2026-05-04_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -41565,9 +45586,17 @@ window.dadosPD = {
     },
     "2026-05-04_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -41582,11 +45611,24 @@ window.dadosPD = {
     },
     "2026-05-04_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -41605,9 +45647,16 @@ window.dadosPD = {
     },
     "2026-05-04_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -41622,13 +45671,30 @@ window.dadosPD = {
     },
     "2026-05-05_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -41651,10 +45717,20 @@ window.dadosPD = {
     },
     "2026-05-05_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -41671,10 +45747,20 @@ window.dadosPD = {
     },
     "2026-05-05_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -41691,10 +45777,20 @@ window.dadosPD = {
     },
     "2026-05-05_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         4,
@@ -41711,13 +45807,30 @@ window.dadosPD = {
     },
     "2026-05-06_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -41740,9 +45853,17 @@ window.dadosPD = {
     },
     "2026-05-06_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -41757,10 +45878,20 @@ window.dadosPD = {
     },
     "2026-05-06_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -41777,10 +45908,20 @@ window.dadosPD = {
     },
     "2026-05-06_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -41797,15 +45938,37 @@ window.dadosPD = {
     },
     "2026-05-07_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         12,
@@ -41832,11 +45995,24 @@ window.dadosPD = {
     },
     "2026-05-07_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -41855,14 +46031,34 @@ window.dadosPD = {
     },
     "2026-05-07_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -41887,8 +46083,13 @@ window.dadosPD = {
     },
     "2026-05-07_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -41901,18 +46102,47 @@ window.dadosPD = {
     },
     "2026-05-08_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         12,
@@ -41945,12 +46175,27 @@ window.dadosPD = {
     },
     "2026-05-08_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         5,
@@ -41971,15 +46216,37 @@ window.dadosPD = {
     },
     "2026-05-08_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         6,
@@ -42006,11 +46273,23 @@ window.dadosPD = {
     },
     "2026-05-08_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -42029,13 +46308,30 @@ window.dadosPD = {
     },
     "2026-05-09_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         11,
@@ -42058,11 +46354,24 @@ window.dadosPD = {
     },
     "2026-05-09_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         7,
@@ -42081,10 +46390,20 @@ window.dadosPD = {
     },
     "2026-05-09_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -42101,12 +46420,26 @@ window.dadosPD = {
     },
     "2026-05-09_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         2,
@@ -42127,21 +46460,59 @@ window.dadosPD = {
     },
     "2026-05-11_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         23,
@@ -42180,16 +46551,42 @@ window.dadosPD = {
     },
     "2026-05-11_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "BH - BANCO DE HORAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         9,
@@ -42218,15 +46615,37 @@ window.dadosPD = {
     },
     "2026-05-11_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         14,
@@ -42253,13 +46672,29 @@ window.dadosPD = {
     },
     "2026-05-11_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         2,
@@ -42282,14 +46717,35 @@ window.dadosPD = {
     },
     "2026-05-12_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         24,
@@ -42314,11 +46770,24 @@ window.dadosPD = {
     },
     "2026-05-12_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -42337,11 +46806,24 @@ window.dadosPD = {
     },
     "2026-05-12_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -42360,10 +46842,21 @@ window.dadosPD = {
     },
     "2026-05-12_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         10,
@@ -42380,15 +46873,37 @@ window.dadosPD = {
     },
     "2026-05-13_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         14,
@@ -42415,10 +46930,21 @@ window.dadosPD = {
     },
     "2026-05-13_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         9,
@@ -42435,14 +46961,34 @@ window.dadosPD = {
     },
     "2026-05-13_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -42467,8 +47013,13 @@ window.dadosPD = {
     },
     "2026-05-13_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         2,
@@ -42481,11 +47032,23 @@ window.dadosPD = {
     },
     "2026-05-14_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         8,
@@ -42504,9 +47067,17 @@ window.dadosPD = {
     },
     "2026-05-14_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         3,
@@ -42521,10 +47092,20 @@ window.dadosPD = {
     },
     "2026-05-14_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -42541,10 +47122,19 @@ window.dadosPD = {
     },
     "2026-05-14_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -42561,12 +47151,27 @@ window.dadosPD = {
     },
     "2026-05-15_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         10,
@@ -42587,10 +47192,20 @@ window.dadosPD = {
     },
     "2026-05-15_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -42607,11 +47222,24 @@ window.dadosPD = {
     },
     "2026-05-15_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -42630,8 +47258,13 @@ window.dadosPD = {
     },
     "2026-05-15_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -42644,11 +47277,23 @@ window.dadosPD = {
     },
     "2026-05-16_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         15,
@@ -42667,10 +47312,20 @@ window.dadosPD = {
     },
     "2026-05-16_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -42687,9 +47342,17 @@ window.dadosPD = {
     },
     "2026-05-16_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -42704,10 +47367,19 @@ window.dadosPD = {
     },
     "2026-05-16_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         7,
@@ -42744,14 +47416,34 @@ window.dadosPD = {
     },
     "2026-05-18_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -42776,9 +47468,16 @@ window.dadosPD = {
     },
     "2026-05-18_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         2,
@@ -42793,10 +47492,20 @@ window.dadosPD = {
     },
     "2026-05-18_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -42813,12 +47522,27 @@ window.dadosPD = {
     },
     "2026-05-18_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -42839,16 +47563,42 @@ window.dadosPD = {
     },
     "2026-05-19_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "BH - BANCO DE HORAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         14,
@@ -42877,13 +47627,31 @@ window.dadosPD = {
     },
     "2026-05-19_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "BH - BANCO DE HORAS",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -42906,9 +47674,16 @@ window.dadosPD = {
     },
     "2026-05-19_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -42923,13 +47698,31 @@ window.dadosPD = {
     },
     "2026-05-19_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -42952,17 +47745,45 @@ window.dadosPD = {
     },
     "2026-05-20_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         16,
@@ -42993,10 +47814,19 @@ window.dadosPD = {
     },
     "2026-05-20_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         2,
@@ -43013,13 +47843,31 @@ window.dadosPD = {
     },
     "2026-05-20_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         11,
@@ -43042,13 +47890,29 @@ window.dadosPD = {
     },
     "2026-05-20_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         6,
@@ -43071,15 +47935,38 @@ window.dadosPD = {
     },
     "2026-05-21_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         18,
@@ -43106,10 +47993,19 @@ window.dadosPD = {
     },
     "2026-05-21_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -43126,12 +48022,28 @@ window.dadosPD = {
     },
     "2026-05-21_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         12,
@@ -43152,12 +48064,26 @@ window.dadosPD = {
     },
     "2026-05-21_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -43178,13 +48104,30 @@ window.dadosPD = {
     },
     "2026-05-22_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         14,
@@ -43207,11 +48150,23 @@ window.dadosPD = {
     },
     "2026-05-22_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -43230,10 +48185,20 @@ window.dadosPD = {
     },
     "2026-05-22_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -43250,12 +48215,26 @@ window.dadosPD = {
     },
     "2026-05-22_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         6,
@@ -43276,12 +48255,26 @@ window.dadosPD = {
     },
     "2026-05-23_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         15,
@@ -43302,11 +48295,23 @@ window.dadosPD = {
     },
     "2026-05-23_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         3,
@@ -43325,10 +48330,20 @@ window.dadosPD = {
     },
     "2026-05-23_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -43345,11 +48360,22 @@ window.dadosPD = {
     },
     "2026-05-23_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         6,
@@ -43368,14 +48394,34 @@ window.dadosPD = {
     },
     "2026-05-25_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         11,
@@ -43400,11 +48446,23 @@ window.dadosPD = {
     },
     "2026-05-25_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -43423,13 +48481,30 @@ window.dadosPD = {
     },
     "2026-05-25_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -43452,7 +48527,9 @@ window.dadosPD = {
     },
     "2026-05-25_3": {
       "labels": [
-        "FE - FÉRIAS"
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         1
@@ -43463,13 +48540,30 @@ window.dadosPD = {
     },
     "2026-05-26_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         19,
@@ -43492,11 +48586,23 @@ window.dadosPD = {
     },
     "2026-05-26_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -43515,11 +48621,23 @@ window.dadosPD = {
     },
     "2026-05-26_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         12,
@@ -43538,11 +48656,22 @@ window.dadosPD = {
     },
     "2026-05-26_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -43561,13 +48690,30 @@ window.dadosPD = {
     },
     "2026-05-27_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         14,
@@ -43590,13 +48736,30 @@ window.dadosPD = {
     },
     "2026-05-27_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         3,
@@ -43619,10 +48782,19 @@ window.dadosPD = {
     },
     "2026-05-27_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         12,
@@ -43639,7 +48811,9 @@ window.dadosPD = {
     },
     "2026-05-27_3": {
       "labels": [
-        "FE - FÉRIAS"
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         1
@@ -43650,16 +48824,41 @@ window.dadosPD = {
     },
     "2026-05-28_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO",
-        "HD - HC DIVERGENTE",
-        "FI - ABANDONO DE EMPREGO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         8,
@@ -43688,14 +48887,34 @@ window.dadosPD = {
     },
     "2026-05-28_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -43720,11 +48939,23 @@ window.dadosPD = {
     },
     "2026-05-28_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         2,
@@ -43743,13 +48974,29 @@ window.dadosPD = {
     },
     "2026-05-28_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -43772,13 +49019,30 @@ window.dadosPD = {
     },
     "2026-05-29_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         11,
@@ -43801,11 +49065,24 @@ window.dadosPD = {
     },
     "2026-05-29_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         6,
@@ -43824,13 +49101,30 @@ window.dadosPD = {
     },
     "2026-05-29_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         5,
@@ -43853,9 +49147,16 @@ window.dadosPD = {
     },
     "2026-05-29_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -43870,15 +49171,37 @@ window.dadosPD = {
     },
     "2026-05-30_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         13,
@@ -43905,12 +49228,27 @@ window.dadosPD = {
     },
     "2026-05-30_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         3,
@@ -43931,10 +49269,20 @@ window.dadosPD = {
     },
     "2026-05-30_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         11,
@@ -43951,11 +49299,23 @@ window.dadosPD = {
     },
     "2026-05-30_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         1,
@@ -43994,15 +49354,38 @@ window.dadosPD = {
     },
     "2026-06-01_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         12,
@@ -44029,12 +49412,28 @@ window.dadosPD = {
     },
     "2026-06-01_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -44055,14 +49454,34 @@ window.dadosPD = {
     },
     "2026-06-01_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -44087,12 +49506,27 @@ window.dadosPD = {
     },
     "2026-06-01_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         8,
@@ -44113,14 +49547,34 @@ window.dadosPD = {
     },
     "2026-06-02_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         12,
@@ -44145,11 +49599,24 @@ window.dadosPD = {
     },
     "2026-06-02_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -44168,12 +49635,27 @@ window.dadosPD = {
     },
     "2026-06-02_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -44194,12 +49676,27 @@ window.dadosPD = {
     },
     "2026-06-02_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         7,
@@ -44220,15 +49717,38 @@ window.dadosPD = {
     },
     "2026-06-03_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - BANCO DE HORAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         14,
@@ -44255,13 +49775,32 @@ window.dadosPD = {
     },
     "2026-06-03_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - BANCO DE HORAS"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -44284,11 +49823,24 @@ window.dadosPD = {
     },
     "2026-06-03_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         6,
@@ -44307,11 +49859,23 @@ window.dadosPD = {
     },
     "2026-06-03_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -44330,14 +49894,33 @@ window.dadosPD = {
     },
     "2026-06-04_GERAL": {
       "labels": [
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCONTENTAMENTO"
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ]
       ],
       "data_abs": [
         8,
@@ -44362,8 +49945,13 @@ window.dadosPD = {
     },
     "2026-06-04_1": {
       "labels": [
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         8,
@@ -44381,13 +49969,29 @@ window.dadosPD = {
     },
     "2026-06-04_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCONTENTAMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ]
       ],
       "data_abs": [
         5,
@@ -44410,13 +50014,30 @@ window.dadosPD = {
     },
     "2026-06-05_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         11,
@@ -44439,11 +50060,23 @@ window.dadosPD = {
     },
     "2026-06-05_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         4,
@@ -44462,11 +50095,24 @@ window.dadosPD = {
     },
     "2026-06-05_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         7,
@@ -44490,16 +50136,41 @@ window.dadosPD = {
     },
     "2026-06-06_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FJ - BANCO DE HORAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         13,
@@ -44528,11 +50199,24 @@ window.dadosPD = {
     },
     "2026-06-06_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -44551,11 +50235,23 @@ window.dadosPD = {
     },
     "2026-06-06_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -44574,13 +50270,31 @@ window.dadosPD = {
     },
     "2026-06-06_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - BANCO DE HORAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -44623,18 +50337,48 @@ window.dadosPD = {
     },
     "2026-06-08_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         19,
@@ -44667,13 +50411,30 @@ window.dadosPD = {
     },
     "2026-06-08_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         6,
@@ -44696,13 +50457,30 @@ window.dadosPD = {
     },
     "2026-06-08_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         11,
@@ -44725,14 +50503,35 @@ window.dadosPD = {
     },
     "2026-06-08_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -44757,18 +50556,47 @@ window.dadosPD = {
     },
     "2026-06-09_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         16,
@@ -44801,13 +50629,31 @@ window.dadosPD = {
     },
     "2026-06-09_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         6,
@@ -44830,13 +50676,31 @@ window.dadosPD = {
     },
     "2026-06-09_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -44859,13 +50723,30 @@ window.dadosPD = {
     },
     "2026-06-09_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -44888,14 +50769,34 @@ window.dadosPD = {
     },
     "2026-06-10_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         14,
@@ -44920,11 +50821,24 @@ window.dadosPD = {
     },
     "2026-06-10_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -44943,11 +50857,25 @@ window.dadosPD = {
     },
     "2026-06-10_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -44966,13 +50894,30 @@ window.dadosPD = {
     },
     "2026-06-10_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -44995,17 +50940,45 @@ window.dadosPD = {
     },
     "2026-06-11_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         17,
@@ -45036,14 +51009,35 @@ window.dadosPD = {
     },
     "2026-06-11_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         9,
@@ -45068,11 +51062,24 @@ window.dadosPD = {
     },
     "2026-06-11_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -45091,12 +51098,27 @@ window.dadosPD = {
     },
     "2026-06-11_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -45117,18 +51139,48 @@ window.dadosPD = {
     },
     "2026-06-12_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         15,
@@ -45161,12 +51213,28 @@ window.dadosPD = {
     },
     "2026-06-12_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -45187,12 +51255,28 @@ window.dadosPD = {
     },
     "2026-06-12_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -45213,15 +51297,37 @@ window.dadosPD = {
     },
     "2026-06-12_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -45248,16 +51354,41 @@ window.dadosPD = {
     },
     "2026-06-13_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DR - ESCALA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         15,
@@ -45286,12 +51417,28 @@ window.dadosPD = {
     },
     "2026-06-13_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DR - ESCALA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -45312,13 +51459,32 @@ window.dadosPD = {
     },
     "2026-06-13_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         9,
@@ -45341,12 +51507,26 @@ window.dadosPD = {
     },
     "2026-06-13_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -45387,16 +51567,42 @@ window.dadosPD = {
     },
     "2026-06-15_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         11,
@@ -45425,10 +51631,21 @@ window.dadosPD = {
     },
     "2026-06-15_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -45445,15 +51662,39 @@ window.dadosPD = {
     },
     "2026-06-15_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         9,
@@ -45480,13 +51721,30 @@ window.dadosPD = {
     },
     "2026-06-15_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -45509,15 +51767,37 @@ window.dadosPD = {
     },
     "2026-06-16_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCONTENTAMENTO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ]
       ],
       "data_abs": [
         16,
@@ -45544,12 +51824,27 @@ window.dadosPD = {
     },
     "2026-06-16_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         5,
@@ -45570,13 +51865,30 @@ window.dadosPD = {
     },
     "2026-06-16_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         9,
@@ -45599,11 +51911,22 @@ window.dadosPD = {
     },
     "2026-06-16_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - DESCONTENTAMENTO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ]
       ],
       "data_abs": [
         4,
@@ -45622,14 +51945,34 @@ window.dadosPD = {
     },
     "2026-06-17_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         13,
@@ -45654,10 +51997,21 @@ window.dadosPD = {
     },
     "2026-06-17_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -45674,12 +52028,27 @@ window.dadosPD = {
     },
     "2026-06-17_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -45700,11 +52069,23 @@ window.dadosPD = {
     },
     "2026-06-17_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         6,
@@ -45723,15 +52104,38 @@ window.dadosPD = {
     },
     "2026-06-18_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         19,
@@ -45758,10 +52162,21 @@ window.dadosPD = {
     },
     "2026-06-18_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -45778,13 +52193,30 @@ window.dadosPD = {
     },
     "2026-06-18_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -45807,12 +52239,27 @@ window.dadosPD = {
     },
     "2026-06-18_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -45833,17 +52280,45 @@ window.dadosPD = {
     },
     "2026-06-19_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         17,
@@ -45874,11 +52349,23 @@ window.dadosPD = {
     },
     "2026-06-19_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         5,
@@ -45897,14 +52384,35 @@ window.dadosPD = {
     },
     "2026-06-19_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         5,
@@ -45929,12 +52437,27 @@ window.dadosPD = {
     },
     "2026-06-19_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -45955,19 +52478,50 @@ window.dadosPD = {
     },
     "2026-06-20_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "DR - ESCALA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         14,
@@ -46002,11 +52556,23 @@ window.dadosPD = {
     },
     "2026-06-20_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         7,
@@ -46025,18 +52591,47 @@ window.dadosPD = {
     },
     "2026-06-20_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "DR - ESCALA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -46074,15 +52669,37 @@ window.dadosPD = {
     },
     "2026-06-21_GERAL": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCONTENTAMENTO"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ]
       ],
       "data_abs": [
         6,
@@ -46119,15 +52736,37 @@ window.dadosPD = {
     },
     "2026-06-21_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCONTENTAMENTO"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ]
       ],
       "data_abs": [
         6,
@@ -46154,17 +52793,45 @@ window.dadosPD = {
     },
     "2026-06-22_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         14,
@@ -46195,12 +52862,27 @@ window.dadosPD = {
     },
     "2026-06-22_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         6,
@@ -46221,14 +52903,35 @@ window.dadosPD = {
     },
     "2026-06-22_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         8,
@@ -46253,15 +52956,38 @@ window.dadosPD = {
     },
     "2026-06-22_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -46288,20 +53014,57 @@ window.dadosPD = {
     },
     "2026-06-23_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "BH - BANCO DE HORAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -46338,13 +53101,32 @@ window.dadosPD = {
     },
     "2026-06-23_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "BH - BANCO DE HORAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -46367,16 +53149,42 @@ window.dadosPD = {
     },
     "2026-06-23_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         4,
@@ -46405,16 +53213,41 @@ window.dadosPD = {
     },
     "2026-06-23_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ]
       ],
       "data_abs": [
         8,
@@ -46443,15 +53276,38 @@ window.dadosPD = {
     },
     "2026-06-24_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         8,
@@ -46478,12 +53334,28 @@ window.dadosPD = {
     },
     "2026-06-24_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         3,
@@ -46504,15 +53376,38 @@ window.dadosPD = {
     },
     "2026-06-24_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -46539,12 +53434,27 @@ window.dadosPD = {
     },
     "2026-06-24_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         3,
@@ -46565,17 +53475,46 @@ window.dadosPD = {
     },
     "2026-06-25_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "BH - BANCO DE HORAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -46606,11 +53545,25 @@ window.dadosPD = {
     },
     "2026-06-25_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -46629,16 +53582,42 @@ window.dadosPD = {
     },
     "2026-06-25_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -46667,12 +53646,29 @@ window.dadosPD = {
     },
     "2026-06-25_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -46693,19 +53689,53 @@ window.dadosPD = {
     },
     "2026-06-26_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "BH - BANCO DE HORAS",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - BANCO DE HORAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         18,
@@ -46740,12 +53770,28 @@ window.dadosPD = {
     },
     "2026-06-26_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -46766,16 +53812,43 @@ window.dadosPD = {
     },
     "2026-06-26_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "BH - BANCO DE HORAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - BANCO DE HORAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -46804,14 +53877,34 @@ window.dadosPD = {
     },
     "2026-06-26_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         9,
@@ -46836,15 +53929,39 @@ window.dadosPD = {
     },
     "2026-06-27_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -46871,12 +53988,28 @@ window.dadosPD = {
     },
     "2026-06-27_1": {
       "labels": [
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -46897,14 +54030,35 @@ window.dadosPD = {
     },
     "2026-06-27_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -46929,10 +54083,21 @@ window.dadosPD = {
     },
     "2026-06-27_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         2,
@@ -46949,11 +54114,24 @@ window.dadosPD = {
     },
     "2026-06-28_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -46982,11 +54160,24 @@ window.dadosPD = {
     },
     "2026-06-28_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -47005,18 +54196,48 @@ window.dadosPD = {
     },
     "2026-06-29_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCONTENTAMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         13,
@@ -47049,13 +54270,31 @@ window.dadosPD = {
     },
     "2026-06-29_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         5,
@@ -47078,15 +54317,38 @@ window.dadosPD = {
     },
     "2026-06-29_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -47113,15 +54375,38 @@ window.dadosPD = {
     },
     "2026-06-29_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCONTENTAMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -47148,17 +54433,44 @@ window.dadosPD = {
     },
     "2026-06-30_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - DESCONTENTAMENTO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ]
       ],
       "data_abs": [
         10,
@@ -47189,13 +54501,31 @@ window.dadosPD = {
     },
     "2026-06-30_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -47218,15 +54548,37 @@ window.dadosPD = {
     },
     "2026-06-30_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         4,
@@ -47253,14 +54605,33 @@ window.dadosPD = {
     },
     "2026-06-30_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -47285,15 +54656,38 @@ window.dadosPD = {
     },
     "2026-07-01_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         16,
@@ -47320,10 +54714,21 @@ window.dadosPD = {
     },
     "2026-07-01_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -47340,14 +54745,34 @@ window.dadosPD = {
     },
     "2026-07-01_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -47372,8 +54797,13 @@ window.dadosPD = {
     },
     "2026-07-01_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -47386,15 +54816,38 @@ window.dadosPD = {
     },
     "2026-07-02_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         10,
@@ -47421,11 +54874,24 @@ window.dadosPD = {
     },
     "2026-07-02_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -47444,13 +54910,31 @@ window.dadosPD = {
     },
     "2026-07-02_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -47473,11 +54957,23 @@ window.dadosPD = {
     },
     "2026-07-02_3": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         3,
@@ -47496,15 +54992,38 @@ window.dadosPD = {
     },
     "2026-07-03_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         15,
@@ -47531,11 +55050,24 @@ window.dadosPD = {
     },
     "2026-07-03_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -47554,15 +55086,38 @@ window.dadosPD = {
     },
     "2026-07-03_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -47589,12 +55144,27 @@ window.dadosPD = {
     },
     "2026-07-03_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -47615,16 +55185,42 @@ window.dadosPD = {
     },
     "2026-07-04_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         20,
@@ -47653,12 +55249,27 @@ window.dadosPD = {
     },
     "2026-07-04_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         6,
@@ -47679,14 +55290,35 @@ window.dadosPD = {
     },
     "2026-07-04_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -47711,15 +55343,38 @@ window.dadosPD = {
     },
     "2026-07-04_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -47746,17 +55401,45 @@ window.dadosPD = {
     },
     "2026-07-06_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         23,
@@ -47787,12 +55470,28 @@ window.dadosPD = {
     },
     "2026-07-06_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -47813,14 +55512,34 @@ window.dadosPD = {
     },
     "2026-07-06_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         10,
@@ -47845,16 +55564,41 @@ window.dadosPD = {
     },
     "2026-07-06_3": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -47883,14 +55627,34 @@ window.dadosPD = {
     },
     "2026-07-07_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         12,
@@ -47925,14 +55689,34 @@ window.dadosPD = {
     },
     "2026-07-07_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         12,
@@ -47957,13 +55741,32 @@ window.dadosPD = {
     },
     "2026-08-01_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "NP - NÃO PERTENCE À MINHA LISTA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         10,
@@ -47986,12 +55789,29 @@ window.dadosPD = {
     },
     "2026-08-01_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "NP - NÃO PERTENCE À MINHA LISTA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -48012,11 +55832,24 @@ window.dadosPD = {
     },
     "2026-08-01_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -48040,15 +55873,37 @@ window.dadosPD = {
     },
     "2026-08-03_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FR - FERIADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FR - FERIADO"
+        ]
       ],
       "data_abs": [
         9,
@@ -48075,11 +55930,24 @@ window.dadosPD = {
     },
     "2026-08-03_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -48098,10 +55966,20 @@ window.dadosPD = {
     },
     "2026-08-03_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -48118,13 +55996,30 @@ window.dadosPD = {
     },
     "2026-08-03_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FR - FERIADO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FR - FERIADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -48147,14 +56042,33 @@ window.dadosPD = {
     },
     "2026-08-04_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         11,
@@ -48179,12 +56093,27 @@ window.dadosPD = {
     },
     "2026-08-04_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -48205,10 +56134,20 @@ window.dadosPD = {
     },
     "2026-08-04_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -48225,12 +56164,26 @@ window.dadosPD = {
     },
     "2026-08-04_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -48251,15 +56204,38 @@ window.dadosPD = {
     },
     "2026-08-05_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         25,
@@ -48286,11 +56262,24 @@ window.dadosPD = {
     },
     "2026-08-05_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -48309,10 +56298,20 @@ window.dadosPD = {
     },
     "2026-08-05_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -48329,13 +56328,30 @@ window.dadosPD = {
     },
     "2026-08-05_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         11,
@@ -48358,16 +56374,41 @@ window.dadosPD = {
     },
     "2026-08-06_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -48396,10 +56437,20 @@ window.dadosPD = {
     },
     "2026-08-06_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -48416,11 +56467,24 @@ window.dadosPD = {
     },
     "2026-08-06_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         3,
@@ -48439,14 +56503,33 @@ window.dadosPD = {
     },
     "2026-08-06_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -48471,15 +56554,37 @@ window.dadosPD = {
     },
     "2026-08-07_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         9,
@@ -48506,8 +56611,13 @@ window.dadosPD = {
     },
     "2026-08-07_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -48520,10 +56630,20 @@ window.dadosPD = {
     },
     "2026-08-07_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -48540,15 +56660,37 @@ window.dadosPD = {
     },
     "2026-08-07_3": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         4,
@@ -48575,14 +56717,35 @@ window.dadosPD = {
     },
     "2026-08-08_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         12,
@@ -48607,10 +56770,20 @@ window.dadosPD = {
     },
     "2026-08-08_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -48627,11 +56800,24 @@ window.dadosPD = {
     },
     "2026-08-08_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -48650,12 +56836,27 @@ window.dadosPD = {
     },
     "2026-08-08_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         5,
@@ -48676,15 +56877,37 @@ window.dadosPD = {
     },
     "2026-08-10_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         9,
@@ -48711,12 +56934,27 @@ window.dadosPD = {
     },
     "2026-08-10_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -48737,10 +56975,19 @@ window.dadosPD = {
     },
     "2026-08-10_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -48757,12 +57004,27 @@ window.dadosPD = {
     },
     "2026-08-10_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         6,
@@ -48783,15 +57045,38 @@ window.dadosPD = {
     },
     "2026-08-11_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         9,
@@ -48818,11 +57103,24 @@ window.dadosPD = {
     },
     "2026-08-11_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -48841,11 +57139,23 @@ window.dadosPD = {
     },
     "2026-08-11_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -48864,12 +57174,27 @@ window.dadosPD = {
     },
     "2026-08-11_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         5,
@@ -48890,15 +57215,37 @@ window.dadosPD = {
     },
     "2026-08-12_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -48925,9 +57272,17 @@ window.dadosPD = {
     },
     "2026-08-12_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -48942,12 +57297,26 @@ window.dadosPD = {
     },
     "2026-08-12_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -48968,11 +57337,23 @@ window.dadosPD = {
     },
     "2026-08-12_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         6,
@@ -48991,14 +57372,34 @@ window.dadosPD = {
     },
     "2026-08-13_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         12,
@@ -49023,9 +57424,17 @@ window.dadosPD = {
     },
     "2026-08-13_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -49040,11 +57449,23 @@ window.dadosPD = {
     },
     "2026-08-13_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -49063,12 +57484,27 @@ window.dadosPD = {
     },
     "2026-08-13_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -49089,15 +57525,38 @@ window.dadosPD = {
     },
     "2026-08-14_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - BANCO DE HORAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -49124,8 +57583,13 @@ window.dadosPD = {
     },
     "2026-08-14_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -49138,11 +57602,23 @@ window.dadosPD = {
     },
     "2026-08-14_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         10,
@@ -49161,13 +57637,31 @@ window.dadosPD = {
     },
     "2026-08-14_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - BANCO DE HORAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -49190,18 +57684,47 @@ window.dadosPD = {
     },
     "2026-08-15_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DESCONTENTAMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -49234,8 +57757,13 @@ window.dadosPD = {
     },
     "2026-08-15_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         2,
@@ -49248,11 +57776,23 @@ window.dadosPD = {
     },
     "2026-08-15_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         8,
@@ -49271,17 +57811,43 @@ window.dadosPD = {
     },
     "2026-08-15_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DESCONTENTAMENTO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESCONTENTAMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -49312,16 +57878,41 @@ window.dadosPD = {
     },
     "2026-08-17_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         7,
@@ -49350,10 +57941,21 @@ window.dadosPD = {
     },
     "2026-08-17_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -49370,11 +57972,23 @@ window.dadosPD = {
     },
     "2026-08-17_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -49393,13 +58007,30 @@ window.dadosPD = {
     },
     "2026-08-17_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         6,
@@ -49422,14 +58053,34 @@ window.dadosPD = {
     },
     "2026-08-18_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         7,
@@ -49454,11 +58105,24 @@ window.dadosPD = {
     },
     "2026-08-18_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -49477,9 +58141,16 @@ window.dadosPD = {
     },
     "2026-08-18_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -49494,12 +58165,27 @@ window.dadosPD = {
     },
     "2026-08-18_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         6,
@@ -49520,15 +58206,37 @@ window.dadosPD = {
     },
     "2026-08-19_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         10,
@@ -49555,10 +58263,21 @@ window.dadosPD = {
     },
     "2026-08-19_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -49575,9 +58294,16 @@ window.dadosPD = {
     },
     "2026-08-19_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -49592,13 +58318,30 @@ window.dadosPD = {
     },
     "2026-08-19_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -49621,17 +58364,44 @@ window.dadosPD = {
     },
     "2026-08-20_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         8,
@@ -49662,12 +58432,28 @@ window.dadosPD = {
     },
     "2026-08-20_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         3,
@@ -49688,9 +58474,16 @@ window.dadosPD = {
     },
     "2026-08-20_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         3,
@@ -49705,14 +58498,33 @@ window.dadosPD = {
     },
     "2026-08-20_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -49737,15 +58549,37 @@ window.dadosPD = {
     },
     "2026-08-21_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -49772,10 +58606,21 @@ window.dadosPD = {
     },
     "2026-08-21_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -49792,10 +58637,20 @@ window.dadosPD = {
     },
     "2026-08-21_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -49812,13 +58667,30 @@ window.dadosPD = {
     },
     "2026-08-21_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -49841,15 +58713,37 @@ window.dadosPD = {
     },
     "2026-08-22_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         10,
@@ -49876,10 +58770,21 @@ window.dadosPD = {
     },
     "2026-08-22_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -49896,9 +58801,16 @@ window.dadosPD = {
     },
     "2026-08-22_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         7,
@@ -49913,14 +58825,33 @@ window.dadosPD = {
     },
     "2026-08-22_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -49945,18 +58876,47 @@ window.dadosPD = {
     },
     "2026-08-24_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - MEDIDA DISCIPLINAR",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         9,
@@ -49989,11 +58949,24 @@ window.dadosPD = {
     },
     "2026-08-24_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -50012,10 +58985,20 @@ window.dadosPD = {
     },
     "2026-08-24_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -50032,16 +59015,40 @@ window.dadosPD = {
     },
     "2026-08-24_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - MEDIDA DISCIPLINAR",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         4,
@@ -50070,15 +59077,37 @@ window.dadosPD = {
     },
     "2026-08-25_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         10,
@@ -50105,10 +59134,21 @@ window.dadosPD = {
     },
     "2026-08-25_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -50125,10 +59165,20 @@ window.dadosPD = {
     },
     "2026-08-25_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -50145,14 +59195,33 @@ window.dadosPD = {
     },
     "2026-08-25_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -50177,14 +59246,34 @@ window.dadosPD = {
     },
     "2026-08-26_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         10,
@@ -50209,10 +59298,21 @@ window.dadosPD = {
     },
     "2026-08-26_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -50229,8 +59329,13 @@ window.dadosPD = {
     },
     "2026-08-26_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -50243,12 +59348,26 @@ window.dadosPD = {
     },
     "2026-08-26_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -50269,14 +59388,34 @@ window.dadosPD = {
     },
     "2026-08-27_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         9,
@@ -50301,9 +59440,17 @@ window.dadosPD = {
     },
     "2026-08-27_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -50318,10 +59465,20 @@ window.dadosPD = {
     },
     "2026-08-27_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         7,
@@ -50338,13 +59495,30 @@ window.dadosPD = {
     },
     "2026-08-27_3": {
       "labels": [
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE"
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         3,
@@ -50367,16 +59541,41 @@ window.dadosPD = {
     },
     "2026-08-28_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         10,
@@ -50405,10 +59604,20 @@ window.dadosPD = {
     },
     "2026-08-28_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -50425,10 +59634,20 @@ window.dadosPD = {
     },
     "2026-08-28_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -50445,15 +59664,37 @@ window.dadosPD = {
     },
     "2026-08-28_3": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -50480,16 +59721,40 @@ window.dadosPD = {
     },
     "2026-08-29_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         15,
@@ -50518,11 +59783,23 @@ window.dadosPD = {
     },
     "2026-08-29_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DR - ESCALA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         2,
@@ -50541,9 +59818,17 @@ window.dadosPD = {
     },
     "2026-08-29_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -50558,14 +59843,33 @@ window.dadosPD = {
     },
     "2026-08-29_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         8,
@@ -50590,13 +59894,31 @@ window.dadosPD = {
     },
     "2026-08-31_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DR - ESCALA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         17,
@@ -50619,11 +59941,24 @@ window.dadosPD = {
     },
     "2026-08-31_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DR - ESCALA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ]
       ],
       "data_abs": [
         8,
@@ -50642,9 +59977,17 @@ window.dadosPD = {
     },
     "2026-08-31_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -50659,11 +60002,24 @@ window.dadosPD = {
     },
     "2026-08-31_3": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -50682,13 +60038,31 @@ window.dadosPD = {
     },
     "2026-09-01_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "DR - ESCALA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ]
       ],
       "data_abs": [
         14,
@@ -50711,11 +60085,24 @@ window.dadosPD = {
     },
     "2026-09-01_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DR - ESCALA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ESCALA"
+        ]
       ],
       "data_abs": [
         5,
@@ -50734,9 +60121,17 @@ window.dadosPD = {
     },
     "2026-09-01_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -50751,11 +60146,24 @@ window.dadosPD = {
     },
     "2026-09-01_3": {
       "labels": [
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO"
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -50774,15 +60182,37 @@ window.dadosPD = {
     },
     "2026-09-02_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DR - ESCALA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         12,
@@ -50809,12 +60239,27 @@ window.dadosPD = {
     },
     "2026-09-02_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DR - ESCALA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -50835,9 +60280,16 @@ window.dadosPD = {
     },
     "2026-09-02_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         7,
@@ -50852,13 +60304,30 @@ window.dadosPD = {
     },
     "2026-09-02_3": {
       "labels": [
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -50881,14 +60350,34 @@ window.dadosPD = {
     },
     "2026-09-03_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "DR - ESCALA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ESCALA"
+        ]
       ],
       "data_abs": [
         14,
@@ -50913,12 +60402,27 @@ window.dadosPD = {
     },
     "2026-09-03_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -50939,10 +60443,20 @@ window.dadosPD = {
     },
     "2026-09-03_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -50959,12 +60473,27 @@ window.dadosPD = {
     },
     "2026-09-03_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -50985,15 +60514,37 @@ window.dadosPD = {
     },
     "2026-09-04_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "DR - ESCALA",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         10,
@@ -51020,11 +60571,24 @@ window.dadosPD = {
     },
     "2026-09-04_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "DR - ESCALA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -51043,9 +60607,16 @@ window.dadosPD = {
     },
     "2026-09-04_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -51060,13 +60631,30 @@ window.dadosPD = {
     },
     "2026-09-04_3": {
       "labels": [
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         6,
@@ -51089,15 +60677,38 @@ window.dadosPD = {
     },
     "2026-09-05_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         17,
@@ -51124,11 +60735,24 @@ window.dadosPD = {
     },
     "2026-09-05_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DR - ESCALA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -51147,10 +60771,20 @@ window.dadosPD = {
     },
     "2026-09-05_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -51167,13 +60801,31 @@ window.dadosPD = {
     },
     "2026-09-05_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         8,
@@ -51196,16 +60848,40 @@ window.dadosPD = {
     },
     "2026-09-08_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "DR - ESCALA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ]
       ],
       "data_abs": [
         11,
@@ -51234,12 +60910,27 @@ window.dadosPD = {
     },
     "2026-09-08_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -51260,10 +60951,20 @@ window.dadosPD = {
     },
     "2026-09-08_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -51280,14 +60981,33 @@ window.dadosPD = {
     },
     "2026-09-08_3": {
       "labels": [
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE"
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ]
       ],
       "data_abs": [
         5,
@@ -51312,16 +61032,40 @@ window.dadosPD = {
     },
     "2026-09-09_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DR - ESCALA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -51350,9 +61094,16 @@ window.dadosPD = {
     },
     "2026-09-09_1": {
       "labels": [
-        "DR - ESCALA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         1,
@@ -51367,11 +61118,23 @@ window.dadosPD = {
     },
     "2026-09-09_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         6,
@@ -51390,13 +61153,30 @@ window.dadosPD = {
     },
     "2026-09-09_3": {
       "labels": [
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         5,
@@ -51419,15 +61199,37 @@ window.dadosPD = {
     },
     "2026-09-10_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "DR - ESCALA",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         9,
@@ -51454,12 +61256,27 @@ window.dadosPD = {
     },
     "2026-09-10_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FE - FÉRIAS"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -51480,9 +61297,17 @@ window.dadosPD = {
     },
     "2026-09-10_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         4,
@@ -51497,13 +61322,30 @@ window.dadosPD = {
     },
     "2026-09-10_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -51526,14 +61368,34 @@ window.dadosPD = {
     },
     "2026-09-11_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DR - ESCALA",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         10,
@@ -51558,11 +61420,24 @@ window.dadosPD = {
     },
     "2026-09-11_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DR - ESCALA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -51581,10 +61456,20 @@ window.dadosPD = {
     },
     "2026-09-11_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -51601,12 +61486,27 @@ window.dadosPD = {
     },
     "2026-09-11_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         4,
@@ -51627,16 +61527,40 @@ window.dadosPD = {
     },
     "2026-09-12_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DR - ESCALA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         15,
@@ -51665,10 +61589,20 @@ window.dadosPD = {
     },
     "2026-09-12_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DR - ESCALA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -51685,9 +61619,17 @@ window.dadosPD = {
     },
     "2026-09-12_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -51702,14 +61644,33 @@ window.dadosPD = {
     },
     "2026-09-12_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         10,
@@ -51734,18 +61695,48 @@ window.dadosPD = {
     },
     "2026-09-14_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO",
-        "FJ - BANCO DE HORAS",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -51778,9 +61769,17 @@ window.dadosPD = {
     },
     "2026-09-14_1": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -51795,9 +61794,16 @@ window.dadosPD = {
     },
     "2026-09-14_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -51812,16 +61818,41 @@ window.dadosPD = {
     },
     "2026-09-14_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO",
-        "FJ - BANCO DE HORAS",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         5,
@@ -51850,15 +61881,38 @@ window.dadosPD = {
     },
     "2026-09-15_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         13,
@@ -51885,9 +61939,16 @@ window.dadosPD = {
     },
     "2026-09-15_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         2,
@@ -51902,9 +61963,17 @@ window.dadosPD = {
     },
     "2026-09-15_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         11,
@@ -51919,13 +61988,31 @@ window.dadosPD = {
     },
     "2026-09-15_3": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         5,
@@ -51948,15 +62035,37 @@ window.dadosPD = {
     },
     "2026-09-16_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         13,
@@ -51983,11 +62092,24 @@ window.dadosPD = {
     },
     "2026-09-16_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -52006,10 +62128,20 @@ window.dadosPD = {
     },
     "2026-09-16_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         8,
@@ -52026,14 +62158,33 @@ window.dadosPD = {
     },
     "2026-09-16_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         5,
@@ -52058,14 +62209,34 @@ window.dadosPD = {
     },
     "2026-09-17_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         12,
@@ -52090,10 +62261,20 @@ window.dadosPD = {
     },
     "2026-09-17_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -52110,11 +62291,23 @@ window.dadosPD = {
     },
     "2026-09-17_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         6,
@@ -52133,13 +62326,30 @@ window.dadosPD = {
     },
     "2026-09-17_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -52162,14 +62372,35 @@ window.dadosPD = {
     },
     "2026-09-18_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "NP - NÃO PERTENCE À MINHA LISTA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DIFICULDADE DE TRANSPORTE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ]
       ],
       "data_abs": [
         11,
@@ -52194,10 +62425,22 @@ window.dadosPD = {
     },
     "2026-09-18_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         2,
@@ -52214,10 +62457,20 @@ window.dadosPD = {
     },
     "2026-09-18_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -52234,12 +62487,28 @@ window.dadosPD = {
     },
     "2026-09-18_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         7,
@@ -52260,14 +62529,35 @@ window.dadosPD = {
     },
     "2026-09-19_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         11,
@@ -52292,7 +62582,10 @@ window.dadosPD = {
     },
     "2026-09-19_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4
@@ -52303,10 +62596,20 @@ window.dadosPD = {
     },
     "2026-09-19_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -52323,13 +62626,32 @@ window.dadosPD = {
     },
     "2026-09-19_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -52352,15 +62674,37 @@ window.dadosPD = {
     },
     "2026-09-21_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         10,
@@ -52387,9 +62731,17 @@ window.dadosPD = {
     },
     "2026-09-21_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -52404,10 +62756,20 @@ window.dadosPD = {
     },
     "2026-09-21_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -52424,13 +62786,30 @@ window.dadosPD = {
     },
     "2026-09-21_3": {
       "labels": [
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -52453,13 +62832,31 @@ window.dadosPD = {
     },
     "2026-09-22_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         11,
@@ -52482,10 +62879,21 @@ window.dadosPD = {
     },
     "2026-09-22_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         2,
@@ -52502,10 +62910,20 @@ window.dadosPD = {
     },
     "2026-09-22_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -52522,12 +62940,27 @@ window.dadosPD = {
     },
     "2026-09-22_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -52548,15 +62981,38 @@ window.dadosPD = {
     },
     "2026-09-23_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -52583,9 +63039,17 @@ window.dadosPD = {
     },
     "2026-09-23_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -52600,9 +63064,16 @@ window.dadosPD = {
     },
     "2026-09-23_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -52617,13 +63088,31 @@ window.dadosPD = {
     },
     "2026-09-23_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -52646,15 +63135,38 @@ window.dadosPD = {
     },
     "2026-09-24_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ]
       ],
       "data_abs": [
         11,
@@ -52681,10 +63193,21 @@ window.dadosPD = {
     },
     "2026-09-24_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - EXAME ESCOLAR / VESTIBULAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ]
       ],
       "data_abs": [
         6,
@@ -52701,10 +63224,20 @@ window.dadosPD = {
     },
     "2026-09-24_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -52721,13 +63254,30 @@ window.dadosPD = {
     },
     "2026-09-24_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         5,
@@ -52750,13 +63300,31 @@ window.dadosPD = {
     },
     "2026-09-25_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         11,
@@ -52779,10 +63347,20 @@ window.dadosPD = {
     },
     "2026-09-25_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -52799,10 +63377,20 @@ window.dadosPD = {
     },
     "2026-09-25_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -52819,12 +63407,27 @@ window.dadosPD = {
     },
     "2026-09-25_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         4,
@@ -52845,13 +63448,31 @@ window.dadosPD = {
     },
     "2026-09-26_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         10,
@@ -52874,8 +63495,13 @@ window.dadosPD = {
     },
     "2026-09-26_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         1,
@@ -52888,9 +63514,16 @@ window.dadosPD = {
     },
     "2026-09-26_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         8,
@@ -52905,13 +63538,31 @@ window.dadosPD = {
     },
     "2026-09-26_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -52934,16 +63585,41 @@ window.dadosPD = {
     },
     "2026-09-28_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         20,
@@ -52972,10 +63648,20 @@ window.dadosPD = {
     },
     "2026-09-28_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - BANCO DE HORAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ]
       ],
       "data_abs": [
         10,
@@ -52992,10 +63678,20 @@ window.dadosPD = {
     },
     "2026-09-28_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         10,
@@ -53012,14 +63708,33 @@ window.dadosPD = {
     },
     "2026-09-28_3": {
       "labels": [
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         6,
@@ -53044,14 +63759,34 @@ window.dadosPD = {
     },
     "2026-09-29_GERAL": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         11,
@@ -53076,10 +63811,20 @@ window.dadosPD = {
     },
     "2026-09-29_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -53096,10 +63841,20 @@ window.dadosPD = {
     },
     "2026-09-29_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -53116,13 +63871,30 @@ window.dadosPD = {
     },
     "2026-09-29_3": {
       "labels": [
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         6,
@@ -53145,14 +63917,34 @@ window.dadosPD = {
     },
     "2026-09-30_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         14,
@@ -53177,10 +63969,20 @@ window.dadosPD = {
     },
     "2026-09-30_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         3,
@@ -53197,10 +63999,20 @@ window.dadosPD = {
     },
     "2026-09-30_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -53217,12 +64029,27 @@ window.dadosPD = {
     },
     "2026-09-30_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         6,
@@ -53243,14 +64070,34 @@ window.dadosPD = {
     },
     "2026-10-01_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -53275,10 +64122,20 @@ window.dadosPD = {
     },
     "2026-10-01_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         1,
@@ -53295,10 +64152,20 @@ window.dadosPD = {
     },
     "2026-10-01_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -53315,13 +64182,30 @@ window.dadosPD = {
     },
     "2026-10-01_3": {
       "labels": [
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -53344,13 +64228,30 @@ window.dadosPD = {
     },
     "2026-10-02_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         12,
@@ -53373,10 +64274,20 @@ window.dadosPD = {
     },
     "2026-10-02_1": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         3,
@@ -53393,10 +64304,20 @@ window.dadosPD = {
     },
     "2026-10-02_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -53413,13 +64334,30 @@ window.dadosPD = {
     },
     "2026-10-02_3": {
       "labels": [
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         10,
@@ -53442,12 +64380,27 @@ window.dadosPD = {
     },
     "2026-10-03_GERAL": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         18,
@@ -53468,10 +64421,20 @@ window.dadosPD = {
     },
     "2026-10-03_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -53488,10 +64451,20 @@ window.dadosPD = {
     },
     "2026-10-03_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -53508,12 +64481,27 @@ window.dadosPD = {
     },
     "2026-10-03_3": {
       "labels": [
-        "FJ - MEDIDA DISCIPLINAR",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         13,
@@ -53554,13 +64542,30 @@ window.dadosPD = {
     },
     "2026-10-05_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         16,
@@ -53583,8 +64588,14 @@ window.dadosPD = {
     },
     "2026-10-05_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -53597,10 +64608,20 @@ window.dadosPD = {
     },
     "2026-10-05_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -53617,12 +64638,26 @@ window.dadosPD = {
     },
     "2026-10-05_3": {
       "labels": [
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FE - FÉRIAS"
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         13,
@@ -53643,17 +64678,44 @@ window.dadosPD = {
     },
     "2026-10-06_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         18,
@@ -53684,10 +64746,21 @@ window.dadosPD = {
     },
     "2026-10-06_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         11,
@@ -53704,9 +64777,17 @@ window.dadosPD = {
     },
     "2026-10-06_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -53721,17 +64802,44 @@ window.dadosPD = {
     },
     "2026-10-06_3": {
       "labels": [
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -53762,14 +64870,34 @@ window.dadosPD = {
     },
     "2026-10-07_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         18,
@@ -53794,11 +64922,24 @@ window.dadosPD = {
     },
     "2026-10-07_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -53817,9 +64958,17 @@ window.dadosPD = {
     },
     "2026-10-07_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         11,
@@ -53834,13 +64983,30 @@ window.dadosPD = {
     },
     "2026-10-07_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         7,
@@ -53863,14 +65029,34 @@ window.dadosPD = {
     },
     "2026-10-08_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ]
       ],
       "data_abs": [
         15,
@@ -53895,10 +65081,20 @@ window.dadosPD = {
     },
     "2026-10-08_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -53915,10 +65111,20 @@ window.dadosPD = {
     },
     "2026-10-08_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -53935,13 +65141,31 @@ window.dadosPD = {
     },
     "2026-10-08_3": {
       "labels": [
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO"
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ]
       ],
       "data_abs": [
         10,
@@ -53964,16 +65188,41 @@ window.dadosPD = {
     },
     "2026-10-09_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         13,
@@ -54002,9 +65251,17 @@ window.dadosPD = {
     },
     "2026-10-09_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -54019,11 +65276,23 @@ window.dadosPD = {
     },
     "2026-10-09_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         6,
@@ -54042,15 +65311,38 @@ window.dadosPD = {
     },
     "2026-10-09_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - EXAME ESCOLAR / VESTIBULAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ]
       ],
       "data_abs": [
         5,
@@ -54077,16 +65369,42 @@ window.dadosPD = {
     },
     "2026-10-10_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "BH - BANCO DE HORAS",
-        "FJ - EXAME ESCOLAR / VESTIBULAR",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         16,
@@ -54115,13 +65433,32 @@ window.dadosPD = {
     },
     "2026-10-10_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "BH - BANCO DE HORAS",
-        "DE - DESLIGADO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -54144,11 +65481,23 @@ window.dadosPD = {
     },
     "2026-10-10_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -54167,12 +65516,28 @@ window.dadosPD = {
     },
     "2026-10-10_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -54193,18 +65558,47 @@ window.dadosPD = {
     },
     "2026-10-13_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -54237,9 +65631,17 @@ window.dadosPD = {
     },
     "2026-10-13_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         5,
@@ -54254,12 +65656,27 @@ window.dadosPD = {
     },
     "2026-10-13_2": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         3,
@@ -54280,15 +65697,37 @@ window.dadosPD = {
     },
     "2026-10-13_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         5,
@@ -54315,16 +65754,40 @@ window.dadosPD = {
     },
     "2026-10-14_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         13,
@@ -54353,10 +65816,21 @@ window.dadosPD = {
     },
     "2026-10-14_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         3,
@@ -54373,11 +65847,23 @@ window.dadosPD = {
     },
     "2026-10-14_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         8,
@@ -54396,13 +65882,31 @@ window.dadosPD = {
     },
     "2026-10-14_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -54425,16 +65929,41 @@ window.dadosPD = {
     },
     "2026-10-15_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "HD - HC DIVERGENTE",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         9,
@@ -54463,12 +65992,28 @@ window.dadosPD = {
     },
     "2026-10-15_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         4,
@@ -54489,11 +66034,23 @@ window.dadosPD = {
     },
     "2026-10-15_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "HD - HC DIVERGENTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
       ],
       "data_abs": [
         7,
@@ -54512,12 +66069,27 @@ window.dadosPD = {
     },
     "2026-10-15_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -54538,15 +66110,37 @@ window.dadosPD = {
     },
     "2026-10-16_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ]
       ],
       "data_abs": [
         17,
@@ -54573,11 +66167,24 @@ window.dadosPD = {
     },
     "2026-10-16_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -54596,8 +66203,13 @@ window.dadosPD = {
     },
     "2026-10-16_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -54610,12 +66222,27 @@ window.dadosPD = {
     },
     "2026-10-16_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ]
       ],
       "data_abs": [
         7,
@@ -54636,17 +66263,44 @@ window.dadosPD = {
     },
     "2026-10-17_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ]
       ],
       "data_abs": [
         14,
@@ -54677,13 +66331,31 @@ window.dadosPD = {
     },
     "2026-10-17_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         5,
@@ -54706,8 +66378,13 @@ window.dadosPD = {
     },
     "2026-10-17_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         7,
@@ -54720,14 +66397,35 @@ window.dadosPD = {
     },
     "2026-10-17_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - AUDIÊNCIA / CONVOCAÇÃO"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "AUDIÊNCIA / CONVOCAÇÃO"
+        ]
       ],
       "data_abs": [
         5,
@@ -54752,17 +66450,45 @@ window.dadosPD = {
     },
     "2026-10-19_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - DOAÇÃO DE SANGUE",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DOAÇÃO DE SANGUE"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         16,
@@ -54793,13 +66519,31 @@ window.dadosPD = {
     },
     "2026-10-19_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - DOAÇÃO DE SANGUE",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DOAÇÃO DE SANGUE"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -54822,9 +66566,17 @@ window.dadosPD = {
     },
     "2026-10-19_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -54839,13 +66591,32 @@ window.dadosPD = {
     },
     "2026-10-19_3": {
       "labels": [
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -54868,15 +66639,38 @@ window.dadosPD = {
     },
     "2026-10-20_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         21,
@@ -54903,14 +66697,35 @@ window.dadosPD = {
     },
     "2026-10-20_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         12,
@@ -54935,9 +66750,17 @@ window.dadosPD = {
     },
     "2026-10-20_2": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -54952,13 +66775,31 @@ window.dadosPD = {
     },
     "2026-10-20_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         6,
@@ -54981,16 +66822,41 @@ window.dadosPD = {
     },
     "2026-10-21_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - PROBLEMAS FAMILIARES",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         10,
@@ -55019,11 +66885,24 @@ window.dadosPD = {
     },
     "2026-10-21_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         4,
@@ -55042,10 +66921,20 @@ window.dadosPD = {
     },
     "2026-10-21_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         4,
@@ -55062,12 +66951,28 @@ window.dadosPD = {
     },
     "2026-10-21_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - PROBLEMAS FAMILIARES"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ]
       ],
       "data_abs": [
         4,
@@ -55088,15 +66993,38 @@ window.dadosPD = {
     },
     "2026-10-22_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
       ],
       "data_abs": [
         15,
@@ -55123,13 +67051,32 @@ window.dadosPD = {
     },
     "2026-10-22_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -55152,9 +67099,17 @@ window.dadosPD = {
     },
     "2026-10-22_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         4,
@@ -55169,12 +67124,28 @@ window.dadosPD = {
     },
     "2026-10-22_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -55195,15 +67166,38 @@ window.dadosPD = {
     },
     "2026-10-23_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         20,
@@ -55230,10 +67224,22 @@ window.dadosPD = {
     },
     "2026-10-23_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -55250,9 +67256,17 @@ window.dadosPD = {
     },
     "2026-10-23_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         6,
@@ -55267,13 +67281,31 @@ window.dadosPD = {
     },
     "2026-10-23_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - DESCOMPROMETIMENTO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         10,
@@ -55296,14 +67328,35 @@ window.dadosPD = {
     },
     "2026-10-24_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         11,
@@ -55328,12 +67381,28 @@ window.dadosPD = {
     },
     "2026-10-24_1": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "DR - ESCALA",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ESCALA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         4,
@@ -55354,9 +67423,17 @@ window.dadosPD = {
     },
     "2026-10-24_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         8,
@@ -55371,10 +67448,22 @@ window.dadosPD = {
     },
     "2026-10-24_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -55391,16 +67480,42 @@ window.dadosPD = {
     },
     "2026-10-26_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         24,
@@ -55429,12 +67544,29 @@ window.dadosPD = {
     },
     "2026-10-26_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -55455,9 +67587,17 @@ window.dadosPD = {
     },
     "2026-10-26_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ]
       ],
       "data_abs": [
         6,
@@ -55472,11 +67612,24 @@ window.dadosPD = {
     },
     "2026-10-26_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         11,
@@ -55495,14 +67648,36 @@ window.dadosPD = {
     },
     "2026-10-27_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         13,
@@ -55527,12 +67702,29 @@ window.dadosPD = {
     },
     "2026-10-27_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         5,
@@ -55553,10 +67745,21 @@ window.dadosPD = {
     },
     "2026-10-27_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         7,
@@ -55573,10 +67776,21 @@ window.dadosPD = {
     },
     "2026-10-27_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - FALTA INJUSTIFICADA"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ]
       ],
       "data_abs": [
         5,
@@ -55593,17 +67807,45 @@ window.dadosPD = {
     },
     "2026-10-28_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         9,
@@ -55634,13 +67876,32 @@ window.dadosPD = {
     },
     "2026-10-28_1": {
       "labels": [
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - FALTA INJUSTIFICADA",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         4,
@@ -55663,10 +67924,20 @@ window.dadosPD = {
     },
     "2026-10-28_2": {
       "labels": [
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         5,
@@ -55683,11 +67954,23 @@ window.dadosPD = {
     },
     "2026-10-28_3": {
       "labels": [
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ]
       ],
       "data_abs": [
         4,
@@ -55706,14 +67989,35 @@ window.dadosPD = {
     },
     "2026-10-29_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ]
       ],
       "data_abs": [
         12,
@@ -55738,12 +68042,28 @@ window.dadosPD = {
     },
     "2026-10-29_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - MEDIDA DISCIPLINAR",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "MEDIDA DISCIPLINAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -55764,10 +68084,20 @@ window.dadosPD = {
     },
     "2026-10-29_2": {
       "labels": [
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -55784,9 +68114,18 @@ window.dadosPD = {
     },
     "2026-10-29_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         4,
@@ -55801,13 +68140,32 @@ window.dadosPD = {
     },
     "2026-10-30_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ]
       ],
       "data_abs": [
         14,
@@ -55830,11 +68188,25 @@ window.dadosPD = {
     },
     "2026-10-30_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         3,
@@ -55853,11 +68225,24 @@ window.dadosPD = {
     },
     "2026-10-30_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         6,
@@ -55876,9 +68261,18 @@ window.dadosPD = {
     },
     "2026-10-30_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         5,
@@ -55893,14 +68287,35 @@ window.dadosPD = {
     },
     "2026-10-31_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FJ - BANCO DE HORAS",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DIFICULDADE DE TRANSPORTE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ]
       ],
       "data_abs": [
         22,
@@ -55925,13 +68340,32 @@ window.dadosPD = {
     },
     "2026-10-31_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - BANCO DE HORAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         7,
@@ -55954,10 +68388,20 @@ window.dadosPD = {
     },
     "2026-10-31_2": {
       "labels": [
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO"
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         11,
@@ -55974,9 +68418,18 @@ window.dadosPD = {
     },
     "2026-10-31_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         9,
@@ -56011,19 +68464,53 @@ window.dadosPD = {
     },
     "2026-11-02_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FJ - BANCO DE HORAS",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ]
       ],
       "data_abs": [
         41,
@@ -56058,14 +68545,37 @@ window.dadosPD = {
     },
     "2026-11-02_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "BH - BANCO DE HORAS",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - BANCO DE HORAS",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         11,
@@ -56090,12 +68600,28 @@ window.dadosPD = {
     },
     "2026-11-02_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "BH - BANCO DE HORAS",
-        "DE - DESLIGADO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO",
+          "DE HORAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
       ],
       "data_abs": [
         18,
@@ -56116,14 +68642,35 @@ window.dadosPD = {
     },
     "2026-11-02_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - DIFICULDADE DE TRANSPORTE",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         12,
@@ -56148,17 +68695,45 @@ window.dadosPD = {
     },
     "2026-11-03_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ]
       ],
       "data_abs": [
         21,
@@ -56189,13 +68764,33 @@ window.dadosPD = {
     },
     "2026-11-03_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "DE - DESLIGADO",
-        "FI - ABANDONO DE EMPREGO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "ABANDONO",
+          "DE EMPREGO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         6,
@@ -56218,11 +68813,24 @@ window.dadosPD = {
     },
     "2026-11-03_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FJ - FALTA JUSTIFICADA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ]
       ],
       "data_abs": [
         9,
@@ -56241,14 +68849,35 @@ window.dadosPD = {
     },
     "2026-11-03_3": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FI - DESCOMPROMETIMENTO",
-        "FI - PROBLEMAS PESSOAIS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ],
+        [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         11,
@@ -56273,14 +68902,35 @@ window.dadosPD = {
     },
     "2026-11-04_GERAL": {
       "labels": [
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE"
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ]
       ],
       "data_abs": [
         10,
@@ -56305,11 +68955,24 @@ window.dadosPD = {
     },
     "2026-11-04_1": {
       "labels": [
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO"
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
       ],
       "data_abs": [
         3,
@@ -56328,11 +68991,24 @@ window.dadosPD = {
     },
     "2026-11-04_2": {
       "labels": [
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - FALTA INJUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         4,
@@ -56351,12 +69027,28 @@ window.dadosPD = {
     },
     "2026-11-04_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FJ - FALECIMENTO PARENTE/CÔNJUGE",
-        "FJ - SAÚDE - COM ATESTADO MÉDICO",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         6,
@@ -56377,13 +69069,32 @@ window.dadosPD = {
     },
     "2026-11-05_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ]
       ],
       "data_abs": [
         20,
@@ -56406,12 +69117,28 @@ window.dadosPD = {
     },
     "2026-11-05_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "DE - DESLIGADO",
-        "FE - FÉRIAS",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - EXAME ESCOLAR / VESTIBULAR"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "EXAME",
+          "ESCOLAR"
+        ]
       ],
       "data_abs": [
         5,
@@ -56432,11 +69159,24 @@ window.dadosPD = {
     },
     "2026-11-05_2": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "DE - DESLIGADO",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         8,
@@ -56455,10 +69195,21 @@ window.dadosPD = {
     },
     "2026-11-05_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         7,
@@ -56475,13 +69226,32 @@ window.dadosPD = {
     },
     "2026-11-06_GERAL": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FJ - FALTA JUSTIFICADA",
-        "FE - FÉRIAS",
-        "FO - FOLGA (HORA EXTRA DSR)",
-        "DE - DESLIGADO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         12,
@@ -56504,11 +69274,25 @@ window.dadosPD = {
     },
     "2026-11-06_1": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "DE - DESLIGADO",
-        "FI - SAÚDE - SEM ATESTADO MÉDICO",
-        "FJ - FALTA JUSTIFICADA",
-        "NP - NÃO PERTENCE À MINHA LISTA"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "NÃO PERTENCE",
+          "À LISTA"
+        ]
       ],
       "data_abs": [
         2,
@@ -56532,10 +69316,21 @@ window.dadosPD = {
     },
     "2026-11-06_3": {
       "labels": [
-        "FI - FALTA INJUSTIFICADA",
-        "FE - FÉRIAS",
-        "FJ - FALTA JUSTIFICADA",
-        "FO - FOLGA (HORA EXTRA DSR)"
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FOLGA",
+          "EXTRA (DSR)"
+        ]
       ],
       "data_abs": [
         10,
@@ -56550,6 +69345,104 @@ window.dadosPD = {
         100.0
       ]
     }
+  },
+  "grafico_pareto_mes": {
+    "labels": [
+      [
+        "FALTA",
+        "INJUSTIFICADA"
+      ],
+      [
+        "FALTA",
+        "JUSTIFICADA"
+      ],
+      [
+        "FÉRIAS"
+      ],
+      [
+        "FOLGA",
+        "EXTRA (DSR)"
+      ],
+      [
+        "DESLIGADO"
+      ],
+      [
+        "COM ATESTADO",
+        "MÉDICO"
+      ],
+      [
+        "SEM ATESTADO",
+        "MÉDICO"
+      ],
+      [
+        "FALECIMENTO PARENTE/CÔNJUGE"
+      ],
+      [
+        "BANCO",
+        "DE HORAS"
+      ],
+      [
+        "ABANDONO",
+        "DE EMPREGO"
+      ],
+      [
+        "DESCOMPROMETIMENTO"
+      ],
+      [
+        "DIFICULDADE DE TRANSPORTE"
+      ],
+      [
+        "PROBLEMAS PESSOAIS"
+      ],
+      [
+        "BANCO",
+        "DE HORAS"
+      ],
+      [
+        "EXAME",
+        "ESCOLAR"
+      ],
+      [
+        "NÃO PERTENCE",
+        "À LISTA"
+      ]
+    ],
+    "data_abs": [
+      103,
+      47,
+      32,
+      24,
+      18,
+      14,
+      7,
+      3,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "data_cum": [
+      39.8,
+      57.9,
+      70.3,
+      79.5,
+      86.5,
+      91.9,
+      94.6,
+      95.8,
+      96.5,
+      97.3,
+      98.1,
+      98.5,
+      98.8,
+      99.2,
+      99.6,
+      100.0
+    ]
   },
   "grafico_diario": {
     "labels": [
