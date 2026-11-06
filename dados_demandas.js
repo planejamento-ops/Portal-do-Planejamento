@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "05/11/2026 23:08",
+  "atualizado_em": "05/11/2026 23:22",
   "ondas": [
     {
       "onda_atual": "VAREJO",
@@ -31475,7 +31475,7 @@ window.dadosDemandaWMS = {
       "onda_atual": "SPC",
       "data_onda": "2026-11-05",
       "aderencia_pcs_carteira": 99,
-      "aderencia_pcs_kit": 0,
+      "aderencia_pcs_kit": 95,
       "real_carteira": {
         "cxs": 28997,
         "pcs": 1467412,
@@ -31906,26 +31906,26 @@ window.dadosDemandaWMS = {
         }
       ],
       "real_kit": {
-        "cxs": 0,
-        "pcs": 0,
-        "tar": 0,
+        "cxs": 13536,
+        "pcs": 137181,
+        "tar": 11943,
         "fr": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 32582,
+          "cxs": 2984,
+          "pc_cx": 10.9,
+          "tar": 6414
         },
         "gv": {
-          "pcs": 0,
-          "cxs": 0,
-          "pc_cx": 0,
-          "tar": 0
+          "pcs": 104599,
+          "cxs": 10552,
+          "pc_cx": 9.9,
+          "tar": 5529
         },
         "pc": {
           "pcs": 0,
           "cxs": 0,
           "pc_cx": 0,
-          "tar": 0
+          "tar": 6
         }
       },
       "previa_kit": {
@@ -31951,9 +31951,35 @@ window.dadosDemandaWMS = {
           "tar": 5
         }
       },
-      "perfil_est_cx_rk": 0,
-      "perfil_skus_cx_rk": 0,
-      "todas_estacoes_real_kit": [],
+      "perfil_est_cx_rk": 0.7,
+      "perfil_skus_cx_rk": 2.0,
+      "todas_estacoes_real_kit": [
+        {
+          "estacao": "37",
+          "cxs": 9.0,
+          "pcs": 25.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 866.0,
+          "pcs": 8673.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 1365.0,
+          "pcs": 10759.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 1058.0,
+          "pcs": 5715.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 1070.0,
+          "pcs": 7410.0
+        }
+      ],
       "perfil_est_cx_pk": 0.7,
       "perfil_skus_cx_pk": 2.1,
       "todas_estacoes_previa_kit": [
