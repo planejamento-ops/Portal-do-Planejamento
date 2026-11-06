@@ -635,7 +635,7 @@
                             <div class="tu-info">
                                 <span class="label">Taxa de Absenteísmo Geral (%)</span>
                                 <h3 id="pd-taxa-abs">--%</h3>
-                                <small>Média Acumulada no Mês</small>
+                                <small id="pd-sub-abs">Média Acumulada no Mês</small>
                             </div>
                         </div>
                         <div class="tu-card card-red" style="border-color: rgba(255, 75, 43, 0.6); box-shadow: inset 0 0 15px rgba(255, 75, 43, 0.1);">
@@ -649,7 +649,7 @@
                         <div class="tu-card card-yellow">
                             <span class="material-symbols-outlined icon">engineering</span>
                             <div class="tu-info">
-                                <span class="label">Faltas Injustificadas (Ocorrências)</span>
+                                <span class="label">Faltas Injustificadas (Pessoas)</span>
                                 <h3 id="pd-injustificadas">--</h3>
                                 <small>Acumulado do Mês / Sem Atestado</small>
                             </div>
@@ -657,7 +657,7 @@
                         <div class="tu-card card-purple">
                             <span class="material-symbols-outlined icon">fact_check</span>
                             <div class="tu-info">
-                                <span class="label">Ausências Justificadas (Ocorrências)</span>
+                                <span class="label">Ausências Justificadas (Pessoas)</span>
                                 <h3 id="pd-justificadas">--</h3>
                                 <small>Férias / Atestados / Licenças</small>
                             </div>
@@ -721,7 +721,13 @@
 
                     <!-- LINHA 3: GRÁFICO DIÁRIO DE % ABSENTEÍSMO -->
                     <div class="tu-detail-box box-cyan" style="margin-top: 12px; display:flex; flex-direction:column; height: 260px;">
-                        <h4><span class="material-symbols-outlined">analytics</span> Evolução Diária de Absenteísmo (%)</h4>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h4 style="margin: 0;"><span class="material-symbols-outlined">analytics</span> Evolução Diária de Absenteísmo</h4>
+                            <div class="wms-sub-toggles" style="margin-bottom: 0;">
+                                <button class="btn-sub-tab active" id="btn-pd-visao-pct" onclick="mudarVisaoGraficoDiario('PCT')">PORCENTAGEM (%)</button>
+                                <button class="btn-sub-tab" id="btn-pd-visao-abs" onclick="mudarVisaoGraficoDiario('ABS')">QUANTIDADE (QTD)</button>
+                            </div>
+                        </div>
                         <div style="flex:1; position:relative;"><canvas id="chartPdDiario"></canvas></div>
                     </div>
 
@@ -813,7 +819,8 @@
         let wmsCanalAtual = 'VAREJO';
         let wmsVisaoAtual = 'REAL_CARTEIRA';
         let dadosOndasGeral = []; 
-        let dadosOndasDataFiltrada = []; 
+        let dadosOndasDataFiltrada = [];
+        let pdVisaoDiarioAtual = 'PCT'; 
 
         let chartHorasSetor = null, chartCapacidadeSetor = null, chartHorasDiario = null;
 
@@ -848,14 +855,22 @@
                                 x = pos.x; y = pos.y;
                             }
 
-                            // Força a cor BRANCA para a porcentagem
+                            // Verifica qual é o gráfico para decidir se usa o símbolo de %
+                            let sufixo = '%';
+                            if (chart.canvas.id === 'chartPdDiario' && pdVisaoDiarioAtual === 'ABS') {
+                                sufixo = ''; // Remove o % na visão de Quantidade!
+                            } else if (chart.canvas.id && (chart.canvas.id.includes('chartCaixas') || chart.canvas.id.includes('chartPecas'))) {
+                                sufixo = ''; // Remove o % dos gráficos de WMS
+                            } else if (chart.canvas.id === 'chartHorasSetor' || chart.canvas.id === 'chartCapacidadeSetor') {
+                                return; 
+                            }
+
                             ctx.fillStyle = '#ffffff'; 
                             ctx.font = 'bold 12px "Plus Jakarta Sans"';
-                            ctx.fillText(data + '%', x, y - 5);
+                            ctx.fillText(data + sufixo, x, y - 5);
                             
                             if (abs_data !== null) {
                                 ctx.font = 'bold 10px "Plus Jakarta Sans"';
-                                // Força a cor BRANCA para o número absoluto também!
                                 ctx.fillStyle = '#ffffff'; 
                                 ctx.fillText('(' + abs_data + ')', x, y + 9);
                             }
@@ -863,7 +878,7 @@
                     });
                 });
             }
-        };
+        }; 
 
         function carregarScriptsSemCache() {
             // Só adiciona o timestamp se NÃO estiver rodando localmente (file://)
@@ -1134,14 +1149,7 @@
             } else if (dadosPD.grafico_setor_map && dataSel && dadosPD.grafico_setor_map[dataSel]) {
                 dadosDiaAbs = dadosPD.grafico_setor_map[dataSel];
             } else {
-                const diaNum = dataSel ? (parseInt(dataSel.split('-')[2]) || 13) : 13;
-                const variacaoDias = {
-                    11: { labels: ['SEPARAÇÃO', 'EXPEDIÇÃO', 'FECHAMENTO', 'REABASTECIMENTO', 'RECEBIMENTO', 'INVENTÁRIO'], data: [12.1, 8.4, 8.4, 10.1, 5.5, 10.0], absolutos: [18, 5, 5, 4, 3, 1] },
-                    12: { labels: ['EXPEDIÇÃO', 'RECEBIMENTO', 'FECHAMENTO', 'REABASTECIMENTO', 'SEPARAÇÃO', 'INVENTÁRIO'], data: [16.0, 13.6, 5.0, 4.5, 4.0, 3.2], absolutos: [11, 8, 3, 2, 6, 1] },
-                    13: { labels: ['EXPEDIÇÃO', 'FECHAMENTO', 'INVENTÁRIO', 'REABASTECIMENTO', 'SEPARAÇÃO', 'RECEBIMENTO'], data: [14.5, 14.5, 13.3, 10.0, 7.8, 3.3], absolutos: [10, 9, 2, 4, 13, 2] },
-                    14: { labels: ['FECHAMENTO', 'EXPEDIÇÃO', 'SEPARAÇÃO', 'REABASTECIMENTO', 'RECEBIMENTO', 'INVENTÁRIO'], data: [9.3, 6.8, 5.9, 4.8, 4.4, 2.1], absolutos: [5, 4, 9, 2, 2, 1] }
-                };
-                dadosDiaAbs = variacaoDias[diaNum] || dadosPD.grafico_setor || { labels: [], data: [], absolutos: [] };
+                dadosDiaAbs = { labels: [], data: [], absolutos: [] };
             }
 
             // 2. Busca Absenteísmo por Empresa (%) no mapa
@@ -1150,17 +1158,7 @@
             } else if (dadosPD.grafico_empresa_map && dataSel && dadosPD.grafico_empresa_map[dataSel]) {
                 dadosDiaEmp = dadosPD.grafico_empresa_map[dataSel];
             } else {
-                const diaNum = dataSel ? (parseInt(dataSel.split('-')[2]) || 13) : 13;
-                dadosDiaEmp = {
-                    labels: ['AMERICA', 'PACTUAL', 'CEVA', 'MEET'],
-                    data: [
-                        Math.round((10 + (diaNum % 4)) * 10) / 10,
-                        Math.round((8 + (diaNum % 3)) * 10) / 10,
-                        Math.round((11 + (diaNum % 5)) * 10) / 10,
-                        Math.round((9 + (diaNum % 2)) * 10) / 10
-                    ],
-                    absolutos: [12 + diaNum, 8 + diaNum, 25 + diaNum, 10 + diaNum]
-                };
+                dadosDiaEmp = { labels: [], data: [], absolutos: [] };
             }
 
             let labelsSetor = dadosDiaAbs.labels || [];
@@ -1375,6 +1373,40 @@
             return dataStr;
         }
 
+        function mudarVisaoGraficoDiario(visao) {
+            pdVisaoDiarioAtual = visao;
+            document.getElementById('btn-pd-visao-pct').classList.remove('active');
+            document.getElementById('btn-pd-visao-abs').classList.remove('active');
+            
+            if (visao === 'PCT') {
+                document.getElementById('btn-pd-visao-pct').classList.add('active');
+            } else {
+                document.getElementById('btn-pd-visao-abs').classList.add('active');
+            }
+            
+            if (typeof dadosPD !== 'undefined') {
+                const dadosDiario = visao === 'PCT' ? dadosPD.grafico_diario : dadosPD.grafico_diario_abs;
+                const elDiario = document.getElementById('chartPdDiario');
+                if (elDiario && dadosDiario) {
+                    const ctx = elDiario.getContext('2d');
+                    if (chartPdDiario) chartPdDiario.destroy();
+                    chartPdDiario = new Chart(ctx, {
+                        type: 'bar', 
+                        data: { labels: dadosDiario.labels, datasets: dadosDiario.datasets },
+                        options: {
+                            responsive: true, maintainAspectRatio: false,
+                            plugins: { 
+                                legend: { position: 'top', labels: { color: '#a0aab5', font: { size: 11 }, usePointStyle: true, boxWidth: 8 } },
+                                tooltip: { callbacks: { label: c => c.dataset.label + ': ' + c.raw + (visao === 'PCT' ? '%' : ' faltas') } }
+                            },
+                            scales: { y: { display: false, beginAtZero: true }, x: { grid: { display: false }, ticks: { color: '#a0aab5', font: { size: 10 } } } }
+                        },
+                        plugins: [chartDataLabelsPlugin]
+                    });
+                }
+            }
+        }
+
         // ==========================================
         // DESENHAR GRÁFICOS PD DIGITAL (VERSÃO ÚNICA E CORRIGIDA)
         // ==========================================
@@ -1432,25 +1464,7 @@
                 });
             }
 
-            // Gráfico Diário Misto (% Absenteísmo)
-            const elDiario = document.getElementById('chartPdDiario');
-            if (elDiario && dadosDiario) {
-                const ctx = elDiario.getContext('2d');
-                if (chartPdDiario) chartPdDiario.destroy();
-                chartPdDiario = new Chart(ctx, {
-                    type: 'bar', 
-                    data: { labels: dadosDiario.labels, datasets: dadosDiario.datasets },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { 
-                            legend: { position: 'top', labels: { color: '#a0aab5', font: { size: 11 }, usePointStyle: true, boxWidth: 8 } },
-                            tooltip: { callbacks: { label: c => c.dataset.label + ': ' + c.raw + '%' } }
-                        },
-                        scales: { y: { display: false, beginAtZero: true }, x: { grid: { display: false }, ticks: { color: '#a0aab5', font: { size: 10 } } } }
-                    },
-                    plugins: [chartDataLabelsPlugin]
-                });
-            }
+            mudarVisaoGraficoDiario('PCT');
         }
         // ==========================================
         // CARREGADOR MESTRE DE DADOS
@@ -1678,6 +1692,7 @@
                 const pd = dadosPD;
                 setTextoSeguro('txt-pd-status-sync', `LIVE • ${pd.atualizado_em || ''}`);
                 setTextoSeguro('pd-taxa-abs', `${pd.taxa_abs}%`);
+                setTextoSeguro('pd-sub-abs', `${formatarNumeroInteiro(pd.total_faltas_mes)} faltas registradas no mês`);
                 setTextoSeguro('pd-deficit', formatarNumeroInteiro(pd.deficit));
                 setTextoSeguro('pd-injustificadas', formatarNumeroInteiro(pd.fi_dias));
                 setTextoSeguro('pd-justificadas', formatarNumeroInteiro(pd.fj_dias));
