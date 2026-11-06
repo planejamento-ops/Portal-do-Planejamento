@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 16:01",
+  "atualizado_em": "06/11/2026 16:08",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -69369,34 +69369,325 @@ window.dadosPD = {
       ]
     }
   },
-  "grafico_pareto_mes": {
-    "labels": [
-      [
-        "FALTA",
-        "INJUSTIFICADA"
+  "grafico_pareto_mes_map": {
+    "2026-01": {
+      "labels": [
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "BANCO DE HORAS",
+          "(DSR)"
+        ]
       ],
-      [
-        "FALTA",
-        "JUSTIFICADA"
-      ],
-      [
-        "FÉRIAS"
-      ],
-      [
-        "BANCO DE HORAS",
-        "(DSR)"
-      ],
-      [
-        "DESLIGADO"
+      "data_abs": [
+        289,
+        230,
+        188,
+        136,
+        23
       ]
-    ],
-    "data_abs": [
-      103,
-      47,
-      32,
-      24,
-      18
-    ]
+    },
+    "2026-02": {
+      "labels": [
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO DE HORAS",
+          "(DSR)"
+        ]
+      ],
+      "data_abs": [
+        441,
+        253,
+        180,
+        163,
+        57
+      ]
+    },
+    "2026-03": {
+      "labels": [
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "HD - HC DIVERGENTE"
+        ]
+      ],
+      "data_abs": [
+        269,
+        121,
+        81,
+        74,
+        17
+      ]
+    },
+    "2026-04": {
+      "labels": [
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESCOMPROMETIMENTO"
+        ]
+      ],
+      "data_abs": [
+        225,
+        158,
+        155,
+        113,
+        48
+      ]
+    },
+    "2026-05": {
+      "labels": [
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
+      ],
+      "data_abs": [
+        239,
+        226,
+        181,
+        114,
+        54
+      ]
+    },
+    "2026-06": {
+      "labels": [
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
+      ],
+      "data_abs": [
+        295,
+        284,
+        165,
+        138,
+        117
+      ]
+    },
+    "2026-07": {
+      "labels": [
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "BANCO DE HORAS",
+          "(DSR)"
+        ]
+      ],
+      "data_abs": [
+        76,
+        67,
+        48,
+        39,
+        35
+      ]
+    },
+    "2026-08": {
+      "labels": [
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
+      ],
+      "data_abs": [
+        229,
+        178,
+        174,
+        110,
+        106
+      ]
+    },
+    "2026-09": {
+      "labels": [
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "DESLIGADO"
+        ]
+      ],
+      "data_abs": [
+        234,
+        229,
+        186,
+        113,
+        105
+      ]
+    },
+    "2026-10": {
+      "labels": [
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
+        ]
+      ],
+      "data_abs": [
+        359,
+        254,
+        123,
+        103,
+        94
+      ]
+    },
+    "2026-11": {
+      "labels": [
+        [
+          "FALTA",
+          "INJUSTIFICADA"
+        ],
+        [
+          "FALTA",
+          "JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "BANCO DE HORAS",
+          "(DSR)"
+        ],
+        [
+          "DESLIGADO"
+        ]
+      ],
+      "data_abs": [
+        103,
+        47,
+        32,
+        24,
+        18
+      ]
+    }
   },
   "grafico_diario": {
     "labels": [
