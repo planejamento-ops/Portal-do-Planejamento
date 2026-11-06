@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "06/11/2026 15:34",
+  "atualizado_em": "06/11/2026 15:42",
   "taxa_abs": 11.8,
   "total_faltas_mes": 227,
   "deficit": 8,
@@ -69390,44 +69390,8 @@ window.dadosPD = {
         "DESLIGADO"
       ],
       [
-        "COM ATESTADO",
-        "MÉDICO"
-      ],
-      [
-        "SEM ATESTADO",
-        "MÉDICO"
-      ],
-      [
-        "FALECIMENTO PARENTE/CÔNJUGE"
-      ],
-      [
-        "BANCO",
-        "DE HORAS"
-      ],
-      [
-        "ABANDONO",
-        "DE EMPREGO"
-      ],
-      [
-        "DESCOMPROMETIMENTO"
-      ],
-      [
-        "DIFICULDADE DE TRANSPORTE"
-      ],
-      [
-        "PROBLEMAS PESSOAIS"
-      ],
-      [
-        "BANCO",
-        "DE HORAS"
-      ],
-      [
-        "EXAME",
-        "ESCOLAR"
-      ],
-      [
-        "NÃO PERTENCE",
-        "À LISTA"
+        "OUTROS",
+        "MOTIVOS"
       ]
     ],
     "data_abs": [
@@ -69436,35 +69400,7 @@ window.dadosPD = {
       32,
       24,
       18,
-      14,
-      7,
-      3,
-      2,
-      2,
-      2,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "data_cum": [
-      39.8,
-      57.9,
-      70.3,
-      79.5,
-      86.5,
-      91.9,
-      94.6,
-      95.8,
-      96.5,
-      97.3,
-      98.1,
-      98.5,
-      98.8,
-      99.2,
-      99.6,
-      100.0
+      35
     ]
   },
   "grafico_diario": {
