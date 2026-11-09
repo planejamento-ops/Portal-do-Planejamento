@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "09/11/2026 09:14",
+  "atualizado_em": "09/11/2026 14:41",
   "total_tus": 68,
   "caixas_total_mes": 106954,
   "pecas_total_mes": 3827807,
@@ -925,30 +925,30 @@ window.dadosDashboard = {
         },
         "estojo_ln": {
           "perfil": 10,
-          "cx": 1682,
-          "pcs": 17606
+          "cx": 849,
+          "pcs": 8733
         },
         "estojo_gv": {
           "perfil": 10,
-          "cx": 5349,
-          "pcs": 52667
+          "cx": 2865,
+          "pcs": 27995
         },
         "total_geral": {
-          "cx": 24137,
-          "pcs": 846397,
-          "perfil": 35
+          "cx": 20820,
+          "pcs": 812852,
+          "perfil": 39
         }
       }
     }
   },
-  "caixas_pendentes": 24137,
-  "caixas_ln_pend": 7450,
-  "caixas_gv_pend": 16687,
-  "pecas_pendentes": 846397,
-  "pecas_ln_pend": 357619,
-  "pecas_gv_pend": 488778,
-  "carretas_pendentes": 13,
-  "progresso_pct": 45,
+  "caixas_pendentes": 20820,
+  "caixas_ln_pend": 6617,
+  "caixas_gv_pend": 14203,
+  "pecas_pendentes": 812852,
+  "pecas_ln_pend": 348746,
+  "pecas_gv_pend": 464106,
+  "carretas_pendentes": 11,
+  "progresso_pct": 54,
   "atendimentos_em_andamento": [
     "SPC"
   ],
@@ -960,14 +960,14 @@ window.dadosDashboard = {
   },
   "proxima_varejo": null,
   "proxima_estojo": {
-    "carreta": "Carreta  15",
-    "tu_resumida": "...3448",
+    "carreta": "Carreta  22",
+    "tu_resumida": "...3498",
     "uf": "SPC"
   },
   "pendencias_por_canal": {
     "varejo": 0,
     "carteira": 9,
-    "estojo": 4,
+    "estojo": 2,
     "outras": 0
   },
   "perfis_geral": {
@@ -1030,18 +1030,18 @@ window.dadosDashboard = {
     },
     "estojo_ln": {
       "perfil": 10,
-      "cx": 1682,
-      "pcs": 17606
+      "cx": 849,
+      "pcs": 8733
     },
     "estojo_gv": {
       "perfil": 10,
-      "cx": 5349,
-      "pcs": 52667
+      "cx": 2865,
+      "pcs": 27995
     },
     "total_geral": {
-      "cx": 24137,
-      "pcs": 846397,
-      "perfil": 35
+      "cx": 20820,
+      "pcs": 812852,
+      "perfil": 39
     }
   }
 };
