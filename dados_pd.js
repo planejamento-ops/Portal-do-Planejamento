@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "09/11/2026 16:31",
+  "atualizado_em": "09/11/2026 17:00",
   "taxa_abs": 0,
   "total_faltas_mes": 0,
   "deficit": 0,
@@ -994,21 +994,24 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "SEPARACAO",
         "EXPEDICAO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
         23.3,
         19.0,
         16.3,
         8.3,
-        5.0
+        5.0,
+        0.0
       ],
       "absolutos": [
         10,
         4,
         8,
         2,
-        2
+        2,
+        0
       ]
     },
     "2026-09-11_1": {
@@ -1017,44 +1020,56 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "SEPARACAO",
         "EXPEDICAO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
         23.8,
         20.0,
         16.3,
         8.3,
-        4.3
+        4.3,
+        0.0
       ],
       "absolutos": [
         5,
         4,
         8,
         2,
-        1
+        1,
+        0
       ]
     },
     "2026-09-11_2": {
       "labels": [
         "FECHAMENTO",
         "RECEBIMENTO",
+        "PLANEJAMENTO",
         "REABASTECIMENTO"
       ],
       "data": [
         22.7,
         5.9,
+        0.0,
         0.0
       ],
       "absolutos": [
         5,
         1,
+        0,
         0
       ]
     },
     "2026-09-11_3": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "PLANEJAMENTO"
+      ],
+      "data": [
+        0.0
+      ],
+      "absolutos": [
+        0
+      ]
     }
   },
   "grafico_empresa_map": {
@@ -1764,7 +1779,7 @@ window.dadosPD = {
         22.2,
         21.4,
         16.7,
-        12.8
+        12.0
       ],
       "absolutos": [
         4,
@@ -1784,7 +1799,7 @@ window.dadosPD = {
         23.1,
         17.6,
         14.3,
-        13.0
+        12.6
       ],
       "absolutos": [
         3,
@@ -1802,7 +1817,7 @@ window.dadosPD = {
       "data": [
         100.0,
         20.0,
-        12.1
+        11.1
       ],
       "absolutos": [
         1,
