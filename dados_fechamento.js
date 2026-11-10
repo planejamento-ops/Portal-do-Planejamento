@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "10/11/2026 10:47",
+  "atualizado_em": "10/11/2026 11:07",
   "progresso_geral_pct": 0,
   "total_cxs_geral": 104120,
   "total_loaded_cxs_geral": 0,
@@ -50,7 +50,7 @@ window.dadosFechamento = {
       "pct": 0,
       "status_atend": "PENDENTE"
     },
-    "": {
+    "DEDICADO": {
       "total_tus": 1,
       "total_cxs": 6,
       "loaded_cxs": 0,
@@ -83,7 +83,7 @@ window.dadosFechamento = {
   },
   "tabela": [
     {
-      "atendimento": "",
+      "atendimento": "DEDICADO",
       "carreta": "Carreta 01",
       "tu": "610000013441",
       "total_caixas": 6,
