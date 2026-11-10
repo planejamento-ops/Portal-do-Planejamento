@@ -1,12 +1,12 @@
 window.dadosPD = {
-  "atualizado_em": "09/11/2026 17:11",
-  "taxa_abs": 11.9,
-  "total_faltas_mes": 342,
+  "atualizado_em": "10/11/2026 08:22",
+  "taxa_abs": 11.8,
+  "total_faltas_mes": 369,
   "deficit": 13,
-  "fi_dias": 98,
-  "fj_dias": 53,
+  "fi_dias": 104,
+  "fj_dias": 59,
   "ferias": 14,
-  "data_padrao_setor": "2026-11-09",
+  "data_padrao_setor": "2026-11-10",
   "grafico_setor_map": {
     "2026-11-02_GERAL": {
       "labels": [
@@ -699,17 +699,17 @@ window.dadosPD = {
         "PLANEJAMENTO"
       ],
       "data": [
-        20.9,
+        20.3,
         20.0,
-        16.3,
+        15.1,
         11.8,
         8.5,
         0.0
       ],
       "absolutos": [
-        9,
         13,
-        16,
+        13,
+        23,
         6,
         5,
         0
@@ -744,20 +744,23 @@ window.dadosPD = {
     "2026-11-09_2": {
       "labels": [
         "FECHAMENTO",
+        "REABASTECIMENTO",
+        "SEPARACAO",
         "RECEBIMENTO",
-        "PLANEJAMENTO",
-        "REABASTECIMENTO"
+        "PLANEJAMENTO"
       ],
       "data": [
         22.7,
+        18.2,
+        13.0,
         5.9,
-        0.0,
         0.0
       ],
       "absolutos": [
         5,
+        4,
+        7,
         1,
-        0,
         0
       ]
     },
@@ -785,6 +788,68 @@ window.dadosPD = {
         4,
         3,
         0
+      ]
+    },
+    "2026-11-10_GERAL": {
+      "labels": [
+        "FECHAMENTO",
+        "SEPARACAO",
+        "EXPEDICAO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        16.7,
+        10.2,
+        7.4,
+        4.5,
+        4.5
+      ],
+      "absolutos": [
+        7,
+        5,
+        2,
+        1,
+        1
+      ]
+    },
+    "2026-11-10_1": {
+      "labels": [
+        "FECHAMENTO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        25.0,
+        4.5
+      ],
+      "absolutos": [
+        5,
+        1
+      ]
+    },
+    "2026-11-10_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-10_3": {
+      "labels": [
+        "SEPARACAO",
+        "FECHAMENTO",
+        "EXPEDICAO",
+        "REABASTECIMENTO"
+      ],
+      "data": [
+        10.2,
+        9.1,
+        7.4,
+        4.5
+      ],
+      "absolutos": [
+        5,
+        2,
+        2,
+        1
       ]
     }
   },
@@ -1235,22 +1300,22 @@ window.dadosPD = {
     },
     "2026-11-09_GERAL": {
       "labels": [
-        "PACTUAL",
         "MEET",
         "AMERICA",
-        "CEVA"
+        "CEVA",
+        "PACTUAL"
       ],
       "data": [
-        19.4,
-        14.9,
-        14.7,
-        14.6
+        16.1,
+        15.2,
+        15.1,
+        13.0
       ],
       "absolutos": [
-        6,
+        9,
         7,
-        5,
-        31
+        38,
+        6
       ]
     },
     "2026-11-09_1": {
@@ -1280,14 +1345,14 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        100.0,
-        20.0,
-        11.1
+        30.0,
+        17.6,
+        14.7
       ],
       "absolutos": [
-        1,
-        1,
-        4
+        3,
+        3,
+        11
       ]
     },
     "2026-11-09_3": {
@@ -1308,6 +1373,65 @@ window.dadosPD = {
         3,
         3,
         3
+      ]
+    },
+    "2026-11-10_GERAL": {
+      "labels": [
+        "PACTUAL",
+        "CEVA",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        11.8,
+        10.9,
+        10.0,
+        4.3
+      ],
+      "absolutos": [
+        2,
+        10,
+        3,
+        1
+      ]
+    },
+    "2026-11-10_1": {
+      "labels": [
+        "PACTUAL",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        100.0,
+        33.3,
+        8.3
+      ],
+      "absolutos": [
+        2,
+        1,
+        3
+      ]
+    },
+    "2026-11-10_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-10_3": {
+      "labels": [
+        "CEVA",
+        "MEET",
+        "AMERICA"
+      ],
+      "data": [
+        12.5,
+        7.4,
+        4.5
+      ],
+      "absolutos": [
+        7,
+        2,
+        1
       ]
     }
   },
@@ -1360,9 +1484,9 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        41,
+        40,
         13,
-        8,
+        9,
         8,
         3,
         3,
@@ -1375,8 +1499,8 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        48.2,
-        63.5,
+        47.1,
+        62.4,
         72.9,
         82.4,
         85.9,
@@ -1488,11 +1612,11 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
-        ],
-        [
           "COM ATESTADO",
           "MÉDICO"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ],
         [
           "DESCOMPROMETIMENTO"
@@ -1513,8 +1637,8 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        12,
-        8,
+        11,
+        9,
         8,
         1,
         1,
@@ -1523,7 +1647,7 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        36.4,
+        33.3,
         60.6,
         84.8,
         87.9,
@@ -1573,12 +1697,12 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        21,
+        20,
         14,
         9,
         6,
         5,
-        4,
+        5,
         2,
         1,
         1,
@@ -1586,11 +1710,11 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        32.3,
-        53.8,
-        67.7,
-        76.9,
-        84.6,
+        30.8,
+        52.3,
+        66.2,
+        75.4,
+        83.1,
         90.8,
         93.8,
         95.4,
@@ -1711,8 +1835,8 @@ window.dadosPD = {
       ],
       "data_abs": [
         11,
-        6,
-        2,
+        5,
+        3,
         1,
         1,
         1,
@@ -1721,7 +1845,7 @@ window.dadosPD = {
       ],
       "data_cum": [
         45.8,
-        70.8,
+        66.7,
         79.2,
         83.3,
         87.5,
@@ -1763,9 +1887,9 @@ window.dadosPD = {
       "data_abs": [
         11,
         9,
-        9,
+        8,
         6,
-        2,
+        3,
         2,
         1,
         1
@@ -1773,8 +1897,8 @@ window.dadosPD = {
       "data_cum": [
         26.8,
         48.8,
-        70.7,
-        85.4,
+        68.3,
+        82.9,
         90.2,
         95.1,
         97.6,
@@ -1862,11 +1986,11 @@ window.dadosPD = {
           "FALTA JUSTIFICADA"
         ],
         [
-          "FALECIMENTO PARENTE/CÔNJUGE"
-        ],
-        [
           "COM ATESTADO",
           "MÉDICO"
+        ],
+        [
+          "FALECIMENTO PARENTE/CÔNJUGE"
         ],
         [
           "BANCO DE HORAS",
@@ -1874,17 +1998,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        6,
+        5,
         4,
         3,
-        1,
+        2,
         1,
         1
       ],
       "data_cum": [
-        37.5,
-        62.5,
-        81.2,
+        31.2,
+        56.2,
+        75.0,
         87.5,
         93.8,
         100.0
@@ -1905,31 +2029,42 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "BANCO DE HORAS",
-          "(DSR)"
-        ],
-        [
           "SEM ATESTADO",
           "MÉDICO"
         ],
         [
+          "BANCO DE HORAS",
+          "(DSR)"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
           "EXAME ESCOLAR / VESTIBULAR"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
         ]
       ],
       "data_abs": [
-        20,
+        17,
         10,
         5,
         3,
         2,
+        2,
+        1,
         1,
         1
       ],
       "data_cum": [
-        47.6,
-        71.4,
+        40.5,
+        64.3,
+        76.2,
         83.3,
-        90.5,
+        88.1,
+        92.9,
         95.2,
         97.6,
         100.0
@@ -2011,13 +2146,24 @@ window.dadosPD = {
     "2026-11-05_3": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
-        ],
-        [
           "FÉRIAS"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
+        ],
+        [
+          "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "COM ATESTADO",
+          "MÉDICO"
         ],
         [
           "BANCO DE HORAS",
@@ -2025,13 +2171,19 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        7,
         4,
+        4,
+        1,
+        1,
+        1,
         1,
         1
       ],
       "data_cum": [
-        53.8,
+        30.8,
+        61.5,
+        69.2,
+        76.9,
         84.6,
         92.3,
         100.0
@@ -2052,12 +2204,15 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
+          "COM ATESTADO",
+          "MÉDICO"
+        ],
+        [
           "BANCO DE HORAS",
           "(DSR)"
         ],
         [
-          "COM ATESTADO",
-          "MÉDICO"
+          "DIFICULDADE DE TRANSPORTE"
         ],
         [
           "PROBLEMAS PESSOAIS"
@@ -2072,22 +2227,24 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        15,
+        12,
         10,
         9,
         4,
         4,
-        2,
+        4,
+        1,
         1,
         1,
         1
       ],
       "data_cum": [
-        31.9,
-        53.2,
-        72.3,
-        80.9,
-        89.4,
+        25.5,
+        46.8,
+        66.0,
+        74.5,
+        83.0,
+        91.5,
         93.6,
         95.7,
         97.9,
@@ -2171,39 +2328,44 @@ window.dadosPD = {
     "2026-11-06_3": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
-        ],
-        [
           "FÉRIAS"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FALTA INJUSTIFICADA"
         ],
         [
-          "BANCO DE HORAS",
-          "(DSR)"
+          "FALTA JUSTIFICADA"
         ],
         [
           "COM ATESTADO",
           "MÉDICO"
         ],
         [
+          "BANCO DE HORAS",
+          "(DSR)"
+        ],
+        [
+          "DIFICULDADE DE TRANSPORTE"
+        ],
+        [
           "PROBLEMAS PESSOAIS"
         ]
       ],
       "data_abs": [
-        7,
+        4,
+        4,
         4,
         4,
         3,
-        2,
+        1,
         1
       ],
       "data_cum": [
-        33.3,
-        52.4,
-        71.4,
-        85.7,
+        19.0,
+        38.1,
+        57.1,
+        76.2,
+        90.5,
         95.2,
         100.0
       ]
@@ -2227,29 +2389,35 @@ window.dadosPD = {
           "(DSR)"
         ],
         [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
           "SEM ATESTADO",
           "MÉDICO"
         ],
         [
-          "PROBLEMAS PESSOAIS"
+          "COM ATESTADO",
+          "MÉDICO"
         ]
       ],
       "data_abs": [
-        20,
+        17,
         12,
         9,
         8,
         7,
         2,
-        1
+        2,
+        2
       ],
       "data_cum": [
-        33.9,
-        54.2,
-        69.5,
-        83.1,
-        94.9,
-        98.3,
+        28.8,
+        49.2,
+        64.4,
+        78.0,
+        89.8,
+        93.2,
+        96.6,
         100.0
       ]
     },
@@ -2314,16 +2482,23 @@ window.dadosPD = {
     "2026-11-07_3": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FALTA INJUSTIFICADA"
         ],
         [
           "FÉRIAS"
         ],
         [
+          "PROBLEMAS PESSOAIS"
+        ],
+        [
           "SEM ATESTADO",
+          "MÉDICO"
+        ],
+        [
+          "COM ATESTADO",
           "MÉDICO"
         ],
         [
@@ -2332,26 +2507,25 @@ window.dadosPD = {
         ],
         [
           "DESLIGADO"
-        ],
-        [
-          "PROBLEMAS PESSOAIS"
         ]
       ],
       "data_abs": [
-        10,
         9,
+        7,
         4,
         2,
         2,
-        1,
+        2,
+        2,
         1
       ],
       "data_cum": [
-        34.5,
-        65.5,
-        79.3,
-        86.2,
-        93.1,
+        31.0,
+        55.2,
+        69.0,
+        75.9,
+        82.8,
+        89.7,
         96.6,
         100.0
       ]
@@ -2366,10 +2540,10 @@ window.dadosPD = {
           "(DSR)"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FÉRIAS"
         ],
         [
-          "FÉRIAS"
+          "FALTA JUSTIFICADA"
         ],
         [
           "DESLIGADO"
@@ -2377,22 +2551,27 @@ window.dadosPD = {
         [
           "SEM ATESTADO",
           "MÉDICO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
         ]
       ],
       "data_abs": [
-        25,
-        11,
-        8,
+        27,
+        14,
+        9,
+        9,
         6,
-        4,
+        3,
         1
       ],
       "data_cum": [
-        45.5,
-        65.5,
-        80.0,
-        90.9,
-        98.2,
+        39.1,
+        59.4,
+        72.5,
+        85.5,
+        94.2,
+        98.6,
         100.0
       ]
     },
@@ -2433,29 +2612,34 @@ window.dadosPD = {
     "2026-11-09_2": {
       "labels": [
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "BANCO DE HORAS",
           "(DSR)"
         ],
         [
-          "FALTA INJUSTIFICADA"
+          "FÉRIAS"
         ],
         [
           "DESLIGADO"
         ],
         [
-          "FÉRIAS"
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
+        7,
+        6,
+        4,
         3,
-        2,
-        1,
         1
       ],
       "data_cum": [
-        42.9,
-        71.4,
-        85.7,
+        33.3,
+        61.9,
+        81.0,
+        95.2,
         100.0
       ]
     },
@@ -2477,20 +2661,109 @@ window.dadosPD = {
         [
           "SEM ATESTADO",
           "MÉDICO"
+        ],
+        [
+          "PROBLEMAS FAMILIARES"
         ]
       ],
       "data_abs": [
-        12,
+        9,
         6,
         4,
         4,
+        3,
         1
       ],
       "data_cum": [
-        44.4,
-        66.7,
-        81.5,
+        33.3,
+        55.6,
+        70.4,
+        85.2,
         96.3,
+        100.0
+      ]
+    },
+    "2026-11-10_GERAL": {
+      "labels": [
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
+        ]
+      ],
+      "data_abs": [
+        8,
+        7,
+        5,
+        1
+      ],
+      "data_cum": [
+        38.1,
+        71.4,
+        95.2,
+        100.0
+      ]
+    },
+    "2026-11-10_1": {
+      "labels": [
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
+      ],
+      "data_abs": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "data_cum": [
+        42.9,
+        71.4,
+        85.7,
+        100.0
+      ]
+    },
+    "2026-11-10_2": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-10_3": {
+      "labels": [
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
+        ]
+      ],
+      "data_abs": [
+        6,
+        4,
+        4
+      ],
+      "data_cum": [
+        42.9,
+        71.4,
         100.0
       ]
     }
@@ -2516,11 +2789,11 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        151,
-        72,
-        52,
-        43,
-        34
+        148,
+        81,
+        60,
+        46,
+        37
       ]
     }
   },
@@ -2570,8 +2843,8 @@ window.dadosPD = {
           8.6,
           12.1,
           null,
-          15.1,
-          null,
+          15.0,
+          9.9,
           null,
           null,
           null,
@@ -2647,8 +2920,8 @@ window.dadosPD = {
           37,
           51,
           null,
-          49,
-          null,
+          60,
+          16,
           null,
           null,
           null,
@@ -2681,45 +2954,45 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 143,
-      "taxa": 14.2
+      "faltas": 153,
+      "taxa": 13.6
     },
     {
       "turno": "1º Turno",
-      "faltas": 105,
-      "taxa": 10.9
+      "faltas": 111,
+      "taxa": 11.0
     },
     {
       "turno": "2º Turno",
-      "faltas": 94,
-      "taxa": 10.3
+      "faltas": 105,
+      "taxa": 10.7
     }
   ],
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 97,
-      "taxa": 11.1
-    },
-    {
-      "setor": "REABASTECIMENTO",
-      "faltas": 62,
-      "taxa": 14.4
+      "faltas": 109,
+      "taxa": 11.2
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 61,
-      "taxa": 13.2
+      "faltas": 68,
+      "taxa": 13.5
+    },
+    {
+      "setor": "REABASTECIMENTO",
+      "faltas": 67,
+      "taxa": 14.2
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 50,
-      "taxa": 12.6
+      "faltas": 52,
+      "taxa": 12.2
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 27,
-      "taxa": 6.5
+      "faltas": 28,
+      "taxa": 6.4
     },
     {
       "setor": "SEPARAÇÃO",
@@ -2740,18 +3013,23 @@ window.dadosPD = {
   "todos_lideres": [
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
-      "faltas": 55,
-      "taxa": 16.1
+      "faltas": 60,
+      "taxa": 15.4
     },
     {
       "lider": "LUIS PAULO REIS",
-      "faltas": 39,
-      "taxa": 12.0
+      "faltas": 46,
+      "taxa": 12.2
     },
     {
       "lider": "TARCISIO RICARDO MARTINS CLARO",
-      "faltas": 30,
-      "taxa": 16.2
+      "faltas": 32,
+      "taxa": 15.2
+    },
+    {
+      "lider": "RICARDO EUGENIO LAURINDO",
+      "faltas": 27,
+      "taxa": 15.2
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
@@ -2759,14 +3037,19 @@ window.dadosPD = {
       "taxa": 9.0
     },
     {
-      "lider": "RICARDO EUGENIO LAURINDO",
+      "lider": "GABRIELLY DA SILVA ALEXANDRIA",
       "faltas": 25,
-      "taxa": 16.0
+      "taxa": 15.1
+    },
+    {
+      "lider": "FLAVIO MARTINS RUFINO",
+      "faltas": 24,
+      "taxa": 14.9
     },
     {
       "lider": "DIEGO CUNHA BOER",
-      "faltas": 22,
-      "taxa": 14.3
+      "faltas": 23,
+      "taxa": 13.1
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
@@ -2777,16 +3060,6 @@ window.dadosPD = {
       "lider": "DIOGO GODINHO FIGUEIREDO",
       "faltas": 21,
       "taxa": 13.4
-    },
-    {
-      "lider": "FLAVIO MARTINS RUFINO",
-      "faltas": 20,
-      "taxa": 14.4
-    },
-    {
-      "lider": "GABRIELLY DA SILVA ALEXANDRIA",
-      "faltas": 20,
-      "taxa": 13.7
     },
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
@@ -2805,8 +3078,8 @@ window.dadosPD = {
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
-      "faltas": 9,
-      "taxa": 5.8
+      "faltas": 10,
+      "taxa": 5.7
     },
     {
       "lider": "EDMILSON BERTOLDO",
@@ -2825,11 +3098,13 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
+    "<strong style='color:#ffffff;'>T1</strong>: EDSON SANTOS CAMPOS",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
-    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
-    "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T2</strong>: RENAN ALVES REZENDE",
+    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
+    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
 };
