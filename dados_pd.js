@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "10/11/2026 16:19",
+  "atualizado_em": "10/11/2026 17:00",
   "taxa_abs": 10.3,
   "total_faltas_mes": 329,
   "deficit": 13,
@@ -3191,6 +3191,7 @@ window.dadosPD = {
     "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
     "<strong style='color:#ffffff;'>T1</strong>: EDSON SANTOS CAMPOS",
     "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
+    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
     "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS"
   ]
 };
