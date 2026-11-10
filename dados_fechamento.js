@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "10/11/2026 14:16",
+  "atualizado_em": "10/11/2026 14:48",
   "progresso_geral_pct": 92,
   "total_cxs_geral": 98653,
   "total_loaded_cxs_geral": 91582,
@@ -67,17 +67,6 @@ window.dadosFechamento = {
       "caixas_carregadas": 1662,
       "caixas_rampa": 0,
       "caixas_processadas": 1662,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
-    {
-      "atendimento": "VAREJO",
-      "carreta": "Carreta 06",
-      "tu": "610000013494",
-      "total_caixas": 572,
-      "caixas_carregadas": 572,
-      "caixas_rampa": 0,
-      "caixas_processadas": 572,
       "pct": 100,
       "status": "FINALIZADA"
     },
