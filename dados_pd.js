@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "10/11/2026 16:06",
+  "atualizado_em": "10/11/2026 16:08",
   "taxa_abs": 0,
   "total_faltas_mes": 0,
   "deficit": 0,
@@ -4285,7 +4285,6 @@ window.dadosPD = {
   "todos_setores": [],
   "todos_lideres": [],
   "alertas_pendentes": [
-    "<strong style='color:#f6b93b;'>ATENÇÃO: O site falhou. Baseado no último histórico!</strong>",
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
     "<strong style='color:#ffffff;'>T1</strong>: EDSON SANTOS CAMPOS",
