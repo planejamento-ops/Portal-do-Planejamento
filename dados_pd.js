@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "11/11/2026 01:01",
+  "atualizado_em": "11/11/2026 02:00",
   "taxa_abs": 10.2,
   "total_faltas_mes": 343,
   "deficit": 14,
-  "fi_dias": 104,
-  "fj_dias": 63,
+  "fi_dias": 103,
+  "fj_dias": 64,
   "ferias": 14,
   "data_padrao_setor": "2026-11-11",
   "resumo_diario_map": {
@@ -2728,23 +2728,28 @@ window.dadosPD = {
         ],
         [
           "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
-        27,
+        26,
         14,
         9,
         9,
         7,
         3,
+        1,
         1
       ],
       "data_cum": [
-        38.6,
-        58.6,
-        71.4,
-        84.3,
-        94.3,
+        37.1,
+        57.1,
+        70.0,
+        82.9,
+        92.9,
+        97.1,
         98.6,
         100.0
       ]
@@ -2834,21 +2839,26 @@ window.dadosPD = {
         ],
         [
           "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
-        9,
+        8,
         6,
         4,
         4,
         3,
+        1,
         1
       ],
       "data_cum": [
-        33.3,
-        55.6,
-        70.4,
-        85.2,
+        29.6,
+        51.9,
+        66.7,
+        81.5,
+        92.6,
         96.3,
         100.0
       ]
@@ -2868,26 +2878,26 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
-          "FOLGA"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FOLGA"
         ]
       ],
       "data_abs": [
         13,
         9,
-        9,
+        8,
         4,
         2,
-        1
+        2
       ],
       "data_cum": [
         34.2,
         57.9,
-        81.6,
-        92.1,
-        97.4,
+        78.9,
+        89.5,
+        94.7,
         100.0
       ]
     },
@@ -2970,13 +2980,13 @@ window.dadosPD = {
       "data_abs": [
         6,
         4,
-        3,
-        1
+        2,
+        2
       ],
       "data_cum": [
         42.9,
         71.4,
-        92.9,
+        85.7,
         100.0
       ]
     },
@@ -3077,7 +3087,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        154,
+        152,
         91,
         68,
         49,
