@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "11/11/2026 06:00",
+  "atualizado_em": "11/11/2026 07:00",
   "taxa_abs": 10.2,
-  "total_faltas_mes": 343,
+  "total_faltas_mes": 349,
   "deficit": 14,
-  "fi_dias": 103,
+  "fi_dias": 104,
   "fj_dias": 64,
   "ferias": 14,
   "data_padrao_setor": "2026-11-11",
@@ -988,22 +988,31 @@ window.dadosPD = {
         "EXPEDICAO"
       ],
       "data": [
-        9.1,
+        14.3,
         9.1,
         8.3,
-        7.4
+        8.2
       ],
       "absolutos": [
-        2,
+        6,
         2,
         4,
-        2
+        4
       ]
     },
     "2026-11-11_1": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "FECHAMENTO",
+        "EXPEDICAO"
+      ],
+      "data": [
+        20.0,
+        9.1
+      ],
+      "absolutos": [
+        4,
+        2
+      ]
     },
     "2026-11-11_2": {
       "labels": [],
@@ -1623,25 +1632,43 @@ window.dadosPD = {
     },
     "2026-11-11_GERAL": {
       "labels": [
-        "CEVA",
         "AMERICA",
-        "MEET"
+        "CEVA",
+        "MEET",
+        "PACTUAL"
       ],
       "data": [
-        10.5,
-        9.5,
-        7.4
+        12.5,
+        10.1,
+        9.4,
+        6.2
       ],
       "absolutos": [
-        6,
-        2,
-        2
+        3,
+        9,
+        3,
+        1
       ]
     },
     "2026-11-11_1": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "PACTUAL",
+        "AMERICA",
+        "MEET",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        33.3,
+        20.0,
+        9.4
+      ],
+      "absolutos": [
+        1,
+        1,
+        1,
+        3
+      ]
     },
     "2026-11-11_2": {
       "labels": [],
@@ -2993,13 +3020,13 @@ window.dadosPD = {
     "2026-11-11_GERAL": {
       "labels": [
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FALTA JUSTIFICADA"
         ],
         [
           "FÉRIAS"
-        ],
-        [
-          "FALTA INJUSTIFICADA"
         ],
         [
           "DESLIGADO"
@@ -3009,24 +3036,47 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
+        7,
+        7,
         5,
-        4,
-        4,
-        1,
+        2,
         1
       ],
       "data_cum": [
-        33.3,
-        60.0,
-        86.7,
-        93.3,
+        31.8,
+        63.6,
+        86.4,
+        95.5,
         100.0
       ]
     },
     "2026-11-11_1": {
-      "labels": [],
-      "data_abs": [],
-      "data_cum": []
+      "labels": [
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
+      ],
+      "data_abs": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "data_cum": [
+        42.9,
+        71.4,
+        85.7,
+        100.0
+      ]
     },
     "2026-11-11_2": {
       "labels": [],
@@ -3087,11 +3137,11 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        152,
-        91,
-        68,
+        155,
+        93,
+        69,
         49,
-        42
+        43
       ]
     }
   },
@@ -3143,7 +3193,7 @@ window.dadosPD = {
           null,
           11.7,
           8.5,
-          8.4,
+          9.9,
           null,
           null,
           null,
@@ -3220,7 +3270,7 @@ window.dadosPD = {
           null,
           47,
           27,
-          10,
+          16,
           null,
           null,
           null,
@@ -3257,8 +3307,8 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 98,
-      "taxa": 9.7
+      "faltas": 104,
+      "taxa": 9.9
     },
     {
       "turno": "2º Turno",
@@ -3279,12 +3329,12 @@ window.dadosPD = {
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 57,
-      "taxa": 10.7
+      "faltas": 61,
+      "taxa": 11.1
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 50,
+      "faltas": 52,
       "taxa": 10.7
     },
     {
@@ -3335,6 +3385,11 @@ window.dadosPD = {
       "taxa": 8.4
     },
     {
+      "lider": "GABRIELLY DA SILVA ALEXANDRIA",
+      "faltas": 24,
+      "taxa": 13.3
+    },
+    {
       "lider": "RICARDO EUGENIO LAURINDO",
       "faltas": 24,
       "taxa": 12.3
@@ -3345,14 +3400,9 @@ window.dadosPD = {
       "taxa": 11.8
     },
     {
-      "lider": "GABRIELLY DA SILVA ALEXANDRIA",
-      "faltas": 20,
-      "taxa": 12.4
-    },
-    {
       "lider": "EDSON SANTOS CAMPOS",
-      "faltas": 19,
-      "taxa": 12.5
+      "faltas": 21,
+      "taxa": 12.1
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
