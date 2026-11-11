@@ -375,12 +375,15 @@
                         <div class="stat"><span class="stat-val" id="kpiPcsPorTarefaFR">0.0</span><span class="stat-lbl">PÇS/TAREFA</span><span class="stat-pct">Média</span></div>
                     </div>
                 </div>
-                <div class="kpi-card ergo-card">
+                <div class="kpi-card fr-card" style="border-top-color: #3182ce;">
+                    <div class="kpi-card ergo-card">
                     <h3>GOLDEN ZONE</h3>
                     <div class="kpi-stats">
                         <div class="stat"><span class="stat-val" id="kpiGoldenAG">0</span><span class="stat-lbl">GOLDEN AG</span><span class="stat-pct" id="kpiPctGoldenAG">0% do AG</span></div>
                         <div class="stat"><span class="stat-val" id="kpiGoldenBG">0</span><span class="stat-lbl">GOLDEN BG</span><span class="stat-pct" id="kpiPctGoldenBG">0% do BG</span></div>
                     </div>
+                </div>
+                
             <div class="kpi-grid" style="display: none !important;">
                 <div class="kpi-card fr-card" style="border-top-color: #805ad5; min-width: 100%; align-items: stretch; padding: 10px;">
                     <h3>MIX DE MATERIAL (FR)</h3>
@@ -449,8 +452,14 @@
                 </div>
             </div>
             
-            <div style="display: flex; gap: 10px; margin-top: 5px; min-height: 28px; align-items: stretch;">
+            <div style="display: flex; gap: 10px; margin-top: 5px; min-height: 28px; align-items: stretch; flex-wrap: wrap;">
                 <div id="painelGuias" class="guias-banner" style="flex: 1;"></div>
+                
+                <!-- NOVO BANNER DE EMBALAGENS NO MEIO -->
+                <div id="painelEmbalagens" style="flex: 1; background: #f0fff4; color: #22543d; border: 1px solid #c6f6d5; padding: 4px 8px; border-radius: 4px; text-align: center; font-size: 11px; display: flex; align-items: center; justify-content: center; font-weight: 500;">
+                    📦 <b style="color:#2f855a; margin-right: 4px;">PREVISÃO CXS:</b> 0 PEQ &nbsp;|&nbsp; 0 MED &nbsp;|&nbsp; 0 GDE
+                </div>
+
                 <div id="painelHawaFert" style="flex: 1; background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; padding: 4px 8px; border-radius: 4px; text-align: center; font-size: 11px; display: flex; align-items: center; justify-content: center; font-weight: 500;">
                     <!-- MIX INJECTED HERE -->
                 </div>
@@ -1660,8 +1669,23 @@
                         }
 
                         let bga = isBG(sa), bgb = isBG(sb);
-                        if(fluxoSelecionado === 'Carteira' || fluxoSelecionado === 'KIT - Estojo') { if(sa==="04" && sb!=="04") return -1; if(sb==="04" && sa!=="04") return 1; if(!bga && bgb) return -1; if(bga && !bgb) return 1; return 0; }
-                        else { if(sa==="04" && sb!=="04") return 1; if(sb==="04" && sa!=="04") return -1; if(bga && !bgb) return -1; if(!bga && bgb) return 1; return 0; }
+                        if(fluxoSelecionado === 'Carteira' || fluxoSelecionado === 'KIT - Estojo') { 
+    if(sa==="04" && sb!=="04") return -1; if(sb==="04" && sa!=="04") return 1; if(!bga && bgb) return -1; if(bga && !bgb) return 1; return 0; 
+}
+else { 
+    // 1. Estação 04 continua perdendo no Varejo
+    if(sa==="04" && sb!=="04") return 1; 
+    if(sb==="04" && sa!=="04") return -1; 
+    
+    // 2. NOVA REGRA: Se a Estação for a 07, ela ganha do Baixo Giro (BG)
+    if((sa==="07" || sa==="7") && bgb) return -1; 
+    if((sb==="07" || sb==="7") && bga) return 1; 
+    
+    // 3. Regra padrão para o resto: BG ganha dos outros AGs
+    if(bga && !bgb) return -1; 
+    if(!bga && bgb) return 1; 
+    return 0; 
+}
                     });
                     bestPos = rotas[0];
                 }
@@ -1754,13 +1778,13 @@
             let cxsPC_Fisicas = new Set(); 
             
             // =========================================================================
-            // 3. LAÇO ÚNICO DE EMPACOTAMENTO (VOLUME 84% = 24.061 L)
+            // 3. LAÇO ÚNICO DE EMPACOTAMENTO (VOLUME 84% DA CX GDE = 26.06 L)
             // =========================================================================
+            window.volumesPorCaixaFR = {}; // Guarda o volume final exato de cada caixa
+
             for (let chave in docGroups) {
                 let itens = docGroups[chave]; 
                 
-                // 🔥 A GRANDE SACADA: Ordenar pelo fluxo da esteira!
-                // A caixa agora "suga" tudo de uma estação antes de viajar para a próxima.
                 itens.sort((a, b) => sortStations(a.Estacao, b.Estacao));
 
                 let volAcumuladoExato = 0; 
@@ -1772,11 +1796,11 @@
                     }
 
                     let volRestanteItem = i.VolTotal_FR;
-                    let qtdRestanteItem = i.Qtd_FR; // 🛑 INSERIDO CONTROLE DE PEÇAS FÍSICAS
+                    let qtdRestanteItem = i.Qtd_FR; 
 
                     while(volRestanteItem > 0.001 && qtdRestanteItem > 0) {
                         let boxId = chave + "_CX" + numCaixaAtual;
-                        let espacoLivre = 24.061 - volAcumuladoExato;
+                        let espacoLivre = 26.06 - volAcumuladoExato; // NOVO LIMITE CAIXA GRANDE
 
                         let volColocado = 0;
                         let qtdColocada = 0;
@@ -1785,15 +1809,17 @@
                             volColocado = espacoLivre;
                             qtdColocada = Math.round(volColocado / (i.VolUnit_cd3 || 1));
 
-                            // 🚨 TRAVA DE ERRO DE CUBAGEM (Anti-Caixa Fantasma)
-                            // Se a peça for maior que a caixa, força a entrar 1 peça
                             if (qtdColocada === 0 && volColocado > 0) {
                                 qtdColocada = qtdRestanteItem > 0 ? 1 : 0;
-                                volColocado = i.VolUnit_cd3; // Consome o volume gigante de uma vez
+                                volColocado = i.VolUnit_cd3; 
                             }
 
                             volRestanteItem -= volColocado;
                             qtdRestanteItem -= qtdColocada;
+                            
+                            // Acumula o volume final na caixa
+                            window.volumesPorCaixaFR[boxId] = (window.volumesPorCaixaFR[boxId] || 0) + volColocado;
+
                             numCaixaAtual++;
                             volAcumuladoExato = 0;
                         } else {
@@ -1801,35 +1827,31 @@
                             qtdColocada = qtdRestanteItem;
 
                             volAcumuladoExato += volColocado;
+                            window.volumesPorCaixaFR[boxId] = (window.volumesPorCaixaFR[boxId] || 0) + volColocado;
+                            
                             volRestanteItem = 0;
                             qtdRestanteItem = 0;
                         }
 
-                        // 🚨 SÓ ASSOCIA A CAIXA AOS KPIs SE ELA TIVER PELO MENOS 1 PEÇA FÍSICA
                         if (qtdColocada > 0) {
-                            // Associa a caixa ao SKU
                             window.globalCaixasTocadasPorSku[i.SKU].add(boxId);
 
-                            // Associa a caixa à ESTAÇÃO para contagem distinta no gráfico
                             if (!window.globalCaixasPorEstacao[i.Estacao]) {
                                 window.globalCaixasPorEstacao[i.Estacao] = new Set();
                             }
                             window.globalCaixasPorEstacao[i.Estacao].add(boxId);
 
-                            // Associa às macros zonas para os KPIs do topo
                             let stNum = parseInt(i.Estacao, 10);
                             if (i.Estacao === 'PC') cxsPC_Fisicas.add(boxId);
                             else if (!isNaN(stNum) && stNum < 8) cxsAG_Fisicas.add(boxId);
                             else if ((!isNaN(stNum) && stNum >= 8) || i.Estacao === 'PD' || i.Estacao === 'S.F') cxsBG_Fisicas.add(boxId);
 
-                            // Alimenta os KPIs de FERT e HAWA
                             if (window.getMaterial(i.SKU) === 'FERT') window.globalCxsFrFert.add(boxId);
                             else window.globalCxsFrHawa.add(boxId);
                         }
                     }
                 });
 
-                // Rateio da caixa (frações) para bater com os totalizadores do Dashboard
                 let totalCxsNoGrupo = numCaixaAtual; 
                 if (volAcumuladoExato === 0 && totalCxsNoGrupo > 1) {
                     totalCxsNoGrupo--; 
@@ -3210,7 +3232,7 @@
 
                     while(volRestanteItem > 0.001 && qtdRestanteItem > 0) {
                         let boxId = chave + "_CX" + numCaixaAtual;
-                        let espacoLivre = 24.061 - volAcumuladoExato;
+                        let espacoLivre = 26.06 - volAcumuladoExato; // NOVO LIMITE CX GDE
                         
                         let volColocado = 0;
                         let qtdColocada = 0;
@@ -3226,6 +3248,10 @@
                             
                             volRestanteItem -= volColocado;
                             qtdRestanteItem -= qtdColocada;
+                            
+                            // Acumula na simulação
+                            window.volumesPorCaixaFR[boxId] = (window.volumesPorCaixaFR[boxId] || 0) + volColocado;
+
                             numCaixaAtual++;
                             volAcumuladoExato = 0;
                         } else {
@@ -3233,11 +3259,12 @@
                             qtdColocada = qtdRestanteItem;
                             
                             volAcumuladoExato += volColocado;
+                            window.volumesPorCaixaFR[boxId] = (window.volumesPorCaixaFR[boxId] || 0) + volColocado;
+
                             volRestanteItem = 0;
                             qtdRestanteItem = 0;
                         }
 
-                        // SÓ EXIBE NO GRÁFICO SE EXISTIR PEÇA
                         if (qtdColocada > 0) {
                             if (cxsSimuladasPorEstacao[i.EstacaoSimulada]) {
                                 cxsSimuladasPorEstacao[i.EstacaoSimulada].add(boxId);
@@ -3333,10 +3360,21 @@
             // 🚀 REATIVIDADE DINÂMICA
             // =========================================================================
             try {
+                let simCxsPEQ = 0, simCxsMED = 0, simCxsGDE = 0;
+                cxsSimuladasUnicas.forEach(boxId => {
+                    let vFinal = window.volumesPorCaixaFR[boxId] || 0;
+                    if (vFinal <= 18.29) simCxsPEQ++;
+                    else if (vFinal <= 21.83) simCxsMED++;
+                    else simCxsGDE++;
+                });
+                
                 let atualizarKPI = (id, val) => { let el = document.getElementById(id); if (el) el.innerText = val; };
                 
-                atualizarKPI('kpiResFRCaixas', Math.ceil(totCxs).toLocaleString('pt-BR'));
-                atualizarKPI('kpiResFRDensidade', totCxs > 0 ? (totPcs / totCxs).toFixed(1) : "0.0");
+                // Atualiza o novo banner de embalagens
+                let painelEmb = document.getElementById('painelEmbalagens');
+                if(painelEmb) {
+                    painelEmb.innerHTML = `📦 <b style="color:#2f855a; margin-right: 4px;">PREVISÃO CXS:</b> ${formatarMilhar(simCxsPEQ)} PEQ &nbsp;|&nbsp; ${formatarMilhar(simCxsMED)} MED &nbsp;|&nbsp; ${formatarMilhar(simCxsGDE)} GDE`;
+                }
                 
                 let elGV = document.getElementById('kpiResGVCaixas');
                 let totCxsGV = elGV ? parseInt(elGV.innerText.replace(/\./g, ''), 10) || 0 : 0;
@@ -3837,7 +3875,7 @@ function copiarLinhaSharePoint() {
 
                 while(volRestanteItem > 0.001 && qtdRestanteItem > 0) {
                     let boxId = chave + "_CX" + numCaixaAtual;
-                    let espacoLivre = 24.061 - volAcumuladoExato; 
+                    let espacoLivre = 26.06 - volAcumuladoExato; 
                     
                     let volColocado = 0;
                     let qtdColocada = 0;
