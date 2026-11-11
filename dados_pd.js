@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "11/11/2026 18:00",
+  "atualizado_em": "11/11/2026 19:01",
   "taxa_abs": 10.3,
-  "total_faltas_mes": 376,
+  "total_faltas_mes": 377,
   "deficit": 16,
   "fi_dias": 116,
-  "fj_dias": 67,
+  "fj_dias": 68,
   "ferias": 14,
   "data_padrao_setor": "2026-11-11",
   "resumo_diario_map": {
@@ -994,7 +994,7 @@ window.dadosPD = {
       "data": [
         14.3,
         14.3,
-        12.5,
+        13.8,
         10.9,
         10.0,
         8.6,
@@ -1004,7 +1004,7 @@ window.dadosPD = {
       "absolutos": [
         2,
         14,
-        8,
+        9,
         6,
         6,
         6,
@@ -1043,26 +1043,26 @@ window.dadosPD = {
     },
     "2026-11-11_2": {
       "labels": [
+        "FECHAMENTO",
         "SEPARAÇÃO",
         "EXPEDICAO",
-        "FECHAMENTO",
         "REABASTECIMENTO",
         "INVENTARIO",
         "PLANEJAMENTO",
         "RECEBIMENTO"
       ],
       "data": [
+        13.6,
         10.9,
         10.5,
-        9.5,
         5.3,
         0.0,
         0.0,
         0.0
       ],
       "absolutos": [
+        3,
         6,
-        2,
         2,
         1,
         0,
@@ -1696,13 +1696,13 @@ window.dadosPD = {
       ],
       "data": [
         14.0,
-        10.1,
+        10.5,
         10.0,
         9.3
       ],
       "absolutos": [
         7,
-        26,
+        27,
         6,
         4
       ]
@@ -1731,20 +1731,20 @@ window.dadosPD = {
       "labels": [
         "AMERICA",
         "PACTUAL",
-        "MEET",
-        "CEVA"
+        "CEVA",
+        "MEET"
       ],
       "data": [
         13.0,
         11.8,
-        6.2,
-        5.9
+        7.0,
+        6.2
       ],
       "absolutos": [
         3,
         2,
-        1,
-        5
+        6,
+        1
       ]
     },
     "2026-11-11_3": {
@@ -3112,17 +3112,17 @@ window.dadosPD = {
       ],
       "data_abs": [
         23,
-        15,
+        16,
         9,
         4,
         1,
         1
       ],
       "data_cum": [
-        43.4,
-        71.7,
-        88.7,
-        96.2,
+        42.6,
+        72.2,
+        88.9,
+        96.3,
         98.1,
         100.0
       ]
@@ -3176,15 +3176,15 @@ window.dadosPD = {
       "data_abs": [
         6,
         4,
-        3,
+        4,
         1,
         1
       ],
       "data_cum": [
-        40.0,
-        66.7,
-        86.7,
-        93.3,
+        37.5,
+        62.5,
+        87.5,
+        93.8,
         100.0
       ]
     },
@@ -3243,7 +3243,7 @@ window.dadosPD = {
       ],
       "data_abs": [
         171,
-        101,
+        102,
         73,
         49,
         45
@@ -3298,7 +3298,7 @@ window.dadosPD = {
           null,
           11.7,
           8.5,
-          10.5,
+          10.7,
           null,
           null,
           null,
@@ -3375,7 +3375,7 @@ window.dadosPD = {
           null,
           47,
           27,
-          43,
+          44,
           null,
           null,
           null,
@@ -3417,7 +3417,7 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 106,
+      "faltas": 107,
       "taxa": 8.5
     }
   ],
@@ -3434,8 +3434,8 @@ window.dadosPD = {
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 63,
-      "taxa": 11.0
+      "faltas": 64,
+      "taxa": 11.1
     },
     {
       "setor": "EXPEDICAO",
@@ -3521,8 +3521,8 @@ window.dadosPD = {
     },
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
-      "faltas": 11,
-      "taxa": 6.0
+      "faltas": 12,
+      "taxa": 6.5
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
