@@ -1,12 +1,12 @@
 window.dadosPD = {
-  "atualizado_em": "10/11/2026 23:01",
+  "atualizado_em": "11/11/2026 00:00",
   "taxa_abs": 10.3,
   "total_faltas_mes": 333,
   "deficit": 13,
   "fi_dias": 105,
   "fj_dias": 61,
   "ferias": 14,
-  "data_padrao_setor": "2026-11-10",
+  "data_padrao_setor": "2026-11-11",
   "resumo_diario_map": {
     "2026-11-02": {
       "taxa_abs": 0,
@@ -65,6 +65,14 @@ window.dadosPD = {
       "ferias": 0
     },
     "2026-11-10": {
+      "taxa_abs": 0,
+      "faltas": 0,
+      "deficit": 0,
+      "fi": 0,
+      "fj": 0,
+      "ferias": 0
+    },
+    "2026-11-11": {
       "taxa_abs": 0,
       "faltas": 0,
       "deficit": 0,
@@ -971,6 +979,44 @@ window.dadosPD = {
         0,
         0
       ]
+    },
+    "2026-11-11_GERAL": {
+      "labels": [
+        "EXPEDICAO",
+        "REABASTECIMENTO"
+      ],
+      "data": [
+        0.0,
+        0.0
+      ],
+      "absolutos": [
+        0,
+        0
+      ]
+    },
+    "2026-11-11_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-11_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-11_3": {
+      "labels": [
+        "EXPEDICAO",
+        "REABASTECIMENTO"
+      ],
+      "data": [
+        0.0,
+        0.0
+      ],
+      "absolutos": [
+        0,
+        0
+      ]
     }
   },
   "grafico_empresa_map": {
@@ -1562,6 +1608,26 @@ window.dadosPD = {
         2,
         1
       ]
+    },
+    "2026-11-11_GERAL": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-11_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-11_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-11_3": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
     }
   },
   "grafico_pareto_map": {
@@ -2867,6 +2933,26 @@ window.dadosPD = {
         71.4,
         100.0
       ]
+    },
+    "2026-11-11_GERAL": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-11_1": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-11_2": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-11_3": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
     }
   },
   "grafico_pareto_mes_map": {
@@ -2945,7 +3031,7 @@ window.dadosPD = {
           null,
           11.7,
           8.5,
-          null,
+          0.0,
           null,
           null,
           null,
@@ -3022,7 +3108,7 @@ window.dadosPD = {
           null,
           47,
           27,
-          null,
+          0,
           null,
           null,
           null,
@@ -3198,9 +3284,6 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
-    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
-    "<strong style='color:#ffffff;'>T1</strong>: EDSON SANTOS CAMPOS",
-    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
-    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS"
+    "<strong style='color:#f6b93b;'>ATENÇÃO: O site falhou. Baseado no último histórico!</strong>"
   ]
 };
