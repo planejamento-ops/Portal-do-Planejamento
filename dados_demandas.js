@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "11/11/2026 08:27",
+  "atualizado_em": "11/11/2026 09:01",
   "ondas": [
     {
       "onda_atual": "VAREJO",
@@ -31660,7 +31660,7 @@ window.dadosDemandaWMS = {
       "onda_atual": "SPI",
       "data_onda": "2026-11-11",
       "aderencia_pcs_carteira": 67,
-      "aderencia_pcs_kit": 52,
+      "aderencia_pcs_kit": 85,
       "real_carteira": {
         "cxs": 30821,
         "pcs": 1444973,
@@ -32086,26 +32086,26 @@ window.dadosDemandaWMS = {
         }
       ],
       "real_kit": {
-        "cxs": 8692,
-        "pcs": 188637,
-        "tar": 4022,
+        "cxs": 8203,
+        "pcs": 82987,
+        "tar": 11025,
         "fr": {
-          "pcs": 15724,
-          "cxs": 795,
-          "pc_cx": 19.8,
-          "tar": 1454
+          "pcs": 33770,
+          "cxs": 3355,
+          "pc_cx": 10.1,
+          "tar": 7550
         },
         "gv": {
-          "pcs": 172913,
-          "cxs": 7897,
-          "pc_cx": 21.9,
-          "tar": 2568
+          "pcs": 49217,
+          "cxs": 4848,
+          "pc_cx": 10.2,
+          "tar": 3475
         },
         "pc": {
           "pcs": 0,
           "cxs": 0,
           "pc_cx": 0,
-          "tar": 11
+          "tar": 5
         }
       },
       "previa_kit": {
@@ -32131,38 +32131,43 @@ window.dadosDemandaWMS = {
           "tar": 5
         }
       },
-      "perfil_est_cx_rk": 1.8,
-      "perfil_skus_cx_rk": 1.8,
+      "perfil_est_cx_rk": 0.8,
+      "perfil_skus_cx_rk": 2.1,
       "todas_estacoes_real_kit": [
         {
-          "estacao": "37",
-          "cxs": 24.0,
-          "pcs": 55.0
+          "estacao": "09",
+          "cxs": 21.0,
+          "pcs": 63.0
         },
         {
-          "estacao": "39",
-          "cxs": 17.0,
-          "pcs": 36.0
+          "estacao": "21",
+          "cxs": 41.0,
+          "pcs": 205.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 1.0,
+          "pcs": 2.0
         },
         {
           "estacao": "41",
-          "cxs": 1.0,
-          "pcs": 1.0
+          "cxs": 932.0,
+          "pcs": 8503.0
         },
         {
           "estacao": "42",
-          "cxs": 436.0,
-          "pcs": 5720.0
+          "cxs": 1640.0,
+          "pcs": 12036.0
         },
         {
           "estacao": "43",
-          "cxs": 391.0,
-          "pcs": 3128.0
+          "cxs": 1310.0,
+          "pcs": 5424.0
         },
         {
           "estacao": "44",
-          "cxs": 648.0,
-          "pcs": 6784.0
+          "cxs": 1300.0,
+          "pcs": 7537.0
         }
       ],
       "perfil_est_cx_pk": 0.8,
