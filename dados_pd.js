@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "11/11/2026 08:00",
+  "atualizado_em": "11/11/2026 09:00",
   "taxa_abs": 10.4,
-  "total_faltas_mes": 362,
+  "total_faltas_mes": 363,
   "deficit": 15,
-  "fi_dias": 112,
+  "fi_dias": 113,
   "fj_dias": 66,
   "ferias": 14,
   "data_padrao_setor": "2026-11-11",
@@ -985,19 +985,22 @@ window.dadosPD = {
         "SEPARACAO",
         "FECHAMENTO",
         "REABASTECIMENTO",
-        "EXPEDICAO"
+        "EXPEDICAO",
+        "RECEBIMENTO"
       ],
       "data": [
         14.3,
         14.0,
         12.2,
-        7.8
+        7.8,
+        4.5
       ],
       "absolutos": [
         14,
         6,
         5,
-        4
+        4,
+        1
       ]
     },
     "2026-11-11_1": {
@@ -1005,19 +1008,22 @@ window.dadosPD = {
         "SEPARACAO",
         "FECHAMENTO",
         "REABASTECIMENTO",
-        "EXPEDICAO"
+        "EXPEDICAO",
+        "RECEBIMENTO"
       ],
       "data": [
         20.0,
         19.0,
         15.8,
-        8.3
+        8.3,
+        4.5
       ],
       "absolutos": [
         10,
         4,
         3,
-        2
+        2,
+        1
       ]
     },
     "2026-11-11_2": {
@@ -1644,14 +1650,14 @@ window.dadosPD = {
         "PACTUAL"
       ],
       "data": [
-        15.4,
-        13.0,
+        14.8,
+        12.0,
         11.4,
-        8.0
+        7.7
       ],
       "absolutos": [
         4,
-        18,
+        19,
         5,
         2
       ]
@@ -1659,21 +1665,21 @@ window.dadosPD = {
     "2026-11-11_1": {
       "labels": [
         "AMERICA",
-        "PACTUAL",
         "MEET",
+        "PACTUAL",
         "CEVA"
       ],
       "data": [
-        40.0,
-        18.2,
+        33.3,
         17.6,
-        14.8
+        16.7,
+        12.9
       ],
       "absolutos": [
         2,
-        2,
         3,
-        12
+        2,
+        13
       ]
     },
     "2026-11-11_2": {
@@ -3042,17 +3048,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        16,
+        17,
         10,
         5,
         3,
         1
       ],
       "data_cum": [
-        45.7,
-        74.3,
-        88.6,
-        97.1,
+        47.2,
+        75.0,
+        88.9,
+        97.2,
         100.0
       ]
     },
@@ -3072,15 +3078,15 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        12,
+        13,
         5,
         2,
         1
       ],
       "data_cum": [
-        60.0,
-        85.0,
-        95.0,
+        61.9,
+        85.7,
+        95.2,
         100.0
       ]
     },
@@ -3143,7 +3149,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        164,
+        165,
         96,
         69,
         49,
@@ -3199,7 +3205,7 @@ window.dadosPD = {
           null,
           11.7,
           8.5,
-          12.4,
+          11.8,
           null,
           null,
           null,
@@ -3276,7 +3282,7 @@ window.dadosPD = {
           null,
           47,
           27,
-          29,
+          30,
           null,
           null,
           null,
@@ -3313,8 +3319,8 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 117,
-      "taxa": 10.4
+      "faltas": 118,
+      "taxa": 10.3
     },
     {
       "turno": "2º Turno",
@@ -3344,14 +3350,14 @@ window.dadosPD = {
       "taxa": 10.6
     },
     {
+      "setor": "RECEBIMENTO",
+      "faltas": 24,
+      "taxa": 5.1
+    },
+    {
       "setor": "SEPARAÇÃO",
       "faltas": 24,
       "taxa": 22.4
-    },
-    {
-      "setor": "RECEBIMENTO",
-      "faltas": 23,
-      "taxa": 5.1
     },
     {
       "setor": "EXPEDIÇÃO",
@@ -3426,14 +3432,14 @@ window.dadosPD = {
       "taxa": 6.1
     },
     {
+      "lider": "MARCIO VINICIO AMANCIO JUNIOR",
+      "faltas": 10,
+      "taxa": 5.1
+    },
+    {
       "lider": "MARCONDES DOS SANTOS",
       "faltas": 10,
       "taxa": 7.6
-    },
-    {
-      "lider": "MARCIO VINICIO AMANCIO JUNIOR",
-      "faltas": 9,
-      "taxa": 5.1
     },
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
@@ -3453,7 +3459,6 @@ window.dadosPD = {
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T1</strong>: MARCIO VINICIO AMANCIO JUNIOR",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
