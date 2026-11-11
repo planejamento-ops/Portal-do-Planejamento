@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "11/11/2026 16:00",
+  "atualizado_em": "11/11/2026 17:01",
   "taxa_abs": 10.3,
   "total_faltas_mes": 369,
   "deficit": 16,
@@ -3539,6 +3539,8 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
+    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
     "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS"
   ]
 };
