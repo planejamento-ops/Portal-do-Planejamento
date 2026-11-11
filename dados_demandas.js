@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "11/11/2026 01:43",
+  "atualizado_em": "11/11/2026 02:17",
   "ondas": [
     {
       "onda_atual": "VAREJO",
@@ -30061,6 +30061,2757 @@ window.dadosDemandaWMS = {
     {
       "onda_atual": "MGI",
       "data_onda": "2026-11-10",
+      "aderencia_pcs_carteira": 49,
+      "aderencia_pcs_kit": 0,
+      "real_carteira": {
+        "cxs": 22011,
+        "pcs": 1243666,
+        "tar": 83744,
+        "fr": {
+          "pcs": 682767,
+          "cxs": 9803,
+          "pc_cx": 69.6,
+          "tar": 78886
+        },
+        "gv": {
+          "pcs": 560899,
+          "cxs": 12208,
+          "pc_cx": 45.9,
+          "tar": 4858
+        },
+        "pc": {
+          "pcs": 3946,
+          "cxs": 258,
+          "pc_cx": 15.3,
+          "tar": 14
+        }
+      },
+      "previa_carteira": {
+        "cxs": 17165,
+        "pcs": 610547,
+        "tar": 62459,
+        "fr": {
+          "pcs": 357155,
+          "cxs": 8176,
+          "pc_cx": 43.7,
+          "tar": 58040
+        },
+        "gv": {
+          "pcs": 253392,
+          "cxs": 8989,
+          "pc_cx": 28.2,
+          "tar": 4419
+        },
+        "pc": {
+          "pcs": 8003,
+          "cxs": 567,
+          "pc_cx": 14.1,
+          "tar": 11
+        }
+      },
+      "perfil_est_cx_rc": 1.3,
+      "perfil_skus_cx_rc": 7.1,
+      "todas_estacoes_real_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 1679.0,
+          "pcs": 79992.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 1417.0,
+          "pcs": 84965.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 322.0,
+          "pcs": 4897.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 400.0,
+          "pcs": 9834.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 385.0,
+          "pcs": 5360.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 263.0,
+          "pcs": 3839.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 420.0,
+          "pcs": 73635.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 400.0,
+          "pcs": 23043.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 400.0,
+          "pcs": 8071.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 394.0,
+          "pcs": 9930.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 402.0,
+          "pcs": 20031.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 543.0,
+          "pcs": 24029.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 537.0,
+          "pcs": 11845.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 627.0,
+          "pcs": 15370.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 589.0,
+          "pcs": 20797.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 684.0,
+          "pcs": 15573.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 735.0,
+          "pcs": 22227.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 730.0,
+          "pcs": 15722.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 633.0,
+          "pcs": 23205.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 606.0,
+          "pcs": 10941.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 548.0,
+          "pcs": 11489.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 632.0,
+          "pcs": 15277.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 642.0,
+          "pcs": 20624.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 742.0,
+          "pcs": 23111.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 808.0,
+          "pcs": 31298.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 669.0,
+          "pcs": 13735.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 608.0,
+          "pcs": 18189.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 618.0,
+          "pcs": 15080.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 627.0,
+          "pcs": 17140.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 198.0,
+          "pcs": 1737.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 497.0,
+          "pcs": 6814.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 684.0,
+          "pcs": 5102.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 553.0,
+          "pcs": 4482.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 617.0,
+          "pcs": 6762.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 258.0,
+          "pcs": 3946.0
+        },
+        {
+          "estacao": "PD",
+          "cxs": 1.0,
+          "pcs": 1.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 269.0,
+          "pcs": 4674.0
+        }
+      ],
+      "perfil_est_cx_pc": 1.5,
+      "perfil_skus_cx_pc": 7.1,
+      "todas_estacoes_previa_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 1232.0,
+          "pcs": 59328.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 1120.0,
+          "pcs": 46175.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 229.0,
+          "pcs": 3608.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 330.0,
+          "pcs": 4091.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 316.0,
+          "pcs": 2779.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 221.0,
+          "pcs": 2706.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 282.0,
+          "pcs": 6238.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 265.0,
+          "pcs": 4011.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 305.0,
+          "pcs": 5124.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 226.0,
+          "pcs": 1683.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 251.0,
+          "pcs": 3536.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 226.0,
+          "pcs": 2079.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 600.0,
+          "pcs": 12796.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 526.0,
+          "pcs": 9573.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 665.0,
+          "pcs": 10386.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 548.0,
+          "pcs": 7248.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 467.0,
+          "pcs": 6044.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 489.0,
+          "pcs": 6896.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 534.0,
+          "pcs": 12217.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 707.0,
+          "pcs": 15248.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 356.0,
+          "pcs": 4435.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 436.0,
+          "pcs": 7646.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 510.0,
+          "pcs": 9795.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 736.0,
+          "pcs": 16391.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 618.0,
+          "pcs": 13767.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 496.0,
+          "pcs": 7567.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 511.0,
+          "pcs": 9915.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 520.0,
+          "pcs": 9061.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 638.0,
+          "pcs": 15530.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 213.0,
+          "pcs": 1602.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 331.0,
+          "pcs": 4557.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 417.0,
+          "pcs": 5191.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 344.0,
+          "pcs": 3667.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 451.0,
+          "pcs": 4389.0
+        },
+        {
+          "estacao": "40",
+          "cxs": 57.0,
+          "pcs": 84.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 353.0,
+          "pcs": 2232.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 574.0,
+          "pcs": 3346.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 675.0,
+          "pcs": 3115.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 465.0,
+          "pcs": 2302.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 567.0,
+          "pcs": 8003.0
+        },
+        {
+          "estacao": "PD",
+          "cxs": 73.0,
+          "pcs": 543.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 250.0,
+          "pcs": 2251.0
+        }
+      ],
+      "real_kit": {
+        "cxs": 9260,
+        "pcs": 133047,
+        "tar": 8283,
+        "fr": {
+          "pcs": 26014,
+          "cxs": 2097,
+          "pc_cx": 12.4,
+          "tar": 4692
+        },
+        "gv": {
+          "pcs": 107033,
+          "cxs": 7163,
+          "pc_cx": 14.9,
+          "tar": 3591
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 6
+        }
+      },
+      "previa_kit": {
+        "cxs": 0,
+        "pcs": 0,
+        "tar": 0,
+        "fr": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "gv": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        }
+      },
+      "perfil_est_cx_rk": 0.6,
+      "perfil_skus_cx_rk": 2.1,
+      "todas_estacoes_real_kit": [
+        {
+          "estacao": "09",
+          "cxs": 8.0,
+          "pcs": 20.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 11.0,
+          "pcs": 33.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 523.0,
+          "pcs": 5118.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 997.0,
+          "pcs": 9340.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 783.0,
+          "pcs": 5678.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 703.0,
+          "pcs": 5825.0
+        }
+      ],
+      "perfil_est_cx_pk": 0,
+      "perfil_skus_cx_pk": 0,
+      "todas_estacoes_previa_kit": []
+    },
+    {
+      "onda_atual": "VAREJO",
+      "data_onda": "2026-11-11",
+      "aderencia_pcs_carteira": 68,
+      "aderencia_pcs_kit": 0,
+      "real_carteira": {
+        "cxs": 2139,
+        "pcs": 40567,
+        "tar": 20313,
+        "fr": {
+          "pcs": 38858,
+          "cxs": 2078,
+          "pc_cx": 18.7,
+          "tar": 20280
+        },
+        "gv": {
+          "pcs": 1709,
+          "cxs": 61,
+          "pc_cx": 28.0,
+          "tar": 33
+        },
+        "pc": {
+          "pcs": 199,
+          "cxs": 149,
+          "pc_cx": 1.3,
+          "tar": 4
+        }
+      },
+      "previa_carteira": {
+        "cxs": 1545,
+        "pcs": 27731,
+        "tar": 14743,
+        "fr": {
+          "pcs": 27360,
+          "cxs": 1526,
+          "pc_cx": 17.9,
+          "tar": 14727
+        },
+        "gv": {
+          "pcs": 371,
+          "cxs": 19,
+          "pc_cx": 19.5,
+          "tar": 16
+        },
+        "pc": {
+          "pcs": 329,
+          "cxs": 239,
+          "pc_cx": 1.4,
+          "tar": 4
+        }
+      },
+      "perfil_est_cx_rc": 7.8,
+      "perfil_skus_cx_rc": 9.6,
+      "todas_estacoes_real_carteira": [
+        {
+          "estacao": "08",
+          "cxs": 88.0,
+          "pcs": 120.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 60.0,
+          "pcs": 102.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 75.0,
+          "pcs": 120.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 104.0,
+          "pcs": 159.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 194.0,
+          "pcs": 371.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 117.0,
+          "pcs": 201.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 120.0,
+          "pcs": 198.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 109.0,
+          "pcs": 227.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 461.0,
+          "pcs": 1054.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 335.0,
+          "pcs": 499.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 279.0,
+          "pcs": 404.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 822.0,
+          "pcs": 2244.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 288.0,
+          "pcs": 411.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 268.0,
+          "pcs": 384.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 475.0,
+          "pcs": 786.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 1108.0,
+          "pcs": 1930.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 390.0,
+          "pcs": 645.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 372.0,
+          "pcs": 575.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 120.0,
+          "pcs": 193.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 312.0,
+          "pcs": 575.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 639.0,
+          "pcs": 1295.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 756.0,
+          "pcs": 1383.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 416.0,
+          "pcs": 687.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 846.0,
+          "pcs": 1363.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 421.0,
+          "pcs": 692.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 402.0,
+          "pcs": 676.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 887.0,
+          "pcs": 2196.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 1924.0,
+          "pcs": 9052.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 768.0,
+          "pcs": 2202.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 337.0,
+          "pcs": 921.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 631.0,
+          "pcs": 1386.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 1332.0,
+          "pcs": 4502.0
+        },
+        {
+          "estacao": "40",
+          "cxs": 25.0,
+          "pcs": 33.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 128.0,
+          "pcs": 206.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 178.0,
+          "pcs": 281.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 153.0,
+          "pcs": 280.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 198.0,
+          "pcs": 306.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 161.0,
+          "pcs": 199.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 22.0,
+          "pcs": 0.0
+        }
+      ],
+      "perfil_est_cx_pc": 6.1,
+      "perfil_skus_cx_pc": 9.7,
+      "todas_estacoes_previa_carteira": [
+        {
+          "estacao": "07",
+          "cxs": 1426.0,
+          "pcs": 13630.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 51.0,
+          "pcs": 95.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 61.0,
+          "pcs": 91.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 320.0,
+          "pcs": 696.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 126.0,
+          "pcs": 314.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 57.0,
+          "pcs": 99.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 62.0,
+          "pcs": 145.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 85.0,
+          "pcs": 201.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 69.0,
+          "pcs": 85.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 125.0,
+          "pcs": 238.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 59.0,
+          "pcs": 102.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 129.0,
+          "pcs": 170.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 162.0,
+          "pcs": 233.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 254.0,
+          "pcs": 331.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 490.0,
+          "pcs": 789.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 247.0,
+          "pcs": 419.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 237.0,
+          "pcs": 374.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 270.0,
+          "pcs": 382.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 230.0,
+          "pcs": 311.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 106.0,
+          "pcs": 233.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 280.0,
+          "pcs": 446.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 265.0,
+          "pcs": 384.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 253.0,
+          "pcs": 396.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 459.0,
+          "pcs": 1093.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 393.0,
+          "pcs": 602.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 382.0,
+          "pcs": 705.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 187.0,
+          "pcs": 494.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 268.0,
+          "pcs": 451.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 236.0,
+          "pcs": 471.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 218.0,
+          "pcs": 305.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 156.0,
+          "pcs": 324.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 221.0,
+          "pcs": 398.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 376.0,
+          "pcs": 766.0
+        },
+        {
+          "estacao": "40",
+          "cxs": 20.0,
+          "pcs": 21.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 151.0,
+          "pcs": 228.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 159.0,
+          "pcs": 268.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 169.0,
+          "pcs": 317.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 268.0,
+          "pcs": 424.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 236.0,
+          "pcs": 329.0
+        },
+        {
+          "estacao": "PD",
+          "cxs": 5.0,
+          "pcs": 0.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 102.0,
+          "pcs": 0.0
+        }
+      ],
+      "real_kit": {
+        "cxs": 0,
+        "pcs": 0,
+        "tar": 0,
+        "fr": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "gv": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        }
+      },
+      "previa_kit": {
+        "cxs": 0,
+        "pcs": 0,
+        "tar": 0,
+        "fr": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "gv": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        }
+      },
+      "perfil_est_cx_rk": 0,
+      "perfil_skus_cx_rk": 0,
+      "todas_estacoes_real_kit": [],
+      "perfil_est_cx_pk": 0,
+      "perfil_skus_cx_pk": 0,
+      "todas_estacoes_previa_kit": []
+    },
+    {
+      "onda_atual": "MGC",
+      "data_onda": "2026-11-11",
+      "aderencia_pcs_carteira": 91,
+      "aderencia_pcs_kit": 0,
+      "real_carteira": {
+        "cxs": 7512,
+        "pcs": 426333,
+        "tar": 28259,
+        "fr": {
+          "pcs": 211691,
+          "cxs": 3092,
+          "pc_cx": 68.5,
+          "tar": 26573
+        },
+        "gv": {
+          "pcs": 214642,
+          "cxs": 4420,
+          "pc_cx": 48.6,
+          "tar": 1686
+        },
+        "pc": {
+          "pcs": 1532,
+          "cxs": 93,
+          "pc_cx": 16.5,
+          "tar": 12
+        }
+      },
+      "previa_carteira": {
+        "cxs": 9859,
+        "pcs": 468972,
+        "tar": 28566,
+        "fr": {
+          "pcs": 222536,
+          "cxs": 3762,
+          "pc_cx": 59.2,
+          "tar": 26229
+        },
+        "gv": {
+          "pcs": 246436,
+          "cxs": 6097,
+          "pc_cx": 40.4,
+          "tar": 2337
+        },
+        "pc": {
+          "pcs": 1529,
+          "cxs": 94,
+          "pc_cx": 16.3,
+          "tar": 12
+        }
+      },
+      "perfil_est_cx_rc": 1.1,
+      "perfil_skus_cx_rc": 7.8,
+      "todas_estacoes_real_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 491.0,
+          "pcs": 23546.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 494.0,
+          "pcs": 26728.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 86.0,
+          "pcs": 1751.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 104.0,
+          "pcs": 3436.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 104.0,
+          "pcs": 2540.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 90.0,
+          "pcs": 930.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 121.0,
+          "pcs": 20627.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 108.0,
+          "pcs": 5562.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 105.0,
+          "pcs": 4315.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 110.0,
+          "pcs": 3876.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 111.0,
+          "pcs": 5762.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 150.0,
+          "pcs": 5621.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 152.0,
+          "pcs": 3499.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 183.0,
+          "pcs": 4411.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 175.0,
+          "pcs": 5835.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 223.0,
+          "pcs": 4719.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 230.0,
+          "pcs": 6607.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 191.0,
+          "pcs": 5005.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 176.0,
+          "pcs": 5410.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 191.0,
+          "pcs": 3572.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 139.0,
+          "pcs": 2996.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 185.0,
+          "pcs": 5305.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 189.0,
+          "pcs": 6242.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 219.0,
+          "pcs": 7280.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 218.0,
+          "pcs": 8386.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 172.0,
+          "pcs": 4691.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 177.0,
+          "pcs": 6669.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 204.0,
+          "pcs": 6030.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 212.0,
+          "pcs": 8530.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 84.0,
+          "pcs": 922.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 134.0,
+          "pcs": 2186.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 166.0,
+          "pcs": 2169.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 178.0,
+          "pcs": 2075.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 159.0,
+          "pcs": 2043.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 4.0,
+          "pcs": 80.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 93.0,
+          "pcs": 1532.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 150.0,
+          "pcs": 803.0
+        }
+      ],
+      "perfil_est_cx_pc": 1.0,
+      "perfil_skus_cx_pc": 7.0,
+      "todas_estacoes_previa_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 506.0,
+          "pcs": 24521.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 466.0,
+          "pcs": 26168.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 84.0,
+          "pcs": 1671.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 105.0,
+          "pcs": 3410.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 104.0,
+          "pcs": 2525.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 91.0,
+          "pcs": 977.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 123.0,
+          "pcs": 21271.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 106.0,
+          "pcs": 4882.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 105.0,
+          "pcs": 4169.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 113.0,
+          "pcs": 4168.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 111.0,
+          "pcs": 5672.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 139.0,
+          "pcs": 5104.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 161.0,
+          "pcs": 3801.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 185.0,
+          "pcs": 4777.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 168.0,
+          "pcs": 5865.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 202.0,
+          "pcs": 4447.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 237.0,
+          "pcs": 6474.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 186.0,
+          "pcs": 4843.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 178.0,
+          "pcs": 5379.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 177.0,
+          "pcs": 3366.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 137.0,
+          "pcs": 2270.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 191.0,
+          "pcs": 5054.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 179.0,
+          "pcs": 6038.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 197.0,
+          "pcs": 6643.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 247.0,
+          "pcs": 10448.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 173.0,
+          "pcs": 4384.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 224.0,
+          "pcs": 7030.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 201.0,
+          "pcs": 5939.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 206.0,
+          "pcs": 8664.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 31.0,
+          "pcs": 692.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 200.0,
+          "pcs": 3625.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 177.0,
+          "pcs": 2432.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 170.0,
+          "pcs": 2201.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 150.0,
+          "pcs": 1801.0
+        },
+        {
+          "estacao": "40",
+          "cxs": 76.0,
+          "pcs": 139.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 215.0,
+          "pcs": 1528.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 239.0,
+          "pcs": 2378.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 217.0,
+          "pcs": 1900.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 259.0,
+          "pcs": 2518.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 94.0,
+          "pcs": 1529.0
+        },
+        {
+          "estacao": "PD",
+          "cxs": 22.0,
+          "pcs": 272.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 117.0,
+          "pcs": 1561.0
+        }
+      ],
+      "real_kit": {
+        "cxs": 2387,
+        "pcs": 33472,
+        "tar": 2087,
+        "fr": {
+          "pcs": 6724,
+          "cxs": 531,
+          "pc_cx": 12.7,
+          "tar": 1214
+        },
+        "gv": {
+          "pcs": 26748,
+          "cxs": 1856,
+          "pc_cx": 14.4,
+          "tar": 873
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 6
+        }
+      },
+      "previa_kit": {
+        "cxs": 0,
+        "pcs": 0,
+        "tar": 0,
+        "fr": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "gv": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 0
+        }
+      },
+      "perfil_est_cx_rk": 0.7,
+      "perfil_skus_cx_rk": 2.2,
+      "todas_estacoes_real_kit": [
+        {
+          "estacao": "09",
+          "cxs": 9.0,
+          "pcs": 26.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 2.0,
+          "pcs": 4.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 134.0,
+          "pcs": 1276.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 229.0,
+          "pcs": 2255.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 200.0,
+          "pcs": 1293.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 208.0,
+          "pcs": 1745.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 30.0,
+          "pcs": 125.0
+        }
+      ],
+      "perfil_est_cx_pk": 0,
+      "perfil_skus_cx_pk": 0,
+      "todas_estacoes_previa_kit": []
+    },
+    {
+      "onda_atual": "SPI",
+      "data_onda": "2026-11-11",
+      "aderencia_pcs_carteira": 43,
+      "aderencia_pcs_kit": 52,
+      "real_carteira": {
+        "cxs": 21642,
+        "pcs": 929649,
+        "tar": 96333,
+        "fr": {
+          "pcs": 446327,
+          "cxs": 9923,
+          "pc_cx": 45.0,
+          "tar": 91952
+        },
+        "gv": {
+          "pcs": 483322,
+          "cxs": 11719,
+          "pc_cx": 41.2,
+          "tar": 4381
+        },
+        "pc": {
+          "pcs": 9394,
+          "cxs": 935,
+          "pc_cx": 10.0,
+          "tar": 9
+        }
+      },
+      "previa_carteira": {
+        "cxs": 37498,
+        "pcs": 2156443,
+        "tar": 151128,
+        "fr": {
+          "pcs": 1229524,
+          "cxs": 18131,
+          "pc_cx": 67.8,
+          "tar": 143586
+        },
+        "gv": {
+          "pcs": 926919,
+          "cxs": 19367,
+          "pc_cx": 47.9,
+          "tar": 7542
+        },
+        "pc": {
+          "pcs": 9359,
+          "cxs": 687,
+          "pc_cx": 13.6,
+          "tar": 14
+        }
+      },
+      "perfil_est_cx_rc": 1.9,
+      "perfil_skus_cx_rc": 8.6,
+      "todas_estacoes_real_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 2065.0,
+          "pcs": 70892.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 2582.0,
+          "pcs": 101182.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 438.0,
+          "pcs": 3820.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 445.0,
+          "pcs": 3342.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 493.0,
+          "pcs": 6378.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 438.0,
+          "pcs": 3361.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 467.0,
+          "pcs": 6214.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 450.0,
+          "pcs": 3128.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 523.0,
+          "pcs": 8136.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 551.0,
+          "pcs": 7597.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 438.0,
+          "pcs": 4094.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 343.0,
+          "pcs": 2686.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 727.0,
+          "pcs": 10217.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 748.0,
+          "pcs": 10391.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 771.0,
+          "pcs": 9815.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 763.0,
+          "pcs": 8304.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 856.0,
+          "pcs": 20175.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 808.0,
+          "pcs": 14190.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 747.0,
+          "pcs": 12043.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 749.0,
+          "pcs": 8526.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 513.0,
+          "pcs": 4045.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 732.0,
+          "pcs": 11167.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 751.0,
+          "pcs": 10489.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 746.0,
+          "pcs": 8751.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 805.0,
+          "pcs": 12666.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 811.0,
+          "pcs": 14281.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 749.0,
+          "pcs": 10399.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 751.0,
+          "pcs": 10417.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 941.0,
+          "pcs": 14604.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 237.0,
+          "pcs": 1869.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 428.0,
+          "pcs": 7275.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 611.0,
+          "pcs": 6205.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 464.0,
+          "pcs": 3357.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 516.0,
+          "pcs": 3914.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 1.0,
+          "pcs": 30.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 935.0,
+          "pcs": 9394.0
+        },
+        {
+          "estacao": "PD",
+          "cxs": 169.0,
+          "pcs": 228.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 599.0,
+          "pcs": 2745.0
+        }
+      ],
+      "perfil_est_cx_pc": 1.4,
+      "perfil_skus_cx_pc": 7.9,
+      "todas_estacoes_previa_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 3387.0,
+          "pcs": 164648.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 3099.0,
+          "pcs": 164820.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 482.0,
+          "pcs": 3242.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 592.0,
+          "pcs": 11635.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 610.0,
+          "pcs": 8236.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 511.0,
+          "pcs": 2902.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 807.0,
+          "pcs": 162160.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 785.0,
+          "pcs": 40064.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 659.0,
+          "pcs": 12167.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 536.0,
+          "pcs": 8872.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 724.0,
+          "pcs": 23554.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 791.0,
+          "pcs": 8394.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 1083.0,
+          "pcs": 21453.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 1287.0,
+          "pcs": 31309.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 1117.0,
+          "pcs": 32360.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 1292.0,
+          "pcs": 25702.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 1590.0,
+          "pcs": 36491.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 1244.0,
+          "pcs": 28923.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 1180.0,
+          "pcs": 33020.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 1259.0,
+          "pcs": 25258.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 829.0,
+          "pcs": 6509.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 1295.0,
+          "pcs": 33303.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 1282.0,
+          "pcs": 39780.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 1346.0,
+          "pcs": 36389.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 1631.0,
+          "pcs": 63092.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 1327.0,
+          "pcs": 37589.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 1177.0,
+          "pcs": 29185.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 1371.0,
+          "pcs": 38882.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 1329.0,
+          "pcs": 36127.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 240.0,
+          "pcs": 3174.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 955.0,
+          "pcs": 12109.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 550.0,
+          "pcs": 8419.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 1294.0,
+          "pcs": 13163.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 1200.0,
+          "pcs": 9819.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 17.0,
+          "pcs": 64.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 687.0,
+          "pcs": 9359.0
+        },
+        {
+          "estacao": "PD",
+          "cxs": 268.0,
+          "pcs": 1465.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 1080.0,
+          "pcs": 5886.0
+        }
+      ],
+      "real_kit": {
+        "cxs": 8692,
+        "pcs": 188637,
+        "tar": 4022,
+        "fr": {
+          "pcs": 15724,
+          "cxs": 795,
+          "pc_cx": 19.8,
+          "tar": 1454
+        },
+        "gv": {
+          "pcs": 172913,
+          "cxs": 7897,
+          "pc_cx": 21.9,
+          "tar": 2568
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 11
+        }
+      },
+      "previa_kit": {
+        "cxs": 10534,
+        "pcs": 97933,
+        "tar": 13979,
+        "fr": {
+          "pcs": 46781,
+          "cxs": 4912,
+          "pc_cx": 9.5,
+          "tar": 11097
+        },
+        "gv": {
+          "pcs": 51152,
+          "cxs": 5622,
+          "pc_cx": 9.1,
+          "tar": 2882
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 5
+        }
+      },
+      "perfil_est_cx_rk": 1.8,
+      "perfil_skus_cx_rk": 1.8,
+      "todas_estacoes_real_kit": [
+        {
+          "estacao": "37",
+          "cxs": 24.0,
+          "pcs": 55.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 17.0,
+          "pcs": 36.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 1.0,
+          "pcs": 1.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 436.0,
+          "pcs": 5720.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 391.0,
+          "pcs": 3128.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 648.0,
+          "pcs": 6784.0
+        }
+      ],
+      "perfil_est_cx_pk": 0.8,
+      "perfil_skus_cx_pk": 2.3,
+      "todas_estacoes_previa_kit": [
+        {
+          "estacao": "07",
+          "cxs": 3.0,
+          "pcs": 28.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 7.0,
+          "pcs": 11.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 549.0,
+          "pcs": 3424.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 1.0,
+          "pcs": 3.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 4.0,
+          "pcs": 24.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 887.0,
+          "pcs": 2265.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 4.0,
+          "pcs": 5.0
+        },
+        {
+          "estacao": "40",
+          "cxs": 310.0,
+          "pcs": 384.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 1324.0,
+          "pcs": 9147.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 1618.0,
+          "pcs": 11205.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 1573.0,
+          "pcs": 8051.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 1735.0,
+          "pcs": 12205.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 25.0,
+          "pcs": 29.0
+        }
+      ]
+    },
+    {
+      "onda_atual": "SPC",
+      "data_onda": "2026-11-11",
+      "aderencia_pcs_carteira": 99,
+      "aderencia_pcs_kit": 95,
+      "real_carteira": {
+        "cxs": 28997,
+        "pcs": 1467412,
+        "tar": 112431,
+        "fr": {
+          "pcs": 807713,
+          "cxs": 12009,
+          "pc_cx": 67.3,
+          "tar": 106512
+        },
+        "gv": {
+          "pcs": 659699,
+          "cxs": 16988,
+          "pc_cx": 38.8,
+          "tar": 5919
+        },
+        "pc": {
+          "pcs": 5769,
+          "cxs": 463,
+          "pc_cx": 12.5,
+          "tar": 12
+        }
+      },
+      "previa_carteira": {
+        "cxs": 28298,
+        "pcs": 1477680,
+        "tar": 103542,
+        "fr": {
+          "pcs": 814481,
+          "cxs": 11611,
+          "pc_cx": 70.1,
+          "tar": 97634
+        },
+        "gv": {
+          "pcs": 663199,
+          "cxs": 16687,
+          "pc_cx": 39.7,
+          "tar": 5908
+        },
+        "pc": {
+          "pcs": 7108,
+          "cxs": 495,
+          "pc_cx": 14.4,
+          "tar": 14
+        }
+      },
+      "perfil_est_cx_rc": 1.4,
+      "perfil_skus_cx_rc": 8.2,
+      "todas_estacoes_real_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 2108.0,
+          "pcs": 100019.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 1419.0,
+          "pcs": 81706.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 514.0,
+          "pcs": 10624.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 523.0,
+          "pcs": 8862.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 426.0,
+          "pcs": 5661.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 351.0,
+          "pcs": 3518.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 436.0,
+          "pcs": 5762.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 478.0,
+          "pcs": 24636.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 547.0,
+          "pcs": 14223.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 499.0,
+          "pcs": 12158.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 484.0,
+          "pcs": 20716.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 701.0,
+          "pcs": 105571.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 769.0,
+          "pcs": 19591.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 819.0,
+          "pcs": 18733.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 766.0,
+          "pcs": 19558.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 1123.0,
+          "pcs": 27989.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 787.0,
+          "pcs": 14021.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 846.0,
+          "pcs": 14407.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 947.0,
+          "pcs": 31766.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 1034.0,
+          "pcs": 22045.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 635.0,
+          "pcs": 6984.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 829.0,
+          "pcs": 13521.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 748.0,
+          "pcs": 13249.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 868.0,
+          "pcs": 24259.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 1050.0,
+          "pcs": 19074.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 999.0,
+          "pcs": 25160.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 790.0,
+          "pcs": 26482.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 856.0,
+          "pcs": 20220.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 893.0,
+          "pcs": 20479.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 485.0,
+          "pcs": 11845.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 600.0,
+          "pcs": 7390.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 805.0,
+          "pcs": 8276.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 354.0,
+          "pcs": 2515.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 891.0,
+          "pcs": 14130.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 6.0,
+          "pcs": 21.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 463.0,
+          "pcs": 5769.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 1379.0,
+          "pcs": 26773.0
+        }
+      ],
+      "perfil_est_cx_pc": 1.5,
+      "perfil_skus_cx_pc": 8.4,
+      "todas_estacoes_previa_carteira": [
+        {
+          "estacao": "04",
+          "cxs": 1902.0,
+          "pcs": 94293.0
+        },
+        {
+          "estacao": "07",
+          "cxs": 1459.0,
+          "pcs": 83705.0
+        },
+        {
+          "estacao": "08",
+          "cxs": 508.0,
+          "pcs": 8849.0
+        },
+        {
+          "estacao": "09",
+          "cxs": 519.0,
+          "pcs": 8886.0
+        },
+        {
+          "estacao": "10",
+          "cxs": 420.0,
+          "pcs": 4576.0
+        },
+        {
+          "estacao": "11",
+          "cxs": 416.0,
+          "pcs": 4307.0
+        },
+        {
+          "estacao": "12",
+          "cxs": 361.0,
+          "pcs": 5274.0
+        },
+        {
+          "estacao": "13",
+          "cxs": 473.0,
+          "pcs": 24247.0
+        },
+        {
+          "estacao": "14",
+          "cxs": 549.0,
+          "pcs": 16896.0
+        },
+        {
+          "estacao": "15",
+          "cxs": 488.0,
+          "pcs": 11972.0
+        },
+        {
+          "estacao": "16",
+          "cxs": 501.0,
+          "pcs": 22130.0
+        },
+        {
+          "estacao": "17",
+          "cxs": 730.0,
+          "pcs": 106713.0
+        },
+        {
+          "estacao": "18",
+          "cxs": 827.0,
+          "pcs": 23074.0
+        },
+        {
+          "estacao": "19",
+          "cxs": 871.0,
+          "pcs": 22374.0
+        },
+        {
+          "estacao": "20",
+          "cxs": 771.0,
+          "pcs": 19982.0
+        },
+        {
+          "estacao": "21",
+          "cxs": 1212.0,
+          "pcs": 31754.0
+        },
+        {
+          "estacao": "22",
+          "cxs": 837.0,
+          "pcs": 15005.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 826.0,
+          "pcs": 13500.0
+        },
+        {
+          "estacao": "24",
+          "cxs": 903.0,
+          "pcs": 29893.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 882.0,
+          "pcs": 17207.0
+        },
+        {
+          "estacao": "26",
+          "cxs": 647.0,
+          "pcs": 7172.0
+        },
+        {
+          "estacao": "27",
+          "cxs": 822.0,
+          "pcs": 14244.0
+        },
+        {
+          "estacao": "28",
+          "cxs": 709.0,
+          "pcs": 12306.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 921.0,
+          "pcs": 26751.0
+        },
+        {
+          "estacao": "30",
+          "cxs": 1119.0,
+          "pcs": 26623.0
+        },
+        {
+          "estacao": "31",
+          "cxs": 859.0,
+          "pcs": 20887.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 805.0,
+          "pcs": 25391.0
+        },
+        {
+          "estacao": "33",
+          "cxs": 855.0,
+          "pcs": 22433.0
+        },
+        {
+          "estacao": "34",
+          "cxs": 876.0,
+          "pcs": 18708.0
+        },
+        {
+          "estacao": "35",
+          "cxs": 336.0,
+          "pcs": 10872.0
+        },
+        {
+          "estacao": "36",
+          "cxs": 582.0,
+          "pcs": 7578.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 597.0,
+          "pcs": 6274.0
+        },
+        {
+          "estacao": "38",
+          "cxs": 335.0,
+          "pcs": 2668.0
+        },
+        {
+          "estacao": "39",
+          "cxs": 839.0,
+          "pcs": 11904.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 8.0,
+          "pcs": 21.0
+        },
+        {
+          "estacao": "PC",
+          "cxs": 495.0,
+          "pcs": 7108.0
+        },
+        {
+          "estacao": "PD",
+          "cxs": 77.0,
+          "pcs": 1042.0
+        },
+        {
+          "estacao": "SF",
+          "cxs": 1388.0,
+          "pcs": 27862.0
+        }
+      ],
+      "real_kit": {
+        "cxs": 13536,
+        "pcs": 137181,
+        "tar": 11943,
+        "fr": {
+          "pcs": 32582,
+          "cxs": 2984,
+          "pc_cx": 10.9,
+          "tar": 6414
+        },
+        "gv": {
+          "pcs": 104599,
+          "cxs": 10552,
+          "pc_cx": 9.9,
+          "tar": 5529
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 6
+        }
+      },
+      "previa_kit": {
+        "cxs": 13233,
+        "pcs": 130184,
+        "tar": 13177,
+        "fr": {
+          "pcs": 40655,
+          "cxs": 4005,
+          "pc_cx": 10.2,
+          "tar": 8552
+        },
+        "gv": {
+          "pcs": 89529,
+          "cxs": 9228,
+          "pc_cx": 9.7,
+          "tar": 4625
+        },
+        "pc": {
+          "pcs": 0,
+          "cxs": 0,
+          "pc_cx": 0,
+          "tar": 5
+        }
+      },
+      "perfil_est_cx_rk": 0.7,
+      "perfil_skus_cx_rk": 2.0,
+      "todas_estacoes_real_kit": [
+        {
+          "estacao": "37",
+          "cxs": 9.0,
+          "pcs": 25.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 866.0,
+          "pcs": 8673.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 1365.0,
+          "pcs": 10759.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 1058.0,
+          "pcs": 5715.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 1070.0,
+          "pcs": 7410.0
+        }
+      ],
+      "perfil_est_cx_pk": 0.7,
+      "perfil_skus_cx_pk": 2.1,
+      "todas_estacoes_previa_kit": [
+        {
+          "estacao": "07",
+          "cxs": 5.0,
+          "pcs": 12.0
+        },
+        {
+          "estacao": "23",
+          "cxs": 1.0,
+          "pcs": 1.0
+        },
+        {
+          "estacao": "25",
+          "cxs": 106.0,
+          "pcs": 355.0
+        },
+        {
+          "estacao": "29",
+          "cxs": 4.0,
+          "pcs": 6.0
+        },
+        {
+          "estacao": "32",
+          "cxs": 243.0,
+          "pcs": 1051.0
+        },
+        {
+          "estacao": "37",
+          "cxs": 418.0,
+          "pcs": 1250.0
+        },
+        {
+          "estacao": "40",
+          "cxs": 410.0,
+          "pcs": 1004.0
+        },
+        {
+          "estacao": "41",
+          "cxs": 1100.0,
+          "pcs": 8754.0
+        },
+        {
+          "estacao": "42",
+          "cxs": 1313.0,
+          "pcs": 10044.0
+        },
+        {
+          "estacao": "43",
+          "cxs": 1131.0,
+          "pcs": 6520.0
+        },
+        {
+          "estacao": "44",
+          "cxs": 1417.0,
+          "pcs": 11658.0
+        }
+      ]
+    },
+    {
+      "onda_atual": "MGI",
+      "data_onda": "2026-11-11",
       "aderencia_pcs_carteira": 49,
       "aderencia_pcs_kit": 0,
       "real_carteira": {
