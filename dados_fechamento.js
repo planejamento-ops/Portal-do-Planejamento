@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "11/11/2026 11:52",
+  "atualizado_em": "11/11/2026 12:26",
   "progresso_geral_pct": 95,
   "total_cxs_geral": 115787,
   "total_loaded_cxs_geral": 110103,
@@ -52,17 +52,6 @@ window.dadosFechamento = {
     }
   },
   "tabela": [
-    {
-      "atendimento": "SPC",
-      "carreta": "Carreta  10",
-      "tu": "610000013442",
-      "total_caixas": 2081,
-      "caixas_carregadas": 2081,
-      "caixas_rampa": 0,
-      "caixas_processadas": 2081,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
     {
       "atendimento": "SPC",
       "carreta": "Carreta  23",
