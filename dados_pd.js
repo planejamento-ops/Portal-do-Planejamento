@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "12/11/2026 15:02",
+  "atualizado_em": "12/11/2026 16:02",
   "taxa_abs": 10.2,
   "total_faltas_mes": 406,
   "deficit": 18,
@@ -3852,5 +3852,7 @@ window.dadosPD = {
       "taxa": 25.0
     }
   ],
-  "alertas_pendentes": []
+  "alertas_pendentes": [
+    "<strong style='color:#f6b93b;'>ATENÇÃO: O site falhou. Baseado no último histórico!</strong>"
+  ]
 };
