@@ -149,7 +149,7 @@
                 <button class="btn-excel" onclick="exportExcel('AG07xBG', event)" title="Baixar Excel">📊</button>
                 <div class="card-title">AG07 x BG<br><small>(Mod 07 vs Corredor)</small></div>
                 <span id="val-ag07bg">0</span>
-                <div id="badge-ag07-com-bg" class="badge-alert" style="display: none;">⚠️ <span id="val-ag07-com-bg-count">0</span> SKUs com Erro (No BG)</div>
+                <div id="badge-ag07-sem-bg" class="badge-alert" style="display: none;">⚠️ <span id="val-ag07-sem-bg-count">0</span> SKUs sem BG</div>
             </div>
         </div>
 
@@ -199,7 +199,7 @@
 </div>
 
 <script>
-    window.appData = { master: [], auditorias: {}, mistas: [], ag04SemBg: [], ag07ComBg: [] };
+    window.appData = { master: [], auditorias: {}, mistas: [], ag04SemBg: [], ag07SemBg: [], agAmbos: [] };
 
     function parseExcelDate(dateVal) {
         if (!dateVal) return new Date(0);
@@ -256,14 +256,23 @@
             }));
             filename = `Alerta_AG04_Sem_Fixo_BG_${dateSuffix}.xlsx`;
         }
-        else if (tipo === 'AG07_COM_BG') {
-            dataToExport = window.appData.ag07ComBg.map(d => ({
+        else if (tipo === 'AG07_SEM_BG') {
+            dataToExport = window.appData.ag07SemBg.map(d => ({
                 "Produto": d['Produto'],
-                "Posição AG07 (Mantida)": d['Posição no depósito'],
+                "Posição AG07 (Ativa)": d['Posição no depósito'],
                 "Qtd Máx": d['Quantidade máxima'],
                 "Autor": d['Autor'] || 'SISTEMA'
             }));
-            filename = `Alerta_AG07_Com_Fixo_Irregular_BG_${dateSuffix}.xlsx`;
+            filename = `Alerta_AG07_Sem_Fixo_BG_${dateSuffix}.xlsx`;
+        }
+        else if (tipo === 'M04_x_M07_CRITICO') {
+            dataToExport = window.appData.agAmbos.map(d => ({
+                "Produto": d.Produto,
+                "Posição AG04": d.PosAG04,
+                "Posição AG07": d.PosAG07,
+                "Autor": d.Autor
+            }));
+            filename = `Alerta_Conflito_AG04_AG07_${dateSuffix}.xlsx`;
         }
         else if (tipo === 'MASTER') {
             dataToExport = window.appData.master.map(d => {
@@ -295,6 +304,9 @@
         XLSX.writeFile(wb, filename);
     }
 
+    // ==========================================
+    // CLASSIFICADOR DE POSIÇÕES ORIGINAL DO APLICATIVO.HTML
+    // ==========================================
     function getTipoPosicao(posName, qtyMax) {
         posName = posName.toUpperCase();
         if (posName.startsWith('PD-')) return 'PD';
@@ -331,6 +343,46 @@
                 html += '</tbody></table>';
             }
         } 
+        else if (tipo === 'M04xM07') {
+            let dados = window.appData.auditorias[tipo] || [];
+            if (dados.length === 0) {
+                html += `<p style="text-align:center; padding: 20px; color: #7f8c8d;">Nenhuma posição duplicada removida na categoria <b>${tipo}</b>.</p>`;
+            } else {
+                html += '<h3>🧹 Posições de Alto Giro que foram Expurgadas</h3>';
+                html += '<table class="detail-table"><thead><tr><th>Produto</th><th>Posição Removida (Lixo)</th><th>Autor</th><th>Qtd Máx</th><th>Data Modificação</th></tr></thead><tbody>';
+                dados.forEach(d => {
+                    let dStr = d._parsedDate ? d._parsedDate.toLocaleDateString('pt-BR') : '';
+                    let qty = d['Quantidade máxima'] !== undefined ? d['Quantidade máxima'] : '';
+                    let prodStr = d['Produto'] || '';
+                    let posStr = d['Posição no depósito'] || '';
+                    
+                    html += `<tr>
+                                <td><b>${prodStr}</b> <button class="btn-copy" onclick="copyText(this, '${prodStr}')" title="Copiar Produto">📋</button></td>
+                                <td style="color:#c0392b;">${posStr} <button class="btn-copy" onclick="copyText(this, '${posStr}')" title="Copiar Posição">📋</button></td>
+                                <td>${d['Autor']||'-'}</td>
+                                <td>${qty}</td>
+                                <td>${dStr}</td>
+                             </tr>`;
+                });
+                html += '</tbody></table>';
+            }
+
+            let dadosAmbos = window.appData.agAmbos || [];
+            if (dadosAmbos.length > 0) {
+                html += `<h3 style="margin-top:35px; color:#c0392b; border-bottom: 2px solid #e74c3c; padding-bottom:5px;">⚠️ ALERTA CRÍTICO: Itens em AMBOS os Altos Giros (04 e 07)</h3>`;
+                html += '<p style="font-size: 13px; color: #555; margin-bottom: 10px;">Os SKUs abaixo estão alocados nos Módulos 04 e 07 simultaneamente. Isso é uma inconsistência grave e proibida.</p>';
+                html += '<table class="detail-table"><thead><tr><th>Produto</th><th>Posição AG04</th><th>Posição AG07</th><th>Autor</th></tr></thead><tbody>';
+                dadosAmbos.forEach(d => {
+                    html += `<tr>
+                                <td><b>${d.Produto}</b> <button class="btn-copy" onclick="copyText(this, '${d.Produto}')" title="Copiar Produto">📋</button></td>
+                                <td style="color:#e67e22;">${d.PosAG04} <button class="btn-copy" onclick="copyText(this, '${d.PosAG04}')" title="Copiar Posição">📋</button></td>
+                                <td style="color:#e67e22;">${d.PosAG07} <button class="btn-copy" onclick="copyText(this, '${d.PosAG07}')" title="Copiar Posição">📋</button></td>
+                                <td>${d.Autor}</td>
+                             </tr>`;
+                });
+                html += '</tbody></table>';
+            }
+        }
         else if (tipo === 'AG04xBG') {
             let dados = window.appData.auditorias[tipo] || [];
             if (dados.length === 0) {
@@ -358,7 +410,7 @@
             let dadosSemBg = window.appData.ag04SemBg || [];
             if (dadosSemBg.length > 0) {
                 html += `<h3 style="margin-top:35px; color:#c0392b; border-bottom: 2px solid #e74c3c; padding-bottom:5px;">⚠️ ALERTA: Itens de AG04 S/ Fixo de Baixo Giro</h3>`;
-                html += '<p style="font-size: 13px; color: #555; margin-bottom: 10px;">Os SKUs abaixo estão no Módulo 04, mas não têm posição de ressuprimento no Corredor.</p>';
+                html += '<p style="font-size: 13px; color: #555; margin-bottom: 10px;">Os SKUs abaixo estão no Módulo 04, mas não têm posição de ressuprimento no Corredor (BG ou PC).</p>';
                 html += '<table class="detail-table"><thead><tr><th>Produto</th><th>Posição AG04 (Ativa)</th><th>Qtd Máx</th><th>Autor</th></tr></thead><tbody>';
                 dadosSemBg.forEach(d => {
                     let qty = d['Quantidade máxima'] !== undefined ? d['Quantidade máxima'] : '';
@@ -399,12 +451,12 @@
                 html += '</tbody></table>';
             }
 
-            let dadosComBg = window.appData.ag07ComBg || [];
-            if (dadosComBg.length > 0) {
-                html += `<h3 style="margin-top:35px; color:#c0392b; border-bottom: 2px solid #e74c3c; padding-bottom:5px;">⚠️ ALERTA CRÍTICO: Itens de AG07 COM Fixo no Corredor</h3>`;
-                html += '<p style="font-size: 13px; color: #555; margin-bottom: 10px;">Os SKUs abaixo são do Módulo 07 e possuem endereços duplicados irregularmente no BG.</p>';
-                html += '<table class="detail-table"><thead><tr><th>Produto</th><th>Posição AG07 (Matriz)</th><th>Qtd Máx</th><th>Autor</th></tr></thead><tbody>';
-                dadosComBg.forEach(d => {
+            let dadosSemBg = window.appData.ag07SemBg || [];
+            if (dadosSemBg.length > 0) {
+                html += `<h3 style="margin-top:35px; color:#c0392b; border-bottom: 2px solid #e74c3c; padding-bottom:5px;">⚠️ ALERTA: Itens de AG07 S/ Fixo de Baixo Giro</h3>`;
+                html += '<p style="font-size: 13px; color: #555; margin-bottom: 10px;">Os SKUs abaixo estão no Módulo 07, mas não têm posição de ressuprimento no Corredor (BG ou PC).</p>';
+                html += '<table class="detail-table"><thead><tr><th>Produto</th><th>Posição AG07 (Ativa)</th><th>Qtd Máx</th><th>Autor</th></tr></thead><tbody>';
+                dadosSemBg.forEach(d => {
                     let qty = d['Quantidade máxima'] !== undefined ? d['Quantidade máxima'] : '';
                     let prodStr = d['Produto'] || '';
                     let posStr = d['Posição no depósito'] || '';
@@ -471,6 +523,7 @@
 
                 if (jsonData.length === 0) throw new Error("Arquivo vazio.");
 
+                // A CLASSIFICAÇÃO AQUI VOLTOU A SER 100% A DO ARQUIVO ORIGINAL
                 jsonData.forEach(row => {
                     const pos = String(row['Posição no depósito'] || '').trim();
                     const qty = parseFloat(row['Quantidade máxima']) || 0;
@@ -480,9 +533,7 @@
 
                 jsonData.sort((a, b) => b._parsedDate - a._parsedDate);
 
-                // =========================================================
-                // LÓGICA DE SEGURANÇA MÁXIMA PARA POSIÇÕES MISTAS
-                // =========================================================
+                // NOVA LÓGICA DE SEGURANÇA MÁXIMA PARA POSIÇÕES MISTAS (MANTIDA)
                 const posicoesRaw = {};
                 
                 jsonData.forEach(row => {
@@ -492,7 +543,7 @@
                     let dStr = row._parsedDate ? row._parsedDate.toLocaleDateString('pt-BR') : '-';
                     
                     if (prod !== undefined && prod !== null) {
-                        prod = String(prod).replace(/\.0$/, '').trim(); // Limpa formatações decimais do Excel
+                        prod = String(prod).replace(/\.0$/, '').trim(); 
                         
                         if (pos !== '' && prod !== '' && prod !== 'UNDEFINED' && prod !== 'SEM_PRODUTO') {
                             if (!posicoesRaw[pos]) {
@@ -518,9 +569,9 @@
                         });
                         return { pos, prods, autores, datas };
                     });
-                // =========================================================
 
 
+                // AGRUPAMENTO PADRÃO
                 const gruposProdutos = {};
                 jsonData.forEach(row => {
                     const prod = row['Produto'] || 'SEM_PRODUTO';
@@ -532,24 +583,37 @@
                 let auditorias = { 'M04xM07': [], 'AGxAG': [], 'AG04xBG': [], 'AG07xBG': [], 'PCxPC': [], 'BGxBG': [], 'PCxBG': [], 'BGxPD': [], 'PCxPD': [], 'PDxPD': [], 'OUTROS': [] };
                 
                 let ag04SemBg = []; 
-                let ag07ComBg = []; 
+                let ag07SemBg = []; 
+                let agAmbos = []; 
 
                 Object.values(gruposProdutos).forEach(grupo => {
-                    // --- REGRAS DE ALERTA INDIVIDUAIS (LÓGICA LIMPA AG04) ---
+                    // VERIFICAÇÃO ORIGINAL DE PRESENÇA NO GRUPO
                     let hasAG04 = grupo.some(r => r._tipoPosicao === 'AG04');
                     let hasAG07 = grupo.some(r => r._tipoPosicao === 'AG07');
                     let hasBG = grupo.some(r => r._tipoPosicao === 'BG' || r._tipoPosicao === 'PC'); 
 
-                    // Alerta 1: AG04 sem Baixo Giro (Removido alerta de BG isolado)
+                    // ALERTA NOVO: Conflito Crítico
+                    if (hasAG04 && hasAG07) {
+                        let r04 = grupo.find(r => r._tipoPosicao === 'AG04');
+                        let r07 = grupo.find(r => r._tipoPosicao === 'AG07');
+                        agAmbos.push({
+                            Produto: r04['Produto'],
+                            PosAG04: r04['Posição no depósito'],
+                            PosAG07: r07['Posição no depósito'],
+                            Autor: r04['Autor'] || r07['Autor'] || '-'
+                        });
+                    }
+
+                    // ALERTA ORIGINAL: AG04 sem Baixo Giro
                     if (hasAG04 && !hasBG) {
                         let ag04Record = grupo.find(r => r._tipoPosicao === 'AG04');
                         ag04SemBg.push(ag04Record);
                     }
 
-                    // Alerta 2: AG07 COM Baixo Giro (Proibido)
-                    if (hasAG07 && hasBG) {
+                    // ALERTA AG07 (Espelhado do AG04, a seu pedido)
+                    if (hasAG07 && !hasBG) {
                         let ag07Record = grupo.find(r => r._tipoPosicao === 'AG07');
-                        ag07ComBg.push(ag07Record);
+                        ag07SemBg.push(ag07Record);
                     }
                     // ------------------------------------
 
@@ -559,8 +623,9 @@
                                   grupo.find(r => r._tipoPosicao === 'PC' || r._tipoPosicao === 'BG') || 
                                   grupo.find(r => r._tipoPosicao === 'PD') || grupo[0];
                     } else {
-                        mantida = grupo.find(r => r._tipoPosicao === 'PC' || r._tipoPosicao === 'BG') || 
-                                  grupo.find(r => r._tipoPosicao === 'AG04' || r._tipoPosicao === 'AG07') || 
+                        mantida = grupo.find(r => r._tipoPosicao === 'AG07') || 
+                                  grupo.find(r => r._tipoPosicao === 'PC' || r._tipoPosicao === 'BG') || 
+                                  grupo.find(r => r._tipoPosicao === 'AG04') || 
                                   grupo.find(r => r._tipoPosicao === 'PD') || grupo[0];
                     }
 
@@ -574,16 +639,18 @@
                         let isAG04 = p1 === 'AG04' || p2 === 'AG04';
                         let isAG07 = p1 === 'AG07' || p2 === 'AG07';
                         let isBGorPC = p1 === 'BG' || p1 === 'PC' || p2 === 'BG' || p2 === 'PC';
+                        let isPureBG = p1 === 'BG' && p2 === 'BG';
 
                         if (pair.includes('AG04') && pair.includes('AG07')) auditorias['M04xM07'].push(removida);
                         else if ((p1 === 'AG04' && p2 === 'AG04') || (p1 === 'AG07' && p2 === 'AG07')) auditorias['AGxAG'].push(removida);
                         
-                        // Direcionando os conflitos BG para a lixeira correta do módulo
                         else if (isAG04 && isBGorPC) auditorias['AG04xBG'].push(removida);
                         else if (isAG07 && isBGorPC) auditorias['AG07xBG'].push(removida);
                         
                         else if (pair[0] === 'PC' && pair[1] === 'PC') auditorias['PCxPC'].push(removida);
-                        else if (pair[0] === 'BG' && pair[1] === 'BG') auditorias['BGxBG'].push(removida);
+                        
+                        else if (isPureBG) auditorias['BGxBG'].push(removida);
+                        
                         else if (pair.includes('PC') && pair.includes('BG')) auditorias['PCxBG'].push(removida);
                         else if (pair.includes('BG') && pair.includes('PD')) auditorias['BGxPD'].push(removida);
                         else if (pair.includes('PC') && pair.includes('PD')) auditorias['PCxPD'].push(removida);
@@ -597,7 +664,8 @@
                 window.appData.master = masterData;
                 window.appData.auditorias = auditorias;
                 window.appData.ag04SemBg = ag04SemBg;
-                window.appData.ag07ComBg = ag07ComBg;
+                window.appData.ag07SemBg = ag07SemBg;
+                window.appData.agAmbos = agAmbos;
 
                 // Interface e Contagens
                 const posMistas = window.appData.mistas.length;
@@ -607,21 +675,19 @@
 
                 document.getElementById('val-master').innerText = `${masterData.length} (${((masterData.length/jsonData.length)*100).toFixed(1)}%)`;
                 
-                // Setando as contagens do Alto Giro
                 document.getElementById('val-m04m07').innerText = auditorias['M04xM07'].length;
                 document.getElementById('val-agag').innerText = auditorias['AGxAG'].length;
                 document.getElementById('val-ag04bg').innerText = auditorias['AG04xBG'].length;
                 document.getElementById('val-ag07bg').innerText = auditorias['AG07xBG'].length;
                 
                 // Tratando Badge: M04 x M07
-                if (auditorias['M04xM07'].length > 0) {
+                if (agAmbos.length > 0) {
                     document.getElementById('badge-m04m07').style.display = 'inline-block';
-                    document.getElementById('val-m04m07-count').innerText = auditorias['M04xM07'].length;
+                    document.getElementById('val-m04m07-count').innerText = agAmbos.length;
                 } else {
                     document.getElementById('badge-m04m07').style.display = 'none';
                 }
 
-                // Tratando Badge: AG x AG
                 if (auditorias['AGxAG'].length > 0) {
                     document.getElementById('badge-agag').style.display = 'inline-block';
                     document.getElementById('val-agag-count').innerText = auditorias['AGxAG'].length;
@@ -629,7 +695,6 @@
                     document.getElementById('badge-agag').style.display = 'none';
                 }
 
-                // Tratando Badge: AG04 Sem BG
                 if (ag04SemBg.length > 0) {
                     document.getElementById('badge-ag04-sem-bg').style.display = 'inline-block';
                     document.getElementById('val-ag04-sem-bg-count').innerText = ag04SemBg.length;
@@ -637,15 +702,13 @@
                     document.getElementById('badge-ag04-sem-bg').style.display = 'none';
                 }
 
-                // Tratando Badge: AG07 Com BG
-                if (ag07ComBg.length > 0) {
-                    document.getElementById('badge-ag07-com-bg').style.display = 'inline-block';
-                    document.getElementById('val-ag07-com-bg-count').innerText = ag07ComBg.length;
+                if (ag07SemBg.length > 0) {
+                    document.getElementById('badge-ag07-sem-bg').style.display = 'inline-block';
+                    document.getElementById('val-ag07-sem-bg-count').innerText = ag07SemBg.length;
                 } else {
-                    document.getElementById('badge-ag07-com-bg').style.display = 'none';
+                    document.getElementById('badge-ag07-sem-bg').style.display = 'none';
                 }
                 
-                // Setando as contagens de Baixo Giro
                 document.getElementById('val-pcpc').innerText = auditorias['PCxPC'].length;
                 document.getElementById('val-bgbg').innerText = auditorias['BGxBG'].length;
                 document.getElementById('val-pcbg').innerText = auditorias['PCxBG'].length;
@@ -653,7 +716,6 @@
                 document.getElementById('val-pcpd').innerText = auditorias['PCxPD'].length;
                 document.getElementById('val-pdpd').innerText = auditorias['PDxPD'].length;
 
-                // Montar botões do rodapé APENAS para a Base Master
                 const downloadContainer = document.getElementById('download-links');
                 downloadContainer.innerHTML = `<button class="btn-master" onclick="exportExcel('MASTER', null)">📥 Baixar Fixos Atualizados</button>`;
 
