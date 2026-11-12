@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "12/11/2026 16:12",
+  "atualizado_em": "12/11/2026 17:00",
   "taxa_abs": 10.1,
   "total_faltas_mes": 407,
   "deficit": 18,
@@ -3868,5 +3868,10 @@ window.dadosPD = {
       "taxa": 25.0
     }
   ],
-  "alertas_pendentes": []
+  "alertas_pendentes": [
+    "<strong style='color:#f6b93b;'>ATENÇÃO: O site falhou. Baseado no último histórico!</strong>",
+    "<strong style='color:#ffffff;'>T2</strong>: FABIANE ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
+    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS"
+  ]
 };
