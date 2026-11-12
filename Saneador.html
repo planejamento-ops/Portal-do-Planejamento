@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEVA - Pré-Processamento da Demanda</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ceva-blue: #00204E; --ceva-red: #D31245; --bg-color: #F0F2F5; 
+            --card-bg: #FFFFFF; --text-main: #334155; --text-muted: #64748B; --border-light: #E2E8F0;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+        header { background-color: var(--card-bg); padding: 1.5rem 2rem; text-align: center; border-bottom: 2px solid var(--ceva-blue); box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05); }
+        .page-title { font-size: 1.25rem; font-weight: 700; color: var(--ceva-blue); text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+        
+        .main-container { display: flex; padding: 3rem 2rem; width: 100%; flex: 1; box-sizing: border-box; justify-content: center; align-items: flex-start; }
+        .card { background-color: var(--card-bg); border-radius: 1rem; box-shadow: 0 10px 30px -5px rgba(0, 32, 78, 0.08); width: 100%; max-width: 520px; display: flex; flex-direction: column; border: none; overflow: hidden; }
+        .card-header { background-color: var(--ceva-blue); color: #ffffff; padding: 1.25rem 2rem; font-weight: 600; font-size: 1.15rem; text-align: center; letter-spacing: 0.5px; }
+        .card-body { padding: 1.5rem 2rem 2rem 2rem; flex: 1; display: flex; flex-direction: column; }
+        
+        .subtitle { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; padding-bottom: 1rem; text-align: center; position: relative; }
+        .subtitle::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 40px; height: 2px; background-color: var(--border-light); border-radius: 2px; }
+        
+        .dropzone { border: 1.5px dashed #CBD5E1; border-radius: 0.75rem; padding: 2.5rem 1rem; text-align: center; cursor: pointer; transition: all 0.3s ease; margin-bottom: 1.5rem; background-color: #FAFAFA; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .dropzone:hover, .dropzone.dragover { border-color: var(--ceva-blue); background-color: #F0F4FA; }
+        .dropzone svg { width: 36px; height: 36px; fill: #94A3B8; margin-bottom: 1rem; transition: fill 0.3s; }
+        .dropzone:hover svg, .dropzone.dragover svg { fill: var(--ceva-blue); }
+        .dropzone span { font-size: 0.9rem; color: var(--text-muted); pointer-events: none; line-height: 1.5; }
+        .dropzone .file-selected { color: var(--ceva-red); font-weight: 600; margin-top: 0.75rem; font-size: 0.85rem; }
+
+        .input-group { margin-bottom: 1.25rem; }
+        .input-group label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main); letter-spacing: 0.3px; }
+        .file-wrapper { display: flex; align-items: center; border: 1.5px solid var(--border-light); border-radius: 0.5rem; background-color: #ffffff; cursor: pointer; padding: 0.6rem 1rem; transition: all 0.2s ease; }
+        .file-wrapper:hover { border-color: var(--ceva-blue); background-color: #F8FAFC; }
+        .file-wrapper svg { width: 18px; height: 18px; fill: #10B981; margin-right: 0.75rem; flex-shrink: 0; opacity: 0.8; }
+        .file-name { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 400; }
+        input[type="file"] { display: none; }
+
+        button { width: 100%; color: #ffffff; border: none; padding: 0.85rem; border-radius: 0.5rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.3px; cursor: pointer; transition: all 0.2s ease; display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 1rem; }
+        button svg { width: 18px; height: 18px; fill: currentColor; }
+        .btn-blue { background-color: var(--ceva-blue); }
+        .btn-blue:hover:not(:disabled) { background-color: #001533; box-shadow: 0 4px 12px rgba(0, 32, 78, 0.2); }
+        .btn-red { background-color: var(--ceva-red); }
+        .btn-red:hover:not(:disabled) { background-color: #B00E38; box-shadow: 0 4px 12px rgba(211, 18, 69, 0.2); }
+        button:active:not(:disabled) { transform: translateY(1px); }
+        button:disabled { opacity: 0.65; cursor: not-allowed; }
+
+        .spinner { width: 1.1rem; height: 1.1rem; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top-color: #ffffff; animation: spin 1s ease-in-out infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        .status { margin-top: 1rem; font-size: 0.8rem; font-weight: 500; text-align: center; min-height: 1.2rem; }
+        .error { color: var(--ceva-red); }
+        .success { color: #10B981; }
+        .info { color: var(--ceva-blue); }
+
+        .hidden { display: none !important; }
+        .fade-out { animation: slideUpFadeOut 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        .fade-in { animation: slideUpFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        @keyframes slideUpFadeOut { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-30px); } }
+        @keyframes slideUpFadeIn { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div id="sys-status" style="text-align: center; font-size: 0.75rem; color: #64748B; margin-top: 0.5rem; padding: 0 1rem;">A carregar base de dados de Topologia...</div>
+
+    <div class="main-container">
+        
+        <!-- AGENTE 1 -->
+        <div class="card" id="step1">
+            <div class="card-header">Saneador de UMB</div>
+            <div class="card-body">
+                <div class="subtitle">Expurgo, Conversão e Mediana da Operação</div>
+                
+                <label for="csvInputUMB" class="dropzone" id="dropzoneUMB">
+                    <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                    <span>Selecione ou arraste o arquivo<br><strong>unidade medida.csv</strong></span>
+                    <div id="fileNameUMB" class="file-selected"></div>
+                    <input type="file" id="csvInputUMB" accept=".csv" onchange="atualizarNomeDropzone(this, 'fileNameUMB')">
+                </label>
+                
+                <button id="btnAgente1" class="btn-blue" onclick="processarAgente1()">
+                    <svg viewBox="0 0 24 24"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.43-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+                    Processar Saneamento
+                </button>
+
+                <!-- NOVO BOTÃO DE SKIP -->
+                <button id="btnSkip" onclick="pularParaWallboard()" style="background-color: rgba(211, 18, 69, 0.08); color: var(--ceva-red); border: 1.5px solid rgba(211, 18, 69, 0.4); margin-top: 10px;">
+                    <svg viewBox="0 0 24 24" style="fill: currentColor;"><path d="M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z"/></svg>
+                    Pular Saneamento (Já Processei)
+                </button>
+                
+                <div id="status1" class="status"></div>
+                <div id="status1" class="status"></div>
+            </div>
+        </div>
+
+        <!-- AGENTE 2 -->
+        <div class="card hidden" id="step2">
+            <div class="card-header">Roteador Espacial e Topologia</div>
+            <div class="card-body">
+                <div class="subtitle">Cruzamento Estrutural e Atribuição de Zonas</div>
+                
+                <div class="input-group">
+                    <label>1. Demanda (Real ou Prévia):</label>
+                    <label class="file-wrapper">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M8 12h8v2H8zM8 16h8v2H8z"/></svg>
+                        <span class="file-name" id="name-demanda">Nenhum arquivo escolhido (Pode selecionar vários)</span>
+                        <input type="file" id="csvDemanda" accept=".csv" multiple onchange="atualizarNomeListaMultipla(this, 'name-demanda')">
+                    </label>
+                </div>
+                
+                <div class="input-group">
+                    <label>2. Mapa de Fixos:</label>
+                    <label class="file-wrapper">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M8 12h8v2H8zM8 16h8v2H8z"/></svg>
+                        <span class="file-name" id="name-fixos">Nenhum arquivo escolhido</span>
+                        <input type="file" id="csvFixos" accept=".csv" onchange="atualizarNomeLista(this, 'name-fixos')">
+                    </label>
+                </div>
+                
+                <!-- ESTE GRUPO SÓ APARECE SE O MODO FOR LOCAL (FALHA NO FETCH) -->
+                <div class="input-group hidden" id="group-topologia">
+                    <label>2.1 Mapa de Topologia (Modo Local):</label>
+                    <label class="file-wrapper">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M8 12h8v2H8zM8 16h8v2H8z"/></svg>
+                        <span class="file-name" id="name-topologia">Nenhum arquivo escolhido</span>
+                        <input type="file" id="csvTopologia" accept=".csv" onchange="atualizarNomeLista(this, 'name-topologia')">
+                    </label>
+                </div>
+                
+                <div class="input-group">
+                    <label>3. UMB Saneados (Baixado no Agente 1):</label>
+                    <label class="file-wrapper">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M8 12h8v2H8zM8 16h8v2H8z"/></svg>
+                        <span class="file-name" id="name-umb">Nenhum arquivo escolhido</span>
+                        <input type="file" id="csvUMB" accept=".csv" onchange="atualizarNomeLista(this, 'name-umb')">
+                    </label>
+                </div>
+                
+                <button id="btnAgente2" class="btn-red" onclick="processarAgente2()">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Executar Roteamento
+                </button>
+                <div id="status2" class="status"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================================
+        // AUTO-LOAD DA TOPOLOGIA VIA FETCH
+        // ==========================================================
+        let topologiaMap = {};
+        
+        window.onload = function() {
+            fetch('./Topologia.csv')
+                .then(response => {
+                    if (!response.ok) throw new Error("Ficheiro não encontrado no servidor.");
+                    return response.text();
+                })
+                .then(csvText => {
+                    Papa.parse(csvText, {
+                        header: true, skipEmptyLines: true,
+                        complete: function(results) {
+                            const dados = results.data;
+                            dados.forEach(row => {
+                                const posKey = Object.keys(row).find(k => k.includes('Posição'));
+                                const zonaKey = Object.keys(row).find(k => k.includes('Tp.posição') || k.includes('posição depósito'));
+                                
+                                if (posKey && zonaKey) {
+                                    let pos = String(row[posKey]).trim();
+                                    let zona = String(row[zonaKey]).trim();
+                                    if (pos) topologiaMap[pos] = zona;
+                                }
+                            });
+                            document.getElementById('sys-status').innerText = `Base Topológica Carregada automaticamente (${Object.keys(topologiaMap).length} posições conectadas).`;
+                            document.getElementById('sys-status').style.color = '#10B981';
+                        }
+                    });
+                })
+                .catch(err => {
+                    // A MÁGICA ACONTECE AQUI: Fallback visual para testes na própria máquina
+                    console.log("Modo local detetado ou erro de fetch. Exibindo input manual de Topologia.", err);
+                    document.getElementById('sys-status').innerText = "Modo Local Detetado: Os navegadores bloqueiam carregamento automático fora de servidores. O campo de Topologia foi ativado abaixo para testar na sua máquina.";
+                    document.getElementById('sys-status').style.color = 'var(--ceva-red)';
+                    document.getElementById('group-topologia').classList.remove('hidden');
+                });
+        };
+
+        // UI & INTERAÇÕES
+        function atualizarNomeLista(input, spanId) {
+            const span = document.getElementById(spanId);
+            span.innerText = input.files[0] ? input.files[0].name : "Nenhum arquivo escolhido";
+            if(input.files[0]) { span.style.color = 'var(--ceva-blue)'; span.style.fontWeight = '500'; }
+            else { span.style.color = 'var(--text-muted)'; span.style.fontWeight = '400'; }
+        }
+
+        function atualizarNomeListaMultipla(input, spanId) {
+            const span = document.getElementById(spanId);
+            if(input.files.length === 0) { span.innerText = "Nenhum arquivo escolhido (Pode selecionar vários)"; span.style.color = 'var(--text-muted)'; span.style.fontWeight = '400'; }
+            else if (input.files.length === 1) { span.innerText = input.files[0].name; span.style.color = 'var(--ceva-blue)'; span.style.fontWeight = '500'; }
+            else { span.innerText = `${input.files.length} arquivos selecionados`; span.style.color = 'var(--ceva-blue)'; span.style.fontWeight = '600'; }
+        }
+
+        function atualizarNomeDropzone(input, spanId) {
+            document.getElementById(spanId).innerText = input.files[0] ? input.files[0].name : "";
+        }
+
+        const dropzone = document.getElementById('dropzoneUMB');
+        const fileInputUMB = document.getElementById('csvInputUMB');
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(e => dropzone.addEventListener(e, preventDefaults, false));
+        function preventDefaults(e) { e.preventDefault(); e.stopPropagation(); }
+        ['dragenter', 'dragover'].forEach(e => dropzone.addEventListener(e, () => dropzone.classList.add('dragover'), false));
+        ['dragleave', 'drop'].forEach(e => dropzone.addEventListener(e, () => dropzone.classList.remove('dragover'), false));
+        dropzone.addEventListener('drop', (e) => {
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                fileInputUMB.files = e.dataTransfer.files;
+                atualizarNomeDropzone(fileInputUMB, 'fileNameUMB');
+            }
+        }, false);
+
+        function normalizeKeys(row) {
+            let newRow = {};
+            for (let key in row) { newRow[key.replace(/^\uFEFF/, '').trim()] = row[key]; }
+            return newRow;
+        }
+
+        // AGENTE 1
+        function processarAgente1() {
+            const statusDiv = document.getElementById('status1');
+            const btn = document.getElementById('btnAgente1');
+            const originalBtnText = btn.innerHTML;
+            
+            statusDiv.className = 'status'; statusDiv.innerText = '';
+            
+            if (!fileInputUMB.files[0]) { statusDiv.innerText = "Por favor, insira o arquivo UMB."; statusDiv.className = 'status error'; return; }
+
+            btn.disabled = true;
+            btn.innerHTML = 'A processar... <div class="spinner"></div>';
+
+            Papa.parse(fileInputUMB.files[0], {
+                header: true, skipEmptyLines: true,
+                complete: function(results) {
+                    const dados = results.data;
+                    if (dados.length === 0) { btn.disabled = false; btn.innerHTML = originalBtnText; return; }
+
+                    const volumesValidos = [];
+                    const dadosFiltrados = [];
+
+                    dados.forEach(r => {
+                        const row = normalizeKeys(r);
+                        const sku = String(row['Produto'] || '').trim();
+                        const qtdStr = String(row['Numerador'] || '').replace(',', '.');
+                        const qtd = parseFloat(qtdStr);
+
+                        if (!sku || isNaN(qtd) || qtd <= 0) return;
+
+                        const comp = parseFloat(String(row['Comprimento'] || '0').replace(',', '.'));
+                        const larg = parseFloat(String(row['Largura'] || '0').replace(',', '.'));
+                        const alt = parseFloat(String(row['Altura'] || '0').replace(',', '.'));
+                        const volBruto = parseFloat(String(row['Volume'] || '0').replace(',', '.'));
+                        const undDimensao = String(row['Unidade de medida'] || '').trim().toUpperCase();
+                        const undVolume = String(row['Unidade do volume'] || '').trim().toUpperCase();
+
+                        let volCalculado = 0;
+                        if (comp > 0 && larg > 0 && alt > 0) { volCalculado = undDimensao === 'MM' ? (comp * larg * alt) / 1000000 : (comp * larg * alt) / 1000; } 
+                        else if (volBruto > 0) { volCalculado = (undVolume === 'M3' || undVolume === 'M³') ? volBruto * 1000 : volBruto; }
+
+                        if (volCalculado > 0) volumesValidos.push(volCalculado);
+                        row['_volCalculado'] = volCalculado;
+                        dadosFiltrados.push(row);
+                    });
+
+                    let mediana = 0;
+                    if (volumesValidos.length > 0) {
+                        volumesValidos.sort((a, b) => a - b);
+                        const meio = Math.floor(volumesValidos.length / 2);
+                        mediana = volumesValidos.length % 2 !== 0 ? volumesValidos[meio] : (volumesValidos[meio - 1] + volumesValidos[meio]) / 2;
+                    }
+
+                    const dadosFinais = dadosFiltrados.map(row => {
+                        let volFinal = row['_volCalculado'];
+                        let alerta = 'NAO';
+                        if (volFinal <= 0) { volFinal = mediana; alerta = 'SIM'; }
+                        
+                        // Atualiza apenas volumetria, deixa o resto (como o Peso) intacto
+                        row['Volume'] = Number(volFinal.toFixed(6));
+                        row['Unidade do volume'] = 'CD3';
+                        row['ALERTA_VOLUMETRIA'] = alerta;
+                        
+                        delete row['_volCalculado']; delete row['Tipo da UM']; delete row['']; delete row[' '];
+                        return row;
+                    });
+
+                    baixarCSV(dadosFinais, "UMB_Saneados.csv", ",");
+                    statusDiv.innerText = "Concluído! A redirecionar para o Roteador...";
+                    statusDiv.className = 'status success';
+                    
+                    setTimeout(() => {
+                        const step1 = document.getElementById('step1');
+                        const step2 = document.getElementById('step2');
+                        step1.classList.add('fade-out');
+                        setTimeout(() => {
+                            step1.classList.add('hidden');
+                            step2.classList.remove('hidden');
+                            step2.classList.add('fade-in');
+                            btn.innerHTML = originalBtnText; btn.disabled = false;
+                        }, 500); 
+                    }, 1500);
+                }
+            });
+        }
+
+        // AGENTE 2
+        function parsePromise(file, forceText = false) {
+            return new Promise((resolve, reject) => {
+                Papa.parse(file, { header: true, skipEmptyLines: true, dynamicTyping: !forceText, 
+                    complete: results => resolve(results.data.map(normalizeKeys)), error: err => reject(err) });
+            });
+        }
+
+        async function processarAgente2() {
+            const statusDiv = document.getElementById('status2');
+            const btn = document.getElementById('btnAgente2');
+            const originalBtnText = btn.innerHTML;
+            
+            statusDiv.className = 'status'; statusDiv.innerText = '';
+
+            const filesDemanda = document.getElementById('csvDemanda').files;
+            const fileFixos = document.getElementById('csvFixos').files[0];
+            const fileUMB = document.getElementById('csvUMB').files[0];
+            const fileTopologiaManual = document.getElementById('csvTopologia').files[0];
+
+            if (filesDemanda.length === 0 || !fileFixos || !fileUMB) {
+                statusDiv.innerText = "Erro: É necessário selecionar todos os ficheiros obrigatórios.";
+                statusDiv.className = 'status error';
+                return;
+            }
+            
+            // Validação inteligente: se o auto-load falhou e o utilzador também não carregou manualmente
+            if (Object.keys(topologiaMap).length === 0 && !fileTopologiaManual) {
+                statusDiv.innerText = "Aviso: Como está no Modo Local, tem de inserir o arquivo de Topologia no botão extra.";
+                statusDiv.className = 'status error';
+                return;
+            }
+
+            btn.disabled = true; btn.innerHTML = 'A rotear... <div class="spinner"></div>';
+            statusDiv.innerText = 'Consolidando demanda e roteando. Aguarde...';
+
+            try {
+                // Se estamos em modo local e o utilzador inseriu o arquivo manualmente, processamo-lo na hora!
+                if (Object.keys(topologiaMap).length === 0 && fileTopologiaManual) {
+                    const topologiaDataManual = await parsePromise(fileTopologiaManual, true);
+                    topologiaDataManual.forEach(row => {
+                        const posKey = Object.keys(row).find(k => k.includes('Posição'));
+                        const zonaKey = Object.keys(row).find(k => k.includes('Tp.posição') || k.includes('posição depósito'));
+                        if (posKey && zonaKey) {
+                            let pos = String(row[posKey]).trim();
+                            let zona = String(row[zonaKey]).trim();
+                            if (pos) topologiaMap[pos] = zona;
+                        }
+                    });
+                }
+
+                const demandaPromises = Array.from(filesDemanda).map(file => parsePromise(file, true));
+                const demandaResults = await Promise.all(demandaPromises);
+                let demandaData = [];
+                demandaResults.forEach(data => { demandaData = demandaData.concat(data); });
+
+                const [fixosData, umbData] = await Promise.all([
+                    parsePromise(fileFixos, true),
+                    parsePromise(fileUMB, true)
+                ]);
+
+                const fixosMap = {};
+                const fixosFallbackMap = {};
+                fixosData.forEach(row => {
+                    let prod = String(row['Produto'] || '').trim();
+                    let pos = String(row['Posição no depósito'] || '').trim();
+                    if (prod && pos && !pos.toUpperCase().startsWith('PK')) {
+                        if (!fixosMap[prod]) fixosMap[prod] = pos;
+                        let stripped = prod.replace(/^0+/, ''); 
+                        if (!fixosFallbackMap[stripped]) fixosFallbackMap[stripped] = pos;
+                    }
+                });
+
+                let isPrevia = false;
+                if (demandaData.length > 0 && demandaData[0]['Cód. Cliente'] !== undefined) { isPrevia = true; }
+
+                const resultAgente2 = [];
+                demandaData.forEach(row => {
+                    let doc = '', nItem = '', prod = '', desc = '', qtd = '', um = '', denom = 'Item normal entrega', codProc = '';
+
+                    if (isPrevia) {
+                        doc = String(row['Cód. Cliente'] || '').trim(); nItem = ''; prod = String(row['Cód. Material'] || '').trim();
+                        desc = String(row['Material'] || '').trim(); qtd = String(row['Qt. Prevista a Atender'] || '').trim(); um = String(row['Unidade'] || '').trim();
+                    } else {
+                        doc = String(row['Documento'] || '').trim(); nItem = String(row['Nº do item'] || '').trim(); prod = String(row['Produto'] || '').trim();
+                        desc = String(row['Descrição produto'] || '').trim(); qtd = String(row['Quantidade'] || '').trim(); um = String(row['Unidade de medida'] || '').trim();
+                        codProc = String(row['Código do processo'] || '').trim(); if (row['Denom.tipo de item']) denom = String(row['Denom.tipo de item']).trim();
+                    }
+
+                    if (!doc && !prod) return; 
+
+                    let endereco = fixosMap[prod] || fixosFallbackMap[prod.replace(/^0+/, '')];
+                    let estacao = "OUTRA";
+                    if (endereco) { estacao = endereco.includes('-') ? endereco.split('-')[0] : endereco.substring(0, 2); } else { endereco = "Sem Fixo"; }
+
+                    let zona = endereco !== "Sem Fixo" ? (topologiaMap[endereco] || "Não Mapeada") : "";
+
+                    resultAgente2.push({
+                        "Documento": doc, "Nº do item": nItem, "Produto": prod, "Descrição produto": desc, "Quantidade": qtd,
+                        "Unidade de medida": um, "Denom.tipo de item": denom, "Código do processo": codProc,
+                        "Endereço_Roteado": endereco, "Estação_Destino": estacao, "Zona_Ergonomica": zona
+                    });
+                });
+
+                resultAgente2.sort((a, b) => { if (a["Documento"] < b["Documento"]) return -1; if (a["Documento"] > b["Documento"]) return 1; return 0; });
+
+                const csvFinal = Papa.unparse(resultAgente2, {
+                    delimiter: ";", header: true,
+                    columns: ["Documento", "Nº do item", "Produto", "Descrição produto", "Quantidade", "Unidade de medida", "Denom.tipo de item", "Código do processo", "Endereço_Roteado", "Estação_Destino", "Zona_Ergonomica"]
+                });
+
+                baixarTexto(csvFinal, "Agente2_Arquivo_Roteado.csv");
+                
+                // MENSAGEM ATUALIZADA
+                statusDiv.innerText = `Sucesso! ${resultAgente2.length} posições roteadas. A abrir o Wallboard...`;
+                statusDiv.className = 'status success';
+
+                // ==========================================
+                // O GATILHO MÁGICO DE REDIRECIONAMENTO
+                // ==========================================
+                setTimeout(() => {
+                    // O window.parent diz ao portal principal para mudar de página!
+                    window.parent.location.href = 'wallboard.operacional.html';
+                }, 2500); // Espera 2,5 segundos para o utilizador ler e o download terminar
+
+            } catch (error) {
+                console.error(error); statusDiv.innerText = "Erro ao processar. Verifique os ficheiros CSV."; statusDiv.className = 'status error';
+            } finally { btn.disabled = false; btn.innerHTML = originalBtnText; }
+        }
+
+        function baixarCSV(dadosJson, nomeArquivo, delimitador = ",") {
+            baixarTexto(Papa.unparse(dadosJson, { quotes: false, delimiter: delimitador, newline: "\r\n" }), nomeArquivo);
+        }
+        function baixarTexto(conteudo, nomeArquivo) {
+            const blob = new Blob(["\uFEFF" + conteudo], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = nomeArquivo;
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
+        }
+        // ==========================================
+        // FUNÇÃO PARA PULAR DIRETO PARA O WALLBOARD
+        // ==========================================
+        function pularParaWallboard() {
+            const statusDiv = document.getElementById('status1');
+            statusDiv.innerText = "A redirecionar...";
+            statusDiv.className = 'status info';
+            
+            setTimeout(() => {
+                // Diz à página principal para mudar de rota
+                window.parent.location.href = 'wallboard.operacional.html';
+            }, 500);
+        }
+    </script>
+</body>
+</html>
