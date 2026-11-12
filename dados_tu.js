@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "12/11/2026 06:28",
+  "atualizado_em": "12/11/2026 07:01",
   "total_tus": 67,
   "caixas_total_mes": 143018,
   "pecas_total_mes": 5269937,
@@ -914,41 +914,41 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "carteira_ln": {
-          "perfil": 63,
-          "cx": 4467,
-          "pcs": 281874
+          "perfil": 62,
+          "cx": 2841,
+          "pcs": 175071
         },
         "carteira_gv": {
           "perfil": 45,
-          "cx": 5521,
-          "pcs": 250793
+          "cx": 3519,
+          "pcs": 158851
         },
         "estojo_ln": {
           "perfil": 12,
-          "cx": 1343,
-          "pcs": 16102
+          "cx": 793,
+          "pcs": 9457
         },
         "estojo_gv": {
           "perfil": 15,
-          "cx": 4298,
-          "pcs": 65080
+          "cx": 2714,
+          "pcs": 41634
         },
         "total_geral": {
-          "cx": 15629,
-          "pcs": 613849,
+          "cx": 9867,
+          "pcs": 385013,
           "perfil": 39
         }
       }
     }
   },
-  "caixas_pendentes": 15736,
-  "caixas_ln_pend": 5855,
-  "caixas_gv_pend": 9881,
-  "pecas_pendentes": 614861,
-  "pecas_ln_pend": 298244,
-  "pecas_gv_pend": 316617,
-  "carretas_pendentes": 10,
-  "progresso_pct": 53,
+  "caixas_pendentes": 9974,
+  "caixas_ln_pend": 3679,
+  "caixas_gv_pend": 6295,
+  "pecas_pendentes": 386025,
+  "pecas_ln_pend": 184796,
+  "pecas_gv_pend": 201229,
+  "carretas_pendentes": 7,
+  "progresso_pct": 65,
   "atendimentos_em_andamento": [
     "MGI"
   ],
@@ -957,20 +957,20 @@ window.dadosDashboard = {
     "Atraso em SPI"
   ],
   "proxima_carteira": {
-    "carreta": "Carreta 12",
-    "tu_resumida": "...3557",
+    "carreta": "Carreta 14",
+    "tu_resumida": "...3516",
     "uf": "MGI"
   },
   "proxima_varejo": null,
   "proxima_estojo": {
-    "carreta": "Carreta 11",
-    "tu_resumida": "...3561",
+    "carreta": "Carreta 15 Lona",
+    "tu_resumida": "...3506",
     "uf": "MGI"
   },
   "pendencias_por_canal": {
     "varejo": 0,
-    "carteira": 6,
-    "estojo": 5,
+    "carteira": 4,
+    "estojo": 4,
     "outras": 1
   },
   "perfis_geral": {
@@ -1022,28 +1022,28 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "carteira_ln": {
-      "perfil": 63,
-      "cx": 4467,
-      "pcs": 281874
+      "perfil": 62,
+      "cx": 2841,
+      "pcs": 175071
     },
     "carteira_gv": {
       "perfil": 45,
-      "cx": 5521,
-      "pcs": 250793
+      "cx": 3519,
+      "pcs": 158851
     },
     "estojo_ln": {
       "perfil": 12,
-      "cx": 1343,
-      "pcs": 16102
+      "cx": 793,
+      "pcs": 9457
     },
     "estojo_gv": {
       "perfil": 15,
-      "cx": 4298,
-      "pcs": 65080
+      "cx": 2714,
+      "pcs": 41634
     },
     "total_geral": {
-      "cx": 15629,
-      "pcs": 613849,
+      "cx": 9867,
+      "pcs": 385013,
       "perfil": 39
     }
   }
