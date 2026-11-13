@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "13/11/2026 15:00",
+  "atualizado_em": "13/11/2026 16:01",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 437,
+  "total_faltas_mes": 438,
   "deficit": 18,
   "fi_dias": 124,
   "fj_dias": 75,
@@ -89,12 +89,12 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-13": {
-      "taxa_abs": 6.9,
-      "faltas": 22,
+      "taxa_abs": 6.7,
+      "faltas": 23,
       "deficit": 1,
-      "fi": 9,
+      "fi": 10,
       "fj": 11,
-      "ferias": 6
+      "ferias": 7
     }
   },
   "grafico_setor_map": {
@@ -1237,24 +1237,24 @@ window.dadosPD = {
     "2026-11-13_GERAL": {
       "labels": [
         "FECHAMENTO",
-        "REABASTECIMENTO",
         "EXPEDICAO",
+        "REABASTECIMENTO",
         "SEPARACAO",
         "RECEBIMENTO",
         "PLANEJAMENTO"
       ],
       "data": [
         13.6,
-        7.5,
         7.2,
+        6.7,
         5.9,
         3.4,
         0.0
       ],
       "absolutos": [
         6,
-        3,
         5,
+        4,
         6,
         2,
         0
@@ -1290,14 +1290,17 @@ window.dadosPD = {
       "labels": [
         "RECEBIMENTO",
         "EXPEDICAO",
+        "REABASTECIMENTO",
         "PLANEJAMENTO"
       ],
       "data": [
         5.9,
         5.6,
+        5.0,
         0.0
       ],
       "absolutos": [
+        1,
         1,
         1,
         0
@@ -2079,13 +2082,13 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        11.1,
-        10.0,
-        5.9,
-        5.8
+        13.2,
+        8.8,
+        5.7,
+        5.1
       ],
       "absolutos": [
-        4,
+        5,
         3,
         12,
         3
@@ -2114,13 +2117,16 @@ window.dadosPD = {
     "2026-11-13_2": {
       "labels": [
         "PACTUAL",
+        "AMERICA",
         "CEVA"
       ],
       "data": [
-        33.3,
-        4.0
+        14.3,
+        12.5,
+        3.1
       ],
       "absolutos": [
+        1,
         1,
         1
       ]
@@ -3753,10 +3759,10 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "DESLIGADO"
+          "FOLGA"
         ],
         [
-          "FOLGA"
+          "DESLIGADO"
         ],
         [
           "SEM JUSTIFICATIVA"
@@ -3764,18 +3770,18 @@ window.dadosPD = {
       ],
       "data_abs": [
         11,
-        9,
-        6,
-        1,
+        10,
+        7,
+        2,
         1,
         1
       ],
       "data_cum": [
-        37.9,
-        69.0,
-        89.7,
-        93.1,
-        96.6,
+        34.4,
+        65.6,
+        87.5,
+        93.8,
+        96.9,
         100.0
       ]
     },
@@ -3818,20 +3824,30 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "FOLGA"
         ],
         [
           "SEM JUSTIFICATIVA"
         ]
       ],
       "data_abs": [
+        2,
+        1,
         1,
         1,
         1
       ],
       "data_cum": [
         33.3,
+        50.0,
         66.7,
+        83.3,
         100.0
       ]
     },
@@ -3879,10 +3895,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        204,
+        205,
         122,
-        88,
-        52,
+        89,
+        53,
         49
       ]
     }
@@ -3937,7 +3953,7 @@ window.dadosPD = {
           8.5,
           10.7,
           8.8,
-          6.9,
+          6.7,
           null,
           null,
           null,
@@ -4014,7 +4030,7 @@ window.dadosPD = {
           27,
           44,
           38,
-          22,
+          23,
           null,
           null,
           null,
@@ -4054,7 +4070,7 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 122,
+      "faltas": 123,
       "taxa": 8.5
     }
   ],
@@ -4066,8 +4082,8 @@ window.dadosPD = {
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 78,
-      "taxa": 12.1
+      "faltas": 79,
+      "taxa": 11.8
     },
     {
       "setor": "FECHAMENTO",
@@ -4132,14 +4148,14 @@ window.dadosPD = {
       "taxa": 12.0
     },
     {
+      "lider": "FLAVIO MARTINS RUFINO",
+      "faltas": 29,
+      "taxa": 12.2
+    },
+    {
       "lider": "RICARDO EUGENIO LAURINDO",
       "faltas": 29,
       "taxa": 12.1
-    },
-    {
-      "lider": "FLAVIO MARTINS RUFINO",
-      "faltas": 28,
-      "taxa": 12.8
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
