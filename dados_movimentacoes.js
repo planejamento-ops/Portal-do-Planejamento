@@ -1,5 +1,5 @@
 window.dadosMovimentacoes = {
-  "atualizado_em": "13/11/2026 10:36",
+  "atualizado_em": "13/11/2026 11:02",
   "total_dia": 0,
   "pendentes_hoje": 0,
   "pendentes_antigas": 0,
