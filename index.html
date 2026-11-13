@@ -640,229 +640,246 @@
                     </div>
 
                     <!-- ========================================== -->
-                    <!-- CARDS DE VISÃO DIÁRIA (DINÂMICOS)          -->
+                    <!-- GRANDE BLOCO: VISÃO DIÁRIA                 -->
                     <!-- ========================================== -->
-                    <h4 style="color: #ffffff; font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; margin-top: 5px; display: flex; align-items: center; gap: 8px;">
-                        <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">today</span>
-                        Raio-X Diário <small style="color: #a0aab5; font-size: 0.65rem; font-weight: 600;">(Muda conforme a data selecionada nos gráficos abaixo)</small>
-                    </h4>
-                    <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">person_off</span>
-                            <div class="tu-info">
-                                <span class="label">Taxa de Absenteísmo (Dia)</span>
-                                <h3 id="pd-taxa-abs-dia">--%</h3>
-                                <small id="pd-sub-abs-dia">-- faltas no dia</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-cyan" style="border-color: rgba(0, 210, 255, 0.6); box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.1);">
-                            <span class="material-symbols-outlined icon">warning</span>
-                            <div class="tu-info">
-                                <span class="label">Déficit de Efetivo (Dia)</span>
-                                <h3 id="pd-deficit-dia">--</h3>
-                                <small>Desligamentos</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">engineering</span>
-                            <div class="tu-info">
-                                <span class="label">Faltas Injustificadas (Dia)</span>
-                                <h3 id="pd-injustificadas-dia">--</h3>
-                                <small>Sem Atestado / Justificativa</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">fact_check</span>
-                            <div class="tu-info">
-                                <span class="label">Ausências Justificadas (Dia)</span>
-                                <h3 id="pd-justificadas-dia">--</h3>
-                                <small>Atestados / Licenças</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">flight_takeoff</span>
-                            <div class="tu-info">
-                                <span class="label">Colaboradores em Férias</span>
-                                <h3 id="pd-ferias-dia">--</h3>
-                                <small>No dia selecionado</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ========================================== -->
-                    <!-- CARDS DE ACUMULADO MENSAL                  -->
-                    <!-- ========================================== -->
-                    <h4 style="color: #ffffff; font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; margin-top: 10px; display: flex; align-items: center; gap: 8px;">
-                        <span class="material-symbols-outlined" style="color: #f6b93b; font-size: 20px;">date_range</span>
-                        Acumulado do Mês <small style="color: #a0aab5; font-size: 0.65rem; font-weight: 600;">(Fixos para o mês atual)</small>
-                    </h4>
-                    <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
-                        <div class="tu-card card-red">
-                            <span class="material-symbols-outlined icon">person_off</span>
-                            <div class="tu-info">
-                                <span class="label">Taxa de Absenteísmo Geral (%)</span>
-                                <h3 id="pd-taxa-abs">--%</h3>
-                                <small id="pd-sub-abs">Média Acumulada no Mês</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-red" style="border-color: rgba(255, 75, 43, 0.6); box-shadow: inset 0 0 15px rgba(255, 75, 43, 0.1);">
-                            <span class="material-symbols-outlined icon">warning</span>
-                            <div class="tu-info">
-                                <span class="label">Déficit de Efetivo (Turnover)</span>
-                                <h3 id="pd-deficit">--</h3>
-                                <small>Desligamentos / Abandono</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-yellow">
-                            <span class="material-symbols-outlined icon">engineering</span>
-                            <div class="tu-info">
-                                <span class="label">Faltas Injustificadas (Pessoas)</span>
-                                <h3 id="pd-injustificadas">--</h3>
-                                <small>Acumulado do Mês / Sem Atestado</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-purple">
-                            <span class="material-symbols-outlined icon">fact_check</span>
-                            <div class="tu-info">
-                                <span class="label">Ausências Justificadas (Pessoas)</span>
-                                <h3 id="pd-justificadas">--</h3>
-                                <small>Férias / Atestados / Licenças</small>
-                            </div>
-                        </div>
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">flight_takeoff</span>
-                            <div class="tu-info">
-                                <span class="label">Colaboradores em Férias</span>
-                                <h3 id="pd-ferias">--</h3>
-                                <small>Mês Vigente (Sem impacto no Abs)</small>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    <!-- LINHA 1: ABSENTEÍSMO MENSAL/DIÁRIO -->
-                    <div class="tu-details-grid" style="margin-top: 12px; display: grid; grid-template-columns: 2fr 1fr; gap: 12px;">
-                        <div class="tu-detail-box" style="display:flex; flex-direction:column; height: 260px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                                <h4 style="margin: 0;"><span class="material-symbols-outlined">bar_chart</span> Absenteísmo Diário por Setor (%)</h4>
-                                <div style="display: flex; gap: 8px; align-items: center;">
-                                    <!-- FILTRO DE TURNO -->
-                                    <div class="date-picker-wrapper" title="Filtrar por Turno" style="padding: 2px 8px;">
-                                        <span class="material-symbols-outlined" style="font-size: 15px; color: #00d2ff;">schedule</span>
-                                        <select id="filtro-turno-setor" onchange="atualizarGraficoSetorDia()" style="background: transparent; border: none; color: #ffffff; font-size: 0.7rem; font-weight: 700; outline: none; cursor: pointer;">
-                                            <option value="GERAL" style="background: #0f172a; color: #fff;">Todos os Turnos</option>
-                                            <option value="1" style="background: #0f172a; color: #fff;">1º Turno (T1)</option>
-                                            <option value="2" style="background: #0f172a; color: #fff;">2º Turno (T2)</option>
-                                            <option value="3" style="background: #0f172a; color: #fff;">3º Turno (T3)</option>
-                                        </select>
-                                    </div>
-
-                                    <!-- CALENDÁRIO DE DATA -->
-                                    <div class="date-picker-wrapper" title="Selecione o Dia para o Gráfico de Setores" style="padding: 2px 8px;">
-                                        <span class="material-symbols-outlined" style="font-size: 15px; color: #00d2ff;">calendar_today</span>
-                                        <input type="date" id="filtro-data-setor" onchange="atualizarGraficoSetorDia()" style="font-size: 0.7rem;">
-                                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.3); border: 1px solid rgba(0, 210, 255, 0.15); border-left: 4px solid #00d2ff; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; box-shadow: inset 0 0 20px rgba(0, 210, 255, 0.02);">
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h4 style="color: #ffffff; font-size: 1rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 24px;">today</span>
+                                Visão Diária da Operação
+                                <small style="color: #00d2ff; font-size: 0.65rem; font-weight: 600; padding-left: 10px; border-left: 1px solid rgba(0,210,255,0.3); margin-left: 4px;">Métricas do dia selecionado</small>
+                            </h4>
+                            
+                            <!-- CONTROLES DO DIA FORAM MOVIDOS PARA O CABEÇALHO DO BLOCO -->
+                            <div style="display: flex; gap: 8px; align-items: center;">
+                                <div class="date-picker-wrapper" title="Filtrar por Turno" style="padding: 4px 10px; background: rgba(0, 210, 255, 0.08);">
+                                    <span class="material-symbols-outlined" style="font-size: 16px; color: #00d2ff;">schedule</span>
+                                    <select id="filtro-turno-setor" onchange="atualizarGraficoSetorDia()" style="background: transparent; border: none; color: #ffffff; font-size: 0.75rem; font-weight: 700; outline: none; cursor: pointer;">
+                                        <option value="GERAL" style="background: #0f172a; color: #fff;">Todos os Turnos</option>
+                                        <option value="1" style="background: #0f172a; color: #fff;">1º Turno (T1)</option>
+                                        <option value="2" style="background: #0f172a; color: #fff;">2º Turno (T2)</option>
+                                        <option value="3" style="background: #0f172a; color: #fff;">3º Turno (T3)</option>
+                                    </select>
+                                </div>
+                                <div class="date-picker-wrapper" title="Selecione o Dia para o Gráfico de Setores" style="padding: 4px 10px; background: rgba(0, 210, 255, 0.08);">
+                                    <span class="material-symbols-outlined" style="font-size: 16px; color: #00d2ff;">calendar_today</span>
+                                    <input type="date" id="filtro-data-setor" onchange="atualizarGraficoSetorDia()" style="font-size: 0.75rem;">
                                 </div>
                             </div>
-                            <div style="flex:1; position:relative;"><canvas id="chartPdSetor"></canvas></div>
                         </div>
 
-                        <div class="tu-detail-box" style="display:flex; flex-direction:column; height: 260px; overflow: hidden;">
-                            <h4><span class="material-symbols-outlined">pie_chart</span> Absenteísmo por Empresa (%)</h4>
-                            <div style="flex:1; position:relative; min-height: 0;"><canvas id="chartPdEmpresa"></canvas></div>
+                        <!-- CARDS DIÁRIOS -->
+                        <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
+                            <div class="tu-card card-cyan">
+                                <span class="material-symbols-outlined icon">person_off</span>
+                                <div class="tu-info">
+                                    <span class="label">Taxa de Absenteísmo (Dia)</span>
+                                    <h3 id="pd-taxa-abs-dia">--%</h3>
+                                    <small id="pd-sub-abs-dia">-- faltas no dia</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-cyan" style="border-color: rgba(0, 210, 255, 0.6); box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.1);">
+                                <span class="material-symbols-outlined icon">warning</span>
+                                <div class="tu-info">
+                                    <span class="label">Déficit de Efetivo (Dia)</span>
+                                    <h3 id="pd-deficit-dia">--</h3>
+                                    <small>Desligamentos</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-cyan">
+                                <span class="material-symbols-outlined icon">engineering</span>
+                                <div class="tu-info">
+                                    <span class="label">Faltas Injustificadas (Dia)</span>
+                                    <h3 id="pd-injustificadas-dia">--</h3>
+                                    <small>Sem Atestado / Justificativa</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-cyan">
+                                <span class="material-symbols-outlined icon">fact_check</span>
+                                <div class="tu-info">
+                                    <span class="label">Ausências Justificadas (Dia)</span>
+                                    <h3 id="pd-justificadas-dia">--</h3>
+                                    <small>Atestados / Licenças</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-cyan">
+                                <span class="material-symbols-outlined icon">flight_takeoff</span>
+                                <div class="tu-info">
+                                    <span class="label">Colaboradores em Férias</span>
+                                    <h3 id="pd-ferias-dia">--</h3>
+                                    <small>No dia selecionado</small>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- LINHA 2: PARETO DIÁRIO & FUNIL MENSAL -->
-                    <div class="tu-details-grid" style="margin-top: 12px; display: grid; grid-template-columns: 1.7fr 1fr; gap: 12px;">
-                        
-                        <!-- 1. PARETO DIÁRIO -->
-                        <div class="tu-detail-box box-purple" style="display:flex; flex-direction:column; height: 340px;">
+                        <!-- GRÁFICOS DIÁRIOS (SETOR E EMPRESA) -->
+                        <div class="tu-details-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px;">
+                            <div class="tu-detail-box" style="display:flex; flex-direction:column; height: 260px; border-color: rgba(0, 210, 255, 0.1);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                    <h4 style="margin: 0;"><span class="material-symbols-outlined">bar_chart</span> Absenteísmo Diário por Setor (%)</h4>
+                                </div>
+                                <div style="flex:1; position:relative;"><canvas id="chartPdSetor"></canvas></div>
+                            </div>
+
+                            <div class="tu-detail-box" style="display:flex; flex-direction:column; height: 260px; overflow: hidden; border-color: rgba(0, 210, 255, 0.1);">
+                                <h4><span class="material-symbols-outlined">pie_chart</span> Absenteísmo por Empresa (%)</h4>
+                                <div style="flex:1; position:relative; min-height: 0;"><canvas id="chartPdEmpresa"></canvas></div>
+                            </div>
+                        </div>
+
+                        <!-- PARETO DIÁRIO -->
+                        <div class="tu-detail-box box-purple" style="display:flex; flex-direction:column; height: 320px; border-color: rgba(155, 89, 182, 0.2);">
                             <h4 style="margin-bottom: 8px;"><span class="material-symbols-outlined" style="color: #9b59b6;">format_list_numbered</span> Pareto de Motivos de Ausência (Diário)</h4>
                             <div style="flex:1; position:relative; width: 100%;"><canvas id="chartPdPareto"></canvas></div>
                         </div>
 
-                        <!-- 2. FUNIL MENSAL (TOP 5) -->
-                        <div class="tu-detail-box box-cyan" style="display:flex; flex-direction:column; height: 340px;">
-                            <h4 style="margin-bottom: 8px;"><span class="material-symbols-outlined" style="color: #00d2ff;">filter_alt</span> Top 5 Ofensores do Mês</h4>
-                            <div style="flex:1; position:relative; width: 100%;"><canvas id="chartPdParetoMes"></canvas></div>
-                        </div>
-
-                    </div>
-
-                    <!-- LINHA 3: GRÁFICO DIÁRIO DE % ABSENTEÍSMO -->
-                    <div class="tu-detail-box box-cyan" style="margin-top: 12px; display:flex; flex-direction:column; height: 260px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <h4 style="margin: 0;"><span class="material-symbols-outlined">analytics</span> Evolução Diária de Absenteísmo</h4>
-                            <div class="wms-sub-toggles" style="margin-bottom: 0;">
-                                <button class="btn-sub-tab active" id="btn-pd-visao-pct" onclick="mudarVisaoGraficoDiario('PCT')">PORCENTAGEM (%)</button>
-                                <button class="btn-sub-tab" id="btn-pd-visao-abs" onclick="mudarVisaoGraficoDiario('ABS')">QUANTIDADE (QTD)</button>
-                            </div>
-                        </div>
-                        <div style="flex:1; position:relative;"><canvas id="chartPdDiario"></canvas></div>
-                    </div>
-
-                    <!-- VISÃO LADO A LADO (TABELAS DE OFENSORES) -->
-                    <div class="tu-details-grid" style="margin-top: 12px; display: grid; grid-template-columns: 1fr 1.2fr 1.2fr; gap: 12px;">
-                        <div class="tu-detail-box box-cyan" style="height: 250px; display: flex; flex-direction: column;">
-                            <h4>
-                                <div style="display: flex; flex-direction: column;">
-                                    <div style="display: flex; align-items: center; gap: 6px;"><span class="material-symbols-outlined">schedule</span> Absenteísmo por Turno</div>
-                                    <small style="color: #a0aab5; font-size: 0.65rem; margin-top: 2px; margin-left: 28px;">Acumulado do Mês</small>
+                        <!-- GRÁFICO EVOLUÇÃO (LINHA DO TEMPO DIÁRIA) -->
+                        <div class="tu-detail-box box-cyan" style="display:flex; flex-direction:column; height: 260px; border-color: rgba(0, 210, 255, 0.1);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <h4 style="margin: 0;"><span class="material-symbols-outlined">timeline</span> Evolução Diária de Absenteísmo</h4>
+                                <div class="wms-sub-toggles" style="margin-bottom: 0;">
+                                    <button class="btn-sub-tab active" id="btn-pd-visao-pct" onclick="mudarVisaoGraficoDiario('PCT')">PORCENTAGEM (%)</button>
+                                    <button class="btn-sub-tab" id="btn-pd-visao-abs" onclick="mudarVisaoGraficoDiario('ABS')">QUANTIDADE (QTD)</button>
                                 </div>
-                            </h4>
-                            <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
-                                <table class="tu-table">
-                                    <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
-                                        <tr>
-                                            <th style="text-align: left;">TURNO</th>
-                                            <th>FALTAS (DIAS)</th>
-                                            <th>TAXA (%)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbl-pd-turnos-body">
-                                        <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados...</td></tr>
-                                    </tbody>
-                                </table>
+                            </div>
+                            <div style="flex:1; position:relative;"><canvas id="chartPdDiario"></canvas></div>
+                        </div>
+                    </div> <!-- FIM BLOCO DIÁRIO -->
+
+
+                    <!-- ========================================== -->
+                    <!-- GRANDE BLOCO: VISÃO MENSAL                 -->
+                    <!-- ========================================== -->
+                    <div style="background: rgba(15, 23, 42, 0.3); border: 1px solid rgba(246, 185, 59, 0.15); border-left: 4px solid #f6b93b; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; margin-top: 10px; box-shadow: inset 0 0 20px rgba(246, 185, 59, 0.02);">
+                        
+                        <h4 style="color: #ffffff; font-size: 1rem; font-weight: 800; margin-bottom: 2px; display: flex; align-items: center; gap: 8px;">
+                            <span class="material-symbols-outlined" style="color: #f6b93b; font-size: 24px;">date_range</span>
+                            Visão Acumulada do Mês
+                            <small style="color: #f6b93b; font-size: 0.65rem; font-weight: 600; padding-left: 10px; border-left: 1px solid rgba(246, 185, 59, 0.3); margin-left: 4px;">Valores fixos para o mês vigente</small>
+                        </h4>
+
+                        <!-- CARDS MENSAIS -->
+                        <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
+                            <div class="tu-card card-red">
+                                <span class="material-symbols-outlined icon">person_off</span>
+                                <div class="tu-info">
+                                    <span class="label">Taxa de Absenteísmo Geral (%)</span>
+                                    <h3 id="pd-taxa-abs">--%</h3>
+                                    <small id="pd-sub-abs">Média Acumulada no Mês</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-red" style="border-color: rgba(255, 75, 43, 0.6); box-shadow: inset 0 0 15px rgba(255, 75, 43, 0.1);">
+                                <span class="material-symbols-outlined icon">warning</span>
+                                <div class="tu-info">
+                                    <span class="label">Déficit de Efetivo (Turnover)</span>
+                                    <h3 id="pd-deficit">--</h3>
+                                    <small>Desligamentos / Abandono</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-yellow">
+                                <span class="material-symbols-outlined icon">engineering</span>
+                                <div class="tu-info">
+                                    <span class="label">Faltas Injustificadas (Pessoas)</span>
+                                    <h3 id="pd-injustificadas">--</h3>
+                                    <small>Acumulado do Mês / Sem Atestado</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-purple">
+                                <span class="material-symbols-outlined icon">fact_check</span>
+                                <div class="tu-info">
+                                    <span class="label">Ausências Justificadas (Pessoas)</span>
+                                    <h3 id="pd-justificadas">--</h3>
+                                    <small>Férias / Atestados / Licenças</small>
+                                </div>
+                            </div>
+                            <div class="tu-card card-cyan">
+                                <span class="material-symbols-outlined icon">flight_takeoff</span>
+                                <div class="tu-info">
+                                    <span class="label">Colaboradores em Férias</span>
+                                    <h3 id="pd-ferias">--</h3>
+                                    <small>Mês Vigente (Sem impacto no Abs)</small>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="tu-detail-box box-red" style="height: 250px; display: flex; flex-direction: column;">
-                            <h4><span class="material-symbols-outlined">factory</span> 🔴 Absenteísmo por Setor</h4>
-                            <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
-                                <table class="tu-table">
-                                    <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
-                                        <tr>
-                                            <th style="text-align: left;">SETOR OFENSOR</th>
-                                            <th>FALTAS</th>
-                                            <th>TAXA (%)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbl-pd-setores-body">
-                                        <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados...</td></tr>
-                                    </tbody>
-                                </table>
+                        <div class="tu-details-grid" style="display: grid; grid-template-columns: 1fr 1.8fr; gap: 12px;">
+                            <!-- FUNIL DE OFENSORES DO MÊS -->
+                            <div class="tu-detail-box box-cyan" style="display:flex; flex-direction:column; height: 320px; border-color: rgba(0, 210, 255, 0.15);">
+                                <h4 style="margin-bottom: 8px;"><span class="material-symbols-outlined" style="color: #00d2ff;">filter_alt</span> Top 5 Motivos Ofensores</h4>
+                                <div style="flex:1; position:relative; width: 100%;"><canvas id="chartPdParetoMes"></canvas></div>
                             </div>
-                        </div>
 
-                        <div class="tu-detail-box box-purple" style="height: 250px; display: flex; flex-direction: column;">
-                            <h4><span class="material-symbols-outlined">badge</span> 🔴 Absenteísmo por Líder</h4>
-                            <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
-                                <table class="tu-table">
-                                    <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
-                                        <tr>
-                                            <th style="text-align: left;">LÍDER OFENSOR</th>
-                                            <th>FALTAS</th>
-                                            <th>TAXA (%)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbl-pd-lideres-body">
-                                        <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados...</td></tr>
-                                    </tbody>
-                                </table>
+                            <!-- TABELAS DE OFENSORES MENSAIS -->
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 12px;">
+                                <div class="tu-detail-box box-cyan" style="height: 320px; display: flex; flex-direction: column; border-color: rgba(0, 210, 255, 0.15);">
+                                    <h4>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <div style="display: flex; align-items: center; gap: 6px;"><span class="material-symbols-outlined">schedule</span> Absenteísmo Turno</div>
+                                        </div>
+                                    </h4>
+                                    <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
+                                        <table class="tu-table">
+                                            <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
+                                                <tr>
+                                                    <th style="text-align: left;">TURNO</th>
+                                                    <th>FALTAS</th>
+                                                    <th>TAXA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbl-pd-turnos-body">
+                                                <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando...</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="tu-detail-box box-red" style="height: 320px; display: flex; flex-direction: column; border-color: rgba(255, 75, 43, 0.15);">
+                                    <h4>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <div style="display: flex; align-items: center; gap: 6px;"><span class="material-symbols-outlined">factory</span> Setor Ofensor</div>
+                                        </div>
+                                    </h4>
+                                    <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
+                                        <table class="tu-table">
+                                            <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
+                                                <tr>
+                                                    <th style="text-align: left;">SETOR</th>
+                                                    <th>FALTAS</th>
+                                                    <th>TAXA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbl-pd-setores-body">
+                                                <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando...</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="tu-detail-box box-purple" style="height: 320px; display: flex; flex-direction: column; border-color: rgba(155, 89, 182, 0.15);">
+                                    <h4>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <div style="display: flex; align-items: center; gap: 6px;"><span class="material-symbols-outlined">badge</span> Líder Ofensor</div>
+                                        </div>
+                                    </h4>
+                                    <div class="custom-scrollbar" style="flex: 1; overflow-y: auto; padding-right: 4px;">
+                                        <table class="tu-table">
+                                            <thead style="position: sticky; top: 0; background: #0f172a; z-index: 2;">
+                                                <tr>
+                                                    <th style="text-align: left;">LÍDER</th>
+                                                    <th>FALTAS</th>
+                                                    <th>TAXA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbl-pd-lideres-body">
+                                                <tr><td colspan="3" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando...</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- FIM BLOCO MENSAL -->
                 </div>
 
             </div>
