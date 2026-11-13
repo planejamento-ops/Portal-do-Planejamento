@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "13/11/2026 11:04",
+  "atualizado_em": "13/11/2026 11:13",
   "progresso_geral_pct": 88,
   "total_cxs_geral": 40974,
   "total_loaded_cxs_geral": 36331,
@@ -20,19 +20,34 @@ window.dadosFechamento = {
       "pct": 99,
       "status_atend": "EM ANDAMENTO"
     },
-    "MGC": {
-      "total_tus": 5,
-      "total_cxs": 8583,
-      "loaded_cxs": 2852,
-      "rampa_cxs": 1146,
-      "pending_cxs": 4585,
-      "finalizadas_gv_cx": 2285,
-      "finalizadas_fr_cx": 567,
-      "rampa_gv_cx": 972,
-      "rampa_fr_cx": 174,
-      "pendentes_gv_cx": 2369,
-      "pendentes_fr_cx": 2216,
-      "pct": 46,
+    "CARTEIRA": {
+      "total_tus": 17,
+      "total_cxs": 29097,
+      "loaded_cxs": 25494,
+      "rampa_cxs": 780,
+      "pending_cxs": 2823,
+      "finalizadas_gv_cx": 14181,
+      "finalizadas_fr_cx": 11313,
+      "rampa_gv_cx": 609,
+      "rampa_fr_cx": 171,
+      "pendentes_gv_cx": 1113,
+      "pendentes_fr_cx": 1710,
+      "pct": 90,
+      "status_atend": "EM ANDAMENTO"
+    },
+    "ESTOJO": {
+      "total_tus": 3,
+      "total_cxs": 3986,
+      "loaded_cxs": 1858,
+      "rampa_cxs": 366,
+      "pending_cxs": 1762,
+      "finalizadas_gv_cx": 1015,
+      "finalizadas_fr_cx": 843,
+      "rampa_gv_cx": 363,
+      "rampa_fr_cx": 3,
+      "pendentes_gv_cx": 1256,
+      "pendentes_fr_cx": 506,
+      "pct": 55,
       "status_atend": "EM ANDAMENTO"
     }
   },
@@ -74,7 +89,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "MGC",
+      "atendimento": "CARTEIRA",
       "carreta": "Carreta 01",
       "tu": "610000013522",
       "total_caixas": 2066,
@@ -86,7 +101,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "MGC",
+      "atendimento": "CARTEIRA",
       "carreta": "Carreta 02",
       "tu": "610000013524",
       "total_caixas": 2093,
@@ -98,7 +113,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "MGC",
+      "atendimento": "CARTEIRA",
       "carreta": "Carreta 03",
       "tu": "610000013566",
       "total_caixas": 2053,
@@ -110,7 +125,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "MGC",
+      "atendimento": "ESTOJO",
       "carreta": "Carreta 04",
       "tu": "610000013567",
       "total_caixas": 1195,
@@ -122,7 +137,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "MGC",
+      "atendimento": "ESTOJO",
       "carreta": "Carreta 05",
       "tu": "610000013568",
       "total_caixas": 1176,
