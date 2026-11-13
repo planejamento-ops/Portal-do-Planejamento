@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "13/11/2026 14:13",
+  "atualizado_em": "13/11/2026 15:00",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 435,
+  "total_faltas_mes": 437,
   "deficit": 18,
   "fi_dias": 124,
-  "fj_dias": 74,
+  "fj_dias": 75,
   "ferias": 14,
   "data_padrao_setor": "2026-11-13",
   "resumo_diario_map": {
@@ -89,12 +89,12 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-13": {
-      "taxa_abs": 7.0,
-      "faltas": 20,
+      "taxa_abs": 6.9,
+      "faltas": 22,
       "deficit": 1,
       "fi": 9,
-      "fj": 10,
-      "ferias": 5
+      "fj": 11,
+      "ferias": 6
     }
   },
   "grafico_setor_map": {
@@ -1237,26 +1237,26 @@ window.dadosPD = {
     "2026-11-13_GERAL": {
       "labels": [
         "FECHAMENTO",
-        "EXPEDICAO",
         "REABASTECIMENTO",
+        "EXPEDICAO",
         "SEPARACAO",
         "RECEBIMENTO",
         "PLANEJAMENTO"
       ],
       "data": [
         13.6,
-        7.8,
         7.5,
+        7.2,
         5.9,
-        2.4,
+        3.4,
         0.0
       ],
       "absolutos": [
         6,
-        4,
         3,
+        5,
         6,
-        1,
+        2,
         0
       ]
     },
@@ -1288,12 +1288,18 @@ window.dadosPD = {
     },
     "2026-11-13_2": {
       "labels": [
+        "RECEBIMENTO",
+        "EXPEDICAO",
         "PLANEJAMENTO"
       ],
       "data": [
+        5.9,
+        5.6,
         0.0
       ],
       "absolutos": [
+        1,
+        1,
         0
       ]
     },
@@ -2069,20 +2075,20 @@ window.dadosPD = {
       "labels": [
         "AMERICA",
         "PACTUAL",
-        "MEET",
-        "CEVA"
+        "CEVA",
+        "MEET"
       ],
       "data": [
-        13.3,
-        7.4,
-        6.2,
-        6.1
+        11.1,
+        10.0,
+        5.9,
+        5.8
       ],
       "absolutos": [
         4,
-        2,
         3,
-        11
+        12,
+        3
       ]
     },
     "2026-11-13_1": {
@@ -2106,9 +2112,18 @@ window.dadosPD = {
       ]
     },
     "2026-11-13_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        33.3,
+        4.0
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
     },
     "2026-11-13_3": {
       "labels": [
@@ -3742,20 +3757,25 @@ window.dadosPD = {
         ],
         [
           "FOLGA"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
         ]
       ],
       "data_abs": [
-        10,
+        11,
         9,
-        5,
+        6,
+        1,
         1,
         1
       ],
       "data_cum": [
-        38.5,
-        73.1,
-        92.3,
-        96.2,
+        37.9,
+        69.0,
+        89.7,
+        93.1,
+        96.6,
         100.0
       ]
     },
@@ -3793,9 +3813,27 @@ window.dadosPD = {
       ]
     },
     "2026-11-13_2": {
-      "labels": [],
-      "data_abs": [],
-      "data_cum": []
+      "labels": [
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
+        ]
+      ],
+      "data_abs": [
+        1,
+        1,
+        1
+      ],
+      "data_cum": [
+        33.3,
+        66.7,
+        100.0
+      ]
     },
     "2026-11-13_3": {
       "labels": [
@@ -3842,8 +3880,8 @@ window.dadosPD = {
       ],
       "data_abs": [
         204,
-        121,
-        87,
+        122,
+        88,
         52,
         49
       ]
@@ -3899,7 +3937,7 @@ window.dadosPD = {
           8.5,
           10.7,
           8.8,
-          7.0,
+          6.9,
           null,
           null,
           null,
@@ -3976,7 +4014,7 @@ window.dadosPD = {
           27,
           44,
           38,
-          20,
+          22,
           null,
           null,
           null,
@@ -4016,8 +4054,8 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 120,
-      "taxa": 8.6
+      "faltas": 122,
+      "taxa": 8.5
     }
   ],
   "todos_setores": [
@@ -4038,8 +4076,8 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 58,
-      "taxa": 10.4
+      "faltas": 59,
+      "taxa": 10.2
     },
     {
       "setor": "SEPARAÇÃO",
@@ -4048,8 +4086,8 @@ window.dadosPD = {
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 26,
-      "taxa": 4.4
+      "faltas": 27,
+      "taxa": 4.5
     },
     {
       "setor": "EXPEDIÇÃO",
@@ -4115,8 +4153,8 @@ window.dadosPD = {
     },
     {
       "lider": "RENAN ALVES REZENDE",
-      "faltas": 16,
-      "taxa": 9.8
+      "faltas": 17,
+      "taxa": 9.3
     },
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
@@ -4140,8 +4178,8 @@ window.dadosPD = {
     },
     {
       "lider": "EDMILSON BERTOLDO",
-      "faltas": 4,
-      "taxa": 2.4
+      "faltas": 5,
+      "taxa": 2.7
     },
     {
       "lider": "FABIANE ALVES",
