@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "13/11/2026 12:08",
+  "atualizado_em": "13/11/2026 12:09",
   "taxa_abs": 10.0,
   "total_faltas_mes": 436,
   "deficit": 18,
@@ -1240,21 +1240,24 @@ window.dadosPD = {
         "EXPEDICAO",
         "REABASTECIMENTO",
         "SEPARACAO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
         13.6,
         9.8,
         7.5,
         5.9,
-        2.4
+        2.4,
+        0.0
       ],
       "absolutos": [
         6,
         5,
         3,
         6,
-        1
+        1,
+        0
       ]
     },
     "2026-11-13_1": {
@@ -1262,6 +1265,7 @@ window.dadosPD = {
         "FECHAMENTO",
         "EXPEDICAO",
         "SEPARACAO",
+        "PLANEJAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
@@ -1270,6 +1274,7 @@ window.dadosPD = {
         8.3,
         4.0,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
@@ -1277,13 +1282,20 @@ window.dadosPD = {
         2,
         2,
         0,
+        0,
         0
       ]
     },
     "2026-11-13_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "PLANEJAMENTO"
+      ],
+      "data": [
+        0.0
+      ],
+      "absolutos": [
+        0
+      ]
     },
     "2026-11-13_3": {
       "labels": [
@@ -1291,21 +1303,24 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "EXPEDICAO",
         "SEPARACAO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "PLANEJAMENTO"
       ],
       "data": [
         13.6,
         13.0,
         11.1,
         7.8,
-        5.3
+        5.3,
+        0.0
       ],
       "absolutos": [
         3,
         3,
         3,
         4,
-        1
+        1,
+        0
       ]
     }
   },
@@ -2060,7 +2075,7 @@ window.dadosPD = {
       "data": [
         13.3,
         7.4,
-        7.0,
+        6.6,
         6.2
       ],
       "absolutos": [
@@ -2081,7 +2096,7 @@ window.dadosPD = {
         18.2,
         14.3,
         5.0,
-        3.1
+        3.0
       ],
       "absolutos": [
         2,
@@ -2103,7 +2118,7 @@ window.dadosPD = {
       ],
       "data": [
         13.0,
-        12.0,
+        11.7,
         7.1
       ],
       "absolutos": [
@@ -3884,7 +3899,7 @@ window.dadosPD = {
           8.5,
           10.7,
           8.8,
-          7.6,
+          7.3,
           null,
           null,
           null,
@@ -4135,10 +4150,7 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
-    "<strong style='color:#f6b93b;'>ATENÇÃO: O site falhou. Baseado no último histórico!</strong>",
-    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
 };
