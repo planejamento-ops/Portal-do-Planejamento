@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "13/11/2026 00:04",
+  "atualizado_em": "13/11/2026 01:02",
   "taxa_abs": 10.2,
   "total_faltas_mes": 415,
   "deficit": 18,
@@ -3887,6 +3887,14 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
-    "<strong style='color:#f6b93b;'>ATENÇÃO: O site falhou. Baseado no último histórico!</strong>"
+    "<strong style='color:#f6b93b;'>ATENÇÃO: O site falhou. Baseado no último histórico!</strong>",
+    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T3</strong>: CLEITON MAGNO SILVA JUVENTINO",
+    "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
+    "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
+    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
+    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T3</strong>: RICARDO EUGENIO LAURINDO",
+    "<strong style='color:#ffffff;'>T3</strong>: TARCISIO RICARDO MARTINS CLARO"
   ]
 };
