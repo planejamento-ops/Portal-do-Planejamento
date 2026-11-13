@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "13/11/2026 17:35",
+  "atualizado_em": "13/11/2026 18:01",
   "taxa_abs": 10.0,
   "total_faltas_mes": 449,
   "deficit": 18,
@@ -1247,7 +1247,7 @@ window.dadosPD = {
         10.9,
         10.4,
         7.2,
-        6.7,
+        6.6,
         3.4,
         0.0
       ],
@@ -1300,7 +1300,7 @@ window.dadosPD = {
         5.9,
         5.6,
         5.0,
-        5.0,
+        4.8,
         0.0
       ],
       "absolutos": [
@@ -2131,7 +2131,7 @@ window.dadosPD = {
         28.6,
         17.6,
         12.5,
-        3.9
+        3.8
       ],
       "absolutos": [
         6,
@@ -4209,12 +4209,11 @@ window.dadosPD = {
     {
       "lider": "FABIANE ALVES",
       "faltas": 4,
-      "taxa": 23.5
+      "taxa": 22.2
     }
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T2</strong>: FABIANE ALVES",
     "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
