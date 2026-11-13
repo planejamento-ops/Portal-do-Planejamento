@@ -1,100 +1,100 @@
 window.dadosPD = {
-  "atualizado_em": "13/11/2026 12:09",
-  "taxa_abs": 10.0,
-  "total_faltas_mes": 436,
+  "atualizado_em": "13/11/2026 14:13",
+  "taxa_abs": 9.9,
+  "total_faltas_mes": 435,
   "deficit": 18,
-  "fi_dias": 125,
+  "fi_dias": 124,
   "fj_dias": 74,
   "ferias": 14,
   "data_padrao_setor": "2026-11-13",
   "resumo_diario_map": {
     "2026-11-02": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 16.8,
+      "faltas": 72,
+      "deficit": 4,
+      "fi": 44,
+      "fj": 24,
+      "ferias": 3
     },
     "2026-11-03": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 11.5,
+      "faltas": 50,
+      "deficit": 6,
+      "fi": 24,
+      "fj": 20,
+      "ferias": 6
     },
     "2026-11-04": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 7.7,
+      "faltas": 30,
+      "deficit": 6,
+      "fi": 9,
+      "fj": 15,
+      "ferias": 9
     },
     "2026-11-05": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 7.0,
+      "faltas": 30,
+      "deficit": 3,
+      "fi": 20,
+      "fj": 7,
+      "ferias": 10
     },
     "2026-11-06": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 7.7,
+      "faltas": 33,
+      "deficit": 4,
+      "fi": 15,
+      "fj": 13,
+      "ferias": 10
     },
     "2026-11-07": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 10.6,
+      "faltas": 44,
+      "deficit": 9,
+      "fi": 21,
+      "fj": 14,
+      "ferias": 8
     },
     "2026-11-09": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 11.7,
+      "faltas": 47,
+      "deficit": 7,
+      "fi": 30,
+      "fj": 10,
+      "ferias": 9
     },
     "2026-11-10": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 8.5,
+      "faltas": 27,
+      "deficit": 4,
+      "fi": 8,
+      "fj": 15,
+      "ferias": 9
     },
     "2026-11-11": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 10.7,
+      "faltas": 44,
+      "deficit": 4,
+      "fi": 23,
+      "fj": 16,
+      "ferias": 9
     },
     "2026-11-12": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 8.8,
+      "faltas": 38,
+      "deficit": 3,
+      "fi": 25,
+      "fj": 10,
+      "ferias": 9
     },
     "2026-11-13": {
-      "taxa_abs": 0,
-      "faltas": 0,
-      "deficit": 0,
-      "fi": 0,
-      "fj": 0,
-      "ferias": 0
+      "taxa_abs": 7.0,
+      "faltas": 20,
+      "deficit": 1,
+      "fi": 9,
+      "fj": 10,
+      "ferias": 5
     }
   },
   "grafico_setor_map": {
@@ -1245,7 +1245,7 @@ window.dadosPD = {
       ],
       "data": [
         13.6,
-        9.8,
+        7.8,
         7.5,
         5.9,
         2.4,
@@ -1253,7 +1253,7 @@ window.dadosPD = {
       ],
       "absolutos": [
         6,
-        5,
+        4,
         3,
         6,
         1,
@@ -1271,7 +1271,7 @@ window.dadosPD = {
       ],
       "data": [
         13.6,
-        8.3,
+        4.2,
         4.0,
         0.0,
         0.0,
@@ -1279,7 +1279,7 @@ window.dadosPD = {
       ],
       "absolutos": [
         3,
-        2,
+        1,
         2,
         0,
         0,
@@ -2069,20 +2069,20 @@ window.dadosPD = {
       "labels": [
         "AMERICA",
         "PACTUAL",
-        "CEVA",
-        "MEET"
+        "MEET",
+        "CEVA"
       ],
       "data": [
         13.3,
         7.4,
-        6.6,
-        6.2
+        6.2,
+        6.1
       ],
       "absolutos": [
         4,
         2,
-        12,
-        3
+        3,
+        11
       ]
     },
     "2026-11-13_1": {
@@ -2096,13 +2096,13 @@ window.dadosPD = {
         18.2,
         14.3,
         5.0,
-        3.0
+        2.0
       ],
       "absolutos": [
         2,
         1,
         1,
-        3
+        2
       ]
     },
     "2026-11-13_2": {
@@ -3729,10 +3729,10 @@ window.dadosPD = {
     "2026-11-13_GERAL": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FALTA INJUSTIFICADA"
         ],
         [
           "FÉRIAS"
@@ -3746,16 +3746,16 @@ window.dadosPD = {
       ],
       "data_abs": [
         10,
-        10,
+        9,
         5,
         1,
         1
       ],
       "data_cum": [
-        37.0,
-        74.1,
-        92.6,
-        96.3,
+        38.5,
+        73.1,
+        92.3,
+        96.2,
         100.0
       ]
     },
@@ -3778,17 +3778,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        5,
+        4,
         1,
         1,
         1,
         1
       ],
       "data_cum": [
-        55.6,
-        66.7,
-        77.8,
-        88.9,
+        50.0,
+        62.5,
+        75.0,
+        87.5,
         100.0
       ]
     },
@@ -3841,7 +3841,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        205,
+        204,
         121,
         87,
         52,
@@ -3899,7 +3899,7 @@ window.dadosPD = {
           8.5,
           10.7,
           8.8,
-          7.3,
+          7.0,
           null,
           null,
           null,
@@ -3976,7 +3976,7 @@ window.dadosPD = {
           27,
           44,
           38,
-          21,
+          20,
           null,
           null,
           null,
@@ -4011,8 +4011,8 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 138,
-      "taxa": 9.6
+      "faltas": 137,
+      "taxa": 9.5
     },
     {
       "turno": "2º Turno",
@@ -4038,8 +4038,8 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 59,
-      "taxa": 10.5
+      "faltas": 58,
+      "taxa": 10.4
     },
     {
       "setor": "SEPARAÇÃO",
@@ -4105,8 +4105,8 @@ window.dadosPD = {
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
-      "faltas": 23,
-      "taxa": 10.6
+      "faltas": 22,
+      "taxa": 10.1
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
