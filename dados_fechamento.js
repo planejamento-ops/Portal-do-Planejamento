@@ -1,11 +1,11 @@
 window.dadosFechamento = {
-  "atualizado_em": "13/11/2026 11:13",
+  "atualizado_em": "13/11/2026 11:24",
   "progresso_geral_pct": 88,
   "total_cxs_geral": 40974,
   "total_loaded_cxs_geral": 36331,
   "total_pending_cxs_geral": 4643,
   "cards_atendimentos": {
-    "VAREJO": {
+    "VAREJO - SP": {
       "total_tus": 16,
       "total_cxs": 7891,
       "loaded_cxs": 7574,
@@ -20,40 +20,40 @@ window.dadosFechamento = {
       "pct": 99,
       "status_atend": "EM ANDAMENTO"
     },
-    "CARTEIRA": {
-      "total_tus": 17,
-      "total_cxs": 29097,
-      "loaded_cxs": 25494,
+    "CARTEIRA - MGC": {
+      "total_tus": 3,
+      "total_cxs": 6212,
+      "loaded_cxs": 2609,
       "rampa_cxs": 780,
       "pending_cxs": 2823,
-      "finalizadas_gv_cx": 14181,
-      "finalizadas_fr_cx": 11313,
+      "finalizadas_gv_cx": 2082,
+      "finalizadas_fr_cx": 527,
       "rampa_gv_cx": 609,
       "rampa_fr_cx": 171,
       "pendentes_gv_cx": 1113,
       "pendentes_fr_cx": 1710,
-      "pct": 90,
+      "pct": 54,
       "status_atend": "EM ANDAMENTO"
     },
-    "ESTOJO": {
-      "total_tus": 3,
-      "total_cxs": 3986,
-      "loaded_cxs": 1858,
+    "ESTOJO - MGC": {
+      "total_tus": 2,
+      "total_cxs": 2371,
+      "loaded_cxs": 243,
       "rampa_cxs": 366,
       "pending_cxs": 1762,
-      "finalizadas_gv_cx": 1015,
-      "finalizadas_fr_cx": 843,
+      "finalizadas_gv_cx": 203,
+      "finalizadas_fr_cx": 40,
       "rampa_gv_cx": 363,
       "rampa_fr_cx": 3,
       "pendentes_gv_cx": 1256,
       "pendentes_fr_cx": 506,
-      "pct": 55,
+      "pct": 25,
       "status_atend": "EM ANDAMENTO"
     }
   },
   "tabela": [
     {
-      "atendimento": "VAREJO",
+      "atendimento": "VAREJO - SP",
       "carreta": "Carreta 11",
       "tu": "610000013570",
       "total_caixas": 503,
@@ -65,7 +65,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "VAREJO",
+      "atendimento": "VAREJO - SP",
       "carreta": "Carreta 11",
       "tu": "610000013589",
       "total_caixas": 490,
@@ -77,7 +77,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "VAREJO",
+      "atendimento": "VAREJO - SP",
       "carreta": "Carreta 12",
       "tu": "610000013590",
       "total_caixas": 446,
@@ -89,7 +89,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "CARTEIRA",
+      "atendimento": "CARTEIRA - MGC",
       "carreta": "Carreta 01",
       "tu": "610000013522",
       "total_caixas": 2066,
@@ -101,7 +101,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "CARTEIRA",
+      "atendimento": "CARTEIRA - MGC",
       "carreta": "Carreta 02",
       "tu": "610000013524",
       "total_caixas": 2093,
@@ -113,7 +113,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "CARTEIRA",
+      "atendimento": "CARTEIRA - MGC",
       "carreta": "Carreta 03",
       "tu": "610000013566",
       "total_caixas": 2053,
@@ -125,7 +125,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "ESTOJO",
+      "atendimento": "ESTOJO - MGC",
       "carreta": "Carreta 04",
       "tu": "610000013567",
       "total_caixas": 1195,
@@ -137,7 +137,7 @@ window.dadosFechamento = {
       "status": "EM ANDAMENTO"
     },
     {
-      "atendimento": "ESTOJO",
+      "atendimento": "ESTOJO - MGC",
       "carreta": "Carreta 05",
       "tu": "610000013568",
       "total_caixas": 1176,
