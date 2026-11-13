@@ -1,6 +1,6 @@
 window.dadosPD = {
-  "atualizado_em": "13/11/2026 07:01",
-  "taxa_abs": 10.2,
+  "atualizado_em": "13/11/2026 08:01",
+  "taxa_abs": 10.1,
   "total_faltas_mes": 435,
   "deficit": 18,
   "fi_dias": 126,
@@ -1247,7 +1247,7 @@ window.dadosPD = {
         13.0,
         12.2,
         7.8,
-        5.3
+        2.4
       ],
       "absolutos": [
         6,
@@ -1260,15 +1260,18 @@ window.dadosPD = {
     "2026-11-13_1": {
       "labels": [
         "FECHAMENTO",
-        "EXPEDICAO"
+        "EXPEDICAO",
+        "RECEBIMENTO"
       ],
       "data": [
         14.3,
-        13.6
+        13.6,
+        0.0
       ],
       "absolutos": [
         3,
-        3
+        3,
+        0
       ]
     },
     "2026-11-13_2": {
@@ -2049,10 +2052,10 @@ window.dadosPD = {
         "PACTUAL"
       ],
       "data": [
-        15.4,
-        12.1,
+        14.8,
+        10.2,
         5.9,
-        5.6
+        5.3
       ],
       "absolutos": [
         4,
@@ -2068,9 +2071,9 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        50.0,
         33.3,
-        12.5
+        25.0,
+        7.7
       ],
       "absolutos": [
         1,
@@ -3862,7 +3865,7 @@ window.dadosPD = {
           8.5,
           10.7,
           8.8,
-          10.8,
+          9.7,
           null,
           null,
           null,
@@ -3975,7 +3978,7 @@ window.dadosPD = {
     {
       "turno": "1º Turno",
       "faltas": 137,
-      "taxa": 10.2
+      "taxa": 10.0
     },
     {
       "turno": "2º Turno",
@@ -4012,7 +4015,7 @@ window.dadosPD = {
     {
       "setor": "RECEBIMENTO",
       "faltas": 26,
-      "taxa": 4.6
+      "taxa": 4.4
     },
     {
       "setor": "EXPEDIÇÃO",
@@ -4089,7 +4092,7 @@ window.dadosPD = {
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
       "faltas": 11,
-      "taxa": 5.0
+      "taxa": 4.6
     },
     {
       "lider": "MARCONDES DOS SANTOS",
@@ -4113,6 +4116,10 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
+    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
