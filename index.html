@@ -587,7 +587,8 @@
                             <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">view_carousel</span>
                             Status por Atendimento
                         </h4>
-                        <div id="container-cards-atendimentos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px;">
+                        <!-- Estrutura Principal dos Cards -->
+                        <div id="container-cards-atendimentos" style="display: flex; flex-direction: column; gap: 20px;">
                             <p style="color:#a0aab5; font-size:0.75rem;">Carregando atendimentos em andamento...</p>
                         </div>
                     </div>
@@ -598,7 +599,8 @@
                             <table class="tu-table" id="tbl-fechamento">
                                 <thead style="position: sticky; top: 0; z-index: 2;">
                                     <tr class="table-fechamento-header">
-                                        <th style="text-align: left; padding-left: 8px;">ATENDIMENTO<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
+                                        <th style="text-align: left; padding-left: 8px;">UF<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..." style="width: 50px;"></th>
+                                        <th style="text-align: left;">ATENDIMENTO<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
                                         <th style="text-align: left;">CARRETA<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
                                         <th>TU<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
                                         <th>CAIXAS PROCESSADAS<br><input type="text" class="input-filtro-tabela" onkeyup="filtrarTabelaFechamento()" placeholder="Filtrar..."></th>
@@ -607,7 +609,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tbl-fechamento-body">
-                                    <tr><td colspan="6" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados do SAP...</td></tr>
+                                    <tr><td colspan="7" style="text-align: center; color: #a0aab5; padding: 15px;">Carregando dados do SAP...</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -634,6 +636,56 @@
                         <div style="flex: 1;">
                             <strong style="color: #e64343; font-size: 0.8rem; display: block; margin-bottom: 2px;">⚠️ PD PENDENTE</strong>
                             <span id="pd-alert-text" style="color: #a0aab5; font-size: 0.72rem; line-height: 1.4;"></span>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- CARDS DE VISÃO DIÁRIA (DINÂMICOS)          -->
+                    <!-- ========================================== -->
+                    <h4 style="color: #ffffff; font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; margin-top: 5px; display: flex; align-items: center; gap: 8px;">
+                        <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">today</span>
+                        Raio-X Diário <small style="color: #a0aab5; font-size: 0.65rem; font-weight: 600;">(Muda conforme a data selecionada nos gráficos abaixo)</small>
+                    </h4>
+                    <div class="tu-grid-main" style="grid-template-columns: repeat(5, 1fr);">
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">person_off</span>
+                            <div class="tu-info">
+                                <span class="label">Taxa de Absenteísmo (Dia)</span>
+                                <h3 id="pd-taxa-abs-dia">--%</h3>
+                                <small id="pd-sub-abs-dia">-- faltas no dia</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-cyan" style="border-color: rgba(0, 210, 255, 0.6); box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.1);">
+                            <span class="material-symbols-outlined icon">warning</span>
+                            <div class="tu-info">
+                                <span class="label">Déficit de Efetivo (Dia)</span>
+                                <h3 id="pd-deficit-dia">--</h3>
+                                <small>Desligamentos</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">engineering</span>
+                            <div class="tu-info">
+                                <span class="label">Faltas Injustificadas (Dia)</span>
+                                <h3 id="pd-injustificadas-dia">--</h3>
+                                <small>Sem Atestado / Justificativa</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">fact_check</span>
+                            <div class="tu-info">
+                                <span class="label">Ausências Justificadas (Dia)</span>
+                                <h3 id="pd-justificadas-dia">--</h3>
+                                <small>Atestados / Licenças</small>
+                            </div>
+                        </div>
+                        <div class="tu-card card-cyan">
+                            <span class="material-symbols-outlined icon">flight_takeoff</span>
+                            <div class="tu-info">
+                                <span class="label">Colaboradores em Férias</span>
+                                <h3 id="pd-ferias-dia">--</h3>
+                                <small>No dia selecionado</small>
+                            </div>
                         </div>
                     </div>
 
@@ -1552,49 +1604,86 @@
 
                 const containerAtend = document.getElementById('container-cards-atendimentos');
                 if (containerAtend && fech.cards_atendimentos) {
-                    let htmlCards = '';
+                    
+                    const grupos = { "VAREJO & CARTEIRA": {}, "ESTOJO": {} };
+                    
                     Object.keys(fech.cards_atendimentos).forEach(atend => {
-                        const item = fech.cards_atendimentos[atend];
-                        let badgeColor = '#00d2ff'; let badgeBg = 'rgba(0, 210, 255, 0.12)'; let badgeBorder = 'rgba(0, 210, 255, 0.3)';
-                        if (item.status_atend === 'FINALIZADO') { badgeColor = '#00b09b'; badgeBg = 'rgba(0, 176, 155, 0.12)'; badgeBorder = 'rgba(0, 176, 155, 0.3)'; } 
-                        else if (item.status_atend === 'PENDENTE') { badgeColor = '#f6b93b'; badgeBg = 'rgba(246, 185, 59, 0.12)'; badgeBorder = 'rgba(246, 185, 59, 0.3)'; }
-
-                        const totalProc = (item.loaded_cxs || 0) + (item.rampa_cxs || 0);
-
-                        htmlCards += `
-                            <div class="tu-detail-box" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(0, 210, 255, 0.3); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">
-                                    <div style="display: flex; align-items: center; gap: 6px;">
-                                        <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">local_shipping</span>
-                                        <span style="font-size: 0.95rem; font-weight: 800; color: #ffffff; letter-spacing: 0.5px;">${atend}</span>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 6px;">
-                                        <span style="font-size: 0.7rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 8px; border-radius: 6px; border: 1px solid ${badgeBorder};">${item.status_atend}</span>
-                                        <span style="font-size: 0.82rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 10px; border-radius: 12px; border: 1px solid ${badgeBorder};">${item.pct}% FLUXO</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #a0aab5;">
-                                    <span>Total Caixas: <strong style="color: #fff;">${formatarNumeroInteiro(item.total_cxs)}</strong></span>
-                                    <span>Processadas: <strong style="color: #00d2ff;">${formatarNumeroInteiro(totalProc)}</strong></span>
-                                    <span>Pendentes: <strong style="color: #f6b93b;">${formatarNumeroInteiro(item.pending_cxs)}</strong></span>
-                                </div>
-                                <div class="progress-bar-container" style="height: 6px; margin-top: 0;">
-                                    <div class="progress-bar-fill" style="width: ${item.pct}%; background: ${item.pct === 100 ? '#00b09b' : 'linear-gradient(90deg, #00b09b, #00d2ff)'};"></div>
-                                </div>
-                                <table class="tu-table" style="font-size: 0.68rem; background: rgba(0,0,0,0.25); border-radius: 8px; overflow: hidden; margin-top: 2px;">
-                                    <thead><tr style="background: rgba(255,255,255,0.03);"><th style="text-align: left; padding-left: 8px;">CAIXAS</th><th>GV</th><th>LN</th></tr></thead>
-                                    <tbody>
-                                        <tr><td style="color: #00b09b; font-weight:700; text-align: left; padding-left: 8px;">CONCLUÍDAS</td><td><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_gv_cx)}</span></td><td><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_fr_cx)}</span></td></tr>
-                                        <tr><td style="color: #f6b93b; font-weight:700; text-align: left; padding-left: 8px;">PENDENTES</td><td><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_gv_cx)}</span></td><td><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_fr_cx)}</span></td></tr>
-                                    </tbody>
-                                </table>
-                                <div style="display: flex; justify-content: space-between; background: rgba(15, 23, 42, 0.85); padding: 8px 12px; border-radius: 8px; font-size: 0.72rem; border: 1px solid rgba(255, 255, 255, 0.08);">
-                                    <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; background: #00b09b; border-radius: 50%; display: inline-block;"></span> Carregado: <strong style="color: #00b09b; font-size: 0.8rem;">${formatarNumeroInteiro(item.loaded_cxs)}</strong></span>
-                                    <span style="color: #ffffff; display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; background: #00d2ff; border-radius: 50%; display: inline-block;"></span> Rampa OK: <strong style="color: #00d2ff; font-size: 0.8rem;">${formatarNumeroInteiro(item.rampa_cxs)}</strong></span>
-                                </div>
-                            </div>
-                        `;
+                        const grupoNome = (atend === 'VAREJO' || atend === 'CARTEIRA') ? 'VAREJO & CARTEIRA' : (atend === 'ESTOJO' ? 'ESTOJO' : atend);
+                        if (!grupos[grupoNome]) grupos[grupoNome] = {};
+                        
+                        Object.keys(fech.cards_atendimentos[atend]).forEach(uf => {
+                            grupos[grupoNome][`${atend} - ${uf}`] = fech.cards_atendimentos[atend][uf];
+                        });
                     });
+
+                    let htmlCards = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 16px; align-items: start;">';
+                    
+                    Object.keys(grupos).forEach(grupoNome => {
+                        const chavesUfs = Object.keys(grupos[grupoNome]);
+                        if (chavesUfs.length === 0) return; 
+                        
+                        let iconeGrupo = grupoNome === 'VAREJO & CARTEIRA' ? 'local_shipping' : 'inventory_2';
+                        
+                        htmlCards += `
+                            <div style="background: rgba(15, 23, 42, 0.4); border-radius: 12px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column;">
+                                <h3 style="color: #ffffff; font-size: 0.95rem; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                                    <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 18px;">${iconeGrupo}</span> ${grupoNome}
+                                </h3>
+                                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        `;
+                        
+                        chavesUfs.forEach(chaveCard => {
+                            const item = grupos[grupoNome][chaveCard];
+                            let badgeColor = '#00d2ff'; let badgeBg = 'rgba(0, 210, 255, 0.12)'; let badgeBorder = 'rgba(0, 210, 255, 0.3)';
+                            if (item.status_atend === 'FINALIZADO') { badgeColor = '#00b09b'; badgeBg = 'rgba(0, 176, 155, 0.12)'; badgeBorder = 'rgba(0, 176, 155, 0.3)'; } 
+                            else if (item.status_atend === 'PENDENTE') { badgeColor = '#f6b93b'; badgeBg = 'rgba(246, 185, 59, 0.12)'; badgeBorder = 'rgba(246, 185, 59, 0.3)'; }
+
+                            const totalProc = (item.loaded_cxs || 0) + (item.rampa_cxs || 0);
+                            const partes = chaveCard.split(' - ');
+                            const tagAtend = partes[0];
+                            const tagUf = partes.length > 1 ? partes[1] : partes[0];
+
+                            htmlCards += `
+                                <div class="tu-detail-box" style="flex: 1 1 240px; max-width: 320px; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(0, 210, 255, 0.3); border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 6px;">
+                                        <div style="display: flex; flex-direction: column; gap: 2px;">
+                                            <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">${tagAtend}</span>
+                                            <div style="display: flex; align-items: center; gap: 4px;">
+                                                <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 14px;">share_location</span>
+                                                <span style="font-size: 0.9rem; font-weight: 800; color: #ffffff;">${tagUf}</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                                            <span style="font-size: 0.65rem; font-weight: 800; color: ${badgeColor}; background: ${badgeBg}; padding: 2px 6px; border-radius: 4px; border: 1px solid ${badgeBorder};">${item.status_atend}</span>
+                                            <span style="font-size: 0.8rem; font-weight: 800; color: ${badgeColor};">${item.pct}%</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: #a0aab5;">
+                                        <span>Total: <strong style="color: #fff;">${formatarNumeroInteiro(item.total_cxs)}</strong></span>
+                                        <span>Proc: <strong style="color: #00d2ff;">${formatarNumeroInteiro(totalProc)}</strong></span>
+                                        <span>Pend: <strong style="color: #f6b93b;">${formatarNumeroInteiro(item.pending_cxs)}</strong></span>
+                                    </div>
+                                    <div class="progress-bar-container" style="height: 4px; margin-top: 0;">
+                                        <div class="progress-bar-fill" style="width: ${item.pct}%; background: ${item.pct === 100 ? '#00b09b' : 'linear-gradient(90deg, #00b09b, #00d2ff)'};"></div>
+                                    </div>
+                                    <table class="tu-table" style="font-size: 0.65rem; background: rgba(0,0,0,0.25); border-radius: 6px; margin-top: 2px;">
+                                        <thead><tr style="background: rgba(255,255,255,0.03);"><th style="text-align: left; padding: 4px;">CAIXAS</th><th style="padding: 4px;">GV</th><th style="padding: 4px;">LN</th></tr></thead>
+                                        <tbody>
+                                            <tr><td style="color: #00b09b; font-weight:700; text-align: left; padding: 4px;">CONCL.</td><td style="padding: 4px;"><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_gv_cx)}</span></td><td style="padding: 4px;"><span class="val" style="color: #00b09b;">${formatarNumeroInteiro(item.finalizadas_fr_cx)}</span></td></tr>
+                                            <tr><td style="color: #f6b93b; font-weight:700; text-align: left; padding: 4px;">PEND.</td><td style="padding: 4px;"><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_gv_cx)}</span></td><td style="padding: 4px;"><span class="val" style="color: #f6b93b;">${formatarNumeroInteiro(item.pendentes_fr_cx)}</span></td></tr>
+                                        </tbody>
+                                    </table>
+                                    <div style="display: flex; justify-content: space-between; background: rgba(15, 23, 42, 0.85); padding: 6px 8px; border-radius: 6px; font-size: 0.68rem; border: 1px solid rgba(255, 255, 255, 0.08);">
+                                        <span style="color: #ffffff; display: flex; align-items: center; gap: 4px;"><span style="width: 6px; height: 6px; background: #00b09b; border-radius: 50%; display: inline-block;"></span> Carr: <strong style="color: #00b09b;">${formatarNumeroInteiro(item.loaded_cxs)}</strong></span>
+                                        <span style="color: #ffffff; display: flex; align-items: center; gap: 4px;"><span style="width: 6px; height: 6px; background: #00d2ff; border-radius: 50%; display: inline-block;"></span> Rampa: <strong style="color: #00d2ff;">${formatarNumeroInteiro(item.rampa_cxs)}</strong></span>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        htmlCards += `</div></div>`;
+                    });
+                    
+                    htmlCards += `</div>`;
                     containerAtend.innerHTML = htmlCards || '<p style="color:#a0aab5; font-size:0.75rem;">Nenhum atendimento ativo no momento.</p>';
                 }
 
@@ -1608,17 +1697,24 @@
                             else if (i.status === 'EM RAMPA') { tagColor = '#3b82f6'; tagBg = 'rgba(59, 130, 246, 0.12)'; } 
                             else if (i.status === 'PENDENTE') { tagColor = '#f6b93b'; tagBg = 'rgba(246, 185, 59, 0.12)'; }
                             
-                            const carregadoVal = i.caixas_carregadas || 0; const rampaVal = i.caixas_rampa || 0;
+                            const carregadoVal = i.caixas_carregadas || 0; 
+                            const rampaVal = i.caixas_rampa || 0;
+                            const tdPendVal = i.caixas_pendentes_sap || 0;
                             const totalProc = i.caixas_processadas || (carregadoVal + rampaVal);
 
                             linhasFech += `
                                 <tr>
-                                    <td style="font-weight:700; color:#00d2ff; text-align: left; padding-left: 8px;">${i.atendimento}</td>
-                                    <td style="text-align: left; color:#ffffff;">${i.carreta}</td>
+                                    <td style="font-weight:700; color:#00d2ff; text-align: left; padding-left: 8px;">${i.uf || '-'}</td>
+                                    <td style="font-weight:700; color:#ffffff; text-align: left;">${i.atendimento}</td>
+                                    <td style="text-align: left; color:#cbd5e1;">${i.carreta}</td>
                                     <td style="font-weight:700;">${i.tu}</td>
                                     <td>
                                         <div><strong style="color:#fff;">${formatarNumeroInteiro(totalProc)}</strong> / ${formatarNumeroInteiro(i.total_caixas)}</div>
-                                        <div style="font-size:0.64rem; color:#cbd5e1; margin-top:2px; font-weight:600;"><span style="color:#00b09b;">${carregadoVal} Carregado</span> | <span style="color:#00d2ff;">${rampaVal} Rampa OK</span></div>
+                                        <div style="font-size:0.64rem; color:#cbd5e1; margin-top:2px; font-weight:600; display:flex; justify-content:center; gap:6px;">
+                                            <span style="color:#00d2ff;">${rampaVal} Rampa</span> | 
+                                            <span style="color:#00b09b;">${carregadoVal} Carr</span> | 
+                                            <span style="color:#f6b93b;">${tdPendVal} Pend</span>
+                                        </div>
                                     </td>
                                     <td>
                                         <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
@@ -1630,9 +1726,12 @@
                                 </tr>`;
                         });
                         tbodyFech.innerHTML = linhasFech;
-                    } else tbodyFech.innerHTML = `<tr><td colspan="6" style="text-align:center; color:#00b09b;">✨ Nenhuma TU pendente ou na linha no momento</td></tr>`;
+                    } else {
+                        tbodyFech.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#00b09b;">✨ Nenhuma TU pendente ou na linha no momento</td></tr>`;
+                    }
                 }
             }
+            
 
             if (typeof dadosPD !== 'undefined') {
                 const pd = dadosPD;
@@ -1710,6 +1809,7 @@
         }
 
         window.onload = carregarScriptsSemCache;
+
     </script>
     <!-- ========================================== -->
     <!-- MODAL SANEADOR DE UMB (OVERLAY)            -->
