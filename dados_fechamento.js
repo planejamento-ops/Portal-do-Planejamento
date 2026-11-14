@@ -1,59 +1,29 @@
 window.dadosFechamento = {
-  "atualizado_em": "14/11/2026 04:27",
+  "atualizado_em": "14/11/2026 05:01",
   "progresso_geral_pct": 99,
   "total_cxs_geral": 42439,
-  "total_loaded_cxs_geral": 42336,
-  "total_pending_cxs_geral": 103,
+  "total_loaded_cxs_geral": 42349,
+  "total_pending_cxs_geral": 90,
   "cards_atendimentos": {
     "CARTEIRA": {
       "MGC": {
         "total_tus": 4,
         "total_cxs": 7678,
         "loaded_cxs": 7518,
-        "rampa_cxs": 57,
-        "pending_cxs": 103,
+        "rampa_cxs": 70,
+        "pending_cxs": 90,
         "finalizadas_gv_cx": 4573,
         "finalizadas_fr_cx": 2945,
         "rampa_gv_cx": 6,
-        "rampa_fr_cx": 51,
+        "rampa_fr_cx": 64,
         "pendentes_gv_cx": 10,
-        "pendentes_fr_cx": 93,
+        "pendentes_fr_cx": 80,
         "pct": 98,
         "status_atend": "EM ANDAMENTO"
-      }
-    },
-    "ESTOJO": {
-      "MGC": {
-        "total_tus": 2,
-        "total_cxs": 2370,
-        "loaded_cxs": 2370,
-        "rampa_cxs": 0,
-        "pending_cxs": 0,
-        "finalizadas_gv_cx": 1821,
-        "finalizadas_fr_cx": 549,
-        "rampa_gv_cx": 0,
-        "rampa_fr_cx": 0,
-        "pendentes_gv_cx": 0,
-        "pendentes_fr_cx": 0,
-        "pct": 100,
-        "status_atend": "FINALIZADO"
       }
     }
   },
   "tabela": [
-    {
-      "uf": "MGC",
-      "atendimento": "ESTOJO",
-      "carreta": "Carreta 05",
-      "tu": "610000013568",
-      "total_caixas": 1175,
-      "caixas_carregadas": 1175,
-      "caixas_rampa": 0,
-      "caixas_pendentes_sap": 0,
-      "caixas_processadas": 1175,
-      "pct": 100,
-      "status": "FINALIZADA"
-    },
     {
       "uf": "MGC",
       "atendimento": "CARTEIRA",
@@ -74,9 +44,9 @@ window.dadosFechamento = {
       "tu": "610000013524",
       "total_caixas": 2093,
       "caixas_carregadas": 2052,
-      "caixas_rampa": 9,
-      "caixas_pendentes_sap": 4,
-      "caixas_processadas": 2061,
+      "caixas_rampa": 14,
+      "caixas_pendentes_sap": 6,
+      "caixas_processadas": 2066,
       "pct": 98,
       "status": "EM ANDAMENTO"
     },
@@ -100,9 +70,9 @@ window.dadosFechamento = {
       "tu": "610000013523",
       "total_caixas": 1466,
       "caixas_carregadas": 1392,
-      "caixas_rampa": 35,
+      "caixas_rampa": 43,
       "caixas_pendentes_sap": 6,
-      "caixas_processadas": 1427,
+      "caixas_processadas": 1435,
       "pct": 97,
       "status": "EM ANDAMENTO"
     }
