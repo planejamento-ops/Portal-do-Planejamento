@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "14/11/2026 16:00",
-  "taxa_abs": 10.1,
-  "total_faltas_mes": 487,
+  "atualizado_em": "14/11/2026 17:01",
+  "taxa_abs": 10.3,
+  "total_faltas_mes": 501,
   "deficit": 18,
-  "fi_dias": 133,
+  "fi_dias": 136,
   "fj_dias": 76,
   "ferias": 14,
   "data_padrao_setor": "2026-11-14",
@@ -97,12 +97,12 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-14": {
-      "taxa_abs": 11.4,
-      "faltas": 38,
+      "taxa_abs": 13.5,
+      "faltas": 52,
       "deficit": 1,
-      "fi": 24,
+      "fi": 38,
       "fj": 8,
-      "ferias": 5
+      "ferias": 7
     }
   },
   "grafico_setor_map": {
@@ -1349,22 +1349,22 @@ window.dadosPD = {
     "2026-11-14_GERAL": {
       "labels": [
         "EXPEDICAO",
-        "FECHAMENTO",
         "SEPARACAO",
+        "FECHAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
       "data": [
         17.1,
+        16.3,
         14.3,
-        10.8,
         6.8,
         5.0
       ],
       "absolutos": [
         12,
+        25,
         9,
-        11,
         4,
         2
       ]
@@ -1394,22 +1394,22 @@ window.dadosPD = {
     },
     "2026-11-14_2": {
       "labels": [
+        "SEPARACAO",
         "EXPEDICAO",
         "FECHAMENTO",
-        "REABASTECIMENTO",
-        "SEPARACAO"
+        "REABASTECIMENTO"
       ],
       "data": [
+        26.9,
         26.3,
         10.5,
-        5.0,
-        0.0
+        5.0
       ],
       "absolutos": [
+        14,
         5,
         2,
-        1,
-        0
+        1
       ]
     },
     "2026-11-14_3": {
@@ -2258,20 +2258,20 @@ window.dadosPD = {
       "labels": [
         "AMERICA",
         "MEET",
-        "CEVA",
-        "PACTUAL"
+        "PACTUAL",
+        "CEVA"
       ],
       "data": [
-        20.9,
-        11.9,
-        9.6,
-        8.8
+        25.0,
+        15.6,
+        14.0,
+        10.2
       ],
       "absolutos": [
-        9,
-        7,
-        19,
-        3
+        13,
+        10,
+        6,
+        23
       ]
     },
     "2026-11-14_1": {
@@ -2297,21 +2297,21 @@ window.dadosPD = {
     "2026-11-14_2": {
       "labels": [
         "MEET",
-        "PACTUAL",
         "AMERICA",
+        "PACTUAL",
         "CEVA"
       ],
       "data": [
+        37.5,
         27.3,
-        16.7,
-        15.4,
-        6.9
+        26.7,
+        10.5
       ],
       "absolutos": [
-        3,
-        1,
-        2,
-        2
+        6,
+        6,
+        4,
+        6
       ]
     },
     "2026-11-14_3": {
@@ -4076,10 +4076,10 @@ window.dadosPD = {
           "FALTA JUSTIFICADA"
         ],
         [
-          "FÉRIAS"
+          "FOLGA"
         ],
         [
-          "FOLGA"
+          "FÉRIAS"
         ],
         [
           "SEM JUSTIFICATIVA"
@@ -4099,10 +4099,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        22,
+        36,
         8,
-        5,
-        5,
+        8,
+        7,
         2,
         2,
         2,
@@ -4110,14 +4110,14 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        45.8,
-        62.5,
-        72.9,
-        83.3,
-        87.5,
-        91.7,
-        95.8,
-        97.9,
+        53.7,
+        65.7,
+        77.6,
+        88.1,
+        91.0,
+        94.0,
+        97.0,
+        98.5,
         100.0
       ]
     },
@@ -4168,13 +4168,13 @@ window.dadosPD = {
           "FOLGA"
         ],
         [
-          "SEM JUSTIFICATIVA"
-        ],
-        [
-          "SEM JUSTIFICATIVA"
-        ],
-        [
           "FÉRIAS"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
         ],
         [
           "NÃO PERTENCE",
@@ -4182,19 +4182,19 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        4,
+        18,
+        5,
+        3,
         2,
-        2,
-        1,
         1,
         1
       ],
       "data_cum": [
-        36.4,
-        54.5,
-        72.7,
-        81.8,
-        90.9,
+        60.0,
+        76.7,
+        86.7,
+        93.3,
+        96.7,
         100.0
       ]
     },
@@ -4252,10 +4252,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        233,
+        247,
         132,
-        96,
-        59,
+        98,
+        62,
         50
       ]
     }
@@ -4311,7 +4311,7 @@ window.dadosPD = {
           10.7,
           8.8,
           8.2,
-          11.4,
+          13.5,
           null,
           null,
           null,
@@ -4388,7 +4388,7 @@ window.dadosPD = {
           44,
           38,
           34,
-          38,
+          52,
           null,
           null,
           null,
@@ -4421,21 +4421,21 @@ window.dadosPD = {
       "taxa": 11.8
     },
     {
+      "turno": "2º Turno",
+      "faltas": 156,
+      "taxa": 9.5
+    },
+    {
       "turno": "1º Turno",
       "faltas": 147,
       "taxa": 9.4
-    },
-    {
-      "turno": "2º Turno",
-      "faltas": 142,
-      "taxa": 9.0
     }
   ],
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 148,
-      "taxa": 10.4
+      "faltas": 162,
+      "taxa": 11.0
     },
     {
       "setor": "FECHAMENTO",
@@ -4475,14 +4475,14 @@ window.dadosPD = {
   ],
   "todos_lideres": [
     {
+      "lider": "LUIS PAULO REIS",
+      "faltas": 79,
+      "taxa": 12.5
+    },
+    {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
       "faltas": 77,
       "taxa": 13.2
-    },
-    {
-      "lider": "LUIS PAULO REIS",
-      "faltas": 65,
-      "taxa": 11.2
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
@@ -4563,6 +4563,9 @@ window.dadosPD = {
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T2</strong>: EDMILSON BERTOLDO",
+    "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
