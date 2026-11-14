@@ -1,23 +1,23 @@
 window.dadosFechamento = {
-  "atualizado_em": "14/11/2026 02:14",
+  "atualizado_em": "14/11/2026 02:48",
   "progresso_geral_pct": 99,
   "total_cxs_geral": 42435,
-  "total_loaded_cxs_geral": 42230,
-  "total_pending_cxs_geral": 205,
+  "total_loaded_cxs_geral": 42250,
+  "total_pending_cxs_geral": 185,
   "cards_atendimentos": {
     "CARTEIRA": {
       "MGC": {
         "total_tus": 4,
         "total_cxs": 7678,
         "loaded_cxs": 7322,
-        "rampa_cxs": 151,
-        "pending_cxs": 205,
+        "rampa_cxs": 171,
+        "pending_cxs": 185,
         "finalizadas_gv_cx": 4564,
         "finalizadas_fr_cx": 2758,
         "rampa_gv_cx": 11,
-        "rampa_fr_cx": 140,
+        "rampa_fr_cx": 160,
         "pendentes_gv_cx": 14,
-        "pendentes_fr_cx": 191,
+        "pendentes_fr_cx": 171,
         "pct": 97,
         "status_atend": "EM ANDAMENTO"
       }
@@ -74,9 +74,9 @@ window.dadosFechamento = {
       "tu": "610000013566",
       "total_caixas": 2053,
       "caixas_carregadas": 2007,
-      "caixas_rampa": 12,
-      "caixas_pendentes_sap": 13,
-      "caixas_processadas": 2019,
+      "caixas_rampa": 13,
+      "caixas_pendentes_sap": 12,
+      "caixas_processadas": 2020,
       "pct": 98,
       "status": "EM ANDAMENTO"
     },
@@ -87,9 +87,9 @@ window.dadosFechamento = {
       "tu": "610000013524",
       "total_caixas": 2093,
       "caixas_carregadas": 1942,
-      "caixas_rampa": 102,
+      "caixas_rampa": 108,
       "caixas_pendentes_sap": 4,
-      "caixas_processadas": 2044,
+      "caixas_processadas": 2050,
       "pct": 97,
       "status": "EM ANDAMENTO"
     },
@@ -100,10 +100,10 @@ window.dadosFechamento = {
       "tu": "610000013523",
       "total_caixas": 1466,
       "caixas_carregadas": 1349,
-      "caixas_rampa": 9,
-      "caixas_pendentes_sap": 8,
-      "caixas_processadas": 1358,
-      "pct": 92,
+      "caixas_rampa": 22,
+      "caixas_pendentes_sap": 6,
+      "caixas_processadas": 1371,
+      "pct": 93,
       "status": "EM ANDAMENTO"
     }
   ]
