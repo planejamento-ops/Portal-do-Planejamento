@@ -1,5 +1,5 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "14/11/2026 00:33",
+  "atualizado_em": "14/11/2026 01:07",
   "fotografia_dia": {
     "data_execucao": "14/11/2026",
     "data_referencia": "13/11/2026",
