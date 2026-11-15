@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "15/11/2026 00:01",
+  "atualizado_em": "15/11/2026 01:00",
   "taxa_abs": 10.3,
   "total_faltas_mes": 501,
   "deficit": 18,
@@ -4560,5 +4560,14 @@ window.dadosPD = {
       "taxa": 21.1
     }
   ],
-  "alertas_pendentes": []
+  "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T3</strong>: CLEITON MAGNO SILVA JUVENTINO",
+    "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
+    "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
+    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
+    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T3</strong>: RICARDO EUGENIO LAURINDO",
+    "<strong style='color:#ffffff;'>T3</strong>: TARCISIO RICARDO MARTINS CLARO"
+  ]
 };
