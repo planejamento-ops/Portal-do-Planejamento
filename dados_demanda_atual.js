@@ -1,15 +1,15 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "16/11/2026 17:20",
+  "atualizado_em": "16/11/2026 17:55",
   "fotografia_dia": {
     "data_execucao": "16/11/2026",
     "data_referencia": "Visão Atualizada",
     "cards_atendimentos": {
       "CARTEIRA": {
         "SPI": {
-          "finalizadas_fr_cx": 7311,
-          "pendentes_fr_cx": 8578,
-          "finalizadas_gv_cx": 6304,
-          "pendentes_gv_cx": 8278
+          "finalizadas_fr_cx": 7488,
+          "pendentes_fr_cx": 8401,
+          "finalizadas_gv_cx": 6306,
+          "pendentes_gv_cx": 8276
         }
       },
       "ESTOJO": {
