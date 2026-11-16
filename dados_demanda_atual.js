@@ -1,5 +1,5 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "16/11/2026 15:49",
+  "atualizado_em": "16/11/2026 16:13",
   "fotografia_dia": {
     "data_execucao": "16/11/2026",
     "data_referencia": "Visão Atualizada",
@@ -18,10 +18,10 @@ window.dadosDemandaAtual = {
           "pendentes_gv_cx": 0
         },
         "SPI": {
-          "finalizadas_fr_cx": 7050,
-          "pendentes_fr_cx": 8839,
-          "finalizadas_gv_cx": 6300,
-          "pendentes_gv_cx": 8282
+          "finalizadas_fr_cx": 7156,
+          "pendentes_fr_cx": 8733,
+          "finalizadas_gv_cx": 6304,
+          "pendentes_gv_cx": 8278
         }
       },
       "ESTOJO": {
@@ -38,16 +38,16 @@ window.dadosDemandaAtual = {
           "pendentes_gv_cx": 0
         },
         "SPI": {
-          "finalizadas_fr_cx": 2545,
-          "pendentes_fr_cx": 933,
-          "finalizadas_gv_cx": 3695,
-          "pendentes_gv_cx": 1135
+          "finalizadas_fr_cx": 2618,
+          "pendentes_fr_cx": 860,
+          "finalizadas_gv_cx": 3776,
+          "pendentes_gv_cx": 1054
         }
       },
       "VAREJO": {
         "VAREJO": {
-          "finalizadas_fr_cx": 8111,
-          "pendentes_fr_cx": 2935,
+          "finalizadas_fr_cx": 8125,
+          "pendentes_fr_cx": 2921,
           "finalizadas_gv_cx": 188,
           "pendentes_gv_cx": 126
         }
