@@ -1,6 +1,6 @@
 window.dadosPD = {
-  "atualizado_em": "16/11/2026 14:00",
-  "taxa_abs": 10.2,
+  "atualizado_em": "16/11/2026 15:01",
+  "taxa_abs": 10.1,
   "total_faltas_mes": 512,
   "deficit": 18,
   "fi_dias": 132,
@@ -105,7 +105,7 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-16": {
-      "taxa_abs": 7.0,
+      "taxa_abs": 6.4,
       "faltas": 11,
       "deficit": 1,
       "fi": 9,
@@ -1448,6 +1448,7 @@ window.dadosPD = {
         "SEPARACAO",
         "FECHAMENTO",
         "EXPEDICAO",
+        "INVENTARIO",
         "PLANEJAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
@@ -1458,12 +1459,14 @@ window.dadosPD = {
         3.0,
         0.0,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
         8,
         2,
         1,
+        0,
         0,
         0,
         0
@@ -1474,6 +1477,7 @@ window.dadosPD = {
         "SEPARACAO",
         "FECHAMENTO",
         "EXPEDICAO",
+        "INVENTARIO",
         "PLANEJAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
@@ -1484,6 +1488,7 @@ window.dadosPD = {
         4.5,
         0.0,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
@@ -1492,17 +1497,21 @@ window.dadosPD = {
         1,
         0,
         0,
+        0,
         0
       ]
     },
     "2026-11-16_2": {
       "labels": [
+        "INVENTARIO",
         "PLANEJAMENTO"
       ],
       "data": [
+        0.0,
         0.0
       ],
       "absolutos": [
+        0,
         0
       ]
     },
@@ -1510,6 +1519,7 @@ window.dadosPD = {
       "labels": [
         "EXPEDICAO",
         "FECHAMENTO",
+        "INVENTARIO",
         "PLANEJAMENTO",
         "REABASTECIMENTO"
       ],
@@ -1517,9 +1527,11 @@ window.dadosPD = {
         0.0,
         0.0,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
+        0,
         0,
         0,
         0,
@@ -2430,8 +2442,8 @@ window.dadosPD = {
       ],
       "data": [
         16.7,
-        12.0,
-        5.5
+        11.1,
+        4.9
       ],
       "absolutos": [
         2,
@@ -2448,7 +2460,7 @@ window.dadosPD = {
       "data": [
         16.7,
         15.8,
-        6.2
+        5.9
       ],
       "absolutos": [
         2,
@@ -4612,7 +4624,7 @@ window.dadosPD = {
           8.2,
           13.5,
           null,
-          7.0,
+          6.4,
           null,
           null,
           null,
@@ -4722,7 +4734,7 @@ window.dadosPD = {
     {
       "turno": "1º Turno",
       "faltas": 158,
-      "taxa": 9.3
+      "taxa": 9.2
     },
     {
       "turno": "2º Turno",
@@ -4769,7 +4781,7 @@ window.dadosPD = {
     {
       "setor": "INVENTARIO",
       "faltas": 10,
-      "taxa": 6.8
+      "taxa": 6.2
     }
   ],
   "todos_lideres": [
@@ -4846,7 +4858,7 @@ window.dadosPD = {
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
       "faltas": 10,
-      "taxa": 6.4
+      "taxa": 5.8
     },
     {
       "lider": "EDMILSON BERTOLDO",
@@ -4860,10 +4872,8 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
-    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
     "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
-    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
-    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
+    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS"
   ]
 };
