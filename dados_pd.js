@@ -1,6 +1,6 @@
 window.dadosPD = {
-  "atualizado_em": "16/11/2026 16:00",
-  "taxa_abs": 10.1,
+  "atualizado_em": "16/11/2026 17:01",
+  "taxa_abs": 10.0,
   "total_faltas_mes": 518,
   "deficit": 19,
   "fi_dias": 132,
@@ -113,7 +113,7 @@ window.dadosPD = {
       "ferias": 0
     },
     "2026-11-16": {
-      "taxa_abs": 7.2,
+      "taxa_abs": 6.6,
       "faltas": 15,
       "deficit": 2,
       "fi": 9,
@@ -1513,26 +1513,26 @@ window.dadosPD = {
     "2026-11-16_GERAL": {
       "labels": [
         "SEPARACAO",
-        "FECHAMENTO",
         "EXPEDICAO",
         "RECEBIMENTO",
+        "FECHAMENTO",
         "INVENTARIO",
         "PLANEJAMENTO",
         "REABASTECIMENTO"
       ],
       "data": [
         16.3,
-        7.4,
         6.0,
         5.0,
+        4.3,
         0.0,
         0.0,
         0.0
       ],
       "absolutos": [
         8,
-        2,
         3,
+        2,
         2,
         0,
         0,
@@ -1572,18 +1572,24 @@ window.dadosPD = {
       "labels": [
         "EXPEDICAO",
         "RECEBIMENTO",
+        "FECHAMENTO",
         "INVENTARIO",
-        "PLANEJAMENTO"
+        "PLANEJAMENTO",
+        "REABASTECIMENTO"
       ],
       "data": [
         11.8,
         11.8,
+        0.0,
+        0.0,
         0.0,
         0.0
       ],
       "absolutos": [
         2,
         2,
+        0,
+        0,
         0,
         0
       ]
@@ -2536,7 +2542,7 @@ window.dadosPD = {
       "data": [
         20.0,
         12.9,
-        5.6
+        5.0
       ],
       "absolutos": [
         3,
@@ -2570,7 +2576,7 @@ window.dadosPD = {
       "data": [
         33.3,
         16.7,
-        6.7
+        4.3
       ],
       "absolutos": [
         1,
@@ -4600,7 +4606,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        37,
+        38,
         9,
         6,
         3,
@@ -4608,10 +4614,10 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        63.8,
-        79.3,
-        89.7,
-        94.8,
+        64.4,
+        79.7,
+        89.8,
+        94.9,
         98.3,
         100.0
       ]
@@ -4655,13 +4661,13 @@ window.dadosPD = {
           "FALTA JUSTIFICADA"
         ],
         [
+          "FOLGA"
+        ],
+        [
           "DESLIGADO"
         ],
         [
           "FÉRIAS"
-        ],
-        [
-          "FOLGA"
         ],
         [
           "SEM JUSTIFICATIVA"
@@ -4669,16 +4675,16 @@ window.dadosPD = {
       ],
       "data_abs": [
         2,
-        1,
+        2,
         1,
         1,
         1
       ],
       "data_cum": [
-        33.3,
-        50.0,
-        66.7,
-        83.3,
+        28.6,
+        57.1,
+        71.4,
+        85.7,
         100.0
       ]
     },
@@ -4724,7 +4730,7 @@ window.dadosPD = {
         241,
         137,
         105,
-        99,
+        100,
         52
       ]
     }
@@ -4782,7 +4788,7 @@ window.dadosPD = {
           8.1,
           12.7,
           0.0,
-          7.2,
+          6.6,
           null,
           null,
           null,
@@ -4897,7 +4903,7 @@ window.dadosPD = {
     {
       "turno": "2º Turno",
       "faltas": 160,
-      "taxa": 9.4
+      "taxa": 9.3
     }
   ],
   "todos_setores": [
@@ -4909,7 +4915,7 @@ window.dadosPD = {
     {
       "setor": "FECHAMENTO",
       "faltas": 88,
-      "taxa": 11.1
+      "taxa": 10.8
     },
     {
       "setor": "REABASTECIMENTO",
@@ -5001,7 +5007,7 @@ window.dadosPD = {
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
       "faltas": 16,
-      "taxa": 6.6
+      "taxa": 6.1
     },
     {
       "lider": "MARCONDES DOS SANTOS",
@@ -5026,10 +5032,12 @@ window.dadosPD = {
     {
       "lider": "FABIANE ALVES",
       "faltas": 4,
-      "taxa": 21.1
+      "taxa": 20.0
     }
   ],
   "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
+    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
     "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
     "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
     "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS"
