@@ -1,55 +1,49 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "16/11/2026 12:24",
+  "atualizado_em": "16/11/2026 12:45",
   "fotografia_dia": {
     "data_execucao": "16/11/2026",
     "data_referencia": "15/11/2026",
     "cards_atendimentos": {
       "CARTEIRA": {
         "MGI": {
-          "finalizadas_fr_cx": 10611,
+          "finalizadas_fr_cx": 10609,
           "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 12272,
-          "pendentes_gv_cx": 0
-        },
-        "MGC": {
-          "finalizadas_fr_cx": 3089,
-          "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 4589,
-          "pendentes_gv_cx": 0
+          "finalizadas_gv_cx": 12269,
+          "pendentes_gv_cx": 2
         },
         "SPI": {
-          "finalizadas_fr_cx": 7813,
-          "pendentes_fr_cx": 8076,
-          "finalizadas_gv_cx": 6259,
-          "pendentes_gv_cx": 8323
+          "finalizadas_fr_cx": 4032,
+          "pendentes_fr_cx": 11857,
+          "finalizadas_gv_cx": 4583,
+          "pendentes_gv_cx": 9999
+        },
+        "SPC (WMS)": {
+          "finalizadas_fr_cx": 0,
+          "pendentes_fr_cx": 9226,
+          "finalizadas_gv_cx": 0,
+          "pendentes_gv_cx": 11219
         }
       },
       "ESTOJO": {
-        "MGI": {
-          "finalizadas_fr_cx": 2164,
-          "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 7163,
-          "pendentes_gv_cx": 0
-        },
-        "MGC": {
-          "finalizadas_fr_cx": 549,
-          "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 1821,
-          "pendentes_gv_cx": 1
-        },
         "SPI": {
-          "finalizadas_fr_cx": 2438,
-          "pendentes_fr_cx": 1040,
-          "finalizadas_gv_cx": 3282,
-          "pendentes_gv_cx": 1548
+          "finalizadas_fr_cx": 1501,
+          "pendentes_fr_cx": 1977,
+          "finalizadas_gv_cx": 2455,
+          "pendentes_gv_cx": 2375
+        },
+        "SPC (WMS)": {
+          "finalizadas_fr_cx": 0,
+          "pendentes_fr_cx": 212,
+          "finalizadas_gv_cx": 0,
+          "pendentes_gv_cx": 125
         }
       },
       "VAREJO": {
         "VAREJO": {
-          "finalizadas_fr_cx": 9649,
-          "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 224,
-          "pendentes_gv_cx": 0
+          "finalizadas_fr_cx": 7112,
+          "pendentes_fr_cx": 2537,
+          "finalizadas_gv_cx": 182,
+          "pendentes_gv_cx": 42
         }
       }
     }
@@ -57,9 +51,9 @@ window.dadosDemandaDiaria = {
   "historico_cascata": [
     {
       "data": "15/11",
-      "entrou": 18988,
-      "produzido": 0,
-      "backlog": 18988
+      "entrou": 54939,
+      "produzido": 5368,
+      "backlog": 49571
     }
   ]
 };
