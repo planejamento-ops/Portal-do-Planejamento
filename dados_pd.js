@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "16/11/2026 11:01",
+  "atualizado_em": "16/11/2026 12:01",
   "taxa_abs": 10.2,
   "total_faltas_mes": 513,
   "deficit": 18,
@@ -105,7 +105,7 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-16": {
-      "taxa_abs": 8.0,
+      "taxa_abs": 7.5,
       "faltas": 12,
       "deficit": 1,
       "fi": 10,
@@ -1448,6 +1448,7 @@ window.dadosPD = {
         "SEPARACAO",
         "FECHAMENTO",
         "EXPEDICAO",
+        "PLANEJAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
@@ -1456,12 +1457,14 @@ window.dadosPD = {
         7.4,
         5.9,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
         8,
         2,
         2,
+        0,
         0,
         0
       ]
@@ -1471,6 +1474,7 @@ window.dadosPD = {
         "SEPARACAO",
         "FECHAMENTO",
         "EXPEDICAO",
+        "PLANEJAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
@@ -1479,6 +1483,7 @@ window.dadosPD = {
         9.5,
         8.7,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
@@ -1486,26 +1491,36 @@ window.dadosPD = {
         2,
         2,
         0,
+        0,
         0
       ]
     },
     "2026-11-16_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "PLANEJAMENTO"
+      ],
+      "data": [
+        0.0
+      ],
+      "absolutos": [
+        0
+      ]
     },
     "2026-11-16_3": {
       "labels": [
         "EXPEDICAO",
         "FECHAMENTO",
+        "PLANEJAMENTO",
         "REABASTECIMENTO"
       ],
       "data": [
         0.0,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
+        0,
         0,
         0,
         0
@@ -2416,7 +2431,7 @@ window.dadosPD = {
       "data": [
         16.7,
         15.4,
-        6.0
+        5.5
       ],
       "absolutos": [
         2,
@@ -2433,7 +2448,7 @@ window.dadosPD = {
       "data": [
         20.0,
         16.7,
-        6.5
+        6.2
       ],
       "absolutos": [
         4,
@@ -4597,7 +4612,7 @@ window.dadosPD = {
           8.2,
           13.5,
           null,
-          8.0,
+          7.5,
           null,
           null,
           null,
@@ -4845,9 +4860,7 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
-    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
     "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
     "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
