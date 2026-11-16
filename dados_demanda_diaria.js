@@ -1,35 +1,29 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "15/11/2026 23:52",
+  "atualizado_em": "16/11/2026 00:26",
   "fotografia_dia": {
-    "data_execucao": "15/11/2026",
-    "data_referencia": "14/11/2026",
+    "data_execucao": "16/11/2026",
+    "data_referencia": "15/11/2026",
     "cards_atendimentos": {
-      "CARTEIRA": {
-        "MGC": {
-          "finalizadas_fr_cx": 3089,
-          "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 4589,
-          "pendentes_gv_cx": 0
-        },
-        "SPI": {
-          "finalizadas_fr_cx": 0,
-          "pendentes_fr_cx": 11655,
-          "finalizadas_gv_cx": 0,
-          "pendentes_gv_cx": 11243
-        }
-      },
       "ESTOJO": {
         "MGC": {
-          "finalizadas_fr_cx": 549,
+          "finalizadas_fr_cx": 261,
           "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 1821,
+          "finalizadas_gv_cx": 914,
           "pendentes_gv_cx": 1
         },
         "SPI": {
           "finalizadas_fr_cx": 0,
-          "pendentes_fr_cx": 3478,
+          "pendentes_fr_cx": 1040,
           "finalizadas_gv_cx": 0,
-          "pendentes_gv_cx": 4830
+          "pendentes_gv_cx": 1548
+        }
+      },
+      "CARTEIRA": {
+        "SPI": {
+          "finalizadas_fr_cx": 0,
+          "pendentes_fr_cx": 9784,
+          "finalizadas_gv_cx": 0,
+          "pendentes_gv_cx": 9785
         }
       }
     }
@@ -52,6 +46,12 @@ window.dadosDemandaDiaria = {
       "entrou": 11310,
       "produzido": 855,
       "backlog": 31207
+    },
+    {
+      "data": "15/11",
+      "entrou": 0,
+      "produzido": 0,
+      "backlog": 22158
     }
   ]
 };
