@@ -1,5 +1,5 @@
 window.dadosDemandaWMS = {
-  "atualizado_em": "16/11/2026 19:40",
+  "atualizado_em": "16/11/2026 20:15",
   "ondas": [
     {
       "onda_atual": "VAREJO",
