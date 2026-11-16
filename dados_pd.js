@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "16/11/2026 13:00",
+  "atualizado_em": "16/11/2026 14:00",
   "taxa_abs": 10.2,
-  "total_faltas_mes": 513,
+  "total_faltas_mes": 512,
   "deficit": 18,
   "fi_dias": 132,
   "fj_dias": 79,
@@ -105,10 +105,10 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-16": {
-      "taxa_abs": 7.5,
-      "faltas": 12,
+      "taxa_abs": 7.0,
+      "faltas": 11,
       "deficit": 1,
-      "fi": 10,
+      "fi": 9,
       "fj": 1,
       "ferias": 5
     }
@@ -1455,7 +1455,7 @@ window.dadosPD = {
       "data": [
         16.3,
         7.4,
-        5.9,
+        3.0,
         0.0,
         0.0,
         0.0
@@ -1463,7 +1463,7 @@ window.dadosPD = {
       "absolutos": [
         8,
         2,
-        2,
+        1,
         0,
         0,
         0
@@ -1481,7 +1481,7 @@ window.dadosPD = {
       "data": [
         16.3,
         9.5,
-        8.7,
+        4.5,
         0.0,
         0.0,
         0.0
@@ -1489,7 +1489,7 @@ window.dadosPD = {
       "absolutos": [
         8,
         2,
-        2,
+        1,
         0,
         0,
         0
@@ -2430,29 +2430,29 @@ window.dadosPD = {
       ],
       "data": [
         16.7,
-        15.4,
+        12.0,
         5.5
       ],
       "absolutos": [
         2,
-        4,
+        3,
         6
       ]
     },
     "2026-11-16_1": {
       "labels": [
-        "MEET",
         "PACTUAL",
+        "MEET",
         "CEVA"
       ],
       "data": [
-        20.0,
         16.7,
+        15.8,
         6.2
       ],
       "absolutos": [
-        4,
         2,
+        3,
         6
       ]
     },
@@ -4460,14 +4460,14 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        35,
-        10,
+        36,
+        9,
         5,
         1,
         1
       ],
       "data_cum": [
-        67.3,
+        69.2,
         86.5,
         96.2,
         98.1,
@@ -4493,14 +4493,14 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        10,
-        3,
+        9,
+        4,
         2,
         1,
         1
       ],
       "data_cum": [
-        58.8,
+        52.9,
         76.5,
         88.2,
         94.1,
@@ -4551,10 +4551,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        242,
+        241,
         133,
         103,
-        97,
+        98,
         51
       ]
     }
@@ -4612,7 +4612,7 @@ window.dadosPD = {
           8.2,
           13.5,
           null,
-          7.5,
+          7.0,
           null,
           null,
           null,
@@ -4689,7 +4689,7 @@ window.dadosPD = {
           34,
           52,
           null,
-          12,
+          11,
           null,
           null,
           null,
@@ -4721,7 +4721,7 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 159,
+      "faltas": 158,
       "taxa": 9.3
     },
     {
@@ -4748,8 +4748,8 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 73,
-      "taxa": 10.7
+      "faltas": 72,
+      "taxa": 10.6
     },
     {
       "setor": "SEPARAÇÃO",
@@ -4815,8 +4815,8 @@ window.dadosPD = {
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
-      "faltas": 25,
-      "taxa": 9.6
+      "faltas": 24,
+      "taxa": 9.2
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
