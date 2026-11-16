@@ -1,13 +1,13 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "16/11/2026 19:41",
+  "atualizado_em": "16/11/2026 20:16",
   "fotografia_dia": {
     "data_execucao": "16/11/2026",
     "data_referencia": "Visão Atualizada",
     "cards_atendimentos": {
       "CARTEIRA": {
         "SPI": {
-          "finalizadas_fr_cx": 7862,
-          "pendentes_fr_cx": 8027,
+          "finalizadas_fr_cx": 7906,
+          "pendentes_fr_cx": 7983,
           "finalizadas_gv_cx": 6597,
           "pendentes_gv_cx": 7985
         }
@@ -22,10 +22,10 @@ window.dadosDemandaAtual = {
       },
       "VAREJO": {
         "VAREJO": {
-          "finalizadas_fr_cx": 8424,
-          "pendentes_fr_cx": 2622,
-          "finalizadas_gv_cx": 205,
-          "pendentes_gv_cx": 109
+          "finalizadas_fr_cx": 8606,
+          "pendentes_fr_cx": 2440,
+          "finalizadas_gv_cx": 223,
+          "pendentes_gv_cx": 91
         }
       }
     }
