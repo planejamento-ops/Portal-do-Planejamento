@@ -1,57 +1,65 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "16/11/2026 10:40",
+  "atualizado_em": "16/11/2026 10:56",
   "fotografia_dia": {
     "data_execucao": "16/11/2026",
     "data_referencia": "15/11/2026",
     "cards_atendimentos": {
-      "ESTOJO": {
-        "MGC": {
-          "finalizadas_fr_cx": 261,
+      "CARTEIRA": {
+        "MGI": {
+          "finalizadas_fr_cx": 10611,
           "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 914,
+          "finalizadas_gv_cx": 12272,
+          "pendentes_gv_cx": 0
+        },
+        "MGC": {
+          "finalizadas_fr_cx": 3089,
+          "pendentes_fr_cx": 0,
+          "finalizadas_gv_cx": 4589,
+          "pendentes_gv_cx": 0
+        },
+        "SPI": {
+          "finalizadas_fr_cx": 7813,
+          "pendentes_fr_cx": 8076,
+          "finalizadas_gv_cx": 6259,
+          "pendentes_gv_cx": 8323
+        }
+      },
+      "ESTOJO": {
+        "MGI": {
+          "finalizadas_fr_cx": 2164,
+          "pendentes_fr_cx": 0,
+          "finalizadas_gv_cx": 7163,
+          "pendentes_gv_cx": 0
+        },
+        "MGC": {
+          "finalizadas_fr_cx": 549,
+          "pendentes_fr_cx": 0,
+          "finalizadas_gv_cx": 1821,
           "pendentes_gv_cx": 1
         },
         "SPI": {
-          "finalizadas_fr_cx": 0,
+          "finalizadas_fr_cx": 2438,
           "pendentes_fr_cx": 1040,
-          "finalizadas_gv_cx": 0,
+          "finalizadas_gv_cx": 3282,
           "pendentes_gv_cx": 1548
         }
       },
-      "CARTEIRA": {
-        "SPI": {
-          "finalizadas_fr_cx": 0,
-          "pendentes_fr_cx": 9784,
-          "finalizadas_gv_cx": 0,
-          "pendentes_gv_cx": 9785
+      "VAREJO": {
+        "VAREJO": {
+          "finalizadas_fr_cx": 9649,
+          "pendentes_fr_cx": 0,
+          "finalizadas_gv_cx": 224,
+          "pendentes_gv_cx": 0
         }
       }
     }
   },
   "historico_cascata": [
     {
-      "data": "12/11",
-      "entrou": 52247,
-      "produzido": 1935,
-      "backlog": 50312
-    },
-    {
-      "data": "13/11",
-      "entrou": 0,
-      "produzido": 10476,
-      "backlog": 20752
-    },
-    {
-      "data": "14/11",
-      "entrou": 11310,
-      "produzido": 855,
-      "backlog": 31207
-    },
-    {
       "data": "15/11",
-      "entrou": 0,
+      "entrou": 18988,
       "produzido": 0,
-      "backlog": 22158
+      "backlog": 18988
     }
   ]
 };
