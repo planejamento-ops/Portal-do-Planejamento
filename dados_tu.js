@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "17/11/2026 16:02",
+  "atualizado_em": "17/11/2026 16:37",
   "total_tus": 65,
   "caixas_total_mes": 205645,
   "caixas_ln_mes": 100111,
@@ -1239,7 +1239,7 @@ window.dadosDashboard = {
   "pecas_pendentes": 200347,
   "pecas_ln_pend": 126020,
   "pecas_gv_pend": 74327,
-  "carretas_pendentes": 11,
+  "carretas_pendentes": 10,
   "progresso_pct": 0,
   "atendimentos_em_andamento": [
     "SPC"
@@ -1254,9 +1254,9 @@ window.dadosDashboard = {
   "proxima_estojo": null,
   "pendencias_por_canal": {
     "varejo": 0,
-    "carteira": 11,
+    "carteira": 10,
     "estojo": 0,
-    "outras": 0
+    "outras": 1
   },
   "perfis_geral": {
     "varejo_ln": {
