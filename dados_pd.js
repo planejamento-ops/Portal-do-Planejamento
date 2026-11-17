@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "17/11/2026 00:01",
+  "atualizado_em": "17/11/2026 01:01",
   "taxa_abs": 10.0,
   "total_faltas_mes": 532,
   "deficit": 19,
@@ -5223,5 +5223,9 @@ window.dadosPD = {
       "taxa": 20.0
     }
   ],
-  "alertas_pendentes": []
+  "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
+    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
+  ]
 };
