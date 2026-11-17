@@ -1,8 +1,8 @@
 window.dadosPD = {
-  "atualizado_em": "17/11/2026 18:00",
+  "atualizado_em": "17/11/2026 19:00",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 551,
-  "deficit": 19,
+  "total_faltas_mes": 552,
+  "deficit": 20,
   "fi_dias": 138,
   "fj_dias": 84,
   "ferias": 15,
@@ -121,12 +121,12 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-17": {
-      "taxa_abs": 8.7,
-      "faltas": 25,
-      "deficit": 2,
+      "taxa_abs": 8.4,
+      "faltas": 26,
+      "deficit": 3,
       "fi": 14,
       "fj": 8,
-      "ferias": 5
+      "ferias": 6
     }
   },
   "grafico_setor_map": {
@@ -1641,7 +1641,7 @@ window.dadosPD = {
       "data": [
         17.6,
         9.5,
-        8.0,
+        7.8,
         7.1,
         4.8,
         0.0,
@@ -1652,7 +1652,7 @@ window.dadosPD = {
         6,
         4,
         1,
-        2,
+        3,
         0,
         0
       ]
@@ -1690,13 +1690,15 @@ window.dadosPD = {
       "labels": [
         "EXPEDICAO",
         "FECHAMENTO",
+        "REABASTECIMENTO",
         "INVENTARIO",
         "PLANEJAMENTO",
-        "REABASTECIMENTO"
+        "SEPARACAO"
       ],
       "data": [
         22.2,
         10.5,
+        4.8,
         0.0,
         0.0,
         0.0
@@ -1704,6 +1706,7 @@ window.dadosPD = {
       "absolutos": [
         4,
         2,
+        1,
         0,
         0,
         0
@@ -2724,14 +2727,14 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        16.7,
-        11.1,
-        11.1,
-        6.8
+        14.3,
+        13.2,
+        9.3,
+        6.5
       ],
       "absolutos": [
         4,
-        4,
+        5,
         4,
         13
       ]
@@ -2755,21 +2758,21 @@ window.dadosPD = {
     },
     "2026-11-17_2": {
       "labels": [
-        "PACTUAL",
         "MEET",
+        "PACTUAL",
         "AMERICA",
         "CEVA"
       ],
       "data": [
-        50.0,
-        40.0,
-        8.3,
-        6.9
+        16.7,
+        16.7,
+        14.3,
+        5.4
       ],
       "absolutos": [
-        1,
         2,
         1,
+        2,
         2
       ]
     },
@@ -4946,17 +4949,17 @@ window.dadosPD = {
       "data_abs": [
         14,
         8,
-        5,
+        6,
         4,
-        2,
+        3,
         1
       ],
       "data_cum": [
-        41.2,
-        64.7,
-        79.4,
-        91.2,
-        97.1,
+        38.9,
+        61.1,
+        77.8,
+        88.9,
+        97.2,
         100.0
       ]
     },
@@ -4996,6 +4999,9 @@ window.dadosPD = {
     "2026-11-17_2": {
       "labels": [
         [
+          "DESLIGADO"
+        ],
+        [
           "FALTA INJUSTIFICADA"
         ],
         [
@@ -5005,7 +5011,7 @@ window.dadosPD = {
           "FOLGA"
         ],
         [
-          "DESLIGADO"
+          "FÉRIAS"
         ],
         [
           "SEM JUSTIFICATIVA"
@@ -5015,14 +5021,16 @@ window.dadosPD = {
         2,
         2,
         2,
+        2,
         1,
         1
       ],
       "data_cum": [
-        25.0,
-        50.0,
-        75.0,
-        87.5,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        90.0,
         100.0
       ]
     },
@@ -5072,9 +5080,9 @@ window.dadosPD = {
       "data_abs": [
         260,
         147,
-        113,
+        114,
         106,
-        54
+        55
       ]
     }
   },
@@ -5132,7 +5140,7 @@ window.dadosPD = {
           12.7,
           0.0,
           7.7,
-          8.7,
+          8.4,
           null,
           null,
           null,
@@ -5209,7 +5217,7 @@ window.dadosPD = {
           53,
           0,
           23,
-          25,
+          26,
           null,
           null,
           null,
@@ -5240,7 +5248,7 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 174,
+      "faltas": 175,
       "taxa": 9.4
     },
     {
@@ -5261,14 +5269,14 @@ window.dadosPD = {
       "taxa": 10.7
     },
     {
+      "setor": "REABASTECIMENTO",
+      "faltas": 87,
+      "taxa": 10.5
+    },
+    {
       "setor": "EXPEDICAO",
       "faltas": 86,
       "taxa": 11.2
-    },
-    {
-      "setor": "REABASTECIMENTO",
-      "faltas": 86,
-      "taxa": 10.7
     },
     {
       "setor": "SEPARAÇÃO",
@@ -5329,8 +5337,8 @@ window.dadosPD = {
     },
     {
       "lider": "FLAVIO MARTINS RUFINO",
-      "faltas": 31,
-      "taxa": 11.2
+      "faltas": 32,
+      "taxa": 10.7
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
@@ -5380,7 +5388,6 @@ window.dadosPD = {
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T2</strong>: EDMILSON BERTOLDO",
-    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
     "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
     "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO"
   ]
