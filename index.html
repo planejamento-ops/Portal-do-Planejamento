@@ -296,21 +296,48 @@
                         </div>
                     </div>
 
-                    <div class="grid-mes-acumulado">
-                        <div class="tu-card card-cyan">
-                            <span class="material-symbols-outlined icon">calendar_month</span>
-                            <div class="tu-info">
-                                <span class="label" id="label-caixas-mes">Total Processado no Mês (Caixas)</span>
-                                <h3 id="caixas-mes">--</h3>
-                                <small id="sub-caixas-mes">Soma do Mês Vigente</small>
+                    <div class="grid-mes-acumulado" style="grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <!-- BLOCO CAIXAS -->
+                        <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+                            <span class="label" style="font-size: 0.75rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                                <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 18px;">calendar_month</span>
+                                Total Planejado no Mês (Caixas)
+                            </span>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+                                <div class="tu-card card-cyan" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px;">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">TOTAL GERAL</span>
+                                    <h3 id="caixas-mes" style="font-size: 1.1rem; color: #ffffff;">--</h3>
+                                </div>
+                                <div class="tu-card card-cyan" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px; border-color: rgba(0, 210, 255, 0.5);">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">LN</span>
+                                    <h3 id="caixas-mes-ln" style="font-size: 1rem; color: #00d2ff;">--</h3>
+                                </div>
+                                <div class="tu-card" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px; border-color: rgba(130, 207, 255, 0.4); background: rgba(130, 207, 255, 0.05);">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">GV</span>
+                                    <h3 id="caixas-mes-gv" style="font-size: 1rem; color: #82cfff;">--</h3>
+                                </div>
                             </div>
                         </div>
-                        <div class="tu-card card-purple">
-                            <span class="material-symbols-outlined icon">category</span>
-                            <div class="tu-info">
-                                <span class="label" id="label-pecas-mes">Total Processado no Mês (Peças)</span>
-                                <h3 id="pecas-mes">--</h3>
-                                <small id="sub-pecas-mes">Soma do Mês Vigente</small>
+
+                        <!-- BLOCO PEÇAS -->
+                        <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(155, 89, 182, 0.2); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+                            <span class="label" style="font-size: 0.75rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                                <span class="material-symbols-outlined" style="color: #9b59b6; font-size: 18px;">category</span>
+                                Total Planejado no Mês (Peças)
+                            </span>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+                                <div class="tu-card card-purple" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px;">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">TOTAL GERAL</span>
+                                    <h3 id="pecas-mes" style="font-size: 1.1rem; color: #ffffff;">--</h3>
+                                </div>
+                                <div class="tu-card card-cyan" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px; border-color: rgba(0, 210, 255, 0.5);">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">LN</span>
+                                    <h3 id="pecas-mes-ln" style="font-size: 1rem; color: #00d2ff;">--</h3>
+                                </div>
+                                <div class="tu-card" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px; border-color: rgba(130, 207, 255, 0.4); background: rgba(130, 207, 255, 0.05);">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">GV</span>
+                                    <h3 id="pecas-mes-gv" style="font-size: 1rem; color: #82cfff;">--</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -362,6 +389,8 @@
                                     <tr><td>Varejo (GV)</td><td id="pcs-var_gv-tot">--</td><td id="cx-var_gv-tot">--</td><td><span class="val" id="perf-var_gv-tot">--</span></td></tr>
                                     <tr><td>Estojo (LN)</td><td id="pcs-est_ln-tot">--</td><td id="cx-est_ln-tot">--</td><td><span class="val" id="perf-est_ln-tot">--</span></td></tr>
                                     <tr><td>Estojo (GV)</td><td id="pcs-est_gv-tot">--</td><td id="cx-est_gv-tot">--</td><td><span class="val" id="perf-est_gv-tot">--</span></td></tr>
+                                    <tr><td>Outras (LN)</td><td id="pcs-out_ln-tot">--</td><td id="cx-out_ln-tot">--</td><td><span class="val" id="perf-out_ln-tot">--</span></td></tr>
+                                    <tr><td>Outras (GV)</td><td id="pcs-out_gv-tot">--</td><td id="cx-out_gv-tot">--</td><td><span class="val" id="perf-out_gv-tot">--</span></td></tr>
                                 </tbody>
                                 <tfoot>
                                     <tr style="border-top: 2px solid rgba(0, 210, 255, 0.4); font-weight: 800; background: rgba(0, 210, 255, 0.08);">
@@ -382,6 +411,8 @@
                                     <tr><td>Varejo (GV)</td><td id="pcs-var_gv-pend">--</td><td id="cx-var_gv-pend">--</td><td><span class="val" id="perf-var_gv-pend">--</span></td></tr>
                                     <tr><td>Estojo (LN)</td><td id="pcs-est_ln-pend">--</td><td id="cx-est_ln-pend">--</td><td><span class="val" id="perf-est_ln-pend">--</span></td></tr>
                                     <tr><td>Estojo (GV)</td><td id="pcs-est_gv-pend">--</td><td id="cx-est_gv-pend">--</td><td><span class="val" id="perf-est_gv-pend">--</span></td></tr>
+                                    <tr><td>Outras (LN)</td><td id="pcs-out_ln-pend">--</td><td id="cx-out_ln-pend">--</td><td><span class="val" id="perf-out_ln-pend">--</span></td></tr>
+                                    <tr><td>Outras (GV)</td><td id="pcs-out_gv-pend">--</td><td id="cx-out_gv-pend">--</td><td><span class="val" id="perf-out_gv-pend">--</span></td></tr>
                                 </tbody>
                                 <tfoot>
                                     <tr style="border-top: 2px solid rgba(246, 185, 59, 0.4); font-weight: 800; background: rgba(246, 185, 59, 0.08);">
@@ -1016,16 +1047,41 @@
 
         function preencherCardPerfil(prefixo, obj) {
             if (!obj) return;
-            const canais = ['cart_ln', 'cart_gv', 'var_ln', 'var_gv', 'est_ln', 'est_gv', 'total'];
-            const chaves = ['carteira_ln', 'carteira_gv', 'varejo_ln', 'varejo_gv', 'estojo_ln', 'estojo_gv', 'total_geral'];
-            canais.forEach((c, idx) => {
-                const item = obj[chaves[idx]];
-                if (item) {
-                    setTextoSeguro(`pcs-${c}-${prefixo}`, formatarNumeroInteiro(item.pcs));
-                    setTextoSeguro(`cx-${c}-${prefixo}`, formatarNumeroInteiro(item.cx));
-                    setTextoSeguro(`perf-${c}-${prefixo}`, `${Math.round(item.perfil)}`);
+            
+            const pares = [
+                {ln: 'carteira_ln', gv: 'carteira_gv', prefix_ln: 'cart_ln', prefix_gv: 'cart_gv'},
+                {ln: 'varejo_ln', gv: 'varejo_gv', prefix_ln: 'var_ln', prefix_gv: 'var_gv'},
+                {ln: 'estojo_ln', gv: 'estojo_gv', prefix_ln: 'est_ln', prefix_gv: 'est_gv'},
+                {ln: 'outras_ln', gv: 'outras_gv', prefix_ln: 'out_ln', prefix_gv: 'out_gv'} // NOVA LINHA AQUI
+            ];
+
+            pares.forEach(p => {
+                const ln = obj[p.ln];
+                const gv = obj[p.gv];
+                if (ln && gv) {
+                    const totalCx = ln.cx + gv.cx;
+                    const totalPcs = ln.pcs + gv.pcs;
+                    
+                    const pctLnCx = totalCx ? Math.round((ln.cx / totalCx) * 100) : 0;
+                    const pctGvCx = totalCx ? Math.round((gv.cx / totalCx) * 100) : 0;
+                    const pctLnPcs = totalPcs ? Math.round((ln.pcs / totalPcs) * 100) : 0;
+                    const pctGvPcs = totalPcs ? Math.round((gv.pcs / totalPcs) * 100) : 0;
+
+                    setHtmlSeguro(`pcs-${p.prefix_ln}-${prefixo}`, `${formatarNumeroInteiro(ln.pcs)} <small style="color:#00d2ff;">(${pctLnPcs}%)</small>`);
+                    setHtmlSeguro(`cx-${p.prefix_ln}-${prefixo}`, `${formatarNumeroInteiro(ln.cx)} <small style="color:#00d2ff;">(${pctLnCx}%)</small>`);
+                    setTextoSeguro(`perf-${p.prefix_ln}-${prefixo}`, `${Math.round(ln.perfil)}`);
+                    
+                    setHtmlSeguro(`pcs-${p.prefix_gv}-${prefixo}`, `${formatarNumeroInteiro(gv.pcs)} <small style="color:#ff4b2b;">(${pctGvPcs}%)</small>`);
+                    setHtmlSeguro(`cx-${p.prefix_gv}-${prefixo}`, `${formatarNumeroInteiro(gv.cx)} <small style="color:#ff4b2b;">(${pctGvCx}%)</small>`);
+                    setTextoSeguro(`perf-${p.prefix_gv}-${prefixo}`, `${Math.round(gv.perfil)}`);
                 }
             });
+
+            if (obj.total_geral) {
+                setTextoSeguro(`pcs-total-${prefixo}`, formatarNumeroInteiro(obj.total_geral.pcs));
+                setTextoSeguro(`cx-total-${prefixo}`, formatarNumeroInteiro(obj.total_geral.cx));
+                setTextoSeguro(`perf-total-${prefixo}`, `${Math.round(obj.total_geral.perfil)}`);
+            }
         }
 
         function filtrarTabelaFechamento() {
@@ -1050,6 +1106,7 @@
         function aplicarFiltroMesTU() {
             const inputMes = document.getElementById('filtro-mes-tu');
             if (!inputMes || !inputMes.value || typeof dadosDashboard === 'undefined') return;
+            
             const mesAnoSel = inputMes.value;
             const totaisMes = dadosDashboard.totais_por_mes || {};
             const [ano, mes] = mesAnoSel.split('-');
@@ -1057,22 +1114,39 @@
             const nomeMesExtenso = `${nomesMeses[parseInt(mes) - 1]} / ${ano}`;
             
             if (totaisMes[mesAnoSel]) {
-                setTextoSeguro('caixas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].caixas));
-                setTextoSeguro('pecas-mes', formatarNumeroInteiro(totaisMes[mesAnoSel].pecas));
-                setTextoSeguro('sub-caixas-mes', `Total de ${nomeMesExtenso}`);
-                setTextoSeguro('sub-pecas-mes', `Total de ${nomeMesExtenso}`);
+                const dadosMes = totaisMes[mesAnoSel];
                 
+                // Atualiza Cards de Caixas do Mês Filtrado
+                let pctCxLn = dadosMes.caixas ? Math.round((dadosMes.caixas_ln / dadosMes.caixas) * 100) : 0;
+                let pctCxGv = dadosMes.caixas ? Math.round((dadosMes.caixas_gv / dadosMes.caixas) * 100) : 0;
+                setHtmlSeguro('caixas-mes-ln', `${formatarNumeroInteiro(dadosMes.caixas_ln)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxLn}%)</small>`);
+                setHtmlSeguro('caixas-mes-gv', `${formatarNumeroInteiro(dadosMes.caixas_gv)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxGv}%)</small>`);
+                setTextoSeguro('caixas-mes', formatarNumeroInteiro(dadosMes.caixas));
+
+                // Atualiza Cards de Peças do Mês Filtrado
+                let pctPcLn = dadosMes.pecas ? Math.round((dadosMes.pecas_ln / dadosMes.pecas) * 100) : 0;
+                let pctPcGv = dadosMes.pecas ? Math.round((dadosMes.pecas_gv / dadosMes.pecas) * 100) : 0;
+                setHtmlSeguro('pecas-mes-ln', `${formatarNumeroInteiro(dadosMes.pecas_ln)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcLn}%)</small>`);
+                setHtmlSeguro('pecas-mes-gv', `${formatarNumeroInteiro(dadosMes.pecas_gv)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcGv}%)</small>`);
+                setTextoSeguro('pecas-mes', formatarNumeroInteiro(dadosMes.pecas));
+
                 if (totaisMes[mesAnoSel].perfis_geral) preencherCardPerfil('tot', totaisMes[mesAnoSel].perfis_geral);
                 if (totaisMes[mesAnoSel].perfis_pendentes) preencherCardPerfil('pend', totaisMes[mesAnoSel].perfis_pendentes);
             } else {
-                setTextoSeguro('caixas-mes', '0'); setTextoSeguro('pecas-mes', '0');
-                setTextoSeguro('sub-caixas-mes', `Sem dados em ${nomeMesExtenso}`);
-                setTextoSeguro('sub-pecas-mes', `Sem dados em ${nomeMesExtenso}`);
+                // Se não houver dados no mês selecionado, zera tudo
+                setHtmlSeguro('caixas-mes-ln', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
+                setHtmlSeguro('caixas-mes-gv', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
+                setTextoSeguro('caixas-mes', '0');
+                
+                setHtmlSeguro('pecas-mes-ln', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
+                setHtmlSeguro('pecas-mes-gv', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
+                setTextoSeguro('pecas-mes', '0');
                 
                 const zeros = {
                     varejo_ln: {cx:0, pcs:0, perfil:0}, varejo_gv: {cx:0, pcs:0, perfil:0},
                     carteira_ln: {cx:0, pcs:0, perfil:0}, carteira_gv: {cx:0, pcs:0, perfil:0},
                     estojo_ln: {cx:0, pcs:0, perfil:0}, estojo_gv: {cx:0, pcs:0, perfil:0},
+                    outras_ln: {cx:0, pcs:0, perfil:0}, outras_gv: {cx:0, pcs:0, perfil:0},
                     total_geral: {cx:0, pcs:0, perfil:0}
                 };
                 preencherCardPerfil('tot', zeros);
@@ -1547,7 +1621,16 @@
                     inputMes.value = `${a}-${m}`;
                 }
 
+                let pctCxLn = dados.caixas_total_mes ? Math.round((dados.caixas_ln_mes / dados.caixas_total_mes) * 100) : 0;
+                let pctCxGv = dados.caixas_total_mes ? Math.round((dados.caixas_gv_mes / dados.caixas_total_mes) * 100) : 0;
+                setHtmlSeguro('caixas-mes-ln', `${formatarNumeroInteiro(dados.caixas_ln_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxLn}%)</small>`);
+                setHtmlSeguro('caixas-mes-gv', `${formatarNumeroInteiro(dados.caixas_gv_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxGv}%)</small>`);
                 setTextoSeguro('caixas-mes', formatarNumeroInteiro(dados.caixas_total_mes));
+
+                let pctPcLn = dados.pecas_total_mes ? Math.round((dados.pecas_ln_mes / dados.pecas_total_mes) * 100) : 0;
+                let pctPcGv = dados.pecas_total_mes ? Math.round((dados.pecas_gv_mes / dados.pecas_total_mes) * 100) : 0;
+                setHtmlSeguro('pecas-mes-ln', `${formatarNumeroInteiro(dados.pecas_ln_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcLn}%)</small>`);
+                setHtmlSeguro('pecas-mes-gv', `${formatarNumeroInteiro(dados.pecas_gv_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcGv}%)</small>`);
                 setTextoSeguro('pecas-mes', formatarNumeroInteiro(dados.pecas_total_mes));
                 setTextoSeguro('tus-pendentes', `${dados.pendencias_por_canal ? (dados.pendencias_por_canal.varejo + dados.pendencias_por_canal.carteira + dados.pendencias_por_canal.estojo + (dados.pendencias_por_canal.outras || 0)) : (dados.carretas_pendentes || 0)}`);
                 setTextoSeguro('sub-tus', `De ${dados.total_tus || 0} TUs na Janela`);
