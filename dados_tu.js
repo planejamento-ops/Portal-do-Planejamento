@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "17/11/2026 15:15",
+  "atualizado_em": "17/11/2026 15:26",
   "total_tus": 65,
   "caixas_total_mes": 203521,
   "caixas_ln_mes": 98629,
@@ -46,6 +46,16 @@ window.dadosDashboard = {
           "cx": 5805,
           "pcs": 42954
         },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
         "total_geral": {
           "cx": 17712,
           "pcs": 560142,
@@ -79,6 +89,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -128,9 +148,19 @@ window.dadosDashboard = {
           "cx": 79108,
           "pcs": 816751
         },
+        "outras_ln": {
+          "perfil": 184,
+          "cx": 10,
+          "pcs": 1836
+        },
+        "outras_gv": {
+          "perfil": 71,
+          "cx": 427,
+          "pcs": 30155
+        },
         "total_geral": {
-          "cx": 373686,
-          "pcs": 14056537,
+          "cx": 374123,
+          "pcs": 14088528,
           "perfil": 38
         }
       },
@@ -161,6 +191,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -210,6 +250,16 @@ window.dadosDashboard = {
           "cx": 96827,
           "pcs": 794632
         },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
         "total_geral": {
           "cx": 350690,
           "pcs": 11340557,
@@ -243,6 +293,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -292,9 +352,19 @@ window.dadosDashboard = {
           "cx": 11873,
           "pcs": 101491
         },
+        "outras_ln": {
+          "perfil": 105,
+          "cx": 15,
+          "pcs": 1568
+        },
+        "outras_gv": {
+          "perfil": 64,
+          "cx": 119,
+          "pcs": 7602
+        },
         "total_geral": {
-          "cx": 355491,
-          "pcs": 14187136,
+          "cx": 355625,
+          "pcs": 14196306,
           "perfil": 40
         }
       },
@@ -325,6 +395,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -374,9 +454,19 @@ window.dadosDashboard = {
           "cx": 35333,
           "pcs": 340966
         },
+        "outras_ln": {
+          "perfil": 30,
+          "cx": 19,
+          "pcs": 570
+        },
+        "outras_gv": {
+          "perfil": 48,
+          "cx": 218,
+          "pcs": 10530
+        },
         "total_geral": {
-          "cx": 346786,
-          "pcs": 13385079,
+          "cx": 347023,
+          "pcs": 13396179,
           "perfil": 39
         }
       },
@@ -407,6 +497,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -456,9 +556,19 @@ window.dadosDashboard = {
           "cx": 37450,
           "pcs": 359572
         },
+        "outras_ln": {
+          "perfil": 61,
+          "cx": 23,
+          "pcs": 1402
+        },
+        "outras_gv": {
+          "perfil": 57,
+          "cx": 177,
+          "pcs": 10143
+        },
         "total_geral": {
-          "cx": 385914,
-          "pcs": 15042707,
+          "cx": 386114,
+          "pcs": 15054252,
           "perfil": 39
         }
       },
@@ -489,6 +599,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -538,9 +658,19 @@ window.dadosDashboard = {
           "cx": 15997,
           "pcs": 151052
         },
+        "outras_ln": {
+          "perfil": 124,
+          "cx": 166,
+          "pcs": 20512
+        },
+        "outras_gv": {
+          "perfil": 75,
+          "cx": 118,
+          "pcs": 8836
+        },
         "total_geral": {
-          "cx": 389548,
-          "pcs": 14627641,
+          "cx": 389832,
+          "pcs": 14656989,
           "perfil": 38
         }
       },
@@ -571,6 +701,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -620,9 +760,19 @@ window.dadosDashboard = {
           "cx": 5200,
           "pcs": 42976
         },
+        "outras_ln": {
+          "perfil": 121,
+          "cx": 415,
+          "pcs": 50346
+        },
+        "outras_gv": {
+          "perfil": 56,
+          "cx": 306,
+          "pcs": 17248
+        },
         "total_geral": {
-          "cx": 328386,
-          "pcs": 15961572,
+          "cx": 329107,
+          "pcs": 16029166,
           "perfil": 49
         }
       },
@@ -653,6 +803,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -702,9 +862,19 @@ window.dadosDashboard = {
           "cx": 108338,
           "pcs": 1086086
         },
+        "outras_ln": {
+          "perfil": 76,
+          "cx": 388,
+          "pcs": 29569
+        },
+        "outras_gv": {
+          "perfil": 49,
+          "cx": 630,
+          "pcs": 30706
+        },
         "total_geral": {
-          "cx": 427700,
-          "pcs": 14994164,
+          "cx": 428718,
+          "pcs": 15054439,
           "perfil": 35
         }
       },
@@ -735,6 +905,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -784,9 +964,19 @@ window.dadosDashboard = {
           "cx": 112276,
           "pcs": 1103657
         },
+        "outras_ln": {
+          "perfil": 14,
+          "cx": 62,
+          "pcs": 850
+        },
+        "outras_gv": {
+          "perfil": 26,
+          "cx": 88,
+          "pcs": 2262
+        },
         "total_geral": {
-          "cx": 424826,
-          "pcs": 14497291,
+          "cx": 424976,
+          "pcs": 14500403,
           "perfil": 34
         }
       },
@@ -817,6 +1007,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -866,9 +1066,19 @@ window.dadosDashboard = {
           "cx": 32275,
           "pcs": 386999
         },
+        "outras_ln": {
+          "perfil": 9,
+          "cx": 149,
+          "pcs": 1330
+        },
+        "outras_gv": {
+          "perfil": 27,
+          "cx": 223,
+          "pcs": 5984
+        },
         "total_geral": {
-          "cx": 417061,
-          "pcs": 16124965,
+          "cx": 417433,
+          "pcs": 16132279,
           "perfil": 39
         }
       },
@@ -899,6 +1109,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -948,9 +1168,19 @@ window.dadosDashboard = {
           "cx": 31792,
           "pcs": 461600
         },
+        "outras_ln": {
+          "perfil": 45,
+          "cx": 898,
+          "pcs": 40221
+        },
+        "outras_gv": {
+          "perfil": 36,
+          "cx": 2652,
+          "pcs": 95755
+        },
         "total_geral": {
-          "cx": 199971,
-          "pcs": 7400765,
+          "cx": 203521,
+          "pcs": 7536741,
           "perfil": 37
         }
       },
@@ -981,6 +1211,16 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "estojo_gv": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_ln": {
+          "perfil": 0,
+          "cx": 0,
+          "pcs": 0
+        },
+        "outras_gv": {
           "perfil": 0,
           "cx": 0,
           "pcs": 0
@@ -1049,9 +1289,19 @@ window.dadosDashboard = {
       "cx": 31792,
       "pcs": 461600
     },
+    "outras_ln": {
+      "perfil": 45,
+      "cx": 898,
+      "pcs": 40221
+    },
+    "outras_gv": {
+      "perfil": 36,
+      "cx": 2652,
+      "pcs": 95755
+    },
     "total_geral": {
-      "cx": 199971,
-      "pcs": 7400765,
+      "cx": 203521,
+      "pcs": 7536741,
       "perfil": 37
     }
   },
@@ -1082,6 +1332,16 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "estojo_gv": {
+      "perfil": 0,
+      "cx": 0,
+      "pcs": 0
+    },
+    "outras_ln": {
+      "perfil": 0,
+      "cx": 0,
+      "pcs": 0
+    },
+    "outras_gv": {
       "perfil": 0,
       "cx": 0,
       "pcs": 0
