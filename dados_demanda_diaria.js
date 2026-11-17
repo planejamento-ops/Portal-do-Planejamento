@@ -1,31 +1,31 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "16/11/2026 23:51",
+  "atualizado_em": "17/11/2026 00:26",
   "fotografia_dia": {
-    "data_execucao": "16/11/2026",
-    "data_referencia": "15/11/2026",
+    "data_execucao": "17/11/2026",
+    "data_referencia": "16/11/2026",
     "cards_atendimentos": {
+      "VAREJO": {
+        "VAREJO": {
+          "finalizadas_fr_cx": 8904,
+          "pendentes_fr_cx": 2142,
+          "finalizadas_gv_cx": 223,
+          "pendentes_gv_cx": 91
+        }
+      },
       "CARTEIRA": {
         "SPI": {
-          "finalizadas_fr_cx": 4032,
-          "pendentes_fr_cx": 11857,
-          "finalizadas_gv_cx": 4583,
-          "pendentes_gv_cx": 9999
+          "finalizadas_fr_cx": 9260,
+          "pendentes_fr_cx": 6629,
+          "finalizadas_gv_cx": 7532,
+          "pendentes_gv_cx": 7050
         }
       },
       "ESTOJO": {
         "SPI": {
-          "finalizadas_fr_cx": 1501,
-          "pendentes_fr_cx": 1977,
-          "finalizadas_gv_cx": 2455,
-          "pendentes_gv_cx": 2375
-        }
-      },
-      "VAREJO": {
-        "VAREJO": {
-          "finalizadas_fr_cx": 7112,
-          "pendentes_fr_cx": 2537,
-          "finalizadas_gv_cx": 182,
-          "pendentes_gv_cx": 42
+          "finalizadas_fr_cx": 2992,
+          "pendentes_fr_cx": 486,
+          "finalizadas_gv_cx": 4038,
+          "pendentes_gv_cx": 792
         }
       }
     }
@@ -36,6 +36,12 @@ window.dadosDemandaDiaria = {
       "entrou": 0,
       "produzido": 5368,
       "backlog": 28787
+    },
+    {
+      "data": "16/11",
+      "entrou": 1487,
+      "produzido": 13084,
+      "backlog": 17190
     }
   ]
 };
