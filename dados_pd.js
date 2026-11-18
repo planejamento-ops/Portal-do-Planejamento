@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "18/11/2026 07:00",
+  "atualizado_em": "18/11/2026 08:01",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 581,
+  "total_faltas_mes": 580,
   "deficit": 22,
-  "fi_dias": 145,
+  "fi_dias": 144,
   "fj_dias": 85,
   "ferias": 15,
   "data_padrao_setor": "2026-11-18",
@@ -129,10 +129,10 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-18": {
-      "taxa_abs": 10.7,
-      "faltas": 23,
+      "taxa_abs": 10.2,
+      "faltas": 22,
       "deficit": 2,
-      "fi": 13,
+      "fi": 12,
       "fj": 8,
       "ferias": 4
     }
@@ -1761,14 +1761,14 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        21.6,
+        19.6,
         16.3,
         5.5,
         4.2,
         2.4
       ],
       "absolutos": [
-        11,
+        10,
         7,
         3,
         1,
@@ -1777,17 +1777,17 @@ window.dadosPD = {
     },
     "2026-11-18_1": {
       "labels": [
-        "EXPEDICAO",
         "FECHAMENTO",
+        "EXPEDICAO",
         "RECEBIMENTO"
       ],
       "data": [
-        30.4,
         28.6,
+        26.1,
         0.0
       ],
       "absolutos": [
-        7,
+        6,
         6,
         0
       ]
@@ -2881,13 +2881,13 @@ window.dadosPD = {
       ],
       "data": [
         17.4,
-        11.6,
+        10.9,
         10.3,
         2.9
       ],
       "absolutos": [
         4,
-        15,
+        14,
         3,
         1
       ]
@@ -2903,13 +2903,13 @@ window.dadosPD = {
         50.0,
         20.0,
         20.0,
-        17.3
+        15.4
       ],
       "absolutos": [
         2,
         1,
         1,
-        9
+        8
       ]
     },
     "2026-11-18_2": {
@@ -5227,17 +5227,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        13,
+        12,
         8,
         4,
         2,
         1
       ],
       "data_cum": [
-        46.4,
-        75.0,
-        89.3,
-        96.4,
+        44.4,
+        74.1,
+        88.9,
+        96.3,
         100.0
       ]
     },
@@ -5260,17 +5260,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        9,
+        8,
         2,
         2,
         1,
         1
       ],
       "data_cum": [
-        60.0,
-        73.3,
-        86.7,
-        93.3,
+        57.1,
+        71.4,
+        85.7,
+        92.9,
         100.0
       ]
     },
@@ -5323,7 +5323,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        275,
+        274,
         157,
         121,
         107,
@@ -5386,7 +5386,7 @@ window.dadosPD = {
           0.0,
           7.7,
           8.4,
-          10.7,
+          10.2,
           null,
           null,
           null,
@@ -5463,7 +5463,7 @@ window.dadosPD = {
           0,
           23,
           32,
-          23,
+          22,
           null,
           null,
           null,
@@ -5493,7 +5493,7 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 186,
+      "faltas": 185,
       "taxa": 9.6
     },
     {
@@ -5515,8 +5515,8 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 97,
-      "taxa": 11.9
+      "faltas": 96,
+      "taxa": 11.8
     },
     {
       "setor": "REABASTECIMENTO",
@@ -5571,11 +5571,6 @@ window.dadosPD = {
       "taxa": 14.4
     },
     {
-      "lider": "EDSON SANTOS CAMPOS",
-      "faltas": 35,
-      "taxa": 11.5
-    },
-    {
       "lider": "RICARDO EUGENIO LAURINDO",
       "faltas": 35,
       "taxa": 11.3
@@ -5584,6 +5579,11 @@ window.dadosPD = {
       "lider": "DIEGO CUNHA BOER",
       "faltas": 34,
       "taxa": 11.0
+    },
+    {
+      "lider": "EDSON SANTOS CAMPOS",
+      "faltas": 34,
+      "taxa": 11.2
     },
     {
       "lider": "FLAVIO MARTINS RUFINO",
@@ -5632,6 +5632,10 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
+    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
