@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "18/11/2026 17:01",
+  "atualizado_em": "18/11/2026 18:00",
   "taxa_abs": 9.9,
   "total_faltas_mes": 590,
   "deficit": 22,
@@ -129,7 +129,7 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-18": {
-      "taxa_abs": 8.6,
+      "taxa_abs": 8.5,
       "faltas": 32,
       "deficit": 3,
       "fi": 18,
@@ -1756,8 +1756,8 @@ window.dadosPD = {
       "labels": [
         "EXPEDICAO",
         "FECHAMENTO",
-        "SEPARACAO",
         "INVENTARIO",
+        "SEPARACAO",
         "REABASTECIMENTO",
         "RECEBIMENTO",
         "PLANEJAMENTO"
@@ -1765,8 +1765,8 @@ window.dadosPD = {
       "data": [
         15.7,
         12.5,
-        7.2,
         7.1,
+        7.0,
         6.7,
         1.7,
         0.0
@@ -1774,8 +1774,8 @@ window.dadosPD = {
       "absolutos": [
         11,
         8,
-        8,
         1,
+        8,
         3,
         1,
         0
@@ -1817,11 +1817,13 @@ window.dadosPD = {
         "INVENTARIO",
         "PLANEJAMENTO",
         "REABASTECIMENTO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "SEPARACAO"
       ],
       "data": [
         11.8,
         5.0,
+        0.0,
         0.0,
         0.0,
         0.0,
@@ -1830,6 +1832,7 @@ window.dadosPD = {
       "absolutos": [
         2,
         1,
+        0,
         0,
         0,
         0,
@@ -2925,8 +2928,8 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        16.7,
-        9.1,
+        16.2,
+        8.9,
         7.7,
         6.7
       ],
@@ -2964,9 +2967,9 @@ window.dadosPD = {
         "AMERICA"
       ],
       "data": [
-        33.3,
+        25.0,
         20.0,
-        9.1
+        8.3
       ],
       "absolutos": [
         1,
@@ -5476,7 +5479,7 @@ window.dadosPD = {
           0.0,
           7.7,
           8.4,
-          8.6,
+          8.5,
           null,
           null,
           null,
@@ -5722,7 +5725,6 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
-    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
-    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS"
+    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO"
   ]
 };
