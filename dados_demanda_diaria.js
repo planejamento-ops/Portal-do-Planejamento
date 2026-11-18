@@ -1,5 +1,5 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "18/11/2026 09:21",
+  "atualizado_em": "18/11/2026 10:36",
   "fotografia_dia": {
     "data_referencia": "17/11/2026 (23:59:59)",
     "cards_atendimentos": {
@@ -134,8 +134,8 @@ window.dadosDemandaDiaria = {
           "total_tu_gv_pcs": 611853,
           "finalizadas_fr_cx": 15010,
           "pendentes_fr_cx": 879,
-          "finalizadas_gv_cx": 14389,
-          "pendentes_gv_cx": 193,
+          "finalizadas_gv_cx": 14388,
+          "pendentes_gv_cx": 194,
           "finalizadas_fr_pcs": 677623,
           "pendentes_fr_pcs": 154900,
           "finalizadas_gv_pcs": 471440,
@@ -157,8 +157,8 @@ window.dadosDemandaDiaria = {
           "total_tu_gv_cx": 120,
           "total_tu_fr_pcs": 62192,
           "total_tu_gv_pcs": 3504,
-          "finalizadas_fr_cx": 1070,
-          "pendentes_fr_cx": 2655,
+          "finalizadas_fr_cx": 1068,
+          "pendentes_fr_cx": 2657,
           "finalizadas_gv_cx": 108,
           "pendentes_gv_cx": 12,
           "finalizadas_fr_pcs": 7077,
