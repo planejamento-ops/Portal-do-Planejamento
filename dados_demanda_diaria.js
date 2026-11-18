@@ -1,5 +1,5 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "18/11/2026 10:36",
+  "atualizado_em": "18/11/2026 13:51",
   "fotografia_dia": {
     "data_referencia": "17/11/2026 (23:59:59)",
     "cards_atendimentos": {
@@ -157,10 +157,10 @@ window.dadosDemandaDiaria = {
           "total_tu_gv_cx": 120,
           "total_tu_fr_pcs": 62192,
           "total_tu_gv_pcs": 3504,
-          "finalizadas_fr_cx": 1068,
-          "pendentes_fr_cx": 2657,
-          "finalizadas_gv_cx": 108,
-          "pendentes_gv_cx": 12,
+          "finalizadas_fr_cx": 1065,
+          "pendentes_fr_cx": 2660,
+          "finalizadas_gv_cx": 107,
+          "pendentes_gv_cx": 13,
           "finalizadas_fr_pcs": 7077,
           "pendentes_fr_pcs": 55115,
           "finalizadas_gv_pcs": 486,
