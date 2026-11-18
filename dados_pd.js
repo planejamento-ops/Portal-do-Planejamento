@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "18/11/2026 15:01",
+  "atualizado_em": "18/11/2026 16:00",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 588,
+  "total_faltas_mes": 590,
   "deficit": 22,
   "fi_dias": 144,
   "fj_dias": 86,
@@ -129,9 +129,9 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-18": {
-      "taxa_abs": 8.9,
-      "faltas": 30,
-      "deficit": 2,
+      "taxa_abs": 9.0,
+      "faltas": 32,
+      "deficit": 3,
       "fi": 18,
       "fj": 10,
       "ferias": 5
@@ -1763,16 +1763,16 @@ window.dadosPD = {
         "PLANEJAMENTO"
       ],
       "data": [
-        17.0,
+        15.7,
         12.5,
         7.2,
         7.1,
-        6.8,
+        6.7,
         2.3,
         0.0
       ],
       "absolutos": [
-        9,
+        11,
         8,
         8,
         1,
@@ -1812,17 +1812,23 @@ window.dadosPD = {
     },
     "2026-11-18_2": {
       "labels": [
+        "EXPEDICAO",
         "FECHAMENTO",
         "INVENTARIO",
-        "PLANEJAMENTO"
+        "PLANEJAMENTO",
+        "REABASTECIMENTO"
       ],
       "data": [
+        11.8,
         5.0,
+        0.0,
         0.0,
         0.0
       ],
       "absolutos": [
+        2,
         1,
+        0,
         0,
         0
       ]
@@ -2916,16 +2922,16 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        15.2,
-        10.5,
-        8.6,
-        5.3
+        17.1,
+        9.1,
+        8.3,
+        6.7
       ],
       "absolutos": [
-        5,
+        6,
         4,
         18,
-        3
+        4
       ]
     },
     "2026-11-18_1": {
@@ -2950,12 +2956,18 @@ window.dadosPD = {
     },
     "2026-11-18_2": {
       "labels": [
+        "PACTUAL",
+        "MEET",
         "AMERICA"
       ],
       "data": [
-        20.0
+        50.0,
+        20.0,
+        9.1
       ],
       "absolutos": [
+        1,
+        1,
         1
       ]
     },
@@ -5266,20 +5278,25 @@ window.dadosPD = {
         ],
         [
           "FOLGA"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
         ]
       ],
       "data_abs": [
         18,
         10,
         5,
+        3,
         2,
         1
       ],
       "data_cum": [
-        50.0,
-        77.8,
-        91.7,
-        97.2,
+        46.2,
+        71.8,
+        84.6,
+        92.3,
+        97.4,
         100.0
       ]
     },
@@ -5319,13 +5336,28 @@ window.dadosPD = {
     "2026-11-18_2": {
       "labels": [
         [
+          "DESLIGADO"
+        ],
+        [
           "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FOLGA"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
         ]
       ],
       "data_abs": [
+        1,
+        1,
+        1,
         1
       ],
       "data_cum": [
+        25.0,
+        50.0,
+        75.0,
         100.0
       ]
     },
@@ -5376,8 +5408,8 @@ window.dadosPD = {
         280,
         159,
         122,
-        107,
-        58
+        108,
+        59
       ]
     }
   },
@@ -5436,7 +5468,7 @@ window.dadosPD = {
           0.0,
           7.7,
           8.4,
-          8.9,
+          9.0,
           null,
           null,
           null,
@@ -5513,7 +5545,7 @@ window.dadosPD = {
           0,
           23,
           32,
-          30,
+          32,
           null,
           null,
           null,
@@ -5548,7 +5580,7 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 182,
+      "faltas": 184,
       "taxa": 9.2
     }
   ],
@@ -5565,7 +5597,7 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 95,
+      "faltas": 97,
       "taxa": 11.6
     },
     {
@@ -5642,7 +5674,7 @@ window.dadosPD = {
     },
     {
       "lider": "RENAN ALVES REZENDE",
-      "faltas": 28,
+      "faltas": 30,
       "taxa": 11.9
     },
     {
@@ -5678,7 +5710,7 @@ window.dadosPD = {
     {
       "lider": "FABIANE ALVES",
       "faltas": 4,
-      "taxa": 19.0
+      "taxa": 18.2
     }
   ],
   "alertas_pendentes": []
