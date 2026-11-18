@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "17/11/2026 20:01",
+  "atualizado_em": "17/11/2026 21:00",
   "taxa_abs": 9.9,
   "total_faltas_mes": 558,
   "deficit": 21,
