@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "19/11/2026 16:43",
+  "atualizado_em": "19/11/2026 17:55",
   "total_tus": 70,
   "caixas_total_mes": 244501,
   "caixas_ln_mes": 121687,
@@ -1196,14 +1196,14 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "carteira_ln": {
-          "perfil": 41,
-          "cx": 7042,
-          "pcs": 290111
+          "perfil": 42,
+          "cx": 5628,
+          "pcs": 235053
         },
         "carteira_gv": {
           "perfil": 35,
-          "cx": 4499,
-          "pcs": 158753
+          "cx": 3854,
+          "pcs": 135410
         },
         "estojo_ln": {
           "perfil": 15,
@@ -1226,29 +1226,29 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "total_geral": {
-          "cx": 12303,
-          "pcs": 462012,
-          "perfil": 38
+          "cx": 10244,
+          "pcs": 383611,
+          "perfil": 37
         }
       }
     }
   },
-  "caixas_pendentes": 12303,
-  "caixas_ln_pend": 7326,
-  "caixas_gv_pend": 4977,
-  "pecas_pendentes": 462012,
-  "pecas_ln_pend": 294376,
-  "pecas_gv_pend": 167636,
-  "carretas_pendentes": 8,
-  "progresso_pct": 36,
+  "caixas_pendentes": 10244,
+  "caixas_ln_pend": 5912,
+  "caixas_gv_pend": 4332,
+  "pecas_pendentes": 383611,
+  "pecas_ln_pend": 239318,
+  "pecas_gv_pend": 144293,
+  "carretas_pendentes": 7,
+  "progresso_pct": 45,
   "atendimentos_em_andamento": [
     "MGI",
     "MGC"
   ],
   "alertas_atraso": [],
   "proxima_carteira": {
-    "carreta": "Carreta 04",
-    "tu_resumida": "...3548",
+    "carreta": "Carreta 05",
+    "tu_resumida": "...3655",
     "uf": "MGI"
   },
   "proxima_varejo": null,
@@ -1259,7 +1259,7 @@ window.dadosDashboard = {
   },
   "pendencias_por_canal": {
     "varejo": 0,
-    "carteira": 8,
+    "carteira": 7,
     "estojo": 1,
     "outras": 0
   },
@@ -1322,14 +1322,14 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "carteira_ln": {
-      "perfil": 41,
-      "cx": 7042,
-      "pcs": 290111
+      "perfil": 42,
+      "cx": 5628,
+      "pcs": 235053
     },
     "carteira_gv": {
       "perfil": 35,
-      "cx": 4499,
-      "pcs": 158753
+      "cx": 3854,
+      "pcs": 135410
     },
     "estojo_ln": {
       "perfil": 15,
@@ -1352,9 +1352,9 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "total_geral": {
-      "cx": 12303,
-      "pcs": 462012,
-      "perfil": 38
+      "cx": 10244,
+      "pcs": 383611,
+      "perfil": 37
     }
   }
 };
