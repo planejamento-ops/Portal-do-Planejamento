@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "19/11/2026 05:00",
+  "atualizado_em": "19/11/2026 06:01",
   "taxa_abs": 9.9,
   "total_faltas_mes": 616,
-  "deficit": 24,
-  "fi_dias": 148,
+  "deficit": 26,
+  "fi_dias": 146,
   "fj_dias": 88,
   "ferias": 16,
   "data_padrao_setor": "2026-11-19",
@@ -11,32 +11,32 @@ window.dadosPD = {
     "2026-11-02": {
       "taxa_abs": 16.8,
       "faltas": 72,
-      "deficit": 4,
-      "fi": 43,
+      "deficit": 6,
+      "fi": 41,
       "fj": 25,
       "ferias": 3
     },
     "2026-11-03": {
       "taxa_abs": 11.5,
       "faltas": 50,
-      "deficit": 6,
-      "fi": 22,
+      "deficit": 8,
+      "fi": 20,
       "fj": 22,
       "ferias": 6
     },
     "2026-11-04": {
       "taxa_abs": 7.7,
       "faltas": 30,
-      "deficit": 6,
-      "fi": 9,
+      "deficit": 7,
+      "fi": 8,
       "fj": 15,
       "ferias": 9
     },
     "2026-11-05": {
       "taxa_abs": 7.0,
       "faltas": 30,
-      "deficit": 3,
-      "fi": 20,
+      "deficit": 5,
+      "fi": 18,
       "fj": 7,
       "ferias": 10
     },
@@ -51,8 +51,8 @@ window.dadosPD = {
     "2026-11-07": {
       "taxa_abs": 10.6,
       "faltas": 44,
-      "deficit": 9,
-      "fi": 20,
+      "deficit": 10,
+      "fi": 19,
       "fj": 15,
       "ferias": 8
     },
@@ -3128,10 +3128,10 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "BANCO DE HORAS"
+          "FALTA INJUSTIFICADA"
         ],
         [
-          "FALTA INJUSTIFICADA"
+          "BANCO DE HORAS"
         ],
         [
           "FALTA INJUSTIFICADA"
@@ -3150,29 +3150,29 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        39,
+        37,
         13,
         10,
         8,
         3,
         3,
+        3,
         2,
         2,
-        1,
         1,
         1,
         1,
         1
       ],
       "data_cum": [
-        45.9,
-        61.2,
-        72.9,
-        82.4,
-        85.9,
-        89.4,
-        91.8,
-        94.1,
+        43.5,
+        58.8,
+        70.6,
+        80.0,
+        83.5,
+        87.1,
+        90.6,
+        92.9,
         95.3,
         96.5,
         97.6,
@@ -3292,6 +3292,9 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FALTA JUSTIFICADA"
         ],
         [
@@ -3299,9 +3302,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        11,
+        9,
         9,
         8,
+        2,
         1,
         1,
         1,
@@ -3309,8 +3313,9 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        33.3,
-        60.6,
+        27.3,
+        54.5,
+        78.8,
         84.8,
         87.9,
         90.9,
@@ -3356,26 +3361,26 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        18,
+        16,
         14,
         9,
         7,
         6,
         5,
+        3,
         2,
-        1,
         1,
         1,
         1
       ],
       "data_cum": [
-        27.7,
-        49.2,
-        63.1,
-        73.8,
-        83.1,
-        90.8,
-        93.8,
+        24.6,
+        46.2,
+        60.0,
+        70.8,
+        80.0,
+        87.7,
+        92.3,
         95.4,
         96.9,
         98.5,
@@ -3479,6 +3484,9 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FALTA JUSTIFICADA"
         ],
         [
@@ -3487,8 +3495,9 @@ window.dadosPD = {
       ],
       "data_abs": [
         11,
-        5,
         3,
+        3,
+        2,
         1,
         1,
         1,
@@ -3497,7 +3506,8 @@ window.dadosPD = {
       ],
       "data_cum": [
         45.8,
-        66.7,
+        58.3,
+        70.8,
         79.2,
         83.3,
         87.5,
@@ -3530,25 +3540,30 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
         11,
         9,
-        8,
+        7,
         6,
         3,
         2,
+        1,
         1,
         1
       ],
       "data_cum": [
         26.8,
         48.8,
-        68.3,
-        82.9,
-        90.2,
+        65.9,
+        80.5,
+        87.8,
+        92.7,
         95.1,
         97.6,
         100.0
@@ -3623,16 +3638,19 @@ window.dadosPD = {
     "2026-11-04_3": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
-        ],
-        [
           "FÉRIAS"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FALTA JUSTIFICADA"
         ],
         [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
         ],
         [
           "FALTA JUSTIFICADA"
@@ -3642,17 +3660,19 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        5,
+        4,
         4,
         3,
         2,
         1,
+        1,
         1
       ],
       "data_cum": [
-        31.2,
-        56.2,
-        75.0,
+        25.0,
+        50.0,
+        68.8,
+        81.2,
         87.5,
         93.8,
         100.0
@@ -3676,6 +3696,9 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FOLGA"
         ],
         [
@@ -3689,10 +3712,11 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        17,
+        15,
         10,
         5,
         3,
+        2,
         2,
         2,
         1,
@@ -3700,9 +3724,10 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        40.5,
-        64.3,
-        76.2,
+        35.7,
+        59.5,
+        71.4,
+        78.6,
         83.3,
         88.1,
         92.9,
@@ -3797,6 +3822,9 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FALTA JUSTIFICADA"
         ],
         [
@@ -3808,7 +3836,8 @@ window.dadosPD = {
       ],
       "data_abs": [
         4,
-        4,
+        2,
+        2,
         1,
         1,
         1,
@@ -3817,6 +3846,7 @@ window.dadosPD = {
       ],
       "data_cum": [
         30.8,
+        46.2,
         61.5,
         69.2,
         76.9,
@@ -4024,26 +4054,31 @@ window.dadosPD = {
         ],
         [
           "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
         ]
       ],
       "data_abs": [
-        16,
+        15,
         12,
         9,
         8,
         7,
         3,
         2,
-        2
+        2,
+        1
       ],
       "data_cum": [
-        27.1,
-        47.5,
-        62.7,
-        76.3,
-        88.1,
-        93.2,
-        96.6,
+        25.4,
+        45.8,
+        61.0,
+        74.6,
+        86.4,
+        91.5,
+        94.9,
+        98.3,
         100.0
       ]
     },
@@ -4133,25 +4168,30 @@ window.dadosPD = {
         ],
         [
           "DESLIGADO"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
         ]
       ],
       "data_abs": [
         9,
-        7,
+        6,
         4,
         2,
         2,
         2,
         2,
+        1,
         1
       ],
       "data_cum": [
         31.0,
-        55.2,
-        69.0,
-        75.9,
-        82.8,
-        89.7,
+        51.7,
+        65.5,
+        72.4,
+        79.3,
+        86.2,
+        93.1,
         96.6,
         100.0
       ]
@@ -5628,7 +5668,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        291,
+        283,
         164,
         130,
         108,
