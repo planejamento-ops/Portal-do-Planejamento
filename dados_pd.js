@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "18/11/2026 20:01",
+  "atualizado_em": "18/11/2026 21:00",
   "taxa_abs": 9.9,
   "total_faltas_mes": 599,
   "deficit": 22,
@@ -1648,7 +1648,7 @@ window.dadosPD = {
       ],
       "data": [
         17.6,
-        9.5,
+        9.4,
         9.4,
         7.1,
         4.8,
@@ -1707,7 +1707,7 @@ window.dadosPD = {
       "data": [
         22.2,
         10.7,
-        10.5,
+        10.0,
         4.8,
         0.0,
         0.0,
@@ -1764,7 +1764,7 @@ window.dadosPD = {
       ],
       "data": [
         15.7,
-        12.5,
+        12.3,
         9.0,
         7.7,
         7.1,
@@ -1824,7 +1824,7 @@ window.dadosPD = {
         12.5,
         11.8,
         9.5,
-        5.0,
+        4.8,
         0.0,
         0.0,
         0.0
@@ -2894,7 +2894,7 @@ window.dadosPD = {
         22.2,
         17.4,
         5.9,
-        4.9
+        4.8
       ],
       "absolutos": [
         4,
@@ -2971,7 +2971,7 @@ window.dadosPD = {
         22.2,
         13.6,
         5.9,
-        4.8
+        4.7
       ],
       "absolutos": [
         4,
@@ -5612,7 +5612,7 @@ window.dadosPD = {
     {
       "setor": "FECHAMENTO",
       "faltas": 102,
-      "taxa": 10.9
+      "taxa": 10.8
     },
     {
       "setor": "EXPEDICAO",
@@ -5729,7 +5729,7 @@ window.dadosPD = {
     {
       "lider": "FABIANE ALVES",
       "faltas": 4,
-      "taxa": 18.2
+      "taxa": 16.7
     }
   ],
   "alertas_pendentes": []
