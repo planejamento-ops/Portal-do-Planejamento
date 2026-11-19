@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "19/11/2026 04:44",
-  "progresso_geral_pct": 67,
-  "total_cxs_geral": 50217,
+  "atualizado_em": "19/11/2026 05:17",
+  "progresso_geral_pct": 62,
+  "total_cxs_geral": 54013,
   "total_loaded_cxs_geral": 33922,
-  "total_pending_cxs_geral": 16295,
+  "total_pending_cxs_geral": 20091,
   "cards_atendimentos": {
     "CARTEIRA": {
       "SPI": {
@@ -33,15 +33,15 @@ window.dadosFechamento = {
     },
     "VAREJO": {
       "SP": {
-        "total_cxs": 5399,
+        "total_cxs": 9195,
         "loaded_cxs": 3236,
         "rampa_cxs": 552,
-        "pending_cxs": 1611,
+        "pending_cxs": 5407,
         "finalizadas_gv_cx": 127,
         "finalizadas_fr_cx": 3109,
-        "pendentes_gv_cx": 0,
-        "pendentes_fr_cx": 1611,
-        "pct": 70,
+        "pendentes_gv_cx": 132,
+        "pendentes_fr_cx": 5275,
+        "pct": 41,
         "status_atend": "EM ANDAMENTO"
       }
     },
@@ -347,6 +347,110 @@ window.dadosFechamento = {
       "caixas_processadas": 4,
       "pct": 0,
       "status": "EM RAMPA"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 19",
+      "tu": "610000013711",
+      "total_caixas": 536,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 536,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 19",
+      "tu": "610000013712",
+      "total_caixas": 437,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 437,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 20",
+      "tu": "610000013714",
+      "total_caixas": 505,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 505,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 19",
+      "tu": "610000013766",
+      "total_caixas": 414,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 414,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 19",
+      "tu": "610000013767",
+      "total_caixas": 394,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 394,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 19",
+      "tu": "610000013768",
+      "total_caixas": 554,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 554,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 20",
+      "tu": "610000013769",
+      "total_caixas": 423,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 423,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 20",
+      "tu": "610000013770",
+      "total_caixas": 533,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 533,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
     }
   ]
 };
