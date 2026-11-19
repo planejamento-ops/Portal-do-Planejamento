@@ -1,5 +1,5 @@
 window.dadosFechamento = {
-  "atualizado_em": "19/11/2026 00:48",
+  "atualizado_em": "19/11/2026 01:22",
   "progresso_geral_pct": 67,
   "total_cxs_geral": 50217,
   "total_loaded_cxs_geral": 33922,
