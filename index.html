@@ -340,10 +340,11 @@
                                             <th>PEÇAS LN (EST.)</th>
                                             <th>PEÇAS GV (EST.)</th>
                                             <th>PEÇAS TOTAL</th>
+                                            <th>PERFIL</th>
                                         </tr>
                                     </thead>
                                     <tbody id="tbody-demanda-carteira">
-                                        <tr><td colspan="6" style="text-align:center; padding: 20px;">Carregando dados...</td></tr>
+                                        <tr><td colspan="7" style="text-align:center; padding: 20px;">Carregando dados...</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -362,10 +363,11 @@
                                             <th>PEÇAS LN (EST.)</th>
                                             <th>PEÇAS GV (EST.)</th>
                                             <th>PEÇAS TOTAL</th>
+                                            <th>PERFIL</th>
                                         </tr>
                                     </thead>
                                     <tbody id="tbody-demanda-estojo">
-                                        <tr><td colspan="6" style="text-align:center; padding: 20px;">Carregando dados...</td></tr>
+                                        <tr><td colspan="7" style="text-align:center; padding: 20px;">Carregando dados...</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -381,6 +383,7 @@
                                     <th>PEÇAS LN (EST.)</th>
                                     <th>PEÇAS GV (EST.)</th>
                                     <th>PEÇAS TOTAL</th>
+                                    <th>PERFIL</th>
                                 </tr>
                             </thead>
                             <tbody id="tbody-demanda-geral">
@@ -2310,24 +2313,40 @@
                     if (atend === 'VAREJO' || uf === 'SP') nomeLinha = 'VAREJO';
                     nomeLinha += sufixoNome;
 
+                    // CÁLCULO DE PERFIL (Peças / Caixas) - AGORA ARREDONDADO
+                    const totalCx = total_cx_ln + total_cx_gv;
+                    const totalPc = total_pcs_ln + total_pcs_gv;
+                    const perfilTotal = totalCx > 0 ? Math.round(totalPc / totalCx) : "-";
+
+                    const pendCx = pend_cx_ln + pend_cx_gv;
+                    const pendPc = pend_pcs_ln + pend_pcs_gv;
+                    const perfilPend = pendCx > 0 ? Math.round(pendPc / pendCx) : "-";
+
+                    const conclCx = concl_cx_ln + concl_cx_gv;
+                    const conclPc = concl_pcs_ln + concl_pcs_gv;
+                    const perfilConcl = conclCx > 0 ? Math.round(conclPc / conclCx) : "-";
+
                     return `
                         <tr class="row-header">
                             <td>${nomeLinha}</td>
                             <td>${formatarNumeroInteiro(total_cx_ln)}</td><td>${formatarNumeroInteiro(total_cx_gv)}</td>
                             <td>${formatarNumeroInteiro(total_pcs_ln)}</td><td>${formatarNumeroInteiro(total_pcs_gv)}</td>
                             <td>${formatarNumeroInteiro(total_pcs_ln + total_pcs_gv)}</td>
+                            <td><span class="val" style="color: #00d2ff; font-weight: 700;">${perfilTotal}</span></td>
                         </tr>
                         <tr class="row-pendente">
                             <td>Pendente</td>
                             <td>${formatarNumeroInteiro(pend_cx_ln)}</td><td>${formatarNumeroInteiro(pend_cx_gv)}</td>
                             <td>${formatarNumeroInteiro(pend_pcs_ln)}</td><td>${formatarNumeroInteiro(pend_pcs_gv)}</td>
                             <td>${formatarNumeroInteiro(pend_pcs_ln + pend_pcs_gv)}</td>
+                            <td><span class="val" style="color: #f6b93b; font-weight: 700;">${perfilPend}</span></td>
                         </tr>
                         <tr class="row-concluido">
                             <td>Concluído</td>
                             <td>${formatarNumeroInteiro(concl_cx_ln)}</td><td>${formatarNumeroInteiro(concl_cx_gv)}</td>
                             <td>${formatarNumeroInteiro(concl_pcs_ln)}</td><td>${formatarNumeroInteiro(concl_pcs_gv)}</td>
                             <td>${formatarNumeroInteiro(concl_pcs_ln + concl_pcs_gv)}</td>
+                            <td><span class="val" style="color: #00b09b; font-weight: 700;">${perfilConcl}</span></td>
                         </tr>
                     `;
                 };
@@ -2335,7 +2354,6 @@
                 const cardsAtend = foto.cards_atendimentos || {};
                 const listaItens = [];
 
-                // 1. Achata os dados para poder ordenar com precisão
                 Object.keys(cardsAtend).forEach(atend => {
                     const ufsObj = cardsAtend[atend] || {};
                     Object.keys(ufsObj).forEach(uf => {
@@ -2355,28 +2373,20 @@
                     });
                 });
 
-                // 2. Define a hierarquia fixa do Calendário de Atendimento
                 const ordemCalendario = ['MGC', 'SPI', 'SPC', 'MGI', 'VAREJO'];
                 const getPesoCalendario = (nome) => {
                     const idx = ordemCalendario.indexOf(nome);
                     return idx === -1 ? 99 : idx;
                 };
 
-                // 3. Ordena primeiro por TU vs WMS, depois pelo Calendário
                 listaItens.sort((a, b) => {
-                    if (a.isWms !== b.isWms) {
-                        return a.isWms ? 1 : -1; // TU ativa (false) vem antes de WMS (true)
-                    }
+                    if (a.isWms !== b.isWms) return a.isWms ? 1 : -1;
                     return getPesoCalendario(a.chaveOrdenacao) - getPesoCalendario(b.chaveOrdenacao);
                 });
 
-                // 4. Renderiza na ordem exata
                 listaItens.forEach(obj => {
-                    if (obj.isEstojo) {
-                        htmlEst += renderGrupo(obj.atend, obj.uf, obj.item, true);
-                    } else {
-                        htmlCart += renderGrupo(obj.atend, obj.uf, obj.item, false);
-                    }
+                    if (obj.isEstojo) htmlEst += renderGrupo(obj.atend, obj.uf, obj.item, true);
+                    else htmlCart += renderGrupo(obj.atend, obj.uf, obj.item, false);
                 });
 
                 const renderTotais = (t) => {
@@ -2384,29 +2394,38 @@
                     let pend_cx_gv = (t.cx_gv - t.concl_cx_gv);
                     let pend_pcs_ln = (t.pcs_ln - t.concl_pcs_ln);
                     let pend_pcs_gv = (t.pcs_gv - t.concl_pcs_gv);
+                    
+                    // ARREDONDADO
+                    const perfilTot = (t.cx_ln + t.cx_gv) > 0 ? Math.round((t.pcs_ln + t.pcs_gv) / (t.cx_ln + t.cx_gv)) : "-";
+                    const perfilPend = (pend_cx_ln + pend_cx_gv) > 0 ? Math.round((pend_pcs_ln + pend_pcs_gv) / (pend_cx_ln + pend_cx_gv)) : "-";
+                    const perfilConcl = (t.concl_cx_ln + t.concl_cx_gv) > 0 ? Math.round((t.concl_pcs_ln + t.concl_pcs_gv) / (t.concl_cx_ln + t.concl_cx_gv)) : "-";
+
                     return `
                     <tr class="row-total">
                         <td style="text-align: left; padding-left: 16px;">TOTAL</td>
                         <td>${formatarNumeroInteiro(t.cx_ln)}</td><td>${formatarNumeroInteiro(t.cx_gv)}</td>
                         <td>${formatarNumeroInteiro(t.pcs_ln)}</td><td>${formatarNumeroInteiro(t.pcs_gv)}</td>
                         <td>${formatarNumeroInteiro(t.pcs_ln + t.pcs_gv)}</td>
+                        <td><span class="val" style="color: #00d2ff; font-weight: 800;">${perfilTot}</span></td>
                     </tr>
                     <tr class="row-total-pendente">
                         <td style="text-align: left; padding-left: 16px;">PENDENTE</td>
                         <td>${formatarNumeroInteiro(pend_cx_ln)}</td><td>${formatarNumeroInteiro(pend_cx_gv)}</td>
                         <td>${formatarNumeroInteiro(pend_pcs_ln)}</td><td>${formatarNumeroInteiro(pend_pcs_gv)}</td>
                         <td>${formatarNumeroInteiro(pend_pcs_ln + pend_pcs_gv)}</td>
+                        <td><span class="val" style="color: #fcd34d; font-weight: 800;">${perfilPend}</span></td>
                     </tr>
                     <tr class="row-total-concluido">
                         <td style="text-align: left; padding-left: 16px;">CONCLUÍDO</td>
                         <td>${formatarNumeroInteiro(t.concl_cx_ln)}</td><td>${formatarNumeroInteiro(t.concl_cx_gv)}</td>
                         <td>${formatarNumeroInteiro(t.concl_pcs_ln)}</td><td>${formatarNumeroInteiro(t.concl_pcs_gv)}</td>
                         <td>${formatarNumeroInteiro(t.concl_pcs_ln + t.concl_pcs_gv)}</td>
+                        <td><span class="val" style="color: #6ee7b7; font-weight: 800;">${perfilConcl}</span></td>
                     </tr>
                 `};
 
-                setHtmlSeguro('tbody-demanda-carteira', htmlCart || `<tr><td colspan="6" style="text-align:center; padding: 20px;">Sem dados para exibir</td></tr>`);
-                setHtmlSeguro('tbody-demanda-estojo', htmlEst || `<tr><td colspan="6" style="text-align:center; padding: 20px;">Sem dados para exibir</td></tr>`);
+                setHtmlSeguro('tbody-demanda-carteira', htmlCart || `<tr><td colspan="7" style="text-align:center; padding: 20px;">Sem dados para exibir</td></tr>`);
+                setHtmlSeguro('tbody-demanda-estojo', htmlEst || `<tr><td colspan="7" style="text-align:center; padding: 20px;">Sem dados para exibir</td></tr>`);
                 
                 if (htmlCart) document.getElementById('tbody-demanda-carteira').innerHTML += renderTotais(totCart);
                 if (htmlEst) document.getElementById('tbody-demanda-estojo').innerHTML += renderTotais(totEst);
@@ -2418,24 +2437,37 @@
                     concl_pcs_ln: totCart.concl_pcs_ln + totEst.concl_pcs_ln, concl_pcs_gv: totCart.concl_pcs_gv + totEst.concl_pcs_gv
                 };
 
+                // ARREDONDADO GERAL
+                const perfilTotGeral = (g.cx_ln + g.cx_gv) > 0 ? Math.round((g.pcs_ln + g.pcs_gv) / (g.cx_ln + g.cx_gv)) : "-";
+                const pendCxGeral = (g.cx_ln - g.concl_cx_ln) + (g.cx_gv - g.concl_cx_gv);
+                const pendPcsGeral = (g.pcs_ln - g.concl_pcs_ln) + (g.pcs_gv - g.concl_pcs_gv);
+                const perfilPendGeral = pendCxGeral > 0 ? Math.round(pendPcsGeral / pendCxGeral) : "-";
+                
+                const conclCxGeral = g.concl_cx_ln + g.concl_cx_gv;
+                const conclPcsGeral = g.concl_pcs_ln + g.concl_pcs_gv;
+                const perfilConclGeral = conclCxGeral > 0 ? Math.round(conclPcsGeral / conclCxGeral) : "-";
+
                 setHtmlSeguro('tbody-demanda-geral', `
                     <tr class="row-total">
                         <td style="text-align: left; padding-left: 16px;">TOTAL GERAL</td>
                         <td>${formatarNumeroInteiro(g.cx_ln)}</td><td>${formatarNumeroInteiro(g.cx_gv)}</td>
                         <td>${formatarNumeroInteiro(g.pcs_ln)}</td><td>${formatarNumeroInteiro(g.pcs_gv)}</td>
                         <td>${formatarNumeroInteiro(g.pcs_ln + g.pcs_gv)}</td>
+                        <td><span class="val" style="color: #00d2ff; font-weight: 800;">${perfilTotGeral}</span></td>
                     </tr>
                     <tr class="row-total-pendente">
                         <td style="text-align: left; padding-left: 16px;">PENDENTE GERAL</td>
                         <td>${formatarNumeroInteiro(g.cx_ln - g.concl_cx_ln)}</td><td>${formatarNumeroInteiro(g.cx_gv - g.concl_cx_gv)}</td>
                         <td>${formatarNumeroInteiro(g.pcs_ln - g.concl_pcs_ln)}</td><td>${formatarNumeroInteiro(g.pcs_gv - g.concl_pcs_gv)}</td>
                         <td>${formatarNumeroInteiro((g.pcs_ln - g.concl_pcs_ln) + (g.pcs_gv - g.concl_pcs_gv))}</td>
+                        <td><span class="val" style="color: #fcd34d; font-weight: 800;">${perfilPendGeral}</span></td>
                     </tr>
                     <tr class="row-total-concluido">
                         <td style="text-align: left; padding-left: 16px;">CONCLUÍDO GERAL</td>
                         <td>${formatarNumeroInteiro(g.concl_cx_ln)}</td><td>${formatarNumeroInteiro(g.concl_cx_gv)}</td>
                         <td>${formatarNumeroInteiro(g.concl_pcs_ln)}</td><td>${formatarNumeroInteiro(g.concl_pcs_gv)}</td>
                         <td>${formatarNumeroInteiro(g.concl_pcs_ln + g.concl_pcs_gv)}</td>
+                        <td><span class="val" style="color: #6ee7b7; font-weight: 800;">${perfilConclGeral}</span></td>
                     </tr>
                 `);
             } catch (err) { console.error("Erro Demanda Diária:", err); }
