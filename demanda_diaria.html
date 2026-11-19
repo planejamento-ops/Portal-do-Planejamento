@@ -3,171 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualizar Demanda Diária</title>
+    <title>Dashboard Analítico - Demanda Diária</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <style>
         /* ========================================= */
-        /* BASE & TEMA CLARO (PADRÃO DEFINITIVO)     */
+        /* BASE & TEMA CLARO (EXECUTIVO MULTINACIONAL) */
         /* ========================================= */
-        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f6f9; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; color: #2c3e50; min-height: 100vh; transition: background 0.3s ease, color 0.3s ease; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
         
-        .btn-theme-toggle { position: absolute; top: 20px; right: 20px; background-color: #002b5e; color: white; border: none; padding: 10px 18px; border-radius: 20px; font-weight: bold; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: all 0.3s ease; z-index: 10; }
-        .btn-theme-toggle:hover { transform: scale(1.05); }
+        * { box-sizing: border-box; font-family: 'Inter', 'Segoe UI', sans-serif; }
+        body { background-color: #e2e8f0; margin: 0; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; color: #1e293b; min-height: 100vh; transition: background 0.4s ease, color 0.4s ease; }
+        
+        /* BOTÃO DE TEMA (DIREITA TOPO) */
+        .top-controls { position: absolute; top: 20px; right: 25px; display: flex; gap: 10px; z-index: 10; }
+        .btn-theme-toggle { background: linear-gradient(135deg, #002b5e 0%, #001a38 100%); color: white; border: none; padding: 10px 20px; border-radius: 30px; font-weight: 800; font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 15px rgba(0, 43, 94, 0.2); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); text-transform: uppercase; letter-spacing: 1px; }
+        .btn-theme-toggle:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 43, 94, 0.3); }
 
-        .top-bar { width: 100%; max-width: 1000px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid #e11b22; padding-bottom: 15px; }
-        .app-title { font-size: 26px; font-weight: 800; text-transform: uppercase; color: #002b5e; margin: 0; letter-spacing: 0.5px; }
-        .app-title span { color: #e11b22; }
-        
+        /* CABEÇALHO CEVA */
+        .top-bar { width: 100%; max-width: 1000px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 4px solid #e11b22; padding-bottom: 12px; }
+        .app-title { font-size: 26px; font-weight: 900; text-transform: uppercase; color: #002b5e; margin: 0; letter-spacing: -0.5px; }
         .ceva-logo { height: 32px; }
         .ceva-text-path { fill: #002b5e; transition: fill 0.3s ease; }
 
-        .container { background-color: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); width: 100%; max-width: 1000px; margin-bottom: 30px; transition: all 0.3s ease; border: 1px solid #e9ecef; }
+        /* SESSÕES PRINCIPAIS */
+        .container { background-color: #ffffff; padding: 35px 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 43, 94, 0.08); width: 100%; max-width: 1000px; margin-bottom: 30px; border: none; }
         
-        .section-title { font-size: 14px; color: #002b5e; font-weight: 700; text-transform: uppercase; margin-top: 25px; margin-bottom: 15px; letter-spacing: 1px; display: flex; align-items: center; }
-        .section-title::before { content: ""; display: inline-block; width: 4px; height: 16px; background-color: #e11b22; margin-right: 8px; border-radius: 2px; }
+        .section-header-row { display: flex; justify-content: space-between; align-items: flex-end; width: 100%; margin-bottom: 15px; margin-top: 25px; }
+        .section-title { font-size: 14px; color: #002b5e; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; margin: 0; }
+        .section-title::before { content: ""; display: inline-block; width: 5px; height: 16px; background-color: #e11b22; margin-right: 10px; border-radius: 3px; }
 
-        .grid-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        /* CARGA RÁPIDA (DENTRO DA SESSÃO) */
+        .btn-carga-rapida { background-color: #f8f9fa; color: #002b5e; border: 2px solid #cbd5e1; padding: 10px 22px; font-size: 12px; font-weight: 800; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s ease; display: inline-flex; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+        .btn-carga-rapida:hover { background-color: #002b5e; border-color: #002b5e; color: #ffffff; transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0, 43, 94, 0.15); }
+        .btn-carga-rapida input { display: none; }
+
+        .grid-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
         
-        .file-card { background-color: #ffffff; border: 2px dashed #b0bec5; border-radius: 10px; padding: 20px 15px; text-align: center; cursor: pointer; transition: all 0.2s ease; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 110px; position: relative; }
-        .file-card:hover { border-color: #0052cc; background-color: #f8faff; }
-        .file-card.has-file { border-color: #25d366; border-style: solid; background-color: #f0fff4; }
-        
+        /* CARDS DE UPLOAD */
+        .file-card { background-color: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 10px; padding: 20px 15px; text-align: center; cursor: pointer; transition: all 0.2s ease; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100px; }
+        .file-card:hover { border-color: #0052cc; background-color: #eff6ff; }
+        .file-card.has-file { border-color: #10b981; border-style: solid; background-color: #ecfdf5; }
         .file-card input[type="file"] { display: none; }
-        .file-title { font-weight: 700; color: #002b5e; font-size: 14px; margin-bottom: 4px; text-transform: uppercase; text-align: center;}
-        .file-subtitle { font-size: 11px; color: #6c757d; margin-bottom: 10px; }
-        .file-name { font-size: 12px; color: #0052cc; font-weight: 700; background: rgba(0, 82, 204, 0.1); padding: 4px 10px; border-radius: 6px; display: none; word-break: break-all; }
+        .file-title { font-weight: 800; color: #002b5e; font-size: 13px; margin-bottom: 4px; text-transform: uppercase; }
+        .file-subtitle { font-size: 11px; color: #64748b; margin-bottom: 8px; }
+        .file-name { font-size: 11px; color: #0052cc; font-weight: 800; background: rgba(0, 82, 204, 0.1); padding: 5px 10px; border-radius: 6px; display: none; word-break: break-all; }
         
-        .card-turno { border-color: #d48806 !important; }
-        .card-turno .file-title { color: #d48806 !important; }
-        .card-turno:hover { border-color: #b27300 !important; background-color: #fffdf8 !important; }
+        .card-turno { border-color: #d48806 !important; background-color: #fffbeb !important; }
+        .card-turno .file-title { color: #b45309 !important; }
+        .card-turno:hover { border-color: #b45309 !important; background-color: #fef3c7 !important; }
         
-        .date-card { background-color: #ffffff; border: 2px solid #b0bec5; border-radius: 10px; padding: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-        .date-card input[type="date"] { width: 100%; background: #ffffff; color: #002b5e; border: 1px solid #b0bec5; padding: 8px; border-radius: 6px; font-weight: bold; font-family: 'Segoe UI', sans-serif; outline: none; margin-top: 8px; cursor: pointer; }
+        .date-card { background-color: #ffffff; border: 2px solid #cbd5e1; border-radius: 10px; padding: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .date-card input[type="date"] { width: 100%; background: #f8fafc; color: #002b5e; border: 1px solid #cbd5e1; padding: 8px; border-radius: 6px; font-weight: 800; font-family: 'Inter', sans-serif; outline: none; margin-top: 8px; cursor: pointer; }
 
-        .loaded-state { border-color: #25d366 !important; background-color: #f0fff4 !important; border-style: solid !important; }
-        .loaded-text { color: #25d366 !important; font-weight: 800 !important; background: rgba(37, 211, 102, 0.1) !important; display: block !important; }
+        .loaded-state { border-color: #10b981 !important; background-color: #ecfdf5 !important; border-style: solid !important; }
+        .loaded-text { color: #059669 !important; font-weight: 900 !important; background: rgba(16, 185, 129, 0.15) !important; display: block !important; }
 
-        .btn-acao { background-color: #223f8f; color: white; border: none; padding: 16px 30px; font-size: 15px; font-weight: 700; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; transition: all 0.2s ease; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(34, 63, 143, 0.2); }
-        .btn-acao:hover { background-color: #1a3070; transform: translateY(-1px); }
+        /* DEMANDA FUTURA DINÂMICA */
+        .futuro-container { border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px; background-color: #f8fafc; margin-bottom: 15px; }
+        .futuro-header { display: grid; grid-template-columns: 1.5fr 1.5fr 1fr 1fr 35px; gap: 10px; margin-bottom: 10px; align-items: center; border-bottom: 2px solid #cbd5e1; padding-bottom: 8px; }
+        .futuro-row { display: grid; grid-template-columns: 1.5fr 1.5fr 1fr 1fr 35px; gap: 10px; margin-bottom: 10px; align-items: center; }
+        .futuro-row select, .futuro-row input { padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; font-family: 'Inter', sans-serif; outline: none; width: 100%; font-weight: 600; color:#1e293b; background: #fff; }
+        .futuro-row select:focus, .futuro-row input:focus { border-color: #0052cc; box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1); }
+        .lbl { font-size: 11px; font-weight: 800; color: #475569; text-align: center; text-transform: uppercase; }
+        .btn-add { background-color: #e2e8f0; color: #0f172a; border: none; padding: 8px 16px; font-size: 11px; font-weight: 800; border-radius: 6px; cursor: pointer; margin-top: 10px; transition: 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn-add:hover { background-color: #cbd5e1; }
+        .btn-rem { background-color: #fee2e2; color: #b91c1c; border: none; border-radius: 6px; cursor: pointer; padding: 10px; font-weight: bold; transition: 0.2s; display: flex; justify-content: center; align-items: center; }
+        .btn-rem:hover { background-color: #f87171; color: white; }
+
+        .btn-acao { background: linear-gradient(135deg, #002b5e 0%, #001a38 100%); color: white; border: none; padding: 18px 30px; font-size: 15px; font-weight: 900; border-radius: 10px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; transition: all 0.3s ease; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(0, 43, 94, 0.2); }
+        .btn-acao:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(0, 43, 94, 0.3); }
         
-        #status-msg { margin-top: 20px; text-align: center; font-weight: bold; font-size: 14px; color: #0052cc; }
+        #status-msg { margin-top: 20px; text-align: center; font-weight: 800; font-size: 14px; color: #0052cc; }
 
         /* ========================================= */
-        /* PRINT FINAL DA TABELA                     */
+        /* PRINT FINAL: DASHBOARD PAISAGEM / GRID    */
         /* ========================================= */
         #painel-wrapper { display: flex; flex-direction: column; align-items: center; width: 100%; }
         
-        #btn-container { display: none; gap: 15px; width: 100%; max-width: 950px; margin-top: 20px; margin-bottom: 50px; }
-        .btn-export { background: linear-gradient(90deg, #002b5e 0%, #001a38 100%); flex: 2; margin: 0; box-shadow: 0 4px 12px rgba(0, 43, 94, 0.3); }
-        .btn-export:hover { background: linear-gradient(90deg, #003a80 0%, #002147 100%); }
-        .btn-salvar { background: linear-gradient(90deg, #d48806 0%, #b27300 100%); flex: 1; margin: 0; box-shadow: 0 4px 12px rgba(212, 136, 6, 0.3); }
-        .btn-salvar:hover { background: linear-gradient(90deg, #b27300 0%, #8a5a00 100%); }
+        #btn-container { display: none; gap: 15px; width: 100%; max-width: 1250px; margin-top: 20px; margin-bottom: 50px; }
+        .btn-export { background: linear-gradient(135deg, #002b5e 0%, #001a38 100%); flex: 2; margin: 0; }
+        .btn-salvar { background: linear-gradient(135deg, #475569 0%, #334155 100%); flex: 1; margin: 0; }
 
-        #painel-export { background: #ffffff; padding: 30px 40px; border-radius: 12px; display: none; margin-top: 10px; width: 100%; max-width: 950px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); transition: background 0.3s ease; box-sizing: border-box; }
+        /* PAINEL LARGO */
+        #painel-export { background: #ffffff; padding: 35px 45px; border-radius: 16px; display: none; margin-top: 10px; width: 100%; max-width: 1350px; box-shadow: 0 15px 40px rgba(0, 43, 94, 0.08); box-sizing: border-box; }
         
-        .print-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #f0f2f5; padding-bottom: 15px; }
-        .print-title { color: #002b5e; font-size: 22px; font-weight: 800; margin: 0; text-transform: uppercase; }
-        .print-logo { height: 26px; }
+        .print-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 4px solid #e11b22; padding-bottom: 15px; }
+        .print-title { color: #002b5e; font-size: 24px; font-weight: 900; margin: 0; text-transform: uppercase; letter-spacing: -0.5px; }
+        .print-logo { height: 28px; }
 
-        table { border-collapse: collapse; width: 100%; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 14px; text-align: center; color: #333333; }
-        th, td { border: 1px solid #dcdfe6; padding: 10px 6px; }
+        .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; width: 100%; }
         
-        .bg-titulo { background-color: #002b5e; color: #ffffff; font-weight: 700; font-size: 14px; text-align: left; padding-left: 15px; border-top: 3px solid #e11b22; }
-        .bg-header { background-color: #f8f9fa; color: #495057; font-weight: 700; font-size: 12px; text-transform: uppercase; }
+        /* CARTÕES POR UF E TOTAIS (VISUAL CLEAN & HIGH-END) */
+        .uf-card { background: #fff; border-radius: 12px; border: 1px solid #cbd5e1; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 6px 15px rgba(0,0,0,0.03); }
+        .uf-header { background: linear-gradient(90deg, #002b5e 0%, #001a38 100%); color: #fff; padding: 14px 20px; font-weight: 900; font-size: 16px; text-transform: uppercase; border-bottom: 4px solid #e11b22; }
+        .fut-header { background: linear-gradient(90deg, #001a38 0%, #000c1a 100%); border-bottom: 4px solid #0052cc; }
+        .totais-header { background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%); border-bottom: 4px solid #10b981; }
         
-        .row-cart { font-weight: 700; color: #002b5e; background-color: #ffffff; }
-        .bg-normal { background-color: #ffffff; color: #333333; }
-        .bg-pendente { background-color: #f4f8fd; color: #004085; font-weight: 600; }
-        .bg-concluido { background-color: #fdf5f5; color: #b31016; font-weight: 600; }
+        .uf-table { border-collapse: collapse; width: 100%; font-family: 'Inter', sans-serif; font-size: 13px; text-align: center; color: #334155; }
+        .uf-table th, .uf-table td { border: 1px solid #e2e8f0; padding: 10px 6px; } 
+        .uf-table th { background-color: #f8fafc; color: #475569; font-weight: 800; font-size: 10px; text-transform: uppercase; border-bottom: 2px solid #cbd5e1; letter-spacing: 0.5px; }
         
-        .bg-total { background-color: #002b5e; color: white; font-weight: 700; }
-        .bg-total-pendente { background-color: #004085; color: #e6f0ff; font-weight: 700; }
-        .bg-total-concluido { background-color: #b31016; color: #fdf5f5; font-weight: 700; }
-        
-        .bg-geral { background-color: #e4e7ed; font-weight: 800; color: #002b5e; }
-        .bg-geral-pend { background-color: #fff8e1; font-weight: 800; color: #b27300; }
-        .bg-geral-concluido { background-color: #fdf5f5; font-weight: 800; color: #b31016; }
-        
-        .col-destaque { font-weight: 700; }
-        .bg-perfil { background-color: #2b3a5c; color: white; font-weight: 700; }
-        .bg-perfil-pend { background-color: #4a5c82; color: white; font-weight: 700; }
+        /* LINHA DE DEMANDA TOTAL CLEAN */
+        .row-total-uf { background-color: #f1f5f9; border-bottom: 1px solid #cbd5e1; }
+        .row-total-uf td, .row-total-uf th { font-weight: 700; color: #0f172a; font-size: 12px; padding: 12px 15px; }
+        .row-total-uf span.destaque-total { color: #0052cc; font-weight: 900; font-size: 14px; margin-left: 5px; }
 
-        .nota-perfil { font-size: 12px; color: #606266; margin-top: 15px; text-align: left; background: #f8f9fa; padding: 12px 15px; border-radius: 6px; border-left: 3px solid #0052cc; line-height: 1.5; }
-        .nota-perfil strong { color: #002b5e; }
+        /* LABEL LATERAL (CARTEIRA / ESTOJO) */
+        .tipo-label { writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle; font-weight: 800; font-size: 12px; letter-spacing: 2px; background-color: #f8fafc; color: #002b5e; border-right: 2px solid #cbd5e1; width: 35px; }
+        
+        .lbl-fase { font-weight: 800; color: #002b5e; background-color: #ffffff; text-align: left; padding-left: 15px !important; }
+        
+        /* CORES PASTEL ELEGANTES */
+        .row-ativo { background-color: #ffffff; }
+        .row-pendente { background-color: #fefce8; color: #854d0e; }
+        .row-pendente .lbl-fase { background-color: #fefce8; color: #854d0e; }
+        .row-concluido { background-color: #fef2f2; color: #991b1b; }
+        .row-concluido .lbl-fase { background-color: #fef2f2; color: #991b1b; }
+        
+        .destaque { font-weight: 800; color: #0f172a; }
+        .perfil { font-weight: 700; background-color: #f8fafc; color: #64748b; }
+        
+        .fut-sub-div { background-color: #f8fafc; color: #002b5e; font-weight: 900; font-size: 13px; text-align: left; padding: 8px 15px !important; border-bottom: 1px solid #e2e8f0; }
+
+        /* CARTÃO DE TOTAL GERAL (RODAPÉ) */
+        .total-geral-card { grid-column: 1 / -1; margin-top: 10px; border: 2px solid #002b5e; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 43, 94, 0.08); }
+        .geral-table { font-size: 14px; }
+        .geral-table th, .geral-table td { padding: 14px 10px; border: 1px solid #cbd5e1; font-weight: 700; }
+        .geral-ativo { background-color: #002b5e; color: white; font-weight: 900; }
+        .geral-pend { background-color: #fefce8; color: #854d0e; font-weight: 900; }
+        .geral-conc { background-color: #fef2f2; color: #991b1b; font-weight: 900; }
+
+        .nota-perfil { font-size: 11px; color: #64748b; margin-top: 25px; text-align: left; background: #f8fafc; padding: 15px 20px; border-radius: 8px; border-left: 4px solid #0052cc; line-height: 1.5; font-weight: 500; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+        .nota-perfil strong { color: #002b5e; font-weight: 800; }
 
         /* ========================================= */
-        /* TEMA MODO ESCURO (DARK MODE)              */
+        /* TEMA MODO ESCURO (CYBER TECH / NEON)      */
         /* ========================================= */
-        body.dark-mode { background-color: #0d1117; color: #c9d1d9; }
+        body.dark-mode { background-color: #0b0f19; color: #94a3b8; }
+        body.dark-mode .btn-theme-toggle { background-color: #1e293b; color: #f8fafc; border: 1px solid #334155; }
         
-        body.dark-mode .btn-theme-toggle { background-color: #ffffff; color: #0d1117; }
-        body.dark-mode .app-title { color: #ffffff; border-bottom-color: #e11b22; }
-        body.dark-mode .ceva-text-path { fill: #ffffff; }
+        body.dark-mode .app-title { color: #f8fafc; border-bottom-color: #e11b22; }
+        body.dark-mode .ceva-text-path { fill: #f8fafc; }
+        body.dark-mode .container { background-color: #111827; box-shadow: 0 0 40px rgba(0,0,0,0.4); border: 1px solid #1f2937; }
+        body.dark-mode .section-title { color: #e2e8f0; }
         
-        body.dark-mode .container { background-color: #161b22; box-shadow: 0 8px 25px rgba(0,0,0,0.6); border: 1px solid #30363d; }
-        body.dark-mode .section-title { color: #8b949e; }
+        body.dark-mode .btn-carga-rapida { background-color: #1f2937; color: #38bdf8; border-color: #374151; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        body.dark-mode .btn-carga-rapida:hover { background-color: #374151; color: #7dd3fc; border-color: #38bdf8; }
         
-        body.dark-mode .file-card { background-color: #0d1117; border-color: #30363d; }
-        body.dark-mode .file-card:hover { border-color: #58a6ff; background-color: #1c2128; }
-        body.dark-mode .file-card.has-file { border-color: #238636; background-color: #102a1b; }
-        body.dark-mode .file-title { color: #c9d1d9; }
-        body.dark-mode .file-subtitle { color: #8b949e; }
-        body.dark-mode .file-name { color: #58a6ff; background: rgba(88, 166, 255, 0.1); }
+        body.dark-mode .file-card { background-color: #0b0f19; border-color: #374151; }
+        body.dark-mode .file-card:hover { border-color: #38bdf8; background-color: #162032; }
+        body.dark-mode .file-card.has-file { border-color: #10b981; background-color: #064e3b; }
+        body.dark-mode .file-title { color: #f1f5f9; }
+        body.dark-mode .file-subtitle { color: #64748b; }
+        body.dark-mode .file-name { color: #38bdf8; background: rgba(56, 189, 248, 0.1); }
         
-        body.dark-mode .card-turno { border-color: #d48806 !important; background-color: #161b22 !important; }
-        body.dark-mode .card-turno:hover { border-color: #ffcc66 !important; background-color: #2b2214 !important; }
-        body.dark-mode .card-turno .file-title { color: #ffcc66 !important; }
-
-        body.dark-mode .loaded-state { background-color: #102a1b !important; border-color: #238636 !important; }
-
-        body.dark-mode .date-card { background-color: #0d1117; border-color: #30363d; }
-        body.dark-mode .date-card input[type="date"] { background: #161b22; color: #58a6ff; border-color: #30363d; }
-
-        body.dark-mode .btn-acao { background-color: #1f6feb; color: #ffffff; }
-        body.dark-mode .btn-acao:hover { background-color: #388bfd; }
-
-        body.dark-mode #status-msg { color: #58a6ff; }
-
-        body.dark-mode #painel-export { background: #161b22; border: 1px solid #30363d; }
-        body.dark-mode .print-title { color: #c9d1d9; }
-        body.dark-mode .print-header { border-bottom-color: #30363d; }
+        body.dark-mode .card-turno { border-color: #fbbf24 !important; background-color: #1e293b !important; }
+        body.dark-mode .card-turno:hover { border-color: #fcd34d !important; background-color: #2b2214 !important; }
+        body.dark-mode .card-turno .file-title { color: #fcd34d !important; }
+        body.dark-mode .date-card { background-color: #0b0f19; border-color: #374151; }
+        body.dark-mode .date-card input[type="date"] { background: #1e293b; color: #38bdf8; border-color: #374151; }
         
-        body.dark-mode table { color: #c9d1d9; }
-        body.dark-mode th, body.dark-mode td { border-color: #30363d; }
+        body.dark-mode .futuro-container { background-color: #0f172a; border-color: #1e293b; }
+        body.dark-mode .futuro-header { border-color: #374151; }
+        body.dark-mode .futuro-row select, body.dark-mode .futuro-row input { background: #1e293b; color: #f1f5f9; border-color: #374151; }
+        body.dark-mode .lbl { color: #94a3b8; }
+        body.dark-mode .btn-add { background-color: #1f2937; color: #cbd5e1; border: none; }
+        body.dark-mode .btn-add:hover { background-color: #374151; color: #f8fafc; }
+        body.dark-mode .btn-rem { background-color: #7f1d1d; color: #fca5a5; border: none; }
+        body.dark-mode .btn-acao { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: #ffffff; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); }
+        body.dark-mode .btn-acao:hover { box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5); }
+        body.dark-mode #status-msg { color: #38bdf8; }
         
-        body.dark-mode .bg-titulo { background-color: #0d1117; color: #ffffff; border-top: 3px solid #e11b22; }
-        body.dark-mode .bg-header { background-color: #21262d; color: #8b949e; }
+        body.dark-mode #painel-export { background: #111827; border: 1px solid #1f2937; box-shadow: 0 15px 50px rgba(0,0,0,0.8); }
+        body.dark-mode .print-title { color: #f8fafc; }
+        body.dark-mode .print-header { border-bottom-color: #374151; }
         
-        body.dark-mode .row-cart { color: #58a6ff; background-color: #161b22; }
+        body.dark-mode .uf-card { background: #1f2937; border-color: #374151; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        body.dark-mode .uf-header { background: linear-gradient(90deg, #1e293b 0%, #0f172a 100%); color: #f8fafc; border-bottom: 4px solid #0ea5e9; }
+        body.dark-mode .fut-header { border-bottom: 4px solid #f43f5e; }
+        body.dark-mode .totais-header { border-bottom: 4px solid #10b981; }
         
-        body.dark-mode .bg-normal { background-color: #161b22; color: #c9d1d9; }
-        body.dark-mode .bg-pendente { background-color: #1c2a3f; color: #79c0ff; }
-        body.dark-mode .bg-concluido { background-color: #3f1d1d; color: #ff7b72; }
+        body.dark-mode .uf-table th { background-color: #111827; color: #94a3b8; border-color: #374151; }
+        body.dark-mode .uf-table td { border-color: #374151; color: #cbd5e1; }
         
-        body.dark-mode .bg-total { background-color: #0d1117; color: #ffffff; }
-        body.dark-mode .bg-total-pendente { background-color: #111e30; color: #79c0ff; }
-        body.dark-mode .bg-total-concluido { background-color: #2c1212; color: #ff7b72; }
+        body.dark-mode .row-total-uf { background-color: #111827; border-bottom-color: #374151; }
+        body.dark-mode .row-total-uf th { color: #cbd5e1; }
+        body.dark-mode .row-total-uf span.destaque-total { color: #38bdf8; text-shadow: 0 0 8px rgba(56, 189, 248, 0.4); }
         
-        body.dark-mode .bg-geral { background-color: #21262d; color: #ffffff; }
-        body.dark-mode .bg-geral-pend { background-color: #332b1f; color: #e3b341; }
-        body.dark-mode .bg-geral-concluido { background-color: #3f1d1d; color: #ff7b72; }
+        body.dark-mode .tipo-label { background-color: #0f172a; color: #94a3b8; border-right-color: #374151; }
+        body.dark-mode .fut-sub-div { background-color: #111827; color: #e2e8f0; border-bottom-color: #374151; }
         
-        body.dark-mode .bg-perfil { background-color: #0d1117; color: #58a6ff; }
-        body.dark-mode .bg-perfil-pend { background-color: #21262d; color: #8b949e; }
-
-        body.dark-mode .nota-perfil { background: #0d1117; color: #8b949e; border-left: 3px solid #58a6ff; }
-        body.dark-mode .nota-perfil strong { color: #c9d1d9; }
+        body.dark-mode .lbl-fase { background-color: #1f2937; color: #f1f5f9; }
+        body.dark-mode .row-ativo, body.dark-mode .row-ativo .lbl-fase { background-color: #1f2937; }
+        
+        body.dark-mode .row-pendente, body.dark-mode .row-pendente .lbl-fase { background-color: #2b2214; color: #fbbf24; }
+        body.dark-mode .row-pendente .destaque { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.3); }
+        
+        body.dark-mode .row-concluido, body.dark-mode .row-concluido .lbl-fase { background-color: #3f1d1d; color: #fca5a5; }
+        body.dark-mode .row-concluido .destaque { color: #f87171; text-shadow: 0 0 10px rgba(248, 113, 113, 0.3); }
+        
+        body.dark-mode .destaque { color: #38bdf8; text-shadow: 0 0 10px rgba(56, 189, 248, 0.3); font-weight: 900; }
+        body.dark-mode .perfil { background-color: #111827; color: #64748b; }
+        
+        body.dark-mode .total-geral-card { border-color: #0ea5e9; box-shadow: 0 0 20px rgba(14, 165, 233, 0.15); }
+        body.dark-mode .geral-table th, body.dark-mode .geral-table td { border-color: #374151; }
+        body.dark-mode .geral-ativo { background-color: #0f172a; color: #38bdf8; text-shadow: 0 0 8px rgba(56, 189, 248, 0.4); }
+        body.dark-mode .geral-pend { background-color: #2b2214; color: #fbbf24; text-shadow: 0 0 8px rgba(251, 191, 36, 0.4); }
+        body.dark-mode .geral-conc { background-color: #3f1d1d; color: #f87171; text-shadow: 0 0 8px rgba(248, 113, 113, 0.4); }
+        
+        body.dark-mode .nota-perfil { background: #1f2937; color: #94a3b8; border-color: #374151; border-left-color: #0ea5e9; }
+        body.dark-mode .nota-perfil strong { color: #f8fafc; }
     </style>
 </head>
 <body>
 
-    <button class="btn-theme-toggle" onclick="toggleTheme()" id="btnTheme">
-        🌙 Modo Escuro
-    </button>
+    <!-- MODO ESCURO -->
+    <div class="top-controls">
+        <button class="btn-theme-toggle" onclick="toggleTheme()" id="btnTheme">
+            🌙 Modo Escuro
+        </button>
+    </div>
 
     <div class="top-bar">
         <h2 class="app-title">Atualizar Demanda Diária</h2>
@@ -176,13 +234,22 @@
             <path class="ceva-text-path" d="M 52 2 L 82 2 L 82 10 L 62 10 L 62 14 L 78 14 L 78 22 L 62 22 L 62 27 L 83 27 L 83 35 L 52 35 Z"/>
             <path class="ceva-text-path" d="M 85 2 L 96 2 L 105 25 L 114 2 L 125 2 L 110 35 L 100 35 Z"/>
             <path d="M 140 2 L 158 35 L 146 35 L 140 23 L 134 35 L 122 35 Z" fill="#e11b22"/>
-            <text class="ceva-text-path" x="65" y="47" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="800" font-size="11" letter-spacing="3.5">LOGISTICS</text>
+            <text class="ceva-text-path" x="65" y="47" font-family="'Inter', Tahoma, sans-serif" font-weight="900" font-size="11" letter-spacing="3.5">LOGISTICS</text>
         </svg>
     </div>
 
     <!-- CONTAINER PRINCIPAL -->
     <div class="container">
-        <div class="section-title">Dados Base (SAP)</div>
+        
+        <div class="section-header-row">
+            <h3 class="section-title">Dados Base (SAP)</h3>
+            <!-- BOTÃO DE CARGA RÁPIDA DENTRO DA SESSÃO -->
+            <label class="btn-carga-rapida">
+                ⚡ Carga Rápida (Todos CSVs)
+                <input type="file" multiple accept=".csv" onchange="distribuirArquivos(this)">
+            </label>
+        </div>
+
         <div class="grid-row">
             <label class="file-card" id="cardBipagem">
                 <div class="file-title">Relatório de Bipagem</div>
@@ -206,7 +273,7 @@
             </label>
         </div>
 
-        <div class="section-title">Planilhas de Controle & Gestão de Turno</div>
+        <h3 class="section-title" style="margin-top: 30px;">Planilhas de Controle & Gestão de Turno</h3>
         <div class="grid-row" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
             
             <label class="file-card" id="cardStatusOp">
@@ -236,8 +303,41 @@
                 <input type="date" id="dataCorte">
             </div>
         </div>
+
+        <!-- SEÇÃO DE DEMANDA FUTURA -->
+        <h3 class="section-title" style="margin-top: 30px;">🔮 Previsão de Demanda Futura (Não Cartonizados)</h3>
+        <div class="futuro-container">
+            <div class="futuro-header">
+                <div class="lbl">Carteira / UF</div>
+                <div class="lbl">Tipo (Regra)</div>
+                <div class="lbl">Total Caixas</div>
+                <div class="lbl">Total Peças</div>
+                <div></div>
+            </div>
+            
+            <div id="linhasFuturo">
+                <div class="futuro-row">
+                    <select class="fut-uf">
+                        <option value="">Selecione a UF...</option>
+                        <option value="BOT MGC">BOT MGC</option>
+                        <option value="BOT SPI">BOT SPI</option>
+                        <option value="BOT SPC">BOT SPC</option>
+                        <option value="BOT MGI">BOT MGI</option>
+                        <option value="VAREJO">VAREJO</option>
+                    </select>
+                    <select class="fut-tipo">
+                        <option value="NORMAL">Carteira (Normal)</option>
+                        <option value="ESTOJO">Estojo</option>
+                    </select>
+                    <input type="number" class="fut-cx" placeholder="Qtd. Caixas" min="0">
+                    <input type="number" class="fut-pc" placeholder="Qtd. Peças" min="0">
+                    <button type="button" class="btn-rem" onclick="this.parentElement.remove()" title="Remover linha">✖</button>
+                </div>
+            </div>
+            <button type="button" class="btn-add" onclick="adicionarLinhaFuturo()">+ Adicionar Nova Previsão</button>
+        </div>
         
-        <button class="btn-acao" onclick="processarDados()">Processar Demanda Diária</button>
+        <button class="btn-acao" onclick="processarDados()">Processar Inteligência de Dados</button>
         <div id="status-msg"></div>
     </div>
 
@@ -245,20 +345,20 @@
     <div id="painel-wrapper">
         <div id="painel-export">
             <div class="print-header">
-                <h2 class="print-title">Análise de Demanda Diária</h2>
+                <h2 class="print-title">Dashboard Analítico - Demanda Diária</h2>
                 <svg class="print-logo" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
                     <path class="ceva-text-path" d="M 30 35 C 15 35 10 25 10 17 C 10 9 15 2 30 2 C 40 2 45 8 47 12 L 36 16 C 35 12 32 10 29 10 C 22 10 20 14 20 17 C 20 22 22 26 29 26 C 33 26 36 23 37 19 L 48 23 C 45 30 38 35 30 35 Z"/>
                     <path class="ceva-text-path" d="M 52 2 L 82 2 L 82 10 L 62 10 L 62 14 L 78 14 L 78 22 L 62 22 L 62 27 L 83 27 L 83 35 L 52 35 Z"/>
                     <path class="ceva-text-path" d="M 85 2 L 96 2 L 105 25 L 114 2 L 125 2 L 110 35 L 100 35 Z"/>
                     <path d="M 140 2 L 158 35 L 146 35 L 140 23 L 134 35 L 122 35 Z" fill="#e11b22"/>
-                    <text class="ceva-text-path" x="65" y="47" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="800" font-size="11" letter-spacing="3.5">LOGISTICS</text>
+                    <text class="ceva-text-path" x="65" y="47" font-family="'Inter', Tahoma, sans-serif" font-weight="900" font-size="11" letter-spacing="3.5">LOGISTICS</text>
                 </svg>
             </div>
             
-            <div id="tabela-container"></div>
+            <div id="tabela-container" class="dashboard-grid"></div>
             
             <div class="nota-perfil">
-                <strong>💡 Entendendo o Perfil:</strong> O valor do Perfil representa a média de Peças Fracionadas (LN) por Caixa Fracionada (LN). Este indicador exclui os Grandes Volumes (GV) e serve para medir a densidade da separação (*fill rate*), impactando diretamente o tempo estimado de *picking* na operação.
+                <strong>💡 Entendendo a Visão Executiva:</strong> O valor do Perfil representa a média de Peças Fracionadas (LN) por Caixa Fracionada (LN). Este indicador exclui os Grandes Volumes (GV). A linha "Demanda Total da UF" isola exclusivamente a família de carretas correspondente ao atendimento em operação daquela data. O Varejo tem seu "Pendente" blindado contra excesso de picking do sistema SAP.
             </div>
         </div>
 
@@ -269,15 +369,14 @@
     </div>
 
     <script>
-        // MEMÓRIA GLOBAL DO SISTEMA
         let estadoTurno = { bipagem: [], caixas: [], pecas: [], statusBruto: [], tusConhecidas: [] };
 
         function toggleTheme() {
             const body = document.body;
             const btn = document.getElementById('btnTheme');
             body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) { btn.innerHTML = '☀️ Modo Claro'; } 
-            else { btn.innerHTML = '🌙 Modo Escuro'; }
+            if (body.classList.contains('dark-mode')) { btn.innerHTML = '☀️ Claro'; } 
+            else { btn.innerHTML = '🌙 Escuro'; }
         }
 
         window.onload = function() {
@@ -287,6 +386,68 @@
             let yyyy = today.getFullYear();
             document.getElementById('dataCorte').value = yyyy + '-' + mm + '-' + dd;
         };
+
+        // ============================================
+        // CARGA RÁPIDA (O SISTEMA LÊ O NOME DO ARQUIVO)
+        // ============================================
+        function distribuirArquivos(input) {
+            let files = input.files;
+            if(files.length === 0) return;
+
+            let map = {
+                'bipagem': document.getElementById('bipagem'),
+                'ordens': document.getElementById('caixas'),
+                'tarefas': document.getElementById('pecas'),
+                'status': document.getElementById('statusOp'),
+                'controle': document.getElementById('controleTu')
+            };
+
+            for (let i = 0; i < files.length; i++) {
+                let f = files[i];
+                let name = f.name.toLowerCase();
+                let dt = new DataTransfer();
+                dt.items.add(f);
+
+                if (name.includes('bipagem')) { map['bipagem'].files = dt.files; updateFileUI(map['bipagem']); }
+                else if (name.includes('ordens') || name.includes('caixas')) { map['ordens'].files = dt.files; updateFileUI(map['ordens']); }
+                else if (name.includes('tarefas') || name.includes('peças') || name.includes('pecas')) {
+                    let dtPecas = new DataTransfer();
+                    if(map['tarefas'].files) {
+                        for (let j = 0; j < map['tarefas'].files.length; j++) dtPecas.items.add(map['tarefas'].files[j]);
+                    }
+                    dtPecas.items.add(f);
+                    map['tarefas'].files = dtPecas.files;
+                    updateFileUI(map['tarefas']);
+                }
+                else if (name.includes('status')) { map['status'].files = dt.files; updateFileUI(map['status']); }
+                else if (name.includes('controle')) { map['controle'].files = dt.files; updateFileUI(map['controle']); }
+            }
+            input.value = ""; 
+        }
+
+        function adicionarLinhaFuturo() {
+            const container = document.getElementById('linhasFuturo');
+            const div = document.createElement('div');
+            div.className = 'futuro-row';
+            div.innerHTML = `
+                <select class="fut-uf">
+                    <option value="">Selecione a UF...</option>
+                    <option value="BOT MGC">BOT MGC</option>
+                    <option value="BOT SPI">BOT SPI</option>
+                    <option value="BOT SPC">BOT SPC</option>
+                    <option value="BOT MGI">BOT MGI</option>
+                    <option value="VAREJO">VAREJO</option>
+                </select>
+                <select class="fut-tipo">
+                    <option value="NORMAL">Carteira (Normal)</option>
+                    <option value="ESTOJO">Estojo</option>
+                </select>
+                <input type="number" class="fut-cx" placeholder="Qtd. Caixas" min="0">
+                <input type="number" class="fut-pc" placeholder="Qtd. Peças" min="0">
+                <button type="button" class="btn-rem" onclick="this.parentElement.remove()" title="Remover linha">✖</button>
+            `;
+            container.appendChild(div);
+        }
 
         function updateFileUI(input) {
             let card = input.parentElement;
@@ -317,7 +478,6 @@
         function carregarTurno(input) {
             let file = input.files[0];
             if (!file) return;
-
             let reader = new FileReader();
             reader.onload = function(e) {
                 try {
@@ -331,7 +491,7 @@
                         marcarCardComoCarregado('cardStatusOp');
                         updateFileUI(input);
                         const statusDiv = document.getElementById('status-msg');
-                        statusDiv.style.color = '#25d366';
+                        statusDiv.style.color = '#10b981';
                         statusDiv.innerText = "✅ Turno recuperado! Anexe o NOVO 'Controle TU' e processe.";
                     } else { alert("Arquivo de turno inválido."); }
                 } catch (err) { alert("Erro ao ler o arquivo de turno. Arquivo corrompido."); }
@@ -358,7 +518,6 @@
         function limparNumero(valor) { let valStr = String(valor||'').trim().replace(/\./g, '').replace(',', '.'); let num = parseFloat(valStr); return isNaN(num) ? 0 : num; }
         function limparChave(valor) { return String(valor || '').trim().replace(/\.0$/, '').replace(/^0+/, ''); }
         
-        // CAÇADOR DE COLUNAS
         function acharValor(linha, possiveisNomes) { 
             for (let key in linha) { 
                 let kUp = String(key).toUpperCase().trim(); 
@@ -384,8 +543,8 @@
             const btnContainer = document.getElementById('btn-container');
             const tabelaContainer = document.getElementById('tabela-container');
             
-            statusDiv.style.color = document.body.classList.contains('dark-mode') ? '#58a6ff' : '#0052cc'; 
-            statusDiv.innerText = "Processando cruzamento... Aguarde.";
+            statusDiv.style.color = document.body.classList.contains('dark-mode') ? '#38bdf8' : '#0052cc'; 
+            statusDiv.innerText = "Processando inteligência de dados... Aguarde.";
             painelExport.style.display = 'none'; btnContainer.style.display = 'none';
 
             const inBip = document.getElementById('bipagem').files[0];
@@ -409,15 +568,13 @@
                 dataCorteObj.setHours(0,0,0,0);
 
                 let statusBruto, bipagem, caixas, pecas;
-                let tusConhecidasLocal = new Set();
 
                 if (temTurno) {
                     statusBruto = estadoTurno.statusBruto; bipagem = estadoTurno.bipagem; caixas = estadoTurno.caixas; pecas = estadoTurno.pecas;
-                    tusConhecidasLocal = new Set(estadoTurno.tusConhecidas || []);
                 } else {
                     statusBruto = await lerCSVBruto(inStatus); bipagem = await lerCSV(inBip); caixas = await lerCSV(inCaixas);
                     pecas = []; for (let i = 0; i < inPecas.length; i++) { pecas = pecas.concat(await lerCSV(inPecas[i])); }
-                    estadoTurno.statusBruto = statusBruto; estadoTurno.bipagem = bipagem; estadoTurno.caixas = caixas; estadoTurno.pecas = pecas;
+                    estadoTurno.statusBruto = statusBruto; estadoTurno.bipagem = bipagem; caixas = estadoTurno.caixas = caixas; estadoTurno.pecas = pecas;
                     estadoTurno.tusConhecidas = [];
                 }
 
@@ -431,8 +588,6 @@
                     }
                 });
 
-                // NOVIDADE: Pré-varredura da Bipagem. 
-                // Se a TU aparece na Bipagem de hoje, ela RESSUSCITA e entra no Total, mesmo que esteja Finalizada!
                 let tusBipadasHoje = new Set();
                 bipagem.forEach(linha => {
                     let tu = limparChave(acharValor(linha, ['UNIDADE DE TRANSPORTE', 'Nº TU', ' TU', 'TU'])); 
@@ -443,52 +598,117 @@
                 let mae = maeBruto.slice(headerIndex + 1).map(row => { let obj = {}; maeBruto[headerIndex].forEach((col, j) => obj[String(col).trim()] = row[j]); return obj; });
 
                 let infoTUs = {}; 
-                let blocos = { 'NORMAL': {}, 'ESTOJO': {} };
+                let blocos = { 'NORMAL': {}, 'ESTOJO': {}, 'FUTURO': {} };
+                
+                // 1º Passo: O CAÇADOR DE ONDAS POR SALTO DE DATAS (Total Bruto Blindado por UF)
+                let currentWaveID = 0;
+                let lastDataOnda = {}; 
 
+                mae.forEach((linha) => {
+                    let uf = String(linha['UF'] || '').trim().toUpperCase();
+                    let atend = String(linha['ATENDIMENTO'] || '').toUpperCase(); 
+                    let cart = descobrirCarteira(uf, atend);
+                    
+                    let dataTU = String(linha['DATA'] || '').trim();
+                    if (!uf || cart === 'VAREJO' || !dataTU) {
+                        linha._waveID = -1;
+                        return;
+                    }
+
+                    let dTU = null;
+                    let pts = dataTU.includes('/') ? dataTU.split('/') : dataTU.split('-');
+                    if (pts.length === 3) {
+                        dTU = new Date(pts[2], pts[1]-1, pts[0]);
+                        dTU.setHours(0,0,0,0);
+                    }
+                    
+                    if (!dTU) { linha._waveID = -1; return; }
+                    
+                    if (lastDataOnda[cart] === undefined) {
+                        currentWaveID++;
+                        lastDataOnda[cart] = { id: currentWaveID, data: dTU };
+                    } else {
+                        let diffTime = dTU.getTime() - lastDataOnda[cart].data.getTime();
+                        let diffDays = diffTime / (1000 * 60 * 60 * 24);
+                        
+                        // Se pular mais de 3 dias, quebra a onda (Atendimento novo)
+                        if (diffDays > 3 || diffDays < 0) {
+                            currentWaveID++;
+                            lastDataOnda[cart].id = currentWaveID;
+                        }
+                        lastDataOnda[cart].data = dTU;
+                    }
+                    linha._waveID = lastDataOnda[cart].id;
+                });
+
+                let ondasAtivas = new Set();
+                mae.forEach(linha => {
+                    let tu = limparChave(linha['TU']);
+                    let statusPicking = String(linha['STATUS PICKING (Planejado)'] || '').trim().toUpperCase();
+                    if (!tu || linha._waveID === -1) return;
+
+                    let isAtivo = false;
+                    if (statusPicking === 'DESCARTUNIZADO') { isAtivo = false; } 
+                    else if (statusPicking === 'NÃO INICIADO' || statusPicking.includes('NAO INICIADO')) { isAtivo = true; } 
+                    else if (tusAtivas.has(tu) || tusBipadasHoje.has(tu)) { isAtivo = true; } 
+
+                    // Ativou a TU? A Família inteira ganha vida no Total Bruto
+                    if (isAtivo) {
+                        ondasAtivas.add(linha._waveID);
+                    }
+                });
+
+                // 2º Passo: Montar os Blocos da Tabela
                 mae.forEach(linha => {
                     let tu = limparChave(linha['TU']);
                     let dataTU = String(linha['DATA'] || '').trim();
                     let statusPicking = String(linha['STATUS PICKING (Planejado)'] || '').trim().toUpperCase();
-                    
                     if (!tu) return;
 
-                    let includeTU = false;
+                    let atend = String(linha['ATENDIMENTO'] || '').toUpperCase(); 
+                    let uf = String(linha['UF'] || '').toUpperCase();
+                    let tipo = (atend.includes('ESTOJO') || uf.includes('ESTOJO')) ? 'ESTOJO' : 'NORMAL';
+                    let cart = descobrirCarteira(uf, atend);
+                    let isVarejo = false;
                     
-                    if (statusPicking === 'DESCARTUNIZADO') {
-                        includeTU = false; 
-                    } else if (statusPicking === 'NÃO INICIADO' || statusPicking.includes('NAO INICIADO')) {
-                        includeTU = true;  
-                    } else {
-                        // REGRA DO RENASCIMENTO: Se a TU não tá ativa no SAP, mas está gerando caixas na bipagem, ELA ENTRA!
-                        if (tusAtivas.has(tu) || tusBipadasHoje.has(tu)) {
-                            includeTU = true;
-                        } else {
-                            let pts = dataTU.includes('/') ? dataTU.split('/') : dataTU.split('-');
-                            if (pts.length === 3) {
-                                let dTU = new Date(pts[2], pts[1]-1, pts[0]);
-                                dTU.setHours(0,0,0,0);
-                                if (dTU.getTime() >= dataCorteObj.getTime()) {
-                                    includeTU = true;
-                                }
-                            }
+                    if (cart === 'VAREJO') { tipo = 'NORMAL'; isVarejo = true; }
+
+                    if (!blocos[tipo][cart]) {
+                        blocos[tipo][cart] = { t_bruto: {ln:0,gv:0,pln:0,pgv:0}, t_ativo: {ln:0,gv:0,pln:0,pgv:0}, c: {ln:0,gv:0,pln:0,pgv:0} };
+                    }
+                    
+                    infoTUs[tu] = { tipo: tipo, cart: cart };
+                    let lnCx = limparNumero(linha['LN CAIXAS']); let gvCx = limparNumero(linha['GV CAIXAS']);
+                    let lnPec = limparNumero(linha['LN PEÇAS']); let gvPec = limparNumero(linha['GV PEÇAS']);
+
+                    // BALDE A: Demanda Ativa
+                    let includeAtivo = false;
+                    if (statusPicking === 'DESCARTUNIZADO') { 
+                        includeAtivo = false; 
+                    } else if (statusPicking === 'NÃO INICIADO' || statusPicking.includes('NAO INICIADO')) { 
+                        includeAtivo = true;  
+                    } else if (tusAtivas.has(tu) || tusBipadasHoje.has(tu)) { 
+                        includeAtivo = true; 
+                    } else if (isVarejo) {
+                        let pts = dataTU.includes('/') ? dataTU.split('/') : dataTU.split('-');
+                        if (pts.length === 3) {
+                            let dTU = new Date(pts[2], pts[1]-1, pts[0]); dTU.setHours(0,0,0,0);
+                            if (dTU.getTime() >= dataCorteObj.getTime()) includeAtivo = true;
                         }
                     }
 
-                    if (includeTU) {
-                        tusAtivas.add(tu);
-                        let atend = String(linha['ATENDIMENTO'] || '').toUpperCase(); let uf = String(linha['UF'] || '').toUpperCase();
-                        let tipo = (atend.includes('ESTOJO') || uf.includes('ESTOJO')) ? 'ESTOJO' : 'NORMAL';
-                        let cart = descobrirCarteira(uf, atend);
-                        
-                        if (cart === 'VAREJO') tipo = 'NORMAL';
-                        
-                        if (!blocos[tipo][cart]) {
-                            blocos[tipo][cart] = {t:{ln:0,gv:0,pln:0,pgv:0}, c:{ln:0,gv:0,pln:0,pgv:0}};
-                        }
+                    if (includeAtivo) {
+                        blocos[tipo][cart].t_ativo.ln += lnCx; blocos[tipo][cart].t_ativo.gv += gvCx;
+                        blocos[tipo][cart].t_ativo.pln += lnPec; blocos[tipo][cart].t_ativo.pgv += gvPec;
+                    }
 
-                        infoTUs[tu] = { tipo: tipo, cart: cart };
-                        blocos[tipo][cart].t.ln += limparNumero(linha['LN CAIXAS']); blocos[tipo][cart].t.gv += limparNumero(linha['GV CAIXAS']);
-                        blocos[tipo][cart].t.pln += limparNumero(linha['LN PEÇAS']); blocos[tipo][cart].t.pgv += limparNumero(linha['GV PEÇAS']);
+                    // BALDE B: Total Bruto (Exceto Varejo)
+                    if (!isVarejo) {
+                        let fazParteDaOnda = ondasAtivas.has(linha._waveID);
+                        if (fazParteDaOnda && statusPicking !== 'DESCARTUNIZADO') {
+                            blocos[tipo][cart].t_bruto.ln += lnCx; blocos[tipo][cart].t_bruto.gv += gvCx;
+                            blocos[tipo][cart].t_bruto.pln += lnPec; blocos[tipo][cart].t_bruto.pgv += gvPec;
+                        }
                     }
                 });
 
@@ -545,77 +765,266 @@
                     }
                 });
 
-                let gTot = {ln:0, gv:0, pln:0, pgv:0}, gCon = {ln:0, gv:0, pln:0, pgv:0};
-                let seqGlob = 1; let html = '<table>';
+                // PROCESSAR DEMANDA FUTURA
+                let futuroInputs = document.querySelectorAll('.futuro-row');
+                futuroInputs.forEach(row => {
+                    let uf = row.querySelector('.fut-uf').value;
+                    let tipo = row.querySelector('.fut-tipo').value;
+                    let cx = parseInt(row.querySelector('.fut-cx').value) || 0;
+                    let pc = parseInt(row.querySelector('.fut-pc').value) || 0;
 
-                function renderizarBloco(titulo, labelCart, tipo) {
-                    let linhas = ''; let hasData = false; let lTot = {ln:0, gv:0, pln:0, pgv:0}, lCon = {ln:0, gv:0, pln:0, pgv:0};
-
-                    let carteiras = Object.keys(blocos[tipo]).sort((a,b) => {
-                        if (a === 'VAREJO') return 1; if (b === 'VAREJO') return -1;
-                        return a.localeCompare(b);
-                    });
-
-                    carteiras.forEach(cart => {
-                        let t = blocos[tipo][cart].t, c = blocos[tipo][cart].c; let tPec = t.pln + t.pgv, cPec = c.pln + c.pgv;
-                        if (t.ln > 0 || t.gv > 0 || c.ln > 0 || c.gv > 0) { 
-                            hasData = true;
-                            let plnC = t.ln - c.ln, pgvC = t.gv - c.gv, plnP = t.pln - c.pln, pgvP = t.pgv - c.pgv;
-                            lTot.ln+=t.ln; lTot.gv+=t.gv; lTot.pln+=t.pln; lTot.pgv+=t.pgv; lCon.ln+=c.ln; lCon.gv+=c.gv; lCon.pln+=c.pln; lCon.pgv+=c.pgv;
-
-                            linhas += `
-                                <tr>
-                                    <td rowspan="3" style="font-weight:700; vertical-align:middle; font-size:14px;">${seqGlob++}</td>
-                                    <td class="row-cart">${cart}</td>
-                                    <td class="bg-normal">${t.ln.toLocaleString('pt-BR')}</td><td class="bg-normal">${t.gv.toLocaleString('pt-BR')}</td><td class="bg-normal">${t.pln.toLocaleString('pt-BR')}</td><td class="bg-normal">${t.pgv.toLocaleString('pt-BR')}</td><td class="bg-normal col-destaque">${tPec.toLocaleString('pt-BR')}</td>
-                                    <td class="bg-perfil">${t.ln > 0 ? Math.round(t.pln/t.ln) : 0}</td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-pendente">Pendente</td>
-                                    <td class="bg-pendente">${plnC.toLocaleString('pt-BR')}</td><td class="bg-pendente">${pgvC.toLocaleString('pt-BR')}</td><td class="bg-pendente">${plnP.toLocaleString('pt-BR')}</td><td class="bg-pendente">${pgvP.toLocaleString('pt-BR')}</td><td class="bg-pendente col-destaque">${(plnP+pgvP).toLocaleString('pt-BR')}</td>
-                                    <td class="bg-perfil-pend">${plnC > 0 ? Math.round(plnP/plnC) : 0}</td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-concluido">Concluído</td>
-                                    <td class="bg-concluido">${c.ln.toLocaleString('pt-BR')}</td><td class="bg-concluido">${c.gv.toLocaleString('pt-BR')}</td><td class="bg-concluido">${c.pln.toLocaleString('pt-BR')}</td><td class="bg-concluido">${c.pgv.toLocaleString('pt-BR')}</td><td class="bg-concluido col-destaque">${cPec.toLocaleString('pt-BR')}</td>
-                                    <td class="bg-perfil">${c.ln > 0 ? Math.round(c.pln/c.ln) : 0}</td>
-                                </tr>
-                            `;
+                    if (uf && tipo && (cx > 0 || pc > 0)) {
+                        let keyUnica = uf + '|' + tipo; 
+                        if (!blocos['FUTURO'][keyUnica]) {
+                            blocos['FUTURO'][keyUnica] = { uf_nome: uf, tipo_str: tipo, cx_total: 0, pc_total: 0 };
                         }
-                    });
-
-                    if(hasData) {
-                        let plnC = lTot.ln - lCon.ln, pgvC = lTot.gv - lCon.gv, plnP = lTot.pln - lCon.pln, pgvP = lTot.pgv - lCon.pgv;
-                        html += `
-                            <tr><th colspan="8" class="bg-titulo">${titulo}</th></tr>
-                            <tr><th class="bg-header">Seq.</th><th class="bg-header">${labelCart}</th><th class="bg-header">Caixas LN</th><th class="bg-header">Caixas GV</th><th class="bg-header">Peças LN</th><th class="bg-header">Peças GV</th><th class="bg-header">Peças Total</th><th class="bg-header">Perfil</th></tr>
-                            ${linhas}
-                            <tr><td colspan="2" class="bg-total">TOTAL</td><td class="bg-total">${lTot.ln.toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.gv.toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.pln.toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.pgv.toLocaleString('pt-BR')}</td><td class="bg-total">${(lTot.pln+lTot.pgv).toLocaleString('pt-BR')}</td><td class="bg-total">${lTot.ln > 0 ? Math.round(lTot.pln/lTot.ln) : 0}</td></tr>
-                            <tr><td colspan="2" class="bg-total-pendente">PENDENTE</td><td class="bg-total-pendente">${plnC.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${pgvC.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${plnP.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${pgvP.toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${(plnP+pgvP).toLocaleString('pt-BR')}</td><td class="bg-total-pendente">${plnC > 0 ? Math.round(plnP/plnC) : 0}</td></tr>
-                            <tr><td colspan="2" class="bg-total-concluido">CONCLUÍDO</td><td class="bg-total-concluido">${lCon.ln.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.gv.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.pln.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.pgv.toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${(lCon.pln+lCon.pgv).toLocaleString('pt-BR')}</td><td class="bg-total-concluido">${lCon.ln > 0 ? Math.round(lCon.pln/lCon.ln) : 0}</td></tr>
-                            <tr><td colspan="8" style="border:none; height:20px; background:transparent;"></td></tr>
-                        `;
-                        gTot.ln+=lTot.ln; gTot.gv+=lTot.gv; gTot.pln+=lTot.pln; gTot.pgv+=lTot.pgv;
-                        gCon.ln+=lCon.ln; gCon.gv+=lCon.gv; gCon.pln+=lCon.pln; gCon.pgv+=lCon.pgv;
+                        blocos['FUTURO'][keyUnica].cx_total += cx;
+                        blocos['FUTURO'][keyUnica].pc_total += pc;
                     }
-                }
+                });
 
-                renderizarBloco("DEMANDA DIÁRIA", "Carteira", 'NORMAL');
-                renderizarBloco("DEMANDA ESTOJO", "Estojo", 'ESTOJO');
+                // RENDERIZAR O DASHBOARD EXECUTIVO
+                let html = '';
+                let gTot = {ln:0, gv:0, pln:0, pgv:0}, gCon = {ln:0, gv:0, pln:0, pgv:0};
+                
+                let macroBrutoCx = 0, macroBrutoPc = 0;
+                let macroFuturoCx = 0, macroFuturoPc = 0;
 
-                if (gTot.ln > 0 || gTot.gv > 0) {
-                    let gplnC = gTot.ln - gCon.ln, gpgvC = gTot.gv - gCon.gv, gplnP = gTot.pln - gCon.pln, gpgvP = gTot.pgv - gCon.pgv;
-                    html += `
-                        <tr><td colspan="2" class="bg-geral">TOTAL GERAL</td><td class="bg-geral">${gTot.ln.toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.gv.toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.pln.toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.pgv.toLocaleString('pt-BR')}</td><td class="bg-geral">${(gTot.pln+gTot.pgv).toLocaleString('pt-BR')}</td><td class="bg-geral">${gTot.ln > 0 ? Math.round(gTot.pln/gTot.ln) : 0}</td></tr>
-                        <tr><td colspan="2" class="bg-geral-pend">PENDENTE GERAL</td><td class="bg-geral-pend">${gplnC.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gpgvC.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gplnP.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gpgvP.toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${(gplnP+gpgvP).toLocaleString('pt-BR')}</td><td class="bg-geral-pend">${gplnC > 0 ? Math.round(gplnP/gplnC) : 0}</td></tr>
-                        <tr><td colspan="2" class="bg-geral-concluido">CONCLUÍDO GERAL</td><td class="bg-geral-concluido">${gCon.ln.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.gv.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.pln.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.pgv.toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${(gCon.pln+gCon.pgv).toLocaleString('pt-BR')}</td><td class="bg-geral-concluido">${gCon.ln > 0 ? Math.round(gCon.pln/gCon.ln) : 0}</td></tr>
+                let ufsDisponiveis = ['BOT MGC', 'BOT SPI', 'BOT SPC', 'BOT MGI', 'VAREJO'];
+
+                function gerarLinhasTabela(dataObj, lblVertical) {
+                    let tAtivo = dataObj ? dataObj.t_ativo : {ln:0, gv:0, pln:0, pgv:0}; 
+                    let c = dataObj ? dataObj.c : {ln:0, gv:0, pln:0, pgv:0};
+                    let tPecAtivo = tAtivo.pln + tAtivo.pgv, cPec = c.pln + c.pgv;
+                    
+                    let plnC = Math.max(0, tAtivo.ln - c.ln);
+                    let pgvC = Math.max(0, tAtivo.gv - c.gv);
+                    let plnP = Math.max(0, tAtivo.pln - c.pln);
+                    let pgvP = Math.max(0, tAtivo.pgv - c.pgv);
+                    
+                    let rowspan = lblVertical ? `<td rowspan="3" class="tipo-label">${lblVertical}</td>` : '';
+                    
+                    return `
+                        <tr class="row-ativo">
+                            ${rowspan}
+                            <td class="lbl-fase">Demanda Ativa</td>
+                            <td>${tAtivo.ln.toLocaleString('pt-BR')}</td><td>${tAtivo.gv.toLocaleString('pt-BR')}</td>
+                            <td>${tAtivo.pln.toLocaleString('pt-BR')}</td><td>${tAtivo.pgv.toLocaleString('pt-BR')}</td>
+                            <td class="destaque">${tPecAtivo.toLocaleString('pt-BR')}</td>
+                            <td class="perfil">${tAtivo.ln > 0 ? Math.round(tAtivo.pln/tAtivo.ln) : 0}</td>
+                        </tr>
+                        <tr class="row-pendente">
+                            <td class="lbl-fase">Pendente</td>
+                            <td>${plnC.toLocaleString('pt-BR')}</td><td>${pgvC.toLocaleString('pt-BR')}</td>
+                            <td>${plnP.toLocaleString('pt-BR')}</td><td>${pgvP.toLocaleString('pt-BR')}</td>
+                            <td class="destaque">${(plnP+pgvP).toLocaleString('pt-BR')}</td>
+                            <td class="perfil">${plnC > 0 ? Math.round(plnP/plnC) : 0}</td>
+                        </tr>
+                        <tr class="row-concluido">
+                            <td class="lbl-fase">Concluído</td>
+                            <td>${c.ln.toLocaleString('pt-BR')}</td><td>${c.gv.toLocaleString('pt-BR')}</td>
+                            <td>${c.pln.toLocaleString('pt-BR')}</td><td>${c.pgv.toLocaleString('pt-BR')}</td>
+                            <td class="destaque">${cPec.toLocaleString('pt-BR')}</td>
+                            <td class="perfil">${c.ln > 0 ? Math.round(c.pln/c.ln) : 0}</td>
+                        </tr>
                     `;
                 }
 
-                html += '</table>';
+                ufsDisponiveis.forEach(uf => {
+                    let nData = blocos['NORMAL'][uf];
+                    let eData = blocos['ESTOJO'][uf];
+                    
+                    let hasN = nData && ((nData.t_bruto && (nData.t_bruto.ln > 0 || nData.t_bruto.gv > 0)) || nData.t_ativo.ln > 0 || nData.t_ativo.gv > 0);
+                    let hasE = eData && ((eData.t_bruto && (eData.t_bruto.ln > 0 || eData.t_bruto.gv > 0)) || eData.t_ativo.ln > 0 || eData.t_ativo.gv > 0);
+
+                    // Só renderiza se tiver algum dado na UF
+                    if (hasN || hasE) {
+                        let isVarejo = (uf === 'VAREJO');
+                        
+                        html += `<div class="uf-card">
+                                    <div class="uf-header"><span>${uf}</span></div>
+                                    <table class="uf-table">`;
+                        
+                        let ufBrutoCx = 0; let ufBrutoPc = 0;
+                        if (!isVarejo) {
+                            if (hasN) { ufBrutoCx += (nData.t_bruto.ln + nData.t_bruto.gv); ufBrutoPc += (nData.t_bruto.pln + nData.t_bruto.pgv); }
+                            if (hasE) { ufBrutoCx += (eData.t_bruto.ln + eData.t_bruto.gv); ufBrutoPc += (eData.t_bruto.pln + eData.t_bruto.pgv); }
+                            
+                            html += `
+                                <thead>
+                                    <tr class="row-total-uf">
+                                        <th colspan="3" style="text-align: left;">DEMANDA TOTAL DA UF</th>
+                                        <th colspan="2" style="text-align: center;">Caixas: <span class="destaque-total">${ufBrutoCx.toLocaleString('pt-BR')}</span></th>
+                                        <th colspan="4" style="text-align: center;">Peças: <span class="destaque-total">${ufBrutoPc.toLocaleString('pt-BR')}</span></th>
+                                    </tr>
+                                </thead>
+                            `;
+                        } else {
+                            // Para varejo, o bruto é equivalente ao ativo
+                            if (hasN) { ufBrutoCx += (nData.t_ativo.ln + nData.t_ativo.gv); ufBrutoPc += (nData.t_ativo.pln + nData.t_ativo.pgv); }
+                        }
+                        
+                        macroBrutoCx += ufBrutoCx;
+                        macroBrutoPc += ufBrutoPc;
+
+                        html += `
+                                <thead>
+                                    <tr>
+                                        ${!isVarejo ? '<th style="width:35px; border-right:none; background-color:transparent;"></th>' : ''}
+                                        <th>Fase Operacional</th><th>Cx LN</th><th>Cx GV</th><th>Pç LN</th><th>Pç GV</th><th>Pç Total</th><th>Perfil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+                        
+                        if (!isVarejo) {
+                            html += gerarLinhasTabela(nData, 'CARTEIRA');
+                            html += gerarLinhasTabela(eData, 'ESTOJO');
+                        } else {
+                            html += gerarLinhasTabela(nData, null);
+                        }
+                        
+                        html += `       </tbody>
+                                    </table>
+                                 </div>`;
+                                 
+                        if (hasN) {
+                            gTot.ln += nData.t_ativo.ln; gTot.gv += nData.t_ativo.gv; 
+                            gTot.pln += nData.t_ativo.pln; gTot.pgv += nData.t_ativo.pgv;
+                            gCon.ln += nData.c.ln; gCon.gv += nData.c.gv;
+                            gCon.pln += nData.c.pln; gCon.pgv += nData.c.pgv;
+                        }
+                        if (hasE) {
+                            gTot.ln += eData.t_ativo.ln; gTot.gv += eData.t_ativo.gv; 
+                            gTot.pln += eData.t_ativo.pln; gTot.pgv += eData.t_ativo.pgv;
+                            gCon.ln += eData.c.ln; gCon.gv += eData.c.gv;
+                            gCon.pln += eData.c.pln; gCon.pgv += eData.c.pgv;
+                        }
+                    }
+                });
+
+                // CARD DEMANDA FUTURA
+                let futKeys = Object.keys(blocos['FUTURO']);
+                if (futKeys.length > 0) {
+                    html += `<div class="uf-card">
+                                <div class="uf-header fut-header"><span>🔮 PREVISÃO DE DEMANDA FUTURA (NÃO CARTONIZADOS)</span></div>
+                                <table class="uf-table">
+                                    <thead>
+                                        <tr><th style="text-align:left; padding-left:15px;">Fase / Previsão</th><th>Total Caixas</th><th>Total Peças</th></tr>
+                                    </thead>
+                                    <tbody>`;
+                    
+                    let futPorUF = {};
+                    futKeys.forEach(k => {
+                        let obj = blocos['FUTURO'][k];
+                        if(!futPorUF[obj.uf_nome]) futPorUF[obj.uf_nome] = [];
+                        futPorUF[obj.uf_nome].push(obj);
+                        macroFuturoCx += obj.cx_total;
+                        macroFuturoPc += obj.pc_total;
+                    });
+
+                    let futOrdem = ['BOT MGC', 'BOT SPI', 'BOT SPC', 'BOT MGI', 'VAREJO'];
+
+                    futOrdem.forEach(ufFut => {
+                        if (futPorUF[ufFut]) {
+                            let totCx = 0, totPc = 0;
+                            futPorUF[ufFut].forEach(o => { totCx += o.cx_total; totPc += o.pc_total; });
+                            
+                            html += `<tr><td colspan="3" class="fut-sub-div">${ufFut}</td></tr>`;
+                            
+                            futPorUF[ufFut].forEach(obj => {
+                                let label = obj.tipo_str === 'ESTOJO' ? '🧰 Estojo' : '📦 Carteira';
+                                html += `<tr class="row-ativo">
+                                            <td class="lbl-fase" style="padding-left: 20px !important;">${label}</td>
+                                            <td style="font-weight: 600;">${obj.cx_total.toLocaleString('pt-BR')}</td>
+                                            <td class="destaque">${obj.pc_total.toLocaleString('pt-BR')}</td>
+                                         </tr>`;
+                            });
+
+                            html += `<tr class="fut-total-row">
+                                        <td class="lbl-fase" style="padding-left: 20px !important;">Total ${ufFut}</td>
+                                        <td>${totCx.toLocaleString('pt-BR')}</td>
+                                        <td class="destaque">${totPc.toLocaleString('pt-BR')}</td>
+                                     </tr>`;
+                        }
+                    });
+                    
+                    html += `       </tbody>
+                                </table>
+                             </div>`;
+                }
+                
+                // NOVO CARTÃO: TOTAIS GLOBAIS DA PLANTA (VISÃO MACRO)
+                let macroAtivoCx = gTot.ln + gTot.gv;
+                let macroAtivoPc = gTot.pln + gTot.pgv;
+                
+                html += `
+                    <div class="uf-card">
+                        <div class="uf-header totais-header"><span>📊 VISÃO MACRO (TOTAIS GLOBAIS)</span></div>
+                        <table class="uf-table">
+                            <thead>
+                                <tr><th style="text-align:left; padding-left:15px;">Indicador Macro</th><th>Total Caixas</th><th>Total Peças</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-ativo">
+                                    <td class="lbl-fase" style="padding-left: 15px !important;">Demanda Total Bruta</td>
+                                    <td style="font-weight: 600;">${macroBrutoCx.toLocaleString('pt-BR')}</td>
+                                    <td class="destaque">${macroBrutoPc.toLocaleString('pt-BR')}</td>
+                                </tr>
+                                <tr class="row-ativo">
+                                    <td class="lbl-fase" style="padding-left: 15px !important;">Demanda Total Ativa</td>
+                                    <td style="font-weight: 600;">${macroAtivoCx.toLocaleString('pt-BR')}</td>
+                                    <td class="destaque">${macroAtivoPc.toLocaleString('pt-BR')}</td>
+                                </tr>
+                                <tr class="row-ativo">
+                                    <td class="lbl-fase" style="padding-left: 15px !important;">Não Cartonizado (Futura)</td>
+                                    <td style="font-weight: 600;">${macroFuturoCx.toLocaleString('pt-BR')}</td>
+                                    <td class="destaque">${macroFuturoPc.toLocaleString('pt-BR')}</td>
+                                </tr>
+                                <tr class="row-total-uf" style="border-top: 2px solid #cbd5e1;">
+                                    <td class="lbl-fase" style="padding-left: 15px !important;">VOLUME GERAL (BRUTO + FUTURO)</td>
+                                    <td style="font-weight: 800;">${(macroBrutoCx + macroFuturoCx).toLocaleString('pt-BR')}</td>
+                                    <td class="destaque-total" style="font-size:14px;">${(macroBrutoPc + macroFuturoPc).toLocaleString('pt-BR')}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+
+                // TOTAL GERAL FULL WIDTH (RODAPÉ)
+                if (gTot.ln > 0 || gTot.gv > 0) {
+                    let gplnC = Math.max(0, gTot.ln - gCon.ln);
+                    let gpgvC = Math.max(0, gTot.gv - gCon.gv);
+                    let gplnP = Math.max(0, gTot.pln - gCon.pln);
+                    let gpgvP = Math.max(0, gTot.pgv - gCon.pgv);
+                    
+                    html += `
+                        <div class="total-geral-card">
+                            <table class="uf-table geral-table">
+                                <thead>
+                                    <tr><th>Resumo da Operação</th><th>Caixas LN</th><th>Caixas GV</th><th>Peças LN</th><th>Peças GV</th><th>Peças Total</th><th>Perfil Mq.</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="geral-ativo">TOTAL GERAL ATIVO</td>
+                                        <td class="geral-ativo">${gTot.ln.toLocaleString('pt-BR')}</td><td class="geral-ativo">${gTot.gv.toLocaleString('pt-BR')}</td><td class="geral-ativo">${gTot.pln.toLocaleString('pt-BR')}</td><td class="geral-ativo">${gTot.pgv.toLocaleString('pt-BR')}</td><td class="geral-ativo">${(gTot.pln+gTot.pgv).toLocaleString('pt-BR')}</td><td class="geral-ativo">${gTot.ln > 0 ? Math.round(gTot.pln/gTot.ln) : 0}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="geral-pend">PENDENTE GERAL</td>
+                                        <td class="geral-pend">${gplnC.toLocaleString('pt-BR')}</td><td class="geral-pend">${gpgvC.toLocaleString('pt-BR')}</td><td class="geral-pend">${gplnP.toLocaleString('pt-BR')}</td><td class="geral-pend">${gpgvP.toLocaleString('pt-BR')}</td><td class="geral-pend">${(gplnP+gpgvP).toLocaleString('pt-BR')}</td><td class="geral-pend">${gplnC > 0 ? Math.round(gplnP/gplnC) : 0}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="geral-conc">CONCLUÍDO GERAL</td>
+                                        <td class="geral-conc">${gCon.ln.toLocaleString('pt-BR')}</td><td class="geral-conc">${gCon.gv.toLocaleString('pt-BR')}</td><td class="geral-conc">${gCon.pln.toLocaleString('pt-BR')}</td><td class="geral-conc">${gCon.pgv.toLocaleString('pt-BR')}</td><td class="geral-conc">${(gCon.pln+gCon.pgv).toLocaleString('pt-BR')}</td><td class="geral-conc">${gCon.ln > 0 ? Math.round(gCon.pln/gCon.ln) : 0}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                }
+
                 tabelaContainer.innerHTML = html;
                 
-                statusDiv.style.color = '#25d366'; statusDiv.innerText = "Tabela Gerada com Sucesso!";
+                statusDiv.style.color = '#10b981'; statusDiv.innerText = "Tabela Gerada com Sucesso!";
                 painelExport.style.display = 'block'; btnContainer.style.display = 'flex';
 
                 document.getElementById('btnCopiar').scrollIntoView({ behavior: 'smooth' });
@@ -634,19 +1043,19 @@
             btnCopiar.innerText = "⏳ Gerando Imagem...";
             
             let isDark = document.body.classList.contains('dark-mode');
-            let bgColor = isDark ? "#161b22" : "#ffffff";
+            let bgColor = isDark ? "#0b0f19" : "#ffffff";
 
             html2canvas(painelWrapper, { scale: 2, backgroundColor: bgColor }).then(canvas => {
                 btnCopiar.innerHTML = btnOriginalText;
                 canvas.toBlob(blob => {
                     try {
                         navigator.clipboard.write([new ClipboardItem({'image/png': blob})]).then(() => {
-                            statusDiv.style.color = isDark ? '#58a6ff' : '#0052cc';
-                            statusDiv.innerText = "📸 Imagem copiada com sucesso! Cole (Ctrl+V) no WhatsApp.";
+                            statusDiv.style.color = isDark ? '#38bdf8' : '#0052cc';
+                            statusDiv.innerText = "📸 Imagem copiada com sucesso! Cole (Ctrl+V) no WhatsApp/Teams.";
                         });
                     } catch(e) {
                         let link = document.createElement('a'); link.download = 'Demanda_Ceva.png'; link.href = canvas.toDataURL(); link.click();
-                        statusDiv.style.color = isDark ? '#58a6ff' : '#0052cc';
+                        statusDiv.style.color = isDark ? '#38bdf8' : '#0052cc';
                         statusDiv.innerText = "O download da imagem foi concluído (cópia direta bloqueada pelo navegador).";
                     }
                 });
