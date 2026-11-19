@@ -1,32 +1,18 @@
 window.dadosFechamento = {
-  "atualizado_em": "18/11/2026 23:40",
-  "progresso_geral_pct": 73,
-  "total_cxs_geral": 61954,
-  "total_loaded_cxs_geral": 45659,
+  "atualizado_em": "19/11/2026 00:15",
+  "progresso_geral_pct": 67,
+  "total_cxs_geral": 50217,
+  "total_loaded_cxs_geral": 33922,
   "total_pending_cxs_geral": 16295,
   "cards_atendimentos": {
-    "VAREJO": {
-      "SP": {
-        "total_cxs": 9563,
-        "loaded_cxs": 7400,
-        "rampa_cxs": 552,
-        "pending_cxs": 1611,
-        "finalizadas_gv_cx": 210,
-        "finalizadas_fr_cx": 7190,
-        "pendentes_gv_cx": 0,
-        "pendentes_fr_cx": 1611,
-        "pct": 83,
-        "status_atend": "EM ANDAMENTO"
-      }
-    },
     "CARTEIRA": {
       "SPI": {
-        "total_cxs": 30471,
-        "loaded_cxs": 30468,
+        "total_cxs": 22898,
+        "loaded_cxs": 22895,
         "rampa_cxs": 0,
         "pending_cxs": 3,
-        "finalizadas_gv_cx": 14579,
-        "finalizadas_fr_cx": 15889,
+        "finalizadas_gv_cx": 11240,
+        "finalizadas_fr_cx": 11655,
         "pendentes_gv_cx": 3,
         "pendentes_fr_cx": 0,
         "pct": 99,
@@ -42,6 +28,20 @@ window.dadosFechamento = {
         "pendentes_gv_cx": 7187,
         "pendentes_fr_cx": 7485,
         "pct": 33,
+        "status_atend": "EM ANDAMENTO"
+      }
+    },
+    "VAREJO": {
+      "SP": {
+        "total_cxs": 5399,
+        "loaded_cxs": 3236,
+        "rampa_cxs": 552,
+        "pending_cxs": 1611,
+        "finalizadas_gv_cx": 127,
+        "finalizadas_fr_cx": 3109,
+        "pendentes_gv_cx": 0,
+        "pendentes_fr_cx": 1611,
+        "pct": 70,
         "status_atend": "EM ANDAMENTO"
       }
     },
