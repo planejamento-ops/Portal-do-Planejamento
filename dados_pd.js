@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "19/11/2026 13:01",
+  "atualizado_em": "19/11/2026 14:00",
   "taxa_abs": 9.8,
   "total_faltas_mes": 621,
   "deficit": 26,
@@ -140,8 +140,8 @@ window.dadosPD = {
       "taxa_abs": 9.4,
       "faltas": 23,
       "deficit": 4,
-      "fi": 15,
-      "fj": 4,
+      "fi": 14,
+      "fj": 5,
       "ferias": 5
     }
   },
@@ -5625,10 +5625,10 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "DESLIGADO"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "DESLIGADO"
         ],
         [
           "FALTA INJUSTIFICADA"
@@ -5638,16 +5638,16 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        13,
+        12,
         5,
-        4,
+        5,
         4,
         2,
         1
       ],
       "data_cum": [
-        44.8,
-        62.1,
+        41.4,
+        58.6,
         75.9,
         89.7,
         96.6,
@@ -5657,31 +5657,31 @@ window.dadosPD = {
     "2026-11-19_1": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
-        ],
-        [
           "DESLIGADO"
         ],
         [
-          "FÉRIAS"
+          "FALTA INJUSTIFICADA"
         ],
         [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
         ],
         [
           "FOLGA"
         ]
       ],
       "data_abs": [
-        3,
         2,
-        1,
+        2,
+        2,
         1,
         1
       ],
       "data_cum": [
-        37.5,
-        62.5,
+        25.0,
+        50.0,
         75.0,
         87.5,
         100.0
@@ -5746,8 +5746,8 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        281,
-        169,
+        280,
+        170,
         131,
         109,
         65
