@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "19/11/2026 08:49",
+  "atualizado_em": "19/11/2026 09:17",
   "fotografia_dia": {
-    "data_referencia": "19/11/2026 08:49 (Ao Vivo)",
+    "data_referencia": "19/11/2026 09:17 (Ao Vivo)",
     "cards_atendimentos": {
       "ESTOJO": {
         "MGI": {
