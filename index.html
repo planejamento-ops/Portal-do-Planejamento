@@ -92,6 +92,37 @@
         @keyframes pulsar { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.3); } 100% { opacity: 1; transform: scale(1); } }
 
         /* ========================================== */
+        /* TABELA EXECUTIVA DEMANDA DIÁRIA (SLATE GLASS) */
+        /* ========================================== */
+        .tabela-demanda { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-bottom: 16px; background: rgba(30, 41, 59, 0.75); backdrop-filter: blur(12px); border-radius: 12px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.25); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); table-layout: fixed; }
+        
+        .tabela-demanda th:first-child, .tabela-demanda td:first-child { width: 25%; text-align: left; padding-left: 16px; }
+        .tabela-demanda th:not(:first-child), .tabela-demanda td:not(:first-child) { width: 15%; text-align: center; }
+
+        /* Cabeçalho Azul Marinho Profundo */
+        .tabela-demanda th { background: #091326; color: #f8fafc; padding: 12px 8px; font-weight: 800; border-bottom: 2px solid #00d2ff; text-transform: uppercase; font-size: 0.66rem; letter-spacing: 0.6px; }
+        .tabela-demanda td { padding: 10px 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        
+        /* Linha Principal do Atendimento (Cinza Médio Translúcido + Texto Branco Puro) */
+        .tabela-demanda .row-header td { background: rgba(51, 65, 85, 0.65); font-weight: 800; color: #ffffff; border-top: 2px solid rgba(148, 163, 184, 0.3); font-size: 0.8rem; }
+        
+        /* Linha Pendente (Fundo Cinza Escuro Suave + Amarelo Ouro Vivo) */
+        .tabela-demanda .row-pendente td { color: #fbbf24; background: rgba(15, 23, 42, 0.45); font-weight: 700; font-feature-settings: 'tnum' on; }
+        .tabela-demanda .row-pendente td:first-child { text-align: right; padding-right: 16px; color: #cbd5e1; font-weight: 600; }
+        
+        /* Linha Concluído (Fundo Cinza Escuro Suave + Verde Esmeralda Brilhante) */
+        .tabela-demanda .row-concluido td { color: #34d399; background: rgba(15, 23, 42, 0.45); font-weight: 700; font-feature-settings: 'tnum' on; }
+        .tabela-demanda .row-concluido td:first-child { text-align: right; padding-right: 16px; color: #cbd5e1; font-weight: 600; }
+        
+        /* Totais (Azul, Amarelo e Verde com Destaque e Contraste) */
+        .tabela-demanda .row-total td { background: rgba(2, 132, 199, 0.35); color: #e0f2fe; font-weight: 800; border-top: 2px solid #38bdf8; }
+        .tabela-demanda .row-total-pendente td { background: rgba(217, 119, 6, 0.25); color: #fcd34d; font-weight: 800; }
+        .tabela-demanda .row-total-concluido td { background: rgba(5, 150, 105, 0.25); color: #6ee7b7; font-weight: 800; }
+        
+        .tabela-geral-macro td { font-size: 0.85rem; padding: 14px 8px; }
+
+
+        /* ========================================== */
         /* CARDS PRINCIPAIS                           */
         /* ========================================== */
         .tu-grid-main { display: grid; gap: 10px; transition: all 0.3s ease; }
@@ -254,6 +285,9 @@
 
         <main class="dashboard-content">
             <div class="nav-tabs">
+                <button class="btn-tab" onclick="trocarAba('tab-demanda-diaria', this)">
+                    <span class="material-symbols-outlined">today</span> Demanda Diária
+                </button>
                 <button class="btn-tab active" onclick="trocarAba('tab-tu', this)">
                     <span class="material-symbols-outlined">analytics</span> Controle de TUs
                 </button>
@@ -272,6 +306,88 @@
             </div>
 
             <div class="tu-dashboard-container">
+                <!-- ABA DEMANDA DIÁRIA -->
+                <div id="tab-demanda-diaria" class="tab-panel">
+                    <div class="tu-header">
+                        <div class="tu-title-group">
+                            <h2><span class="material-symbols-outlined">fact_check</span> Análise de Demanda Diária (Em Construção)</h2>
+                        </div>
+                        <div class="wms-sub-toggles" style="margin-bottom: 0;">
+                            <button class="btn-sub-tab active" id="btn-demanda-meianoite" onclick="mudarVisaoDemandaDiaria('MEIA_NOITE')">MEIA-NOITE</button>
+                            <button class="btn-sub-tab" id="btn-demanda-atual" onclick="mudarVisaoDemandaDiaria('ATUAL')">VISÃO ATUAL</button>
+                        </div>
+                        <div class="header-badges">
+                            <span class="tu-status-badge">
+                                <span class="status-dot"></span>
+                                <span id="txt-demanda-status">Sincronizando...</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;">
+                            <!-- LADO ESQUERDO: CARTEIRA & VAREJO -->
+                            <div>
+                                <h4 style="color: #00d2ff; font-size: 0.9rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase;">
+                                    Demanda Diária (Carteira & Varejo)
+                                </h4>
+                                <table class="tabela-demanda" id="tbl-demanda-carteira">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: left; padding-left: 16px;">ATEND. / UF</th>
+                                            <th>CAIXAS LN</th>
+                                            <th>CAIXAS GV</th>
+                                            <th>PEÇAS LN (EST.)</th>
+                                            <th>PEÇAS GV (EST.)</th>
+                                            <th>PEÇAS TOTAL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-demanda-carteira">
+                                        <tr><td colspan="6" style="text-align:center; padding: 20px;">Carregando dados...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- LADO DIREITO: ESTOJO -->
+                            <div>
+                                <h4 style="color: #00d2ff; font-size: 0.9rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase;">
+                                    Demanda Diária (Estojo)
+                                </h4>
+                                <table class="tabela-demanda" id="tbl-demanda-estojo">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: left; padding-left: 16px;">ATEND. / UF</th>
+                                            <th>CAIXAS LN</th>
+                                            <th>CAIXAS GV</th>
+                                            <th>PEÇAS LN (EST.)</th>
+                                            <th>PEÇAS GV (EST.)</th>
+                                            <th>PEÇAS TOTAL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-demanda-estojo">
+                                        <tr><td colspan="6" style="text-align:center; padding: 20px;">Carregando dados...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- TOTAL GERAL MACRO -->
+                        <table class="tabela-demanda tabela-geral-macro" style="margin-top: 16px; border: 2px solid rgba(0, 210, 255, 0.4);">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: left; padding-left: 16px;">RESUMO MACRO DA OPERAÇÃO</th>
+                                    <th>CAIXAS LN</th>
+                                    <th>CAIXAS GV</th>
+                                    <th>PEÇAS LN (EST.)</th>
+                                    <th>PEÇAS GV (EST.)</th>
+                                    <th>PEÇAS TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-demanda-geral">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <!-- ABA 1: CONTROLE DE TUS -->
                 <div id="tab-tu" class="tab-panel active">
                     <div class="tu-header">
@@ -296,7 +412,7 @@
                         </div>
                     </div>
 
-                    <div class="grid-mes-acumulado" style="grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="grid-mes-acumulado" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
                         <!-- BLOCO CAIXAS -->
                         <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px;">
                             <span class="label" style="font-size: 0.75rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; gap: 6px;">
@@ -340,6 +456,28 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- BLOCO PERFIL (NOVO) -->
+                        <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(0, 176, 155, 0.2); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+                            <span class="label" style="font-size: 0.75rem; color: #a0aab5; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                                <span class="material-symbols-outlined" style="color: #00b09b; font-size: 18px;">pie_chart</span>
+                                Perfil Planejado no Mês (Pç/Cx)
+                            </span>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+                                <div class="tu-card card-green" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px;">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">TOTAL GERAL</span>
+                                    <h3 id="perfil-mes" style="font-size: 1.1rem; color: #ffffff;">--</h3>
+                                </div>
+                                <div class="tu-card card-cyan" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px; border-color: rgba(0, 210, 255, 0.5);">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">LN</span>
+                                    <h3 id="perfil-mes-ln" style="font-size: 1rem; color: #00d2ff;">--</h3>
+                                </div>
+                                <div class="tu-card" style="padding: 8px; flex-direction: column; align-items: flex-start; gap: 2px; border-color: rgba(130, 207, 255, 0.4); background: rgba(130, 207, 255, 0.05);">
+                                    <span style="font-size: 0.6rem; color: #a0aab5; font-weight: 700;">GV</span>
+                                    <h3 id="perfil-mes-gv" style="font-size: 1rem; color: #82cfff;">--</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="fifo-triple-container">
@@ -378,45 +516,119 @@
                     </div>
 
                     <div class="tu-details-grid">
-                        <div class="tu-detail-box">
-                            <h4><span class="material-symbols-outlined">pie_chart</span> Perfil & Volume REALIZADO</h4>
-                            <table class="tu-table">
-                                <thead><tr><th style="text-align: left;">Atendimento</th><th>Peças</th><th>Caixas</th><th>Perfil (Pç/Cx)</th></tr></thead>
+                        <!-- TABELA PLANEJADO (COM VISUAL DEMANDA DIÁRIA) -->
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <h4 style="color: #ffffff; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 6px; padding-left: 4px;">
+                                <span class="material-symbols-outlined" style="color: #00d2ff; font-size: 20px;">pie_chart</span> Perfil & Volume PLANEJADO
+                            </h4>
+                            <table class="tabela-demanda">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left; padding-left: 16px;">ATENDIMENTO</th>
+                                        <th>PEÇAS</th>
+                                        <th>CAIXAS</th>
+                                        <th>PERFIL</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
-                                    <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-tot">--</td><td id="cx-cart_ln-tot">--</td><td><span class="val" id="perf-cart_ln-tot">--</span></td></tr>
-                                    <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-tot">--</td><td id="cx-cart_gv-tot">--</td><td><span class="val" id="perf-cart_gv-tot">--</span></td></tr>
-                                    <tr><td>Varejo (LN)</td><td id="pcs-var_ln-tot">--</td><td id="cx-var_ln-tot">--</td><td><span class="val" id="perf-var_ln-tot">--</span></td></tr>
-                                    <tr><td>Varejo (GV)</td><td id="pcs-var_gv-tot">--</td><td id="cx-var_gv-tot">--</td><td><span class="val" id="perf-var_gv-tot">--</span></td></tr>
-                                    <tr><td>Estojo (LN)</td><td id="pcs-est_ln-tot">--</td><td id="cx-est_ln-tot">--</td><td><span class="val" id="perf-est_ln-tot">--</span></td></tr>
-                                    <tr><td>Estojo (GV)</td><td id="pcs-est_gv-tot">--</td><td id="cx-est_gv-tot">--</td><td><span class="val" id="perf-est_gv-tot">--</span></td></tr>
-                                    <tr><td>Outras (LN)</td><td id="pcs-out_ln-tot">--</td><td id="cx-out_ln-tot">--</td><td><span class="val" id="perf-out_ln-tot">--</span></td></tr>
-                                    <tr><td>Outras (GV)</td><td id="pcs-out_gv-tot">--</td><td id="cx-out_gv-tot">--</td><td><span class="val" id="perf-out_gv-tot">--</span></td></tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Carteira (LN)</td>
+                                        <td id="pcs-cart_ln-tot">--</td><td id="cx-cart_ln-tot">--</td><td><span class="val" id="perf-cart_ln-tot">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Carteira (GV)</td>
+                                        <td id="pcs-cart_gv-tot">--</td><td id="cx-cart_gv-tot">--</td><td><span class="val" id="perf-cart_gv-tot">--</span></td>
+                                    </tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Varejo (LN)</td>
+                                        <td id="pcs-var_ln-tot">--</td><td id="cx-var_ln-tot">--</td><td><span class="val" id="perf-var_ln-tot">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Varejo (GV)</td>
+                                        <td id="pcs-var_gv-tot">--</td><td id="cx-var_gv-tot">--</td><td><span class="val" id="perf-var_gv-tot">--</span></td>
+                                    </tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Estojo (LN)</td>
+                                        <td id="pcs-est_ln-tot">--</td><td id="cx-est_ln-tot">--</td><td><span class="val" id="perf-est_ln-tot">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Estojo (GV)</td>
+                                        <td id="pcs-est_gv-tot">--</td><td id="cx-est_gv-tot">--</td><td><span class="val" id="perf-est_gv-tot">--</span></td>
+                                    </tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Outras (LN)</td>
+                                        <td id="pcs-out_ln-tot">--</td><td id="cx-out_ln-tot">--</td><td><span class="val" id="perf-out_ln-tot">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Outras (GV)</td>
+                                        <td id="pcs-out_gv-tot">--</td><td id="cx-out_gv-tot">--</td><td><span class="val" id="perf-out_gv-tot">--</span></td>
+                                    </tr>
                                 </tbody>
                                 <tfoot>
-                                    <tr style="border-top: 2px solid rgba(0, 210, 255, 0.4); font-weight: 800; background: rgba(0, 210, 255, 0.08);">
-                                        <td style="color: #00d2ff; text-align: left; padding: 8px 6px;">TOTAL GERAL</td><td id="pcs-total-tot" style="color: #ffffff;">--</td><td id="cx-total-tot" style="color: #ffffff;">--</td><td><span class="val" id="perf-total-tot" style="color: #00d2ff;">--</span></td>
+                                    <tr class="row-total">
+                                        <td style="text-align: left; padding-left: 16px;">TOTAL GERAL</td>
+                                        <td id="pcs-total-tot" style="color: #ffffff;">--</td>
+                                        <td id="cx-total-tot" style="color: #ffffff;">--</td>
+                                        <td><span class="val" id="perf-total-tot" style="color: #ffffff;">--</span></td>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
 
-                        <div class="tu-detail-box box-warning">
-                            <h4><span class="material-symbols-outlined">pending_actions</span> Perfil & Volume PENDENTE</h4>
-                            <table class="tu-table">
-                                <thead><tr><th style="text-align: left;">Atendimento</th><th>Peças</th><th>Caixas</th><th>Perfil</th></tr></thead>
+                        <!-- TABELA PENDENTE (COM VISUAL DEMANDA DIÁRIA) -->
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <h4 style="color: #ffffff; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 6px; padding-left: 4px;">
+                                <span class="material-symbols-outlined" style="color: #f6b93b; font-size: 20px;">pending_actions</span> Perfil & Volume PENDENTE
+                            </h4>
+                            <table class="tabela-demanda">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left; padding-left: 16px; border-bottom: 2px solid #f6b93b;">ATENDIMENTO</th>
+                                        <th style="border-bottom: 2px solid #f6b93b;">PEÇAS</th>
+                                        <th style="border-bottom: 2px solid #f6b93b;">CAIXAS</th>
+                                        <th style="border-bottom: 2px solid #f6b93b;">PERFIL</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
-                                    <tr><td>Carteira (LN)</td><td id="pcs-cart_ln-pend">--</td><td id="cx-cart_ln-pend">--</td><td><span class="val" id="perf-cart_ln-pend">--</span></td></tr>
-                                    <tr><td>Carteira (GV)</td><td id="pcs-cart_gv-pend">--</td><td id="cx-cart_gv-pend">--</td><td><span class="val" id="perf-cart_gv-pend">--</span></td></tr>
-                                    <tr><td>Varejo (LN)</td><td id="pcs-var_ln-pend">--</td><td id="cx-var_ln-pend">--</td><td><span class="val" id="perf-var_ln-pend">--</span></td></tr>
-                                    <tr><td>Varejo (GV)</td><td id="pcs-var_gv-pend">--</td><td id="cx-var_gv-pend">--</td><td><span class="val" id="perf-var_gv-pend">--</span></td></tr>
-                                    <tr><td>Estojo (LN)</td><td id="pcs-est_ln-pend">--</td><td id="cx-est_ln-pend">--</td><td><span class="val" id="perf-est_ln-pend">--</span></td></tr>
-                                    <tr><td>Estojo (GV)</td><td id="pcs-est_gv-pend">--</td><td id="cx-est_gv-pend">--</td><td><span class="val" id="perf-est_gv-pend">--</span></td></tr>
-                                    <tr><td>Outras (LN)</td><td id="pcs-out_ln-pend">--</td><td id="cx-out_ln-pend">--</td><td><span class="val" id="perf-out_ln-pend">--</span></td></tr>
-                                    <tr><td>Outras (GV)</td><td id="pcs-out_gv-pend">--</td><td id="cx-out_gv-pend">--</td><td><span class="val" id="perf-out_gv-pend">--</span></td></tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Carteira (LN)</td>
+                                        <td id="pcs-cart_ln-pend">--</td><td id="cx-cart_ln-pend">--</td><td><span class="val" id="perf-cart_ln-pend">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Carteira (GV)</td>
+                                        <td id="pcs-cart_gv-pend">--</td><td id="cx-cart_gv-pend">--</td><td><span class="val" id="perf-cart_gv-pend">--</span></td>
+                                    </tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Varejo (LN)</td>
+                                        <td id="pcs-var_ln-pend">--</td><td id="cx-var_ln-pend">--</td><td><span class="val" id="perf-var_ln-pend">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Varejo (GV)</td>
+                                        <td id="pcs-var_gv-pend">--</td><td id="cx-var_gv-pend">--</td><td><span class="val" id="perf-var_gv-pend">--</span></td>
+                                    </tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Estojo (LN)</td>
+                                        <td id="pcs-est_ln-pend">--</td><td id="cx-est_ln-pend">--</td><td><span class="val" id="perf-est_ln-pend">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Estojo (GV)</td>
+                                        <td id="pcs-est_gv-pend">--</td><td id="cx-est_gv-pend">--</td><td><span class="val" id="perf-est_gv-pend">--</span></td>
+                                    </tr>
+                                    <tr class="row-header">
+                                        <td style="color: #ffffff;">Outras (LN)</td>
+                                        <td id="pcs-out_ln-pend">--</td><td id="cx-out_ln-pend">--</td><td><span class="val" id="perf-out_ln-pend">--</span></td>
+                                    </tr>
+                                    <tr style="background: rgba(15, 23, 42, 0.45); color: #ffffff;">
+                                        <td style="color: #82cfff; padding-left: 24px;">Outras (GV)</td>
+                                        <td id="pcs-out_gv-pend">--</td><td id="cx-out_gv-pend">--</td><td><span class="val" id="perf-out_gv-pend">--</span></td>
+                                    </tr>
                                 </tbody>
                                 <tfoot>
-                                    <tr style="border-top: 2px solid rgba(246, 185, 59, 0.4); font-weight: 800; background: rgba(246, 185, 59, 0.08);">
-                                        <td style="color: #f6b93b; text-align: left; padding: 8px 6px;">TOTAL GERAL</td><td id="pcs-total-pend" style="color: #ffffff;">--</td><td id="cx-total-pend" style="color: #ffffff;">--</td><td><span class="val" id="perf-total-pend" style="color: #f6b93b;">--</span></td>
+                                    <tr class="row-total-pendente">
+                                        <td style="text-align: left; padding-left: 16px;">TOTAL GERAL</td>
+                                        <td id="pcs-total-pend" style="color: #ffffff;">--</td>
+                                        <td id="cx-total-pend" style="color: #ffffff;">--</td>
+                                        <td><span class="val" id="perf-total-pend" style="color: #ffffff;">--</span></td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -1017,7 +1229,7 @@
             // Força a leitura do arquivo mais recente SEMPRE, mesmo abrindo do PC local!
             const timestamp = `?v=${new Date().getTime()}`;
             
-            const scripts = ["dados_tu.js", "dados_movimentacoes.js", "dados_demandas.js", "dados_fechamento.js", "dados_pd.js"];
+            const scripts = ["dados_tu.js", "dados_movimentacoes.js", "dados_demandas.js", "dados_fechamento.js", "dados_pd.js", "dados_demanda_diaria.js", "dados_demanda_atual.js"];
             let carregados = 0;
             scripts.forEach(src => {
                 const script = document.createElement("script");
@@ -1071,8 +1283,9 @@
                     setHtmlSeguro(`cx-${p.prefix_ln}-${prefixo}`, `${formatarNumeroInteiro(ln.cx)} <small style="color:#00d2ff;">(${pctLnCx}%)</small>`);
                     setTextoSeguro(`perf-${p.prefix_ln}-${prefixo}`, `${Math.round(ln.perfil)}`);
                     
-                    setHtmlSeguro(`pcs-${p.prefix_gv}-${prefixo}`, `${formatarNumeroInteiro(gv.pcs)} <small style="color:#ff4b2b;">(${pctGvPcs}%)</small>`);
-                    setHtmlSeguro(`cx-${p.prefix_gv}-${prefixo}`, `${formatarNumeroInteiro(gv.cx)} <small style="color:#ff4b2b;">(${pctGvCx}%)</small>`);
+                    // Escreve GV
+                    setHtmlSeguro(`pcs-${p.prefix_gv}-${prefixo}`, `${formatarNumeroInteiro(gv.pcs)} <small style="color:#82cfff;">(${pctGvPcs}%)</small>`);
+                    setHtmlSeguro(`cx-${p.prefix_gv}-${prefixo}`, `${formatarNumeroInteiro(gv.cx)} <small style="color:#82cfff;">(${pctGvCx}%)</small>`);
                     setTextoSeguro(`perf-${p.prefix_gv}-${prefixo}`, `${Math.round(gv.perfil)}`);
                 }
             });
@@ -1119,28 +1332,44 @@
                 // Atualiza Cards de Caixas do Mês Filtrado
                 let pctCxLn = dadosMes.caixas ? Math.round((dadosMes.caixas_ln / dadosMes.caixas) * 100) : 0;
                 let pctCxGv = dadosMes.caixas ? Math.round((dadosMes.caixas_gv / dadosMes.caixas) * 100) : 0;
-                setHtmlSeguro('caixas-mes-ln', `${formatarNumeroInteiro(dadosMes.caixas_ln)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxLn}%)</small>`);
-                setHtmlSeguro('caixas-mes-gv', `${formatarNumeroInteiro(dadosMes.caixas_gv)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxGv}%)</small>`);
+                setHtmlSeguro('caixas-mes-ln', `${formatarNumeroInteiro(dadosMes.caixas_ln)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctCxLn}%)</small>`);
+                setHtmlSeguro('caixas-mes-gv', `${formatarNumeroInteiro(dadosMes.caixas_gv)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctCxGv}%)</small>`);
                 setTextoSeguro('caixas-mes', formatarNumeroInteiro(dadosMes.caixas));
 
                 // Atualiza Cards de Peças do Mês Filtrado
                 let pctPcLn = dadosMes.pecas ? Math.round((dadosMes.pecas_ln / dadosMes.pecas) * 100) : 0;
                 let pctPcGv = dadosMes.pecas ? Math.round((dadosMes.pecas_gv / dadosMes.pecas) * 100) : 0;
-                setHtmlSeguro('pecas-mes-ln', `${formatarNumeroInteiro(dadosMes.pecas_ln)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcLn}%)</small>`);
-                setHtmlSeguro('pecas-mes-gv', `${formatarNumeroInteiro(dadosMes.pecas_gv)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcGv}%)</small>`);
+                setHtmlSeguro('pecas-mes-ln', `${formatarNumeroInteiro(dadosMes.pecas_ln)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctPcLn}%)</small>`);
+                setHtmlSeguro('pecas-mes-gv', `${formatarNumeroInteiro(dadosMes.pecas_gv)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctPcGv}%)</small>`);
                 setTextoSeguro('pecas-mes', formatarNumeroInteiro(dadosMes.pecas));
+
+                // (No bloco IF de aplicarFiltroMesTU, logo após o setTextoSeguro('pecas-mes', ...))
+                
+                // Atualiza Cards de Perfil do Mês Filtrado
+                let perfilLn = dadosMes.caixas_ln ? Math.round(dadosMes.pecas_ln / dadosMes.caixas_ln) : 0;
+                let perfilGv = dadosMes.caixas_gv ? Math.round(dadosMes.pecas_gv / dadosMes.caixas_gv) : 0;
+                let perfilTotal = dadosMes.caixas ? Math.round(dadosMes.pecas / dadosMes.caixas) : 0;
+                
+                setTextoSeguro('perfil-mes-ln', perfilLn);
+                setTextoSeguro('perfil-mes-gv', perfilGv);
+                setTextoSeguro('perfil-mes', perfilTotal);
 
                 if (totaisMes[mesAnoSel].perfis_geral) preencherCardPerfil('tot', totaisMes[mesAnoSel].perfis_geral);
                 if (totaisMes[mesAnoSel].perfis_pendentes) preencherCardPerfil('pend', totaisMes[mesAnoSel].perfis_pendentes);
             } else {
+
                 // Se não houver dados no mês selecionado, zera tudo
-                setHtmlSeguro('caixas-mes-ln', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
-                setHtmlSeguro('caixas-mes-gv', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
+                setHtmlSeguro('caixas-mes-ln', `0 <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(0%)</small>`);
+                setHtmlSeguro('caixas-mes-gv', `0 <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(0%)</small>`);
                 setTextoSeguro('caixas-mes', '0');
                 
-                setHtmlSeguro('pecas-mes-ln', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
-                setHtmlSeguro('pecas-mes-gv', `0 <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(0%)</small>`);
+                setHtmlSeguro('pecas-mes-ln', `0 <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(0%)</small>`);
+                setHtmlSeguro('pecas-mes-gv', `0 <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(0%)</small>`);
                 setTextoSeguro('pecas-mes', '0');
+                
+                setTextoSeguro('perfil-mes-ln', '0');
+                setTextoSeguro('perfil-mes-gv', '0');
+                setTextoSeguro('perfil-mes', '0');
                 
                 const zeros = {
                     varejo_ln: {cx:0, pcs:0, perfil:0}, varejo_gv: {cx:0, pcs:0, perfil:0},
@@ -1609,6 +1838,7 @@
         }
 
         function carregarDados() {
+            renderizarDemandaDiaria()
             if (typeof dadosDashboard !== 'undefined') {
                 const dados = dadosDashboard;
                 setTextoSeguro('txt-status-sync', `LIVE • ${dados.atualizado_em || ''}`);
@@ -1621,17 +1851,29 @@
                     inputMes.value = `${a}-${m}`;
                 }
 
+                // Atualiza Cards de Caixas do Mês
                 let pctCxLn = dados.caixas_total_mes ? Math.round((dados.caixas_ln_mes / dados.caixas_total_mes) * 100) : 0;
                 let pctCxGv = dados.caixas_total_mes ? Math.round((dados.caixas_gv_mes / dados.caixas_total_mes) * 100) : 0;
-                setHtmlSeguro('caixas-mes-ln', `${formatarNumeroInteiro(dados.caixas_ln_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxLn}%)</small>`);
-                setHtmlSeguro('caixas-mes-gv', `${formatarNumeroInteiro(dados.caixas_gv_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctCxGv}%)</small>`);
+                setHtmlSeguro('caixas-mes-ln', `${formatarNumeroInteiro(dados.caixas_ln_mes)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctCxLn}%)</small>`);
+                setHtmlSeguro('caixas-mes-gv', `${formatarNumeroInteiro(dados.caixas_gv_mes)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctCxGv}%)</small>`);
                 setTextoSeguro('caixas-mes', formatarNumeroInteiro(dados.caixas_total_mes));
 
+                // Atualiza Cards de Peças do Mês
                 let pctPcLn = dados.pecas_total_mes ? Math.round((dados.pecas_ln_mes / dados.pecas_total_mes) * 100) : 0;
                 let pctPcGv = dados.pecas_total_mes ? Math.round((dados.pecas_gv_mes / dados.pecas_total_mes) * 100) : 0;
-                setHtmlSeguro('pecas-mes-ln', `${formatarNumeroInteiro(dados.pecas_ln_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcLn}%)</small>`);
-                setHtmlSeguro('pecas-mes-gv', `${formatarNumeroInteiro(dados.pecas_gv_mes)} <small style="font-size: 0.65rem; margin-left: 6px; opacity: 0.85;">(${pctPcGv}%)</small>`);
+                setHtmlSeguro('pecas-mes-ln', `${formatarNumeroInteiro(dados.pecas_ln_mes)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctPcLn}%)</small>`);
+                setHtmlSeguro('pecas-mes-gv', `${formatarNumeroInteiro(dados.pecas_gv_mes)} <small style="font-size: 0.65rem; display: block; margin-top: 2px; opacity: 0.85;">(${pctPcGv}%)</small>`);
                 setTextoSeguro('pecas-mes', formatarNumeroInteiro(dados.pecas_total_mes));
+                
+                // Calcula e atualiza Cards de Perfil do Mês
+                let perfilLn = dados.caixas_ln_mes ? Math.round(dados.pecas_ln_mes / dados.caixas_ln_mes) : 0;
+                let perfilGv = dados.caixas_gv_mes ? Math.round(dados.pecas_gv_mes / dados.caixas_gv_mes) : 0;
+                let perfilTotal = dados.caixas_total_mes ? Math.round(dados.pecas_total_mes / dados.caixas_total_mes) : 0;
+                
+                setTextoSeguro('perfil-mes-ln', perfilLn);
+                setTextoSeguro('perfil-mes-gv', perfilGv);
+                setTextoSeguro('perfil-mes', perfilTotal);
+
                 setTextoSeguro('tus-pendentes', `${dados.pendencias_por_canal ? (dados.pendencias_por_canal.varejo + dados.pendencias_por_canal.carteira + dados.pendencias_por_canal.estojo + (dados.pendencias_por_canal.outras || 0)) : (dados.carretas_pendentes || 0)}`);
                 setTextoSeguro('sub-tus', `De ${dados.total_tus || 0} TUs na Janela`);
                 setTextoSeguro('caixas-pendentes', formatarNumeroInteiro(dados.caixas_pendentes));
@@ -1976,6 +2218,229 @@
         document.getElementById('saneadorModal').addEventListener('click', function(e) {
             if (e.target === this) fecharSaneador();
         });
+
+        // ==========================================================================
+        // CONTROLE DE VISÃO: DEMANDA DIÁRIA (MEIA-NOITE VS AO VIVO)
+        // ==========================================================================
+        let demandaVisaoAtual = 'MEIA_NOITE'; // Variável global (fora da função)
+
+        function mudarVisaoDemandaDiaria(visao) {
+            demandaVisaoAtual = visao;
+            
+            // Troca a cor dos botões
+            const btnMeiaNoite = document.getElementById('btn-demanda-meianoite');
+            const btnAtual = document.getElementById('btn-demanda-atual');
+            
+            if (btnMeiaNoite) {
+                if (visao === 'MEIA_NOITE') btnMeiaNoite.classList.add('active');
+                else btnMeiaNoite.classList.remove('active');
+            }
+            
+            if (btnAtual) {
+                if (visao === 'ATUAL') btnAtual.classList.add('active');
+                else btnAtual.classList.remove('active');
+            }
+            
+            // Roda a tabela de novo com a nova fonte
+            renderizarDemandaDiaria();
+        }
+
+        function renderizarDemandaDiaria() {
+            // Escolhe a fonte de dados baseada no botão clicado!
+            const fonte = (demandaVisaoAtual === 'ATUAL' && typeof window.dadosDemandaAtual !== 'undefined')
+                ? window.dadosDemandaAtual
+                : (typeof window.dadosDemandaDiaria !== 'undefined' ? window.dadosDemandaDiaria : null);
+
+            if (!fonte) return;
+
+            try {
+                const foto = fonte.fotografia_dia || {};
+                
+                // Atualiza a etiqueta de horário no canto superior direito
+                if (demandaVisaoAtual === 'ATUAL') {
+                    setTextoSeguro('txt-demanda-status', `Ao Vivo • ${fonte.atualizado_em || ''}`);
+                } else {
+                    setTextoSeguro('txt-demanda-status', `Fechamento: ${foto.data_referencia || ''}`);
+                }
+
+                let htmlCart = '', htmlEst = '';
+                let totCart = { cx_ln: 0, cx_gv: 0, concl_cx_ln: 0, concl_cx_gv: 0, pcs_ln: 0, pcs_gv: 0, concl_pcs_ln: 0, concl_pcs_gv: 0 };
+                let totEst  = { cx_ln: 0, cx_gv: 0, concl_cx_ln: 0, concl_cx_gv: 0, pcs_ln: 0, pcs_gv: 0, concl_pcs_ln: 0, concl_pcs_gv: 0 };
+
+                const renderGrupo = (atend, uf, item, isEstojo) => {
+                    if (!item) return '';
+
+                    let total_cx_ln=0, total_cx_gv=0, total_pcs_ln=0, total_pcs_gv=0;
+                    let pend_cx_ln=0, pend_cx_gv=0, pend_pcs_ln=0, pend_pcs_gv=0;
+                    let concl_cx_ln=0, concl_cx_gv=0, concl_pcs_ln=0, concl_pcs_gv=0;
+                    let sufixoNome = "";
+
+                    if (item.is_wms) {
+                        sufixoNome = " (WMS)";
+                        pend_cx_ln = Number(item.backlog_wms_fr_cx) || 0;
+                        pend_cx_gv = Number(item.backlog_wms_gv_cx) || 0;
+                        pend_pcs_ln = Number(item.backlog_wms_fr_pcs) || 0;
+                        pend_pcs_gv = Number(item.backlog_wms_gv_pcs) || 0;
+                    } else {
+                        concl_cx_ln = Number(item.finalizadas_fr_cx) || 0;
+                        concl_cx_gv = Number(item.finalizadas_gv_cx) || 0;
+                        concl_pcs_ln = Number(item.finalizadas_fr_pcs) || 0;
+                        concl_pcs_gv = Number(item.finalizadas_gv_pcs) || 0;
+
+                        pend_cx_ln = Number(item.pendentes_fr_cx) || 0;
+                        pend_cx_gv = Number(item.pendentes_gv_cx) || 0;
+                        pend_pcs_ln = Number(item.pendentes_fr_pcs) || 0;
+                        pend_pcs_gv = Number(item.pendentes_gv_pcs) || 0;
+                    }
+
+                    total_cx_ln = concl_cx_ln + pend_cx_ln;
+                    total_cx_gv = concl_cx_gv + pend_cx_gv;
+                    total_pcs_ln = concl_pcs_ln + pend_pcs_ln;
+                    total_pcs_gv = concl_pcs_gv + pend_pcs_gv;
+
+                    if (total_cx_ln === 0 && total_cx_gv === 0 && total_pcs_ln === 0 && total_pcs_gv === 0) return '';
+
+                    const objTot = isEstojo ? totEst : totCart;
+                    objTot.cx_ln += total_cx_ln; objTot.cx_gv += total_cx_gv;
+                    objTot.concl_cx_ln += concl_cx_ln; objTot.concl_cx_gv += concl_cx_gv;
+                    objTot.pcs_ln += total_pcs_ln; objTot.pcs_gv += total_pcs_gv;
+                    objTot.concl_pcs_ln += concl_pcs_ln; objTot.concl_pcs_gv += concl_pcs_gv;
+
+                    let nomeLinha = isEstojo ? uf : atend;
+                    if (atend === 'VAREJO' || uf === 'SP') nomeLinha = 'VAREJO';
+                    nomeLinha += sufixoNome;
+
+                    return `
+                        <tr class="row-header">
+                            <td>${nomeLinha}</td>
+                            <td>${formatarNumeroInteiro(total_cx_ln)}</td><td>${formatarNumeroInteiro(total_cx_gv)}</td>
+                            <td>${formatarNumeroInteiro(total_pcs_ln)}</td><td>${formatarNumeroInteiro(total_pcs_gv)}</td>
+                            <td>${formatarNumeroInteiro(total_pcs_ln + total_pcs_gv)}</td>
+                        </tr>
+                        <tr class="row-pendente">
+                            <td>Pendente</td>
+                            <td>${formatarNumeroInteiro(pend_cx_ln)}</td><td>${formatarNumeroInteiro(pend_cx_gv)}</td>
+                            <td>${formatarNumeroInteiro(pend_pcs_ln)}</td><td>${formatarNumeroInteiro(pend_pcs_gv)}</td>
+                            <td>${formatarNumeroInteiro(pend_pcs_ln + pend_pcs_gv)}</td>
+                        </tr>
+                        <tr class="row-concluido">
+                            <td>Concluído</td>
+                            <td>${formatarNumeroInteiro(concl_cx_ln)}</td><td>${formatarNumeroInteiro(concl_cx_gv)}</td>
+                            <td>${formatarNumeroInteiro(concl_pcs_ln)}</td><td>${formatarNumeroInteiro(concl_pcs_gv)}</td>
+                            <td>${formatarNumeroInteiro(concl_pcs_ln + concl_pcs_gv)}</td>
+                        </tr>
+                    `;
+                };
+
+                const cardsAtend = foto.cards_atendimentos || {};
+                const listaItens = [];
+
+                // 1. Achata os dados para poder ordenar com precisão
+                Object.keys(cardsAtend).forEach(atend => {
+                    const ufsObj = cardsAtend[atend] || {};
+                    Object.keys(ufsObj).forEach(uf => {
+                        const item = ufsObj[uf];
+                        const isEstojo = (atend === 'ESTOJO');
+                        let chaveOrdenacao = isEstojo ? uf : atend;
+                        if (atend === 'VAREJO' || uf === 'SP') chaveOrdenacao = 'VAREJO';
+                        
+                        listaItens.push({
+                            atend: atend,
+                            uf: uf,
+                            item: item,
+                            isEstojo: isEstojo,
+                            isWms: Boolean(item.is_wms),
+                            chaveOrdenacao: chaveOrdenacao.toUpperCase()
+                        });
+                    });
+                });
+
+                // 2. Define a hierarquia fixa do Calendário de Atendimento
+                const ordemCalendario = ['MGC', 'SPI', 'SPC', 'MGI', 'VAREJO'];
+                const getPesoCalendario = (nome) => {
+                    const idx = ordemCalendario.indexOf(nome);
+                    return idx === -1 ? 99 : idx;
+                };
+
+                // 3. Ordena primeiro por TU vs WMS, depois pelo Calendário
+                listaItens.sort((a, b) => {
+                    if (a.isWms !== b.isWms) {
+                        return a.isWms ? 1 : -1; // TU ativa (false) vem antes de WMS (true)
+                    }
+                    return getPesoCalendario(a.chaveOrdenacao) - getPesoCalendario(b.chaveOrdenacao);
+                });
+
+                // 4. Renderiza na ordem exata
+                listaItens.forEach(obj => {
+                    if (obj.isEstojo) {
+                        htmlEst += renderGrupo(obj.atend, obj.uf, obj.item, true);
+                    } else {
+                        htmlCart += renderGrupo(obj.atend, obj.uf, obj.item, false);
+                    }
+                });
+
+                const renderTotais = (t) => {
+                    let pend_cx_ln = (t.cx_ln - t.concl_cx_ln);
+                    let pend_cx_gv = (t.cx_gv - t.concl_cx_gv);
+                    let pend_pcs_ln = (t.pcs_ln - t.concl_pcs_ln);
+                    let pend_pcs_gv = (t.pcs_gv - t.concl_pcs_gv);
+                    return `
+                    <tr class="row-total">
+                        <td style="text-align: left; padding-left: 16px;">TOTAL</td>
+                        <td>${formatarNumeroInteiro(t.cx_ln)}</td><td>${formatarNumeroInteiro(t.cx_gv)}</td>
+                        <td>${formatarNumeroInteiro(t.pcs_ln)}</td><td>${formatarNumeroInteiro(t.pcs_gv)}</td>
+                        <td>${formatarNumeroInteiro(t.pcs_ln + t.pcs_gv)}</td>
+                    </tr>
+                    <tr class="row-total-pendente">
+                        <td style="text-align: left; padding-left: 16px;">PENDENTE</td>
+                        <td>${formatarNumeroInteiro(pend_cx_ln)}</td><td>${formatarNumeroInteiro(pend_cx_gv)}</td>
+                        <td>${formatarNumeroInteiro(pend_pcs_ln)}</td><td>${formatarNumeroInteiro(pend_pcs_gv)}</td>
+                        <td>${formatarNumeroInteiro(pend_pcs_ln + pend_pcs_gv)}</td>
+                    </tr>
+                    <tr class="row-total-concluido">
+                        <td style="text-align: left; padding-left: 16px;">CONCLUÍDO</td>
+                        <td>${formatarNumeroInteiro(t.concl_cx_ln)}</td><td>${formatarNumeroInteiro(t.concl_cx_gv)}</td>
+                        <td>${formatarNumeroInteiro(t.concl_pcs_ln)}</td><td>${formatarNumeroInteiro(t.concl_pcs_gv)}</td>
+                        <td>${formatarNumeroInteiro(t.concl_pcs_ln + t.concl_pcs_gv)}</td>
+                    </tr>
+                `};
+
+                setHtmlSeguro('tbody-demanda-carteira', htmlCart || `<tr><td colspan="6" style="text-align:center; padding: 20px;">Sem dados para exibir</td></tr>`);
+                setHtmlSeguro('tbody-demanda-estojo', htmlEst || `<tr><td colspan="6" style="text-align:center; padding: 20px;">Sem dados para exibir</td></tr>`);
+                
+                if (htmlCart) document.getElementById('tbody-demanda-carteira').innerHTML += renderTotais(totCart);
+                if (htmlEst) document.getElementById('tbody-demanda-estojo').innerHTML += renderTotais(totEst);
+
+                const g = {
+                    cx_ln: totCart.cx_ln + totEst.cx_ln, cx_gv: totCart.cx_gv + totEst.cx_gv,
+                    concl_cx_ln: totCart.concl_cx_ln + totEst.concl_cx_ln, concl_cx_gv: totCart.concl_cx_gv + totEst.concl_cx_gv,
+                    pcs_ln: totCart.pcs_ln + totEst.pcs_ln, pcs_gv: totCart.pcs_gv + totEst.pcs_gv,
+                    concl_pcs_ln: totCart.concl_pcs_ln + totEst.concl_pcs_ln, concl_pcs_gv: totCart.concl_pcs_gv + totEst.concl_pcs_gv
+                };
+
+                setHtmlSeguro('tbody-demanda-geral', `
+                    <tr class="row-total">
+                        <td style="text-align: left; padding-left: 16px;">TOTAL GERAL</td>
+                        <td>${formatarNumeroInteiro(g.cx_ln)}</td><td>${formatarNumeroInteiro(g.cx_gv)}</td>
+                        <td>${formatarNumeroInteiro(g.pcs_ln)}</td><td>${formatarNumeroInteiro(g.pcs_gv)}</td>
+                        <td>${formatarNumeroInteiro(g.pcs_ln + g.pcs_gv)}</td>
+                    </tr>
+                    <tr class="row-total-pendente">
+                        <td style="text-align: left; padding-left: 16px;">PENDENTE GERAL</td>
+                        <td>${formatarNumeroInteiro(g.cx_ln - g.concl_cx_ln)}</td><td>${formatarNumeroInteiro(g.cx_gv - g.concl_cx_gv)}</td>
+                        <td>${formatarNumeroInteiro(g.pcs_ln - g.concl_pcs_ln)}</td><td>${formatarNumeroInteiro(g.pcs_gv - g.concl_pcs_gv)}</td>
+                        <td>${formatarNumeroInteiro((g.pcs_ln - g.concl_pcs_ln) + (g.pcs_gv - g.concl_pcs_gv))}</td>
+                    </tr>
+                    <tr class="row-total-concluido">
+                        <td style="text-align: left; padding-left: 16px;">CONCLUÍDO GERAL</td>
+                        <td>${formatarNumeroInteiro(g.concl_cx_ln)}</td><td>${formatarNumeroInteiro(g.concl_cx_gv)}</td>
+                        <td>${formatarNumeroInteiro(g.concl_pcs_ln)}</td><td>${formatarNumeroInteiro(g.concl_pcs_gv)}</td>
+                        <td>${formatarNumeroInteiro(g.concl_pcs_ln + g.concl_pcs_gv)}</td>
+                    </tr>
+                `);
+            } catch (err) { console.error("Erro Demanda Diária:", err); }
+        }
+
     </script>
 </body>
 </html>
