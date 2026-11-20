@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "20/11/2026 02:00",
+  "atualizado_em": "20/11/2026 03:00",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 649,
+  "total_faltas_mes": 648,
   "deficit": 30,
-  "fi_dias": 144,
+  "fi_dias": 143,
   "fj_dias": 90,
   "ferias": 16,
   "data_padrao_setor": "2026-11-20",
@@ -145,10 +145,10 @@ window.dadosPD = {
       "ferias": 8
     },
     "2026-11-20": {
-      "taxa_abs": 15.0,
-      "faltas": 18,
+      "taxa_abs": 14.2,
+      "faltas": 17,
       "deficit": 2,
-      "fi": 8,
+      "fi": 7,
       "fj": 8,
       "ferias": 2
     }
@@ -1999,22 +1999,22 @@ window.dadosPD = {
     },
     "2026-11-20_GERAL": {
       "labels": [
-        "REABASTECIMENTO",
         "SEPARACAO",
+        "REABASTECIMENTO",
         "FECHAMENTO",
         "RECEBIMENTO",
         "EXPEDICAO"
       ],
       "data": [
-        20.8,
         18.9,
+        16.7,
         9.1,
         5.0,
         0.0
       ],
       "absolutos": [
-        5,
         10,
+        4,
         2,
         1,
         0
@@ -2032,22 +2032,22 @@ window.dadosPD = {
     },
     "2026-11-20_3": {
       "labels": [
-        "REABASTECIMENTO",
         "SEPARACAO",
+        "REABASTECIMENTO",
         "FECHAMENTO",
         "RECEBIMENTO",
         "EXPEDICAO"
       ],
       "data": [
-        20.8,
         18.9,
+        16.7,
         9.1,
         5.0,
         0.0
       ],
       "absolutos": [
-        5,
         10,
+        4,
         2,
         1,
         0
@@ -3258,16 +3258,16 @@ window.dadosPD = {
     },
     "2026-11-20_GERAL": {
       "labels": [
-        "AMERICA",
-        "CEVA"
+        "CEVA",
+        "AMERICA"
       ],
       "data": [
-        23.1,
-        22.1
+        22.1,
+        15.4
       ],
       "absolutos": [
-        3,
-        15
+        15,
+        2
       ]
     },
     "2026-11-20_1": {
@@ -3282,16 +3282,16 @@ window.dadosPD = {
     },
     "2026-11-20_3": {
       "labels": [
-        "AMERICA",
-        "CEVA"
+        "CEVA",
+        "AMERICA"
       ],
       "data": [
-        23.1,
-        22.1
+        22.1,
+        15.4
       ],
       "absolutos": [
-        3,
-        15
+        15,
+        2
       ]
     }
   },
@@ -5910,10 +5910,10 @@ window.dadosPD = {
     "2026-11-20_GERAL": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FALTA INJUSTIFICADA"
         ],
         [
           "DESLIGADO"
@@ -5924,14 +5924,14 @@ window.dadosPD = {
       ],
       "data_abs": [
         8,
-        8,
+        7,
         2,
         2
       ],
       "data_cum": [
-        40.0,
-        80.0,
-        90.0,
+        42.1,
+        78.9,
+        89.5,
         100.0
       ]
     },
@@ -5948,10 +5948,10 @@ window.dadosPD = {
     "2026-11-20_3": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FALTA INJUSTIFICADA"
         ],
         [
           "DESLIGADO"
@@ -5962,14 +5962,14 @@ window.dadosPD = {
       ],
       "data_abs": [
         8,
-        8,
+        7,
         2,
         2
       ],
       "data_cum": [
-        40.0,
-        80.0,
-        90.0,
+        42.1,
+        78.9,
+        89.5,
         100.0
       ]
     }
@@ -5994,7 +5994,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        292,
+        291,
         180,
         136,
         110,
@@ -6059,7 +6059,7 @@ window.dadosPD = {
           8.4,
           8.9,
           8.8,
-          15.0,
+          14.2,
           null,
           null,
           null,
@@ -6136,7 +6136,7 @@ window.dadosPD = {
           32,
           40,
           33,
-          18,
+          17,
           null,
           null,
           null,
@@ -6159,7 +6159,7 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 249,
+      "faltas": 248,
       "taxa": 11.2
     },
     {
@@ -6191,8 +6191,8 @@ window.dadosPD = {
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 102,
-      "taxa": 10.6
+      "faltas": 101,
+      "taxa": 10.5
     },
     {
       "setor": "SEPARAÇÃO",
@@ -6243,8 +6243,8 @@ window.dadosPD = {
     },
     {
       "lider": "DIEGO CUNHA BOER",
-      "faltas": 43,
-      "taxa": 12.0
+      "faltas": 42,
+      "taxa": 11.7
     },
     {
       "lider": "RICARDO EUGENIO LAURINDO",
