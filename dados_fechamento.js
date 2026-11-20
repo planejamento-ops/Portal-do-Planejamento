@@ -1,8 +1,8 @@
 window.dadosFechamento = {
-  "atualizado_em": "20/11/2026 07:29",
+  "atualizado_em": "20/11/2026 08:03",
   "progresso_geral_pct": 50,
-  "total_cxs_geral": 48569,
-  "total_loaded_cxs_geral": 24705,
+  "total_cxs_geral": 48557,
+  "total_loaded_cxs_geral": 24693,
   "total_pending_cxs_geral": 23864,
   "cards_atendimentos": {
     "VAREJO": {
@@ -55,20 +55,6 @@ window.dadosFechamento = {
         "pendentes_fr_cx": 2583,
         "pct": 0,
         "status_atend": "PENDENTE"
-      }
-    },
-    "DOAÇÃO": {
-      "SPC": {
-        "total_cxs": 12,
-        "loaded_cxs": 12,
-        "rampa_cxs": 0,
-        "pending_cxs": 0,
-        "finalizadas_gv_cx": 11,
-        "finalizadas_fr_cx": 1,
-        "pendentes_gv_cx": 0,
-        "pendentes_fr_cx": 0,
-        "pct": 100,
-        "status_atend": "FINALIZADO"
       }
     },
     "DEDICADO": {
