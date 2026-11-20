@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "20/11/2026 16:01",
+  "atualizado_em": "20/11/2026 17:00",
   "taxa_abs": 9.9,
   "total_faltas_mes": 656,
   "deficit": 30,
@@ -6362,6 +6362,14 @@ window.dadosPD = {
     "<strong style='color:#ffffff;'>T1</strong>: GABRIELLY DA SILVA ALEXANDRIA",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
+    "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T2</strong>: EDMILSON BERTOLDO",
+    "<strong style='color:#ffffff;'>T2</strong>: FABIANE ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
+    "<strong style='color:#ffffff;'>T2</strong>: GEOVANI PAULO PAULINO JUNIOR",
+    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
+    "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: RENAN ALVES REZENDE",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: TARCISIO RICARDO MARTINS CLARO"
