@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "19/11/2026 21:24",
+  "atualizado_em": "19/11/2026 22:24",
   "fotografia_dia": {
-    "data_referencia": "19/11/2026 21:24 (Ao Vivo)",
+    "data_referencia": "19/11/2026 22:24 (Ao Vivo)",
     "cards_atendimentos": {
       "ESTOJO": {
         "MGI": {
@@ -21,29 +21,6 @@ window.dadosDemandaAtual = {
           "pendentes_fr_pcs": 4265,
           "finalizadas_gv_pcs": 0,
           "pendentes_gv_pcs": 8883,
-          "backlog_wms_fr_cx": 0,
-          "backlog_wms_gv_cx": 0,
-          "backlog_wms_fr_pcs": 0,
-          "backlog_wms_gv_pcs": 0,
-          "is_wms": false
-        },
-        "SPC": {
-          "total_wms_fr_cx": 212,
-          "total_wms_gv_cx": 125,
-          "total_wms_fr_pcs": 1374,
-          "total_wms_gv_pcs": 1387,
-          "total_tu_fr_cx": 0,
-          "total_tu_gv_cx": 0,
-          "total_tu_fr_pcs": 0,
-          "total_tu_gv_pcs": 0,
-          "finalizadas_fr_cx": 0,
-          "pendentes_fr_cx": 0,
-          "finalizadas_gv_cx": 0,
-          "pendentes_gv_cx": 0,
-          "finalizadas_fr_pcs": 0,
-          "pendentes_fr_pcs": 0,
-          "finalizadas_gv_pcs": 0,
-          "pendentes_gv_pcs": 0,
           "backlog_wms_fr_cx": 0,
           "backlog_wms_gv_cx": 0,
           "backlog_wms_fr_pcs": 0,
@@ -95,6 +72,29 @@ window.dadosDemandaAtual = {
           "backlog_wms_fr_pcs": 5320,
           "backlog_wms_gv_pcs": 4389,
           "is_wms": true
+        },
+        "SPC": {
+          "total_wms_fr_cx": 537,
+          "total_wms_gv_cx": 229,
+          "total_wms_fr_pcs": 4143,
+          "total_wms_gv_pcs": 2186,
+          "total_tu_fr_cx": 0,
+          "total_tu_gv_cx": 0,
+          "total_tu_fr_pcs": 0,
+          "total_tu_gv_pcs": 0,
+          "finalizadas_fr_cx": 0,
+          "pendentes_fr_cx": 0,
+          "finalizadas_gv_cx": 0,
+          "pendentes_gv_cx": 0,
+          "finalizadas_fr_pcs": 0,
+          "pendentes_fr_pcs": 0,
+          "finalizadas_gv_pcs": 0,
+          "pendentes_gv_pcs": 0,
+          "backlog_wms_fr_cx": 0,
+          "backlog_wms_gv_cx": 0,
+          "backlog_wms_fr_pcs": 0,
+          "backlog_wms_gv_pcs": 0,
+          "is_wms": false
         }
       },
       "MGC": {
@@ -149,10 +149,10 @@ window.dadosDemandaAtual = {
       },
       "SPC": {
         "GERAL": {
-          "total_wms_fr_cx": 9910,
-          "total_wms_gv_cx": 11219,
-          "total_wms_fr_pcs": 558295,
-          "total_wms_gv_pcs": 578634,
+          "total_wms_fr_cx": 8413,
+          "total_wms_gv_cx": 6451,
+          "total_wms_fr_pcs": 414970,
+          "total_wms_gv_pcs": 251372,
           "total_tu_fr_cx": 10502,
           "total_tu_gv_cx": 11410,
           "total_tu_fr_pcs": 546227,
