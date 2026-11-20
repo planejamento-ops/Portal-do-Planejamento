@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "20/11/2026 06:00",
+  "atualizado_em": "20/11/2026 07:00",
   "taxa_abs": 9.9,
   "total_faltas_mes": 648,
   "deficit": 30,
@@ -145,7 +145,7 @@ window.dadosPD = {
       "ferias": 8
     },
     "2026-11-20": {
-      "taxa_abs": 14.2,
+      "taxa_abs": 12.5,
       "faltas": 17,
       "deficit": 2,
       "fi": 7,
@@ -2021,9 +2021,15 @@ window.dadosPD = {
       ]
     },
     "2026-11-20_1": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "EXPEDICAO"
+      ],
+      "data": [
+        0.0
+      ],
+      "absolutos": [
+        0
+      ]
     },
     "2026-11-20_2": {
       "labels": [],
@@ -3262,8 +3268,8 @@ window.dadosPD = {
         "AMERICA"
       ],
       "data": [
-        22.1,
-        15.4
+        19.0,
+        12.5
       ],
       "absolutos": [
         15,
@@ -5926,6 +5932,9 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
+          "FOLGA"
+        ],
+        [
           "DESLIGADO"
         ],
         [
@@ -5935,20 +5944,30 @@ window.dadosPD = {
       "data_abs": [
         8,
         7,
+        7,
         2,
         2
       ],
       "data_cum": [
-        42.1,
-        78.9,
-        89.5,
+        30.8,
+        57.7,
+        84.6,
+        92.3,
         100.0
       ]
     },
     "2026-11-20_1": {
-      "labels": [],
-      "data_abs": [],
-      "data_cum": []
+      "labels": [
+        [
+          "FOLGA"
+        ]
+      ],
+      "data_abs": [
+        7
+      ],
+      "data_cum": [
+        100.0
+      ]
     },
     "2026-11-20_2": {
       "labels": [],
@@ -6007,7 +6026,7 @@ window.dadosPD = {
         290,
         180,
         136,
-        110,
+        117,
         70
       ]
     }
@@ -6069,7 +6088,7 @@ window.dadosPD = {
           8.4,
           8.9,
           8.8,
-          14.2,
+          12.5,
           null,
           null,
           null,
@@ -6197,7 +6216,7 @@ window.dadosPD = {
     {
       "setor": "EXPEDICAO",
       "faltas": 103,
-      "taxa": 11.3
+      "taxa": 11.1
     },
     {
       "setor": "REABASTECIMENTO",
@@ -6264,7 +6283,7 @@ window.dadosPD = {
     {
       "lider": "EDSON SANTOS CAMPOS",
       "faltas": 34,
-      "taxa": 10.4
+      "taxa": 9.9
     },
     {
       "lider": "FLAVIO MARTINS RUFINO",
