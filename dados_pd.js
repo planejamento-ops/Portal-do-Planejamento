@@ -1,12 +1,12 @@
 window.dadosPD = {
-  "atualizado_em": "19/11/2026 23:00",
-  "taxa_abs": 9.8,
-  "total_faltas_mes": 631,
-  "deficit": 28,
-  "fi_dias": 143,
-  "fj_dias": 89,
+  "atualizado_em": "20/11/2026 00:01",
+  "taxa_abs": 9.9,
+  "total_faltas_mes": 649,
+  "deficit": 30,
+  "fi_dias": 144,
+  "fj_dias": 90,
   "ferias": 16,
-  "data_padrao_setor": "2026-11-19",
+  "data_padrao_setor": "2026-11-20",
   "resumo_diario_map": {
     "2026-11-02": {
       "taxa_abs": 16.8,
@@ -143,6 +143,14 @@ window.dadosPD = {
       "fi": 18,
       "fj": 7,
       "ferias": 8
+    },
+    "2026-11-20": {
+      "taxa_abs": 15.0,
+      "faltas": 18,
+      "deficit": 2,
+      "fi": 8,
+      "fj": 8,
+      "ferias": 2
     }
   },
   "grafico_setor_map": {
@@ -1988,6 +1996,62 @@ window.dadosPD = {
         0,
         0
       ]
+    },
+    "2026-11-20_GERAL": {
+      "labels": [
+        "REABASTECIMENTO",
+        "SEPARACAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "EXPEDICAO"
+      ],
+      "data": [
+        20.8,
+        18.9,
+        9.1,
+        5.0,
+        0.0
+      ],
+      "absolutos": [
+        5,
+        10,
+        2,
+        1,
+        0
+      ]
+    },
+    "2026-11-20_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-20_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-20_3": {
+      "labels": [
+        "REABASTECIMENTO",
+        "SEPARACAO",
+        "FECHAMENTO",
+        "RECEBIMENTO",
+        "EXPEDICAO"
+      ],
+      "data": [
+        20.8,
+        18.9,
+        9.1,
+        5.0,
+        0.0
+      ],
+      "absolutos": [
+        5,
+        10,
+        2,
+        1,
+        0
+      ]
     }
   },
   "grafico_empresa_map": {
@@ -3190,6 +3254,44 @@ window.dadosPD = {
         12,
         3,
         2
+      ]
+    },
+    "2026-11-20_GERAL": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        22.1
+      ],
+      "absolutos": [
+        3,
+        15
+      ]
+    },
+    "2026-11-20_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-20_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-20_3": {
+      "labels": [
+        "AMERICA",
+        "CEVA"
+      ],
+      "data": [
+        23.1,
+        22.1
+      ],
+      "absolutos": [
+        3,
+        15
       ]
     }
   },
@@ -5804,6 +5906,72 @@ window.dadosPD = {
         90.5,
         100.0
       ]
+    },
+    "2026-11-20_GERAL": {
+      "labels": [
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
+      ],
+      "data_abs": [
+        8,
+        8,
+        2,
+        2
+      ],
+      "data_cum": [
+        40.0,
+        80.0,
+        90.0,
+        100.0
+      ]
+    },
+    "2026-11-20_1": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-20_2": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-20_3": {
+      "labels": [
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "FÉRIAS"
+        ]
+      ],
+      "data_abs": [
+        8,
+        8,
+        2,
+        2
+      ],
+      "data_cum": [
+        40.0,
+        80.0,
+        90.0,
+        100.0
+      ]
     }
   },
   "grafico_pareto_mes_map": {
@@ -5826,11 +5994,11 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        284,
-        172,
-        134,
+        292,
+        180,
+        136,
         110,
-        68
+        70
       ]
     }
   },
@@ -5891,7 +6059,7 @@ window.dadosPD = {
           8.4,
           8.9,
           8.8,
-          null,
+          15.0,
           null,
           null,
           null,
@@ -5968,7 +6136,7 @@ window.dadosPD = {
           32,
           40,
           33,
-          null,
+          18,
           null,
           null,
           null,
@@ -5991,8 +6159,8 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 231,
-      "taxa": 11.0
+      "faltas": 249,
+      "taxa": 11.2
     },
     {
       "turno": "2º Turno",
@@ -6008,12 +6176,12 @@ window.dadosPD = {
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 216,
-      "taxa": 11.0
+      "faltas": 226,
+      "taxa": 11.2
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 107,
+      "faltas": 109,
       "taxa": 10.6
     },
     {
@@ -6023,8 +6191,8 @@ window.dadosPD = {
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 97,
-      "taxa": 10.4
+      "faltas": 102,
+      "taxa": 10.6
     },
     {
       "setor": "SEPARAÇÃO",
@@ -6033,7 +6201,7 @@ window.dadosPD = {
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 33,
+      "faltas": 34,
       "taxa": 3.8
     },
     {
@@ -6055,8 +6223,8 @@ window.dadosPD = {
     },
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
-      "faltas": 87,
-      "taxa": 12.6
+      "faltas": 97,
+      "taxa": 13.0
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
@@ -6075,13 +6243,13 @@ window.dadosPD = {
     },
     {
       "lider": "DIEGO CUNHA BOER",
-      "faltas": 38,
-      "taxa": 11.4
+      "faltas": 43,
+      "taxa": 12.0
     },
     {
       "lider": "RICARDO EUGENIO LAURINDO",
-      "faltas": 36,
-      "taxa": 10.8
+      "faltas": 38,
+      "taxa": 10.7
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
@@ -6110,8 +6278,8 @@ window.dadosPD = {
     },
     {
       "lider": "MARCONDES DOS SANTOS",
-      "faltas": 15,
-      "taxa": 6.1
+      "faltas": 16,
+      "taxa": 6.0
     },
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
@@ -6134,8 +6302,5 @@ window.dadosPD = {
       "taxa": 15.4
     }
   ],
-  "alertas_pendentes": [
-    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
-    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO"
-  ]
+  "alertas_pendentes": []
 };
