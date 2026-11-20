@@ -1,21 +1,21 @@
 window.dadosFechamento = {
-  "atualizado_em": "20/11/2026 02:26",
-  "progresso_geral_pct": 52,
-  "total_cxs_geral": 46937,
+  "atualizado_em": "20/11/2026 03:00",
+  "progresso_geral_pct": 50,
+  "total_cxs_geral": 48569,
   "total_loaded_cxs_geral": 24705,
-  "total_pending_cxs_geral": 22232,
+  "total_pending_cxs_geral": 23864,
   "cards_atendimentos": {
     "VAREJO": {
       "SP": {
-        "total_cxs": 7641,
+        "total_cxs": 9273,
         "loaded_cxs": 3845,
         "rampa_cxs": 304,
-        "pending_cxs": 3492,
+        "pending_cxs": 5124,
         "finalizadas_gv_cx": 120,
         "finalizadas_fr_cx": 3725,
-        "pendentes_gv_cx": 117,
-        "pendentes_fr_cx": 3375,
-        "pct": 54,
+        "pendentes_gv_cx": 142,
+        "pendentes_fr_cx": 4982,
+        "pct": 44,
         "status_atend": "EM ANDAMENTO"
       }
     },
@@ -443,6 +443,45 @@ window.dadosFechamento = {
       "uf": "SP",
       "atendimento": "VAREJO",
       "carreta": "Carreta 20",
+      "tu": "610000013719",
+      "total_caixas": 453,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 453,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 21",
+      "tu": "610000013720",
+      "total_caixas": 404,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 404,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 21",
+      "tu": "610000013721",
+      "total_caixas": 361,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 361,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 20",
       "tu": "610000013769",
       "total_caixas": 423,
       "caixas_carregadas": 0,
@@ -464,6 +503,19 @@ window.dadosFechamento = {
       "caixas_processadas": 2,
       "pct": 0,
       "status": "EM RAMPA"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 20",
+      "tu": "610000013776",
+      "total_caixas": 414,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 414,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
     }
   ]
 };
