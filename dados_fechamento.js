@@ -1,21 +1,21 @@
 window.dadosFechamento = {
-  "atualizado_em": "21/11/2026 01:36",
-  "progresso_geral_pct": 50,
-  "total_cxs_geral": 48557,
+  "atualizado_em": "21/11/2026 02:10",
+  "progresso_geral_pct": 49,
+  "total_cxs_geral": 49583,
   "total_loaded_cxs_geral": 24693,
-  "total_pending_cxs_geral": 23864,
+  "total_pending_cxs_geral": 24890,
   "cards_atendimentos": {
     "VAREJO": {
       "SP": {
-        "total_cxs": 9273,
+        "total_cxs": 10299,
         "loaded_cxs": 3845,
         "rampa_cxs": 304,
-        "pending_cxs": 5124,
+        "pending_cxs": 6150,
         "finalizadas_gv_cx": 120,
         "finalizadas_fr_cx": 3725,
-        "pendentes_gv_cx": 142,
-        "pendentes_fr_cx": 4982,
-        "pct": 44,
+        "pendentes_gv_cx": 169,
+        "pendentes_fr_cx": 5981,
+        "pct": 40,
         "status_atend": "EM ANDAMENTO"
       }
     },
@@ -467,6 +467,32 @@ window.dadosFechamento = {
     {
       "uf": "SP",
       "atendimento": "VAREJO",
+      "carreta": "Carreta 21",
+      "tu": "610000013728",
+      "total_caixas": 210,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 210,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 21",
+      "tu": "610000013729",
+      "total_caixas": 537,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 537,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
       "carreta": "Carreta 20",
       "tu": "610000013769",
       "total_caixas": 423,
@@ -499,6 +525,19 @@ window.dadosFechamento = {
       "caixas_carregadas": 0,
       "caixas_rampa": 0,
       "caixas_pendentes_sap": 414,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 21",
+      "tu": "610000013780",
+      "total_caixas": 279,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 279,
       "caixas_processadas": 0,
       "pct": 0,
       "status": "PENDENTE"
