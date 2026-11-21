@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "21/11/2026 12:01",
+  "atualizado_em": "21/11/2026 13:01",
   "taxa_abs": 10.3,
-  "total_faltas_mes": 700,
+  "total_faltas_mes": 704,
   "deficit": 30,
   "fi_dias": 145,
   "fj_dias": 92,
@@ -153,11 +153,11 @@ window.dadosPD = {
       "ferias": 2
     },
     "2026-11-21": {
-      "taxa_abs": 22.9,
-      "faltas": 44,
-      "deficit": 3,
+      "taxa_abs": 19.7,
+      "faltas": 48,
+      "deficit": 4,
       "fi": 9,
-      "fj": 3,
+      "fj": 4,
       "ferias": 4
     }
   },
@@ -2072,22 +2072,25 @@ window.dadosPD = {
     },
     "2026-11-21_GERAL": {
       "labels": [
-        "FECHAMENTO",
         "EXPEDICAO",
+        "FECHAMENTO",
+        "INVENTARIO",
         "REABASTECIMENTO",
         "SEPARACAO",
         "RECEBIMENTO"
       ],
       "data": [
-        39.5,
-        38.5,
+        31.0,
+        27.9,
+        14.3,
         10.5,
         8.8,
         0.0
       ],
       "absolutos": [
+        22,
         17,
-        20,
+        2,
         2,
         5,
         0
@@ -2096,6 +2099,7 @@ window.dadosPD = {
     "2026-11-21_1": {
       "labels": [
         "FECHAMENTO",
+        "INVENTARIO",
         "EXPEDICAO",
         "REABASTECIMENTO",
         "SEPARACAO",
@@ -2103,6 +2107,7 @@ window.dadosPD = {
       ],
       "data": [
         23.8,
+        20.0,
         12.5,
         11.1,
         8.8,
@@ -2110,6 +2115,7 @@ window.dadosPD = {
       ],
       "absolutos": [
         5,
+        1,
         3,
         2,
         5,
@@ -2117,24 +2123,39 @@ window.dadosPD = {
       ]
     },
     "2026-11-21_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "EXPEDICAO",
+        "FECHAMENTO",
+        "INVENTARIO"
+      ],
+      "data": [
+        10.5,
+        0.0,
+        0.0
+      ],
+      "absolutos": [
+        2,
+        0,
+        0
+      ]
     },
     "2026-11-21_3": {
       "labels": [
         "EXPEDICAO",
         "FECHAMENTO",
+        "INVENTARIO",
         "REABASTECIMENTO"
       ],
       "data": [
         60.7,
         54.5,
+        50.0,
         0.0
       ],
       "absolutos": [
         17,
         12,
+        1,
         0
       ]
     }
@@ -3393,22 +3414,22 @@ window.dadosPD = {
     },
     "2026-11-21_GERAL": {
       "labels": [
-        "AMERICA",
         "PACTUAL",
+        "AMERICA",
         "MEET",
         "CEVA"
       ],
       "data": [
-        42.3,
-        36.8,
-        18.2,
-        17.5
+        38.1,
+        29.7,
+        17.9,
+        15.0
       ],
       "absolutos": [
+        8,
         11,
         7,
-        6,
-        20
+        22
       ]
     },
     "2026-11-21_1": {
@@ -3422,19 +3443,28 @@ window.dadosPD = {
         22.2,
         21.4,
         14.8,
-        6.6
+        7.2
       ],
       "absolutos": [
         2,
         3,
         4,
-        6
+        7
       ]
     },
     "2026-11-21_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "PACTUAL",
+        "MEET"
+      ],
+      "data": [
+        50.0,
+        16.7
+      ],
+      "absolutos": [
+        1,
+        1
+      ]
     },
     "2026-11-21_3": {
       "labels": [
@@ -3445,13 +3475,13 @@ window.dadosPD = {
       ],
       "data": [
         80.0,
-        60.9,
+        60.0,
         52.9,
         33.3
       ],
       "absolutos": [
         4,
-        14,
+        15,
         9,
         2
       ]
@@ -6180,13 +6210,16 @@ window.dadosPD = {
           "FOLGA"
         ],
         [
-          "FÉRIAS"
-        ],
-        [
           "DESLIGADO"
         ],
         [
+          "FÉRIAS"
+        ],
+        [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
         ],
         [
           "SEM JUSTIFICATIVA"
@@ -6195,19 +6228,21 @@ window.dadosPD = {
       "data_abs": [
         28,
         9,
-        6,
+        8,
         4,
-        3,
-        3,
+        4,
+        4,
+        2,
         1
       ],
       "data_cum": [
-        51.9,
-        68.5,
-        79.6,
-        87.0,
-        92.6,
-        98.1,
+        46.7,
+        61.7,
+        75.0,
+        81.7,
+        88.3,
+        95.0,
+        98.3,
         100.0
       ]
     },
@@ -6235,24 +6270,42 @@ window.dadosPD = {
       "data_abs": [
         9,
         6,
-        3,
+        4,
         2,
         1,
         1
       ],
       "data_cum": [
-        40.9,
-        68.2,
-        81.8,
-        90.9,
-        95.5,
+        39.1,
+        65.2,
+        82.6,
+        91.3,
+        95.7,
         100.0
       ]
     },
     "2026-11-21_2": {
-      "labels": [],
-      "data_abs": [],
-      "data_cum": []
+      "labels": [
+        [
+          "FOLGA"
+        ],
+        [
+          "DESLIGADO"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
+        ]
+      ],
+      "data_abs": [
+        2,
+        1,
+        1
+      ],
+      "data_cum": [
+        50.0,
+        75.0,
+        100.0
+      ]
     },
     "2026-11-21_3": {
       "labels": [
@@ -6264,16 +6317,21 @@ window.dadosPD = {
         ],
         [
           "DESLIGADO"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
         ]
       ],
       "data_abs": [
         28,
         3,
+        1,
         1
       ],
       "data_cum": [
-        87.5,
-        96.9,
+        84.8,
+        93.9,
+        97.0,
         100.0
       ]
     }
@@ -6299,10 +6357,10 @@ window.dadosPD = {
       ],
       "data_abs": [
         299,
-        183,
+        184,
         140,
-        123,
-        73
+        125,
+        74
       ]
     }
   },
@@ -6364,7 +6422,7 @@ window.dadosPD = {
           8.9,
           8.8,
           15.8,
-          22.9,
+          19.7,
           null,
           null,
           null,
@@ -6441,7 +6499,7 @@ window.dadosPD = {
           40,
           33,
           25,
-          44,
+          48,
           null,
           null,
           null,
@@ -6463,17 +6521,17 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 277,
+      "faltas": 278,
       "taxa": 12.2
     },
     {
       "turno": "1º Turno",
-      "faltas": 221,
+      "faltas": 222,
       "taxa": 9.6
     },
     {
       "turno": "2º Turno",
-      "faltas": 202,
+      "faltas": 204,
       "taxa": 9.1
     }
   ],
@@ -6486,11 +6544,11 @@ window.dadosPD = {
     {
       "setor": "FECHAMENTO",
       "faltas": 126,
-      "taxa": 11.8
+      "taxa": 11.6
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 123,
+      "faltas": 125,
       "taxa": 12.6
     },
     {
@@ -6515,8 +6573,8 @@ window.dadosPD = {
     },
     {
       "setor": "INVENTARIO",
-      "faltas": 15,
-      "taxa": 6.5
+      "faltas": 17,
+      "taxa": 6.9
     }
   ],
   "todos_lideres": [
@@ -6567,8 +6625,8 @@ window.dadosPD = {
     },
     {
       "lider": "RENAN ALVES REZENDE",
-      "faltas": 31,
-      "taxa": 11.4
+      "faltas": 33,
+      "taxa": 11.3
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
@@ -6578,7 +6636,7 @@ window.dadosPD = {
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
       "faltas": 20,
-      "taxa": 6.2
+      "taxa": 5.9
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
@@ -6586,14 +6644,14 @@ window.dadosPD = {
       "taxa": 4.8
     },
     {
+      "lider": "MARIA GABRIELE SANTANA ALVES",
+      "faltas": 17,
+      "taxa": 6.5
+    },
+    {
       "lider": "MARCONDES DOS SANTOS",
       "faltas": 16,
       "taxa": 6.0
-    },
-    {
-      "lider": "MARIA GABRIELE SANTANA ALVES",
-      "faltas": 15,
-      "taxa": 6.1
     },
     {
       "lider": "EDMILSON BERTOLDO",
@@ -6608,11 +6666,9 @@ window.dadosPD = {
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
     "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
-    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS",
-    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
+    "<strong style='color:#ffffff;'>T3</strong>: MARCONDES DOS SANTOS"
   ]
 };
