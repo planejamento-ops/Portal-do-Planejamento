@@ -1,5 +1,5 @@
 window.dadosDashboard = {
-  "atualizado_em": "21/11/2026 08:18",
+  "atualizado_em": "21/11/2026 08:51",
   "total_tus": 65,
   "caixas_total_mes": 254126,
   "caixas_ln_mes": 128257,
@@ -1196,14 +1196,14 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "carteira_ln": {
-          "perfil": 45,
-          "cx": 6547,
-          "pcs": 293069
+          "perfil": 44,
+          "cx": 5431,
+          "pcs": 240066
         },
         "carteira_gv": {
           "perfil": 37,
-          "cx": 4858,
-          "pcs": 179036
+          "cx": 4151,
+          "pcs": 152109
         },
         "estojo_ln": {
           "perfil": 0,
@@ -1226,19 +1226,19 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "total_geral": {
-          "cx": 11405,
-          "pcs": 472105,
+          "cx": 9582,
+          "pcs": 392175,
           "perfil": 41
         }
       }
     }
   },
-  "caixas_pendentes": 11405,
-  "caixas_ln_pend": 6547,
-  "caixas_gv_pend": 4858,
-  "pecas_pendentes": 472105,
-  "pecas_ln_pend": 293069,
-  "pecas_gv_pend": 179036,
+  "caixas_pendentes": 9582,
+  "caixas_ln_pend": 5431,
+  "caixas_gv_pend": 4151,
+  "pecas_pendentes": 392175,
+  "pecas_ln_pend": 240066,
+  "pecas_gv_pend": 152109,
   "carretas_pendentes": 14,
   "progresso_pct": 0,
   "atendimentos_em_andamento": [
@@ -1255,7 +1255,7 @@ window.dadosDashboard = {
   "proxima_estojo": null,
   "pendencias_por_canal": {
     "varejo": 0,
-    "carteira": 16,
+    "carteira": 15,
     "estojo": 0,
     "outras": 0
   },
@@ -1318,14 +1318,14 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "carteira_ln": {
-      "perfil": 45,
-      "cx": 6547,
-      "pcs": 293069
+      "perfil": 44,
+      "cx": 5431,
+      "pcs": 240066
     },
     "carteira_gv": {
       "perfil": 37,
-      "cx": 4858,
-      "pcs": 179036
+      "cx": 4151,
+      "pcs": 152109
     },
     "estojo_ln": {
       "perfil": 0,
@@ -1348,8 +1348,8 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "total_geral": {
-      "cx": 11405,
-      "pcs": 472105,
+      "cx": 9582,
+      "pcs": 392175,
       "perfil": 41
     }
   }
