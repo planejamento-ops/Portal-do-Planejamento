@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "21/11/2026 08:01",
+  "atualizado_em": "21/11/2026 09:01",
   "taxa_abs": 10.3,
-  "total_faltas_mes": 692,
+  "total_faltas_mes": 700,
   "deficit": 30,
-  "fi_dias": 144,
-  "fj_dias": 91,
+  "fi_dias": 145,
+  "fj_dias": 92,
   "ferias": 16,
   "data_padrao_setor": "2026-11-21",
   "resumo_diario_map": {
@@ -153,11 +153,11 @@ window.dadosPD = {
       "ferias": 2
     },
     "2026-11-21": {
-      "taxa_abs": 31.6,
-      "faltas": 36,
+      "taxa_abs": 22.9,
+      "faltas": 44,
       "deficit": 3,
-      "fi": 3,
-      "fj": 2,
+      "fi": 9,
+      "fj": 3,
       "ferias": 4
     }
   },
@@ -2075,18 +2075,21 @@ window.dadosPD = {
         "FECHAMENTO",
         "EXPEDICAO",
         "REABASTECIMENTO",
+        "SEPARACAO",
         "RECEBIMENTO"
       ],
       "data": [
-        40.5,
-        38.0,
-        0.0,
+        39.5,
+        38.5,
+        10.5,
+        8.8,
         0.0
       ],
       "absolutos": [
         17,
-        19,
-        0,
+        20,
+        2,
+        5,
         0
       ]
     },
@@ -2094,16 +2097,22 @@ window.dadosPD = {
       "labels": [
         "FECHAMENTO",
         "EXPEDICAO",
+        "REABASTECIMENTO",
+        "SEPARACAO",
         "RECEBIMENTO"
       ],
       "data": [
-        25.0,
-        9.1,
+        23.8,
+        12.5,
+        11.1,
+        8.8,
         0.0
       ],
       "absolutos": [
         5,
+        3,
         2,
+        5,
         0
       ]
     },
@@ -3384,22 +3393,22 @@ window.dadosPD = {
     },
     "2026-11-21_GERAL": {
       "labels": [
-        "PACTUAL",
         "AMERICA",
+        "PACTUAL",
         "MEET",
         "CEVA"
       ],
       "data": [
-        55.6,
-        50.0,
-        25.0,
-        23.9
+        42.3,
+        36.8,
+        18.2,
+        17.5
       ],
       "absolutos": [
-        5,
         11,
-        3,
-        17
+        7,
+        6,
+        20
       ]
     },
     "2026-11-21_1": {
@@ -3410,16 +3419,16 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        40.0,
-        25.0,
-        16.7,
-        6.2
+        22.2,
+        21.4,
+        14.8,
+        6.6
       ],
       "absolutos": [
         2,
-        1,
-        1,
-        3
+        3,
+        4,
+        6
       ]
     },
     "2026-11-21_2": {
@@ -6165,68 +6174,78 @@ window.dadosPD = {
           "SEM JUSTIFICATIVA"
         ],
         [
-          "FÉRIAS"
+          "FALTA INJUSTIFICADA"
         ],
         [
           "FOLGA"
         ],
         [
+          "FÉRIAS"
+        ],
+        [
           "DESLIGADO"
         ],
         [
-          "FALTA INJUSTIFICADA"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "SEM JUSTIFICATIVA"
         ]
       ],
       "data_abs": [
         28,
-        4,
+        9,
+        6,
         4,
         3,
         3,
-        2
+        1
       ],
       "data_cum": [
-        63.6,
-        72.7,
-        81.8,
-        88.6,
-        95.5,
+        51.9,
+        68.5,
+        79.6,
+        87.0,
+        92.6,
+        98.1,
         100.0
       ]
     },
     "2026-11-21_1": {
       "labels": [
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FOLGA"
         ],
         [
-          "FALTA INJUSTIFICADA"
+          "FALTA JUSTIFICADA"
         ],
         [
           "DESLIGADO"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "SEM JUSTIFICATIVA"
         ],
         [
           "FÉRIAS"
         ]
       ],
       "data_abs": [
-        4,
+        9,
+        6,
         3,
         2,
-        2,
+        1,
         1
       ],
       "data_cum": [
-        33.3,
-        58.3,
-        75.0,
-        91.7,
+        40.9,
+        68.2,
+        81.8,
+        90.9,
+        95.5,
         100.0
       ]
     },
@@ -6279,10 +6298,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        293,
-        182,
+        299,
+        183,
         140,
-        121,
+        123,
         73
       ]
     }
@@ -6345,7 +6364,7 @@ window.dadosPD = {
           8.9,
           8.8,
           15.8,
-          31.6,
+          22.9,
           null,
           null,
           null,
@@ -6422,7 +6441,7 @@ window.dadosPD = {
           40,
           33,
           25,
-          36,
+          44,
           null,
           null,
           null,
@@ -6449,7 +6468,7 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 213,
+      "faltas": 221,
       "taxa": 9.6
     },
     {
@@ -6461,7 +6480,7 @@ window.dadosPD = {
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 226,
+      "faltas": 231,
       "taxa": 11.2
     },
     {
@@ -6471,12 +6490,12 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 122,
-      "taxa": 12.5
+      "faltas": 123,
+      "taxa": 12.6
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 101,
+      "faltas": 103,
       "taxa": 10.5
     },
     {
@@ -6518,8 +6537,8 @@ window.dadosPD = {
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
-      "faltas": 65,
-      "taxa": 10.0
+      "faltas": 70,
+      "taxa": 9.9
     },
     {
       "lider": "GABRIELLY DA SILVA ALEXANDRIA",
@@ -6553,8 +6572,8 @@ window.dadosPD = {
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
-      "faltas": 26,
-      "taxa": 8.0
+      "faltas": 29,
+      "taxa": 8.4
     },
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
@@ -6589,9 +6608,7 @@ window.dadosPD = {
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: DIEGO CUNHA BOER",
     "<strong style='color:#ffffff;'>T3</strong>: JAQUELINE RODRIGUES DE CARVALHO",
