@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "21/11/2026 08:54",
-  "progresso_geral_pct": 43,
-  "total_cxs_geral": 56550,
+  "atualizado_em": "21/11/2026 09:28",
+  "progresso_geral_pct": 35,
+  "total_cxs_geral": 69245,
   "total_loaded_cxs_geral": 24693,
-  "total_pending_cxs_geral": 31857,
+  "total_pending_cxs_geral": 44552,
   "cards_atendimentos": {
     "VAREJO": {
       "SP": {
@@ -57,14 +57,14 @@ window.dadosFechamento = {
         "status_atend": "PENDENTE"
       },
       "SPI": {
-        "total_cxs": 6967,
+        "total_cxs": 19662,
         "loaded_cxs": 0,
         "rampa_cxs": 0,
-        "pending_cxs": 6967,
+        "pending_cxs": 19662,
         "finalizadas_gv_cx": 0,
         "finalizadas_fr_cx": 0,
-        "pendentes_gv_cx": 3003,
-        "pendentes_fr_cx": 3964,
+        "pendentes_gv_cx": 8233,
+        "pendentes_fr_cx": 11429,
         "pct": 0,
         "status_atend": "PENDENTE"
       }
@@ -427,6 +427,45 @@ window.dadosFechamento = {
     {
       "uf": "SPI",
       "atendimento": "CARTEIRA",
+      "carreta": "Carreta 05",
+      "tu": "610000013706",
+      "total_caixas": 1486,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1486,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 06",
+      "tu": "610000013707",
+      "total_caixas": 1596,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1596,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 08",
+      "tu": "610000013708",
+      "total_caixas": 968,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 968,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
       "carreta": "Carreta 04",
       "tu": "610000013709",
       "total_caixas": 1400,
@@ -440,12 +479,77 @@ window.dadosFechamento = {
     {
       "uf": "SPI",
       "atendimento": "CARTEIRA",
+      "carreta": "Carreta 12",
+      "tu": "610000013710",
+      "total_caixas": 1130,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1130,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
       "carreta": "Carreta 02",
       "tu": "610000013758",
       "total_caixas": 1800,
       "caixas_carregadas": 0,
       "caixas_rampa": 0,
       "caixas_pendentes_sap": 1800,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 09",
+      "tu": "610000013759",
+      "total_caixas": 1450,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1450,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 10",
+      "tu": "610000013760",
+      "total_caixas": 1304,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1304,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 07",
+      "tu": "610000013761",
+      "total_caixas": 1668,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1668,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 11",
+      "tu": "610000013762",
+      "total_caixas": 1868,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1868,
       "caixas_processadas": 0,
       "pct": 0,
       "status": "PENDENTE"
@@ -472,6 +576,19 @@ window.dadosFechamento = {
       "caixas_carregadas": 0,
       "caixas_rampa": 0,
       "caixas_pendentes_sap": 342,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 13",
+      "tu": "610000013765",
+      "total_caixas": 1225,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1225,
       "caixas_processadas": 0,
       "pct": 0,
       "status": "PENDENTE"
