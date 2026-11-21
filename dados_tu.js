@@ -1,12 +1,12 @@
 window.dadosDashboard = {
-  "atualizado_em": "21/11/2026 02:07",
-  "total_tus": 48,
-  "caixas_total_mes": 246133,
-  "caixas_ln_mes": 123294,
-  "caixas_gv_mes": 122839,
-  "pecas_total_mes": 9332586,
-  "pecas_ln_mes": 5049930,
-  "pecas_gv_mes": 4282656,
+  "atualizado_em": "21/11/2026 02:42",
+  "total_tus": 51,
+  "caixas_total_mes": 247159,
+  "caixas_ln_mes": 124293,
+  "caixas_gv_mes": 122866,
+  "pecas_total_mes": 9350559,
+  "pecas_ln_mes": 5066869,
+  "pecas_gv_mes": 4283690,
   "totais_por_mes": {
     "2025-01": {
       "caixas": 17712,
@@ -1131,22 +1131,22 @@ window.dadosDashboard = {
       }
     },
     "2026-11": {
-      "caixas": 246133,
-      "caixas_ln": 123294,
-      "caixas_gv": 122839,
-      "pecas": 9332586,
-      "pecas_ln": 5049930,
-      "pecas_gv": 4282656,
+      "caixas": 247159,
+      "caixas_ln": 124293,
+      "caixas_gv": 122866,
+      "pecas": 9350559,
+      "pecas_ln": 5066869,
+      "pecas_gv": 4283690,
       "perfis_geral": {
         "varejo_ln": {
           "perfil": 19,
-          "cx": 33370,
-          "pcs": 650292
+          "cx": 34369,
+          "pcs": 667231
         },
         "varejo_gv": {
           "perfil": 43,
-          "cx": 2225,
-          "pcs": 95572
+          "cx": 2252,
+          "pcs": 96606
         },
         "carteira_ln": {
           "perfil": 54,
@@ -1179,8 +1179,8 @@ window.dadosDashboard = {
           "pcs": 97007
         },
         "total_geral": {
-          "cx": 246133,
-          "pcs": 9332586,
+          "cx": 247159,
+          "pcs": 9350559,
           "perfil": 38
         }
       },
@@ -1263,13 +1263,13 @@ window.dadosDashboard = {
   "perfis_geral": {
     "varejo_ln": {
       "perfil": 19,
-      "cx": 33370,
-      "pcs": 650292
+      "cx": 34369,
+      "pcs": 667231
     },
     "varejo_gv": {
       "perfil": 43,
-      "cx": 2225,
-      "pcs": 95572
+      "cx": 2252,
+      "pcs": 96606
     },
     "carteira_ln": {
       "perfil": 54,
@@ -1302,8 +1302,8 @@ window.dadosDashboard = {
       "pcs": 97007
     },
     "total_geral": {
-      "cx": 246133,
-      "pcs": 9332586,
+      "cx": 247159,
+      "pcs": 9350559,
       "perfil": 38
     }
   },
