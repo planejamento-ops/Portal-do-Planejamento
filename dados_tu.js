@@ -1,12 +1,12 @@
 window.dadosDashboard = {
-  "atualizado_em": "21/11/2026 08:51",
+  "atualizado_em": "21/11/2026 09:25",
   "total_tus": 65,
-  "caixas_total_mes": 254126,
-  "caixas_ln_mes": 128257,
-  "caixas_gv_mes": 125869,
-  "pecas_total_mes": 9654654,
-  "pecas_ln_mes": 5255855,
-  "pecas_gv_mes": 4398799,
+  "caixas_total_mes": 266821,
+  "caixas_ln_mes": 135722,
+  "caixas_gv_mes": 131099,
+  "pecas_total_mes": 10183878,
+  "pecas_ln_mes": 5589390,
+  "pecas_gv_mes": 4594488,
   "totais_por_mes": {
     "2025-01": {
       "caixas": 17712,
@@ -1131,12 +1131,12 @@ window.dadosDashboard = {
       }
     },
     "2026-11": {
-      "caixas": 254126,
-      "caixas_ln": 128257,
-      "caixas_gv": 125869,
-      "pecas": 9654654,
-      "pecas_ln": 5255855,
-      "pecas_gv": 4398799,
+      "caixas": 266821,
+      "caixas_ln": 135722,
+      "caixas_gv": 131099,
+      "pecas": 10183878,
+      "pecas_ln": 5589390,
+      "pecas_gv": 4594488,
       "perfis_geral": {
         "varejo_ln": {
           "perfil": 19,
@@ -1149,14 +1149,14 @@ window.dadosDashboard = {
           "pcs": 96606
         },
         "carteira_ln": {
-          "perfil": 54,
-          "cx": 82073,
-          "pcs": 4401852
+          "perfil": 53,
+          "cx": 89538,
+          "pcs": 4735387
         },
         "carteira_gv": {
           "perfil": 42,
-          "cx": 88684,
-          "pcs": 3734703
+          "cx": 93914,
+          "pcs": 3930392
         },
         "estojo_ln": {
           "perfil": 13,
@@ -1179,8 +1179,8 @@ window.dadosDashboard = {
           "pcs": 97007
         },
         "total_geral": {
-          "cx": 254126,
-          "pcs": 9654654,
+          "cx": 266821,
+          "pcs": 10183878,
           "perfil": 38
         }
       },
@@ -1197,13 +1197,13 @@ window.dadosDashboard = {
         },
         "carteira_ln": {
           "perfil": 44,
-          "cx": 5431,
-          "pcs": 240066
+          "cx": 12896,
+          "pcs": 573601
         },
         "carteira_gv": {
           "perfil": 37,
-          "cx": 4151,
-          "pcs": 152109
+          "cx": 9381,
+          "pcs": 347798
         },
         "estojo_ln": {
           "perfil": 0,
@@ -1226,19 +1226,19 @@ window.dadosDashboard = {
           "pcs": 0
         },
         "total_geral": {
-          "cx": 9582,
-          "pcs": 392175,
+          "cx": 22277,
+          "pcs": 921399,
           "perfil": 41
         }
       }
     }
   },
-  "caixas_pendentes": 9582,
-  "caixas_ln_pend": 5431,
-  "caixas_gv_pend": 4151,
-  "pecas_pendentes": 392175,
-  "pecas_ln_pend": 240066,
-  "pecas_gv_pend": 152109,
+  "caixas_pendentes": 22277,
+  "caixas_ln_pend": 12896,
+  "caixas_gv_pend": 9381,
+  "pecas_pendentes": 921399,
+  "pecas_ln_pend": 573601,
+  "pecas_gv_pend": 347798,
   "carretas_pendentes": 14,
   "progresso_pct": 0,
   "atendimentos_em_andamento": [
@@ -1271,14 +1271,14 @@ window.dadosDashboard = {
       "pcs": 96606
     },
     "carteira_ln": {
-      "perfil": 54,
-      "cx": 82073,
-      "pcs": 4401852
+      "perfil": 53,
+      "cx": 89538,
+      "pcs": 4735387
     },
     "carteira_gv": {
       "perfil": 42,
-      "cx": 88684,
-      "pcs": 3734703
+      "cx": 93914,
+      "pcs": 3930392
     },
     "estojo_ln": {
       "perfil": 13,
@@ -1301,8 +1301,8 @@ window.dadosDashboard = {
       "pcs": 97007
     },
     "total_geral": {
-      "cx": 254126,
-      "pcs": 9654654,
+      "cx": 266821,
+      "pcs": 10183878,
       "perfil": 38
     }
   },
@@ -1319,13 +1319,13 @@ window.dadosDashboard = {
     },
     "carteira_ln": {
       "perfil": 44,
-      "cx": 5431,
-      "pcs": 240066
+      "cx": 12896,
+      "pcs": 573601
     },
     "carteira_gv": {
       "perfil": 37,
-      "cx": 4151,
-      "pcs": 152109
+      "cx": 9381,
+      "pcs": 347798
     },
     "estojo_ln": {
       "perfil": 0,
@@ -1348,8 +1348,8 @@ window.dadosDashboard = {
       "pcs": 0
     },
     "total_geral": {
-      "cx": 9582,
-      "pcs": 392175,
+      "cx": 22277,
+      "pcs": 921399,
       "perfil": 41
     }
   }
