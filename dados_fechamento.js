@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "23/11/2026 18:27",
-  "progresso_geral_pct": 23,
-  "total_cxs_geral": 56085,
+  "atualizado_em": "23/11/2026 19:02",
+  "progresso_geral_pct": 21,
+  "total_cxs_geral": 60570,
   "total_loaded_cxs_geral": 13058,
-  "total_pending_cxs_geral": 43027,
+  "total_pending_cxs_geral": 47512,
   "cards_atendimentos": {
     "DEDICADO": {
       "SP": {
@@ -71,14 +71,14 @@ window.dadosFechamento = {
         "status_atend": "EM ANDAMENTO"
       },
       "SPC": {
-        "total_cxs": 10728,
+        "total_cxs": 15213,
         "loaded_cxs": 0,
         "rampa_cxs": 0,
-        "pending_cxs": 10728,
+        "pending_cxs": 15213,
         "finalizadas_gv_cx": 0,
         "finalizadas_fr_cx": 0,
-        "pendentes_gv_cx": 4695,
-        "pendentes_fr_cx": 6033,
+        "pendentes_gv_cx": 6680,
+        "pendentes_fr_cx": 8533,
         "pct": 0,
         "status_atend": "PENDENTE"
       }
@@ -440,6 +440,19 @@ window.dadosFechamento = {
     {
       "uf": "SPC",
       "atendimento": "CARTEIRA",
+      "carreta": "Carreta 08",
+      "tu": "610000013716",
+      "total_caixas": 1526,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1526,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPC",
+      "atendimento": "CARTEIRA",
       "carreta": "Carreta 07",
       "tu": "610000013717",
       "total_caixas": 1482,
@@ -472,6 +485,32 @@ window.dadosFechamento = {
       "caixas_carregadas": 0,
       "caixas_rampa": 0,
       "caixas_pendentes_sap": 1549,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPC",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 06",
+      "tu": "610000013772",
+      "total_caixas": 1479,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1479,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPC",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 09",
+      "tu": "610000013773",
+      "total_caixas": 1480,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1480,
       "caixas_processadas": 0,
       "pct": 0,
       "status": "PENDENTE"
