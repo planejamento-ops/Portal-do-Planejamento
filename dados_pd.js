@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "23/11/2026 16:01",
+  "atualizado_em": "23/11/2026 17:49",
   "taxa_abs": 10.3,
   "total_faltas_mes": 746,
   "deficit": 31,
@@ -6962,6 +6962,12 @@ window.dadosPD = {
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T2</strong>: FABIANE ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
+    "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
+    "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: RENAN ALVES REZENDE",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
