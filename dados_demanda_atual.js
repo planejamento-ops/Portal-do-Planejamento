@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "23/11/2026 00:24",
+  "atualizado_em": "23/11/2026 01:24",
   "fotografia_dia": {
-    "data_referencia": "23/11/2026 00:24 (Ao Vivo)",
+    "data_referencia": "23/11/2026 01:24 (Ao Vivo)",
     "cards_atendimentos": {
       "ESTOJO": {
         "MGI": {
@@ -157,10 +157,10 @@ window.dadosDemandaAtual = {
           "total_tu_gv_cx": 8233,
           "total_tu_fr_pcs": 522521,
           "total_tu_gv_pcs": 310798,
-          "finalizadas_fr_cx": 4105,
-          "pendentes_fr_cx": 7324,
-          "finalizadas_gv_cx": 3986,
-          "pendentes_gv_cx": 4247,
+          "finalizadas_fr_cx": 4396,
+          "pendentes_fr_cx": 7033,
+          "finalizadas_gv_cx": 4460,
+          "pendentes_gv_cx": 3773,
           "finalizadas_fr_pcs": 176627,
           "pendentes_fr_pcs": 345894,
           "finalizadas_gv_pcs": 137476,
@@ -182,8 +182,8 @@ window.dadosDemandaAtual = {
           "total_tu_gv_cx": 52,
           "total_tu_fr_pcs": 43919,
           "total_tu_gv_pcs": 2016,
-          "finalizadas_fr_cx": 1254,
-          "pendentes_fr_cx": 1352,
+          "finalizadas_fr_cx": 1367,
+          "pendentes_fr_cx": 1239,
           "finalizadas_gv_cx": 52,
           "pendentes_gv_cx": 0,
           "finalizadas_fr_pcs": 18661,
