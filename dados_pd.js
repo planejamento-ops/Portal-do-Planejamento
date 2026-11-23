@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "23/11/2026 18:00",
+  "atualizado_em": "23/11/2026 19:00",
   "taxa_abs": 10.3,
-  "total_faltas_mes": 746,
+  "total_faltas_mes": 747,
   "deficit": 31,
   "fi_dias": 154,
   "fj_dias": 95,
@@ -161,12 +161,12 @@ window.dadosPD = {
       "ferias": 8
     },
     "2026-11-23": {
-      "taxa_abs": 9.3,
-      "faltas": 30,
-      "deficit": 6,
+      "taxa_abs": 9.1,
+      "faltas": 31,
+      "deficit": 7,
       "fi": 19,
       "fj": 5,
-      "ferias": 6
+      "ferias": 7
     }
   },
   "grafico_setor_map": {
@@ -2186,16 +2186,16 @@ window.dadosPD = {
       ],
       "data": [
         19.6,
-        10.9,
+        10.8,
         10.2,
-        4.5,
+        4.8,
         0.0
       ],
       "absolutos": [
         10,
         12,
         6,
-        2,
+        3,
         0
       ]
     },
@@ -2224,14 +2224,20 @@ window.dadosPD = {
     },
     "2026-11-23_2": {
       "labels": [
+        "REABASTECIMENTO",
         "FECHAMENTO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "SEPARACAO"
       ],
       "data": [
+        5.6,
+        0.0,
         0.0,
         0.0
       ],
       "absolutos": [
+        1,
+        0,
         0,
         0
       ]
@@ -3596,20 +3602,20 @@ window.dadosPD = {
       "labels": [
         "AMERICA",
         "PACTUAL",
-        "CEVA",
-        "MEET"
+        "MEET",
+        "CEVA"
       ],
       "data": [
-        31.4,
-        15.6,
-        5.6,
-        5.4
+        30.6,
+        13.9,
+        6.6,
+        5.3
       ],
       "absolutos": [
         11,
         5,
-        11,
-        3
+        4,
+        11
       ]
     },
     "2026-11-23_1": {
@@ -3633,9 +3639,15 @@ window.dadosPD = {
       ]
     },
     "2026-11-23_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "MEET"
+      ],
+      "data": [
+        20.0
+      ],
+      "absolutos": [
+        1
+      ]
     },
     "2026-11-23_3": {
       "labels": [
@@ -6538,16 +6550,16 @@ window.dadosPD = {
       ],
       "data_abs": [
         19,
-        9,
-        6,
-        6,
+        10,
+        7,
+        7,
         5
       ],
       "data_cum": [
-        42.2,
-        62.2,
-        75.6,
-        88.9,
+        39.6,
+        60.4,
+        75.0,
+        89.6,
         100.0
       ]
     },
@@ -6591,14 +6603,19 @@ window.dadosPD = {
         ],
         [
           "FÉRIAS"
+        ],
+        [
+          "DESLIGADO"
         ]
       ],
       "data_abs": [
-        4,
+        5,
+        2,
         1
       ],
       "data_cum": [
-        80.0,
+        62.5,
+        87.5,
         100.0
       ]
     },
@@ -6653,9 +6670,9 @@ window.dadosPD = {
       "data_abs": [
         323,
         191,
-        150,
-        136,
-        85
+        151,
+        137,
+        86
       ]
     }
   },
@@ -6719,7 +6736,7 @@ window.dadosPD = {
           15.8,
           17.9,
           null,
-          9.3,
+          9.1,
           null,
           null,
           null,
@@ -6796,7 +6813,7 @@ window.dadosPD = {
           25,
           60,
           null,
-          30,
+          31,
           null,
           null,
           null,
@@ -6826,7 +6843,7 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 216,
+      "faltas": 217,
       "taxa": 9.1
     }
   ],
@@ -6848,7 +6865,7 @@ window.dadosPD = {
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 109,
+      "faltas": 110,
       "taxa": 10.4
     },
     {
@@ -6909,14 +6926,14 @@ window.dadosPD = {
       "taxa": 11.5
     },
     {
+      "lider": "FLAVIO MARTINS RUFINO",
+      "faltas": 39,
+      "taxa": 10.8
+    },
+    {
       "lider": "EDSON SANTOS CAMPOS",
       "faltas": 38,
       "taxa": 9.8
-    },
-    {
-      "lider": "FLAVIO MARTINS RUFINO",
-      "faltas": 38,
-      "taxa": 11.1
     },
     {
       "lider": "RENAN ALVES REZENDE",
@@ -6964,7 +6981,6 @@ window.dadosPD = {
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T2</strong>: FABIANE ALVES",
-    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
     "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
     "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T2</strong>: RENAN ALVES REZENDE",
