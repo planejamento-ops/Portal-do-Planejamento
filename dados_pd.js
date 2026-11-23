@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "23/11/2026 14:00",
+  "atualizado_em": "23/11/2026 15:01",
   "taxa_abs": 10.3,
   "total_faltas_mes": 746,
   "deficit": 31,
@@ -161,12 +161,12 @@ window.dadosPD = {
       "ferias": 8
     },
     "2026-11-23": {
-      "taxa_abs": 10.4,
+      "taxa_abs": 9.3,
       "faltas": 30,
       "deficit": 6,
       "fi": 19,
       "fj": 5,
-      "ferias": 5
+      "ferias": 6
     }
   },
   "grafico_setor_map": {
@@ -2179,22 +2179,22 @@ window.dadosPD = {
     "2026-11-23_GERAL": {
       "labels": [
         "EXPEDICAO",
-        "FECHAMENTO",
         "SEPARACAO",
+        "FECHAMENTO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
       "data": [
         19.6,
-        14.0,
         10.9,
+        10.2,
         4.5,
         0.0
       ],
       "absolutos": [
         10,
-        6,
         12,
+        6,
         2,
         0
       ]
@@ -2223,9 +2223,18 @@ window.dadosPD = {
       ]
     },
     "2026-11-23_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "FECHAMENTO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        0.0,
+        0.0
+      ],
+      "absolutos": [
+        0,
+        0
+      ]
     },
     "2026-11-23_3": {
       "labels": [
@@ -3591,9 +3600,9 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        33.3,
-        16.1,
-        6.5,
+        31.4,
+        15.6,
+        5.6,
         5.4
       ],
       "absolutos": [
@@ -6515,6 +6524,9 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
+          "FOLGA"
+        ],
+        [
           "DESLIGADO"
         ],
         [
@@ -6522,23 +6534,20 @@ window.dadosPD = {
         ],
         [
           "FALTA JUSTIFICADA"
-        ],
-        [
-          "FOLGA"
         ]
       ],
       "data_abs": [
         19,
+        9,
         6,
-        5,
-        5,
+        6,
         5
       ],
       "data_cum": [
-        47.5,
-        62.5,
-        75.0,
-        87.5,
+        42.2,
+        62.2,
+        75.6,
+        88.9,
         100.0
       ]
     },
@@ -6576,9 +6585,22 @@ window.dadosPD = {
       ]
     },
     "2026-11-23_2": {
-      "labels": [],
-      "data_abs": [],
-      "data_cum": []
+      "labels": [
+        [
+          "FOLGA"
+        ],
+        [
+          "FÉRIAS"
+        ]
+      ],
+      "data_abs": [
+        4,
+        1
+      ],
+      "data_cum": [
+        80.0,
+        100.0
+      ]
     },
     "2026-11-23_3": {
       "labels": [
@@ -6631,8 +6653,8 @@ window.dadosPD = {
       "data_abs": [
         323,
         191,
-        149,
-        132,
+        150,
+        136,
         85
       ]
     }
@@ -6697,7 +6719,7 @@ window.dadosPD = {
           15.8,
           17.9,
           null,
-          10.4,
+          9.3,
           null,
           null,
           null,
@@ -6805,7 +6827,7 @@ window.dadosPD = {
     {
       "turno": "2º Turno",
       "faltas": 216,
-      "taxa": 9.2
+      "taxa": 9.1
     }
   ],
   "todos_setores": [
@@ -6822,7 +6844,7 @@ window.dadosPD = {
     {
       "setor": "FECHAMENTO",
       "faltas": 132,
-      "taxa": 11.7
+      "taxa": 11.5
     },
     {
       "setor": "REABASTECIMENTO",
@@ -6832,7 +6854,7 @@ window.dadosPD = {
     {
       "setor": "RECEBIMENTO",
       "faltas": 42,
-      "taxa": 4.2
+      "taxa": 4.1
     },
     {
       "setor": "SEPARAÇÃO",
@@ -6909,7 +6931,7 @@ window.dadosPD = {
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
       "faltas": 20,
-      "taxa": 5.9
+      "taxa": 5.6
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
@@ -6929,7 +6951,7 @@ window.dadosPD = {
     {
       "lider": "EDMILSON BERTOLDO",
       "faltas": 7,
-      "taxa": 2.5
+      "taxa": 2.3
     },
     {
       "lider": "FABIANE ALVES",
