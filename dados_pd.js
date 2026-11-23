@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "23/11/2026 19:00",
+  "atualizado_em": "23/11/2026 20:01",
   "taxa_abs": 10.3,
-  "total_faltas_mes": 747,
+  "total_faltas_mes": 748,
   "deficit": 31,
   "fi_dias": 154,
   "fj_dias": 95,
@@ -161,11 +161,11 @@ window.dadosPD = {
       "ferias": 8
     },
     "2026-11-23": {
-      "taxa_abs": 9.1,
-      "faltas": 31,
+      "taxa_abs": 8.9,
+      "faltas": 32,
       "deficit": 7,
       "fi": 19,
-      "fj": 5,
+      "fj": 6,
       "ferias": 7
     }
   },
@@ -2185,14 +2185,14 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        19.6,
+        15.7,
         10.8,
-        10.2,
+        10.0,
         4.8,
         0.0
       ],
       "absolutos": [
-        10,
+        11,
         12,
         6,
         3,
@@ -2225,17 +2225,20 @@ window.dadosPD = {
     "2026-11-23_2": {
       "labels": [
         "REABASTECIMENTO",
+        "EXPEDICAO",
         "FECHAMENTO",
         "RECEBIMENTO",
         "SEPARACAO"
       ],
       "data": [
         5.6,
+        5.3,
         0.0,
         0.0,
         0.0
       ],
       "absolutos": [
+        1,
         1,
         0,
         0,
@@ -3606,14 +3609,14 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        30.6,
-        13.9,
-        6.6,
-        5.3
+        26.2,
+        15.8,
+        6.2,
+        5.1
       ],
       "absolutos": [
         11,
-        5,
+        6,
         4,
         11
       ]
@@ -3640,12 +3643,15 @@ window.dadosPD = {
     },
     "2026-11-23_2": {
       "labels": [
+        "PACTUAL",
         "MEET"
       ],
       "data": [
-        20.0
+        14.3,
+        11.1
       ],
       "absolutos": [
+        1,
         1
       ]
     },
@@ -6550,16 +6556,16 @@ window.dadosPD = {
       ],
       "data_abs": [
         19,
-        10,
+        12,
         7,
         7,
-        5
+        6
       ],
       "data_cum": [
-        39.6,
-        60.4,
-        75.0,
-        89.6,
+        37.3,
+        60.8,
+        74.5,
+        88.2,
         100.0
       ]
     },
@@ -6606,16 +6612,21 @@ window.dadosPD = {
         ],
         [
           "DESLIGADO"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
-        5,
+        7,
         2,
+        1,
         1
       ],
       "data_cum": [
-        62.5,
-        87.5,
+        63.6,
+        81.8,
+        90.9,
         100.0
       ]
     },
@@ -6669,9 +6680,9 @@ window.dadosPD = {
       ],
       "data_abs": [
         323,
-        191,
+        192,
         151,
-        137,
+        139,
         86
       ]
     }
@@ -6736,7 +6747,7 @@ window.dadosPD = {
           15.8,
           17.9,
           null,
-          9.1,
+          8.9,
           null,
           null,
           null,
@@ -6813,7 +6824,7 @@ window.dadosPD = {
           25,
           60,
           null,
-          31,
+          32,
           null,
           null,
           null,
@@ -6843,8 +6854,8 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 217,
-      "taxa": 9.1
+      "faltas": 218,
+      "taxa": 9.0
     }
   ],
   "todos_setores": [
@@ -6855,8 +6866,8 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 135,
-      "taxa": 12.9
+      "faltas": 136,
+      "taxa": 12.8
     },
     {
       "setor": "FECHAMENTO",
@@ -6937,8 +6948,8 @@ window.dadosPD = {
     },
     {
       "lider": "RENAN ALVES REZENDE",
-      "faltas": 33,
-      "taxa": 11.3
+      "faltas": 34,
+      "taxa": 11.0
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
@@ -6973,17 +6984,15 @@ window.dadosPD = {
     {
       "lider": "FABIANE ALVES",
       "faltas": 4,
-      "taxa": 15.4
+      "taxa": 14.8
     }
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T2</strong>: FABIANE ALVES",
     "<strong style='color:#ffffff;'>T2</strong>: LUIS PAULO REIS",
     "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T2</strong>: RENAN ALVES REZENDE",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
