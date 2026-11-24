@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "24/11/2026 04:24",
+  "atualizado_em": "24/11/2026 05:24",
   "fotografia_dia": {
-    "data_referencia": "24/11/2026 04:24 (Ao Vivo)",
+    "data_referencia": "24/11/2026 05:24 (Ao Vivo)",
     "cards_atendimentos": {
       "SPC": {
         "GERAL": {
@@ -59,18 +59,18 @@ window.dadosDemandaAtual = {
           "total_wms_gv_cx": 180,
           "total_wms_fr_pcs": 52259,
           "total_wms_gv_pcs": 5996,
-          "total_tu_fr_cx": 2815,
-          "total_tu_gv_cx": 68,
-          "total_tu_fr_pcs": 48491,
-          "total_tu_gv_pcs": 2339,
+          "total_tu_fr_cx": 5765,
+          "total_tu_gv_cx": 248,
+          "total_tu_fr_pcs": 85015,
+          "total_tu_gv_pcs": 6806,
           "finalizadas_fr_cx": 343,
-          "pendentes_fr_cx": 2472,
+          "pendentes_fr_cx": 5422,
           "finalizadas_gv_cx": 32,
-          "pendentes_gv_cx": 36,
+          "pendentes_gv_cx": 216,
           "finalizadas_fr_pcs": 5275,
-          "pendentes_fr_pcs": 43216,
+          "pendentes_fr_pcs": 79740,
           "finalizadas_gv_pcs": 1174,
-          "pendentes_gv_pcs": 1165,
+          "pendentes_gv_pcs": 5632,
           "backlog_wms_fr_cx": 0,
           "backlog_wms_gv_cx": 0,
           "backlog_wms_fr_pcs": 0,
