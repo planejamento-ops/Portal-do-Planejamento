@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "24/11/2026 09:27",
+  "atualizado_em": "24/11/2026 10:24",
   "fotografia_dia": {
-    "data_referencia": "24/11/2026 09:27 (Ao Vivo)",
+    "data_referencia": "24/11/2026 10:24 (Ao Vivo)",
     "cards_atendimentos": {
       "SPC": {
         "GERAL": {
