@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "24/11/2026 12:01",
+  "atualizado_em": "24/11/2026 15:57",
   "taxa_abs": 10.1,
-  "total_faltas_mes": 772,
+  "total_faltas_mes": 773,
   "deficit": 31,
   "fi_dias": 153,
   "fj_dias": 100,
@@ -169,12 +169,12 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-24": {
-      "taxa_abs": 7.4,
-      "faltas": 20,
+      "taxa_abs": 6.1,
+      "faltas": 21,
       "deficit": 2,
       "fi": 10,
-      "fj": 7,
-      "ferias": 3
+      "fj": 8,
+      "ferias": 4
     }
   },
   "grafico_setor_map": {
@@ -2279,50 +2279,74 @@ window.dadosPD = {
     "2026-11-24_GERAL": {
       "labels": [
         "SEPARACAO",
+        "INVENTARIO",
         "REABASTECIMENTO",
         "EXPEDICAO",
-        "RECEBIMENTO",
-        "FECHAMENTO"
+        "FECHAMENTO",
+        "RECEBIMENTO"
       ],
       "data": [
         10.1,
-        6.7,
+        7.1,
+        6.5,
         6.0,
-        4.8,
-        4.4
+        3.1,
+        1.6
       ],
       "absolutos": [
         11,
-        3,
-        3,
         1,
-        2
+        3,
+        3,
+        2,
+        1
       ]
     },
     "2026-11-24_1": {
       "labels": [
+        "INVENTARIO",
         "SEPARACAO",
         "FECHAMENTO",
         "EXPEDICAO",
-        "REABASTECIMENTO"
+        "REABASTECIMENTO",
+        "RECEBIMENTO"
       ],
       "data": [
+        20.0,
         7.1,
         4.5,
+        0.0,
         0.0,
         0.0
       ],
       "absolutos": [
+        1,
         4,
         1,
+        0,
         0,
         0
       ]
     },
     "2026-11-24_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "FECHAMENTO",
+        "INVENTARIO",
+        "REABASTECIMENTO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "absolutos": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "2026-11-24_3": {
       "labels": [
@@ -2330,21 +2354,24 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "EXPEDICAO",
         "RECEBIMENTO",
-        "FECHAMENTO"
+        "FECHAMENTO",
+        "INVENTARIO"
       ],
       "data": [
         13.2,
         12.5,
         11.1,
         4.8,
-        4.3
+        4.3,
+        0.0
       ],
       "absolutos": [
         7,
         3,
         3,
         1,
-        1
+        1,
+        0
       ]
     }
   },
@@ -3765,15 +3792,15 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        16.0,
-        12.5,
-        6.8,
+        14.8,
+        10.8,
+        5.3,
         1.9
       ],
       "absolutos": [
         4,
         4,
-        11,
+        12,
         1
       ]
     },
@@ -3784,14 +3811,14 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        22.2,
+        20.0,
         4.2,
-        2.5
+        2.8
       ],
       "absolutos": [
         2,
         1,
-        2
+        3
       ]
     },
     "2026-11-24_2": {
@@ -3808,7 +3835,7 @@ window.dadosPD = {
       "data": [
         17.4,
         12.5,
-        11.1
+        10.8
       ],
       "absolutos": [
         4,
@@ -6854,20 +6881,20 @@ window.dadosPD = {
       ],
       "data_abs": [
         9,
-        7,
-        3,
+        8,
+        4,
         3,
         2,
         1,
         1
       ],
       "data_cum": [
-        34.6,
-        61.5,
-        73.1,
-        84.6,
-        92.3,
-        96.2,
+        32.1,
+        60.7,
+        75.0,
+        85.7,
+        92.9,
+        96.4,
         100.0
       ]
     },
@@ -6881,23 +6908,36 @@ window.dadosPD = {
         ],
         [
           "DESLIGADO"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
         4,
         3,
+        1,
         1
       ],
       "data_cum": [
-        50.0,
-        87.5,
+        44.4,
+        77.8,
+        88.9,
         100.0
       ]
     },
     "2026-11-24_2": {
-      "labels": [],
-      "data_abs": [],
-      "data_cum": []
+      "labels": [
+        [
+          "FÉRIAS"
+        ]
+      ],
+      "data_abs": [
+        1
+      ],
+      "data_cum": [
+        100.0
+      ]
     },
     "2026-11-24_3": {
       "labels": [
@@ -6960,8 +7000,8 @@ window.dadosPD = {
       ],
       "data_abs": [
         327,
-        201,
-        156,
+        202,
+        157,
         143,
         89
       ]
@@ -7028,7 +7068,7 @@ window.dadosPD = {
           17.9,
           null,
           8.7,
-          7.4,
+          6.1,
           null,
           null,
           null,
@@ -7105,7 +7145,7 @@ window.dadosPD = {
           60,
           null,
           36,
-          20,
+          21,
           null,
           null,
           null,
@@ -7129,13 +7169,13 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 238,
-      "taxa": 9.3
+      "faltas": 239,
+      "taxa": 9.2
     },
     {
       "turno": "2º Turno",
       "faltas": 222,
-      "taxa": 9.0
+      "taxa": 8.8
     }
   ],
   "todos_setores": [
@@ -7152,7 +7192,7 @@ window.dadosPD = {
     {
       "setor": "FECHAMENTO",
       "faltas": 134,
-      "taxa": 11.2
+      "taxa": 11.0
     },
     {
       "setor": "REABASTECIMENTO",
@@ -7162,7 +7202,7 @@ window.dadosPD = {
     {
       "setor": "RECEBIMENTO",
       "faltas": 43,
-      "taxa": 4.1
+      "taxa": 4.0
     },
     {
       "setor": "SEPARAÇÃO",
@@ -7176,7 +7216,7 @@ window.dadosPD = {
     },
     {
       "setor": "INVENTARIO",
-      "faltas": 17,
+      "faltas": 18,
       "taxa": 6.9
     }
   ],
@@ -7239,12 +7279,17 @@ window.dadosPD = {
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
       "faltas": 20,
-      "taxa": 5.6
+      "taxa": 5.3
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
       "faltas": 19,
-      "taxa": 4.6
+      "taxa": 4.4
+    },
+    {
+      "lider": "MARIA GABRIELE SANTANA ALVES",
+      "faltas": 18,
+      "taxa": 6.5
     },
     {
       "lider": "MARCONDES DOS SANTOS",
@@ -7252,26 +7297,18 @@ window.dadosPD = {
       "taxa": 5.5
     },
     {
-      "lider": "MARIA GABRIELE SANTANA ALVES",
-      "faltas": 17,
-      "taxa": 6.5
-    },
-    {
       "lider": "EDMILSON BERTOLDO",
       "faltas": 7,
-      "taxa": 2.3
+      "taxa": 2.2
     },
     {
       "lider": "FABIANE ALVES",
       "faltas": 4,
-      "taxa": 14.8
+      "taxa": 13.8
     }
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T1</strong>: MARCIO VINICIO AMANCIO JUNIOR",
-    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
+    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE"
   ]
 };
