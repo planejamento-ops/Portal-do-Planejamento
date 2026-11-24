@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "24/11/2026 01:24",
+  "atualizado_em": "24/11/2026 02:24",
   "fotografia_dia": {
-    "data_referencia": "24/11/2026 01:24 (Ao Vivo)",
+    "data_referencia": "24/11/2026 02:24 (Ao Vivo)",
     "cards_atendimentos": {
       "SPC": {
         "GERAL": {
@@ -55,10 +55,10 @@ window.dadosDemandaAtual = {
       },
       "VAREJO": {
         "GERAL": {
-          "total_wms_fr_cx": 1953,
-          "total_wms_gv_cx": 41,
-          "total_wms_fr_pcs": 31789,
-          "total_wms_gv_pcs": 1305,
+          "total_wms_fr_cx": 3079,
+          "total_wms_gv_cx": 180,
+          "total_wms_fr_pcs": 52259,
+          "total_wms_gv_pcs": 5996,
           "total_tu_fr_cx": 2815,
           "total_tu_gv_cx": 68,
           "total_tu_fr_pcs": 48491,
