@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "24/11/2026 19:01",
+  "atualizado_em": "24/11/2026 20:00",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 777,
+  "total_faltas_mes": 780,
   "deficit": 31,
   "fi_dias": 153,
   "fj_dias": 101,
@@ -169,12 +169,12 @@ window.dadosPD = {
       "ferias": 9
     },
     "2026-11-24": {
-      "taxa_abs": 6.3,
-      "faltas": 25,
-      "deficit": 3,
-      "fi": 11,
+      "taxa_abs": 6.4,
+      "faltas": 28,
+      "deficit": 4,
+      "fi": 13,
       "fj": 10,
-      "ferias": 5
+      "ferias": 7
     }
   },
   "grafico_setor_map": {
@@ -2286,7 +2286,7 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        9.7,
+        9.3,
         7.1,
         7.1,
         6.2,
@@ -2294,7 +2294,7 @@ window.dadosPD = {
         1.6
       ],
       "absolutos": [
-        12,
+        15,
         5,
         1,
         4,
@@ -2339,7 +2339,7 @@ window.dadosPD = {
       ],
       "data": [
         10.0,
-        6.7,
+        7.5,
         5.0,
         0.0,
         0.0,
@@ -2347,7 +2347,7 @@ window.dadosPD = {
       ],
       "absolutos": [
         2,
-        1,
+        4,
         1,
         0,
         0,
@@ -3798,16 +3798,16 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        14.7,
-        10.4,
+        14.6,
+        9.8,
         5.1,
-        3.1
+        4.4
       ],
       "absolutos": [
+        6,
         5,
-        5,
-        13,
-        2
+        14,
+        3
       ]
     },
     "2026-11-24_1": {
@@ -3835,16 +3835,16 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
+        13.3,
         12.5,
-        8.3,
-        6.7,
-        1.6
+        5.6,
+        2.3
       ],
       "absolutos": [
+        2,
+        2,
         1,
-        1,
-        1,
-        1
+        2
       ]
     },
     "2026-11-24_3": {
@@ -6887,10 +6887,10 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FOLGA"
+          "DESLIGADO"
         ],
         [
-          "DESLIGADO"
+          "FOLGA"
         ],
         [
           "FALTA INJUSTIFICADA"
@@ -6901,21 +6901,21 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
+        12,
         10,
-        10,
-        5,
+        7,
         4,
-        3,
+        4,
         1,
         1
       ],
       "data_cum": [
-        29.4,
-        58.8,
-        73.5,
-        85.3,
-        94.1,
-        97.1,
+        30.8,
+        56.4,
+        74.4,
+        84.6,
+        94.9,
+        97.4,
         100.0
       ]
     },
@@ -6953,30 +6953,30 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FALTA INJUSTIFICADA"
         ],
         [
           "DESLIGADO"
         ],
         [
-          "FALTA INJUSTIFICADA"
+          "FALTA JUSTIFICADA"
         ],
         [
           "FOLGA"
         ]
       ],
       "data_abs": [
+        4,
+        3,
         2,
         2,
-        1,
-        1,
         1
       ],
       "data_cum": [
-        28.6,
-        57.1,
-        71.4,
-        85.7,
+        33.3,
+        58.3,
+        75.0,
+        91.7,
         100.0
       ]
     },
@@ -7040,11 +7040,11 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        328,
+        330,
         204,
-        158,
+        160,
         144,
-        90
+        91
       ]
     }
   },
@@ -7109,7 +7109,7 @@ window.dadosPD = {
           17.9,
           null,
           8.7,
-          6.3,
+          6.4,
           null,
           null,
           null,
@@ -7186,7 +7186,7 @@ window.dadosPD = {
           60,
           null,
           36,
-          25,
+          28,
           null,
           null,
           null,
@@ -7215,15 +7215,15 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 226,
+      "faltas": 229,
       "taxa": 8.8
     }
   ],
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 267,
-      "taxa": 11.1
+      "faltas": 270,
+      "taxa": 11.0
     },
     {
       "setor": "EXPEDICAO",
@@ -7264,8 +7264,8 @@ window.dadosPD = {
   "todos_lideres": [
     {
       "lider": "LUIS PAULO REIS",
-      "faltas": 119,
-      "taxa": 12.3
+      "faltas": 122,
+      "taxa": 12.1
     },
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
