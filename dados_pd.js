@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "24/11/2026 22:01",
+  "atualizado_em": "24/11/2026 23:00",
   "taxa_abs": 10.0,
   "total_faltas_mes": 780,
   "deficit": 31,
@@ -6750,24 +6750,29 @@ window.dadosPD = {
         ],
         [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
         ]
       ],
       "data_abs": [
-        14,
+        13,
         13,
         9,
         8,
         8,
         4,
-        2
+        2,
+        1
       ],
       "data_cum": [
-        24.1,
-        46.6,
-        62.1,
-        75.9,
-        89.7,
-        96.6,
+        22.4,
+        44.8,
+        60.3,
+        74.1,
+        87.9,
+        94.8,
+        98.3,
         100.0
       ]
     },
@@ -6856,22 +6861,27 @@ window.dadosPD = {
         ],
         [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
         ]
       ],
       "data_abs": [
-        6,
+        5,
         4,
         4,
         4,
         3,
-        2
+        2,
+        1
       ],
       "data_cum": [
-        26.1,
-        43.5,
-        60.9,
-        78.3,
-        91.3,
+        21.7,
+        39.1,
+        56.5,
+        73.9,
+        87.0,
+        95.7,
         100.0
       ]
     },
@@ -7040,7 +7050,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        330,
+        329,
         204,
         160,
         144,
