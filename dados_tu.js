@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "24/11/2026 23:47",
-  "total_tus": 62,
+  "atualizado_em": "25/11/2026 00:20",
+  "total_tus": 41,
   "caixas_total_mes": 287021,
   "caixas_ln_mes": 149021,
   "caixas_gv_mes": 138000,
@@ -1242,7 +1242,9 @@ window.dadosDashboard = {
   "carretas_pendentes": 0,
   "progresso_pct": 100,
   "atendimentos_em_andamento": [],
-  "alertas_atraso": [],
+  "alertas_atraso": [
+    "Atraso em MGC"
+  ],
   "proxima_carteira": null,
   "proxima_varejo": null,
   "proxima_estojo": null,
