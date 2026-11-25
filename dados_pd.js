@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "25/11/2026 07:01",
+  "atualizado_em": "25/11/2026 08:00",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 798,
+  "total_faltas_mes": 800,
   "deficit": 31,
-  "fi_dias": 155,
-  "fj_dias": 102,
+  "fi_dias": 156,
+  "fj_dias": 103,
   "ferias": 16,
   "data_padrao_setor": "2026-11-25",
   "resumo_diario_map": {
@@ -177,11 +177,11 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-25": {
-      "taxa_abs": 10.6,
-      "faltas": 18,
+      "taxa_abs": 10.4,
+      "faltas": 20,
       "deficit": 1,
-      "fi": 14,
-      "fj": 3,
+      "fi": 15,
+      "fj": 4,
       "ferias": 3
     }
   },
@@ -2393,33 +2393,36 @@ window.dadosPD = {
         "EXPEDICAO",
         "SEPARACAO",
         "REABASTECIMENTO",
-        "FECHAMENTO",
-        "RECEBIMENTO"
+        "RECEBIMENTO",
+        "FECHAMENTO"
       ],
       "data": [
         16.0,
         13.5,
         12.5,
-        0.0,
+        4.7,
         0.0
       ],
       "absolutos": [
         8,
         7,
         3,
-        0,
+        2,
         0
       ]
     },
     "2026-11-25_1": {
       "labels": [
-        "EXPEDICAO"
+        "EXPEDICAO",
+        "RECEBIMENTO"
       ],
       "data": [
-        17.4
+        17.4,
+        9.1
       ],
       "absolutos": [
-        4
+        4,
+        2
       ]
     },
     "2026-11-25_2": {
@@ -3942,14 +3945,14 @@ window.dadosPD = {
         "PACTUAL"
       ],
       "data": [
-        18.5,
+        17.9,
         10.3,
         6.7,
-        6.2
+        5.9
       ],
       "absolutos": [
         5,
-        10,
+        12,
         2,
         1
       ]
@@ -3962,13 +3965,13 @@ window.dadosPD = {
       ],
       "data": [
         50.0,
-        25.0,
-        12.5
+        20.0,
+        11.1
       ],
       "absolutos": [
         1,
         1,
-        2
+        4
       ]
     },
     "2026-11-25_2": {
@@ -7167,25 +7170,25 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
-          "FÉRIAS"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FÉRIAS"
         ],
         [
           "DESLIGADO"
         ]
       ],
       "data_abs": [
-        14,
-        3,
+        15,
+        4,
         3,
         1
       ],
       "data_cum": [
-        66.7,
-        81.0,
-        95.2,
+        65.2,
+        82.6,
+        95.7,
         100.0
       ]
     },
@@ -7193,12 +7196,17 @@ window.dadosPD = {
       "labels": [
         [
           "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
-        4
+        5,
+        1
       ],
       "data_cum": [
+        83.3,
         100.0
       ]
     },
@@ -7256,8 +7264,8 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        343,
-        207,
+        344,
+        208,
         163,
         144,
         92
@@ -7326,7 +7334,7 @@ window.dadosPD = {
           null,
           8.7,
           6.4,
-          10.6,
+          10.4,
           null,
           null,
           null,
@@ -7403,7 +7411,7 @@ window.dadosPD = {
           null,
           36,
           28,
-          18,
+          20,
           null,
           null,
           null,
@@ -7426,7 +7434,7 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 243,
+      "faltas": 245,
       "taxa": 9.3
     },
     {
@@ -7458,8 +7466,8 @@ window.dadosPD = {
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 43,
-      "taxa": 3.9
+      "faltas": 45,
+      "taxa": 4.0
     },
     {
       "setor": "SEPARAÇÃO",
@@ -7534,14 +7542,14 @@ window.dadosPD = {
       "taxa": 7.4
     },
     {
+      "lider": "MARCIO VINICIO AMANCIO JUNIOR",
+      "faltas": 21,
+      "taxa": 4.6
+    },
+    {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
       "faltas": 20,
       "taxa": 5.3
-    },
-    {
-      "lider": "MARCIO VINICIO AMANCIO JUNIOR",
-      "faltas": 19,
-      "taxa": 4.4
     },
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
@@ -7565,6 +7573,11 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
+    "<strong style='color:#ffffff;'>T1</strong>: GABRIELLY DA SILVA ALEXANDRIA",
+    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T1</strong>: WALLACE BORATO AGUIAR",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
