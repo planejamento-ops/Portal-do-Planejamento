@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "25/11/2026 19:00",
+  "atualizado_em": "25/11/2026 20:00",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 806,
+  "total_faltas_mes": 809,
   "deficit": 31,
   "fi_dias": 157,
   "fj_dias": 104,
@@ -177,12 +177,12 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-25": {
-      "taxa_abs": 8.5,
-      "faltas": 26,
-      "deficit": 2,
-      "fi": 18,
-      "fj": 6,
-      "ferias": 6
+      "taxa_abs": 9.0,
+      "faltas": 29,
+      "deficit": 3,
+      "fi": 19,
+      "fj": 7,
+      "ferias": 7
     }
   },
   "grafico_setor_map": {
@@ -2398,14 +2398,14 @@ window.dadosPD = {
       ],
       "data": [
         14.3,
-        10.1,
+        11.3,
         9.3,
         5.0,
         0.0
       ],
       "absolutos": [
         10,
-        9,
+        12,
         4,
         3,
         0
@@ -2428,22 +2428,22 @@ window.dadosPD = {
     "2026-11-25_2": {
       "labels": [
         "EXPEDICAO",
-        "RECEBIMENTO",
         "SEPARACAO",
+        "RECEBIMENTO",
         "REABASTECIMENTO",
         "FECHAMENTO"
       ],
       "data": [
         10.0,
+        9.3,
         5.9,
-        5.4,
         5.3,
         0.0
       ],
       "absolutos": [
         2,
+        5,
         1,
-        2,
         1,
         0
       ]
@@ -3958,20 +3958,20 @@ window.dadosPD = {
     "2026-11-25_GERAL": {
       "labels": [
         "AMERICA",
-        "CEVA",
         "MEET",
+        "CEVA",
         "PACTUAL"
       ],
       "data": [
-        15.9,
-        7.4,
-        7.1,
-        6.7
+        15.2,
+        9.1,
+        8.0,
+        6.1
       ],
       "absolutos": [
         7,
-        14,
-        3,
+        4,
+        16,
         2
       ]
     },
@@ -3994,22 +3994,22 @@ window.dadosPD = {
     },
     "2026-11-25_2": {
       "labels": [
-        "AMERICA",
         "MEET",
+        "AMERICA",
         "PACTUAL",
         "CEVA"
       ],
       "data": [
-        12.5,
-        8.3,
-        7.7,
-        2.8
+        14.3,
+        11.1,
+        6.2,
+        4.9
       ],
       "absolutos": [
         2,
+        2,
         1,
-        1,
-        2
+        4
       ]
     },
     "2026-11-25_3": {
@@ -7216,17 +7216,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        18,
-        6,
-        6,
-        2,
+        19,
+        7,
+        7,
+        3,
         1
       ],
       "data_cum": [
-        54.5,
-        72.7,
-        90.9,
-        97.0,
+        51.4,
+        70.3,
+        89.2,
+        97.3,
         100.0
       ]
     },
@@ -7267,17 +7267,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        3,
+        4,
+        4,
         3,
         2,
-        1,
         1
       ],
       "data_cum": [
-        30.0,
-        60.0,
-        80.0,
-        90.0,
+        28.6,
+        57.1,
+        78.6,
+        92.9,
         100.0
       ]
     },
@@ -7330,11 +7330,11 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        347,
-        210,
-        166,
+        348,
+        211,
+        167,
         145,
-        93
+        94
       ]
     }
   },
@@ -7400,7 +7400,7 @@ window.dadosPD = {
           null,
           8.7,
           6.4,
-          8.5,
+          9.0,
           null,
           null,
           null,
@@ -7477,7 +7477,7 @@ window.dadosPD = {
           null,
           36,
           28,
-          26,
+          29,
           null,
           null,
           null,
@@ -7505,15 +7505,15 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 235,
+      "faltas": 238,
       "taxa": 8.7
     }
   ],
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 279,
-      "taxa": 11.0
+      "faltas": 282,
+      "taxa": 11.1
     },
     {
       "setor": "EXPEDICAO",
@@ -7554,8 +7554,8 @@ window.dadosPD = {
   "todos_lideres": [
     {
       "lider": "LUIS PAULO REIS",
-      "faltas": 124,
-      "taxa": 11.9
+      "faltas": 127,
+      "taxa": 12.0
     },
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
