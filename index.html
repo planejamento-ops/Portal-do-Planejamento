@@ -198,9 +198,9 @@
         .btn-sub-tab.active { background: rgba(0, 210, 255, 0.15); color: #00d2ff; border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.1); }
         
         .date-picker-wrapper { display: flex; align-items: center; gap: 6px; background: rgba(15, 23, 42, 0.8); padding: 5px 12px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.3); box-shadow: inset 0 0 10px rgba(0, 210, 255, 0.05); }
-        .date-picker-wrapper input[type="date"], .date-picker-wrapper input[type="month"] { background: transparent; border: none; color: #ffffff; font-family: inherit; font-size: 0.75rem; font-weight: 700; outline: none; cursor: pointer; color-scheme: dark; }
-        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.8; transition: 0.2s; }
-        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator:hover, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+        .date-picker-wrapper input[type="date"], .date-picker-wrapper input[type="month"], .date-picker-wrapper input[type="week"] { background: transparent; border: none; color: #ffffff; font-family: inherit; font-size: 0.75rem; font-weight: 700; outline: none; cursor: pointer; color-scheme: dark; }
+        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator, .date-picker-wrapper input[type="week"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.8; transition: 0.2s; }
+        .date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator:hover, .date-picker-wrapper input[type="month"]::-webkit-calendar-picker-indicator:hover, .date-picker-wrapper input[type="week"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
 
         /* ========================================== */
         /* ESTATÍSTICAS MACRO (TAB 2 WMS CORRIGIDA)   */
@@ -398,7 +398,7 @@
                             <h2><span class="material-symbols-outlined">analytics</span> Controle de TUs</h2>
                         </div>
                         <div class="header-badges">
-                            <div class="date-picker-wrapper" title="Filtrar Totais do Mês">
+                            <div class="date-picker-wrapper" title="Selecione a Semana Operacional">
                                 <span class="material-symbols-outlined" style="font-size: 18px; color: #00d2ff;">calendar_month</span>
                                 <input type="month" id="filtro-mes-tu" onchange="aplicarFiltroMesTU()">
                             </div>
@@ -667,7 +667,7 @@
                             </a>
                             <div class="date-picker-wrapper" title="Selecione um dia do Histórico">
                                 <span class="material-symbols-outlined" style="font-size: 18px; color: #00d2ff;">calendar_today</span>
-                                <input type="date" id="filtro-data-wms" onchange="aplicarFiltroDataWMS()">
+                                <input type="week" id="filtro-semana-wms" onchange="aplicarFiltroSemanaWMS()">
                             </div>
                             <span class="tu-status-badge">
                                 <span class="status-dot"></span>
@@ -1386,17 +1386,27 @@
             }
         }
 
-        function aplicarFiltroDataWMS() {
-            const dataSelecionada = document.getElementById('filtro-data-wms').value;
+        function aplicarFiltroSemanaWMS() {
+            const semanaSelecionada = document.getElementById('filtro-semana-wms').value;
+            if (!semanaSelecionada || dadosOndasGeral.length === 0) return;
+            
             dadosOndasDataFiltrada = [];
             const canaisUnicos = [...new Set(dadosOndasGeral.map(o => o.onda_atual))];
+            
             canaisUnicos.forEach(canal => {
-                const ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === canal && o.data_onda <= dataSelecionada);
+                // 1. Filtra as ondas APENAS do canal atual e que tenham data (para evitar erros)
+                let ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === canal && o.semana_onda);
+                
+                // 2. Filtra pelas semanas iguais ou anteriores à selecionada
+                ondasCanal = ondasCanal.filter(o => o.semana_onda <= semanaSelecionada);
+                
                 if (ondasCanal.length > 0) {
+                    // 3. Ordena de forma decrescente para pegar a fotografia MAIS RECENTE dentro do período
                     ondasCanal.sort((a, b) => b.data_onda.localeCompare(a.data_onda));
                     dadosOndasDataFiltrada.push(ondasCanal[0]);
                 }
             });
+            
             const canaisFixos = ['MGI', 'MGC', 'SPI', 'SPC', 'VAREJO'];
             canaisFixos.forEach(canal => {
                 let isActive = false;
@@ -1406,16 +1416,31 @@
                 const dot = document.getElementById('dot-' + canal);
                 if (dot) dot.className = isActive ? 'status-dot-on' : 'status-dot-off';
             });
+            
+            // 4. Chama a função que desenha os gráficos e tabelas com os novos dados
             renderizarCardsWMS();
         }
 
-        function buscarUltimaDataCanalWMS() {
-            const ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === wmsCanalAtual);
+        function buscarUltimaSemanaCanalWMS() {
+            const inputSemana = document.getElementById('filtro-semana-wms');
+            if (!inputSemana) return;
+
+            // Pega TODAS as ondas do canal que estamos olhando agora
+            const ondasCanal = dadosOndasGeral.filter(o => o.onda_atual === wmsCanalAtual && o.semana_onda);
+            
             if (ondasCanal.length > 0) {
+                // Ordena para achar a onda mais recente de todas
                 ondasCanal.sort((a, b) => b.data_onda.localeCompare(a.data_onda));
-                const dataMaisRecente = ondasCanal[0].data_onda;
-                document.getElementById('filtro-data-wms').value = dataMaisRecente;
-                aplicarFiltroDataWMS();
+                
+                // Extrai o código da semana (ex: "2026-W48") da onda mais recente
+                const semanaMaisRecente = ondasCanal[0].semana_onda; 
+                
+                // Atualiza o input no topo da tela e aplica o filtro
+                inputSemana.value = semanaMaisRecente;
+                aplicarFiltroSemanaWMS();
+            } else {
+                // Se não houver nada do canal, renderiza zerado
+                renderizarCardsWMS();
             }
         }
 
@@ -1444,7 +1469,7 @@
             }
             
             mudarVisaoWMS(wmsVisaoAtual);
-            buscarUltimaDataCanalWMS();
+            buscarUltimaSemanaCanalWMS();
         }
 
         function mudarVisaoWMS(visao) {
@@ -1513,19 +1538,36 @@
             const fr = dadosVisao.fr || {pcs: 0, cxs: 0, pc_cx: 0, tar: 0}; 
             const gv = dadosVisao.gv || {pcs: 0, cxs: 0, pc_cx: 0, tar: 0}; 
             const pc = dadosVisao.pc || {pcs: 0, cxs: 0, pc_cx: 0, tar: 0};
-            const totPcs = (fr.pcs || 0) + (gv.pcs || 0) + (pc.pcs || 0); const totCxs = (fr.cxs || 0) + (gv.cxs || 0) + (pc.cxs || 0);
+            
+            // Total Global (mantém a soma dos 3 para os cards superiores)
+            const totPcs = (fr.pcs || 0) + (gv.pcs || 0) + (pc.pcs || 0); 
+            const totCxs = (fr.cxs || 0) + (gv.cxs || 0) + (pc.cxs || 0);
 
-            setTextoSeguro('wms-fr-pcs', formatarNumeroInteiro(fr.pcs || 0)); setTextoSeguro('wms-fr-pcs-pct', `${totPcs>0 ? ((fr.pcs/totPcs)*100).toFixed(1) : '0'}%`);
-            setTextoSeguro('wms-fr-cxs', formatarNumeroInteiro(fr.cxs || 0)); setTextoSeguro('wms-fr-cxs-pct', `${totCxs>0 ? ((fr.cxs/totCxs)*100).toFixed(1) : '0'}%`);
-            setTextoSeguro('wms-fr-pc-cx', fr.pc_cx || 0); setTextoSeguro('wms-fr-tar', formatarNumeroInteiro(fr.tar || 0));
+            // Base de cálculo da porcentagem (apenas FR + GV)
+            const totFrGvPcs = (fr.pcs || 0) + (gv.pcs || 0);
+            const totFrGvCxs = (fr.cxs || 0) + (gv.cxs || 0);
 
-            setTextoSeguro('wms-gv-pcs', formatarNumeroInteiro(gv.pcs || 0)); setTextoSeguro('wms-gv-pcs-pct', `${totPcs>0 ? ((gv.pcs/totPcs)*100).toFixed(1) : '0'}%`);
-            setTextoSeguro('wms-gv-cxs', formatarNumeroInteiro(gv.cxs || 0)); setTextoSeguro('wms-gv-cxs-pct', `${totCxs>0 ? ((gv.cxs/totCxs)*100).toFixed(1) : '0'}%`);
-            setTextoSeguro('wms-gv-pc-cx', gv.pc_cx || 0); setTextoSeguro('wms-gv-tar', formatarNumeroInteiro(gv.tar || 0));
+            setTextoSeguro('wms-fr-pcs', formatarNumeroInteiro(fr.pcs || 0)); 
+            setTextoSeguro('wms-fr-pcs-pct', `${totFrGvPcs > 0 ? ((fr.pcs / totFrGvPcs) * 100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-fr-cxs', formatarNumeroInteiro(fr.cxs || 0)); 
+            setTextoSeguro('wms-fr-cxs-pct', `${totFrGvCxs > 0 ? ((fr.cxs / totFrGvCxs) * 100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-fr-pc-cx', fr.pc_cx || 0); 
+            setTextoSeguro('wms-fr-tar', formatarNumeroInteiro(fr.tar || 0));
 
-            setTextoSeguro('wms-pc-pcs', formatarNumeroInteiro(pc.pcs || 0)); setTextoSeguro('wms-pc-pcs-pct', `${totPcs>0 ? ((pc.pcs/totPcs)*100).toFixed(1) : '0'}%`);
-            setTextoSeguro('wms-pc-cxs', formatarNumeroInteiro(pc.cxs || 0)); setTextoSeguro('wms-pc-cxs-pct', `${totCxs>0 ? ((pc.cxs/totCxs)*100).toFixed(1) : '0'}%`);
-            setTextoSeguro('wms-pc-pc-cx', pc.pc_cx || 0); setTextoSeguro('wms-pc-tar', formatarNumeroInteiro(pc.tar || 0));
+            setTextoSeguro('wms-gv-pcs', formatarNumeroInteiro(gv.pcs || 0)); 
+            setTextoSeguro('wms-gv-pcs-pct', `${totFrGvPcs > 0 ? ((gv.pcs / totFrGvPcs) * 100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-gv-cxs', formatarNumeroInteiro(gv.cxs || 0)); 
+            setTextoSeguro('wms-gv-cxs-pct', `${totFrGvCxs > 0 ? ((gv.cxs / totFrGvCxs) * 100).toFixed(1) : '0'}%`);
+            setTextoSeguro('wms-gv-pc-cx', gv.pc_cx || 0); 
+            setTextoSeguro('wms-gv-tar', formatarNumeroInteiro(gv.tar || 0));
+
+            // Picking Cart sem porcentagem
+            setTextoSeguro('wms-pc-pcs', formatarNumeroInteiro(pc.pcs || 0)); 
+            setTextoSeguro('wms-pc-pcs-pct', '');
+            setTextoSeguro('wms-pc-cxs', formatarNumeroInteiro(pc.cxs || 0)); 
+            setTextoSeguro('wms-pc-cxs-pct', '');
+            setTextoSeguro('wms-pc-pc-cx', pc.pc_cx || 0); 
+            setTextoSeguro('wms-pc-tar', formatarNumeroInteiro(pc.tar || 0));
 
             setTextoSeguro('wms-tot-pcs', formatarNumeroInteiro(totPcs)); setTextoSeguro('wms-tot-cxs', formatarNumeroInteiro(totCxs));
             setTextoSeguro('wms-est-cx', est_cx); setTextoSeguro('wms-skus-cx', skus_cx);
@@ -1908,8 +1950,20 @@
 
             if (typeof dadosDemandaWMS !== 'undefined') {
                 dadosOndasGeral = dadosDemandaWMS.ondas || [];
+                
+                // MÁGICA AQUI: O JavaScript calcula a semana automaticamente com base no dia!
+                dadosOndasGeral.forEach(o => {
+                    if(o.data_onda) {
+                        const d = new Date(o.data_onda + 'T12:00:00Z');
+                        d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
+                        const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+                        const weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
+                        o.semana_onda = `${d.getUTCFullYear()}-W${weekNo.toString().padStart(2, '0')}`;
+                    }
+                });
+
                 setTextoSeguro('txt-wms-status-sync', `LIVE • ${dadosDemandaWMS.atualizado_em || ''}`);
-                buscarUltimaDataCanalWMS();
+                buscarUltimaSemanaCanalWMS();
             }
 
             if (typeof dadosMovimentacoes !== 'undefined') {
