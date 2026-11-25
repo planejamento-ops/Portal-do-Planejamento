@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "25/11/2026 16:58",
+  "atualizado_em": "25/11/2026 17:24",
   "fotografia_dia": {
-    "data_referencia": "25/11/2026 16:58 (Ao Vivo)",
+    "data_referencia": "25/11/2026 17:24 (Ao Vivo)",
     "cards_atendimentos": {
       "MGC": {
         "GERAL": {
