@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "26/11/2026 16:01",
+  "atualizado_em": "26/11/2026 17:01",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 847,
+  "total_faltas_mes": 854,
   "deficit": 32,
-  "fi_dias": 149,
-  "fj_dias": 115,
+  "fi_dias": 150,
+  "fj_dias": 117,
   "ferias": 16,
   "data_padrao_setor": "2026-11-26",
   "resumo_diario_map": {
@@ -185,12 +185,12 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-26": {
-      "taxa_abs": 10.3,
-      "faltas": 35,
+      "taxa_abs": 10.2,
+      "faltas": 42,
       "deficit": 3,
-      "fi": 20,
-      "fj": 11,
-      "ferias": 5
+      "fi": 24,
+      "fj": 14,
+      "ferias": 6
     }
   },
   "grafico_setor_map": {
@@ -2491,16 +2491,16 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        20.8,
-        10.9,
-        8.7,
-        6.2,
+        18.3,
+        10.8,
+        8.6,
+        6.1,
         5.2
       ],
       "absolutos": [
-        11,
         13,
-        4,
+        16,
+        6,
         4,
         3
       ]
@@ -2530,17 +2530,23 @@ window.dadosPD = {
     },
     "2026-11-26_2": {
       "labels": [
+        "EXPEDICAO",
+        "SEPARACAO",
+        "FECHAMENTO",
         "REABASTECIMENTO",
-        "RECEBIMENTO",
-        "SEPARACAO"
+        "RECEBIMENTO"
       ],
       "data": [
-        0.0,
+        11.1,
+        9.1,
+        8.3,
         0.0,
         0.0
       ],
       "absolutos": [
-        0,
+        2,
+        3,
+        2,
         0,
         0
       ]
@@ -4134,22 +4140,22 @@ window.dadosPD = {
     },
     "2026-11-26_GERAL": {
       "labels": [
-        "PACTUAL",
         "AMERICA",
+        "PACTUAL",
         "MEET",
         "CEVA"
       ],
       "data": [
-        13.2,
-        12.5,
-        10.3,
-        9.3
+        14.0,
+        13.6,
+        9.2,
+        8.9
       ],
       "absolutos": [
-        5,
-        5,
+        8,
         6,
-        19
+        6,
+        22
       ]
     },
     "2026-11-26_1": {
@@ -4173,9 +4179,21 @@ window.dadosPD = {
       ]
     },
     "2026-11-26_2": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        15.8,
+        7.7,
+        4.6
+      ],
+      "absolutos": [
+        3,
+        1,
+        3
+      ]
     },
     "2026-11-26_3": {
       "labels": [
@@ -7641,10 +7659,10 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "DESLIGADO"
+          "FOLGA"
         ],
         [
-          "FOLGA"
+          "DESLIGADO"
         ],
         [
           "FALTA INJUSTIFICADA"
@@ -7658,10 +7676,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        19,
-        10,
-        5,
-        3,
+        23,
+        13,
+        6,
+        4,
         3,
         1,
         1,
@@ -7669,12 +7687,12 @@ window.dadosPD = {
       ],
       "data_cum": [
         44.2,
-        67.4,
-        79.1,
-        86.0,
-        93.0,
-        95.3,
-        97.7,
+        69.2,
+        80.8,
+        88.5,
+        94.2,
+        96.2,
+        98.1,
         100.0
       ]
     },
@@ -7704,18 +7722,28 @@ window.dadosPD = {
     "2026-11-26_2": {
       "labels": [
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "FOLGA"
         ],
         [
           "FÉRIAS"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
+        4,
+        4,
         3,
-        2
+        3
       ],
       "data_cum": [
-        60.0,
+        28.6,
+        57.1,
+        78.6,
         100.0
       ]
     },
@@ -7784,10 +7812,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        327,
-        224,
-        172,
-        148,
+        331,
+        227,
+        173,
+        149,
         98
       ]
     }
@@ -7855,7 +7883,7 @@ window.dadosPD = {
           8.7,
           6.4,
           9.3,
-          10.3,
+          10.2,
           null,
           null,
           null,
@@ -7932,7 +7960,7 @@ window.dadosPD = {
           36,
           28,
           32,
-          35,
+          42,
           null,
           null,
           null,
@@ -7959,24 +7987,24 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 238,
+      "faltas": 245,
       "taxa": 8.6
     }
   ],
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 295,
+      "faltas": 298,
       "taxa": 11.0
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 162,
-      "taxa": 12.9
+      "faltas": 164,
+      "taxa": 12.8
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 141,
+      "faltas": 143,
       "taxa": 10.6
     },
     {
@@ -8008,8 +8036,8 @@ window.dadosPD = {
   "todos_lideres": [
     {
       "lider": "LUIS PAULO REIS",
-      "faltas": 127,
-      "taxa": 12.0
+      "faltas": 130,
+      "taxa": 11.9
     },
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
@@ -8053,7 +8081,7 @@ window.dadosPD = {
     },
     {
       "lider": "RENAN ALVES REZENDE",
-      "faltas": 38,
+      "faltas": 40,
       "taxa": 10.9
     },
     {
@@ -8068,8 +8096,8 @@ window.dadosPD = {
     },
     {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
-      "faltas": 20,
-      "taxa": 5.1
+      "faltas": 21,
+      "taxa": 5.0
     },
     {
       "lider": "MARCONDES DOS SANTOS",
@@ -8088,13 +8116,15 @@ window.dadosPD = {
     },
     {
       "lider": "FABIANE ALVES",
-      "faltas": 4,
-      "taxa": 12.9
+      "faltas": 5,
+      "taxa": 15.2
     }
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
+    "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
