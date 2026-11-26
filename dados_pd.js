@@ -1,10 +1,10 @@
 window.dadosPD = {
-  "atualizado_em": "26/11/2026 06:01",
+  "atualizado_em": "26/11/2026 07:00",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 825,
+  "total_faltas_mes": 833,
   "deficit": 32,
-  "fi_dias": 147,
-  "fj_dias": 110,
+  "fi_dias": 148,
+  "fj_dias": 111,
   "ferias": 16,
   "data_padrao_setor": "2026-11-26",
   "resumo_diario_map": {
@@ -185,11 +185,11 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-26": {
-      "taxa_abs": 10.9,
-      "faltas": 16,
+      "taxa_abs": 12.4,
+      "faltas": 24,
       "deficit": 2,
-      "fi": 8,
-      "fj": 5,
+      "fi": 15,
+      "fj": 6,
       "ferias": 3
     }
   },
@@ -2488,24 +2488,33 @@ window.dadosPD = {
         "FECHAMENTO"
       ],
       "data": [
-        14.8,
+        21.6,
         12.5,
         11.5,
-        9.5,
+        7.0,
         4.3
       ],
       "absolutos": [
-        4,
+        11,
         3,
         6,
-        2,
+        3,
         1
       ]
     },
     "2026-11-26_1": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "EXPEDICAO",
+        "RECEBIMENTO"
+      ],
+      "data": [
+        29.2,
+        4.5
+      ],
+      "absolutos": [
+        7,
+        1
+      ]
     },
     "2026-11-26_2": {
       "labels": [],
@@ -4104,22 +4113,37 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        18.8,
-        13.0,
+        21.1,
+        17.9,
         11.2,
-        3.6
+        6.7
       ],
       "absolutos": [
-        3,
-        3,
-        9,
-        1
+        4,
+        5,
+        13,
+        2
       ]
     },
     "2026-11-26_1": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "MEET",
+        "AMERICA",
+        "PACTUAL",
+        "CEVA"
+      ],
+      "data": [
+        50.0,
+        40.0,
+        33.3,
+        11.1
+      ],
+      "absolutos": [
+        1,
+        2,
+        1,
+        4
+      ]
     },
     "2026-11-26_2": {
       "labels": [],
@@ -7599,8 +7623,8 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        7,
-        4,
+        14,
+        5,
         3,
         2,
         1,
@@ -7608,19 +7632,32 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        36.8,
-        57.9,
-        73.7,
-        84.2,
-        89.5,
-        94.7,
+        51.9,
+        70.4,
+        81.5,
+        88.9,
+        92.6,
+        96.3,
         100.0
       ]
     },
     "2026-11-26_1": {
-      "labels": [],
-      "data_abs": [],
-      "data_cum": []
+      "labels": [
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ]
+      ],
+      "data_abs": [
+        7,
+        1
+      ],
+      "data_cum": [
+        87.5,
+        100.0
+      ]
     },
     "2026-11-26_2": {
       "labels": [],
@@ -7692,8 +7729,8 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        316,
-        215,
+        323,
+        216,
         170,
         145,
         96
@@ -7763,7 +7800,7 @@ window.dadosPD = {
           8.7,
           6.4,
           9.0,
-          10.9,
+          12.4,
           null,
           null,
           null,
@@ -7840,7 +7877,7 @@ window.dadosPD = {
           36,
           28,
           29,
-          16,
+          24,
           null,
           null,
           null,
@@ -7862,8 +7899,8 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 245,
-      "taxa": 9.3
+      "faltas": 253,
+      "taxa": 9.4
     },
     {
       "turno": "2º Turno",
@@ -7879,8 +7916,8 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 155,
-      "taxa": 12.6
+      "faltas": 162,
+      "taxa": 12.9
     },
     {
       "setor": "FECHAMENTO",
@@ -7894,7 +7931,7 @@ window.dadosPD = {
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 48,
+      "faltas": 49,
       "taxa": 4.1
     },
     {
@@ -7951,8 +7988,8 @@ window.dadosPD = {
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
-      "faltas": 42,
-      "taxa": 9.8
+      "faltas": 49,
+      "taxa": 10.8
     },
     {
       "lider": "FLAVIO MARTINS RUFINO",
@@ -7971,7 +8008,7 @@ window.dadosPD = {
     },
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
-      "faltas": 21,
+      "faltas": 22,
       "taxa": 4.6
     },
     {
