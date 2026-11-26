@@ -1,8 +1,8 @@
 window.dadosFechamento = {
-  "atualizado_em": "26/11/2026 17:15",
-  "progresso_geral_pct": 50,
-  "total_cxs_geral": 88447,
-  "total_loaded_cxs_geral": 44541,
+  "atualizado_em": "26/11/2026 17:50",
+  "progresso_geral_pct": 40,
+  "total_cxs_geral": 73234,
+  "total_loaded_cxs_geral": 29328,
   "total_pending_cxs_geral": 43906,
   "cards_atendimentos": {
     "VAREJO": {
@@ -31,18 +31,6 @@ window.dadosFechamento = {
         "pendentes_fr_cx": 21487,
         "pct": 17,
         "status_atend": "EM ANDAMENTO"
-      },
-      "SPC": {
-        "total_cxs": 15213,
-        "loaded_cxs": 15213,
-        "rampa_cxs": 0,
-        "pending_cxs": 0,
-        "finalizadas_gv_cx": 6680,
-        "finalizadas_fr_cx": 8533,
-        "pendentes_gv_cx": 0,
-        "pendentes_fr_cx": 0,
-        "pct": 100,
-        "status_atend": "FINALIZADO"
       },
       "MGI": {
         "total_cxs": 12324,
