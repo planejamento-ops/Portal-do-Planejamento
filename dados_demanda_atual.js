@@ -1,7 +1,7 @@
 window.dadosDemandaAtual = {
-  "atualizado_em": "26/11/2026 13:27",
+  "atualizado_em": "26/11/2026 14:27",
   "fotografia_dia": {
-    "data_referencia": "26/11/2026 13:27 (Ao Vivo)",
+    "data_referencia": "26/11/2026 14:27 (Ao Vivo)",
     "cards_atendimentos": {
       "ESTOJO": {
         "SPI": {
