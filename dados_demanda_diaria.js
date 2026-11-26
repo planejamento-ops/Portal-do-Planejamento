@@ -1,5 +1,5 @@
 window.dadosDemandaDiaria = {
-  "atualizado_em": "26/11/2026 01:27",
+  "atualizado_em": "26/11/2026 02:27",
   "fotografia_dia": {
     "data_referencia": "25/11/2026 (23:59:59)",
     "cards_atendimentos": {
@@ -42,8 +42,8 @@ window.dadosDemandaDiaria = {
           "pendentes_fr_cx": 4653,
           "finalizadas_gv_cx": 3322,
           "pendentes_gv_cx": 1333,
-          "finalizadas_fr_pcs": 119207,
-          "pendentes_fr_pcs": 175043,
+          "finalizadas_fr_pcs": 119180,
+          "pendentes_fr_pcs": 175070,
           "finalizadas_gv_pcs": 126414,
           "pendentes_gv_pcs": 43575,
           "backlog_wms_fr_cx": 0,
