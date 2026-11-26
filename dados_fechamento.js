@@ -1,9 +1,9 @@
 window.dadosFechamento = {
-  "atualizado_em": "26/11/2026 11:40",
-  "progresso_geral_pct": 50,
-  "total_cxs_geral": 60919,
+  "atualizado_em": "26/11/2026 12:14",
+  "progresso_geral_pct": 45,
+  "total_cxs_geral": 67651,
   "total_loaded_cxs_geral": 30737,
-  "total_pending_cxs_geral": 30182,
+  "total_pending_cxs_geral": 36914,
   "cards_atendimentos": {
     "VAREJO": {
       "SP": {
@@ -21,15 +21,15 @@ window.dadosFechamento = {
     },
     "CARTEIRA": {
       "SPI": {
-        "total_cxs": 19662,
+        "total_cxs": 24851,
         "loaded_cxs": 5225,
         "rampa_cxs": 0,
-        "pending_cxs": 14437,
+        "pending_cxs": 19626,
         "finalizadas_gv_cx": 2265,
         "finalizadas_fr_cx": 2960,
-        "pendentes_gv_cx": 5968,
-        "pendentes_fr_cx": 8469,
-        "pct": 26,
+        "pendentes_gv_cx": 8576,
+        "pendentes_fr_cx": 11050,
+        "pct": 21,
         "status_atend": "EM ANDAMENTO"
       },
       "SPC": {
@@ -65,6 +65,20 @@ window.dadosFechamento = {
         "finalizadas_fr_cx": 0,
         "pendentes_gv_cx": 2081,
         "pendentes_fr_cx": 2167,
+        "pct": 0,
+        "status_atend": "PENDENTE"
+      }
+    },
+    "ESTOJO": {
+      "SPI": {
+        "total_cxs": 1543,
+        "loaded_cxs": 0,
+        "rampa_cxs": 0,
+        "pending_cxs": 1543,
+        "finalizadas_gv_cx": 0,
+        "finalizadas_fr_cx": 0,
+        "pendentes_gv_cx": 1005,
+        "pendentes_fr_cx": 538,
         "pct": 0,
         "status_atend": "PENDENTE"
       }
@@ -347,6 +361,19 @@ window.dadosFechamento = {
     {
       "uf": "SPI",
       "atendimento": "CARTEIRA",
+      "carreta": "Carreta 03",
+      "tu": "610000013741",
+      "total_caixas": 569,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 569,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
       "carreta": "Carreta 09",
       "tu": "610000013759",
       "total_caixas": 1450,
@@ -418,6 +445,58 @@ window.dadosFechamento = {
       "caixas_carregadas": 0,
       "caixas_rampa": 0,
       "caixas_pendentes_sap": 1225,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 02",
+      "tu": "610000013800",
+      "total_caixas": 1980,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1980,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 03 LONA",
+      "tu": "610000013804",
+      "total_caixas": 1088,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1088,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "CARTEIRA",
+      "carreta": "Carreta 01",
+      "tu": "610000013808",
+      "total_caixas": 1552,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1552,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SPI",
+      "atendimento": "ESTOJO",
+      "carreta": "Carreta 04",
+      "tu": "610000013805",
+      "total_caixas": 1543,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 1543,
       "caixas_processadas": 0,
       "pct": 0,
       "status": "PENDENTE"
