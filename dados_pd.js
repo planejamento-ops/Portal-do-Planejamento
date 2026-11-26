@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "26/11/2026 18:01",
+  "atualizado_em": "26/11/2026 19:00",
   "taxa_abs": 10.0,
   "total_faltas_mes": 854,
   "deficit": 32,
@@ -153,7 +153,7 @@ window.dadosPD = {
       "ferias": 2
     },
     "2026-11-21": {
-      "taxa_abs": 17.9,
+      "taxa_abs": 17.8,
       "faltas": 60,
       "deficit": 9,
       "fi": 14,
@@ -2113,8 +2113,8 @@ window.dadosPD = {
       ],
       "data": [
         31.0,
-        27.9,
-        15.4,
+        27.4,
+        15.0,
         14.3,
         11.7,
         0.0
@@ -2164,7 +2164,7 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        20.0,
+        19.0,
         14.8,
         10.5,
         0.0,
@@ -3838,7 +3838,7 @@ window.dadosPD = {
         27.1,
         25.0,
         19.2,
-        14.1
+        13.9
       ],
       "absolutos": [
         13,
@@ -3878,7 +3878,7 @@ window.dadosPD = {
         21.1,
         11.8,
         9.1,
-        7.8
+        7.6
       ],
       "absolutos": [
         4,
@@ -7878,7 +7878,7 @@ window.dadosPD = {
           8.9,
           8.8,
           15.8,
-          17.9,
+          17.8,
           null,
           8.7,
           6.4,
@@ -8117,7 +8117,7 @@ window.dadosPD = {
     {
       "lider": "FABIANE ALVES",
       "faltas": 5,
-      "taxa": 15.2
+      "taxa": 14.3
     }
   ],
   "alertas_pendentes": [
