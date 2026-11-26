@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "26/11/2026 10:00",
+  "atualizado_em": "26/11/2026 11:01",
   "taxa_abs": 10.0,
   "total_faltas_mes": 847,
   "deficit": 32,
-  "fi_dias": 150,
+  "fi_dias": 149,
   "fj_dias": 115,
   "ferias": 16,
   "data_padrao_setor": "2026-11-26",
@@ -188,8 +188,8 @@ window.dadosPD = {
       "taxa_abs": 11.4,
       "faltas": 35,
       "deficit": 3,
-      "fi": 22,
-      "fj": 9,
+      "fi": 21,
+      "fj": 10,
       "ferias": 3
     }
   },
@@ -7649,8 +7649,8 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        21,
-        8,
+        20,
+        9,
         3,
         3,
         1,
@@ -7658,7 +7658,7 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        55.3,
+        52.6,
         76.3,
         84.2,
         92.1,
@@ -7680,12 +7680,12 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        14,
-        4,
+        13,
+        5,
         1
       ],
       "data_cum": [
-        73.7,
+        68.4,
         94.7,
         100.0
       ]
@@ -7760,8 +7760,8 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        330,
-        221,
+        329,
+        222,
         170,
         145,
         98
