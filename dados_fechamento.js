@@ -1,21 +1,21 @@
 window.dadosFechamento = {
-  "atualizado_em": "27/11/2026 05:34",
-  "progresso_geral_pct": 45,
-  "total_cxs_geral": 52546,
+  "atualizado_em": "27/11/2026 06:08",
+  "progresso_geral_pct": 44,
+  "total_cxs_geral": 54438,
   "total_loaded_cxs_geral": 24103,
-  "total_pending_cxs_geral": 28443,
+  "total_pending_cxs_geral": 30335,
   "cards_atendimentos": {
     "VAREJO": {
       "SP": {
-        "total_cxs": 8446,
+        "total_cxs": 10338,
         "loaded_cxs": 4987,
         "rampa_cxs": 406,
-        "pending_cxs": 3053,
+        "pending_cxs": 4945,
         "finalizadas_gv_cx": 221,
         "finalizadas_fr_cx": 4766,
-        "pendentes_gv_cx": 0,
-        "pendentes_fr_cx": 3053,
-        "pct": 63,
+        "pendentes_gv_cx": 69,
+        "pendentes_fr_cx": 4876,
+        "pct": 52,
         "status_atend": "EM ANDAMENTO"
       }
     },
@@ -541,6 +541,58 @@ window.dadosFechamento = {
       "caixas_processadas": 4,
       "pct": 0,
       "status": "EM RAMPA"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 27",
+      "tu": "610000013825",
+      "total_caixas": 553,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 553,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 27",
+      "tu": "610000013826",
+      "total_caixas": 480,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 480,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 27",
+      "tu": "610000013827",
+      "total_caixas": 459,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 459,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
+    },
+    {
+      "uf": "SP",
+      "atendimento": "VAREJO",
+      "carreta": "Carreta 27",
+      "tu": "610000013857",
+      "total_caixas": 400,
+      "caixas_carregadas": 0,
+      "caixas_rampa": 0,
+      "caixas_pendentes_sap": 400,
+      "caixas_processadas": 0,
+      "pct": 0,
+      "status": "PENDENTE"
     }
   ]
 };
