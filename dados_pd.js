@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "27/11/2026 09:01",
+  "atualizado_em": "27/11/2026 10:00",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 886,
+  "total_faltas_mes": 891,
   "deficit": 33,
-  "fi_dias": 158,
+  "fi_dias": 160,
   "fj_dias": 119,
   "ferias": 16,
   "data_padrao_setor": "2026-11-27",
@@ -113,12 +113,12 @@ window.dadosPD = {
       "ferias": 0
     },
     "2026-11-16": {
-      "taxa_abs": 7.7,
-      "faltas": 23,
+      "taxa_abs": 7.9,
+      "faltas": 28,
       "deficit": 2,
-      "fi": 15,
-      "fj": 5,
-      "ferias": 9
+      "fi": 18,
+      "fj": 6,
+      "ferias": 10
     },
     "2026-11-17": {
       "taxa_abs": 8.4,
@@ -1604,7 +1604,7 @@ window.dadosPD = {
         "PLANEJAMENTO"
       ],
       "data": [
-        14.6,
+        12.7,
         6.0,
         5.0,
         4.3,
@@ -1613,7 +1613,7 @@ window.dadosPD = {
         0.0
       ],
       "absolutos": [
-        15,
+        20,
         3,
         2,
         2,
@@ -1682,6 +1682,7 @@ window.dadosPD = {
     },
     "2026-11-16_3": {
       "labels": [
+        "SEPARACAO",
         "EXPEDICAO",
         "FECHAMENTO",
         "INVENTARIO",
@@ -1689,6 +1690,7 @@ window.dadosPD = {
         "REABASTECIMENTO"
       ],
       "data": [
+        9.3,
         0.0,
         0.0,
         0.0,
@@ -1696,6 +1698,7 @@ window.dadosPD = {
         0.0
       ],
       "absolutos": [
+        5,
         0,
         0,
         0,
@@ -3583,22 +3586,22 @@ window.dadosPD = {
     },
     "2026-11-16_GERAL": {
       "labels": [
-        "MEET",
-        "AMERICA",
         "PACTUAL",
+        "AMERICA",
+        "MEET",
         "CEVA"
       ],
       "data": [
-        14.0,
-        12.5,
-        10.3,
-        5.1
+        10.8,
+        10.5,
+        9.7,
+        6.5
       ],
       "absolutos": [
-        6,
         4,
-        3,
-        10
+        4,
+        6,
+        14
       ]
     },
     "2026-11-16_1": {
@@ -3639,9 +3642,18 @@ window.dadosPD = {
       ]
     },
     "2026-11-16_3": {
-      "labels": [],
-      "data": [],
-      "absolutos": []
+      "labels": [
+        "CEVA",
+        "PACTUAL"
+      ],
+      "data": [
+        12.5,
+        12.5
+      ],
+      "absolutos": [
+        4,
+        1
+      ]
     },
     "2026-11-17_GERAL": {
       "labels": [
@@ -6524,18 +6536,18 @@ window.dadosPD = {
       ],
       "data_abs": [
         40,
-        15,
-        9,
-        5,
+        18,
+        10,
+        6,
         2,
-        1
+        2
       ],
       "data_cum": [
-        55.6,
-        76.4,
-        88.9,
-        95.8,
-        98.6,
+        51.3,
+        74.4,
+        87.2,
+        94.9,
+        97.4,
         100.0
       ]
     },
@@ -6617,14 +6629,29 @@ window.dadosPD = {
         ],
         [
           "FÉRIAS"
+        ],
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "SEM JUSTIFICATIVA"
         ]
       ],
       "data_abs": [
         32,
-        3
+        4,
+        3,
+        1,
+        1
       ],
       "data_cum": [
-        91.4,
+        78.0,
+        87.8,
+        95.1,
+        97.6,
         100.0
       ]
     },
@@ -8082,9 +8109,9 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        351,
-        233,
-        178,
+        354,
+        234,
+        179,
         151,
         101
       ]
@@ -8143,7 +8170,7 @@ window.dadosPD = {
           8.1,
           12.7,
           0.0,
-          7.7,
+          7.9,
           8.4,
           8.9,
           8.4,
@@ -8220,7 +8247,7 @@ window.dadosPD = {
           35,
           53,
           0,
-          23,
+          28,
           32,
           40,
           33,
@@ -8247,8 +8274,8 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 358,
-      "taxa": 11.9
+      "faltas": 363,
+      "taxa": 11.8
     },
     {
       "turno": "1º Turno",
@@ -8264,8 +8291,8 @@ window.dadosPD = {
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 309,
-      "taxa": 10.9
+      "faltas": 314,
+      "taxa": 10.8
     },
     {
       "setor": "EXPEDICAO",
@@ -8305,14 +8332,14 @@ window.dadosPD = {
   ],
   "todos_lideres": [
     {
+      "lider": "JAQUELINE RODRIGUES DE CARVALHO",
+      "faltas": 135,
+      "taxa": 12.8
+    },
+    {
       "lider": "LUIS PAULO REIS",
       "faltas": 132,
       "taxa": 11.9
-    },
-    {
-      "lider": "JAQUELINE RODRIGUES DE CARVALHO",
-      "faltas": 130,
-      "taxa": 13.0
     },
     {
       "lider": "TARCISIO RICARDO MARTINS CLARO",
