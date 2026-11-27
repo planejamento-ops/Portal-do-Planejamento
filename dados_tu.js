@@ -1,6 +1,6 @@
 window.dadosDashboard = {
-  "atualizado_em": "26/11/2026 23:56",
-  "total_tus": 79,
+  "atualizado_em": "27/11/2026 00:30",
+  "total_tus": 62,
   "caixas_total_mes": 334580,
   "caixas_ln_mes": 177075,
   "caixas_gv_mes": 157505,
@@ -1240,7 +1240,7 @@ window.dadosDashboard = {
   "pecas_ln_pend": 642128,
   "pecas_gv_pend": 351703,
   "carretas_pendentes": 12,
-  "progresso_pct": 56,
+  "progresso_pct": 30,
   "atendimentos_em_andamento": [
     "SPI"
   ],
