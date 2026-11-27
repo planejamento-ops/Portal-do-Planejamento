@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "26/11/2026 21:01",
+  "atualizado_em": "26/11/2026 22:01",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 857,
+  "total_faltas_mes": 859,
   "deficit": 32,
   "fi_dias": 150,
   "fj_dias": 118,
@@ -58,7 +58,7 @@ window.dadosPD = {
     },
     "2026-11-09": {
       "taxa_abs": 11.7,
-      "faltas": 47,
+      "faltas": 49,
       "deficit": 7,
       "fi": 29,
       "fj": 11,
@@ -889,7 +889,7 @@ window.dadosPD = {
         16.4,
         13.3,
         12.2,
-        11.8,
+        11.6,
         6.8,
         6.7,
         0.0
@@ -898,7 +898,7 @@ window.dadosPD = {
         10,
         8,
         18,
-        6,
+        8,
         4,
         1,
         0
@@ -937,6 +937,7 @@ window.dadosPD = {
       "labels": [
         "FECHAMENTO",
         "REABASTECIMENTO",
+        "EXPEDICAO",
         "SEPARACAO",
         "INVENTARIO",
         "PLANEJAMENTO",
@@ -945,6 +946,7 @@ window.dadosPD = {
       "data": [
         15.0,
         14.3,
+        11.1,
         9.6,
         0.0,
         0.0,
@@ -953,6 +955,7 @@ window.dadosPD = {
       "absolutos": [
         3,
         3,
+        2,
         5,
         0,
         0,
@@ -3022,13 +3025,13 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        15.2,
-        12.5,
-        11.1,
-        11.0
+        16.7,
+        11.9,
+        10.9,
+        10.7
       ],
       "absolutos": [
-        7,
+        9,
         7,
         5,
         28
@@ -3056,18 +3059,18 @@ window.dadosPD = {
     },
     "2026-11-09_2": {
       "labels": [
-        "MEET",
         "AMERICA",
+        "MEET",
         "CEVA"
       ],
       "data": [
-        18.2,
-        17.6,
-        8.0
+        20.0,
+        14.3,
+        7.4
       ],
       "absolutos": [
+        5,
         2,
-        3,
         6
       ]
     },
@@ -5358,6 +5361,9 @@ window.dadosPD = {
           "FALTA JUSTIFICADA"
         ],
         [
+          "SEM JUSTIFICATIVA"
+        ],
+        [
           "FALTA INJUSTIFICADA"
         ],
         [
@@ -5372,17 +5378,19 @@ window.dadosPD = {
         7,
         3,
         2,
+        2,
         1,
         1
       ],
       "data_cum": [
-        34.3,
-        54.3,
-        67.1,
-        80.0,
-        90.0,
-        94.3,
-        97.1,
+        33.3,
+        52.8,
+        65.3,
+        77.8,
+        87.5,
+        91.7,
+        94.4,
+        97.2,
         98.6,
         100.0
       ]
@@ -5440,6 +5448,9 @@ window.dadosPD = {
           "DESLIGADO"
         ],
         [
+          "SEM JUSTIFICATIVA"
+        ],
+        [
           "FALTA JUSTIFICADA"
         ]
       ],
@@ -5448,13 +5459,15 @@ window.dadosPD = {
         6,
         4,
         3,
+        2,
         1
       ],
       "data_cum": [
-        33.3,
-        61.9,
-        81.0,
-        95.2,
+        30.4,
+        56.5,
+        73.9,
+        87.0,
+        95.7,
         100.0
       ]
     },
@@ -7951,7 +7964,7 @@ window.dadosPD = {
           33,
           44,
           null,
-          47,
+          49,
           27,
           45,
           38,
@@ -7995,7 +8008,7 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 248,
+      "faltas": 250,
       "taxa": 8.6
     }
   ],
@@ -8007,7 +8020,7 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 164,
+      "faltas": 166,
       "taxa": 12.8
     },
     {
@@ -8089,7 +8102,7 @@ window.dadosPD = {
     },
     {
       "lider": "RENAN ALVES REZENDE",
-      "faltas": 40,
+      "faltas": 42,
       "taxa": 10.9
     },
     {
