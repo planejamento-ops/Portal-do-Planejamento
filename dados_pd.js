@@ -1,12 +1,12 @@
 window.dadosPD = {
-  "atualizado_em": "26/11/2026 23:00",
+  "atualizado_em": "27/11/2026 00:00",
   "taxa_abs": 10.0,
-  "total_faltas_mes": 859,
-  "deficit": 32,
-  "fi_dias": 150,
+  "total_faltas_mes": 875,
+  "deficit": 33,
+  "fi_dias": 155,
   "fj_dias": 118,
   "ferias": 16,
-  "data_padrao_setor": "2026-11-26",
+  "data_padrao_setor": "2026-11-27",
   "resumo_diario_map": {
     "2026-11-02": {
       "taxa_abs": 16.8,
@@ -191,6 +191,14 @@ window.dadosPD = {
       "fi": 25,
       "fj": 14,
       "ferias": 7
+    },
+    "2026-11-27": {
+      "taxa_abs": 10.8,
+      "faltas": 16,
+      "deficit": 1,
+      "fi": 13,
+      "fj": 2,
+      "ferias": 3
     }
   },
   "grafico_setor_map": {
@@ -2576,6 +2584,62 @@ window.dadosPD = {
         2,
         1
       ]
+    },
+    "2026-11-27_GERAL": {
+      "labels": [
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "EXPEDICAO",
+        "SEPARACAO",
+        "FECHAMENTO"
+      ],
+      "data": [
+        15.0,
+        12.5,
+        11.5,
+        11.1,
+        4.2
+      ],
+      "absolutos": [
+        3,
+        3,
+        3,
+        6,
+        1
+      ]
+    },
+    "2026-11-27_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-27_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-27_3": {
+      "labels": [
+        "RECEBIMENTO",
+        "REABASTECIMENTO",
+        "EXPEDICAO",
+        "SEPARACAO",
+        "FECHAMENTO"
+      ],
+      "data": [
+        15.0,
+        12.5,
+        11.5,
+        11.1,
+        4.2
+      ],
+      "absolutos": [
+        3,
+        3,
+        3,
+        6,
+        1
+      ]
     }
   },
   "grafico_empresa_map": {
@@ -4218,6 +4282,50 @@ window.dadosPD = {
         3,
         3,
         9,
+        1
+      ]
+    },
+    "2026-11-27_GERAL": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.5,
+        7.7,
+        7.1
+      ],
+      "absolutos": [
+        13,
+        2,
+        1
+      ]
+    },
+    "2026-11-27_1": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-27_2": {
+      "labels": [],
+      "data": [],
+      "absolutos": []
+    },
+    "2026-11-27_3": {
+      "labels": [
+        "CEVA",
+        "AMERICA",
+        "PACTUAL"
+      ],
+      "data": [
+        16.5,
+        7.7,
+        7.1
+      ],
+      "absolutos": [
+        13,
+        2,
         1
       ]
     }
@@ -7811,6 +7919,72 @@ window.dadosPD = {
         94.7,
         100.0
       ]
+    },
+    "2026-11-27_GERAL": {
+      "labels": [
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
+      ],
+      "data_abs": [
+        13,
+        3,
+        2,
+        1
+      ],
+      "data_cum": [
+        68.4,
+        84.2,
+        94.7,
+        100.0
+      ]
+    },
+    "2026-11-27_1": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-27_2": {
+      "labels": [],
+      "data_abs": [],
+      "data_cum": []
+    },
+    "2026-11-27_3": {
+      "labels": [
+        [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
+          "FÉRIAS"
+        ],
+        [
+          "FALTA JUSTIFICADA"
+        ],
+        [
+          "DESLIGADO"
+        ]
+      ],
+      "data_abs": [
+        13,
+        3,
+        2,
+        1
+      ],
+      "data_cum": [
+        68.4,
+        84.2,
+        94.7,
+        100.0
+      ]
     }
   },
   "grafico_pareto_mes_map": {
@@ -7833,11 +8007,11 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        332,
-        228,
-        175,
+        345,
+        230,
+        178,
         149,
-        99
+        100
       ]
     }
   },
@@ -7905,7 +8079,7 @@ window.dadosPD = {
           6.4,
           9.3,
           10.1,
-          null,
+          10.8,
           null,
           null,
           null
@@ -7982,7 +8156,7 @@ window.dadosPD = {
           28,
           32,
           44,
-          null,
+          16,
           null,
           null,
           null
@@ -7998,7 +8172,7 @@ window.dadosPD = {
   "tabela_turnos": [
     {
       "turno": "3º Turno",
-      "faltas": 342,
+      "faltas": 358,
       "taxa": 11.9
     },
     {
@@ -8015,28 +8189,28 @@ window.dadosPD = {
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 300,
+      "faltas": 306,
       "taxa": 11.0
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 166,
+      "faltas": 169,
       "taxa": 12.8
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 143,
-      "taxa": 10.6
+      "faltas": 144,
+      "taxa": 10.5
     },
     {
       "setor": "REABASTECIMENTO",
-      "faltas": 123,
+      "faltas": 126,
       "taxa": 9.8
     },
     {
       "setor": "RECEBIMENTO",
-      "faltas": 49,
-      "taxa": 4.1
+      "faltas": 52,
+      "taxa": 4.3
     },
     {
       "setor": "SEPARAÇÃO",
@@ -8062,13 +8236,13 @@ window.dadosPD = {
     },
     {
       "lider": "JAQUELINE RODRIGUES DE CARVALHO",
-      "faltas": 124,
-      "taxa": 13.1
+      "faltas": 130,
+      "taxa": 13.0
     },
     {
       "lider": "TARCISIO RICARDO MARTINS CLARO",
-      "faltas": 91,
-      "taxa": 17.0
+      "faltas": 94,
+      "taxa": 16.8
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
@@ -8081,14 +8255,14 @@ window.dadosPD = {
       "taxa": 14.5
     },
     {
-      "lider": "RICARDO EUGENIO LAURINDO",
-      "faltas": 54,
-      "taxa": 11.5
+      "lider": "DIEGO CUNHA BOER",
+      "faltas": 56,
+      "taxa": 11.7
     },
     {
-      "lider": "DIEGO CUNHA BOER",
-      "faltas": 53,
-      "taxa": 11.7
+      "lider": "RICARDO EUGENIO LAURINDO",
+      "faltas": 55,
+      "taxa": 11.2
     },
     {
       "lider": "EDSON SANTOS CAMPOS",
@@ -8116,14 +8290,14 @@ window.dadosPD = {
       "taxa": 4.6
     },
     {
+      "lider": "MARCONDES DOS SANTOS",
+      "faltas": 22,
+      "taxa": 6.0
+    },
+    {
       "lider": "GEOVANI PAULO PAULINO JUNIOR",
       "faltas": 21,
       "taxa": 5.0
-    },
-    {
-      "lider": "MARCONDES DOS SANTOS",
-      "faltas": 19,
-      "taxa": 5.4
     },
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
@@ -8141,12 +8315,5 @@ window.dadosPD = {
       "taxa": 14.3
     }
   ],
-  "alertas_pendentes": [
-    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T2</strong>: MARIA GABRIELE SANTANA ALVES",
-    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
-  ]
+  "alertas_pendentes": []
 };
