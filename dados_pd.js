@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "27/11/2026 19:01",
+  "atualizado_em": "27/11/2026 20:01",
   "taxa_abs": 9.9,
   "total_faltas_mes": 902,
   "deficit": 33,
@@ -193,12 +193,12 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-27": {
-      "taxa_abs": 9.0,
+      "taxa_abs": 8.5,
       "faltas": 37,
       "deficit": 2,
       "fi": 27,
       "fj": 8,
-      "ferias": 7
+      "ferias": 8
     }
   },
   "grafico_setor_map": {
@@ -2610,9 +2610,9 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        14.3,
+        10.1,
         9.9,
-        9.2,
+        9.1,
         7.7,
         6.4,
         5.1
@@ -2663,7 +2663,7 @@ window.dadosPD = {
       ],
       "data": [
         100.0,
-        12.3,
+        12.1,
         5.0,
         0.0,
         0.0,
@@ -4365,10 +4365,10 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        16.7,
-        11.9,
-        8.9,
-        1.6
+        15.2,
+        11.3,
+        8.6,
+        1.4
       ],
       "absolutos": [
         7,
@@ -4404,9 +4404,9 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        16.7,
-        15.4,
-        6.3
+        14.3,
+        11.8,
+        5.6
       ],
       "absolutos": [
         3,
@@ -8048,10 +8048,10 @@ window.dadosPD = {
           "FALTA INJUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "FÉRIAS"
         ],
         [
-          "FÉRIAS"
+          "FALTA JUSTIFICADA"
         ],
         [
           "DESLIGADO"
@@ -8063,14 +8063,14 @@ window.dadosPD = {
       "data_abs": [
         27,
         8,
-        7,
+        8,
         2,
         2
       ],
       "data_cum": [
-        58.7,
-        76.1,
-        91.3,
+        57.4,
+        74.5,
+        91.5,
         95.7,
         100.0
       ]
@@ -8117,12 +8117,12 @@ window.dadosPD = {
       ],
       "data_abs": [
         7,
-        3,
+        4,
         2
       ],
       "data_cum": [
-        58.3,
-        83.3,
+        53.8,
+        84.6,
         100.0
       ]
     },
@@ -8177,7 +8177,7 @@ window.dadosPD = {
       "data_abs": [
         361,
         238,
-        183,
+        184,
         151,
         101
       ]
@@ -8247,7 +8247,7 @@ window.dadosPD = {
           6.4,
           9.3,
           10.0,
-          9.0,
+          8.5,
           null,
           null,
           null
@@ -8351,7 +8351,7 @@ window.dadosPD = {
     {
       "turno": "2º Turno",
       "faltas": 259,
-      "taxa": 8.6
+      "taxa": 8.5
     }
   ],
   "todos_setores": [
@@ -8373,7 +8373,7 @@ window.dadosPD = {
     {
       "setor": "REABASTECIMENTO",
       "faltas": 130,
-      "taxa": 9.9
+      "taxa": 9.8
     },
     {
       "setor": "RECEBIMENTO",
@@ -8445,7 +8445,7 @@ window.dadosPD = {
     {
       "lider": "FLAVIO MARTINS RUFINO",
       "faltas": 42,
-      "taxa": 9.6
+      "taxa": 9.1
     },
     {
       "lider": "DIOGO GODINHO FIGUEIREDO",
@@ -8486,7 +8486,6 @@ window.dadosPD = {
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T2</strong>: FLAVIO MARTINS RUFINO",
     "<strong style='color:#ffffff;'>T2</strong>: GEOVANI PAULO PAULINO JUNIOR",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE"
   ]
