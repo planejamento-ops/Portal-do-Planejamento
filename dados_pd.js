@@ -1,9 +1,9 @@
 window.dadosPD = {
-  "atualizado_em": "27/11/2026 08:00",
-  "taxa_abs": 10.0,
+  "atualizado_em": "27/11/2026 09:01",
+  "taxa_abs": 9.9,
   "total_faltas_mes": 886,
   "deficit": 33,
-  "fi_dias": 159,
+  "fi_dias": 158,
   "fj_dias": 119,
   "ferias": 16,
   "data_padrao_setor": "2026-11-27",
@@ -180,8 +180,8 @@ window.dadosPD = {
       "taxa_abs": 9.3,
       "faltas": 32,
       "deficit": 4,
-      "fi": 14,
-      "fj": 14,
+      "fi": 13,
+      "fj": 15,
       "ferias": 7
     },
     "2026-11-26": {
@@ -193,7 +193,7 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-27": {
-      "taxa_abs": 9.5,
+      "taxa_abs": 8.8,
       "faltas": 27,
       "deficit": 2,
       "fi": 20,
@@ -2587,24 +2587,24 @@ window.dadosPD = {
     },
     "2026-11-27_GERAL": {
       "labels": [
-        "RECEBIMENTO",
         "REABASTECIMENTO",
         "EXPEDICAO",
         "SEPARACAO",
+        "RECEBIMENTO",
         "FECHAMENTO"
       ],
       "data": [
-        15.0,
         14.6,
         11.8,
         7.5,
+        7.3,
         4.3
       ],
       "absolutos": [
-        3,
         7,
         6,
         9,
+        3,
         2
       ]
     },
@@ -2613,19 +2613,22 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "EXPEDICAO",
         "SEPARACAO",
-        "FECHAMENTO"
+        "FECHAMENTO",
+        "RECEBIMENTO"
       ],
       "data": [
         16.7,
         12.0,
         5.0,
-        4.5
+        4.5,
+        0.0
       ],
       "absolutos": [
         4,
         3,
         3,
-        1
+        1,
+        0
       ]
     },
     "2026-11-27_2": {
@@ -4314,9 +4317,9 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        16.7,
-        10.7,
-        9.8,
+        16.1,
+        9.6,
+        9.5,
         1.8
       ],
       "absolutos": [
@@ -4334,9 +4337,9 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        30.8,
-        16.7,
-        5.0,
+        28.6,
+        15.4,
+        4.0,
         3.8
       ],
       "absolutos": [
@@ -7675,10 +7678,10 @@ window.dadosPD = {
           "FÉRIAS"
         ],
         [
-          "DESLIGADO"
+          "FALTA JUSTIFICADA"
         ],
         [
-          "FALTA JUSTIFICADA"
+          "DESLIGADO"
         ],
         [
           "FALTA INJUSTIFICADA"
@@ -7691,19 +7694,19 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        12,
+        11,
         10,
         7,
-        4,
+        5,
         4,
         1,
         1,
         1
       ],
       "data_cum": [
-        30.0,
-        55.0,
-        72.5,
+        27.5,
+        52.5,
+        70.0,
         82.5,
         92.5,
         95.0,
@@ -7714,22 +7717,27 @@ window.dadosPD = {
     "2026-11-25_1": {
       "labels": [
         [
-          "FALTA INJUSTIFICADA"
-        ],
-        [
           "FALTA JUSTIFICADA"
         ],
         [
+          "FALTA INJUSTIFICADA"
+        ],
+        [
           "DESLIGADO"
+        ],
+        [
+          "FALTA JUSTIFICADA"
         ]
       ],
       "data_abs": [
         4,
-        4,
+        3,
+        1,
         1
       ],
       "data_cum": [
         44.4,
+        77.8,
         88.9,
         100.0
       ]
@@ -8074,7 +8082,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        352,
+        351,
         233,
         178,
         151,
@@ -8146,7 +8154,7 @@ window.dadosPD = {
           6.4,
           9.3,
           10.1,
-          9.5,
+          8.8,
           null,
           null,
           null
@@ -8277,7 +8285,7 @@ window.dadosPD = {
     {
       "setor": "RECEBIMENTO",
       "faltas": 52,
-      "taxa": 4.3
+      "taxa": 4.2
     },
     {
       "setor": "SEPARAÇÃO",
@@ -8354,7 +8362,7 @@ window.dadosPD = {
     {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
       "faltas": 22,
-      "taxa": 4.6
+      "taxa": 4.4
     },
     {
       "lider": "MARCONDES DOS SANTOS",
@@ -8384,7 +8392,6 @@ window.dadosPD = {
   ],
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T1</strong>: MARCIO VINICIO AMANCIO JUNIOR",
     "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
