@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "27/11/2026 17:01",
+  "atualizado_em": "27/11/2026 18:01",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 901,
+  "total_faltas_mes": 902,
   "deficit": 33,
   "fi_dias": 161,
   "fj_dias": 119,
@@ -185,11 +185,11 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-26": {
-      "taxa_abs": 10.1,
-      "faltas": 44,
+      "taxa_abs": 10.0,
+      "faltas": 45,
       "deficit": 4,
       "fi": 25,
-      "fj": 14,
+      "fj": 15,
       "ferias": 7
     },
     "2026-11-27": {
@@ -2501,6 +2501,7 @@ window.dadosPD = {
         "EXPEDICAO",
         "SEPARACAO",
         "FECHAMENTO",
+        "INVENTARIO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
@@ -2508,13 +2509,15 @@ window.dadosPD = {
         18.3,
         10.5,
         8.6,
+        7.1,
         6.1,
-        5.2
+        5.1
       ],
       "absolutos": [
         13,
         18,
         6,
+        1,
         4,
         3
       ]
@@ -2522,6 +2525,7 @@ window.dadosPD = {
     "2026-11-26_1": {
       "labels": [
         "EXPEDICAO",
+        "INVENTARIO",
         "FECHAMENTO",
         "SEPARACAO",
         "RECEBIMENTO",
@@ -2529,13 +2533,15 @@ window.dadosPD = {
       ],
       "data": [
         26.9,
+        20.0,
         13.0,
         11.7,
-        4.5,
+        4.3,
         4.2
       ],
       "absolutos": [
         7,
+        1,
         3,
         7,
         1,
@@ -2547,6 +2553,7 @@ window.dadosPD = {
         "EXPEDICAO",
         "SEPARACAO",
         "FECHAMENTO",
+        "INVENTARIO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
@@ -2555,12 +2562,14 @@ window.dadosPD = {
         8.8,
         8.3,
         0.0,
+        0.0,
         0.0
       ],
       "absolutos": [
         2,
         5,
         2,
+        0,
         0,
         0
       ]
@@ -2571,21 +2580,24 @@ window.dadosPD = {
         "REABASTECIMENTO",
         "SEPARACAO",
         "RECEBIMENTO",
-        "FECHAMENTO"
+        "FECHAMENTO",
+        "INVENTARIO"
       ],
       "data": [
         14.8,
         12.5,
         10.9,
         9.5,
-        4.3
+        4.3,
+        0.0
       ],
       "absolutos": [
         4,
         3,
         6,
         2,
-        1
+        1,
+        0
       ]
     },
     "2026-11-27_GERAL": {
@@ -4275,14 +4287,14 @@ window.dadosPD = {
       "data": [
         13.3,
         12.5,
-        10.3,
-        8.8
+        10.1,
+        8.7
       ],
       "absolutos": [
         8,
         6,
         7,
-        23
+        24
       ]
     },
     "2026-11-26_1": {
@@ -4296,13 +4308,13 @@ window.dadosPD = {
         19.2,
         15.4,
         14.3,
-        9.8
+        10.2
       ],
       "absolutos": [
         5,
         2,
         2,
-        10
+        11
       ]
     },
     "2026-11-26_2": {
@@ -4314,9 +4326,9 @@ window.dadosPD = {
       ],
       "data": [
         13.6,
-        7.1,
+        6.7,
         5.9,
-        5.1
+        4.7
       ],
       "absolutos": [
         3,
@@ -4335,7 +4347,7 @@ window.dadosPD = {
       "data": [
         17.6,
         12.0,
-        11.2,
+        11.0,
         3.6
       ],
       "absolutos": [
@@ -7911,7 +7923,7 @@ window.dadosPD = {
       ],
       "data_abs": [
         24,
-        13,
+        14,
         7,
         4,
         4,
@@ -7920,11 +7932,11 @@ window.dadosPD = {
         1
       ],
       "data_cum": [
-        43.6,
-        67.3,
-        80.0,
-        87.3,
-        94.5,
+        42.9,
+        67.9,
+        80.4,
+        87.5,
+        94.6,
         96.4,
         98.2,
         100.0
@@ -7944,12 +7956,12 @@ window.dadosPD = {
       ],
       "data_abs": [
         12,
-        6,
+        7,
         1
       ],
       "data_cum": [
-        63.2,
-        94.7,
+        60.0,
+        95.0,
         100.0
       ]
     },
@@ -8164,7 +8176,7 @@ window.dadosPD = {
       ],
       "data_abs": [
         361,
-        237,
+        238,
         183,
         151,
         101
@@ -8234,7 +8246,7 @@ window.dadosPD = {
           8.7,
           6.4,
           9.3,
-          10.1,
+          10.0,
           9.0,
           null,
           null,
@@ -8311,7 +8323,7 @@ window.dadosPD = {
           36,
           28,
           32,
-          44,
+          45,
           37,
           null,
           null,
@@ -8333,7 +8345,7 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 279,
+      "faltas": 280,
       "taxa": 9.4
     },
     {
@@ -8375,7 +8387,7 @@ window.dadosPD = {
     },
     {
       "setor": "INVENTARIO",
-      "faltas": 19,
+      "faltas": 20,
       "taxa": 7.0
     },
     {
@@ -8457,7 +8469,7 @@ window.dadosPD = {
     },
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
-      "faltas": 19,
+      "faltas": 20,
       "taxa": 6.5
     },
     {
