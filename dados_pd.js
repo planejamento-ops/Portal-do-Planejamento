@@ -1,5 +1,5 @@
 window.dadosPD = {
-  "atualizado_em": "27/11/2026 00:00",
+  "atualizado_em": "27/11/2026 01:00",
   "taxa_abs": 10.0,
   "total_faltas_mes": 875,
   "deficit": 33,
@@ -8315,5 +8315,8 @@ window.dadosPD = {
       "taxa": 14.3
     }
   ],
-  "alertas_pendentes": []
+  "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
+  ]
 };
