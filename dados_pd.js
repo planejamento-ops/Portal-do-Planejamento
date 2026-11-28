@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "28/11/2026 08:00",
+  "atualizado_em": "28/11/2026 09:01",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 929,
+  "total_faltas_mes": 928,
   "deficit": 33,
   "fi_dias": 159,
   "fj_dias": 124,
@@ -201,10 +201,10 @@ window.dadosPD = {
       "ferias": 8
     },
     "2026-11-28": {
-      "taxa_abs": 9.5,
-      "faltas": 26,
+      "taxa_abs": 9.2,
+      "faltas": 25,
       "deficit": 0,
-      "fi": 18,
+      "fi": 17,
       "fj": 8,
       "ferias": 2
     }
@@ -2721,14 +2721,14 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        15.7,
+        13.7,
         12.0,
         10.6,
         4.7,
         2.4
       ],
       "absolutos": [
-        8,
+        7,
         3,
         12,
         2,
@@ -2743,13 +2743,13 @@ window.dadosPD = {
         "RECEBIMENTO"
       ],
       "data": [
-        21.7,
+        17.4,
         6.8,
         0.0,
         0.0
       ],
       "absolutos": [
-        5,
+        4,
         4,
         0,
         0
@@ -4519,13 +4519,13 @@ window.dadosPD = {
       ],
       "data": [
         21.1,
-        9.1,
+        8.5,
         4.8,
         4.1
       ],
       "absolutos": [
         8,
-        15,
+        14,
         1,
         2
       ]
@@ -4539,12 +4539,12 @@ window.dadosPD = {
       "data": [
         33.3,
         10.0,
-        6.0
+        4.8
       ],
       "absolutos": [
         3,
         1,
-        5
+        4
       ]
     },
     "2026-11-28_2": {
@@ -8354,7 +8354,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        15,
+        14,
         8,
         4,
         3,
@@ -8362,11 +8362,11 @@ window.dadosPD = {
         2
       ],
       "data_cum": [
-        44.1,
-        67.6,
-        79.4,
-        88.2,
-        94.1,
+        42.4,
+        66.7,
+        78.8,
+        87.9,
+        93.9,
         100.0
       ]
     },
@@ -8389,17 +8389,17 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        7,
+        6,
         3,
         2,
         1,
         1
       ],
       "data_cum": [
-        50.0,
-        71.4,
-        85.7,
-        92.9,
+        46.2,
+        69.2,
+        84.6,
+        92.3,
         100.0
       ]
     },
@@ -8467,7 +8467,7 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        352,
+        351,
         246,
         186,
         156,
@@ -8540,7 +8540,7 @@ window.dadosPD = {
           9.3,
           10.0,
           8.3,
-          9.5,
+          9.2,
           null,
           null
         ],
@@ -8617,7 +8617,7 @@ window.dadosPD = {
           32,
           45,
           38,
-          26,
+          25,
           null,
           null
         ],
@@ -8637,7 +8637,7 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 289,
+      "faltas": 288,
       "taxa": 9.3
     },
     {
@@ -8654,8 +8654,8 @@ window.dadosPD = {
     },
     {
       "setor": "EXPEDICAO",
-      "faltas": 181,
-      "taxa": 12.8
+      "faltas": 180,
+      "taxa": 12.7
     },
     {
       "setor": "FECHAMENTO",
@@ -8720,14 +8720,14 @@ window.dadosPD = {
       "taxa": 11.7
     },
     {
-      "lider": "EDSON SANTOS CAMPOS",
-      "faltas": 57,
-      "taxa": 11.4
-    },
-    {
       "lider": "RICARDO EUGENIO LAURINDO",
       "faltas": 57,
       "taxa": 11.0
+    },
+    {
+      "lider": "EDSON SANTOS CAMPOS",
+      "faltas": 56,
+      "taxa": 11.2
     },
     {
       "lider": "RENAN ALVES REZENDE",
