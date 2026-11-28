@@ -1,7 +1,7 @@
 window.dadosPD = {
-  "atualizado_em": "27/11/2026 22:00",
+  "atualizado_em": "27/11/2026 23:01",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 902,
+  "total_faltas_mes": 903,
   "deficit": 33,
   "fi_dias": 161,
   "fj_dias": 119,
@@ -193,10 +193,10 @@ window.dadosPD = {
       "ferias": 7
     },
     "2026-11-27": {
-      "taxa_abs": 8.5,
-      "faltas": 37,
+      "taxa_abs": 8.3,
+      "faltas": 38,
       "deficit": 2,
-      "fi": 27,
+      "fi": 28,
       "fj": 8,
       "ferias": 8
     }
@@ -2614,7 +2614,7 @@ window.dadosPD = {
         9.9,
         9.1,
         7.7,
-        6.4,
+        5.8,
         5.1
       ],
       "absolutos": [
@@ -2622,7 +2622,7 @@ window.dadosPD = {
         7,
         16,
         1,
-        3,
+        4,
         3
       ]
     },
@@ -2654,24 +2654,24 @@ window.dadosPD = {
     },
     "2026-11-27_2": {
       "labels": [
-        "FECHAMENTO",
         "SEPARACAO",
+        "FECHAMENTO",
         "EXPEDICAO",
         "INVENTARIO",
         "REABASTECIMENTO",
         "RECEBIMENTO"
       ],
       "data": [
-        100.0,
         12.1,
+        8.7,
         5.0,
         0.0,
         0.0,
         0.0
       ],
       "absolutos": [
-        1,
         7,
+        2,
         1,
         0,
         0,
@@ -4366,13 +4366,13 @@ window.dadosPD = {
       ],
       "data": [
         15.2,
-        11.3,
-        8.6,
+        11.8,
+        8.1,
         1.4
       ],
       "absolutos": [
         7,
-        7,
+        8,
         22,
         1
       ]
@@ -4404,12 +4404,12 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        14.3,
+        14.8,
         11.8,
-        5.6
+        4.5
       ],
       "absolutos": [
-        3,
+        4,
         2,
         4
       ]
@@ -8054,24 +8054,24 @@ window.dadosPD = {
           "FALTA JUSTIFICADA"
         ],
         [
-          "DESLIGADO"
+          "FOLGA"
         ],
         [
-          "FOLGA"
+          "DESLIGADO"
         ]
       ],
       "data_abs": [
-        27,
+        28,
         8,
         8,
-        2,
+        3,
         2
       ],
       "data_cum": [
-        57.4,
-        74.5,
-        91.5,
-        95.7,
+        57.1,
+        73.5,
+        89.8,
+        95.9,
         100.0
       ]
     },
@@ -8113,16 +8113,21 @@ window.dadosPD = {
         ],
         [
           "FALTA JUSTIFICADA"
+        ],
+        [
+          "FOLGA"
         ]
       ],
       "data_abs": [
-        7,
+        8,
         4,
-        2
+        2,
+        1
       ],
       "data_cum": [
-        53.8,
-        84.6,
+        53.3,
+        80.0,
+        93.3,
         100.0
       ]
     },
@@ -8175,10 +8180,10 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        361,
+        362,
         238,
         184,
-        151,
+        152,
         101
       ]
     }
@@ -8247,7 +8252,7 @@ window.dadosPD = {
           6.4,
           9.3,
           10.0,
-          8.5,
+          8.3,
           null,
           null,
           null
@@ -8324,7 +8329,7 @@ window.dadosPD = {
           28,
           32,
           45,
-          37,
+          38,
           null,
           null,
           null
@@ -8350,7 +8355,7 @@ window.dadosPD = {
     },
     {
       "turno": "2º Turno",
-      "faltas": 259,
+      "faltas": 260,
       "taxa": 8.5
     }
   ],
@@ -8367,7 +8372,7 @@ window.dadosPD = {
     },
     {
       "setor": "FECHAMENTO",
-      "faltas": 146,
+      "faltas": 147,
       "taxa": 10.4
     },
     {
@@ -8453,6 +8458,11 @@ window.dadosPD = {
       "taxa": 7.6
     },
     {
+      "lider": "GEOVANI PAULO PAULINO JUNIOR",
+      "faltas": 22,
+      "taxa": 5.0
+    },
+    {
       "lider": "MARCIO VINICIO AMANCIO JUNIOR",
       "faltas": 22,
       "taxa": 4.4
@@ -8461,11 +8471,6 @@ window.dadosPD = {
       "lider": "MARCONDES DOS SANTOS",
       "faltas": 22,
       "taxa": 6.0
-    },
-    {
-      "lider": "GEOVANI PAULO PAULINO JUNIOR",
-      "faltas": 21,
-      "taxa": 5.0
     },
     {
       "lider": "MARIA GABRIELE SANTANA ALVES",
@@ -8486,7 +8491,6 @@ window.dadosPD = {
   "alertas_pendentes": [
     "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T2</strong>: CARLOS RAFAEL BONFANTE",
-    "<strong style='color:#ffffff;'>T2</strong>: GEOVANI PAULO PAULINO JUNIOR",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE"
   ]
 };
