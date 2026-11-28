@@ -1,11 +1,11 @@
 window.dadosPD = {
-  "atualizado_em": "28/11/2026 07:00",
+  "atualizado_em": "28/11/2026 08:00",
   "taxa_abs": 9.9,
-  "total_faltas_mes": 925,
+  "total_faltas_mes": 929,
   "deficit": 33,
-  "fi_dias": 156,
+  "fi_dias": 159,
   "fj_dias": 124,
-  "ferias": 17,
+  "ferias": 18,
   "data_padrao_setor": "2026-11-28",
   "resumo_diario_map": {
     "2026-11-02": {
@@ -201,12 +201,12 @@ window.dadosPD = {
       "ferias": 8
     },
     "2026-11-28": {
-      "taxa_abs": 10.3,
-      "faltas": 22,
+      "taxa_abs": 9.5,
+      "faltas": 26,
       "deficit": 0,
-      "fi": 14,
+      "fi": 18,
       "fj": 8,
-      "ferias": 1
+      "ferias": 2
     }
   },
   "grafico_setor_map": {
@@ -2715,22 +2715,22 @@ window.dadosPD = {
     "2026-11-28_GERAL": {
       "labels": [
         "EXPEDICAO",
-        "SEPARACAO",
         "REABASTECIMENTO",
+        "SEPARACAO",
         "FECHAMENTO",
         "RECEBIMENTO"
       ],
       "data": [
         15.7,
-        14.8,
         12.0,
+        10.6,
         4.7,
         2.4
       ],
       "absolutos": [
         8,
-        8,
         3,
+        12,
         2,
         1
       ]
@@ -2738,16 +2738,19 @@ window.dadosPD = {
     "2026-11-28_1": {
       "labels": [
         "EXPEDICAO",
+        "SEPARACAO",
         "FECHAMENTO",
         "RECEBIMENTO"
       ],
       "data": [
         21.7,
+        6.8,
         0.0,
         0.0
       ],
       "absolutos": [
         5,
+        4,
         0,
         0
       ]
@@ -4515,14 +4518,14 @@ window.dadosPD = {
         "MEET"
       ],
       "data": [
-        20.6,
-        9.3,
-        6.7,
-        5.6
+        21.1,
+        9.1,
+        4.8,
+        4.1
       ],
       "absolutos": [
-        7,
-        12,
+        8,
+        15,
         1,
         2
       ]
@@ -4534,14 +4537,14 @@ window.dadosPD = {
         "CEVA"
       ],
       "data": [
-        40.0,
-        25.0,
-        4.2
+        33.3,
+        10.0,
+        6.0
       ],
       "absolutos": [
-        2,
+        3,
         1,
-        2
+        5
       ]
     },
     "2026-11-28_2": {
@@ -8351,19 +8354,19 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        11,
+        15,
         8,
         4,
         3,
         2,
-        1
+        2
       ],
       "data_cum": [
-        37.9,
-        65.5,
-        79.3,
-        89.7,
-        96.6,
+        44.1,
+        67.6,
+        79.4,
+        88.2,
+        94.1,
         100.0
       ]
     },
@@ -8380,18 +8383,23 @@ window.dadosPD = {
         ],
         [
           "BANCO DE HORAS"
+        ],
+        [
+          "FÉRIAS"
         ]
       ],
       "data_abs": [
-        3,
+        7,
         3,
         2,
+        1,
         1
       ],
       "data_cum": [
-        33.3,
-        66.7,
-        88.9,
+        50.0,
+        71.4,
+        85.7,
+        92.9,
         100.0
       ]
     },
@@ -8459,9 +8467,9 @@ window.dadosPD = {
         ]
       ],
       "data_abs": [
-        348,
+        352,
         246,
-        185,
+        186,
         156,
         101
       ]
@@ -8532,7 +8540,7 @@ window.dadosPD = {
           9.3,
           10.0,
           8.3,
-          10.3,
+          9.5,
           null,
           null
         ],
@@ -8609,7 +8617,7 @@ window.dadosPD = {
           32,
           45,
           38,
-          22,
+          26,
           null,
           null
         ],
@@ -8629,8 +8637,8 @@ window.dadosPD = {
     },
     {
       "turno": "1º Turno",
-      "faltas": 285,
-      "taxa": 9.4
+      "faltas": 289,
+      "taxa": 9.3
     },
     {
       "turno": "2º Turno",
@@ -8641,7 +8649,7 @@ window.dadosPD = {
   "todos_setores": [
     {
       "setor": "SEPARACAO",
-      "faltas": 329,
+      "faltas": 333,
       "taxa": 10.9
     },
     {
@@ -8698,8 +8706,8 @@ window.dadosPD = {
     },
     {
       "lider": "WALLACE BORATO AGUIAR",
-      "faltas": 89,
-      "taxa": 9.3
+      "faltas": 93,
+      "taxa": 9.2
     },
     {
       "lider": "GABRIELLY DA SILVA ALEXANDRIA",
@@ -8768,6 +8776,9 @@ window.dadosPD = {
     }
   ],
   "alertas_pendentes": [
+    "<strong style='color:#ffffff;'>T1</strong>: CARLOS RAFAEL BONFANTE",
+    "<strong style='color:#ffffff;'>T1</strong>: DIOGO GODINHO FIGUEIREDO",
+    "<strong style='color:#ffffff;'>T1</strong>: MARIA GABRIELE SANTANA ALVES",
     "<strong style='color:#ffffff;'>T3</strong>: CARLOS RAFAEL BONFANTE",
     "<strong style='color:#ffffff;'>T3</strong>: MARIA GABRIELE SANTANA ALVES"
   ]
